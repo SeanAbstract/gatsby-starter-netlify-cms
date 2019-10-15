@@ -3,7 +3,6 @@ import React, {useState} from 'react'
 import PropTypes from 'prop-types'
 import {graphql} from 'gatsby'
 
-import 'bootstrap/dist/css/bootstrap.min.css'
 import Layout from '../components/Layout'
 
 export const AboutPageTemplate = ({mainpitch, tabs, headerImage}) => {
