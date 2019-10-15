@@ -85,7 +85,7 @@ export const aboutPageQuery = graphql`
       frontmatter {
         headerImage {
           childImageSharp {
-            fluid(maxWidth: 400, quality: 100) {
+            fluid(maxWidth: 2000, quality: 100) {
               ...GatsbyImageSharpFluid
             }
           }

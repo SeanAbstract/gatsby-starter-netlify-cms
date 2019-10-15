@@ -1,6 +1,6 @@
 ---
 templateKey: about-page
-image: /img/hero-about.png
+headerImage: /img/hero-about.png
 mainpitch:
   description: This is the description
   secondDescription: This is the second descriptions
