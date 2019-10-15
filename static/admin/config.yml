@@ -42,8 +42,19 @@ collections:
         name: "about"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about-page"}
-          - {label: "Title", name: "title", widget: "string"}
-          - {label: "Body", name: "body", widget: "markdown"}
+          - {label: "Header Image", name: image, widget: image}
+          - {label: Mainpitch, name: mainpitch, widget: object, fields: [
+                {label: Title, name: title, widget: string}, 
+                {label: Description, name: description, widget: text},
+                {label: SecondDescription, name: secondDescription, widget: text},
+              ]
+            } 
+          - {label: "Tabs", name: "tabs", widget: "list", fields: [
+              {label: Title, name: title, widget: string},
+              {label: Icon, name: icon, widget: image},
+              {label: Description, name: description, widget: markdown}
+            ]}    
+               
       - file: "src/pages/products/index.md"
         label: "Products Page"
         name: "products"

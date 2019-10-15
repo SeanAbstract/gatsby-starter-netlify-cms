@@ -1,45 +1,73 @@
-import React from 'react'
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+import React, {useState} from 'react'
 import PropTypes from 'prop-types'
-import { graphql } from 'gatsby'
-import Layout from '../components/Layout'
-import Content, { HTMLContent } from '../components/Content'
+import {graphql} from 'gatsby'
 
-export const AboutPageTemplate = ({ title, content, contentComponent }) => {
-  const PageContent = contentComponent || Content
+import 'bootstrap/dist/css/bootstrap.min.css'
+import Layout from '../components/Layout'
+
+export const AboutPageTemplate = ({mainpitch, tabs, headerImage}) => {
+  const [tabDescription, setTabDescription] = useState(tabs[0].description)
 
   return (
-    <section className="section section--gradient">
-      <div className="container">
-        <div className="columns">
-          <div className="column is-10 is-offset-1">
-            <div className="section">
-              <h2 className="title is-size-3 has-text-weight-bold is-bold-light">
-                {title}
-              </h2>
-              <PageContent className="content" content={content} />
-            </div>
+    <div>
+      <div
+        className="full-width-image-container margin-top-0"
+        style={{
+          backgroundImage: `url(${
+            headerImage.childImageSharp ? headerImage.childImageSharp.fluid.src : headerImage
+          })`,
+        }}
+      />
+
+      <div className="row">
+        <div className="container">
+          <div className="col-md-8 mx-auto text-center">
+            <h3>{mainpitch.title}</h3>
+            <p>{mainpitch.description}</p>
+            <p>{mainpitch.secondDescription}</p>
           </div>
         </div>
       </div>
-    </section>
+
+      <div className="row">
+        <div className="container">
+          <div className="col-md-8">
+            <div className="row">
+              {tabs.map(tab => (
+                <div
+                  className="col-md-4"
+                  key={tab.title}
+                  onClick={() => setTabDescription(tab.description)}
+                >
+                  <p>{tab.title}</p>
+                </div>
+              ))}
+            </div>
+            <p>{tabDescription}</p>
+          </div>
+        </div>
+      </div>
+    </div>
   )
 }
 
 AboutPageTemplate.propTypes = {
-  title: PropTypes.string.isRequired,
-  content: PropTypes.string,
-  contentComponent: PropTypes.func,
+  mainpitch: PropTypes.object,
+  tabs: PropTypes.array,
 }
 
-const AboutPage = ({ data }) => {
-  const { markdownRemark: post } = data
+const AboutPage = ({data}) => {
+  const {markdownRemark: post} = data
+
+  console.log(data)
 
   return (
     <Layout>
       <AboutPageTemplate
-        contentComponent={HTMLContent}
-        title={post.frontmatter.title}
-        content={post.html}
+        mainpitch={post.frontmatter.mainpitch}
+        tabs={post.frontmatter.tabs}
+        headerImage={post.frontmatter.headerImage}
       />
     </Layout>
   )
@@ -53,10 +81,31 @@ export default AboutPage
 
 export const aboutPageQuery = graphql`
   query AboutPage($id: String!) {
-    markdownRemark(id: { eq: $id }) {
-      html
+    markdownRemark(id: {eq: $id}) {
       frontmatter {
-        title
+        headerImage {
+          childImageSharp {
+            fluid(maxWidth: 400, quality: 100) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        mainpitch {
+          title
+          description
+          secondDescription
+        }
+        tabs {
+          title
+          icon {
+            childImageSharp {
+              fluid(maxWidth: 400, quality: 100) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+          description
+        }
       }
     }
   }
