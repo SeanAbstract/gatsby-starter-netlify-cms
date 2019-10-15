@@ -1,1 +1,121 @@
 @import '~bootstrap/dist/css/bootstrap.min.css';
+
+$primary: #006fbb;
+$secondary: #91BCDC;
+$background: #F5F5F5;
+
+
+@font-face {
+    font-family: "Tungsten-Black";
+    src: url('../fonts/Tungsten-Black.otf');
+}
+
+@font-face {
+    font-family: "Kokomo-Breeze-Regular";
+    src: url('../fonts/Kokomo-Breeze-Regular.otf');
+}
+
+@font-face {
+    font-family: "Theinhardt";
+    src: url('../fonts/THEINHARDT-REGULAR.otf');
+}
+
+@font-face {
+    font-family: "Theinhardt";
+    src: url('../fonts/THEINHARDT-MEDIUM.otf');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: "Theinhardt";
+    src: url('../fonts/THEINHARDT-LIGHT.otf');
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: "Theinhardt";
+    src: url('../fonts/THEINHARDT-BOLD.otf');
+    font-weight: 700;
+}
+
+
+h1 {
+    font-family: "Tungsten-Black";
+    color: white;
+    letter-spacing: 1.8px;
+    line-height: 3.15rem;
+}
+
+
+p {
+    font-family: 'Theinhardt';
+    font-weight: 300;
+}
+
+.big-text {
+    font-size: 4rem;
+    text-transform: uppercase;
+    z-index: 2;
+
+    @media (min-width: 576px) {
+      font-size: 7rem;
+    }
+  
+    @media (min-width: 768px) {
+      font-size: 6rem;
+    }
+}
+
+.big-subtitle {
+    font-size: 3rem;
+    line-height: 0.5;
+    font-family: "Kokomo-Breeze-Regular";
+    color: $secondary;
+    z-index: 2;
+    
+    @media (min-width: 576px) {
+      font-size: 6rem;
+    }
+  
+    @media (min-width: 768px) {
+      font-size: 5rem;
+    }
+  
+    @media (min-width: 992px) {
+      font-size: 5rem;
+    }
+  
+    @media (min-width: 1200px) {
+      font-size: 6rem;
+    }
+}
+
+.text-primary {
+    color: $primary;
+}
+
+.text-secondary {
+    color: $secondary !important;
+}
+
+.bg-grey {
+    background-color: $background;
+}
+
+.card {
+  border: none !important;
+  border-radius: 0;
+}
+
+.card-body {
+    text-align: left;
+}
+
+.section-leading-text {
+    font-family: 'Theinhardt';
+    font-weight: 400;
+    font-size: 26.5px;
+}
+
+
+

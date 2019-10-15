@@ -14,7 +14,6 @@ tabs:
       financial products worldwide. Our trading platform is fast and efficient,
       and our fee structure is competitive.
 
-
       * Snowball Securities provide online information and share trading
       services to global investors who want exposure to global markets.
 
@@ -37,5 +36,19 @@ tabs:
   - description: Our business description
     icon: /img/business.svg
     title: Our Business
+
+historyCards:
+  - date: October 2017
+    description: SNB Finance Holdings registered it's business in Auckland, New Zealand.
+  - date: March 2018
+    description: SNB Finance Holdings received FSP registration and started to provide financial business.
+  - date: May 2018
+    description: SNB Finance Holdings registered “Snowball Securities, 雪盈证券“as brand trademark and adapted it in a series of local marketing activities.
+  - date: October 2018
+    description: SNB moved to office at 25 Teed Street, Newmarket. Since the company moved in, a lot of SNB local clients have visited our office.
+
+investors: 
+  - brandLogo: /img/mobile.svg
+    brandDescription: World leading venture capital firm, which has backed companies that now control $1.4 trillion of combined stock market value.
 ---
 

@@ -53,7 +53,15 @@ collections:
               {label: Title, name: title, widget: string},
               {label: Icon, name: icon, widget: image},
               {label: Description, name: description, widget: markdown}
-            ]}    
+            ]}  
+          - {label: 'History Cards', name: historyCards, widget: list, fields: [
+              {label: "Date", name: date, widget: string},
+              {label: "Description", name: description, widget: string},
+            ]}
+          - {label: "Investors", name: "investors", widget: "list", fields: [
+              {label: "Brand Logo", name: brandLogo, widget: image},
+              {label: "Brand Description", name: brandDescription, widget: text}, 
+            ]}
                
       - file: "src/pages/products/index.md"
         label: "Products Page"

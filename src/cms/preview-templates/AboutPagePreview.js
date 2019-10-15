@@ -3,16 +3,16 @@ import PropTypes from 'prop-types'
 
 import {AboutPageTemplate} from '../../templates/about-page'
 
-const AboutPagePreview = ({entry, widgetFor}) => {
+const AboutPagePreview = ({entry}) => {
   const data = entry.getIn(['data']).toJS()
-
-  console.log(data)
 
   return (
     <AboutPageTemplate
       mainpitch={data.mainpitch || {}}
       tabs={data.tabs || []}
       headerImage={data.headerImage}
+      historyCards={data.historyCards || []}
+      investors={data.investors || []}
     />
   )
 }
