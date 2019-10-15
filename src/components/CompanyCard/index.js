@@ -1,6 +1,8 @@
 // @flow
 import React from 'react'
 
+import PreviewCompatibleImage from '../PreviewCompatibleImage'
+
 type Props = {
   brandLogo: any,
   brandDescription: string,
@@ -9,7 +11,7 @@ type Props = {
 function CompanyCard(props: Props) {
   return (
     <div className="col-md-3 text-left">
-      <img src={props.brandLogo} alt="Brand Logo" />
+      <PreviewCompatibleImage imageInfo={props.brandLogo} />
       <p>{props.brandDescription}</p>
     </div>
   )
