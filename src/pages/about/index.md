@@ -36,19 +36,38 @@ tabs:
   - description: Our business description
     icon: /img/business.svg
     title: Our Business
-
 historyCards:
   - date: October 2017
-    description: SNB Finance Holdings registered it's business in Auckland, New Zealand.
+    description: 'SNB Finance Holdings registered it''s business in Auckland, New Zealand.'
   - date: March 2018
-    description: SNB Finance Holdings received FSP registration and started to provide financial business.
+    description: >-
+      SNB Finance Holdings received FSP registration and started to provide
+      financial business.
   - date: May 2018
-    description: SNB Finance Holdings registered “Snowball Securities, 雪盈证券“as brand trademark and adapted it in a series of local marketing activities.
+    description: >-
+      SNB Finance Holdings registered “Snowball Securities, 雪盈证券“as brand
+      trademark and adapted it in a series of local marketing activities.
   - date: October 2018
-    description: SNB moved to office at 25 Teed Street, Newmarket. Since the company moved in, a lot of SNB local clients have visited our office.
-
-investors: 
-  - brandLogo: /img/mobile.svg
-    brandDescription: World leading venture capital firm, which has backed companies that now control $1.4 trillion of combined stock market value.
+    description: >-
+      SNB moved to office at 25 Teed Street, Newmarket. Since the company moved
+      in, a lot of SNB local clients have visited our office.
+investors:
+  - brandDescription: >-
+      World leading venture capital firm, which has backed companies that now
+      control $1.4 trillion of combined stock market value.
+    brandLogo: /img/sequoia.png
+  - brandDescription: >-
+      Founded in 1986, by the Chan family of Hong Kong, to make private equity
+      and venture capital investments.
+    brandLogo: /img/morning-side.png
+  - brandDescription: >-
+      A Chinese social networking service similar to Facebook. In February 2011,
+      Renren made a pre-IPO announcement that it had 160 million registered
+      users.
+    brandLogo: /img/renren.png
+  - brandDescription: >-
+      The highest valued FinTech company in the world, and the world's most
+      valuable unicorn (start-up) company, with a valuation of US$150 billion.
+    brandLogo: /img/ant-financial.png
 ---
 
