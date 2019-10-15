@@ -4,6 +4,7 @@ import PropTypes from 'prop-types'
 import {graphql} from 'gatsby'
 
 import Layout from '../components/Layout'
+import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 
 export const AboutPageTemplate = ({mainpitch, tabs, headerImage}) => {
   const [tabDescription, setTabDescription] = useState(tabs[0].description)
@@ -39,6 +40,8 @@ export const AboutPageTemplate = ({mainpitch, tabs, headerImage}) => {
                   key={tab.title}
                   onClick={() => setTabDescription(tab.description)}
                 >
+                  <PreviewCompatibleImage imageInfo={tab.icon} />
+
                   <p>{tab.title}</p>
                 </div>
               ))}
@@ -98,7 +101,7 @@ export const aboutPageQuery = graphql`
           title
           icon {
             childImageSharp {
-              fluid(maxWidth: 400, quality: 100) {
+              fluid(maxWidth: 240, quality: 64) {
                 ...GatsbyImageSharpFluid
               }
             }
