@@ -68,6 +68,51 @@ investors:
   - brandDescription: >-
       The highest valued FinTech company in the world, and the world's most
       valuable unicorn (start-up) company, with a valuation of US$150 billion.
-    brandLogo: /img/ant-financial.png
+    brandLogo: /img/renren.png
+
+partners:
+  - brandDescription: >-
+      World leading venture capital firm, which has backed companies that now
+      control $1.4 trillion of combined stock market value.
+    brandLogo: /img/sequoia.png
+  - brandDescription: >-
+      Founded in 1986, by the Chan family of Hong Kong, to make private equity
+      and venture capital investments.
+    brandLogo: /img/morning-side.png
+  - brandDescription: >-
+      A Chinese social networking service similar to Facebook. In February 2011,
+      Renren made a pre-IPO announcement that it had 160 million registered
+      users.
+    brandLogo: /img/renren.png
+  - brandDescription: >-
+      The highest valued FinTech company in the world, and the world's most
+      valuable unicorn (start-up) company, with a valuation of US$150 billion.
+    brandLogo: /img/renren.png
+  - brandDescription: >-
+      World leading venture capital firm, which has backed companies that now
+      control $1.4 trillion of combined stock market value.
+    brandLogo: /img/sequoia.png
+  - brandDescription: >-
+      Founded in 1986, by the Chan family of Hong Kong, to make private equity
+      and venture capital investments.
+    brandLogo: /img/morning-side.png
+  - brandDescription: >-
+      A Chinese social networking service similar to Facebook. In February 2011,
+      Renren made a pre-IPO announcement that it had 160 million registered
+      users.
+    brandLogo: /img/renren.png
+  - brandDescription: >-
+      The highest valued FinTech company in the world, and the world's most
+      valuable unicorn (start-up) company, with a valuation of US$150 billion.
+    brandLogo: /img/renren.png
+  - brandDescription: >-
+      A Chinese social networking service similar to Facebook. In February 2011,
+      Renren made a pre-IPO announcement that it had 160 million registered
+      users.
+    brandLogo: /img/renren.png
+  - brandDescription: >-
+      The highest valued FinTech company in the world, and the world's most
+      valuable unicorn (start-up) company, with a valuation of US$150 billion.
+    brandLogo: /img/renren.png
 ---
 

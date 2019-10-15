@@ -22,6 +22,7 @@ type AboutTemplate = {
   tabs: Array<{title: string, icon: any, description: any}>,
   historyCards: Array<{date: string, description: string}>,
   investors: Array<{brandLogo: string, brandDescription: string}>,
+  partners: Array<{brandLogo: string, brandDescription: string}>,
   contentComponent: any,
 }
 
@@ -100,11 +101,26 @@ export const AboutPageTemplate = (props: AboutTemplate) => {
           </div>
 
           {/* Investors */}
-          <div className="text-center">
+          <div className="text-center mb-3">
             <h3 className="big-subtitle text-secondary">Investors</h3>
 
-            <div className="row">
+            <div className="row mt-5">
               {props.investors.map((investor, ndx) => (
+                <CompanyCard
+                  key={ndx}
+                  brandLogo={investor.brandLogo}
+                  brandDescription={investor.brandDescription}
+                />
+              ))}
+            </div>
+          </div>
+
+          {/* Partners */}
+          <div className="text-center">
+            <h3 className="big-subtitle text-secondary">Partners</h3>
+
+            <div className="row mt-5">
+              {props.partners.map((investor, ndx) => (
                 <CompanyCard
                   key={ndx}
                   brandLogo={investor.brandLogo}
@@ -139,6 +155,7 @@ const AboutPage = ({data}: Props) => {
         historyCards={post.frontmatter.historyCards}
         contentComponent={HTMLContent}
         investors={post.frontmatter.investors}
+        partners={post.frontmatter.partners}
       />
     </Layout>
   )
@@ -180,7 +197,17 @@ export const aboutPageQuery = graphql`
         investors {
           brandLogo {
             childImageSharp {
-              fluid(maxWidth: 240, quality: 64) {
+              fluid(maxWidth: 240, quality: 100) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+          brandDescription
+        }
+        partners {
+          brandLogo {
+            childImageSharp {
+              fluid(maxWidth: 240, quality: 100) {
                 ...GatsbyImageSharpFluid
               }
             }

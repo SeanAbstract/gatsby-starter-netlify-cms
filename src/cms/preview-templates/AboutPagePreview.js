@@ -13,6 +13,7 @@ const AboutPagePreview = ({entry}) => {
       headerImage={data.headerImage}
       historyCards={data.historyCards || []}
       investors={data.investors || []}
+      partners={data.partners || []}
     />
   )
 }
