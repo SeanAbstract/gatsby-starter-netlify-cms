@@ -11,7 +11,7 @@ type Props = {
 function CompanyCard(props: Props) {
   return (
     <div className="col-md-3 text-left">
-      <PreviewCompatibleImage imageInfo={props.brandLogo} />
+      <PreviewCompatibleImage imageInfo={props.brandLogo} alt="Brand Logo" />
       <p>{props.brandDescription}</p>
     </div>
   )
