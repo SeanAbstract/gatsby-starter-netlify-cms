@@ -71,7 +71,7 @@ collections:
         label: "How it works"
         name: "how-it-works"
         fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "how-it-works"}
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "how-it-works-page"}
           - {label: "Header Image", name: headerImage, widget: image}
           - {label: "Sections", name: sections, widget: list, fields: [
               {label: "Title", name: title, widget: text},
@@ -79,11 +79,11 @@ collections:
               {label: "Image", name: image, widget: image},
             ]}
       
-      - file: "src/pages/faq-page/index.md"
+      - file: "src/pages/faq/index.md"
         label: "Faq Page"
         name: "faq"
         fields: 
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "faq"}
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "faq-page"}
           - {label: "Header Image", name: headerImage, widget: image}
           - {label: "Categories", name: categories, widget: list, fields: [
               {label: "Category Title", name: "categoryTitle", widget: text},
@@ -92,8 +92,7 @@ collections:
                 {label: "Answer", name: answer, widget: text},
               ]},
             ]}
-
-               
+      
       - file: "src/pages/products/index.md"
         label: "Products Page"
         name: "products"
