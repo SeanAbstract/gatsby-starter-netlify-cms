@@ -71,12 +71,26 @@ collections:
         label: "How it works"
         name: "how-it-works"
         fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about-page"}
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "how-it-works"}
           - {label: "Header Image", name: headerImage, widget: image}
           - {label: "Sections", name: sections, widget: list, fields: [
               {label: "Title", name: title, widget: text},
               {label: "Description", name: body, widget: markdown},
               {label: "Image", name: image, widget: image},
+            ]}
+      
+      - file: "src/pages/faq-page/index.md"
+        label: "Faq Page"
+        name: "faq"
+        fields: 
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "faq"}
+          - {label: "Header Image", name: headerImage, widget: image}
+          - {label: "Categories", name: categories, widget: list, fields: [
+              {label: "Category Title", name: "categoryTitle", widget: text},
+              {label: "Questions", name: questions, widget: list, fields: [
+                {label: "Question", name: question, widget: text},
+                {label: "Answer", name: answer, widget: text},
+              ]},
             ]}
 
                

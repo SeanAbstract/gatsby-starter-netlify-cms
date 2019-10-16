@@ -4,8 +4,8 @@ import {graphql} from 'gatsby'
 
 import SharedJumbotron from '../../components/SharedJumbotron'
 import Layout from '../../components/Layout'
-import PreviewCompatibleImage from '../../components/PreviewCompatibleImage'
-import Content, {HTMLContent} from '../../components/Content'
+import {HTMLContent} from '../../components/Content'
+import HowItWorksSection from '../../components/HowItWorksSection'
 
 type HowItWorksTemplateProps = {
   headerImage: any,
@@ -14,8 +14,6 @@ type HowItWorksTemplateProps = {
 }
 
 export function HowItWorksTemplate(props: HowItWorksTemplateProps) {
-  const PostContent = props.contentComponent || Content
-
   return (
     <div className="how-it-works">
       <SharedJumbotron headerImage={props.headerImage} title="How It Works" description="Simply" />
@@ -23,33 +21,10 @@ export function HowItWorksTemplate(props: HowItWorksTemplateProps) {
       <section>
         <div className="row">
           <div className="container">
-            {props.sections.map((section, ndx) => (
-              <div className="col-md-8 mx-auto">
-                <div className="row w-100">
-                  {ndx % 2 === 0 ? (
-                    <>
-                      <div className="col-md-8">
-                        <h3>{section.title}</h3>
-                        <p>{section.description}</p>
-                      </div>
-                      <div className="col-md-4">
-                        <PreviewCompatibleImage imageInfo={section.image} alt="section image" />
-                      </div>
-                    </>
-                  ) : (
-                    <>
-                      <div className="col-md-4">
-                        <PreviewCompatibleImage imageInfo={section.image} alt="section image" />
-                      </div>
-                      <div className="col-md-8">
-                        <h3>{section.title}</h3>
-                        <PostContent content={section.body} />
-                      </div>
-                    </>
-                  )}
-                </div>
-              </div>
-            ))}
+            <HowItWorksSection
+              sections={props.sections}
+              contentComponent={props.contentComponent}
+            />
           </div>
         </div>
       </section>

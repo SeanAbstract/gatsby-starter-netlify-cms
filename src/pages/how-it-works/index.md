@@ -3,7 +3,7 @@ templateKey: how-it-works-page
 headerImage: /img/hero-about.png
 sections:
   - body: >-
-      The whole process including: filling in personal information, submitting
+      The whole process including filling in personal information, submitting
       ID/address, signing agreement, verifying identity, and following account
       opening status is all handled within our app.
 

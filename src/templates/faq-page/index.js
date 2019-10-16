@@ -1,0 +1,110 @@
+/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
+/* eslint-disable jsx-a11y/anchor-is-valid */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+// @flow
+import React, {useState} from 'react'
+import {graphql} from 'gatsby'
+
+import Layout from '../../components/Layout'
+import SharedJumbotron from '../../components/SharedJumbotron'
+
+type FaqPagesTemplateProps = {
+  headerImage: any,
+  categories: Array<{
+    categoryTitle: string,
+    questions: Array<{question: string, answer: string}>,
+  }>,
+}
+
+export function FaqPagesTemplate(props: FaqPagesTemplateProps) {
+  const [currentNdx, setNdx] = useState(0)
+
+  return (
+    <div>
+      <SharedJumbotron headerImage={props.headerImage} title="FAQS" description="Answered" />
+
+      <div className="row">
+        <div className="container">
+          <div className="col-md-8 mx-auto">
+            <ul className="nav nav-pills">
+              {props.categories.map((category, ndx) => (
+                <li
+                  key={ndx}
+                  className="nav-item"
+                  onClick={() => {
+                    setNdx(ndx)
+                  }}
+                >
+                  <a className={`nav-link ${ndx === currentNdx ? 'active' : ''}`}>
+                    {category.categoryTitle}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div className="row">
+        <div className="container">
+          <div className="col-md-10 mx-auto">
+            {props.categories[currentNdx].questions.map((cc, ndx) => (
+              <div className="mb-5" key={ndx}>
+                <h5>{cc.question}</h5>
+                <p>{cc.question}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+type Props = {
+  data: {
+    markdownRemark: {
+      frontmatter: FaqPagesTemplateProps,
+    },
+  },
+}
+
+function FaqPage({data}: Props) {
+  const {markdownRemark: faq} = data
+
+  console.log(faq)
+
+  return (
+    <Layout>
+      <FaqPagesTemplate
+        headerImage={faq.frontmatter.headerImage}
+        categories={faq.frontmatter.categories}
+      />
+    </Layout>
+  )
+}
+
+export default FaqPage
+
+export const faqPageQuery = graphql`
+  query FaqPage($id: String!) {
+    markdownRemark(id: {eq: $id}) {
+      frontmatter {
+        headerImage {
+          childImageSharp {
+            fluid(maxWidth: 2000, quality: 100) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        categories {
+          categoryTitle
+          questions {
+            question
+            answer
+          }
+        }
+      }
+    }
+  }
+`
