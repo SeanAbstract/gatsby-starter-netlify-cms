@@ -76,7 +76,7 @@ function FaqPage({data}: Props) {
 
   return (
     <Layout>
-      <FaqPagesTemplate
+      <FaqPageTemplate
         headerImage={faq.frontmatter.headerImage}
         categories={faq.frontmatter.categories}
       />
