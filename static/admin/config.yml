@@ -62,6 +62,10 @@ collections:
               {label: "Brand Logo", name: brandLogo, widget: image},
               {label: "Brand Description", name: brandDescription, widget: text}, 
             ]}
+          - {label: "Partners", name: "partners", widget: "list", fields: [
+              {label: "Brand Logo", name: brandLogo, widget: image},
+              {label: "Brand Description", name: brandDescription, widget: text}, 
+            ]}
                
       - file: "src/pages/products/index.md"
         label: "Products Page"
