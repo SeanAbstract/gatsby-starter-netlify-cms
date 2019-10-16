@@ -4,6 +4,6 @@ headerImage: /img/hero-about.png
 sections: 
   - title: Our Backers
     description: Hello World
-    icon: /img/people.svg
+    image: /img/people.svg
 ---
 

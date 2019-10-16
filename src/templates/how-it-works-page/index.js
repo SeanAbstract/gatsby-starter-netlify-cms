@@ -1,5 +1,6 @@
 // @flow
 import React from 'react'
+import {graphql} from 'gatsby'
 
 import SharedJumbotron from '../../components/SharedJumbotron'
 import Layout from '../../components/Layout'
@@ -19,8 +20,8 @@ export function HowItWorksTemplate(props: HowItWorksTemplateProps) {
         <div className="row">
           <div className="container">
             {props.sections.map((section, ndx) => (
-              <div className="col-md-8">
-                <div className="row">
+              <div className="col-md-8 mx-auto">
+                <div className="row w-100">
                   {ndx % 2 === 0 ? (
                     <>
                       <div className="col-md-8">
@@ -61,15 +62,44 @@ type Props = {
 }
 
 const HowItWorks = ({data}: Props) => {
-  const {markdownRemark: post} = data
+  const {markdownRemark: hiwData} = data
+
+  console.log(hiwData)
 
   return (
     <Layout>
       <HowItWorksTemplate
-        sections={post.frontmatter.sections}
-        headerImage={post.frontmatter.headerImage}
+        sections={hiwData.frontmatter.sections}
+        headerImage={hiwData.frontmatter.headerImage}
       />
     </Layout>
   )
 }
 export default HowItWorks
+
+export const howItWorksPageQuery = graphql`
+  query HowItWorksPage($id: String!) {
+    markdownRemark(id: {eq: $id}) {
+      frontmatter {
+        headerImage {
+          childImageSharp {
+            fluid(maxWidth: 2000, quality: 100) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        sections {
+          title
+          description
+          image {
+            childImageSharp {
+              fluid(maxWidth: 240, quality: 64) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+`
