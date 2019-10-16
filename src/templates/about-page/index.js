@@ -10,7 +10,7 @@ import SharedJumbotron from '../../components/SharedJumbotron'
 import HistoryCard from '../../components/HistoryCard'
 import CompanyCard from '../../components/CompanyCard'
 
-import styles from './styles.module.scss'
+import './styles.scss'
 
 type AboutTemplate = {
   headerImage: any,
@@ -32,13 +32,13 @@ export const AboutPageTemplate = (props: AboutTemplate) => {
   const [tabDescription, setTabDescription] = useState(props.tabs[0].description)
 
   return (
-    <div>
+    <div className="about-page">
       <SharedJumbotron headerImage={props.headerImage} title="About" />
 
       <section className="pt-3 pb-5">
         <div className="row">
           <div className="container">
-            <div className="col-md-8 col-sm-10 mx-auto text-center">
+            <div className="col-md-9 col-sm-10 mx-auto text-center">
               <h3 className="section-leading-text">{props.mainpitch.title}</h3>
               <div className="text-left">
                 <p>{props.mainpitch.description}</p>
@@ -50,7 +50,7 @@ export const AboutPageTemplate = (props: AboutTemplate) => {
 
         <div className="row">
           <div className="container">
-            <div className="col-md-8 mx-auto">
+            <div className="col-md-9 mx-auto">
               <div className="row">
                 {props.tabs.map(tab => (
                   <div
@@ -84,7 +84,7 @@ export const AboutPageTemplate = (props: AboutTemplate) => {
                 {props.historyCards.map((historyItem, key, {length}) => (
                   <>
                     <HistoryCard date={historyItem.date} description={historyItem.description} />
-                    {key < length - 1 && <div className={styles.timelineIcon} />}
+                    {key < length - 1 && <div className="timeline-icon" />}
                   </>
                 ))}
               </div>
