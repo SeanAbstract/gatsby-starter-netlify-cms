@@ -66,6 +66,19 @@ collections:
               {label: "Brand Logo", name: brandLogo, widget: image},
               {label: "Brand Description", name: brandDescription, widget: text}, 
             ]}
+
+      - file: "src/pages/how-it-works/index.md"
+        label: "How it works"
+        name: "how it works"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about-page"}
+          - {label: "Header Image", name: headerImage, widget: image}
+          - {label: "Sections", name: sections, widget: list, fields: [
+              {label: "Title", name: title, widget: text},
+              {label: "Description", name: description, widget: markdown},
+              {label: "Image", name: image, widget: image},
+            ]}
+
                
       - file: "src/pages/products/index.md"
         label: "Products Page"
