@@ -69,7 +69,7 @@ collections:
 
       - file: "src/pages/how-it-works/index.md"
         label: "How it works"
-        name: "how it works"
+        name: "how-it-works"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about-page"}
           - {label: "Header Image", name: headerImage, widget: image}
