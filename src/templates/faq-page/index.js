@@ -8,7 +8,7 @@ import {graphql} from 'gatsby'
 import Layout from '../../components/Layout'
 import SharedJumbotron from '../../components/SharedJumbotron'
 
-type FaqPagesTemplateProps = {
+type FaqPageTemplateProps = {
   headerImage: any,
   categories: Array<{
     categoryTitle: string,
@@ -16,7 +16,7 @@ type FaqPagesTemplateProps = {
   }>,
 }
 
-export function FaqPagesTemplate(props: FaqPagesTemplateProps) {
+export function FaqPageTemplate(props: FaqPageTemplateProps) {
   const [currentNdx, setNdx] = useState(0)
 
   return (
@@ -64,7 +64,7 @@ export function FaqPagesTemplate(props: FaqPagesTemplateProps) {
 type Props = {
   data: {
     markdownRemark: {
-      frontmatter: FaqPagesTemplateProps,
+      frontmatter: FaqPageTemplateProps,
     },
   },
 }
