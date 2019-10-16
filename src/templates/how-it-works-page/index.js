@@ -90,7 +90,7 @@ export const howItWorksPageQuery = graphql`
         }
         sections {
           title
-          description
+          body
           image {
             childImageSharp {
               fluid(maxWidth: 240, quality: 64) {

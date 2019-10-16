@@ -2,7 +2,7 @@
 templateKey: how-it-works-page
 headerImage: /img/hero-about.png
 sections:
-  - description: >-
+  - body: >-
       The whole process including: filling in personal information, submitting
       ID/address, signing agreement, verifying identity, and following account
       opening status is all handled within our app.
@@ -11,7 +11,7 @@ sections:
       It really is that simple.
     image: /img/how-it-works-1.png
     title: Setup your account
-  - description: >-
+  - body: >-
       **Option 1** Transfer HK$ to Snowball holding account in Hong Kong 
 
 
@@ -28,7 +28,7 @@ sections:
       complete. Withdrawing funds is just as easy as making a deposit.
     image: /img/how-it-works-2.png
     title: Deposit and withdraw
-  - description: >-
+  - body: >-
       All tradings are conducted through our app.
 
 
