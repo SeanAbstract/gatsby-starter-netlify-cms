@@ -14,7 +14,7 @@ type HowItWorksTemplateProps = {
 export function HowItWorksTemplate(props: HowItWorksTemplateProps) {
   return (
     <div className="how-it-works">
-      <SharedJumbotron headerImage={props.headerImage} title="About" />
+      <SharedJumbotron headerImage={props.headerImage} title="How It Works" description="Simply" />
 
       <section>
         <div className="row">

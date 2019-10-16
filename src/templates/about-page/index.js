@@ -33,7 +33,7 @@ export const AboutPageTemplate = (props: AboutTemplate) => {
 
   return (
     <div className="about-page">
-      <SharedJumbotron headerImage={props.headerImage} title="About" />
+      <SharedJumbotron headerImage={props.headerImage} title="About" description="Snowball" />
 
       <section className="pt-3 pb-5">
         <div className="row">
