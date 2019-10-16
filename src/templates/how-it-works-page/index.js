@@ -5,13 +5,17 @@ import {graphql} from 'gatsby'
 import SharedJumbotron from '../../components/SharedJumbotron'
 import Layout from '../../components/Layout'
 import PreviewCompatibleImage from '../../components/PreviewCompatibleImage'
+import Content, {HTMLContent} from '../../components/Content'
 
 type HowItWorksTemplateProps = {
   headerImage: any,
   sections: Array<{title: string, description: string, image: any}>,
+  contentComponent: any,
 }
 
 export function HowItWorksTemplate(props: HowItWorksTemplateProps) {
+  const PostContent = props.contentComponent || Content
+
   return (
     <div className="how-it-works">
       <SharedJumbotron headerImage={props.headerImage} title="How It Works" description="Simply" />
@@ -39,7 +43,7 @@ export function HowItWorksTemplate(props: HowItWorksTemplateProps) {
                       </div>
                       <div className="col-md-8">
                         <h3>{section.title}</h3>
-                        <p>{section.description}</p>
+                        <PostContent content={section.body} />
                       </div>
                     </>
                   )}
@@ -71,6 +75,7 @@ const HowItWorks = ({data}: Props) => {
       <HowItWorksTemplate
         sections={hiwData.frontmatter.sections}
         headerImage={hiwData.frontmatter.headerImage}
+        contentComponent={HTMLContent}
       />
     </Layout>
   )
