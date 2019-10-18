@@ -55,7 +55,7 @@ testimonials:
     backgroundImage: /img/smile-face-7.jpg
     videoUrl: 'http://'
   - customerName: Sarah Hughes
-    customerPosition: 
+    customerPosition: investor
     backgroundImage: /img/smile-face-8.jpg
     videoUrl: 'http://'
 ---
