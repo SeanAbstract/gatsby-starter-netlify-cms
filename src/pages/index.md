@@ -1,9 +1,46 @@
 ---
 templateKey: index-page
 title: Great coffee with a conscience
-image: /img/home-jumbotron.jpg
+image: /img/landing-page-2.png
 heading: Great coffee with a conscience
 subheading: Support sustainable farming while enjoying a cup
+
+firstSection:
+  mainText: "Fast Secure Trusted"
+  description: >
+    Fast and secure access to global markets with our online platform that allows you to buy
+    and sell securities in Hong Kong, China and the US. Try Snowball Securities today - a
+    trusted member of the Snowball Group
+  buttonText: Try Snowball Securities today
+  image: /img/snowball-phone.png
+
+stockSection:
+  title: "Access World-Class Investment Options"
+  backgroundImage: /img/investment.png
+  stocks:
+    - country: "US"
+      countryCode: "US"
+      commission:
+        - price: "$0.0002"
+          text: "per share"
+        - price: "$0.99"
+          text: "per deal the minimum"
+    - country: "Hong Kong"
+      countryCode: "HK"
+      commission:
+        - price: "$0.00"
+          text: "No commission on orders below HKD 60,000"
+        - price: "0.03%"
+          text: "per share on orders above HKD 60,000"
+
+featureSection:
+  mainText: "Make informed decisions"
+  subText: "Invest globally in one account"
+  description: >
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. Excepteur sintticus occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  buttonText: How it works
+  image: /img/phone-mock.png
+
 mainpitch:
   title: Why Kaldi
   description: >

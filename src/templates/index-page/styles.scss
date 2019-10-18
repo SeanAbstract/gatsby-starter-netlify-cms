@@ -1,0 +1,31 @@
+.landing-page {
+
+    .hero-video, .second-section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .hero-video {
+        height: 60vh;
+        // background-repeat: no-repeat;
+        background-size: contain;
+        
+    }
+
+    .second-section {
+        height: 70vh;
+    }
+
+    .stock-section {
+        height: 70vh;
+        background-size: cover;
+
+    }
+
+    .third-section {
+        height: 70vh;
+    }
+}
+

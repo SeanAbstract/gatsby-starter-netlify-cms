@@ -1,4 +1,6 @@
-@import '~bootstrap/dist/css/bootstrap.min.css';
+// @import '~bootstrap/dist/css/bootstrap.min.css';
+@import "~bootstrap/scss/bootstrap";
+
 
 $primary: #006fbb;
 $secondary: #91BCDC;
@@ -91,7 +93,7 @@ p {
 }
 
 .text-primary {
-    color: $primary;
+    color: $primary !important;
 }
 
 .text-secondary {
@@ -117,5 +119,42 @@ p {
     font-size: 26.5px;
 }
 
+.full-width-image-container {
+    width: 100vw;
+    height: 400px;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin: 2em -50vw;
+    background-size: cover;
+    background-position: bottom;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.full-width-image {
+    width: 100vw;
+    height: 400px;
+    background-position: bottom;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.display-2 {
+    text-transform: uppercase;
+    line-height: 0.75;
+}
+
+.btn {
+    font-size: 12px;
+    border-width: 2px;
+}
+
+.bg-primary {
+    background-color: $primary !important;
+}
 
 

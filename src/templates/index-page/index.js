@@ -1,110 +1,110 @@
+// @type
+
 import React from 'react'
 import PropTypes from 'prop-types'
 import {Link, graphql} from 'gatsby'
 
+import './styles.scss'
 import Layout from '../../components/Layout'
-import Features from '../../components/Features'
-import BlogRoll from '../../components/BlogRoll'
+import SharedJumbotron from '../../components/SharedJumbotron'
+import PreviewCompatibleImage from '../../components/PreviewCompatibleImage'
+import StocksCarousel from '../../components/StocksCarousel'
 
-export const IndexPageTemplate = ({
-  image,
-  title,
-  heading,
-  subheading,
-  mainpitch,
-  description,
-  intro,
-}) => (
-  <div>
-    <div
-      className="full-width-image margin-top-0"
-      style={{
-        backgroundImage: `url(${
-          image.childImageSharp ? image.childImageSharp.fluid.src : image
-        })`,
-        backgroundPosition: `top left`,
-        backgroundAttachment: `fixed`,
-      }}
-    >
-      <div
-        style={{
-          display: 'flex',
-          height: '150px',
-          lineHeight: '1',
-          justifyContent: 'space-around',
-          alignItems: 'left',
-          flexDirection: 'column',
-        }}
-      >
-        <h1
-          className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen"
-          style={{
-            boxShadow: 'rgb(255, 68, 0) 0.5rem 0px 0px, rgb(255, 68, 0) -0.5rem 0px 0px',
-            backgroundColor: 'rgb(255, 68, 0)',
-            color: 'white',
-            lineHeight: '1',
-            padding: '0.25em',
-          }}
-        >
-          {title}
-        </h1>
-        <h3
-          className="has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-4-widescreen"
-          style={{
-            boxShadow: 'rgb(255, 68, 0) 0.5rem 0px 0px, rgb(255, 68, 0) -0.5rem 0px 0px',
-            backgroundColor: 'rgb(255, 68, 0)',
-            color: 'white',
-            lineHeight: '1',
-            padding: '0.25em',
-          }}
-        >
-          {subheading}
-        </h3>
-      </div>
-    </div>
-    <section className="section section--gradient">
-      <div className="container">
-        <div className="section">
-          <div className="columns">
-            <div className="column is-10 is-offset-1">
-              <div className="content">
-                <div className="content">
-                  <div className="tile">
-                    <h1 className="title">{mainpitch.title}</h1>
-                  </div>
-                  <div className="tile">
-                    <h3 className="subtitle">{mainpitch.description}</h3>
-                  </div>
-                </div>
-                <div className="columns">
-                  <div className="column is-12">
-                    <h3 className="has-text-weight-semibold is-size-2">{heading}</h3>
-                    <p>{description}</p>
-                  </div>
-                </div>
-                <Features gridItems={intro.blurbs} />
-                <div className="columns">
-                  <div className="column is-12 has-text-centered">
-                    <Link className="btn" to="/products">
-                      See all products
-                    </Link>
-                  </div>
-                </div>
-                <div className="column is-12">
-                  <h3 className="has-text-weight-semibold is-size-2">Latest stories</h3>
-                  <BlogRoll />
-                  <div className="column is-12 has-text-centered">
-                    <Link className="btn" to="/blog">
-                      Read more
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+type Props = {
+  firstSection: {
+    mainText: string,
+    description: string,
+    buttonText: string,
+    image: string,
+  },
+  stockSection: {
+    title: string,
+    backgroundImage: any,
+    stocks: Array<{
+      country: string,
+      countryCode: string,
+      commission: [
+        {
+          price: string,
+          text: string,
+        }
+      ],
+    }>,
+  },
+  featureSection: {
+    mainText: string,
+    subText: string,
+    description: string,
+    buttonText: string,
+    image: any,
+  },
+}
+
+export const IndexPageTemplate = ({image, firstSection, stockSection, featureSection}: Props) => (
+  <div className="landing-page">
+    {/* Hero Video */}
+    <SharedJumbotron
+      title="Global Markets"
+      description="At your fingertips"
+      headerImage={image}
+      size="lg"
+    />
+
+    {/* Fast Secure Trusted */}
+    <div className="second-section">
+      <div className="row justify-content-center">
+        <div className="col-md-3">
+          <h1 className="text-primary display-2 mb-3">{firstSection.mainText}</h1>
+          <p>{firstSection.description}</p>
+          <button className="btn btn-outline-primary rounded-pill" type="button">
+            {firstSection.buttonText}
+          </button>
+        </div>
+        <div className="col-md-3">
+          <PreviewCompatibleImage imageInfo={firstSection.image} style={{maxWidth: '250px'}} />
         </div>
       </div>
-    </section>
+    </div>
+
+    {/* Stock Section */}
+    <div className="row no-gutters stock-section">
+      <div
+        className="col-md-6 mx-auto"
+        style={{
+          backgroundImage: `url(${
+            stockSection.backgroundImage.childImageSharp
+              ? stockSection.backgroundImage.childImageSharp.fluid.src
+              : stockSection.backgroundImage
+          })`,
+          backgroundSize: 'cover%',
+        }}
+      >
+        <div className="containers d-flex align-items-center h-100 w-75 ml-auto">
+          <h1 className="display-2 mb-3">{stockSection.title}</h1>
+        </div>
+      </div>
+      <div className="col-md-6 mx-auto d-flex justify-content-center align-items-center bg-primary">
+        <div className="container ml-5 text-light">
+          <StocksCarousel stocks={stockSection.stocks} />
+        </div>
+      </div>
+    </div>
+
+    {/* Make Informed Decisions */}
+    <div className="row third-section justify-content-around align-items-center">
+      <div className="col-md-3 ml-auto">
+        <PreviewCompatibleImage imageInfo={featureSection.image} style={{maxWidth: '250px'}} />
+      </div>
+      <div className="col-md-1" />
+      <div className="col-md-3 mr-auto">
+        <h1 className="text-primary display-2 mb-3">{featureSection.mainText}</h1>
+        <h5 className="mb-2">{featureSection.subText}</h5>
+        <p>{featureSection.description}</p>
+        <button className="btn btn-outline-primary rounded-pill" type="button">
+          {featureSection.buttonText}
+        </button>
+      </div>
+    </div>
   </div>
 )
 
@@ -123,16 +123,15 @@ IndexPageTemplate.propTypes = {
 const IndexPage = ({data}) => {
   const {frontmatter} = data.markdownRemark
 
+  console.log(frontmatter)
+
   return (
     <Layout>
       <IndexPageTemplate
         image={frontmatter.image}
-        title={frontmatter.title}
-        heading={frontmatter.heading}
-        subheading={frontmatter.subheading}
-        mainpitch={frontmatter.mainpitch}
-        description={frontmatter.description}
-        intro={frontmatter.intro}
+        firstSection={frontmatter.firstSection}
+        stockSection={frontmatter.stockSection}
+        featureSection={frontmatter.featureSection}
       />
     </Layout>
   )
@@ -152,11 +151,53 @@ export const pageQuery = graphql`
   query IndexPageTemplate {
     markdownRemark(frontmatter: {templateKey: {eq: "index-page"}}) {
       frontmatter {
-        title
         image {
           childImageSharp {
-            fluid(maxWidth: 2048, quality: 100) {
+            fluid(maxWidth: 1000, quality: 100) {
               ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        firstSection {
+          mainText
+          description
+          buttonText
+          image {
+            childImageSharp {
+              fluid(maxWidth: 2048, quality: 100) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+        }
+        stockSection {
+          title
+          backgroundImage {
+            childImageSharp {
+              fluid(maxWidth: 1200, quality: 100) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+          stocks {
+            country
+            countryCode
+            commission {
+              price
+              text
+            }
+          }
+        }
+        featureSection {
+          mainText
+          subText
+          description
+          buttonText
+          image {
+            childImageSharp {
+              fluid(maxWidth: 500, quality: 100) {
+                ...GatsbyImageSharpFluid
+              }
             }
           }
         }

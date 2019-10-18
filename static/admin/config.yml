@@ -29,6 +29,32 @@ collections:
         name: "index"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "index-page"}
+          - {label: "First Section", name: "firstSection", widget: "object", fields: [
+              {label: 'Main Text', name: 'mainText', widget: 'string'},
+              {label: 'Description', name: 'description', widget: 'string'},
+              {label: 'Button Text', name: 'buttonText', widget: 'string'},
+              {label: 'Image', name: 'image', widget: 'image'},
+            ]}
+          - {label: "Stock Section", name: "stockSection", widget: "list", fields: [
+              {label: "Title", name: "title", widget: "string"},
+              {label: "Background Image", name: "backgroundImage", widget: "image"},
+              {label: "Stocks", name: "stocks", widget: "list", fields: [
+                {label: 'Country', name: 'country', widget: 'string'},
+                {label: 'Country Code', name: 'countryCode', widget: 'string'},
+
+                {label: 'Commission', name: 'commission', widget: 'list', fields: [
+                  {label: 'Price', name: 'price', widget: 'text'},
+                  {label: 'Text', name: 'text', widget: 'text'},
+                ]},
+              ]}
+            ]}
+          - {label: "Feature Section", name: "featureSection", widget: "object", fields: [
+              {label: 'Main Text', name: 'mainText', widget: 'string'},
+              {label: "Sub Text", name: "subText", widget: "string"},
+              {label: 'Description', name: 'description', widget: 'string'},
+              {label: 'Button Text', name: 'buttonText', widget: 'string'},
+              {label: 'Image', name: 'image', widget: 'image'},
+            ]}
           - {label: Title, name: title, widget: string}
           - {label: Image, name: image, widget: image}
           - {label: Heading, name: heading, widget: string}
