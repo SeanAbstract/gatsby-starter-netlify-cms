@@ -1,9 +1,6 @@
 ---
 templateKey: index-page
-title: Great coffee with a conscience
 image: /img/landing-page-2.png
-heading: Great coffee with a conscience
-subheading: Support sustainable farming while enjoying a cup
 
 firstSection:
   mainText: "Fast Secure Trusted"
