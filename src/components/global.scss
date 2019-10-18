@@ -1,4 +1,4 @@
-// @import '~bootstrap/dist/css/bootstrap.min.css';
+@import '~bootstrap/dist/css/bootstrap.min.css';
 @import "~bootstrap/scss/bootstrap";
 
 
@@ -165,5 +165,16 @@ p {
 .bg-grey {
     background-color: #F5F5F5;
 }
+
+.modal-lg {
+    width: 90vw;
+    height: 90vh;
+    max-width: none !important;
+}
+
+.modal-content {
+    height: 100%;
+}
+
 
 

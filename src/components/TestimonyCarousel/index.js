@@ -1,36 +1,37 @@
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+// @flow
 import React, {useState} from 'react'
-import {
-  Carousel,
-  CarouselItem,
-  CarouselControl,
-  CarouselIndicators,
-  CarouselCaption,
-} from 'reactstrap'
+import {Carousel, CarouselItem, CarouselControl, Modal, ModalBody} from 'reactstrap'
+
+import playButton from '../../../static/img/play_button.svg'
+import testimonialImage from '../../../static/img/smile-face-7.jpg'
+import testimonialImage2 from '../../../static/img/smile-face-8.jpg'
+import PreviewCompatibleImage from '../PreviewCompatibleImage'
 
 const items = [
   {
-    src:
-      'data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22800%22%20height%3D%22400%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20800%20400%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_15ba800aa1d%20text%20%7B%20fill%3A%23555%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A40pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_15ba800aa1d%22%3E%3Crect%20width%3D%22800%22%20height%3D%22400%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22285.921875%22%20y%3D%22218.3%22%3EFirst%20slide%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E',
-    altText: 'Slide 1',
-    caption: 'Slide 1',
+    src: testimonialImage,
   },
   {
-    src:
-      'data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22800%22%20height%3D%22400%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20800%20400%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_15ba800aa20%20text%20%7B%20fill%3A%23444%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A40pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_15ba800aa20%22%3E%3Crect%20width%3D%22800%22%20height%3D%22400%22%20fill%3D%22%23666%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22247.3203125%22%20y%3D%22218.3%22%3ESecond%20slide%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E',
-    altText: 'Slide 2',
-    caption: 'Slide 2',
-  },
-  {
-    src:
-      'data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22800%22%20height%3D%22400%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20800%20400%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_15ba800aa21%20text%20%7B%20fill%3A%23333%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A40pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_15ba800aa21%22%3E%3Crect%20width%3D%22800%22%20height%3D%22400%22%20fill%3D%22%23555%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22277%22%20y%3D%22218.3%22%3EThird%20slide%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E',
-    altText: 'Slide 3',
-    caption: 'Slide 3',
+    src: testimonialImage2,
   },
 ]
 
-const TestimonyCarousel = props => {
+type Props = {
+  testimonials: Array<{
+    customerName: string,
+    customerPosition: string,
+    backgroundImage: string,
+    videoUrl: string,
+  }>,
+}
+
+const TestimonyCarousel = ({testimonials}: Props) => {
   const [activeIndex, setActiveIndex] = useState(0)
   const [animating, setAnimating] = useState(false)
+  const [modal, setModal] = useState(false)
+
+  const toggle = () => setModal(!modal)
 
   const next = () => {
     if (animating) return
@@ -44,45 +45,55 @@ const TestimonyCarousel = props => {
     setActiveIndex(nextIndex)
   }
 
-  const goToIndex = newIndex => {
-    if (animating) return
-    setActiveIndex(newIndex)
-  }
-
-  const slides = items.map(item => (
+  const slides = testimonials.map(testimonial => (
     <CarouselItem
       onExiting={() => setAnimating(true)}
       onExited={() => setAnimating(false)}
-      key={item.src}
+      key={testimonial.customerName}
     >
-      <div
-        className="d-flex justify-content-center align-items-center h-100 pb-5"
-        style={{position: 'absolute'}}
-      >
-        <div className="col-md-5">
+      <PreviewCompatibleImage
+        imageInfo={testimonial.backgroundImage}
+        style={{width: '100%', position: 'absolute'}}
+      />
+
+      <div className="d-flex justify-content-center align-items-center h-100">
+        <div className="col-md-2" />
+        <div className="col-md-5 mr-auto">
           <h1 className="display-2 mb-3">WHAT OUR CUSTOMERS ARE SAYING</h1>
           <h3 className="big-subtitle" style={{fontSize: '72px', color: 'black'}}>
-            Sarah Hughes
+            {testimonial.customerName}
           </h3>
-          <h5 className="text-white">INVESTOR</h5>
+          <h5 className="text-white" style={{textTransform: 'uppercase'}}>
+            {testimonial.customerPosition}
+          </h5>
           <div
             className="border border-white rounded-circle d-flex justify-content-center align-items-center"
-            style={{height: '75px', width: '75px'}}
+            style={{height: '65px', width: '65px'}}
+            onClick={() => {
+              setModal(true)
+            }}
           >
-            >
+            <img src={playButton} alt="Play Button" className="img-fluid" />
           </div>
         </div>
       </div>
-      <img src={item.src} alt={item.altText} style={{width: '100%'}} />
     </CarouselItem>
   ))
 
   return (
-    <Carousel activeIndex={activeIndex} next={next} previous={previous}>
-      {slides}
-      <CarouselControl direction="prev" directionText="Previous" onClickHandler={previous} />
-      <CarouselControl direction="next" directionText="Next" onClickHandler={next} />
-    </Carousel>
+    <>
+      <Carousel activeIndex={activeIndex} next={next} previous={previous}>
+        {slides}
+        <CarouselControl direction="prev" directionText="Previous" onClickHandler={previous} />
+        <CarouselControl direction="next" directionText="Next" onClickHandler={next} />
+      </Carousel>
+      {/* Modal Video */}
+      <Modal isOpen={modal} size="lg" toggle={toggle}>
+        <ModalBody>
+          <h1>hello</h1>
+        </ModalBody>
+      </Modal>
+    </>
   )
 }
 

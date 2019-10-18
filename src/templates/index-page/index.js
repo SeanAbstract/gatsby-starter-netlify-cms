@@ -13,6 +13,7 @@ import facebookLogo from '../../../static/img/home-jumbotron.jpg'
 import TestimonyCarousel from '../../components/TestimonyCarousel'
 
 type Props = {
+  image: any,
   firstSection: {
     mainText: string,
     description: string,
@@ -40,9 +41,32 @@ type Props = {
     buttonText: string,
     image: any,
   },
+  blurb: {
+    mainText: string,
+    subText: string,
+  },
+  realTimeStockSection: {
+    mainText: string,
+    description: string,
+    buttonText: string,
+  },
+  testimonials: Array<{
+    customerName: string,
+    customerPosition: string,
+    backgroundImage: string,
+    videoUrl: string,
+  }>,
 }
 
-export const IndexPageTemplate = ({image, firstSection, stockSection, featureSection}: Props) => (
+export const IndexPageTemplate = ({
+  image,
+  firstSection,
+  stockSection,
+  featureSection,
+  blurb,
+  realTimeStockSection,
+  testimonials,
+}: Props) => (
   <div className="landing-page">
     {/* Hero Video */}
     <SharedJumbotron
@@ -112,9 +136,9 @@ export const IndexPageTemplate = ({image, firstSection, stockSection, featureSec
     {/* Get ahead */}
     <div className="d-flex flex-column get-ahead-section justify-content-center align-items-center bg-primary">
       <h1 className="display-3" style={{lineHeight: '0.5'}}>
-        GET AHEAD
+        {blurb.mainText}
       </h1>
-      <h3 className="big-subtitle">on your terms</h3>
+      <h3 className="big-subtitle">{blurb.subText}</h3>
     </div>
 
     {/* Blog Roll  */}
@@ -139,10 +163,10 @@ export const IndexPageTemplate = ({image, firstSection, stockSection, featureSec
     {/* Second Feature Section */}
     <div className="row feature-section justify-content-around align-items-center bg-grey">
       <div className="col-md-4 ml-auto">
-        <h1 className="text-primary display-2 mb-3">Trade global stocks</h1>
-        <p>{featureSection.description}</p>
+        <h1 className="text-primary display-2 mb-3">{realTimeStockSection.mainText}</h1>
+        <p>{realTimeStockSection.description}</p>
         <button className="btn btn-outline-primary rounded-pill" type="button">
-          Start Trading
+          {realTimeStockSection.buttonText}
         </button>
       </div>
       <div className="col-md-5 mr-auto">
@@ -177,22 +201,10 @@ export const IndexPageTemplate = ({image, firstSection, stockSection, featureSec
 
     {/* Carousel */}
     <div className="carousel slide carousel-container" data-ride="carousel">
-      <TestimonyCarousel />
+      <TestimonyCarousel testimonials={testimonials} />
     </div>
   </div>
 )
-
-IndexPageTemplate.propTypes = {
-  image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-  title: PropTypes.string,
-  heading: PropTypes.string,
-  subheading: PropTypes.string,
-  mainpitch: PropTypes.object,
-  description: PropTypes.string,
-  intro: PropTypes.shape({
-    blurbs: PropTypes.array,
-  }),
-}
 
 const IndexPage = ({data}) => {
   const {frontmatter} = data.markdownRemark
@@ -206,6 +218,9 @@ const IndexPage = ({data}) => {
         firstSection={frontmatter.firstSection}
         stockSection={frontmatter.stockSection}
         featureSection={frontmatter.featureSection}
+        blurb={frontmatter.blurb}
+        realTimeStockSection={frontmatter.realTimeStockSection}
+        testimonials={frontmatter.testimonials}
       />
     </Layout>
   )
@@ -275,26 +290,26 @@ export const pageQuery = graphql`
             }
           }
         }
-        heading
-        subheading
-        mainpitch {
-          title
-          description
+        blurb {
+          mainText
+          subText
         }
-        description
-        intro {
-          blurbs {
-            image {
-              childImageSharp {
-                fluid(maxWidth: 240, quality: 64) {
-                  ...GatsbyImageSharpFluid
-                }
+        realTimeStockSection {
+          mainText
+          description
+          buttonText
+        }
+        testimonials {
+          customerName
+          customerPosition
+          videoUrl
+          backgroundImage {
+            childImageSharp {
+              fluid(maxWidth: 1024, quality: 100) {
+                ...GatsbyImageSharpFluid
               }
             }
-            text
           }
-          heading
-          description
         }
       }
     }
