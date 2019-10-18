@@ -12,15 +12,11 @@ const IndexPagePreview = ({entry, getAsset}) => {
     return (
       <IndexPageTemplate
         image={data.image}
-        firstSection={data.firstSection}
-        stockSection={{
-          title: data.stockSection.title,
-          backgroundImage: data.stockSection.backgroundImage,
-          stocks: data.stockSection.stocks || [],
-        }}
-        featureSection={data.featureSection}
-        blurb={data.blurb}
-        realTimeStockSection={data.realTimeStockSection}
+        firstSection={data.firstSection || {}}
+        stockSection={data.stockSection || {}}
+        featureSection={data.featureSection || {}}
+        blurb={data.blurb || {}}
+        realTimeStockSection={data.realTimeStockSection || {}}
         testimonials={data.testimonials || []}
       />
     )
