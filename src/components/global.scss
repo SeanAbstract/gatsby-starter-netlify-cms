@@ -157,4 +157,13 @@ p {
     background-color: $primary !important;
 }
 
+.col-md-20 {
+    flex: 0 0 20%;
+    max-width: 20%;
+}
+
+.bg-grey {
+    background-color: #F5F5F5;
+}
+
 

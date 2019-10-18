@@ -24,8 +24,32 @@
 
     }
 
-    .third-section {
+    .feature-section {
         height: 70vh;
     }
+
+    .get-ahead-section {
+        height: 25vh;
+    }
+
+    .blog-roll-container {
+        height: 40vh;
+
+        .blog-container {
+            border-left: 1px solid #E6E6E6;
+        }
+    }
+
+    .carousel-container {
+        height: 70vh;
+    }
+
+    .carousel-item{
+        height: 70vh;
+    } 
+    .carousel-item img{
+        height: 70vh;
+    }
+
 }
 
