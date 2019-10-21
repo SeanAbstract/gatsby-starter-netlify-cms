@@ -6,6 +6,9 @@ $primary: #006fbb;
 $secondary: #91BCDC;
 $background: #F5F5F5;
 
+body {
+    height: 100%;
+}
 
 @font-face {
     font-family: "Tungsten-Black";
@@ -125,7 +128,7 @@ p {
     position: relative;
     left: 50%;
     right: 50%;
-    margin: 2em -50vw;
+    margin: 0 -50vw;
     background-size: cover;
     background-position: bottom;
     display: flex;

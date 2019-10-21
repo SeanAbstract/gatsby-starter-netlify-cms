@@ -1,0 +1,56 @@
+.header {
+
+    .scrolled {
+        top: -100px;
+    }
+    
+    .scrolled-navbar {
+        width: 100%;
+        top: 0px;
+        background-color: white;
+        padding-top: 0;
+        padding-bottom: 0;
+        transition: 0.5s;
+      
+        .navbar-brand {
+          padding: 0px;
+        }
+      
+        .nav-link {
+          transition: 0.2s;
+      
+          :hover {
+            background-color: rgba(0, 111, 187, 1) !important;
+            color: white !important;
+          }
+        }
+      
+        @media (max-width: 767px) {
+          background-color: white;
+        }
+    }
+
+    .collapse {
+        opacity: 0.8;
+        width: 100vw;
+        -webkit-transition: none;
+        transition: none;
+      
+        .collapsing {
+          -webkit-transition: none;
+          transition: none;
+          display: none;
+        }
+      
+        @media (max-width: 767px) {
+          height: 100vh;
+        }
+    }
+
+    .navbar-toggler {
+
+        :focus {
+          outline: none;
+        }
+    }
+}

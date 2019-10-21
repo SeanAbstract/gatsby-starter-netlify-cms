@@ -146,6 +146,8 @@ type Props = {
 const AboutPage = ({data}: Props) => {
   const {markdownRemark: post} = data
 
+  console.log(post)
+
   return (
     <Layout>
       <AboutPageTemplate
