@@ -114,5 +114,10 @@ partners:
       The highest valued FinTech company in the world, and the world's most
       valuable unicorn (start-up) company, with a valuation of US$150 billion.
     brandLogo: /img/renren.png
+
+downloadNow:
+  mainText: "Access Global Markets Today"
+  subText: "Download now"
+  image: /img/snowball-phone.png
 ---
 

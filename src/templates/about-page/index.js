@@ -11,6 +11,7 @@ import HistoryCard from '../../components/HistoryCard'
 import CompanyCard from '../../components/CompanyCard'
 
 import './styles.scss'
+import DownloadNow from '../../components/DownloadNow'
 
 type AboutTemplate = {
   headerImage: any,
@@ -24,6 +25,11 @@ type AboutTemplate = {
   investors: Array<{brandLogo: string, brandDescription: string}>,
   partners: Array<{brandLogo: string, brandDescription: string}>,
   contentComponent: any,
+  downloadNow: {
+    mainText: string,
+    subText: string,
+    image: any,
+  },
 }
 
 export const AboutPageTemplate = (props: AboutTemplate) => {
@@ -131,6 +137,13 @@ export const AboutPageTemplate = (props: AboutTemplate) => {
           </div>
         </div>
       </section>
+
+      {/* Download NOw */}
+      <DownloadNow
+        mainText={props.downloadNow.mainText}
+        subText={props.downloadNow.subText}
+        image={props.downloadNow.image}
+      />
     </div>
   )
 }
@@ -158,6 +171,7 @@ const AboutPage = ({data}: Props) => {
         contentComponent={HTMLContent}
         investors={post.frontmatter.investors}
         partners={post.frontmatter.partners}
+        downloadNow={post.frontmatter.downloadNow}
       />
     </Layout>
   )
@@ -186,7 +200,7 @@ export const aboutPageQuery = graphql`
           description
           icon {
             childImageSharp {
-              fluid(maxWidth: 240, quality: 64) {
+              fluid(maxWidth: 240, quality: 100) {
                 ...GatsbyImageSharpFluid
               }
             }
@@ -215,6 +229,17 @@ export const aboutPageQuery = graphql`
             }
           }
           brandDescription
+        }
+        downloadNow {
+          mainText
+          subText
+          image {
+            childImageSharp {
+              fluid(maxWidth: 1024, quality: 100) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
         }
       }
     }

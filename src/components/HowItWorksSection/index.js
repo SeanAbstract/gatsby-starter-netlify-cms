@@ -19,7 +19,7 @@ function HowItWorksSection(props) {
               <PreviewCompatibleImage
                 imageInfo={section.image}
                 alt="section image"
-                // style={{maxHeight: '200px'}}
+                style={{maxWidth: '150px'}}
               />
             </div>
           </>
@@ -29,7 +29,7 @@ function HowItWorksSection(props) {
               <PreviewCompatibleImage
                 imageInfo={section.image}
                 alt="section image"
-                style={{maxHeight: '200px'}}
+                style={{maxWidth: '250px'}}
               />
             </div>
             <div className="col-md-8">

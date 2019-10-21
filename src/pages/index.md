@@ -58,4 +58,9 @@ testimonials:
     customerPosition: investor
     backgroundImage: /img/smile-face-8.jpg
     videoUrl: 'http://'
+
+downloadNow:
+  mainText: "Access Global Markets Today"
+  subText: "Download now"
+  image: /img/snowball-phone.png
 ---
