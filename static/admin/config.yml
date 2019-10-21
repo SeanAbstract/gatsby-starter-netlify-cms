@@ -35,7 +35,7 @@ collections:
               {label: 'Button Text', name: 'buttonText', widget: string},
               {label: 'Image', name: 'image', widget: image},
             ]}
-          - {label: "Stock Section", name: "stockSection", widget: list, fields: [
+          - {label: "Stock Section", name: "stockSection", widget: object, fields: [
               {label: "Title", name: "title", widget: string},
               {label: "Background Image", name: "backgroundImage", widget: image},
               {label: "Stocks", name: "stocks", widget: list, fields: [

@@ -8,20 +8,17 @@ const IndexPagePreview = ({entry, getAsset}) => {
 
   console.log(data)
 
-  if (data) {
-    return (
-      <IndexPageTemplate
-        image={data.image}
-        firstSection={data.firstSection || {}}
-        stockSection={data.stockSection || {}}
-        featureSection={data.featureSection || {}}
-        blurb={data.blurb || {}}
-        realTimeStockSection={data.realTimeStockSection || {}}
-        testimonials={data.testimonials || []}
-      />
-    )
-  }
-  return <div>Loading...</div>
+  return (
+    <IndexPageTemplate
+      image={data.image}
+      firstSection={data.firstSection || {}}
+      stockSection={data.stockSection || {}}
+      featureSection={data.featureSection || {}}
+      blurb={data.blurb || {}}
+      realTimeStockSection={data.realTimeStockSection || {}}
+      testimonials={data.testimonials || []}
+    />
+  )
 }
 
 IndexPagePreview.propTypes = {
