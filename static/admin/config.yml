@@ -69,6 +69,11 @@ collections:
               {label: "Description", name: "description", widget: string},
               {label: "Button Text", name: "buttonText", widget: string},
             ]}
+          - {label: "Blog Roll", name: "blogRoll", widget: list, fields: [
+              {label: "Blog Title", name: "title", widget: string},
+              {label: "Blog Description", name: "description", widget: string},
+              {label: "url", name: "url", widget: string},
+            ]}
           - {label: "Testimonials", name: "testimonials", widget: list, fields: [
               {label: "Customer Name", name: "customerName", widget: string},
               {label: "Customer Position", name: "customerPosition", widget: string},

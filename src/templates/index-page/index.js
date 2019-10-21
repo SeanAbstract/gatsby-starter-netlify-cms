@@ -51,6 +51,11 @@ type Props = {
     description: string,
     buttonText: string,
   },
+  blogRoll: Array<{
+    title: string,
+    description: string,
+    url: string,
+  }>,
   testimonials: Array<{
     customerName: string,
     customerPosition: string,
@@ -71,6 +76,7 @@ export const IndexPageTemplate = ({
   featureSection,
   blurb,
   realTimeStockSection,
+  blogRoll,
   testimonials,
   downloadNow,
 }: Props) => (
@@ -151,14 +157,14 @@ export const IndexPageTemplate = ({
     {/* Blog Roll  */}
     <div className="blog-roll-container py-3">
       <div className="row justify-content-center h-100">
-        {[1, 2, 3].map(num => (
+        {blogRoll.map(item => (
           <div
             className="col-md-3 pt-5 d-flex justify-content-between flex-column blog-container h-100"
             style={{flex: '0 0 20%'}}
           >
             <div>
-              <p className="text-primary lead">Greater security for account assets</p>
-              <p>Dual supervision by NZ and SEC/ FINRA in US</p>
+              <p className="text-primary lead">{item.title}</p>
+              <p>{item.description}</p>
             </div>
 
             <h3>></h3>
@@ -234,6 +240,7 @@ const IndexPage = ({data}) => {
         featureSection={frontmatter.featureSection}
         blurb={frontmatter.blurb}
         realTimeStockSection={frontmatter.realTimeStockSection}
+        blogRoll={frontmatter.blogRoll}
         testimonials={frontmatter.testimonials}
         downloadNow={frontmatter.downloadNow}
       />
@@ -313,6 +320,11 @@ export const pageQuery = graphql`
           mainText
           description
           buttonText
+        }
+        blogRoll {
+          title
+          description
+          url
         }
         testimonials {
           customerName
