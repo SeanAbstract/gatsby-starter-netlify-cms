@@ -17,7 +17,6 @@ const IndexPagePreview = ({entry, getAsset}) => {
       blurb={data.blurb || {}}
       realTimeStockSection={data.realTimeStockSection || {}}
       testimonials={data.testimonials || []}
-      blogRoll={data.blogRoll || []}
       downloadNow={data.downloadNow || {}}
     />
   )
