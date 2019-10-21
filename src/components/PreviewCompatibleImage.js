@@ -19,9 +19,9 @@ const PreviewCompatibleImage = ({imageInfo, alt, style}) => {
 
   if (typeof imageInfo === 'string') {
     console.log('- - - - - - -')
-    console.log(image)
+    console.log(imageInfo)
     console.log('- - - - - - -')
-    return <img style={style} src={image} alt={alt} className="img-fluid" />
+    return <img style={style} src={imageInfo} alt={alt} className="img-fluid" />
   }
 
   return null
