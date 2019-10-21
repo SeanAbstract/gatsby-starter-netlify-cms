@@ -41,7 +41,7 @@ export const AboutPageTemplate = (props: AboutTemplate) => {
     <div className="about-page">
       <SharedJumbotron headerImage={props.headerImage} title="About" description="Snowball" />
 
-      <section className="pt-3 pb-5">
+      <section className="pt-5 pb-5">
         <div className="row">
           <div className="container">
             <div className="col-md-9 col-sm-10 mx-auto text-center">
