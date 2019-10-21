@@ -1,15 +1,11 @@
 import React from 'react'
+import styled from 'styled-components'
 
 function SharedJumbotron({headerImage, title, description, size, secondaryColor}) {
   return (
-    <div
+    <Jumbotron
       className="full-width-image-container d-flex justify-content-center align-items-center flex-column"
-      style={{
-        backgroundImage: `url(${
-          headerImage.childImageSharp ? headerImage.childImageSharp.fluid.src : headerImage
-        })`,
-        height: size === 'lg' && '70vh',
-      }}
+      headerImage={headerImage}
     >
       <div
         className={`h-100 w-100 d-flex flex-column justify-content-center align-items-center ${
@@ -22,8 +18,13 @@ function SharedJumbotron({headerImage, title, description, size, secondaryColor}
           {description}
         </h3>
       </div>
-    </div>
+    </Jumbotron>
   )
 }
+
+const Jumbotron = styled.div`
+  height: ${props => props.size === 'lg' && '70vh'};
+  background-image: url(${props => props.headerImage.childImageSharp ? props.headerImage.childImageSharp.fluid.src : props.headerImage});
+`
 
 export default SharedJumbotron
