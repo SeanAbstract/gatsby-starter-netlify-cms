@@ -7,8 +7,8 @@ function HowItWorksSection(props) {
   const PostContent = props.contentComponent || Content
 
   return props.sections.map((section, ndx) => (
-    <div className="col-md-8 mx-auto">
-      <div className="row w-100 mb-5 justify-content-center align-items-center">
+    <div className="col-md-8 mx-auto mb-5">
+      <div className="row w-100 justify-content-center align-items-center">
         {ndx % 2 === 0 ? (
           <>
             <div className="col-md-8">

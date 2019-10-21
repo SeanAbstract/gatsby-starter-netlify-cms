@@ -113,8 +113,8 @@ export const IndexPageTemplate = ({
           backgroundSize: 'cover%',
         }}
       >
-        <div className="containers d-flex align-items-center h-100 w-75 ml-auto">
-          <h1 className="display-2 mb-3">{stockSection.title}</h1>
+        <div className="container d-flex align-items-center h-100 w-50 ml-auto">
+          <h1 className="display-3 mb-3">{stockSection.title}</h1>
         </div>
       </div>
       <div className="col-md-6 mx-auto d-flex justify-content-center align-items-center bg-primary">
