@@ -29,8 +29,13 @@
     }
 
     .get-ahead-section {
-        height: 25vh;
+        height: 25vh; 
+
+        h1 {
+            text-transform: uppercase;
+        }
     }
+
 
     .blog-roll-container {
         height: 40vh;

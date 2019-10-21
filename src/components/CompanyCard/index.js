@@ -15,7 +15,7 @@ function CompanyCard(props: Props) {
         <PreviewCompatibleImage
           imageInfo={props.brandLogo}
           alt="Brand Logo"
-          style={{height: '50px', width: '50px'}}
+          style={{maxWidth: '150px'}}
         />
       </div>
 

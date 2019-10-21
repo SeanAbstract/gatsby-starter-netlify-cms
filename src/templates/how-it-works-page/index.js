@@ -20,7 +20,7 @@ export function HowItWorksTemplate(props: HowItWorksTemplateProps) {
 
       <section>
         <div className="row">
-          <div className="container">
+          <div className="container py-5">
             <HowItWorksSection
               sections={props.sections}
               contentComponent={props.contentComponent}

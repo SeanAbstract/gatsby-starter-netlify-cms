@@ -11,6 +11,7 @@ import PreviewCompatibleImage from '../../components/PreviewCompatibleImage'
 import StocksCarousel from '../../components/StocksCarousel'
 import facebookLogo from '../../../static/img/home-jumbotron.jpg'
 import TestimonyCarousel from '../../components/TestimonyCarousel'
+import DownloadNow from '../../components/DownloadNow'
 
 type Props = {
   image: any,
@@ -56,6 +57,11 @@ type Props = {
     backgroundImage: string,
     videoUrl: string,
   }>,
+  downloadNow: {
+    mainText: string,
+    subText: string,
+    image: any,
+  },
 }
 
 export const IndexPageTemplate = ({
@@ -66,6 +72,7 @@ export const IndexPageTemplate = ({
   blurb,
   realTimeStockSection,
   testimonials,
+  downloadNow,
 }: Props) => (
   <div className="landing-page">
     {/* Hero Video */}
@@ -106,8 +113,8 @@ export const IndexPageTemplate = ({
           backgroundSize: 'cover%',
         }}
       >
-        <div className="containers d-flex align-items-center h-100 w-75 ml-auto">
-          <h1 className="display-2 mb-3">{stockSection.title}</h1>
+        <div className="container d-flex align-items-center h-100 w-50 ml-auto">
+          <h1 className="display-3 mb-3">{stockSection.title}</h1>
         </div>
       </div>
       <div className="col-md-6 mx-auto d-flex justify-content-center align-items-center bg-primary">
@@ -122,8 +129,8 @@ export const IndexPageTemplate = ({
       <div className="col-md-3 ml-auto">
         <PreviewCompatibleImage imageInfo={featureSection.image} style={{maxWidth: '250px'}} />
       </div>
-      <div className="col-md-1" />
-      <div className="col-md-3 mr-auto">
+      {/* <div className="col-md-1" /> */}
+      <div className="col-md-3 mr-auto ml-3">
         <h1 className="text-primary display-2 mb-3">{featureSection.mainText}</h1>
         <h5 className="mb-2">{featureSection.subText}</h5>
         <p>{featureSection.description}</p>
@@ -203,6 +210,13 @@ export const IndexPageTemplate = ({
     <div className="carousel slide carousel-container" data-ride="carousel">
       <TestimonyCarousel testimonials={testimonials} />
     </div>
+
+    {/* Download NOw */}
+    <DownloadNow
+      mainText={downloadNow.mainText}
+      subText={downloadNow.subText}
+      image={downloadNow.image}
+    />
   </div>
 )
 
@@ -221,6 +235,7 @@ const IndexPage = ({data}) => {
         blurb={frontmatter.blurb}
         realTimeStockSection={frontmatter.realTimeStockSection}
         testimonials={frontmatter.testimonials}
+        downloadNow={frontmatter.downloadNow}
       />
     </Layout>
   )
@@ -304,6 +319,17 @@ export const pageQuery = graphql`
           customerPosition
           videoUrl
           backgroundImage {
+            childImageSharp {
+              fluid(maxWidth: 1024, quality: 100) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+        }
+        downloadNow {
+          mainText
+          subText
+          image {
             childImageSharp {
               fluid(maxWidth: 1024, quality: 100) {
                 ...GatsbyImageSharpFluid

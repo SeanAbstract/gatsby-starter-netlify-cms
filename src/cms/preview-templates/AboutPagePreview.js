@@ -14,6 +14,7 @@ const AboutPagePreview = ({entry}) => {
       historyCards={data.historyCards || []}
       investors={data.investors || []}
       partners={data.partners || []}
+      downloadNow={data.downloadNow || {}}
     />
   )
 }
