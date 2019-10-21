@@ -3,14 +3,18 @@ import PropTypes from 'prop-types'
 
 import {BlogPostPageTemplate} from '../../templates/blog-post'
 
-const BlogPostPreview = ({entry, widgetFor}) => (
-  <BlogPostPageTemplate
-    content={widgetFor('body')}
-    description={entry.getIn(['data', 'description'])}
-    tags={entry.getIn(['data', 'tags'])}
-    title={entry.getIn(['data', 'title'])}
-  />
-)
+const BlogPostPreview = ({entry, widgetFor}) => {
+  const data = entry.getIn(['data']).toJS()
+
+  return (
+    <BlogPostPageTemplate
+      content={widgetFor('body')}
+      description={data.description || []}
+      title={data.title || []}
+      downloadNow={data.downloadNow || {}}
+    />
+  )
+}
 
 BlogPostPreview.propTypes = {
   entry: PropTypes.shape({

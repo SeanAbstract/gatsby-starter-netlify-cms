@@ -9,6 +9,7 @@ import Content, {HTMLContent} from '../../components/Content'
 import SharedJumbotron from '../../components/SharedJumbotron'
 
 import './styles.scss'
+import DownloadNow from '../../components/DownloadNow'
 
 type BlogPostTemplate = {
   content: Node.isRequired,
@@ -18,11 +19,16 @@ type BlogPostTemplate = {
   helmet: Object,
   featuredImage: any,
   tags: Array<string>,
+  downloadNow: {
+    mainText: string,
+    subText: string,
+    image: any,
+  },
 }
 
 export const BlogPostPageTemplate = (props: BlogPostTemplate) => {
   const PostContent = props.contentComponent || Content
-  const {content, description, title, helmet, featuredImage, tags} = props
+  const {content, description, title, helmet, featuredImage, tags, downloadNow} = props
 
   return (
     <div className="blog-post-page">
@@ -36,7 +42,7 @@ export const BlogPostPageTemplate = (props: BlogPostTemplate) => {
               <h2 className="title is-size-2 has-text-weight-bold">{title}</h2>
               <p>{description}</p>
               <PostContent content={content} />
-              {tags && tags.length ? (
+              {/* {tags && tags.length ? (
                 <div style={{marginTop: `4rem`}}>
                   <h4>Tags</h4>
                   <ul className="taglist">
@@ -47,11 +53,18 @@ export const BlogPostPageTemplate = (props: BlogPostTemplate) => {
                     ))}
                   </ul>
                 </div>
-              ) : null}
+              ) : null} */}
             </div>
           </div>
         </div>
       </section>
+
+      {/* Download NOw */}
+      <DownloadNow
+        mainText={downloadNow.mainText}
+        subText={downloadNow.subText}
+        image={downloadNow.image}
+      />
     </div>
   )
 }
@@ -71,9 +84,9 @@ const BlogPost = ({data}) => {
             <meta name="description" content={`${post.frontmatter.description}`} />
           </Helmet>
         }
-        tags={post.frontmatter.tags}
         title={post.frontmatter.title}
         featuredImage={post.frontmatter.featuredimage}
+        downloadNow={post.frontmatter.downloadNow}
       />
     </Layout>
   )
@@ -104,6 +117,17 @@ export const pageQuery = graphql`
         title
         description
         tags
+        downloadNow {
+          mainText
+          subText
+          image {
+            childImageSharp {
+              fluid(maxWidth: 1024, quality: 100) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+        }
       }
     }
   }
