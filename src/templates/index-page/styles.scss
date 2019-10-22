@@ -64,7 +64,7 @@
     }
 
     .feature-section {
-        height: 90vh;
+        min-height: 90vh;
     }
 
     .get-ahead-section {
@@ -77,7 +77,6 @@
 
 
     .blog-roll-container {
-        height: 45vh;
 
         .blog-container {
             border-left: 1px solid #E6E6E6;

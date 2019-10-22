@@ -14,7 +14,7 @@ type Props = {
 }
 
 const StockCard = (props: Props) => (
-  <Card>
+  <StyledCard>
     <Row noGutters>
       <Col md={12} xs={5}>
         <ImgContainer
@@ -46,8 +46,19 @@ const StockCard = (props: Props) => (
         </StyledCardBody>
       </Col>
     </Row>
-  </Card>
+  </StyledCard>
 )
+
+const StyledCard = styled.div`
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 2px solid #f5f5f5 !important;
+`
 
 const ImgContainer = styled.div`
   height: 100%;

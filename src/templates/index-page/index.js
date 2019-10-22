@@ -142,9 +142,9 @@ export const IndexPageTemplate = ({
       </Col>
     </Row>
 
-    {/* Make Informed Decisions */}
+    {/* Make Informed Decisions or 4th */}
     <div className="row feature-section justify-content-around align-items-center">
-      <div className="col-md-3 ml-auto">
+      <div className="col-md-3 ml-auto d-none d-md-block">
         <PreviewCompatibleImage imageInfo={featureSection.image} style={{maxWidth: '250px'}} />
       </div>
       {/* <div className="col-md-1" /> */}
@@ -160,7 +160,7 @@ export const IndexPageTemplate = ({
       </div>
     </div>
 
-    {/* Get ahead */}
+    {/* Get ahead or 5th */}
     <div className="d-flex flex-column get-ahead-section justify-content-center align-items-center bg-primary">
       <h1 className="display-3" style={{lineHeight: '0.5'}}>
         {blurb.mainText}
@@ -168,16 +168,16 @@ export const IndexPageTemplate = ({
       <h3 className="big-subtitle">{blurb.subText}</h3>
     </div>
 
-    {/* Blog Roll  */}
+    {/* Blog Roll or 6th */}
     <div className="blog-roll-container container py-3">
       <Fade bottom cascade>
         <BlogRoll />
       </Fade>
     </div>
 
-    {/* Second Feature Section */}
+    {/* Second Feature Section or 7th */}
     <div className="row feature-section justify-content-around align-items-center bg-grey">
-      <div className="col-md-4 ml-auto">
+      <Col md={5} lg={3} className="ml-auto">
         <Fade bottom>
           <h1 className="text-primary display-2 mb-3">{realTimeStockSection.mainText}</h1>
           <p>{realTimeStockSection.description}</p>
@@ -185,12 +185,12 @@ export const IndexPageTemplate = ({
             {realTimeStockSection.buttonText}
           </button>
         </Fade>
-      </div>
-      <div className="col-md-5 mr-auto">
+      </Col>
+      <Col md={6} lg={5} className="mr-auto">
         <Fade bottom cascade>
-          <div className="row w-100 no-gutters">
+          <Row noGutters>
             {[1, 2, 3].map(num => (
-              <div className="col" style={{marginRight: '5px'}}>
+              <Col md={4} sm={12}>
                 <Fade bottom>
                   <StockCard
                     bgColor="#3b5998"
@@ -201,12 +201,12 @@ export const IndexPageTemplate = ({
                     stockCode="FB"
                   />
                 </Fade>
-              </div>
+              </Col>
             ))}
-          </div>
+          </Row>
         </Fade>
-      </div>
-      </div>
+      </Col>
+    </div>
 
     {/* Carousel */}
     <div className="carousel slide carousel-container" data-ride="carousel">

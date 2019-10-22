@@ -3,7 +3,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import {Link, graphql, StaticQuery} from 'gatsby'
 import styled from 'styled-components'
-import {Container, Button, Col} from 'reactstrap'
+import {Container, Row, Col} from 'reactstrap'
 import Img from 'gatsby-image'
 
 import './styles.scss'
@@ -13,7 +13,7 @@ const BlogRoll = props => {
   const {edges: posts} = data.allMarkdownRemark
 
   return (
-    <div className="row justify-content-center h-100">
+    <Row className="justify-content-center h-100">
       {posts &&
         posts.map(({node: post}) => {
           const {title, description, featuredimage} = post.frontmatter
@@ -45,7 +45,7 @@ const BlogRoll = props => {
             </StyledCol>
           )
         })}
-    </div>
+    </Row>
     // <div className="columns is-multiline">
     //   {posts &&
     //     posts.map(({node: post}) => (
