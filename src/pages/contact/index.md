@@ -21,4 +21,9 @@ socialMedia:
   socialMediaTitle: Social Media
   wechatAccountOne: Official Account
   wechatAccountTwo: Overseas Official Account
+
+downloadNow:
+  mainText: "Access Global Markets Today"
+  subText: "Download now"
+  image: /img/snowball-phone.png
 ---

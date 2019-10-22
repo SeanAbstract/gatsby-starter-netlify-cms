@@ -243,6 +243,11 @@ collections:
             {label: "Wechat Account 1", name: "wechatAccountOne", widget: string},
             {label: "Wechat Account 2", name: "wechatAccountTwo", widget: string},
           ]}
+        - {label: "Download Now", name: "downloadNow", widget: object, fields: [
+            {label: "Main Text", name: "mainText", widget: string},
+            {label: "Sub Text", name: "subText", widget: string},
+            {label: "Image", name: "image", widget: image},
+          ]}
       
       - file: "src/pages/products/index.md"
         label: "Products Page"

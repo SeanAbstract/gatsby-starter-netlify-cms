@@ -2,6 +2,7 @@
 import React from 'react'
 import {graphql} from 'gatsby'
 
+import DownloadNow from '../../components/DownloadNow'
 import Layout from '../../components/Layout'
 import SharedJumbotron from '../../components/SharedJumbotron'
 import './styles.scss'
@@ -27,6 +28,11 @@ type Props = {
     wechatAccountOne: string,
     wechatAccountTwo: string,
   },
+  downloadNow: {
+    mainText: string,
+    subText: string,
+    image: any,
+  },
 }
 
 function ContactPageTemplate(props: Props) {
@@ -37,32 +43,30 @@ function ContactPageTemplate(props: Props) {
       <section className="customer-service-section">
         <div className="row h-100">
           <div className="col-md-6 d-flex justify-content-center align-items-center flex-column">
-            <div className="mx-auto">
-              <div className="row w-100">
-                <div className="col text-left">
-                  <h3>{props.informationSection.customerServiceTitle}</h3>
+            <div className="row w-75 pl-5">
+              <div className="col text-left ">
+                <h3>{props.informationSection.customerServiceTitle}</h3>
+              </div>
+            </div>
+            <div className="row w-75 pl-5">
+              {props.informationSection.customerServiceContacts.map(contact => (
+                <div className="col-sm-6 mb-4">
+                  <p className="lead mb-1">{contact.title}</p>
+                  <p className="mb-0">{contact.subtitle}</p>
+                  <p className="mb-0">{contact.hours}</p>
+                  <p className="mb-0">
+                    <strong>{contact.phoneNumber}</strong>{' '}
+                  </p>
                 </div>
-              </div>
-              <div className="row w-100">
-                {props.informationSection.customerServiceContacts.map(contact => (
-                  <div className="col-sm-6 mb-4">
-                    <p className="lead mb-1">{contact.title}</p>
-                    <p className="mb-0">{contact.subtitle}</p>
-                    <p className="mb-0">{contact.hours}</p>
-                    <p className="mb-0">
-                      <strong>{contact.phoneNumber}</strong>{' '}
-                    </p>
-                  </div>
-                ))}
-              </div>
-              <div className="row w-100">
-                {props.informationSection.offices.map(office => (
-                  <div className="col-8">
-                    <p className="lead mb-1">{office.officeName}</p>
-                    <p className="mb-0">{office.address}</p>
-                  </div>
-                ))}
-              </div>
+              ))}
+            </div>
+            <div className="row w-75 pl-5">
+              {props.informationSection.offices.map(office => (
+                <div className="col-8">
+                  <p className="lead mb-1">{office.officeName}</p>
+                  <p className="mb-0">{office.address}</p>
+                </div>
+              ))}
             </div>
           </div>
           <div
@@ -105,7 +109,60 @@ function ContactPageTemplate(props: Props) {
       </section>
 
       {/* Contact Us Form */}
-      <section className="contact-us-form" />
+      <section className="contact-us-form">
+        <div className="row h-100 justify-content-center align-items-start">
+          <div className="col-md-3">
+            <h3 className="mb-3">Contact Us</h3>
+            <div>
+              <p className="lead mb-1">Customer Inquiries</p>
+              <p>service@snowballsecurities.com</p>
+            </div>
+            <div>
+              <p className="lead mb-1">Media Inquiries</p>
+              <p>service@snowballsecurities.com</p>
+            </div>
+            <div>
+              <p className="lead mb-1">Business Cooperation</p>
+              <p>service@snowballsecurities.com</p>
+            </div>
+          </div>
+
+          <div className="col-md-5">
+            <h3 className="mb-3">Leave a message</h3>
+            <div className="row mb-2">
+              <div className="col-md-6">
+                <div className="form-group">
+                  <label htmlFor="exampleFormControlInput1">Name</label>
+                  <input type="text" className="form-control" placeholder="John Doe" />
+                </div>
+              </div>
+              <div className="col-md-6">
+                <div className="form-group">
+                  <label htmlFor="exampleFormControlInput1">Email address</label>
+                  <input type="email" className="form-control" placeholder="name@example.com" />
+                </div>
+              </div>
+            </div>
+            <div className="row">
+              <div className="col-md-12">
+                <div className="form-group">
+                  <label htmlFor="exampleFormControlTextarea1">Message</label>
+                  <textarea className="form-control" rows="3" />
+                </div>
+              </div>
+            </div>
+            <div>
+              <button className="btn-outline-primary btn rounded-pill px-4" type="button">
+                Submit
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <DownloadNow {...props.downloadNow} />
+      </section>
     </div>
   )
 }
@@ -121,6 +178,7 @@ function ContactPage({data}) {
         headerImage={contact.frontmatter.headerImage}
         informationSection={contact.frontmatter.informationSection}
         socialMedia={contact.frontmatter.socialMedia}
+        downloadNow={contact.frontmatter.downloadNow}
       />
     </Layout>
   )
@@ -163,6 +221,17 @@ export const contactPageQuery = graphql`
           socialMediaTitle
           wechatAccountOne
           wechatAccountTwo
+        }
+        downloadNow {
+          mainText
+          subText
+          image {
+            childImageSharp {
+              fluid(maxWidth: 2000, quality: 100) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
         }
       }
     }
