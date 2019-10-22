@@ -36,7 +36,10 @@ featureSection:
   description: >
     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. Excepteur sintticus occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
   buttonText: How it works
-  image: /img/phone-mock.png
+  image: /img/snowball-empty-phone.png
+  gifs:
+    - gif: /img/snowball-app-market-quotes_03.png
+    - gif: /img/snowball-app-stock-financial_03.png
 
 
 blurb:

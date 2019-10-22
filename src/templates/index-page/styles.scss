@@ -8,14 +8,20 @@
     }
 
     .hero-video {
-        height: 60vh;
+        height: 90vh;
         // background-repeat: no-repeat;
         background-size: contain;
         
     }
 
     .second-section {
-        height: 70vh;
+        height: 90vh;
+
+        .left-text-col {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
     }
 
     .stock-section {
@@ -25,7 +31,7 @@
     }
 
     .feature-section {
-        height: 70vh;
+        height: 90vh;
     }
 
     .get-ahead-section {

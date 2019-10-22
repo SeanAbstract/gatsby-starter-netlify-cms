@@ -59,6 +59,9 @@ collections:
               {label: 'Description', name: 'description', widget: string},
               {label: 'Button Text', name: 'buttonText', widget: string},
               {label: 'Image', name: 'image', widget: image},
+              {label: 'Gifs', name: 'gifs', widget: list, fields: [
+                {label: 'Gif', name: 'gif', widget: image},
+              ]},
             ]}
           - {label: "Blurb", name: "blurb", widget: object, fields: [
               {label: 'Main Text', name: 'mainText', widget: string},

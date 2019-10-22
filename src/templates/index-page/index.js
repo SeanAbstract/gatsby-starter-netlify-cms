@@ -1,18 +1,21 @@
 // @type
 
 import React from 'react'
+import {Row, Col, Container} from 'reactstrap'
 import PropTypes from 'prop-types'
 import {Link, graphql} from 'gatsby'
+import Fade from 'react-reveal/Fade'
 
 import './styles.scss'
 import Layout from '../../components/Layout'
 import SharedJumbotron from '../../components/SharedJumbotron'
 import PreviewCompatibleImage from '../../components/PreviewCompatibleImage'
 import StocksCarousel from '../../components/StocksCarousel'
-import facebookLogo from '../../../static/img/home-jumbotron.jpg'
+import introPhone from '../../img/snowball-intro-phone.gif'
 import TestimonyCarousel from '../../components/TestimonyCarousel'
 import DownloadNow from '../../components/DownloadNow'
 import BlogRoll from '../../components/BlogRoll'
+import StockCard from '../../components/StockCard'
 
 type Props = {
   image: any,
@@ -42,6 +45,9 @@ type Props = {
     description: string,
     buttonText: string,
     image: any,
+    gifs: Array<{
+      gif: any,
+    }>,
   },
   blurb: {
     mainText: string,
@@ -88,15 +94,21 @@ export const IndexPageTemplate = ({
     {/* Fast Secure Trusted */}
     <div className="second-section">
       <div className="row justify-content-center">
-        <div className="col-md-3">
-          <h1 className="text-primary display-2 mb-3">{firstSection.mainText}</h1>
-          <p>{firstSection.description}</p>
-          <button className="btn btn-outline-primary rounded-pill " type="button">
-            {firstSection.buttonText}
-          </button>
+        <div className="left-text-col col-md-3">
+          <Fade bottom>
+            <h1 className="text-primary display-2 mb-3">{firstSection.mainText}</h1>
+            <p>{firstSection.description}</p>
+            <div>
+              <button className="btn btn-outline-primary rounded-pill " type="button">
+                {firstSection.buttonText}
+              </button>
+            </div>
+          </Fade>
         </div>
         <div className="col-md-3">
-          <PreviewCompatibleImage imageInfo={firstSection.image} style={{maxWidth: '250px'}} />
+          <Fade bottom>
+            <img src={introPhone} style={{maxWidth: '300px'}} alt="snowball_intro_phone" />
+          </Fade>
         </div>
       </div>
     </div>
@@ -118,11 +130,14 @@ export const IndexPageTemplate = ({
           <h1 className="display-3 mb-3">{stockSection.title}</h1>
         </div>
       </div>
-      <div className="col-md-6 mx-auto d-flex justify-content-center align-items-center bg-primary">
-        <div className="container ml-5 text-light">
-          <StocksCarousel stocks={stockSection.stocks} />
-        </div>
-      </div>
+      <Col
+        md={6}
+        xs={12}
+        style={{backgroundColor: '#006fbb'}}
+        className="justify-content-center d-flex align-items-center m-md-0 col-right"
+      >
+        <StocksCarousel stocks={stockSection.stocks} />
+      </Col>
     </div>
 
     {/* Make Informed Decisions */}
@@ -157,41 +172,35 @@ export const IndexPageTemplate = ({
     {/* Second Feature Section */}
     <div className="row feature-section justify-content-around align-items-center bg-grey">
       <div className="col-md-4 ml-auto">
-        <h1 className="text-primary display-2 mb-3">{realTimeStockSection.mainText}</h1>
-        <p>{realTimeStockSection.description}</p>
-        <button className="btn btn-outline-primary rounded-pill" type="button">
-          {realTimeStockSection.buttonText}
-        </button>
+        <Fade bottom>
+          <h1 className="text-primary display-2 mb-3">{realTimeStockSection.mainText}</h1>
+          <p>{realTimeStockSection.description}</p>
+          <button className="btn btn-outline-primary rounded-pill" type="button">
+            {realTimeStockSection.buttonText}
+          </button>
+        </Fade>
       </div>
       <div className="col-md-5 mr-auto">
-        <div className="row w-100 no-gutters">
-          {[1, 2, 3].map(num => (
-            <div className="col" style={{marginRight: '5px'}}>
-              <div className="card rounded-0">
-                <div className="card-img-container" style={{flex: 1}}>
-                  <img
-                    src={facebookLogo}
-                    className="card-img-top"
-                    alt=""
-                    style={{height: '250px'}}
+        <Fade bottom cascade>
+          <div className="row w-100 no-gutters">
+            {[1, 2, 3].map(num => (
+              <div className="col" style={{marginRight: '5px'}}>
+                <Fade bottom>
+                  <StockCard
+                    bgColor="#3b5998"
+                    stockPrice="187.39"
+                    stockPercentage="0.95 (0.05%)"
+                    companyName="Facebook"
+                    icon="facebook"
+                    stockCode="FB"
                   />
-                </div>
-                <div className="card-body py-2" style={{flex: 0.3}}>
-                  <div className="row justify-content-around">
-                    <h5 className="mt-1">FB</h5>
-                    <div>
-                      <h3 className="mb-1">1821.5</h3>
-                      <p className="text-success">0.95 (0.05%)</p>
-                    </div>
-                  </div>
-                  <small className="text-muted">Facebook</small>
-                </div>
+                </Fade>
               </div>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
+        </Fade>
       </div>
-    </div>
+      </div>
 
     {/* Carousel */}
     <div className="carousel slide carousel-container" data-ride="carousel">
@@ -290,6 +299,9 @@ export const pageQuery = graphql`
                 ...GatsbyImageSharpFluid
               }
             }
+          }
+          gifs {
+            gif
           }
         }
         blurb {
