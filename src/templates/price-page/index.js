@@ -87,7 +87,12 @@ export function PricePageTemplate({
   lowInterestRatePackage,
   downloadNow,
 }: Props) {
-  const [] = useState()
+  const [currentPackage, setCurrentPackage] = useState('lowCommissionPackage')
+
+  const packages = {
+    lowCommissionPackage,
+    lowInterestRatePackage,
+  }
 
   return (
     <div>
@@ -100,47 +105,57 @@ export function PricePageTemplate({
               <h3 className="section-leading-text mb-5">{mainPitch}</h3>
 
               <div className="row">
-                <div className="col-md-6">
-                  <h3>Low Comission Package</h3>
+                <div className="col-md-6 d-flex flex-column">
+                  <div
+                    onClick={() => setCurrentPackage('lowCommissionPackage')}
+                    className="text-left"
+                  >
+                    <h3>Low Comission Package</h3>
+                  </div>
                   <div className="card">
                     <div className="card-body">
                       <div className="row justify-content-between align-items-center">
-                        <h5>{lowCommissionPackage.hk.commission.title}</h5>
-                        <p className="mb-0">{lowCommissionPackage.hk.commission.description}</p>
+                        <h5>{packages[currentPackage].hk.commission.title}</h5>
+                        <p className="mb-0">{packages[currentPackage].hk.commission.description}</p>
                       </div>
                       <div className="row justify-content-between align-items-center">
-                        <h5>{lowCommissionPackage.hk.platformUsageFee.title}</h5>
+                        <h5>{packages[currentPackage].hk.platformUsageFee.title}</h5>
                         <p className="mb-0">
-                          {lowCommissionPackage.hk.platformUsageFee.description}
+                          {packages[currentPackage].hk.platformUsageFee.description}
                         </p>
                       </div>
                       <div className="row justify-content-between align-items-center">
-                        <h5>{lowCommissionPackage.hk.financingInterestRate.title}</h5>
+                        <h5>{packages[currentPackage].hk.financingInterestRate.title}</h5>
                         <p className="mb-0">
-                          {lowCommissionPackage.hk.financingInterestRate.description}
+                          {packages[currentPackage].hk.financingInterestRate.description}
                         </p>
                       </div>
                     </div>
                   </div>
                 </div>
                 <div className="col-md-6">
-                  <h3>Low Interest Rate Package</h3>
+                  <div
+                    onClick={() => setCurrentPackage('lowInterestRatePackage')}
+                    className="text-left"
+                  >
+                    <h3>Low Interest Rate Package</h3>
+                  </div>
                   <div className="card">
                     <div className="card-body">
                       <div className="row justify-content-between align-items-center">
-                        <h5>{lowInterestRatePackage.us.commission.title}</h5>
-                        <p className="mb-0">{lowInterestRatePackage.us.commission.description}</p>
+                        <h5>{packages[currentPackage].us.commission.title}</h5>
+                        <p className="mb-0">{packages[currentPackage].us.commission.description}</p>
                       </div>
                       <div className="row justify-content-between align-items-center">
-                        <h5>{lowInterestRatePackage.us.platformUsageFee.title}</h5>
+                        <h5>{packages[currentPackage].us.platformUsageFee.title}</h5>
                         <p className="mb-0">
-                          {lowInterestRatePackage.us.platformUsageFee.description}
+                          {packages[currentPackage].us.platformUsageFee.description}
                         </p>
                       </div>
                       <div className="row justify-content-between align-items-center">
-                        <h5>{lowInterestRatePackage.us.financingInterestRate.title}</h5>
+                        <h5>{packages[currentPackage].us.financingInterestRate.title}</h5>
                         <p className="mb-0">
-                          {lowInterestRatePackage.us.financingInterestRate.description}
+                          {packages[currentPackage].us.financingInterestRate.description}
                         </p>
                       </div>
                     </div>

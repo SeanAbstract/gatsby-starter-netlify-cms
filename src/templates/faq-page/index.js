@@ -4,6 +4,7 @@
 // @flow
 import React, {useState} from 'react'
 import {graphql} from 'gatsby'
+import {UncontrolledCollapse} from 'reactstrap'
 
 import Layout from '../../components/Layout'
 import SharedJumbotron from '../../components/SharedJumbotron'
@@ -49,8 +50,16 @@ export function FaqPageTemplate(props: FaqPageTemplateProps) {
           <div className="col-md-9 mx-auto">
             {props.categories[currentNdx].questions.map((cc, ndx) => (
               <div className="mb-5" key={ndx}>
-                <h5>{cc.question}</h5>
-                <p>{cc.question}</p>
+                <button
+                  id={`toggler${ndx}`}
+                  type="button"
+                  style={{backgroundColor: 'transparent', border: 'none'}}
+                >
+                  <h5>{cc.question}</h5>
+                </button>
+                <UncontrolledCollapse toggler={`#toggler${ndx}`}>
+                  <p>{cc.question}</p>
+                </UncontrolledCollapse>
               </div>
             ))}
           </div>

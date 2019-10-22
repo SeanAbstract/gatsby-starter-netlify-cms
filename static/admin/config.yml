@@ -218,6 +218,32 @@ collections:
               ]},
             ]}
       
+      - file: "src/pages/faq/contact.md"
+        label: "Contact Page"
+        name: "contact"
+        fields: 
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "contact-page"}
+          - {label: "Header Image", name: headerImage, widget: image}
+          - {label: "Information Section", name: informationSection, widget: object, fields: [
+              {label: "Customer Service Title", name: customerServiceTitle, widget: string},
+              {label: "Customer Service Contacts", name: customerServiceContacts, widget: list, fields: [
+                {label: "Title", name: "title", widget: string},
+                {label: "Subtitle", name: "subtitle", widget: string},
+                {label: "Hours", name: "hours", widget: string},
+                {label: "Phone Number", name: "phoneNumber", widget: string},
+              ]},
+              {label: "Offices", name: offices, widget: list, fields: [
+                {label: "Office Name", name: "officeName", widget: string},
+                {label: "Address", name: "address", widget: string},
+              ]},
+              {label: "Image Right", name: imageRight, widget: image}
+            ]}
+        - {label: "Social Media", name: socialMedia, widget: object, fields: [
+            {label: "Social Media Title", name: "socialMediaTitle", widget: string},
+            {label: "Wechat Account 1", name: "wechatAccountOne", widget: string},
+            {label: "Wechat Account 2", name: "wechatAccountTwo", widget: string},
+          ]}
+      
       - file: "src/pages/products/index.md"
         label: "Products Page"
         name: "products"

@@ -1,8 +1,16 @@
+$primary: #006fbb;
+
+
 .contact-page {
 
 
     .customer-service-section {
         height: 50vh;
+    }
+
+    .social-media-section {
+        height: 20vh;
+        background-color: $primary;
     }
 
 }
