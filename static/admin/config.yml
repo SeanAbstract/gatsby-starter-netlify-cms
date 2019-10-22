@@ -31,7 +31,7 @@ collections:
     files:
       - file: "src/pages/en/index.md"
         label: "Landing Page"
-        name: "en/index"
+        name: "index"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "index-page"}
           - {label: "Background Image", name: "image", widget: image}
@@ -86,7 +86,7 @@ collections:
  
       - file: "src/pages/en/about/index.md"
         label: "About"
-        name: "en/about"
+        name: "about"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about-page"}
           - {label: "Header Image", name: headerImage, widget: image}
@@ -121,7 +121,7 @@ collections:
 
       - file: "src/pages/en/price/index.md"
         label: "Price"
-        name: "en/price"
+        name: "price"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "price-page"}
           - {label: "Jumbotron", name: "jumbotron", widget: object, fields: [
@@ -197,7 +197,7 @@ collections:
 
       - file: "src/pages/en/how-it-works/index.md"
         label: "How it works"
-        name: "en/how-it-works"
+        name: "how-it-works"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "how-it-works-page"}
           - {label: "Header Image", name: headerImage, widget: image}
@@ -209,7 +209,7 @@ collections:
       
       - file: "src/pages/en/faq/index.md"
         label: "Faq Page"
-        name: "en/faq"
+        name: "faq"
         fields: 
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "faq-page"}
           - {label: "Header Image", name: headerImage, widget: image}
@@ -221,9 +221,9 @@ collections:
               ]},
             ]}
       
-      - file: "src/pages/en/faq/index.md"
+      - file: "src/pages/en/contact/index.md"
         label: "Contact Page"
-        name: "en/contact"
+        name: "contact"
         fields: 
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "contact-page"}
           - {label: "Header Image", name: headerImage, widget: image}
@@ -254,7 +254,7 @@ collections:
       
       - file: "src/pages/en/products/index.md"
         label: "Products Page"
-        name: "en/products"
+        name: "products"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "product-page"}
           - {label: Title, name: title, widget: string}
@@ -272,7 +272,7 @@ collections:
     files:
       - file: "src/pages/zh/index.md"
         label: "Landing Page"
-        name: "zh/index"
+        name: "index"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "index-page"}
           - {label: "Background Image", name: "image", widget: image}
@@ -324,7 +324,7 @@ collections:
  
       - file: "src/pages/zh/about/index.md"
         label: "About"
-        name: "zh/about"
+        name: "about"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about-page"}
           - {label: "Header Image", name: headerImage, widget: image}
@@ -359,7 +359,7 @@ collections:
 
       - file: "src/pages/zh/price/index.md"
         label: "Price"
-        name: "zh/price"
+        name: "price"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "price-page"}
           - {label: "Jumbotron", name: "jumbotron", widget: object, fields: [
@@ -435,7 +435,7 @@ collections:
 
       - file: "src/pages/zh/how-it-works/index.md"
         label: "How it works"
-        name: "zh/how-it-works"
+        name: "how-it-works"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "how-it-works-page"}
           - {label: "Header Image", name: headerImage, widget: image}
@@ -447,7 +447,7 @@ collections:
       
       - file: "src/pages/zh/faq/index.md"
         label: "Faq Page"
-        name: "zh/faq"
+        name: "faq"
         fields: 
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "faq-page"}
           - {label: "Header Image", name: headerImage, widget: image}
@@ -459,9 +459,9 @@ collections:
               ]},
             ]}
       
-      - file: "src/pages/zh/faq/index.md"
+      - file: "src/pages/zh/contact/index.md"
         label: "Contact Page"
-        name: "zh/contact"
+        name: "contact"
         fields: 
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "contact-page"}
           - {label: "Header Image", name: headerImage, widget: image}
@@ -492,7 +492,7 @@ collections:
       
       - file: "src/pages/zh/products/index.md"
         label: "Products Page"
-        name: "zh/products"
+        name: "products"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "product-page"}
           - {label: Title, name: title, widget: string}
