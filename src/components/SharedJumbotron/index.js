@@ -5,6 +5,7 @@ function SharedJumbotron({headerImage, title, description, size, secondaryColor}
   return (
     <Jumbotron
       className="full-width-image-container d-flex justify-content-center align-items-center flex-column"
+      style={{height: size === 'lg' ? '70vh' : ''}}
       headerImage={headerImage}
     >
       <div
@@ -24,7 +25,10 @@ function SharedJumbotron({headerImage, title, description, size, secondaryColor}
 
 const Jumbotron = styled.div`
   height: ${props => props.size === 'lg' && '70vh'};
-  background-image: url(${props => props.headerImage.childImageSharp ? props.headerImage.childImageSharp.fluid.src : props.headerImage});
+  background-image: url(${props =>
+    props.headerImage.childImageSharp
+      ? props.headerImage.childImageSharp.fluid.src
+      : props.headerImage});
 `
 
 export default SharedJumbotron

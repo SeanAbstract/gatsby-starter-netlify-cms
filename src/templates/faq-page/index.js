@@ -22,11 +22,10 @@ export function FaqPageTemplate(props: FaqPageTemplateProps) {
   return (
     <div>
       <SharedJumbotron headerImage={props.headerImage} title="FAQS" description="Answered" />
-
-      <div className="row">
-        <div className="container pt-5">
+      <div className="container pt-5 mb-5">
+        <div className="row mx-auto">
           <div className="col-md-8 mx-auto">
-            <ul className="nav nav-pills">
+            <ul className="nav nav-pills row justify-content-around">
               {props.categories.map((category, ndx) => (
                 <li
                   key={ndx}
@@ -45,9 +44,9 @@ export function FaqPageTemplate(props: FaqPageTemplateProps) {
         </div>
       </div>
 
-      <div className="row">
-        <div className="container">
-          <div className="col-md-10 mx-auto">
+      <div className="container">
+        <div className="row">
+          <div className="col-md-9 mx-auto">
             {props.categories[currentNdx].questions.map((cc, ndx) => (
               <div className="mb-5" key={ndx}>
                 <h5>{cc.question}</h5>
