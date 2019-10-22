@@ -91,7 +91,7 @@ export const IndexPageTemplate = ({
       secondaryColor="primary"
     />
 
-    {/* Fast Secure Trusted */}
+    {/* Fast Secure Trusted or Second */}
     <Container className="second-section">
       <Row className="justify-content-center">
         <Col md={5} lg={4} className="left-text-col">
@@ -113,10 +113,12 @@ export const IndexPageTemplate = ({
       </Row>
     </Container>
 
-    {/* Stock Section */}
-    <div className="row no-gutters stock-section">
-      <div
-        className="col-md-6 mx-auto"
+    {/* Stock Section or Third */}
+    <Row noGutters className="stock-section">
+      <Col
+        md={6}
+        xs={12}
+        className="mx-auto"
         style={{
           backgroundImage: `url(${
             stockSection.backgroundImage.childImageSharp
@@ -129,7 +131,7 @@ export const IndexPageTemplate = ({
         <div className="container d-flex align-items-center h-100 w-50 ml-auto">
           <h1 className="display-3 mb-3">{stockSection.title}</h1>
         </div>
-      </div>
+      </Col>
       <Col
         md={6}
         xs={12}
@@ -138,7 +140,7 @@ export const IndexPageTemplate = ({
       >
         <StocksCarousel stocks={stockSection.stocks} />
       </Col>
-    </div>
+    </Row>
 
     {/* Make Informed Decisions */}
     <div className="row feature-section justify-content-around align-items-center">
@@ -147,12 +149,14 @@ export const IndexPageTemplate = ({
       </div>
       {/* <div className="col-md-1" /> */}
       <div className="col-md-3 mr-auto ml-3">
-        <h1 className="text-primary display-2 mb-3">{featureSection.mainText}</h1>
-        <h5 className="mb-2">{featureSection.subText}</h5>
-        <p>{featureSection.description}</p>
-        <button className="btn btn-outline-primary rounded-pill" type="button">
-          {featureSection.buttonText}
-        </button>
+        <Fade bottom>
+          <h1 className="text-primary display-2 mb-3">{featureSection.mainText}</h1>
+          <h5 className="mb-2">{featureSection.subText}</h5>
+          <p>{featureSection.description}</p>
+          <button className="btn btn-outline-primary rounded-pill" type="button">
+            {featureSection.buttonText}
+          </button>
+        </Fade>
       </div>
     </div>
 
