@@ -31,18 +31,21 @@ const Carousel = makeCarousel(CarouselUI)
 function StockCarousel({stocks}: Props) {
   return (
     <Carousel defaultWait={3000} maxTurns={100}>
-      {stocks.map(stock => (
-        <Fade top>
-          <StockSection
-            currency="HK$"
-            stockName="Hong Kong Stocks"
-            commissionAmt="$0.00"
-            commissionDesc="No commission on orders below HKD 60,000"
-            interestAmt="0.03%"
-            interestDesc="per share on orders above HKD 60,000"
-          />
-        </Fade>
-      ))}
+      {stocks.map(stock => {
+        const {country, countryCode, commission} = stock
+        return (
+          <Fade top>
+            <StockSection
+              currency={countryCode}
+              stockName={`${country} Stocks`}
+              commissionAmt={commission[0].price}
+              commissionDesc={commission[0].text}
+              interestAmt={commission[1].price}
+              interestDesc={commission[1].text}
+            />
+          </Fade>
+        )
+      })}
     </Carousel>
   )
 }
