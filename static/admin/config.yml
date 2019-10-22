@@ -218,7 +218,7 @@ collections:
               ]},
             ]}
       
-      - file: "src/pages/en/faq/en/contact.md"
+      - file: "src/pages/en/faq/en/index.md"
         label: "Contact Page"
         name: "en/contact"
         fields: 
@@ -456,7 +456,7 @@ collections:
               ]},
             ]}
       
-      - file: "src/pages/zh/faq/contact.md"
+      - file: "src/pages/zh/faq/index.md"
         label: "Contact Page"
         name: "zh/contact"
         fields: 
