@@ -11,46 +11,51 @@ mainPitch: Competitive rates, transparent fees, choose the price option that’s
 lowCommissionPackage:
   us:
     commission:
-      title: Sample Title
-      description: Sample Description
+      title: Commission
+      description: >
+        "No commission on orders below HKD 60,000"
     platformUsageFee:
-      title: Sample Title
+      title: Platform Usage Fee
       description: Sample Description
     financingInterestRate:
-      title: Sample Title
+      title: Financing Interest Rate
       description: Sample Description
   hk:
     commission:
-      title: Sample Title
+      title: Commission
       description: Sample Description
     platformUsageFee:
-      title: Sample Title
+      title: Platform Usage Fee
       description: Sample Description
     financingInterestRate:
-      title: Sample Title
+      title: Financing Interest Rate
       description: Sample Description
 
 lowInterestRatePackage:
   us:
     commission:
-      title: Sample Title
+      title: Commission
       description: Sample Description
     platformUsageFee:
-      title: Sample Title
+      title: Platform Usage Fee
       description: Sample Description
     financingInterestRate:
-      title: Sample Title
+      title: Financing Interest Rate
       description: Sample Description
   hk:
     commission:
-      title: Sample Title
+      title: Commission
       description: Sample Description
     platformUsageFee:
-      title: Sample Title
+      title: Platform Usage Fee
       description: Sample Description
     financingInterestRate:
-      title: Sample Title
+      title: Financing Interest Rate
       description: Sample Description
 
+downloadNow:
+  mainText: "Access Global Markets Today"
+  subText: "Download now"
+  image: /img/snowball-phone.png
 ---
 

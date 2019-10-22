@@ -9,9 +9,9 @@ import Content, {HTMLContent} from '../../components/Content'
 import SharedJumbotron from '../../components/SharedJumbotron'
 import HistoryCard from '../../components/HistoryCard'
 import CompanyCard from '../../components/CompanyCard'
+import DownloadNow from '../../components/DownloadNow'
 
 import './styles.scss'
-import DownloadNow from '../../components/DownloadNow'
 
 type AboutTemplate = {
   headerImage: any,

@@ -1,9 +1,10 @@
 // @flow
-import React from 'react'
+import React, {useState} from 'react'
 import {graphql} from 'gatsby'
 
 import Layout from '../../components/Layout'
 import SharedJumbotron from '../../components/SharedJumbotron'
+import DownloadNow from '../../components/DownloadNow'
 
 type Props = {
   jumbotron: {
@@ -72,6 +73,11 @@ type Props = {
       },
     },
   },
+  downloadNow: {
+    mainText: string,
+    subText: string,
+    image: any,
+  },
 }
 
 export function PricePageTemplate({
@@ -79,7 +85,10 @@ export function PricePageTemplate({
   mainPitch,
   lowCommissionPackage,
   lowInterestRatePackage,
+  downloadNow,
 }: Props) {
+  const [] = useState()
+
   return (
     <div>
       <SharedJumbotron {...jumbotron} />
@@ -87,25 +96,29 @@ export function PricePageTemplate({
       <section>
         <div className="container py-5">
           <div className="row">
-            <div className="col-md-8 mx-auto text-center">
-              <h3 className="section-leading-text">{mainPitch}</h3>
+            <div className="col-md-9 mx-auto text-center">
+              <h3 className="section-leading-text mb-5">{mainPitch}</h3>
 
               <div className="row">
                 <div className="col-md-6">
                   <h3>Low Comission Package</h3>
                   <div className="card">
                     <div className="card-body">
-                      <div className="row">
+                      <div className="row justify-content-between align-items-center">
                         <h5>{lowCommissionPackage.hk.commission.title}</h5>
-                        <p>{lowCommissionPackage.hk.commission.description}</p>
+                        <p className="mb-0">{lowCommissionPackage.hk.commission.description}</p>
                       </div>
-                      <div className="row">
+                      <div className="row justify-content-between align-items-center">
                         <h5>{lowCommissionPackage.hk.platformUsageFee.title}</h5>
-                        <p>{lowCommissionPackage.hk.platformUsageFee.description}</p>
+                        <p className="mb-0">
+                          {lowCommissionPackage.hk.platformUsageFee.description}
+                        </p>
                       </div>
-                      <div className="row">
+                      <div className="row justify-content-between align-items-center">
                         <h5>{lowCommissionPackage.hk.financingInterestRate.title}</h5>
-                        <p>{lowCommissionPackage.hk.financingInterestRate.description}</p>
+                        <p className="mb-0">
+                          {lowCommissionPackage.hk.financingInterestRate.description}
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -114,17 +127,21 @@ export function PricePageTemplate({
                   <h3>Low Interest Rate Package</h3>
                   <div className="card">
                     <div className="card-body">
-                      <div className="row">
+                      <div className="row justify-content-between align-items-center">
                         <h5>{lowInterestRatePackage.us.commission.title}</h5>
-                        <p>{lowInterestRatePackage.us.commission.description}</p>
+                        <p className="mb-0">{lowInterestRatePackage.us.commission.description}</p>
                       </div>
-                      <div className="row">
+                      <div className="row justify-content-between align-items-center">
                         <h5>{lowInterestRatePackage.us.platformUsageFee.title}</h5>
-                        <p>{lowInterestRatePackage.us.platformUsageFee.description}</p>
+                        <p className="mb-0">
+                          {lowInterestRatePackage.us.platformUsageFee.description}
+                        </p>
                       </div>
-                      <div className="row">
+                      <div className="row justify-content-between align-items-center">
                         <h5>{lowInterestRatePackage.us.financingInterestRate.title}</h5>
-                        <p>{lowInterestRatePackage.us.financingInterestRate.description}</p>
+                        <p className="mb-0">
+                          {lowInterestRatePackage.us.financingInterestRate.description}
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -133,6 +150,10 @@ export function PricePageTemplate({
             </div>
           </div>
         </div>
+      </section>
+
+      <section>
+        <DownloadNow {...downloadNow} />
       </section>
     </div>
   )
@@ -150,6 +171,7 @@ function PricePage({data}) {
         mainPitch={price.frontmatter.mainPitch}
         lowCommissionPackage={price.frontmatter.lowCommissionPackage}
         lowInterestRatePackage={price.frontmatter.lowInterestRatePackage}
+        downloadNow={price.frontmatter.downloadNow}
       />
     </Layout>
   )
@@ -228,6 +250,17 @@ export const pricePageQuery = graphql`
             financingInterestRate {
               title
               description
+            }
+          }
+        }
+        downloadNow {
+          mainText
+          subText
+          image {
+            childImageSharp {
+              fluid(maxWidth: 1024, quality: 100) {
+                ...GatsbyImageSharpFluid
+              }
             }
           }
         }

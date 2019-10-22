@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import {Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem} from 'reactstrap'
+import {Collapse, Navbar, NavbarToggler, NavbarBrand, Nav} from 'reactstrap'
 import {Link} from 'gatsby'
 
 import logo from '../../../static/img/snowball-logo-x.png'
