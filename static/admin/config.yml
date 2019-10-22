@@ -433,7 +433,7 @@ collections:
               {label: "Image", name: "image", widget: image},
             ]}
 
-      - file: "src/pages/zh/how-it-works/zh/index.md"
+      - file: "src/pages/zh/how-it-works/index.md"
         label: "How it works"
         name: "zh/how-it-works"
         fields:
