@@ -128,33 +128,33 @@ collections:
             ]}
           - {label: "Low Commission Package", name: "lowCommissionPackage", widget: "object", fields: [
               {label: "US", name: "us", widget: "object", fields: [
-                {label: "Commission", name: "commission", widget: object, fields: [
+                {label: "Commission", name: "commission", widget: "object", fields: [
                   {label: "Title", name: "title", widget: string},
                   {label: "Description", name: "description", widget: markdown},
                 ]},
-                {label: "Platform Usage Fee", name: "platformUsageFee", widget: object, fields: [
+                {label: "Platform Usage Fee", name: "platformUsageFee", widget: "object", fields: [
                   {label: "Title", name: "title", widget: string},
                   {label: "Description", name: "description", widget: markdown},
                 ]},
-                {label: "Financing Interest Rate", name: "financingInterestRate", widget: object, fields: [
+                {label: "Financing Interest Rate", name: "financingInterestRate", widget: "object", fields: [
                   {label: "Title", name: "title", widget: string},
                   {label: "Description", name: "description", widget: markdown},
                 ]},
               ]},
               {label: "HK , name: "hk", widget: "object", fields: [
-                {label: "Commission", name: "commission", widget: object, fields: [
+                {label: "Commission", name: "commission", widget: "object", fields: [
                   {label: "Title", name: "title", widget: string},
                   {label: "Description", name: "description", widget: markdown},
                 ]},
-                {label: "Platform Usage Fee", name: "platformUsageFee", widget: object, fields: [
+                {label: "Platform Usage Fee", name: "platformUsageFee", widget: "object", fields: [
                   {label: "Title", name: "title", widget: string},
                   {label: "Description", name: "description", widget: markdown},
                 ]},
-                {label: "Financing Interest Rate", name: "financingInterestRate", widget: object, fields: [
+                {label: "Financing Interest Rate", name: "financingInterestRate", widget: "object", fields: [
                   {label: "Title", name: "title", widget: string},
                   {label: "Description", name: "description", widget: markdown},
                 ]},
-              ]}
+              ]},
             ]}
           - {label: "Low interest rate package", name: "lowInterestRatePackage", widget: "object", fields: [
               {label: "US", name: "us", widget: "object", fields: [
@@ -184,7 +184,12 @@ collections:
                   {label: "Title", name: "title", widget: string},
                   {label: "Description", name: "description", widget: markdown},
                 ]},
-              ]}
+              ]},
+            ]}
+          - {label: "Download Now", name: "downloadNow", widget: object, fields: [
+              {label: "Main Text", name: "mainText", widget: string},
+              {label: "Sub Text", name: "subText", widget: string},
+              {label: "Image", name: "image", widget: image},
             ]}
 
       - file: "src/pages/how-it-works/index.md"
