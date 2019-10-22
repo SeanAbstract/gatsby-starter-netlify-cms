@@ -141,7 +141,7 @@ collections:
                   {label: "Description", name: "description", widget: markdown},
                 ]},
               ]},
-              {label: "HK , name: "hk", widget: "object", fields: [
+              {label: "HK" , name: "hk", widget: "object", fields: [
                 {label: "Commission", name: "commission", widget: "object", fields: [
                   {label: "Title", name: "title", widget: string},
                   {label: "Description", name: "description", widget: markdown},
@@ -171,7 +171,7 @@ collections:
                   {label: "Description", name: "description", widget: markdown},
                 ]},
               ]},
-              {label: "HK , name: "hk", widget: "object", fields: [
+              {label: "HK" , name: "hk", widget: "object", fields: [
                 {label: "Commission", name: "commission", widget: object, fields: [
                   {label: "Title", name: "title", widget: string},
                   {label: "Description", name: "description", widget: markdown},
