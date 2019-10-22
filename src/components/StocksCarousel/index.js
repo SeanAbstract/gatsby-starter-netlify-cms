@@ -1,5 +1,10 @@
 // @flow
 import React from 'react'
+import styled from 'styled-components'
+import Fade from 'react-reveal/Fade'
+import makeCarousel from 'react-reveal/makeCarousel'
+
+import StockSection from './stockSection'
 
 type Props = {
   stocks: Array<{
@@ -14,35 +19,39 @@ type Props = {
   }>,
 }
 
-function StocksCarousel({stocks}: Props) {
-  return stocks.map(stock => (
-    <div className="mb-5" key={stock.countryCode}>
-      <div className="row align-items-center">
-        <div className="col-md-2">
-          <div
-            className="rounded-circle border border-dark d-flex justify-content-center align-items-center border-white"
-            style={{height: '55px', width: '55px'}}
-          >
-            <h5 className="mb-0">{stock.countryCode}</h5>
-          </div>
-        </div>
-
-        <h3 className="mb-0 mt-1">{stock.country} Stocks</h3>
-      </div>
-      <div className="row">
-        <div className="col-md-2" />
-        <div className="d-flex flex-column">
-          <small className="font-weight-bold">COMMISSION</small>
-          {stock.commission.map(commission => (
-            <p className="mb-0">
-              <span style={{fontSize: '24px'}}>{commission.price}</span>{' '}
-              <small>{commission.text}</small>
-            </p>
-          ))}
-        </div>
-      </div>
-    </div>
-  ))
+type CarouselProps = {
+  children: any,
 }
 
-export default StocksCarousel
+const CarouselUI = ({children}: CarouselProps) => (
+  <InnerCarousel className="h-25 w-100">{children}</InnerCarousel>
+)
+const Carousel = makeCarousel(CarouselUI)
+
+function StockCarousel({stocks}: Props) {
+  return (
+    <Carousel defaultWait={3000} maxTurns={100}>
+      {stocks.map(stock => (
+        <Fade top>
+          <StockSection
+            currency="HK$"
+            stockName="Hong Kong Stocks"
+            commissionAmt="$0.00"
+            commissionDesc="No commission on orders below HKD 60,000"
+            interestAmt="0.03%"
+            interestDesc="per share on orders above HKD 60,000"
+          />
+        </Fade>
+      ))}
+    </Carousel>
+  )
+}
+
+const InnerCarousel = styled.div`
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`
+
+export default StockCarousel
