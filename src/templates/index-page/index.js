@@ -91,10 +91,10 @@ export const IndexPageTemplate = ({
       secondaryColor="primary"
     />
 
-    {/* Fast Secure Trusted */}
-    <div className="second-section">
-      <div className="row justify-content-center">
-        <div className="left-text-col col-md-3">
+    {/* Fast Secure Trusted or Second */}
+    <Container className="second-section">
+      <Row className="justify-content-center">
+        <Col md={5} lg={4} className="left-text-col">
           <Fade bottom>
             <h1 className="text-primary display-2 mb-3">{firstSection.mainText}</h1>
             <p>{firstSection.description}</p>
@@ -104,19 +104,21 @@ export const IndexPageTemplate = ({
               </button>
             </div>
           </Fade>
-        </div>
-        <div className="col-md-3">
+        </Col>
+        <div className="col-md-3 d-none d-md-block">
           <Fade bottom>
             <img src={introPhone} style={{maxWidth: '300px'}} alt="snowball_intro_phone" />
           </Fade>
         </div>
-      </div>
-    </div>
+      </Row>
+    </Container>
 
-    {/* Stock Section */}
-    <div className="row no-gutters stock-section">
-      <div
-        className="col-md-6 mx-auto"
+    {/* Stock Section or Third */}
+    <Row noGutters className="stock-section">
+      <Col
+        md={6}
+        xs={12}
+        className="mx-auto"
         style={{
           backgroundImage: `url(${
             stockSection.backgroundImage.childImageSharp
@@ -129,7 +131,7 @@ export const IndexPageTemplate = ({
         <div className="container d-flex align-items-center h-100 w-50 ml-auto">
           <h1 className="display-3 mb-3">{stockSection.title}</h1>
         </div>
-      </div>
+      </Col>
       <Col
         md={6}
         xs={12}
@@ -138,7 +140,7 @@ export const IndexPageTemplate = ({
       >
         <StocksCarousel stocks={stockSection.stocks} />
       </Col>
-    </div>
+    </Row>
 
     {/* Make Informed Decisions */}
     <div className="row feature-section justify-content-around align-items-center">
@@ -147,12 +149,14 @@ export const IndexPageTemplate = ({
       </div>
       {/* <div className="col-md-1" /> */}
       <div className="col-md-3 mr-auto ml-3">
-        <h1 className="text-primary display-2 mb-3">{featureSection.mainText}</h1>
-        <h5 className="mb-2">{featureSection.subText}</h5>
-        <p>{featureSection.description}</p>
-        <button className="btn btn-outline-primary rounded-pill" type="button">
-          {featureSection.buttonText}
-        </button>
+        <Fade bottom>
+          <h1 className="text-primary display-2 mb-3">{featureSection.mainText}</h1>
+          <h5 className="mb-2">{featureSection.subText}</h5>
+          <p>{featureSection.description}</p>
+          <button className="btn btn-outline-primary rounded-pill" type="button">
+            {featureSection.buttonText}
+          </button>
+        </Fade>
       </div>
     </div>
 
@@ -166,7 +170,9 @@ export const IndexPageTemplate = ({
 
     {/* Blog Roll  */}
     <div className="blog-roll-container container py-3">
-      <BlogRoll />
+      <Fade bottom cascade>
+        <BlogRoll />
+      </Fade>
     </div>
 
     {/* Second Feature Section */}
@@ -208,11 +214,13 @@ export const IndexPageTemplate = ({
     </div>
 
     {/* Download NOw */}
-    <DownloadNow
-      mainText={downloadNow.mainText}
-      subText={downloadNow.subText}
-      image={downloadNow.image}
-    />
+    <Fade bottom>
+      <DownloadNow
+        mainText={downloadNow.mainText}
+        subText={downloadNow.subText}
+        image={downloadNow.image}
+      />
+    </Fade>
   </div>
 )
 
