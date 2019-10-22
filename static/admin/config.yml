@@ -221,7 +221,7 @@ collections:
               ]},
             ]}
       
-      - file: "src/pages/en/faq/en/index.md"
+      - file: "src/pages/en/faq/index.md"
         label: "Contact Page"
         name: "en/contact"
         fields: 
