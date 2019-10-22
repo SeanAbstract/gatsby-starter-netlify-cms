@@ -38,10 +38,62 @@
 
 
     .blog-roll-container {
-        height: 40vh;
+        height: 45vh;
 
         .blog-container {
             border-left: 1px solid #E6E6E6;
+
+            .blog-outer-container {
+                height: 50vh;
+                color: #006fbb;
+                transition: 0.2s;
+            }
+
+        }
+
+        .blog-inner-container {
+            height: 100%;
+            width: calc(100% - 3rem);
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            padding: 1.5rem 0;
+          
+            * {
+              z-index: 2;
+            }
+
+            .lead {
+                font-weight: 400;
+            }
+
+            .blog-desc {
+                color: #444444;
+            }
+
+            .blog-btn-container {
+                .btn {
+                    border-radius: 20px;
+                    border-color: white;
+                    border-width: 1px;
+                    font-size: 14px;
+                    color: white;
+                    line-height: 0.75rem;
+                }
+                .btn-text {
+                    line-height: 0.75rem;
+                    font-size: 0.75rem;
+                    margin-top: 3.5px;
+                    font-weight: 300;
+                    padding: 0 0.75rem;
+                }
+            }
+          
+            @media (max-width: 426px) {
+              border-bottom: 1px solid #444444;
+              margin: 0 1.5rem;
+              padding: 0;
+            }
         }
     }
 

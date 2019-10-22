@@ -119,7 +119,7 @@ export default class Header extends React.Component {
 
 const StyledNavbar = styled(Navbar)`
   width: 100%;
-  top: ${props => (props.scrolled ? '-100px' : '0')};
+  top: ${props => (props.scrolled ? '-100px' : '0')} !important;
   transition: 0.5s;
 
   .nav-link {
@@ -174,7 +174,7 @@ const StyledCollapse = styled(Collapse)`
 `
 const ScrolledNavbar = styled(Navbar)`
   width: 100%;
-  top: ${props => (props.scrolled ? '0px' : '-100px')};
+  top: ${props => (props.scrolled ? '0px' : '-100px')} !important;
   background-color: white;
   padding-top: 0;
   padding-bottom: 0;

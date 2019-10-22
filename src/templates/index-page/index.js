@@ -12,6 +12,7 @@ import StocksCarousel from '../../components/StocksCarousel'
 import facebookLogo from '../../../static/img/home-jumbotron.jpg'
 import TestimonyCarousel from '../../components/TestimonyCarousel'
 import DownloadNow from '../../components/DownloadNow'
+import BlogRoll from '../../components/BlogRoll'
 
 type Props = {
   image: any,
@@ -149,22 +150,8 @@ export const IndexPageTemplate = ({
     </div>
 
     {/* Blog Roll  */}
-    <div className="blog-roll-container py-3">
-      <div className="row justify-content-center h-100">
-        {[1, 2, 3].map(num => (
-          <div
-            className="col-md-3 pt-5 d-flex justify-content-between flex-column blog-container h-100"
-            style={{flex: '0 0 20%'}}
-          >
-            <div>
-              <p className="text-primary lead">Greater security for account assets</p>
-              <p>Dual supervision by NZ and SEC/ FINRA in US</p>
-            </div>
-
-            <h3>></h3>
-          </div>
-        ))}
-      </div>
+    <div className="blog-roll-container container py-3">
+      <BlogRoll />
     </div>
 
     {/* Second Feature Section */}
