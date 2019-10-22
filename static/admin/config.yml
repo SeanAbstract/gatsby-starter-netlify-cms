@@ -81,7 +81,7 @@ collections:
               {label: "Image", name: "image", widget: image},
             ]}
  
-      - file: "src/pages/about/en/index.md"
+      - file: "src/pages/en/about/index.md"
         label: "About"
         name: "en/about"
         fields:
@@ -116,7 +116,7 @@ collections:
               {label: "Image", name: "image", widget: image},
             ]}
 
-      - file: "src/pages/price/en/index.md"
+      - file: "src/pages/en/price/index.md"
         label: "Price"
         name: "en/price"
         fields:
@@ -192,7 +192,7 @@ collections:
               {label: "Image", name: "image", widget: image},
             ]}
 
-      - file: "src/pages/how-it-works/en/index.md"
+      - file: "src/pages/en/how-it-works/index.md"
         label: "How it works"
         name: "en/how-it-works"
         fields:
@@ -204,7 +204,7 @@ collections:
               {label: "Image", name: image, widget: image},
             ]}
       
-      - file: "src/pages/faq/en/index.md"
+      - file: "src/pages/en/faq/index.md"
         label: "Faq Page"
         name: "en/faq"
         fields: 
@@ -218,7 +218,7 @@ collections:
               ]},
             ]}
       
-      - file: "src/pages/faq/en/contact.md"
+      - file: "src/pages/en/faq/en/contact.md"
         label: "Contact Page"
         name: "en/contact"
         fields: 
@@ -249,7 +249,7 @@ collections:
               {label: "Image", name: "image", widget: image},
             ]}
       
-      - file: "src/pages/products/en/index.md"
+      - file: "src/pages/en/products/index.md"
         label: "Products Page"
         name: "en/products"
         fields:
@@ -319,7 +319,7 @@ collections:
               {label: "Image", name: "image", widget: image},
             ]}
  
-      - file: "src/pages/about/zh/index.md"
+      - file: "src/pages/zh/about/index.md"
         label: "About"
         name: "zh/about"
         fields:
@@ -354,7 +354,7 @@ collections:
               {label: "Image", name: "image", widget: image},
             ]}
 
-      - file: "src/pages/price/zh/index.md"
+      - file: "src/pages/zh/price/index.md"
         label: "Price"
         name: "zh/price"
         fields:
@@ -430,7 +430,7 @@ collections:
               {label: "Image", name: "image", widget: image},
             ]}
 
-      - file: "src/pages/how-it-works/zh/index.md"
+      - file: "src/pages/zh/how-it-works/zh/index.md"
         label: "How it works"
         name: "zh/how-it-works"
         fields:
@@ -442,7 +442,7 @@ collections:
               {label: "Image", name: image, widget: image},
             ]}
       
-      - file: "src/pages/faq/zh/index.md"
+      - file: "src/pages/zh/faq/index.md"
         label: "Faq Page"
         name: "zh/faq"
         fields: 
@@ -456,7 +456,7 @@ collections:
               ]},
             ]}
       
-      - file: "src/pages/faq/zh/contact.md"
+      - file: "src/pages/zh/faq/contact.md"
         label: "Contact Page"
         name: "zh/contact"
         fields: 
@@ -487,7 +487,7 @@ collections:
               {label: "Image", name: "image", widget: image},
             ]}
       
-      - file: "src/pages/products/zh/index.md"
+      - file: "src/pages/zh/products/index.md"
         label: "Products Page"
         name: "zh/products"
         fields:
