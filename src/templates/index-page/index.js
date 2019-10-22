@@ -92,9 +92,9 @@ export const IndexPageTemplate = ({
     />
 
     {/* Fast Secure Trusted */}
-    <div className="second-section">
-      <div className="row justify-content-center">
-        <div className="left-text-col col-md-3">
+    <Container className="second-section">
+      <Row className="justify-content-center">
+        <Col md={5} lg={4} className="left-text-col">
           <Fade bottom>
             <h1 className="text-primary display-2 mb-3">{firstSection.mainText}</h1>
             <p>{firstSection.description}</p>
@@ -104,14 +104,14 @@ export const IndexPageTemplate = ({
               </button>
             </div>
           </Fade>
-        </div>
-        <div className="col-md-3">
+        </Col>
+        <div className="col-md-3 d-none d-md-block">
           <Fade bottom>
             <img src={introPhone} style={{maxWidth: '300px'}} alt="snowball_intro_phone" />
           </Fade>
         </div>
-      </div>
-    </div>
+      </Row>
+    </Container>
 
     {/* Stock Section */}
     <div className="row no-gutters stock-section">
@@ -166,7 +166,9 @@ export const IndexPageTemplate = ({
 
     {/* Blog Roll  */}
     <div className="blog-roll-container container py-3">
-      <BlogRoll />
+      <Fade bottom cascade>
+        <BlogRoll />
+      </Fade>
     </div>
 
     {/* Second Feature Section */}
@@ -208,11 +210,13 @@ export const IndexPageTemplate = ({
     </div>
 
     {/* Download NOw */}
-    <DownloadNow
-      mainText={downloadNow.mainText}
-      subText={downloadNow.subText}
-      image={downloadNow.image}
-    />
+    <Fade bottom>
+      <DownloadNow
+        mainText={downloadNow.mainText}
+        subText={downloadNow.subText}
+        image={downloadNow.image}
+      />
+    </Fade>
   </div>
 )
 
