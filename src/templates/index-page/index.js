@@ -17,6 +17,7 @@ import TestimonyCarousel from '../../components/TestimonyCarousel'
 import DownloadNow from '../../components/DownloadNow'
 import BlogRoll from '../../components/BlogRoll'
 import StockCard from '../../components/StockCard'
+import InvestmentOptions from '../../components/StocksCarousel/InvestmentOptions'
 
 type Props = {
   image: any,
@@ -128,18 +129,8 @@ export const IndexPageTemplate = ({
         md={6}
         xs={12}
         className="mx-auto"
-        style={{
-          backgroundImage: `url(${
-            stockSection.backgroundImage.childImageSharp
-              ? stockSection.backgroundImage.childImageSharp.fluid.src
-              : stockSection.backgroundImage
-          })`,
-          backgroundSize: 'cover%',
-        }}
       >
-        <div className="container d-flex align-items-center h-100 w-50 ml-auto">
-          <h1 className="display-3 mb-3">{stockSection.title}</h1>
-        </div>
+        <InvestmentOptions />
       </Col>
       <Col
         md={6}
