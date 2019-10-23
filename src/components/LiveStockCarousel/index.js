@@ -46,7 +46,7 @@ function LiveStockCarousel({stocks}: Props) {
             icon="facebook"
             stockCode="FB"
             stocks={stockCardOne}
-            />
+          />
         </Fade>
       </Col>
       <Col md={4} sm={12}>
@@ -59,7 +59,7 @@ function LiveStockCarousel({stocks}: Props) {
             icon="facebook"
             stockCode="FB"
             stocks={stockCardTwo}
-            />
+          />
         </Fade>
       </Col>
       <Col md={4} sm={12}>
@@ -72,7 +72,7 @@ function LiveStockCarousel({stocks}: Props) {
             icon="facebook"
             stockCode="FB"
             stocks={stockCardThree}
-            />
+          />
         </Fade>
       </Col>
     </>
