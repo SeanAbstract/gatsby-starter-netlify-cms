@@ -12,9 +12,11 @@ export default class Header extends React.Component {
     super(props)
 
     this.toggle = this.toggle.bind(this)
+
     this.state = {
       isOpen: false,
       scrolled: false,
+      currentPath: window.location.pathname.split('/')[1],
     }
   }
 
@@ -44,34 +46,34 @@ export default class Header extends React.Component {
       <>
         <StyledNavbar isOpen={isOpen} scrolled={scrolled} light expand="md" className="fixed-top">
           <NavbarBrand>
-            <Link to="/">
+            <Link to={`${this.state.currentPath}`}>
               <Logo isOpen={isOpen} scrolled={scrolled} src={logo} alt="company logo" />
             </Link>
           </NavbarBrand>
           <StyledNavbarToggler isOpen={this.state.isOpen} onClick={this.toggle} />
           <StyledCollapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
-              <Link to="/about" className="nav-link">
+              <Link to={`${this.state.currentPath}/about`} className="nav-link">
                 About
               </Link>
 
-              <Link to="/how-it-works" className="nav-link">
+              <Link to={`${this.state.currentPath}/how-it-works`} className="nav-link">
                 How It Works
               </Link>
 
-              <Link to="/price" className="nav-link">
+              <Link to={`${this.state.currentPath}/price`} className="nav-link">
                 Prices
               </Link>
 
-              <Link to="/" className="nav-link">
+              <Link to={`${this.state.currentPath}/`} className="nav-link">
                 Download
               </Link>
 
-              <Link to="/faq" className="nav-link">
+              <Link to={`${this.state.currentPath}/faq`} className="nav-link">
                 FAQs
               </Link>
 
-              <Link to="/contact" className="nav-link">
+              <Link to={`${this.state.currentPath}/contact`} className="nav-link">
                 Contact
               </Link>
             </Nav>
@@ -79,34 +81,34 @@ export default class Header extends React.Component {
         </StyledNavbar>
         <ScrolledNavbar isOpen={isOpen} scrolled={scrolled} light expand="md" className="fixed-top">
           <NavbarBrand>
-            <Link to="/">
+            <Link to={`${this.state.currentPath}`}>
               <LogoIcon isOpen={isOpen} scrolled={scrolled} src={logo} alt="company logo" />
             </Link>
           </NavbarBrand>
           <StyledNavbarToggler isOpen={this.state.isOpen} onClick={this.toggle} />
           <StyledCollapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
-              <Link to="/about" className="nav-link">
+              <Link to={`${this.state.currentPath}/about`} className="nav-link">
                 About
               </Link>
 
-              <Link to="/how-it-works" className="nav-link">
+              <Link to={`${this.state.currentPath}/how-it-works`} className="nav-link">
                 How It Works
               </Link>
 
-              <Link to="/price" className="nav-link">
+              <Link to={`${this.state.currentPath}/price`} className="nav-link">
                 Prices
               </Link>
 
-              <Link to="/" className="nav-link">
+              <Link to={`${this.state.currentPath}/`} className="nav-link">
                 Download
               </Link>
 
-              <Link to="/faqs" className="nav-link">
+              <Link to={`${this.state.currentPath}/faqs`} className="nav-link">
                 FAQs
               </Link>
 
-              <Link to="/contact" className="nav-link">
+              <Link to={`${this.state.currentPath}/contact`} className="nav-link">
                 Contact
               </Link>
             </Nav>
