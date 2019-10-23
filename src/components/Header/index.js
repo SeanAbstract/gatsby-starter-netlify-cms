@@ -16,12 +16,17 @@ export default class Header extends React.Component {
     this.state = {
       isOpen: false,
       scrolled: false,
-      currentPath: window.location.pathname.split('/')[1],
+      currentPath: '/en',
     }
   }
 
   componentDidMount() {
     window.addEventListener('scroll', this.listenToScroll)
+
+    if (typeof window !== 'undefined') {
+      // it's safe to use window now
+      this.setState({currentPath: window.location.pathname.split('/')[1]})
+    }
   }
 
   componentWillUnmount() {
