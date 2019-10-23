@@ -3,7 +3,8 @@ import styled from 'styled-components'
 import {Collapse, Navbar, NavbarToggler, NavbarBrand, Nav} from 'reactstrap'
 import {Link} from 'gatsby'
 
-import logo from '../../../static/img/snowball-logo-x.png'
+import logo from '../../img/logo.png'
+import logoIcon from '../../../static/img/snowball-logo-x.png'
 
 // import logoIcon from '../../images/icon-logo.png'
 
@@ -87,7 +88,7 @@ export default class Header extends React.Component {
         <ScrolledNavbar isOpen={isOpen} scrolled={scrolled} light expand="md" className="fixed-top">
           <NavbarBrand>
             <Link to={`${this.state.currentPath}`}>
-              <LogoIcon isOpen={isOpen} scrolled={scrolled} src={logo} alt="company logo" />
+              <LogoIcon isOpen={isOpen} scrolled={scrolled} src={logoIcon} alt="company logo" />
             </Link>
           </NavbarBrand>
           <StyledNavbarToggler isOpen={this.state.isOpen} onClick={this.toggle} />
