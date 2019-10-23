@@ -126,5 +126,10 @@ categories:
         question: >-
           What is Snowball Securities’ best advantages comparing with other
           brokers? 5
+
+downloadNow:
+  mainText: "Access Global Markets Today"
+  subText: "Download now"
+  image: /img/snowball-phone.png
 ---
 

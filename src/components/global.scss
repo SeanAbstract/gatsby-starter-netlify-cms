@@ -107,10 +107,11 @@ p {
     background-color: $background;
 }
 
-.card {
-  border: none !important;
-  border-radius: 0;
+.font-weight-bold {
+    font-family: 'Theinhardt' !important;
+
 }
+
 
 .card-body {
     text-align: left;
@@ -173,6 +174,16 @@ p {
 
 .modal-content {
     height: 100%;
+}
+
+p, .nav-item {
+    font-family: 'Theinhardt';
+    font-weight: 300;
+}
+
+.grayscale {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
 }
 
 

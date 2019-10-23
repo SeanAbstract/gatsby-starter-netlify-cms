@@ -8,6 +8,8 @@ import {UncontrolledCollapse} from 'reactstrap'
 
 import Layout from '../../components/Layout'
 import SharedJumbotron from '../../components/SharedJumbotron'
+import './styles.scss'
+import DownloadNow from '../../components/DownloadNow'
 
 type FaqPageTemplateProps = {
   headerImage: any,
@@ -15,13 +17,18 @@ type FaqPageTemplateProps = {
     categoryTitle: string,
     questions: Array<{question: string, answer: string}>,
   }>,
+  downloadNow: {
+    mainText: string,
+    subText: string,
+    image: any,
+  },
 }
 
 export function FaqPageTemplate(props: FaqPageTemplateProps) {
   const [currentNdx, setNdx] = useState(0)
 
   return (
-    <div>
+    <div className="faq-page">
       <SharedJumbotron headerImage={props.headerImage} title="FAQS" description="Answered" />
       <div className="container pt-5 mb-5">
         <div className="row mx-auto">
@@ -45,26 +52,29 @@ export function FaqPageTemplate(props: FaqPageTemplateProps) {
         </div>
       </div>
 
-      <div className="container">
+      <div className="container pb-5">
         <div className="row">
           <div className="col-md-9 mx-auto">
             {props.categories[currentNdx].questions.map((cc, ndx) => (
-              <div className="mb-5" key={ndx}>
+              <div className="accordion py-2" key={ndx}>
                 <button
                   id={`toggler${ndx}`}
                   type="button"
+                  className="w-100 p-0 text-left"
                   style={{backgroundColor: 'transparent', border: 'none'}}
                 >
                   <h5>{cc.question}</h5>
+                  <UncontrolledCollapse toggler={`#toggler${ndx}`}>
+                    <p className="mb-0 text-dark">{cc.question}</p>
+                  </UncontrolledCollapse>
                 </button>
-                <UncontrolledCollapse toggler={`#toggler${ndx}`}>
-                  <p>{cc.question}</p>
-                </UncontrolledCollapse>
               </div>
             ))}
           </div>
         </div>
       </div>
+
+      <DownloadNow {...props.downloadNow} />
     </div>
   )
 }
@@ -87,6 +97,7 @@ function FaqPage({data}: Props) {
       <FaqPageTemplate
         headerImage={faq.frontmatter.headerImage}
         categories={faq.frontmatter.categories}
+        downloadNow={faq.frontmatter.downloadNow}
       />
     </Layout>
   )
@@ -110,6 +121,17 @@ export const faqPageQuery = graphql`
           questions {
             question
             answer
+          }
+        }
+        downloadNow {
+          mainText
+          subText
+          image {
+            childImageSharp {
+              fluid(maxWidth: 2000, quality: 100) {
+                ...GatsbyImageSharpFluid
+              }
+            }
           }
         }
       }

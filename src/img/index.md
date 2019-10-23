@@ -14,7 +14,6 @@ tabs:
       financial products worldwide. Our trading platform is fast and efficient,
       and our fee structure is competitive.
 
-
       * Snowball Securities provide online information and share trading
       services to global investors who want exposure to global markets.
 
@@ -70,6 +69,7 @@ investors:
       The highest valued FinTech company in the world, and the world's most
       valuable unicorn (start-up) company, with a valuation of US$150 billion.
     brandLogo: /img/renren.png
+
 partners:
   - brandDescription: >-
       World leading venture capital firm, which has backed companies that now
@@ -114,9 +114,10 @@ partners:
       The highest valued FinTech company in the world, and the world's most
       valuable unicorn (start-up) company, with a valuation of US$150 billion.
     brandLogo: /img/renren.png
+
 downloadNow:
+  mainText: "Access Global Markets Today"
+  subText: "Download now"
   image: /img/snowball-phone.png
-  mainText: Access Global Markets Today
-  subText: Download now
 ---
 

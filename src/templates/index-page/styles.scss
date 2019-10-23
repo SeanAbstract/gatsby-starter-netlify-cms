@@ -1,5 +1,10 @@
 .landing-page {
 
+    .card {
+        border: none !important;
+        border-radius: 0;
+      }
+
     .hero-video, .second-section {
         display: flex;
         justify-content: center;
@@ -137,11 +142,31 @@
 
     .carousel-container {
         height: 70vh;
+
+        .carousel-item{
+            height: 70vh;
+        } 
     }
 
-    .carousel-item{
-        height: 70vh;
-    } 
+    .img-container {
+        .carousel {
+            height: 100%;
+
+            .carousel-inner {
+                height: 100%;
+
+                .carousel-item {
+                    height: 100%;
+
+                    img {
+                        height: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+
 
 
 }

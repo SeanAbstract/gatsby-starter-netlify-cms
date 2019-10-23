@@ -1,10 +1,14 @@
+/* eslint-disable jsx-a11y/click-events-have-key-events */
 // @flow
 import React, {useState} from 'react'
 import {graphql} from 'gatsby'
 
+import './styles.scss'
 import Layout from '../../components/Layout'
 import SharedJumbotron from '../../components/SharedJumbotron'
 import DownloadNow from '../../components/DownloadNow'
+import hkd from '../../img/hkd.png'
+import usd from '../../img/usd.png'
 
 type Props = {
   jumbotron: {
@@ -95,40 +99,71 @@ export function PricePageTemplate({
   }
 
   return (
-    <div>
+    <div className="price-page">
       <SharedJumbotron {...jumbotron} />
 
       <section>
         <div className="container py-5">
           <div className="row">
-            <div className="col-md-9 mx-auto text-center">
+            <div className="col-md-10 mx-auto text-center">
               <h3 className="section-leading-text mb-5">{mainPitch}</h3>
 
               <div className="row">
-                <div className="col-md-6 d-flex flex-column">
+                <div className="col-md-6 d-flex flex-column mb-3">
                   <div
                     onClick={() => setCurrentPackage('lowCommissionPackage')}
-                    className="text-left"
+                    className="text-center text-primary pb-2 mb-3"
+                    style={{borderBottom: '2px solid #006FBB'}}
                   >
-                    <h3>Low Comission Package</h3>
+                    <h4>Low Comission Package</h4>
                   </div>
                   <div className="card">
+                    <img
+                      className="card-img-top"
+                      width="100%"
+                      height="72px"
+                      src={hkd}
+                      alt="Card cap"
+                      style={{borderBottomLeftRadius: 0, borderBottomRightRadius: 0}}
+                    />
                     <div className="card-body">
-                      <div className="row justify-content-between align-items-center">
-                        <h5>{packages[currentPackage].hk.commission.title}</h5>
-                        <p className="mb-0">{packages[currentPackage].hk.commission.description}</p>
+                      <div className="row justify-content-between align-items-center mb-3 text-right">
+                        <div className="col-4">
+                          <h5>{packages[currentPackage].hk.commission.title}</h5>
+                        </div>
+                        <div className="col-8">
+                          {/* <p className="mb-0">
+                            {packages[currentPackage].hk.commission.description}
+                          </h5> */}
+                          <small className="mb-0">No Commission on orders below HKD 60,000</small>
+                          <small className="mb-0">
+                            Pay <strong className="text-primary">0.03%</strong> per share on orders
+                            above 60,000 HKD
+                          </small>
+                        </div>
+                      </div>
+                      <div className="row justify-content-between align-items-center mb-3">
+                        <div className="col-6">
+                          <h5 className="mb-0">
+                            {packages[currentPackage].hk.platformUsageFee.title}
+                          </h5>
+                        </div>
+                        <hr />
+                        <div className="col-4">
+                          <p className="mb-0 text-right">
+                            <strong className="text-primary">HKD 18</strong> per deal
+                          </p>
+                        </div>
                       </div>
                       <div className="row justify-content-between align-items-center">
-                        <h5>{packages[currentPackage].hk.platformUsageFee.title}</h5>
-                        <p className="mb-0">
-                          {packages[currentPackage].hk.platformUsageFee.description}
-                        </p>
-                      </div>
-                      <div className="row justify-content-between align-items-center">
-                        <h5>{packages[currentPackage].hk.financingInterestRate.title}</h5>
-                        <p className="mb-0">
-                          {packages[currentPackage].hk.financingInterestRate.description}
-                        </p>
+                        <div className="col-6">
+                          <h5 className="mb-0">
+                            {packages[currentPackage].hk.financingInterestRate.title}
+                          </h5>
+                        </div>
+                        <div className="col-5 text-right">
+                          <p>3.983% minimum</p>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -136,27 +171,56 @@ export function PricePageTemplate({
                 <div className="col-md-6">
                   <div
                     onClick={() => setCurrentPackage('lowInterestRatePackage')}
-                    className="text-left"
+                    className="text-center pb-2 mb-3"
                   >
-                    <h3>Low Interest Rate Package</h3>
+                    <h4>Low Comission Package</h4>
                   </div>
                   <div className="card">
+                    <img
+                      className="card-img-top"
+                      width="100%"
+                      height="72px"
+                      src={usd}
+                      alt="Card cap"
+                      style={{borderBottomLeftRadius: 0, borderBottomRightRadius: 0}}
+                    />
                     <div className="card-body">
-                      <div className="row justify-content-between align-items-center">
-                        <h5>{packages[currentPackage].us.commission.title}</h5>
-                        <p className="mb-0">{packages[currentPackage].us.commission.description}</p>
+                      <div className="row justify-content-between align-items-center mb-3">
+                        <div className="col-4">
+                          <h5>{packages[currentPackage].hk.commission.title}</h5>
+                        </div>
+                        <div className="col-8 text-right">
+                          {/* <p className="mb-0">
+                            {packages[currentPackage].hk.commission.description}
+                          </h5> */}
+                          <p className="mb-0">No Commission on orders below HKD 60,000</p>
+                          <small className="mb-0" style={{fontSize: '8px'}}>
+                            Pay <strong className="text-primary">0.03% </strong> per share on orders
+                            above 60,000 HKD
+                          </small>
+                        </div>
+                      </div>
+                      <div className="row justify-content-between align-items-center mb-3">
+                        <div className="col-6">
+                          <h5 className="mb-0">
+                            {packages[currentPackage].hk.platformUsageFee.title}
+                          </h5>
+                        </div>
+                        <div className="col-4 text-right">
+                          <p className="mb-0">
+                            <strong className="text-primary">HKD 18</strong> per deal
+                          </p>
+                        </div>
                       </div>
                       <div className="row justify-content-between align-items-center">
-                        <h5>{packages[currentPackage].us.platformUsageFee.title}</h5>
-                        <p className="mb-0">
-                          {packages[currentPackage].us.platformUsageFee.description}
-                        </p>
-                      </div>
-                      <div className="row justify-content-between align-items-center">
-                        <h5>{packages[currentPackage].us.financingInterestRate.title}</h5>
-                        <p className="mb-0">
-                          {packages[currentPackage].us.financingInterestRate.description}
-                        </p>
+                        <div className="col-6">
+                          <h5 className="mb-0">
+                            {packages[currentPackage].hk.financingInterestRate.title}
+                          </h5>
+                        </div>
+                        <div className="col-5 text-right">
+                          <p>3.983% minimum</p>
+                        </div>
                       </div>
                     </div>
                   </div>

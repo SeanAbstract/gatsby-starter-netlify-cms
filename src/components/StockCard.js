@@ -5,6 +5,7 @@ import styled from 'styled-components'
 import {Card, CardImg, CardBody, CardTitle, Row, Container, Col} from 'reactstrap'
 import makeCarousel from 'react-reveal/makeCarousel'
 import Fade from 'react-reveal/Fade'
+import Slide from 'react-reveal/Slide'
 
 type Props = {
   icon: string,
@@ -30,21 +31,29 @@ const StockCard = (props: Props) => (
     <Row noGutters>
       <Col md={12} xs={5}>
         <ImgContainer
-          style={{backgroundColor: props.bgColor}}
-          className="d-flex justify-content-center align-items-center"
+          style={{borderBottom: '2px solid #F5F5F5', overflow: 'hidden'}}
+          className="d-flex justify-content-center align-items-center img-container"
         >
-          <CardImg
-            width="100%"
-            src={require(`../img/social/${props.icon}.svg`)}
-            alt="Card image cap"
-            style={{height: '50px', width: '50px', objectFit: 'contain'}}
-          />
+          <Carousel defaultWait={3000} maxTurns={100}>
+            {props.stocks.map(stock => (
+              <Slide left>
+                <div className="d-flex m-auto">
+                  <CardImg
+                    width="100%"
+                    src={stock.image.childImageSharp.fluid.src}
+                    alt="Card image cap"
+                    style={{margin: 'auto', height: '50px', width: '50px', objectFit: 'contain'}}
+                  />
+                </div>
+              </Slide>
+            ))}
+          </Carousel>
         </ImgContainer>
       </Col>
       <Col md={12} xs={7}>
         <StyledCardBody>
           <Carousel defaultWait={3000} maxTurns={100}>
-            {props.stocks.map( stock => (
+            {props.stocks.map(stock => (
               <Fade>
                 <Container>
                   <Row className="justify-content-between">

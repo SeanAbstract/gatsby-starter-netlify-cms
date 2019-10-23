@@ -2,6 +2,7 @@
 // @flow
 import React, {useState} from 'react'
 import {graphql} from 'gatsby'
+import * as showdown from 'showdown'
 
 import Layout from '../../components/Layout'
 import PreviewCompatibleImage from '../../components/PreviewCompatibleImage'
@@ -10,6 +11,9 @@ import SharedJumbotron from '../../components/SharedJumbotron'
 import HistoryCard from '../../components/HistoryCard'
 import CompanyCard from '../../components/CompanyCard'
 import DownloadNow from '../../components/DownloadNow'
+import businessLogo from '../../img/business.svg'
+import mobileLogo from '../../img/mobile.svg'
+import peopleLogo from '../../img/people.svg'
 
 import './styles.scss'
 
@@ -32,24 +36,57 @@ type AboutTemplate = {
   },
 }
 
+const listItems = [
+  'Snowball Securities provide online information and share trading services to global investors who want exposure to global markets.',
+  'Snowball Securities is a financial services provider backed by leading participants in the Fintech sector and with access to complementary information services and social channels.',
+  'Snowball Securities is committed to New Zealand and is investing to build a substantial global online share trading business from its base here.',
+  'Snowball Securities is an early mover in a high growth sector arising as a reslit of four forces that drive global financial services: Online trading, access to global markets, social information flows and fintech.',
+]
+
+const images = [mobileLogo, peopleLogo, businessLogo]
+
 export const AboutPageTemplate = (props: AboutTemplate) => {
   const PostContent = props.contentComponent || Content
 
+  const [currentNdx, setCurrentNdx] = useState(0)
   const [tabDescription, setTabDescription] = useState(props.tabs[0].description)
+
+  function renderDescription() {
+    const converter = new showdown.Converter()
+    const html = converter.makeHtml(tabDescription)
+
+    console.log(html)
+
+    return html
+  }
 
   return (
     <div className="about-page">
       <SharedJumbotron headerImage={props.headerImage} title="About" description="Snowball" />
 
       <section className="pt-5 pb-5">
-        <div className="row">
-          <div className="container">
-            <div className="col-md-9 col-sm-10 mx-auto text-center">
-              <h3 className="section-leading-text">{props.mainpitch.title}</h3>
-              <div className="text-left">
-                <p>{props.mainpitch.description}</p>
-                <p>{props.mainpitch.secondDescription}</p>
-              </div>
+        <div className="row mb-5">
+          <div className="col-md-8 col-sm-10 mx-auto text-center">
+            <h3 className="section-leading-text">{props.mainpitch.title}</h3>
+          </div>
+        </div>
+
+        <div className="row mb-5">
+          <div className="col-md-6 mx-auto">
+            <div>
+              {/* <p>{props.mainpitch.description}</p> */}
+              <p>
+                Our digital platform gives customers access to China A shares and securities listed
+                on the Stock Exchange of Hong Kong (SEHK), the New York Stock Exchange (NYSE),
+                NASDAQ and other markets.
+              </p>
+              {/* <p>{props.mainpitch.secondDescription}</p> */}
+              <p>
+                With one account, our clients are able to trade securities listed in China, the
+                United States, Hong Kong, Japan and other countries and build a portfolio of shares
+                in big international world's best-known companies like Alibaba, PetroChina,
+                Microsoft and Google.
+              </p>
             </div>
           </div>
         </div>
@@ -57,21 +94,61 @@ export const AboutPageTemplate = (props: AboutTemplate) => {
         <div className="row">
           <div className="container">
             <div className="col-md-9 mx-auto">
-              <div className="row">
-                {props.tabs.map(tab => (
+              <div className="row justify-content-around">
+                {props.tabs.map((tab, ndx) => (
                   <div
-                    className="col-md-4 d-flex justify-content-center"
+                    className="col-md-3 d-flex justify-content-center align-items-center flex-column mb-5"
                     key={tab.title}
-                    onClick={() => setTabDescription(tab.description)}
+                    style={{borderBottom: ndx === currentNdx ? '2px solid #006FBB' : ''}}
+                    onClick={() => {
+                      setTabDescription(tab.description)
+                      setCurrentNdx(ndx)
+                    }}
                   >
-                    <PreviewCompatibleImage imageInfo={tab.icon} />
+                    <PreviewCompatibleImage
+                      imageInfo={images[ndx]}
+                      style={{height: '100px', width: '100px'}}
+                      className={`mb-4 ${ndx !== currentNdx ? 'grayscale' : ''}`}
+                    />
 
-                    <p>{tab.title}</p>
+                    <h5 className={ndx === currentNdx ? 'text-primary' : ''}>{tab.title}</h5>
                   </div>
                 ))}
               </div>
-              <PostContent content={tabDescription} />
+              <div
+                className="container tab-description"
+                dangerouslySetInnerHTML={{__html: renderDescription()}}
+              >
+                {/* <p>
+                  Through Snowball investors can trade electronically in a variety of financial
+                  products worldwide. Our trading platform is fast and efficient, and our fee
+                  structure is competitive.
+                </p>
+                <ul>
+                  {listItems.map(item => (
+                    <li>
+                      <p>{item}</p>
+                    </li>
+                  ))}
+                </ul> */}
+              </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="trade-section">
+        <div className="row h-100">
+          <div className="col-md-4">
+            <h5>img</h5>
+          </div>
+          <div className="col-md-4 d-flex justify-content-center align-items-center bg-primary">
+            <h1 className="big-subtitle text-light" style={{fontSize: '64px'}}>
+              Trade Electronically
+            </h1>
+          </div>
+          <div className="col-md-4">
+            <h5>img</h5>
           </div>
         </div>
       </section>
