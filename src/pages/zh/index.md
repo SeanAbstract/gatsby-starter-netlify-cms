@@ -39,48 +39,48 @@ realTimeStockSection:
   description: >-
     了方人數故色院今雜大如展去每這員不山傳商遠門親會眼王的本於組、市老後起考的一死羅上些了重紀灣得意信事立有所小出的景全。很像男也府然過水名刻提科病覺趣劇情保.
   mainText: 交易全球股票
-    stockList:
-      - stock: "Facebook"
-        image: /img/facebook_blue.png
-        value: "187.39"
-        rate: "0.95"
-        percent: "0.05%"
-        abbreviation: "FB"
+  stockList:
+    - stock: "Facebook"
+      image: /img/facebook_blue.png
+      value: "187.39"
+      rate: "0.95"
+      percent: "0.05%"
+      abbreviation: "FB"
 
-      - stock: "Facebook"
-        image: /img/facebook_blue.png
-        value: "187.39"
-        rate: "0.95"
-        percent: "0.05%"
-        abbreviation: "FB"
+    - stock: "Facebook"
+      image: /img/facebook_blue.png
+      value: "187.39"
+      rate: "0.95"
+      percent: "0.05%"
+      abbreviation: "FB"
 
-      - stock: "Facebook"
-        image: /img/facebook_blue.png
-        value: "187.39"
-        rate: "0.95"
-        percent: "0.05%"
-        abbreviation: "FB"
+    - stock: "Facebook"
+      image: /img/facebook_blue.png
+      value: "187.39"
+      rate: "0.95"
+      percent: "0.05%"
+      abbreviation: "FB"
 
-      - stock: "Facebook"
-        image: /img/facebook_blue.png
-        value: "187.39"
-        rate: "0.95"
-        percent: "0.05%"
-        abbreviation: "FB"
+    - stock: "Facebook"
+      image: /img/facebook_blue.png
+      value: "187.39"
+      rate: "0.95"
+      percent: "0.05%"
+      abbreviation: "FB"
 
-      - stock: "Facebook"
-        image: /img/facebook_blue.png
-        value: "187.39"
-        rate: "0.95"
-        percent: "0.05%"
-        abbreviation: "FB"
+    - stock: "Facebook"
+      image: /img/facebook_blue.png
+      value: "187.39"
+      rate: "0.95"
+      percent: "0.05%"
+      abbreviation: "FB"
 
-      - stock: "Facebook"
-        image: /img/facebook_blue.png
-        value: "187.39"
-        rate: "0.95"
-        percent: "0.05%"
-        abbreviation: "FB"
+    - stock: "Facebook"
+      image: /img/facebook_blue.png
+      value: "187.39"
+      rate: "0.95"
+      percent: "0.05%"
+      abbreviation: "FB"
 
 testimonials:
   - backgroundImage: /img/smile-face-7.jpg
