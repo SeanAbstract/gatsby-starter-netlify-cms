@@ -25,6 +25,13 @@ function InvestmentOptions() {
           }
         }
       }
+      anotherImage: file(relativePath: {eq: "contact.png"}) {
+        childImageSharp {
+          fluid(maxWidth: 400) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
     }
   `)
 
@@ -35,6 +42,13 @@ function InvestmentOptions() {
           <Fade style={{height: '100%'}}>
             <Img
               fluid={data.placeholderImage.childImageSharp.fluid}
+              imgStyle={{height: '100%'}}
+              style={{height: '100%', objectFit: 'cover'}}
+            />
+          </Fade>
+          <Fade style={{height: '100%'}}>
+            <Img
+              fluid={data.anotherImage.childImageSharp.fluid}
               imgStyle={{height: '100%'}}
               style={{height: '100%', objectFit: 'cover'}}
             />
