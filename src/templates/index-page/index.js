@@ -11,6 +11,7 @@ import Layout from '../../components/Layout'
 import SharedJumbotron from '../../components/SharedJumbotron'
 import PreviewCompatibleImage from '../../components/PreviewCompatibleImage'
 import StocksCarousel from '../../components/StocksCarousel'
+import LiveStockCarousel from '../../components/LiveStockCarousel'
 import introPhone from '../../img/snowball-intro-phone.gif'
 import TestimonyCarousel from '../../components/TestimonyCarousel'
 import DownloadNow from '../../components/DownloadNow'
@@ -57,6 +58,14 @@ type Props = {
     mainText: string,
     description: string,
     buttonText: string,
+    stockList: Array<{
+      stock: String,
+      image: any,
+      value: String,
+      rate: String,
+      percent: String,
+      abbreviation: String,
+    }>,
   },
   testimonials: Array<{
     customerName: string,
@@ -189,20 +198,7 @@ export const IndexPageTemplate = ({
       <Col md={6} lg={5} className="mr-auto">
         <Fade bottom cascade>
           <Row noGutters>
-            {[1, 2, 3].map(num => (
-              <Col md={4} sm={12}>
-                <Fade bottom>
-                  <StockCard
-                    bgColor="#3b5998"
-                    stockPrice="187.39"
-                    stockPercentage="0.95 (0.05%)"
-                    companyName="Facebook"
-                    icon="facebook"
-                    stockCode="FB"
-                  />
-                </Fade>
-              </Col>
-            ))}
+            <LiveStockCarousel stocks={realTimeStockSection.stockList} />
           </Row>
         </Fade>
       </Col>
@@ -320,6 +316,20 @@ export const pageQuery = graphql`
           mainText
           description
           buttonText
+          stockList {
+            stock
+            image {
+              childImageSharp {
+                fluid(maxWidth: 500, quality: 100) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+            value
+            rate
+            percent
+            abbreviation
+          }
         }
         testimonials {
           customerName

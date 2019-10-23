@@ -3,6 +3,8 @@
 import React from 'react'
 import styled from 'styled-components'
 import {Card, CardImg, CardBody, CardTitle, Row, Container, Col} from 'reactstrap'
+import makeCarousel from 'react-reveal/makeCarousel'
+import Fade from 'react-reveal/Fade'
 
 type Props = {
   icon: string,
@@ -11,7 +13,17 @@ type Props = {
   companyName: string,
   bgColor: string,
   stockCode: String,
+  stocks: any,
 }
+
+type CarouselProps = {
+  children: any,
+}
+
+const CarouselUI = ({children}: CarouselProps) => (
+  <InnerCarousel className="h-25 w-100">{children}</InnerCarousel>
+)
+const Carousel = makeCarousel(CarouselUI)
 
 const StockCard = (props: Props) => (
   <StyledCard>
@@ -31,23 +43,38 @@ const StockCard = (props: Props) => (
       </Col>
       <Col md={12} xs={7}>
         <StyledCardBody>
-          <Container>
-            <Row className="justify-content-between">
-              <CardTitle>{props.stockCode}</CardTitle>
-              <div className="d-flex flex-column align-items-start">
-                <StockPrice className="mb-1">{props.stockPrice}</StockPrice>
-                <StockPercentage>{props.stockPercentage}</StockPercentage>
-              </div>
-            </Row>
-            <Row>
-              <small className="text-muted">{props.companyName}</small>
-            </Row>
-          </Container>
+          <Carousel defaultWait={3000} maxTurns={100}>
+            {props.stocks.map( stock => (
+              <Fade>
+                <Container>
+                  <Row className="justify-content-between">
+                    <CardTitle>{stock.abbreviation}</CardTitle>
+                    <div className="d-flex flex-column align-items-start">
+                      <StockPrice className="mb-1">{stock.value}</StockPrice>
+                      <StockPercentage>
+                        {stock.rate} ({stock.percent})
+                      </StockPercentage>
+                    </div>
+                  </Row>
+                  <Row>
+                    <small className="text-muted">{stock.stock}</small>
+                  </Row>
+                </Container>
+              </Fade>
+            ))}
+          </Carousel>
         </StyledCardBody>
       </Col>
     </Row>
   </StyledCard>
 )
+
+const InnerCarousel = styled.div`
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`
 
 const StyledCard = styled.div`
   position: relative;
@@ -73,6 +100,7 @@ const ImgContainer = styled.div`
 
 const StyledCardBody = styled(CardBody)`
   padding: 1rem 0.75rem 0.15rem;
+  min-height: 120px;
 
   @media (min-width: 376px) {
     padding: 1rem 1rem 0.15rem;

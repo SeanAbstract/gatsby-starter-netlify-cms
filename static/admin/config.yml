@@ -71,6 +71,14 @@ collections:
               {label: 'Main Text', name: 'mainText', widget: string},
               {label: "Description", name: "description", widget: string},
               {label: "Button Text", name: "buttonText", widget: string},
+              {label: 'Stock List', name: 'stockList', widget: list, fields: [
+                {label: 'Stock', name: 'stock', widget: string},
+                {label: 'Image', name: 'image', widget: image},
+                {label: 'Value', name: 'value', widget: string},
+                {label: 'Rate', name: 'rate', widget: string},
+                {label: 'Percent', name: 'percent', widget: string},
+                {label: 'Abbreviation', name: 'abbreviation', widget: string},
+              ]},
             ]}
           - {label: "Testimonials", name: "testimonials", widget: list, fields: [
               {label: "Customer Name", name: "customerName", widget: string},
