@@ -115,7 +115,10 @@ export const AboutPageTemplate = (props: AboutTemplate) => {
                   </div>
                 ))}
               </div>
-              <div className="container" dangerouslySetInnerHTML={{__html: renderDescription()}}>
+              <div
+                className="container tab-description"
+                dangerouslySetInnerHTML={{__html: renderDescription()}}
+              >
                 {/* <p>
                   Through Snowball investors can trade electronically in a variety of financial
                   products worldwide. Our trading platform is fast and efficient, and our fee

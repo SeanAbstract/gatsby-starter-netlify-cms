@@ -6,6 +6,10 @@ import DownloadNow from '../../components/DownloadNow'
 import Layout from '../../components/Layout'
 import SharedJumbotron from '../../components/SharedJumbotron'
 import './styles.scss'
+import facebookIcon from '../../img/facebook.png'
+import linkedinIcon from '../../img/linkedin.png'
+import twitterIcon from '../../img/twitter.png'
+import wechatIcon from '../../img/wechat.png'
 
 type Props = {
   headerImage: any,
@@ -86,23 +90,48 @@ function ContactPageTemplate(props: Props) {
 
       {/* Social Media */}
       <section className="social-media-section">
-        <div className="row h-100">
+        <div className="row h-100 text-light">
           <div className="col-md-8 d-flex justify-content-around align-items-center mx-auto">
             <h3>{props.socialMedia.socialMediaTitle}</h3>
             <div className="d-flex">
-              <div className="d-flex">
-                <p className="mb-0">icon</p>
+              <div className="d-flex mr-5">
+                <img
+                  src={wechatIcon}
+                  alt=""
+                  style={{height: 30, width: 30, objectFit: 'contain'}}
+                  className="mr-2"
+                />
                 <p className="mb-0">{props.socialMedia.wechatAccountOne}</p>
               </div>
-              <div className="d-flex">
-                <p className="mb-0">icon</p>
+              <div className="d-flex align-items-center">
+                <img
+                  src={wechatIcon}
+                  alt=""
+                  style={{height: 30, width: 30, objectFit: 'contain'}}
+                  className="mr-2"
+                />
                 <p className="mb-0">{props.socialMedia.wechatAccountTwo}</p>
               </div>
             </div>
-            <div className="d-flex">
-              <p className="mb-0">icon</p>
-              <p className="mb-0">icon</p>
-              <p className="mb-0">icon</p>
+            <div className="d-flex align-items-center">
+              <img
+                src={facebookIcon}
+                alt=""
+                style={{height: 30, width: 30, objectFit: 'contain'}}
+                className="mr-3"
+              />
+              <img
+                src={wechatIcon}
+                alt=""
+                style={{height: 30, width: 30, objectFit: 'contain'}}
+                className="mr-3"
+              />
+              <img
+                src={linkedinIcon}
+                alt=""
+                style={{height: 30, width: 30, objectFit: 'contain'}}
+                className="mr-3"
+              />
             </div>
           </div>
         </div>
@@ -115,15 +144,15 @@ function ContactPageTemplate(props: Props) {
             <h3 className="mb-3">Contact Us</h3>
             <div>
               <p className="lead mb-1">Customer Inquiries</p>
-              <p>service@snowballsecurities.com</p>
+              <p className="text-primary">service@snowballsecurities.com</p>
             </div>
             <div>
               <p className="lead mb-1">Media Inquiries</p>
-              <p>service@snowballsecurities.com</p>
+              <p className="text-primary">service@snowballsecurities.com</p>
             </div>
             <div>
               <p className="lead mb-1">Business Cooperation</p>
-              <p>service@snowballsecurities.com</p>
+              <p className="text-primary">service@snowballsecurities.com</p>
             </div>
           </div>
 

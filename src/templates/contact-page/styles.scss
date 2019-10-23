@@ -18,4 +18,10 @@ $primary: #006fbb;
         padding-top: 12.5vh;
     }
 
+    .form-control {
+        border: none;
+        border-radius: 0;
+        border-bottom: 2px solid $primary;
+    }
+
 }
