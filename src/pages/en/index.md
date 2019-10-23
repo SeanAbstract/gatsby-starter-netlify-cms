@@ -70,18 +70,21 @@ realTimeStockSection:
       rate: "0.95"
       percent: "0.05%"
       abbreviation: "FB"
+      
     - stock: "Linkedin"
       image: /img/linkedin_blue.png
       value: "107.39"
       rate: "0.35"
       percent: "0.15%"
       abbreviation: "LI"
+      
     - stock: "Facebook"
       image: /img/facebook_blue.png
       value: "187.39"
       rate: "0.95"
       percent: "0.05%"
       abbreviation: "FB"
+      
     - stock: "Linkedin"
       image: /img/linkedin_blue.png
       value: "107.39"
