@@ -125,11 +125,7 @@ export const IndexPageTemplate = ({
 
     {/* Stock Section or Third */}
     <Row noGutters className="stock-section">
-      <Col
-        md={6}
-        xs={12}
-        className="mx-auto"
-      >
+      <Col md={6} xs={12} className="mx-auto">
         <InvestmentOptions />
       </Col>
       <Col

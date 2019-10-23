@@ -7,6 +7,7 @@ import playButton from '../../../static/img/play_button.svg'
 import testimonialImage from '../../../static/img/smile-face-7.jpg'
 import testimonialImage2 from '../../../static/img/smile-face-8.jpg'
 import PreviewCompatibleImage from '../PreviewCompatibleImage'
+import video from '../../img/SPIN-700x1080_open-account.mp4'
 
 const items = [
   {
@@ -89,8 +90,10 @@ const TestimonyCarousel = ({testimonials}: Props) => {
       </Carousel>
       {/* Modal Video */}
       <Modal isOpen={modal} size="lg" toggle={toggle}>
-        <ModalBody>
-          <h1>hello</h1>
+        <ModalBody className="h-100">
+          <video controls>
+            <source src={video} type="video/mp4" />
+          </video>
         </ModalBody>
       </Modal>
     </>
