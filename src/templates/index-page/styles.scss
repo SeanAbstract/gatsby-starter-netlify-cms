@@ -1,5 +1,10 @@
 .landing-page {
 
+    .card {
+        border: none !important;
+        border-radius: 0;
+      }
+
     .hero-video, .second-section {
         display: flex;
         justify-content: center;
