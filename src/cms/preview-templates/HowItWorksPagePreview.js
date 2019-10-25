@@ -6,7 +6,13 @@ import {HowItWorksTemplate} from '../../templates/how-it-works-page'
 const HowItWorksPreview = ({entry}) => {
   const data = entry.getIn(['data']).toJS()
 
-  return <HowItWorksTemplate headerImage={data.headerImage} sections={data.sections || []} />
+  return (
+    <HowItWorksTemplate
+      headerImage={data.headerImage}
+      sections={data.sections || []}
+      downloadNow={data.downloadNow}
+    />
+  )
 }
 
 HowItWorksPreview.propTypes = {

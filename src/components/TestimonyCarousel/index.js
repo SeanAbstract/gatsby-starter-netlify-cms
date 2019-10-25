@@ -51,15 +51,33 @@ const TestimonyCarousel = ({testimonials}: Props) => {
       onExiting={() => setAnimating(true)}
       onExited={() => setAnimating(false)}
       key={testimonial.customerName}
+      style={{
+        backgroundImage: `url(${
+          testimonial.backgroundImage.childImageSharp
+            ? testimonial.backgroundImage.childImageSharp.fluid.src
+            : testimonial.backgroundImage
+        })`,
+      }}
     >
-      <PreviewCompatibleImage
+      {/* <PreviewCompatibleImage
         imageInfo={testimonial.backgroundImage}
-        style={{width: '100%', position: 'absolute'}}
-      />
+        style={{width: '100%', position: 'absolute', height: '100%'}}
+      /> */}
 
-      <div className="d-flex justify-content-center align-items-center h-100">
-        <div className="col-md-2" />
-        <div className="col-md-5 mr-auto">
+      <div
+        className="d-flex justify-content-center align-items-center h-100"
+        style={{
+          backgroundImage: `url(${
+            testimonial.backgroundImage.childImageSharp
+              ? testimonial.backgroundImage.childImageSharp.fluid.src
+              : testimonial.backgroundImage
+          })`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
+        <div className="col-md-2 col-1" />
+        <div className="col-md-5 mr-auto col-sm-7 col-8">
           <h1 className="display-2 mb-3">WHAT OUR CUSTOMERS ARE SAYING</h1>
           <h3 className="big-subtitle" style={{fontSize: '72px', color: 'black'}}>
             {testimonial.customerName}
@@ -83,7 +101,12 @@ const TestimonyCarousel = ({testimonials}: Props) => {
 
   return (
     <>
-      <Carousel activeIndex={activeIndex} next={next} previous={previous}>
+      <Carousel
+        activeIndex={activeIndex}
+        next={next}
+        previous={previous}
+        style={{minHeight: '40vh'}}
+      >
         {slides}
         <CarouselControl direction="prev" directionText="Previous" onClickHandler={previous} />
         <CarouselControl direction="next" directionText="Next" onClickHandler={next} />

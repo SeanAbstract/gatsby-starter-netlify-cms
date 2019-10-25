@@ -4,13 +4,18 @@ import {graphql} from 'gatsby'
 
 import SharedJumbotron from '../../components/SharedJumbotron'
 import Layout from '../../components/Layout'
-import {HTMLContent} from '../../components/Content'
 import HowItWorksSection from '../../components/HowItWorksSection'
+import DownloadNow from '../../components/DownloadNow'
 
 type HowItWorksTemplateProps = {
   headerImage: any,
   sections: Array<{title: string, description: string, image: any}>,
   contentComponent: any,
+  downloadNow: {
+    mainText: string,
+    subText: string,
+    image: any,
+  },
 }
 
 export function HowItWorksTemplate(props: HowItWorksTemplateProps) {
@@ -28,6 +33,8 @@ export function HowItWorksTemplate(props: HowItWorksTemplateProps) {
           </div>
         </div>
       </section>
+
+      <DownloadNow {...props.downloadNow} />
     </div>
   )
 }
@@ -50,7 +57,7 @@ const HowItWorks = ({data}: Props) => {
       <HowItWorksTemplate
         sections={hiwData.frontmatter.sections}
         headerImage={hiwData.frontmatter.headerImage}
-        contentComponent={HTMLContent}
+        downloadNow={hiwData.frontmatter.downloadNow}
       />
     </Layout>
   )
@@ -68,12 +75,24 @@ export const howItWorksPageQuery = graphql`
             }
           }
         }
+        buttonText
         sections {
           title
           body
           image {
             childImageSharp {
               fluid(maxWidth: 240, quality: 64) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+        }
+        downloadNow {
+          mainText
+          subText
+          image {
+            childImageSharp {
+              fluid(maxWidth: 1024, quality: 100) {
                 ...GatsbyImageSharpFluid
               }
             }

@@ -4,13 +4,12 @@ import React, {useEffect} from 'react'
 import styled from 'styled-components'
 import {Row, Col, Container} from 'reactstrap'
 import PropTypes from 'prop-types'
-import {Link, graphql} from 'gatsby'
+import {graphql} from 'gatsby'
 import Fade from 'react-reveal/Fade'
 
 import videoSrcURL from '../../img/beach.mp4'
 import './styles.scss'
 import Layout from '../../components/Layout'
-import SharedJumbotron from '../../components/SharedJumbotron'
 import PreviewCompatibleImage from '../../components/PreviewCompatibleImage'
 import StocksCarousel from '../../components/StocksCarousel'
 import LiveStockCarousel from '../../components/LiveStockCarousel'
@@ -18,7 +17,6 @@ import introPhone from '../../img/snowball-intro-phone.gif'
 import TestimonyCarousel from '../../components/TestimonyCarousel'
 import DownloadNow from '../../components/DownloadNow'
 import BlogRoll from '../../components/BlogRoll'
-import StockCard from '../../components/StockCard'
 import InvestmentOptions from '../../components/StocksCarousel/InvestmentOptions'
 
 type Props = {
@@ -102,23 +100,12 @@ export const IndexPageTemplate = ({
   return (
     <div className="landing-page">
       {/* Hero Video */}
-      {/* <SharedJumbotron
-        title="Global Markets"
-        description="at your fingertips"
-        headerImage={image}
-        size="lg"
-        secondaryColor="primary"
-      /> */}
+
       <Jumbotron
         className="full-width-image-container d-flex justify-content-center align-items-center flex-column"
         style={{height: '70vh'}}
       >
         <ImageContainer>
-          {/* <Img
-            fluid={data.placeholderImage.childImageSharp.fluid}
-            imgStyle={{height: '100%'}}
-            style={{height: '100%', objectFit: 'cover'}}
-          /> */}
           <StyledVideo id="mainVideo" loop width="100%" muted preload src={videoSrcURL} autoplay>
             <track kind="captions" />
           </StyledVideo>
@@ -127,7 +114,7 @@ export const IndexPageTemplate = ({
         <h1 className="big-text">Global Markets</h1>
         <h3 className="big-subtitle">at your fingertips</h3>
       </Jumbotron>
-      ){/* Fast Secure Trusted or Second */}
+      {/* Fast Secure Trusted or Second */}
       <Container className="second-section">
         <Row className="justify-content-center">
           <Col md={5} lg={4} className="left-text-col">
@@ -162,6 +149,38 @@ export const IndexPageTemplate = ({
           <StocksCarousel stocks={stockSection.stocks} />
         </Col>
       </Row>
+      {/* <Row noGutters className="stock-section bg-primary">
+        <div className="col-md-6" style={{position: 'sticky', top: 0, height: '100%'}}>
+          <Fade top>
+            <img
+              src={investmentImage}
+              imgStyle={{height: '100%'}}
+              style={{height: '75%', objectFit: 'cover', width: '100%'}}
+              alt=""
+            />
+          </Fade>
+        </div>
+        {stockSection.stocks.map((stock, ndx) => {
+          const {country, countryCode, commission} = stock
+          return (
+            <div
+              className={`col-md-6 bg-primary d-flex long-bois ${ndx > 0 ? 'offset-md-6' : ''}`}
+              style={{position: 'sticky', top: '20px', paddingTop: '5rem'}}
+            >
+              <Fade top>
+                <StockSection
+                  currency={countryCode}
+                  stockName={`${country} Stocks`}
+                  commissionAmt={commission[0].price}
+                  commissionDesc={commission[0].text}
+                  interestAmt={commission[1].price}
+                  interestDesc={commission[1].text}
+                />
+              </Fade>
+            </div>
+          )
+        })}
+      </Row> */}
       {/* Make Informed Decisions or 4th */}
       <div className="row feature-section justify-content-around align-items-center">
         <div className="col-md-3 ml-auto d-none d-md-block">
@@ -187,30 +206,34 @@ export const IndexPageTemplate = ({
         <h3 className="big-subtitle">{blurb.subText}</h3>
       </div>
       {/* Blog Roll or 6th */}
-      <div className="blog-roll-container container py-3">
+      <div className="blog-roll-container py-3">
         <Fade bottom cascade>
           <BlogRoll />
         </Fade>
       </div>
       {/* Second Feature Section or 7th */}
-      <div className="row feature-section justify-content-around align-items-center bg-grey">
-        <Col md={5} lg={3} className="ml-auto">
-          <Fade bottom>
-            <h1 className="text-primary display-2 mb-3">{realTimeStockSection.mainText}</h1>
-            <p>{realTimeStockSection.description}</p>
-            <button className="btn btn-outline-primary rounded-pill" type="button">
-              {realTimeStockSection.buttonText}
-            </button>
-          </Fade>
-        </Col>
-        <Col md={6} lg={5} className="mr-auto">
-          <Fade bottom cascade>
-            <Row noGutters>
-              <LiveStockCarousel stocks={realTimeStockSection.stockList} />
-            </Row>
-          </Fade>
-        </Col>
-      </div>
+      <section className="row feature-section bg-grey">
+        <div className="container">
+          <div className="row justify-content-around align-items-center h-100">
+            <Col md={5} lg={4} className="ml-auto">
+              <Fade bottom>
+                <h1 className="text-primary display-2 mb-3">{realTimeStockSection.mainText}</h1>
+                <p>{realTimeStockSection.description}</p>
+                <button className="btn btn-outline-primary rounded-pill" type="button">
+                  {realTimeStockSection.buttonText}
+                </button>
+              </Fade>
+            </Col>
+            <Col md={6} lg={6} className="mr-auto">
+              <Fade bottom cascade>
+                <Row noGutters>
+                  <LiveStockCarousel stocks={realTimeStockSection.stockList} />
+                </Row>
+              </Fade>
+            </Col>
+          </div>
+        </div>
+      </section>
       {/* Carousel */}
       <div className="carousel slide carousel-container" data-ride="carousel">
         <TestimonyCarousel testimonials={testimonials} />
@@ -275,7 +298,7 @@ export const pageQuery = graphql`
           buttonText
           image {
             childImageSharp {
-              fluid(maxWidth: 2048, quality: 100) {
+              fluid(maxWidth: 750, quality: 100) {
                 ...GatsbyImageSharpFluid
               }
             }
@@ -285,7 +308,7 @@ export const pageQuery = graphql`
           title
           backgroundImage {
             childImageSharp {
-              fluid(maxWidth: 1200, quality: 100) {
+              fluid(maxWidth: 1000, quality: 100) {
                 ...GatsbyImageSharpFluid
               }
             }
@@ -344,7 +367,7 @@ export const pageQuery = graphql`
           videoUrl
           backgroundImage {
             childImageSharp {
-              fluid(maxWidth: 1024, quality: 100) {
+              fluid(maxWidth: 750, quality: 100) {
                 ...GatsbyImageSharpFluid
               }
             }
@@ -355,7 +378,7 @@ export const pageQuery = graphql`
           subText
           image {
             childImageSharp {
-              fluid(maxWidth: 1024, quality: 100) {
+              fluid(maxWidth: 750, quality: 100) {
                 ...GatsbyImageSharpFluid
               }
             }
@@ -371,7 +394,7 @@ const Jumbotron = styled.div`
 `
 
 const ImageContainer = styled.div`
-  height: 100vh;
+  height: 70vh;
   width: 100%;
   position: absolute;
   z-index: -1;

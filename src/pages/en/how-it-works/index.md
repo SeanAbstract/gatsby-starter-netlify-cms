@@ -1,6 +1,8 @@
 ---
 templateKey: how-it-works-page
 headerImage: /img/hero-about.png
+buttonText: "Download App"
+
 sections:
   - body: >-
       The whole process including filling in personal information, submitting
@@ -43,5 +45,11 @@ sections:
       portfolio statement.
     image: /img/how-it-works-3.png
     title: How to place orders
+
+
+downloadNow:
+  mainText: "Access Global Markets Today"
+  subText: "Download now"
+  image: /img/snowball-phone.png
 ---
 

@@ -38,7 +38,7 @@ function LiveStockCarousel({stocks}: Props) {
           />
         </Fade>
       </Col>
-      <Col md={4} sm={12}>
+      <Col md={4} sm={12} className="d-none d-md-block">
         <Fade bottom>
           <StockCard
             bgColor="#3b5998"
@@ -51,7 +51,7 @@ function LiveStockCarousel({stocks}: Props) {
           />
         </Fade>
       </Col>
-      <Col md={4} sm={12}>
+      <Col md={4} sm={12} className="d-none d-md-block">
         <Fade bottom>
           <StockCard
             bgColor="#3b5998"

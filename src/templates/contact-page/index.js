@@ -74,7 +74,7 @@ function ContactPageTemplate(props: Props) {
             </div>
           </div>
           <div
-            className="col-md-6"
+            className="col-md-6 d-none d-md-flex"
             style={{
               backgroundSize: 'cover',
               backgroundPosition: 'center',
@@ -91,7 +91,7 @@ function ContactPageTemplate(props: Props) {
       {/* Social Media */}
       <section className="social-media-section">
         <div className="row h-100 text-light">
-          <div className="col-md-8 d-flex justify-content-around align-items-center mx-auto">
+          <div className="col-md-8 col-10 d-flex justify-content-around align-items-center mx-auto">
             <h3>{props.socialMedia.socialMediaTitle}</h3>
             <div className="d-flex">
               <div className="d-flex mr-5">
@@ -138,52 +138,54 @@ function ContactPageTemplate(props: Props) {
       </section>
 
       {/* Contact Us Form */}
-      <section className="contact-us-form">
-        <div className="row h-100 justify-content-center align-items-start">
-          <div className="col-md-3">
-            <h3 className="mb-3">Contact Us</h3>
-            <div>
-              <p className="lead mb-1">Customer Inquiries</p>
-              <p className="text-primary">service@snowballsecurities.com</p>
+      <section className="contact-us-form mb-5">
+        <div className="container">
+          <div className="row h-100 justify-content-center align-items-start">
+            <div className="col-md-3">
+              <h3 className="mb-3">Contact Us</h3>
+              <div>
+                <p className="lead mb-1">Customer Inquiries</p>
+                <p className="text-primary">service@snowballsecurities.com</p>
+              </div>
+              <div>
+                <p className="lead mb-1">Media Inquiries</p>
+                <p className="text-primary">service@snowballsecurities.com</p>
+              </div>
+              <div>
+                <p className="lead mb-1">Business Cooperation</p>
+                <p className="text-primary">service@snowballsecurities.com</p>
+              </div>
             </div>
-            <div>
-              <p className="lead mb-1">Media Inquiries</p>
-              <p className="text-primary">service@snowballsecurities.com</p>
-            </div>
-            <div>
-              <p className="lead mb-1">Business Cooperation</p>
-              <p className="text-primary">service@snowballsecurities.com</p>
-            </div>
-          </div>
 
-          <div className="col-md-5">
-            <h3 className="mb-3">Leave a message</h3>
-            <div className="row mb-2">
-              <div className="col-md-6">
-                <div className="form-group">
-                  <label htmlFor="exampleFormControlInput1">Name</label>
-                  <input type="text" className="form-control" placeholder="John Doe" />
+            <div className="col-md-5">
+              <h3 className="mb-3">Leave a message</h3>
+              <div className="row mb-2">
+                <div className="col-md-6">
+                  <div className="form-group">
+                    <label htmlFor="exampleFormControlInput1">Name</label>
+                    <input type="text" className="form-control" placeholder="John Doe" />
+                  </div>
+                </div>
+                <div className="col-md-6">
+                  <div className="form-group">
+                    <label htmlFor="exampleFormControlInput1">Email address</label>
+                    <input type="email" className="form-control" placeholder="name@example.com" />
+                  </div>
                 </div>
               </div>
-              <div className="col-md-6">
-                <div className="form-group">
-                  <label htmlFor="exampleFormControlInput1">Email address</label>
-                  <input type="email" className="form-control" placeholder="name@example.com" />
+              <div className="row">
+                <div className="col-md-12">
+                  <div className="form-group">
+                    <label htmlFor="exampleFormControlTextarea1">Message</label>
+                    <textarea className="form-control" rows="3" />
+                  </div>
                 </div>
               </div>
-            </div>
-            <div className="row">
-              <div className="col-md-12">
-                <div className="form-group">
-                  <label htmlFor="exampleFormControlTextarea1">Message</label>
-                  <textarea className="form-control" rows="3" />
-                </div>
+              <div>
+                <button className="btn-outline-primary btn rounded-pill px-4" type="button">
+                  Submit
+                </button>
               </div>
-            </div>
-            <div>
-              <button className="btn-outline-primary btn rounded-pill px-4" type="button">
-                Submit
-              </button>
             </div>
           </div>
         </div>

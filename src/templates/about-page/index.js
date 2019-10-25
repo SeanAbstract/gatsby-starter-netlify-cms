@@ -6,7 +6,6 @@ import * as showdown from 'showdown'
 
 import Layout from '../../components/Layout'
 import PreviewCompatibleImage from '../../components/PreviewCompatibleImage'
-import Content, {HTMLContent} from '../../components/Content'
 import SharedJumbotron from '../../components/SharedJumbotron'
 import HistoryCard from '../../components/HistoryCard'
 import CompanyCard from '../../components/CompanyCard'
@@ -36,26 +35,15 @@ type AboutTemplate = {
   },
 }
 
-const listItems = [
-  'Snowball Securities provide online information and share trading services to global investors who want exposure to global markets.',
-  'Snowball Securities is a financial services provider backed by leading participants in the Fintech sector and with access to complementary information services and social channels.',
-  'Snowball Securities is committed to New Zealand and is investing to build a substantial global online share trading business from its base here.',
-  'Snowball Securities is an early mover in a high growth sector arising as a reslit of four forces that drive global financial services: Online trading, access to global markets, social information flows and fintech.',
-]
-
 const images = [mobileLogo, peopleLogo, businessLogo]
 
 export const AboutPageTemplate = (props: AboutTemplate) => {
-  const PostContent = props.contentComponent || Content
-
   const [currentNdx, setCurrentNdx] = useState(0)
   const [tabDescription, setTabDescription] = useState(props.tabs[0].description)
 
   function renderDescription() {
     const converter = new showdown.Converter()
     const html = converter.makeHtml(tabDescription)
-
-    console.log(html)
 
     return html
   }
@@ -118,20 +106,7 @@ export const AboutPageTemplate = (props: AboutTemplate) => {
               <div
                 className="container tab-description"
                 dangerouslySetInnerHTML={{__html: renderDescription()}}
-              >
-                {/* <p>
-                  Through Snowball investors can trade electronically in a variety of financial
-                  products worldwide. Our trading platform is fast and efficient, and our fee
-                  structure is competitive.
-                </p>
-                <ul>
-                  {listItems.map(item => (
-                    <li>
-                      <p>{item}</p>
-                    </li>
-                  ))}
-                </ul> */}
-              </div>
+              />
             </div>
           </div>
         </div>
@@ -245,7 +220,6 @@ const AboutPage = ({data}: Props) => {
         tabs={post.frontmatter.tabs}
         headerImage={post.frontmatter.headerImage}
         historyCards={post.frontmatter.historyCards}
-        contentComponent={HTMLContent}
         investors={post.frontmatter.investors}
         partners={post.frontmatter.partners}
         downloadNow={post.frontmatter.downloadNow}

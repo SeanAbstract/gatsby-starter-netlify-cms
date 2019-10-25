@@ -12,21 +12,21 @@ function Footer() {
   return (
     <StyledFooter>
       <StyledContainer className="justify-content-between d-flex flex-column py-5">
-        <Row className="w-100 justify-content-between">
+        <Row className="w-100 justify-content-between my-3">
           <Col md={6}>
             <Row>
-              <Col md={4}>
+              <Col md={4} className="mb-3">
                 <div>
                   <img src={logo} alt="" style={{maxHeight: '50px', maxWidth: '50px'}} />
                 </div>
               </Col>
-              <Col md={4}>
+              <Col xs={4}>
                 <p className="mb-1">About</p>
                 <p className="mb-1">How it works</p>
                 <p className="mb-1">Prices</p>
                 <p className="mb-1">Downloads</p>
               </Col>
-              <Col md={4}>
+              <Col xs={4}>
                 <p className="mb-1">Blog</p>
                 <p className="mb-1">Risk Disclosure</p>
                 <p className="mb-1">FAQs</p>
@@ -39,11 +39,9 @@ function Footer() {
         </Row>
 
         <Row className="my-3">
-          <Col md={8} />
-
-          <Col md={4} className="justify-content-end">
+          <Col md={4} sm={12} className="ml-auto">
             <Row className="w-100">
-              <Col className="text-right">
+              <Col>
                 <img
                   src={facebookIcon}
                   alt=""
@@ -66,7 +64,7 @@ function Footer() {
               </Col>
             </Row>
             <Row className="justify-content-end mt-3 w-100">
-              <Col className="text-right">
+              <Col md={12} className="ml-auto">
                 <small className="mr-3" style={{fontSize: '10px'}}>
                   Privacy Policy
                 </small>

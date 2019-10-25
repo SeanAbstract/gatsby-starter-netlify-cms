@@ -1,48 +1,74 @@
-import React, {useEffect} from 'react'
+import React from 'react'
 import * as showdown from 'showdown'
 
 import PreviewCompatibleImage from '../PreviewCompatibleImage'
-import Content from '../Content'
 
 function HowItWorksSection(props) {
-  const PostContent = props.contentComponent || Content
-
   return props.sections.map((section, ndx) => {
     const converter = new showdown.Converter()
     const html = converter.makeHtml(section.body)
 
     return (
       <div className="col-md-8 mx-auto mb-5">
-        <div className="row w-100 justify-content-center align-items-center">
-          {ndx % 2 === 0 ? (
+        <div className="container h-100">
+          <div className="row w-100 justify-content-center align-items-center d-none d-md-flex">
+            {ndx % 2 === 0 ? (
+              <>
+                <div className="col-md-8">
+                  <h3>{section.title}</h3>
+                  <div dangerouslySetInnerHTML={{__html: html}} />
+                  <div className="text-left">
+                    {ndx === 0 && (
+                      <button className="btn btn-outline-primary rounded-pill " type="button">
+                        Download App
+                      </button>
+                    )}
+                  </div>
+                </div>
+                <div className="col-md-4">
+                  <PreviewCompatibleImage
+                    imageInfo={section.image}
+                    alt="section image"
+                    style={{maxWidth: '150px'}}
+                  />
+                </div>
+              </>
+            ) : (
+              <>
+                <div className="col-md-4">
+                  <PreviewCompatibleImage
+                    imageInfo={section.image}
+                    alt="section image"
+                    style={{maxWidth: '270px'}}
+                  />
+                </div>
+                <div className="col-md-8">
+                  <h3>{section.title}</h3>
+                  <div dangerouslySetInnerHTML={{__html: html}} />
+                </div>
+              </>
+            )}
+          </div>
+          <div className="row w-100 justify-content-center align-items-center d-md-none">
             <>
-              <div className="col-md-8">
-                <h3>{section.title}</h3>
-                <PostContent content={html} />
-              </div>
               <div className="col-md-4">
                 <PreviewCompatibleImage
                   imageInfo={section.image}
                   alt="section image"
-                  style={{maxWidth: '150px'}}
-                />
-              </div>
-            </>
-          ) : (
-            <>
-              <div className="col-md-4">
-                <PreviewCompatibleImage
-                  imageInfo={section.image}
-                  alt="section image"
-                  style={{maxWidth: '250px'}}
+                  style={{maxWidth: '150px', marginBottom: '3.5rem'}}
                 />
               </div>
               <div className="col-md-8">
                 <h3>{section.title}</h3>
-                <PostContent content={html} />
+                <div dangerouslySetInnerHTML={{__html: html}} />
+                {ndx === 0 && (
+                  <button className="btn btn-outline-primary rounded-pill " type="button">
+                    Download App
+                  </button>
+                )}
               </div>
             </>
-          )}
+          </div>
         </div>
       </div>
     )

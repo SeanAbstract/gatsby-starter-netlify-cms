@@ -43,5 +43,12 @@ sections:
       portfolio statement.
     image: /img/how-it-works-3.png
     title: How to place orders
+
+buttonText: "Download App"
+
+downloadNow:
+  mainText: "Access Global Markets Today"
+  subText: "Download now"
+  image: /img/snowball-phone.png
 ---
 

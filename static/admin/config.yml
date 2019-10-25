@@ -214,6 +214,11 @@ collections:
               {label: "Description", name: body, widget: markdown},
               {label: "Image", name: image, widget: image},
             ]}
+          - {label: "Download Now", name: "downloadNow", widget: object, fields: [
+              {label: "Main Text", name: "mainText", widget: string},
+              {label: "Sub Text", name: "subText", widget: string},
+              {label: "Image", name: "image", widget: image},
+            ]}
       
       - file: "src/pages/en/faq/index.md"
         label: "Faq Page"
@@ -452,10 +457,16 @@ collections:
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "how-it-works-page"}
           - {label: "Header Image", name: headerImage, widget: image}
+          - {label: "Button Text", name: buttonText, widget: text}
           - {label: "Sections", name: sections, widget: list, fields: [
               {label: "Title", name: title, widget: text},
               {label: "Description", name: body, widget: markdown},
               {label: "Image", name: image, widget: image},
+            ]}
+          - {label: "Download Now", name: "downloadNow", widget: object, fields: [
+              {label: "Main Text", name: "mainText", widget: string},
+              {label: "Sub Text", name: "subText", widget: string},
+              {label: "Image", name: "image", widget: image},
             ]}
       
       - file: "src/pages/zh/faq/index.md"
