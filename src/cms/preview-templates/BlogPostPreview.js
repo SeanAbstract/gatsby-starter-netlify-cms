@@ -12,6 +12,7 @@ const BlogPostPreview = ({entry, widgetFor}) => {
       description={data.description || []}
       title={data.title || []}
       downloadNow={data.downloadNow || {}}
+      featuredImage={data.featuredimage}
     />
   )
 }
