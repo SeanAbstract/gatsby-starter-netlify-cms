@@ -37,7 +37,7 @@ function InvestmentOptions() {
 
   return (
     <div className="h-100 w-100">
-      <FirstDiv style={{width: '100%', height: '100%', position: 'absolute', zIndex: '-1'}}>
+      <FirstDiv style={{width: '100%', height: '100vh', position: 'absolute', zIndex: '-1'}}>
         <Carousel defaultWait={3000} maxTurns={100}>
           <Fade style={{height: '100%'}}>
             <Img

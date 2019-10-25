@@ -41,10 +41,19 @@
     }
 
     .stock-section {
-        min-height: 70vh;
+        min-height: 100vh;
         height: auto;
         background-size: cover;
-        
+
+        .stock-section-background {
+            background-image: url('../../img/investment.png');
+            background-size: cover;
+            transition: 1s;
+
+            &.background-two {
+                background-image: url('../../img/products-full-width.jpg') !important;
+            }
+        }
 
         .long-bois {
             height: 75vh; 

@@ -6,18 +6,18 @@ import {Row, Col, Container} from 'reactstrap'
 import PropTypes from 'prop-types'
 import {graphql} from 'gatsby'
 import Fade from 'react-reveal/Fade'
+import {Controller, Scene} from 'react-scrollmagic'
 
 import videoSrcURL from '../../img/beach.mp4'
 import './styles.scss'
 import Layout from '../../components/Layout'
 import PreviewCompatibleImage from '../../components/PreviewCompatibleImage'
-import StocksCarousel from '../../components/StocksCarousel'
 import LiveStockCarousel from '../../components/LiveStockCarousel'
 import introPhone from '../../img/snowball-intro-phone.gif'
 import TestimonyCarousel from '../../components/TestimonyCarousel'
 import DownloadNow from '../../components/DownloadNow'
 import BlogRoll from '../../components/BlogRoll'
-import InvestmentOptions from '../../components/StocksCarousel/InvestmentOptions'
+import StockSection from '../../components/StocksCarousel/stockSection'
 
 type Props = {
   image: any,
@@ -136,19 +136,60 @@ export const IndexPageTemplate = ({
         </Row>
       </Container>
       {/* Stock Section or Third */}
-      <Row noGutters className="stock-section">
-        <Col md={6} xs={12} className="mx-auto">
+      <StockRow noGutters className="stock-section">
+        {/* <Col md={6} xs={12} className="mx-auto">
           <InvestmentOptions />
+        </Col> */}
+        <Col md={6} xs={12} style={{backgroundColor: '#006fbb'}}>
+          <Controller>
+            <div id="section-trigger" />
+            <Scene
+              triggerElement="#section-trigger"
+              duration={1600}
+              triggerHook={0}
+              offset={700}
+              classToggle="background-two"
+            >
+              <div
+                className="d-flex flex-column justify-content-center align-items-center stock-section-background"
+                style={{
+                  height: '100vh',
+                  position: 'sticky',
+                  top: 0
+                }}
+              >
+                <div>
+                  <WordTitle>ACCESS</WordTitle>
+                  <WordTitle>WORLD-CLASS</WordTitle>
+                  <WordTitle>INVESTMENT</WordTitle>
+                  <WordTitle>OPTION</WordTitle>
+                </div>
+              </div>
+            </Scene>
+          </Controller>
         </Col>
-        <Col
-          md={6}
-          xs={12}
-          style={{backgroundColor: '#006fbb'}}
-          className="justify-content-center d-flex align-items-center m-md-0 col-right"
-        >
-          <StocksCarousel stocks={stockSection.stocks} />
+        <Col md={6} xs={12} style={{backgroundColor: '#006fbb'}}>
+          <Controller>
+            {stockSection.stocks.map(stock => {
+              const {country, countryCode, commission} = stock
+              return (
+                <Scene duration={400} pin triggerHook={0}>
+                  <div className="d-flex flex-column justify-content-center" style={{height: '100vh'}}>
+                    <StockSection
+                      currency={countryCode}
+                      stockName={`${country} Stocks`}
+                      commissionAmt={commission[0].price}
+                      commissionDesc={commission[0].text}
+                      interestAmt={commission[1].price}
+                      interestDesc={commission[1].text}
+                    />
+                  </div>
+                </Scene>
+              )
+            })}
+          </Controller>
         </Col>
-      </Row>
+      </StockRow>
       {/* <Row noGutters className="stock-section bg-primary">
         <div className="col-md-6" style={{position: 'sticky', top: 0, height: '100%'}}>
           <Fade top>
@@ -386,6 +427,55 @@ export const pageQuery = graphql`
         }
       }
     }
+  }
+`
+
+const WordTitle = styled.h1`
+  font-size: 4rem;
+  line-height: 1.75rem;
+
+  font-size: 3rem;
+
+  @media (min-width: 576px) {
+    font-size: 2.75rem;
+  }
+
+  @media (min-width: 768px) {
+    font-size: 3.75rem;
+    line-height: 2.5rem;
+  }
+
+  @media (min-width: 992px) {
+    font-size: 4rem;
+    line-height: 2.65rem;
+  }
+
+  @media (min-width: 1200px) {
+    font-size: 5rem;
+    line-height: 3.25rem;
+  }
+`
+
+const StockRow = styled(Row)`
+  .section {
+    height: 100vh;
+  }
+
+  .tween {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    margin: 0 !important;
+    position: relative;
+    left: calc(50% - 50px);
+  }
+
+  .stagger {
+    width: 50px;
+    height: 50px;
+    left: 700px;
+    background-color: green;
+    position: relative;
   }
 `
 

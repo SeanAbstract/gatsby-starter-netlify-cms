@@ -11,7 +11,7 @@ function StockSection({
   interestDesc,
 }: Props) {
   return (
-    <Row style={{color: 'white'}} className="w-100 justify-content-center">
+    <Row id={stockName} style={{color: 'white'}} className="w-100 justify-content-center">
       <Col xs={1} md={0} />
       <Col xs={2} md={2} lg={1} className="rounded-circle mr-3">
         <CircleContainer>
