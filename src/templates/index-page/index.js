@@ -101,10 +101,7 @@ export const IndexPageTemplate = ({
     <div className="landing-page">
       {/* Hero Video */}
 
-      <Jumbotron
-        className="full-width-image-container d-flex justify-content-center align-items-center flex-column"
-        style={{height: '70vh'}}
-      >
+      <Jumbotron className="full-width-image-container d-flex justify-content-center align-items-center flex-column">
         <ImageContainer>
           <StyledVideo id="mainVideo" loop width="100%" muted preload src={videoSrcURL} autoplay>
             <track kind="captions" />
@@ -115,7 +112,7 @@ export const IndexPageTemplate = ({
         <h3 className="big-subtitle">at your fingertips</h3>
       </Jumbotron>
       {/* Fast Secure Trusted or Second */}
-      <Container className="second-section">
+      <Container fluid className="second-section">
         <Row className="justify-content-center">
           <Col md={5} lg={4} className="left-text-col">
             <Fade bottom>
@@ -253,7 +250,7 @@ export const IndexPageTemplate = ({
         </Fade>
       </div>
       {/* Second Feature Section or 7th */}
-      <section className="row feature-section bg-grey">
+      <section className="row another-feature-section bg-grey">
         <div className="container">
           <div className="row justify-content-around align-items-center h-100">
             <Col md={5} lg={4} className="ml-auto">
@@ -480,19 +477,18 @@ const StockRow = styled(Row)`
 `
 
 const Jumbotron = styled.div`
-  height: ${props => props.size === 'lg' && '70vh'};
+  height: 90vh !important;
+  width: 100%;
+  top: 0;
+  position: fixed !important;
+  z-index: -1;
 `
 
 const ImageContainer = styled.div`
-  height: 70vh;
+  height: 90vh;
   width: 100%;
   position: absolute;
-  z-index: -1;
   top: 0;
-
-  @media (min-width: 1200px) {
-    height: 75vh;
-  }
 `
 
 const Overlay = styled.div`

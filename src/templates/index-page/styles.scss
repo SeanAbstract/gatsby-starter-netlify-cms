@@ -23,6 +23,8 @@
         height: 70vh;
         padding-right: 1.3rem;
         padding-left: 1.3rem;
+        margin-top: 100vh;
+        background-color: white;
       
         @media (min-width: 425px) {
           padding-right: 1.25rem;
@@ -85,6 +87,12 @@
 
     .feature-section {
         min-height: 90vh;
+        background-color: white ;
+    }
+
+    .another-feature-section {
+        min-height: 90vh;
+        background-color: #f5f5f5 ;
     }
 
     .get-ahead-section {
@@ -97,6 +105,7 @@
 
 
     .blog-roll-container {
+        background-color: white;
 
         .blog-container {
             border-left: 1px solid #E6E6E6;
