@@ -1,4 +1,4 @@
-// @type
+// @flow
 
 import React, {useEffect} from 'react'
 import styled from 'styled-components'
@@ -152,7 +152,7 @@ export const IndexPageTemplate = ({
                 style={{
                   height: '100vh',
                   position: 'sticky',
-                  top: 0
+                  top: 0,
                 }}
               >
                 <div>
@@ -171,7 +171,10 @@ export const IndexPageTemplate = ({
               const {country, countryCode, commission} = stock
               return (
                 <Scene duration={400} pin triggerHook={0}>
-                  <div className="d-flex flex-column justify-content-center" style={{height: '100vh'}}>
+                  <div
+                    className="d-flex flex-column justify-content-center"
+                    style={{height: '100vh'}}
+                  >
                     <StockSection
                       currency={countryCode}
                       stockName={`${country} Stocks`}
@@ -187,38 +190,7 @@ export const IndexPageTemplate = ({
           </Controller>
         </Col>
       </StockRow>
-      {/* <Row noGutters className="stock-section bg-primary">
-        <div className="col-md-6" style={{position: 'sticky', top: 0, height: '100%'}}>
-          <Fade top>
-            <img
-              src={investmentImage}
-              imgStyle={{height: '100%'}}
-              style={{height: '75%', objectFit: 'cover', width: '100%'}}
-              alt=""
-            />
-          </Fade>
-        </div>
-        {stockSection.stocks.map((stock, ndx) => {
-          const {country, countryCode, commission} = stock
-          return (
-            <div
-              className={`col-md-6 bg-primary d-flex long-bois ${ndx > 0 ? 'offset-md-6' : ''}`}
-              style={{position: 'sticky', top: '20px', paddingTop: '5rem'}}
-            >
-              <Fade top>
-                <StockSection
-                  currency={countryCode}
-                  stockName={`${country} Stocks`}
-                  commissionAmt={commission[0].price}
-                  commissionDesc={commission[0].text}
-                  interestAmt={commission[1].price}
-                  interestDesc={commission[1].text}
-                />
-              </Fade>
-            </div>
-          )
-        })}
-      </Row> */}
+
       {/* Make Informed Decisions or 4th */}
       <div className="row feature-section justify-content-around align-items-center">
         <div className="col-md-3 ml-auto d-none d-md-block">
