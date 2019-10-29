@@ -5,7 +5,6 @@ function SharedJumbotron({headerImage, title, description, size, secondaryColor}
   return (
     <Jumbotron
       className="full-width-image-container d-flex justify-content-center align-items-center flex-column"
-      style={{height: size === 'lg' ? '70vh' : ''}}
       headerImage={headerImage}
     >
       <div
@@ -29,6 +28,7 @@ const Jumbotron = styled.div`
     props.headerImage.childImageSharp
       ? props.headerImage.childImageSharp.fluid.src
       : props.headerImage});
+  position: absolute;
 `
 
 export default SharedJumbotron

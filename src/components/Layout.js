@@ -1,6 +1,7 @@
 import React from 'react'
 import {Helmet} from 'react-helmet'
 import {withPrefix} from 'gatsby'
+import styled from 'styled-components'
 
 import Footer from './Footer'
 import './global.scss'
@@ -47,10 +48,15 @@ const TemplateWrapper = ({children}) => {
         <meta property="og:image" content={`${withPrefix('/')}img/og-image.jpg`} />
       </Helmet>
       <Header />
-      <main>{children}</main>
+      <StyledMain>{children}</StyledMain>
       <Footer />
     </div>
   )
 }
+
+const StyledMain = styled.main`
+  margin-bottom: 385px;
+  position: relative;
+`
 
 export default TemplateWrapper

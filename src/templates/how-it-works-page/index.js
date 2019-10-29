@@ -2,6 +2,7 @@
 import React from 'react'
 import {graphql} from 'gatsby'
 
+import './styles.scss'
 import SharedJumbotron from '../../components/SharedJumbotron'
 import Layout from '../../components/Layout'
 import HowItWorksSection from '../../components/HowItWorksSection'
