@@ -28,7 +28,6 @@ const Jumbotron = styled.div`
     props.headerImage.childImageSharp
       ? props.headerImage.childImageSharp.fluid.src
       : props.headerImage});
-  position: absolute;
 `
 
 export default SharedJumbotron
