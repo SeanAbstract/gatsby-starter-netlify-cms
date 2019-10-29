@@ -85,7 +85,7 @@ realTimeStockSection:
       bgColor: 'rgba(40,103,178, 1)'
 
     - stock: "Amazon"
-      image: /img/amazon_logo.svg
+      image: /img/facebook_blue.png
       value: "187.39"
       rate: "0.95"
       percent: "0.05%"
