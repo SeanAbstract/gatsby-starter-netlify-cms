@@ -96,12 +96,6 @@ export const IndexPageTemplate = ({
   testimonials,
   downloadNow,
 }: Props) => {
-  useEffect(() => {
-    const currentVideo = document.getElementById('mainVideo')
-
-    currentVideo.play()
-  })
-
   const changeZIndex = () => {
     if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
       document.getElementById('footer').style.zIndex = '-1'
@@ -124,213 +118,225 @@ export const IndexPageTemplate = ({
     setLoading(false)
   }, [])
 
-  if (loading) {
-    return (
-      <div style={{height: '100vh'}} className="d-flex justify-content-center align-items-center">
-        <div className="spinner" />
-      </div>
-    )
-  }
+  useEffect(() => {
+    if (loading) {
+      const currentVideo = document.getElementById('mainVideo')
+
+      if (currentVideo) {
+        currentVideo.play()
+      }
+    }
+  }, [loading])
 
   return (
-    <div className="landing-page" style={{zIndex: 2}}>
-      {/* Hero Video */}
-      <Jumbotron className="full-width-image-container d-flex justify-content-center align-items-center flex-column text-right custom-jumbotron">
-        <ImageContainer className="image-container">
-          <StyledVideo
-            id="mainVideo"
-            loop
-            width="100%"
-            muted="true"
-            preload="auto"
-            src={videoSrcURL}
-            autoplay
-            className="video"
-          >
-            <track kind="captions" />
-          </StyledVideo>
-          <Overlay className="overlay" />
-        </ImageContainer>
-        <div className="text-right">
-          <h1 className="big-text">Global Markets</h1>
-          <h3 className="big-subtitle text-right text-primary">at your fingertips</h3>
+    <>
+      {!loading && (
+        <div
+          style={{height: '100vh', position: 'absolute', zIndex: '100'}}
+          className="d-flex justify-content-center align-items-center"
+        >
+          <div className="spinner" />
         </div>
-      </Jumbotron>
-
-      {/* Fast Secure Trusted or Second */}
-      <Container fluid className="second-section">
-        <Row className="justify-content-center">
-          <Col md={5} lg={4} className="left-text-col">
-            <Fade bottom>
-              <h1 className="text-primary display-2 mb-3">{firstSection.mainText}</h1>
-              <p>{firstSection.description}</p>
-              <div>
-                <button className="btn btn-outline-primary rounded-pill " type="button">
-                  {firstSection.buttonText}
-                </button>
-              </div>
-            </Fade>
-          </Col>
-          <div className="col-md-3 d-none d-md-block">
-            <Fade bottom>
-              <img src={introPhone} style={{maxWidth: '300px'}} alt="snowball_intro_phone" />
-            </Fade>
+      )}
+      <div className="landing-page" style={{zIndex: 2}}>
+        {/* Hero Video */}
+        <Jumbotron className="full-width-image-container d-flex justify-content-center align-items-center flex-column text-right custom-jumbotron">
+          <ImageContainer className="image-container">
+            <StyledVideo
+              id="mainVideo"
+              loop
+              width="100%"
+              muted="true"
+              preload="auto"
+              src={videoSrcURL}
+              autoplay
+              className="video"
+            >
+              <track kind="captions" />
+            </StyledVideo>
+            <Overlay className="overlay" />
+          </ImageContainer>
+          <div className="text-right">
+            <h1 className="big-text">Global Markets</h1>
+            <h3 className="big-subtitle text-right text-primary">at your fingertips</h3>
           </div>
-        </Row>
-      </Container>
-      {/* Stock Section or Third */}
-      <StockRow noGutters className="stock-section">
-        {/* <Col md={6} xs={12} className="mx-auto">
+        </Jumbotron>
+
+        {/* Fast Secure Trusted or Second */}
+        <Container fluid className="second-section">
+          <Row className="justify-content-center">
+            <Col md={5} lg={4} className="left-text-col">
+              <Fade bottom>
+                <h1 className="text-primary display-2 mb-3">{firstSection.mainText}</h1>
+                <p>{firstSection.description}</p>
+                <div>
+                  <button className="btn btn-outline-primary rounded-pill " type="button">
+                    {firstSection.buttonText}
+                  </button>
+                </div>
+              </Fade>
+            </Col>
+            <div className="col-md-3 d-none d-md-block">
+              <Fade bottom>
+                <img src={introPhone} style={{maxWidth: '300px'}} alt="snowball_intro_phone" />
+              </Fade>
+            </div>
+          </Row>
+        </Container>
+        {/* Stock Section or Third */}
+        <StockRow noGutters className="stock-section">
+          {/* <Col md={6} xs={12} className="mx-auto">
           <InvestmentOptions />
         </Col> */}
-        <Col md={6} xs={12} style={{backgroundColor: '#006fbb'}}>
-          <Controller>
-            <div id="section-trigger" />
-            <Scene
-              triggerElement="#section-trigger"
-              duration={1600}
-              triggerHook={0}
-              offset={700}
-              classToggle="background-two"
-            >
-              <div
-                className="d-flex flex-column justify-content-center align-items-center stock-section-background"
-                style={{
-                  height: '100vh',
-                  position: 'sticky',
-                  top: 0,
-                }}
+          <Col md={6} xs={12} style={{backgroundColor: '#006fbb'}}>
+            <Controller>
+              <div id="section-trigger" />
+              <Scene
+                triggerElement="#section-trigger"
+                duration={1600}
+                triggerHook={0}
+                offset={700}
+                classToggle="background-two"
+              >
+                <div
+                  className="d-flex flex-column justify-content-center align-items-center stock-section-background"
+                  style={{
+                    height: '100vh',
+                    position: 'sticky',
+                    top: 0,
+                  }}
+                >
+                  <div>
+                    <WordTitle>ACCESS</WordTitle>
+                    <WordTitle>WORLD-CLASS</WordTitle>
+                    <WordTitle>INVESTMENT</WordTitle>
+                    <WordTitle>OPTION</WordTitle>
+                  </div>
+                </div>
+              </Scene>
+            </Controller>
+          </Col>
+          <Col md={6} xs={12} style={{backgroundColor: '#006fbb'}}>
+            <Controller>
+              {stockSection.stocks.map(stock => {
+                const {country, countryCode, commission} = stock
+                return (
+                  <Scene duration={400} pin triggerHook={0}>
+                    <div
+                      className="d-flex flex-column justify-content-center"
+                      style={{height: '100vh'}}
+                    >
+                      <StockSection
+                        currency={countryCode}
+                        stockName={`${country} Stocks`}
+                        commissionAmt={commission[0].price}
+                        commissionDesc={commission[0].text}
+                        interestAmt={commission[1].price}
+                        interestDesc={commission[1].text}
+                      />
+                    </div>
+                  </Scene>
+                )
+              })}
+            </Controller>
+          </Col>
+        </StockRow>
+
+        {/* Make Informed Decisions or 4th */}
+        <div className="row feature-section justify-content-around align-items-center">
+          <div className="col-md-3 ml-auto d-none d-md-block">
+            <Controller>
+              <div id="section-trigger-2" />
+              <Scene
+                triggerElement="#section-trigger-2"
+                duration={1600}
+                triggerHook={0}
+                offset={700}
+                classToggle="background-two"
               >
                 <div>
-                  <WordTitle>ACCESS</WordTitle>
-                  <WordTitle>WORLD-CLASS</WordTitle>
-                  <WordTitle>INVESTMENT</WordTitle>
-                  <WordTitle>OPTION</WordTitle>
+                  <img src={phoneFrame} alt="" style={{maxWidth: '250px'}} className="img-fluid" />
+                  <img
+                    src={phoneGif}
+                    alt=""
+                    className="img-fluid gif-phone"
+                    style={{maxWidth: '235px'}}
+                  />
+                </div>
+              </Scene>
+            </Controller>
+          </div>
+          {/* <div className="col-md-1" /> */}
+          <div className="col-md-3 mr-auto ml-3">
+            <Controller>
+              <Scene duration={400} pin triggerHook={0}>
+                <Fade bottom>
+                  <h1 className="text-primary display-2 mb-3">{featureSection.mainText}</h1>
+                  <h5 className="mb-2">{featureSection.subText}</h5>
+                  <p>{featureSection.description}</p>
+                  <button className="btn btn-outline-primary rounded-pill" type="button">
+                    {featureSection.buttonText}
+                  </button>
+                </Fade>
+              </Scene>
+            </Controller>
+          </div>
+        </div>
+        {/* Get ahead or 5th */}
+        <div className="d-flex flex-column get-ahead-section justify-content-center align-items-center bg-primary">
+          <h1 className="display-3" style={{lineHeight: '0.5'}}>
+            {blurb.mainText}
+          </h1>
+          <h3 className="big-subtitle">{blurb.subText}</h3>
+        </div>
+        {/* Blog Roll or 6th */}
+        <div className="blog-roll-container py-3">
+          <Fade bottom cascade>
+            <div className="row">
+              <div className="col-sm-8 mx-auto">
+                <div className="container">
+                  <BlogRoll />
                 </div>
               </div>
-            </Scene>
-          </Controller>
-        </Col>
-        <Col md={6} xs={12} style={{backgroundColor: '#006fbb'}}>
-          <Controller>
-            {stockSection.stocks.map(stock => {
-              const {country, countryCode, commission} = stock
-              return (
-                <Scene duration={400} pin triggerHook={0}>
-                  <div
-                    className="d-flex flex-column justify-content-center"
-                    style={{height: '100vh'}}
-                  >
-                    <StockSection
-                      currency={countryCode}
-                      stockName={`${country} Stocks`}
-                      commissionAmt={commission[0].price}
-                      commissionDesc={commission[0].text}
-                      interestAmt={commission[1].price}
-                      interestDesc={commission[1].text}
-                    />
-                  </div>
-                </Scene>
-              )
-            })}
-          </Controller>
-        </Col>
-      </StockRow>
-
-      {/* Make Informed Decisions or 4th */}
-      <div className="row feature-section justify-content-around align-items-center">
-        <div className="col-md-3 ml-auto d-none d-md-block">
-          <Controller>
-            <div id="section-trigger-2" />
-            <Scene
-              triggerElement="#section-trigger-2"
-              duration={1600}
-              triggerHook={0}
-              offset={700}
-              classToggle="background-two"
-            >
-              <div>
-                <img src={phoneFrame} alt="" style={{maxWidth: '250px'}} className="img-fluid" />
-                <img
-                  src={phoneGif}
-                  alt=""
-                  className="img-fluid gif-phone"
-                  style={{maxWidth: '235px'}}
-                />
-              </div>
-            </Scene>
-          </Controller>
+            </div>
+          </Fade>
         </div>
-        {/* <div className="col-md-1" /> */}
-        <div className="col-md-3 mr-auto ml-3">
-          <Controller>
-            <Scene duration={400} pin triggerHook={0}>
-              <Fade bottom>
-                <h1 className="text-primary display-2 mb-3">{featureSection.mainText}</h1>
-                <h5 className="mb-2">{featureSection.subText}</h5>
-                <p>{featureSection.description}</p>
-                <button className="btn btn-outline-primary rounded-pill" type="button">
-                  {featureSection.buttonText}
-                </button>
-              </Fade>
-            </Scene>
-          </Controller>
-        </div>
-      </div>
-      {/* Get ahead or 5th */}
-      <div className="d-flex flex-column get-ahead-section justify-content-center align-items-center bg-primary">
-        <h1 className="display-3" style={{lineHeight: '0.5'}}>
-          {blurb.mainText}
-        </h1>
-        <h3 className="big-subtitle">{blurb.subText}</h3>
-      </div>
-      {/* Blog Roll or 6th */}
-      <div className="blog-roll-container py-3">
-        <Fade bottom cascade>
-          <div className="row">
-            <div className="col-sm-8 mx-auto">
-              <div className="container">
-                <BlogRoll />
-              </div>
+        {/* Second Feature Section or 7th */}
+        <section className="row another-feature-section bg-grey">
+          <div className="container">
+            <div className="row justify-content-around align-items-center h-100">
+              <Col md={5} lg={4} className="ml-auto">
+                <Fade bottom>
+                  <h1 className="text-primary display-2 mb-3">{realTimeStockSection.mainText}</h1>
+                  <p>{realTimeStockSection.description}</p>
+                  <button className="btn btn-outline-primary rounded-pill" type="button">
+                    {realTimeStockSection.buttonText}
+                  </button>
+                </Fade>
+              </Col>
+              <Col md={6} lg={6} className="mr-auto">
+                <Fade bottom cascade>
+                  <Row noGutters>
+                    <LiveStockCarousel stocks={realTimeStockSection.stockList} />
+                  </Row>
+                </Fade>
+              </Col>
             </div>
           </div>
-        </Fade>
-      </div>
-      {/* Second Feature Section or 7th */}
-      <section className="row another-feature-section bg-grey">
-        <div className="container">
-          <div className="row justify-content-around align-items-center h-100">
-            <Col md={5} lg={4} className="ml-auto">
-              <Fade bottom>
-                <h1 className="text-primary display-2 mb-3">{realTimeStockSection.mainText}</h1>
-                <p>{realTimeStockSection.description}</p>
-                <button className="btn btn-outline-primary rounded-pill" type="button">
-                  {realTimeStockSection.buttonText}
-                </button>
-              </Fade>
-            </Col>
-            <Col md={6} lg={6} className="mr-auto">
-              <Fade bottom cascade>
-                <Row noGutters>
-                  <LiveStockCarousel stocks={realTimeStockSection.stockList} />
-                </Row>
-              </Fade>
-            </Col>
-          </div>
+        </section>
+        {/* Carousel */}
+        <div className="carousel slide carousel-container" data-ride="carousel">
+          <TestimonyCarousel testimonials={testimonials} />
         </div>
-      </section>
-      {/* Carousel */}
-      <div className="carousel slide carousel-container" data-ride="carousel">
-        <TestimonyCarousel testimonials={testimonials} />
-      </div>
-      {/* Download NOw */}
+        {/* Download NOw */}
 
-      <DownloadNow
-        mainText={downloadNow.mainText}
-        subText={downloadNow.subText}
-        image={downloadNow.image}
-      />
-    </div>
+        <DownloadNow
+          mainText={downloadNow.mainText}
+          subText={downloadNow.subText}
+          image={downloadNow.image}
+        />
+      </div>
+    </>
   )
 }
 
