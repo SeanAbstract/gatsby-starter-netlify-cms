@@ -1,6 +1,6 @@
 // @flow
 
-import React, {useEffect} from 'react'
+import React, {useEffect, useState} from 'react'
 import styled from 'styled-components'
 import {Row, Col, Container} from 'reactstrap'
 import PropTypes from 'prop-types'
@@ -18,6 +18,8 @@ import TestimonyCarousel from '../../components/TestimonyCarousel'
 import DownloadNow from '../../components/DownloadNow'
 import BlogRoll from '../../components/BlogRoll'
 import StockSection from '../../components/StocksCarousel/stockSection'
+import phoneFrame from '../../../static/img/snowball-empty-phone.png'
+import phoneGif from '../../../static/img/snowball-app-market-quotes_03.gif'
 
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
@@ -116,10 +118,24 @@ export const IndexPageTemplate = ({
     }
   })
 
+  const [loading, setLoading] = useState(true)
+
+  useEffect(() => {
+    setLoading(false)
+  }, [])
+
+  if (loading) {
+    return (
+      <div style={{height: '100vh'}} className="d-flex justify-content-center align-items-center">
+        <div className="spinner" />
+      </div>
+    )
+  }
+
   return (
     <div className="landing-page" style={{zIndex: 2}}>
       {/* Hero Video */}
-      <Jumbotron className="full-width-image-container d-flex justify-content-center align-items-center flex-column text-right">
+      <Jumbotron className="full-width-image-container d-flex justify-content-center align-items-center flex-column text-right custom-jumbotron">
         <ImageContainer className="image-container">
           <StyledVideo
             id="mainVideo"
@@ -233,10 +249,15 @@ export const IndexPageTemplate = ({
               offset={700}
               classToggle="background-two"
             >
-              <PreviewCompatibleImage
-                imageInfo={featureSection.image}
-                style={{maxWidth: '250px'}}
-              />
+              <div>
+                <img src={phoneFrame} alt="" style={{maxWidth: '250px'}} className="img-fluid" />
+                <img
+                  src={phoneGif}
+                  alt=""
+                  className="img-fluid gif-phone"
+                  style={{maxWidth: '235px'}}
+                />
+              </div>
             </Scene>
           </Controller>
         </div>
