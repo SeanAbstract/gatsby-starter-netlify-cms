@@ -10,7 +10,7 @@ import wechatIcon from '../../../static/img/wechat_blue.png'
 
 function Footer() {
   return (
-    <StyledFooter id="footer">
+    <StyledFooter id="footer" className="pt-5">
       <StyledContainer className="justify-content-between d-flex flex-column py-5">
         <Row className="w-100 justify-content-between my-3">
           <Col md={6}>
