@@ -112,32 +112,13 @@ export const IndexPageTemplate = ({
     }
   })
 
-  const [loading, setLoading] = useState(true)
-
   useEffect(() => {
-    setLoading(false)
+    const currentVideo = document.getElementById('mainVideo')
+    currentVideo.play()
   }, [])
-
-  useEffect(() => {
-    if (loading) {
-      const currentVideo = document.getElementById('mainVideo')
-
-      if (currentVideo) {
-        currentVideo.play()
-      }
-    }
-  }, [loading])
 
   return (
     <>
-      {!loading && (
-        <div
-          style={{height: '100vh', position: 'absolute', zIndex: '100'}}
-          className="d-flex justify-content-center align-items-center"
-        >
-          <div className="spinner" />
-        </div>
-      )}
       <div className="landing-page" style={{zIndex: 2}}>
         {/* Hero Video */}
         <Jumbotron className="full-width-image-container d-flex justify-content-center align-items-center flex-column text-right custom-jumbotron">
@@ -340,33 +321,51 @@ export const IndexPageTemplate = ({
   )
 }
 
-const IndexPage = ({data}) => {
-  const {frontmatter} = data.markdownRemark
-
-  console.log(frontmatter)
-
-  return (
-    <Layout>
-      <IndexPageTemplate
-        image={frontmatter.image}
-        firstSection={frontmatter.firstSection}
-        stockSection={frontmatter.stockSection}
-        featureSection={frontmatter.featureSection}
-        blurb={frontmatter.blurb}
-        realTimeStockSection={frontmatter.realTimeStockSection}
-        testimonials={frontmatter.testimonials}
-        downloadNow={frontmatter.downloadNow}
-      />
-    </Layout>
-  )
-}
-
-IndexPage.propTypes = {
-  data: PropTypes.shape({
-    markdownRemark: PropTypes.shape({
-      frontmatter: PropTypes.object,
+class IndexPage extends React.Component {
+  static propTypes = {
+    data: PropTypes.shape({
+      markdownRemark: PropTypes.shape({
+        frontmatter: PropTypes.object,
+      }),
     }),
-  }),
+  }
+
+  state = {
+    loading: true,
+  }
+
+  componentDidMount() {
+    setTimeout(() => {
+      this.setState({loading: false})
+    }, 1000)
+  }
+
+  render() {
+    if (this.state.loading) {
+      return (
+        <div style={{height: '100vh'}} className="d-flex justify-content-center align-items-center">
+          <div className="spinner" />
+        </div>
+      )
+    }
+
+    const {frontmatter} = this.props.data.markdownRemark
+
+    return (
+      <Layout>
+        <IndexPageTemplate
+          image={frontmatter.image}
+          firstSection={frontmatter.firstSection}
+          stockSection={frontmatter.stockSection}
+          featureSection={frontmatter.featureSection}
+          blurb={frontmatter.blurb}
+          realTimeStockSection={frontmatter.realTimeStockSection}
+          testimonials={frontmatter.testimonials}
+          downloadNow={frontmatter.downloadNow}
+        />
+      </Layout>
+    )
+  }
 }
 
 export default IndexPage
