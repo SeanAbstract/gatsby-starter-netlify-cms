@@ -120,9 +120,9 @@
 
         .blog-inner-container {
             height: 100%;
-            width: calc(100% - 3rem);
+            width: calc(100% - 2rem);
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
             flex-direction: column;
             padding: 1.5rem 0;
           

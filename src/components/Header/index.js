@@ -26,7 +26,13 @@ export default class Header extends React.Component {
 
     if (typeof window !== 'undefined') {
       // it's safe to use window now
-      this.setState({currentPath: window.location.pathname.split('/')[1]})
+      let path = window.location.pathname.split('/')[1]
+
+      if (path !== 'en' || path !== 'zh') {
+        path = 'en'
+      }
+
+      this.setState({currentPath: path})
     }
   }
 
