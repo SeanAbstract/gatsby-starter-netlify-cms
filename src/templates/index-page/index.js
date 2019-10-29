@@ -121,7 +121,15 @@ export const IndexPageTemplate = ({
       {/* Hero Video */}
       <Jumbotron className="full-width-image-container d-flex justify-content-center align-items-center flex-column text-right">
         <ImageContainer>
-          <StyledVideo id="mainVideo" loop width="100%" muted preload src={videoSrcURL} autoplay>
+          <StyledVideo
+            id="mainVideo"
+            loop
+            width="100%"
+            muted
+            preload="auto"
+            src={videoSrcURL}
+            autoplay
+          >
             <track kind="captions" />
           </StyledVideo>
           <Overlay />
