@@ -19,6 +19,9 @@ import DownloadNow from '../../components/DownloadNow'
 import BlogRoll from '../../components/BlogRoll'
 import StockSection from '../../components/StocksCarousel/stockSection'
 
+import 'slick-carousel/slick/slick.css'
+import 'slick-carousel/slick/slick-theme.css'
+
 type Props = {
   image: any,
   firstSection: {
@@ -194,18 +197,36 @@ export const IndexPageTemplate = ({
       {/* Make Informed Decisions or 4th */}
       <div className="row feature-section justify-content-around align-items-center">
         <div className="col-md-3 ml-auto d-none d-md-block">
-          <PreviewCompatibleImage imageInfo={featureSection.image} style={{maxWidth: '250px'}} />
+          <Controller>
+            <div id="section-trigger-2" />
+            <Scene
+              triggerElement="#section-trigger-2"
+              duration={1600}
+              triggerHook={0}
+              offset={700}
+              classToggle="background-two"
+            >
+              <PreviewCompatibleImage
+                imageInfo={featureSection.image}
+                style={{maxWidth: '250px'}}
+              />
+            </Scene>
+          </Controller>
         </div>
         {/* <div className="col-md-1" /> */}
         <div className="col-md-3 mr-auto ml-3">
-          <Fade bottom>
-            <h1 className="text-primary display-2 mb-3">{featureSection.mainText}</h1>
-            <h5 className="mb-2">{featureSection.subText}</h5>
-            <p>{featureSection.description}</p>
-            <button className="btn btn-outline-primary rounded-pill" type="button">
-              {featureSection.buttonText}
-            </button>
-          </Fade>
+          <Controller>
+            <Scene duration={400} pin triggerHook={0}>
+              <Fade bottom>
+                <h1 className="text-primary display-2 mb-3">{featureSection.mainText}</h1>
+                <h5 className="mb-2">{featureSection.subText}</h5>
+                <p>{featureSection.description}</p>
+                <button className="btn btn-outline-primary rounded-pill" type="button">
+                  {featureSection.buttonText}
+                </button>
+              </Fade>
+            </Scene>
+          </Controller>
         </div>
       </div>
       {/* Get ahead or 5th */}
@@ -218,7 +239,13 @@ export const IndexPageTemplate = ({
       {/* Blog Roll or 6th */}
       <div className="blog-roll-container py-3">
         <Fade bottom cascade>
-          <BlogRoll />
+          <div className="row">
+            <div className="col-sm-8 mx-auto">
+              <div className="container">
+                <BlogRoll />
+              </div>
+            </div>
+          </div>
         </Fade>
       </div>
       {/* Second Feature Section or 7th */}

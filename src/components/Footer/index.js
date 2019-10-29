@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import {Container, Row, Col} from 'reactstrap'
+import {Container, Row, Col, UncontrolledTooltip} from 'reactstrap'
 
 import logo from '../../../static/img/snowball-logo-x.png'
 import facebookIcon from '../../../static/img/facebook_blue.png'
@@ -42,7 +42,56 @@ function Footer() {
           <Col md={4} sm={12} className="ml-auto">
             <Row className="w-100">
               <Col>
+                <UncontrolledTooltip
+                  placement="top"
+                  target="fbIcon"
+                  style={{backgroundColor: 'rgba(255,255,255, 0.5)'}}
+                >
+                  <img
+                    src="https://qreateandtrack.com/files/2009/12/coupon.png"
+                    alt="qr"
+                    style={{height: '100px', width: '100px'}}
+                    className="m-2"
+                  />
+                </UncontrolledTooltip>
+                <UncontrolledTooltip
+                  placement="top"
+                  target="linkedInIcon"
+                  style={{backgroundColor: 'rgba(255,255,255, 0.5)'}}
+                >
+                  <img
+                    src="https://qreateandtrack.com/files/2009/12/coupon.png"
+                    alt="qr"
+                    style={{height: '100px', width: '100px'}}
+                    className="m-2"
+                  />
+                </UncontrolledTooltip>
+                <UncontrolledTooltip
+                  placement="top"
+                  target="twitterIcon"
+                  style={{backgroundColor: 'rgba(255,255,255, 0.5)'}}
+                >
+                  <img
+                    src="https://qreateandtrack.com/files/2009/12/coupon.png"
+                    alt="qr"
+                    style={{height: '100px', width: '100px'}}
+                    className="m-2"
+                  />
+                </UncontrolledTooltip>
+                <UncontrolledTooltip
+                  placement="top"
+                  target="weChatIcon"
+                  style={{backgroundColor: 'rgba(255,255,255, 0.5)'}}
+                >
+                  <img
+                    src="https://qreateandtrack.com/files/2009/12/coupon.png"
+                    alt="qr"
+                    style={{height: '100px', width: '100px'}}
+                    className="m-2"
+                  />
+                </UncontrolledTooltip>
                 <img
+                  id="fbIcon"
                   src={facebookIcon}
                   alt=""
                   style={{maxHeight: '30px', maxWidth: '30px'}}
@@ -53,14 +102,21 @@ function Footer() {
                   alt=""
                   style={{maxHeight: '30px', maxWidth: '30px'}}
                   className="mr-4"
+                  id="linkedInIcon"
                 />
                 <img
                   src={twitterIcon}
                   alt=""
                   style={{maxHeight: '30px', maxWidth: '30px'}}
                   className="mr-4"
+                  id="twitterIcon"
                 />
-                <img src={wechatIcon} alt="" style={{maxHeight: '30px', maxWidth: '30px'}} />
+                <img
+                  src={wechatIcon}
+                  alt=""
+                  style={{maxHeight: '30px', maxWidth: '30px'}}
+                  id="weChatIcon"
+                />
               </Col>
             </Row>
             <Row className="justify-content-end mt-3 w-100">
