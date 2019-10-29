@@ -58,25 +58,15 @@ realTimeStockSection:
       rate: "0.95"
       percent: "0.05%"
       abbreviation: "FB"
+      bgColor: 'rgba(59,89,152, 1)'
+
     - stock: "Linkedin"
       image: /img/linkedin_blue.png
       value: "107.39"
       rate: "0.35"
       percent: "0.15%"
       abbreviation: "LI"
-    - stock: "Facebook"
-      image: /img/facebook_blue.png
-      value: "187.39"
-      rate: "0.95"
-      percent: "0.05%"
-      abbreviation: "FB"
-      
-    - stock: "Linkedin"
-      image: /img/linkedin_blue.png
-      value: "107.39"
-      rate: "0.35"
-      percent: "0.15%"
-      abbreviation: "LI"
+      bgColor: 'rgba(40,103,178, 1)'
       
     - stock: "Facebook"
       image: /img/facebook_blue.png
@@ -84,13 +74,31 @@ realTimeStockSection:
       rate: "0.95"
       percent: "0.05%"
       abbreviation: "FB"
-      
+      bgColor: 'rgba(59,89,152, 1)'
+
     - stock: "Linkedin"
       image: /img/linkedin_blue.png
       value: "107.39"
       rate: "0.35"
       percent: "0.15%"
       abbreviation: "LI"
+      bgColor: 'rgba(40,103,178, 1)'
+
+    - stock: "Amazon"
+      image: /img/facebook_blue.png
+      value: "187.39"
+      rate: "0.95"
+      percent: "0.05%"
+      abbreviation: "FB"
+      bgColor: 'rgba(35, 47, 62, 1)'
+
+    - stock: "Linkedin"
+      image: /img/linkedin_blue.png
+      value: "107.39"
+      rate: "0.35"
+      percent: "0.15%"
+      abbreviation: "LI"
+      bgColor: 'rgba(40,103,178, 1)'
 
 blogRoll:
   - title: Low commission/margin rate

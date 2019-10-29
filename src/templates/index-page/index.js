@@ -8,7 +8,7 @@ import {graphql} from 'gatsby'
 import Fade from 'react-reveal/Fade'
 import {Controller, Scene} from 'react-scrollmagic'
 
-import videoSrcURL from '../../img/beach.mp4'
+import videoSrcURL from '../../img/beach2.mp4'
 import './styles.scss'
 import Layout from '../../components/Layout'
 import PreviewCompatibleImage from '../../components/PreviewCompatibleImage'
@@ -117,190 +117,188 @@ export const IndexPageTemplate = ({
   })
 
   return (
-    <>
-      <div className="landing-page" style={{zIndex: 2}}>
-        {/* Hero Video */}
-        <Jumbotron className="full-width-image-container d-flex justify-content-center align-items-center flex-column">
-          <ImageContainer>
-            <StyledVideo id="mainVideo" loop width="100%" muted preload src={videoSrcURL} autoplay>
-              <track kind="captions" />
-            </StyledVideo>
-            <Overlay />
-          </ImageContainer>
-          <h1 className="big-text">Global Markets</h1>
-          <h3 className="big-subtitle">at your fingertips</h3>
-        </Jumbotron>
+    <div className="landing-page" style={{zIndex: 2}}>
+      {/* Hero Video */}
+      <Jumbotron className="full-width-image-container d-flex justify-content-center align-items-center flex-column">
+        <ImageContainer>
+          <StyledVideo id="mainVideo" loop width="100%" muted preload src={videoSrcURL} autoplay>
+            <track kind="captions" />
+          </StyledVideo>
+          <Overlay />
+        </ImageContainer>
+        <h1 className="big-text">Global Markets</h1>
+        <h3 className="big-subtitle">at your fingertips</h3>
+      </Jumbotron>
 
-        {/* Fast Secure Trusted or Second */}
-        <Container fluid className="second-section">
-          <Row className="justify-content-center">
-            <Col md={5} lg={4} className="left-text-col">
-              <Fade bottom>
-                <h1 className="text-primary display-2 mb-3">{firstSection.mainText}</h1>
-                <p>{firstSection.description}</p>
-                <div>
-                  <button className="btn btn-outline-primary rounded-pill " type="button">
-                    {firstSection.buttonText}
-                  </button>
-                </div>
-              </Fade>
-            </Col>
-            <div className="col-md-3 d-none d-md-block">
-              <Fade bottom>
-                <img src={introPhone} style={{maxWidth: '300px'}} alt="snowball_intro_phone" />
-              </Fade>
-            </div>
-          </Row>
-        </Container>
-        {/* Stock Section or Third */}
-        <StockRow noGutters className="stock-section">
-          {/* <Col md={6} xs={12} className="mx-auto">
+      {/* Fast Secure Trusted or Second */}
+      <Container fluid className="second-section">
+        <Row className="justify-content-center">
+          <Col md={5} lg={4} className="left-text-col">
+            <Fade bottom>
+              <h1 className="text-primary display-2 mb-3">{firstSection.mainText}</h1>
+              <p>{firstSection.description}</p>
+              <div>
+                <button className="btn btn-outline-primary rounded-pill " type="button">
+                  {firstSection.buttonText}
+                </button>
+              </div>
+            </Fade>
+          </Col>
+          <div className="col-md-3 d-none d-md-block">
+            <Fade bottom>
+              <img src={introPhone} style={{maxWidth: '300px'}} alt="snowball_intro_phone" />
+            </Fade>
+          </div>
+        </Row>
+      </Container>
+      {/* Stock Section or Third */}
+      <StockRow noGutters className="stock-section">
+        {/* <Col md={6} xs={12} className="mx-auto">
           <InvestmentOptions />
         </Col> */}
-          <Col md={6} xs={12} style={{backgroundColor: '#006fbb'}}>
-            <Controller>
-              <div id="section-trigger" />
-              <Scene
-                triggerElement="#section-trigger"
-                duration={1600}
-                triggerHook={0}
-                offset={700}
-                classToggle="background-two"
+        <Col md={6} xs={12} style={{backgroundColor: '#006fbb'}}>
+          <Controller>
+            <div id="section-trigger" />
+            <Scene
+              triggerElement="#section-trigger"
+              duration={1600}
+              triggerHook={0}
+              offset={700}
+              classToggle="background-two"
+            >
+              <div
+                className="d-flex flex-column justify-content-center align-items-center stock-section-background"
+                style={{
+                  height: '100vh',
+                  position: 'sticky',
+                  top: 0,
+                }}
               >
-                <div
-                  className="d-flex flex-column justify-content-center align-items-center stock-section-background"
-                  style={{
-                    height: '100vh',
-                    position: 'sticky',
-                    top: 0,
-                  }}
-                >
-                  <div>
-                    <WordTitle>ACCESS</WordTitle>
-                    <WordTitle>WORLD-CLASS</WordTitle>
-                    <WordTitle>INVESTMENT</WordTitle>
-                    <WordTitle>OPTION</WordTitle>
-                  </div>
-                </div>
-              </Scene>
-            </Controller>
-          </Col>
-          <Col md={6} xs={12} style={{backgroundColor: '#006fbb'}}>
-            <Controller>
-              {stockSection.stocks.map(stock => {
-                const {country, countryCode, commission} = stock
-                return (
-                  <Scene duration={400} pin triggerHook={0}>
-                    <div
-                      className="d-flex flex-column justify-content-center"
-                      style={{height: '100vh'}}
-                    >
-                      <StockSection
-                        currency={countryCode}
-                        stockName={`${country} Stocks`}
-                        commissionAmt={commission[0].price}
-                        commissionDesc={commission[0].text}
-                        interestAmt={commission[1].price}
-                        interestDesc={commission[1].text}
-                      />
-                    </div>
-                  </Scene>
-                )
-              })}
-            </Controller>
-          </Col>
-        </StockRow>
-
-        {/* Make Informed Decisions or 4th */}
-        <div className="row feature-section justify-content-around align-items-center">
-          <div className="col-md-3 ml-auto d-none d-md-block">
-            <Controller>
-              <div id="section-trigger-2" />
-              <Scene
-                triggerElement="#section-trigger-2"
-                duration={1600}
-                triggerHook={0}
-                offset={700}
-                classToggle="background-two"
-              >
-                <PreviewCompatibleImage
-                  imageInfo={featureSection.image}
-                  style={{maxWidth: '250px'}}
-                />
-              </Scene>
-            </Controller>
-          </div>
-          {/* <div className="col-md-1" /> */}
-          <div className="col-md-3 mr-auto ml-3">
-            <Controller>
-              <Scene duration={400} pin triggerHook={0}>
-                <Fade bottom>
-                  <h1 className="text-primary display-2 mb-3">{featureSection.mainText}</h1>
-                  <h5 className="mb-2">{featureSection.subText}</h5>
-                  <p>{featureSection.description}</p>
-                  <button className="btn btn-outline-primary rounded-pill" type="button">
-                    {featureSection.buttonText}
-                  </button>
-                </Fade>
-              </Scene>
-            </Controller>
-          </div>
-        </div>
-        {/* Get ahead or 5th */}
-        <div className="d-flex flex-column get-ahead-section justify-content-center align-items-center bg-primary">
-          <h1 className="display-3" style={{lineHeight: '0.5'}}>
-            {blurb.mainText}
-          </h1>
-          <h3 className="big-subtitle">{blurb.subText}</h3>
-        </div>
-        {/* Blog Roll or 6th */}
-        <div className="blog-roll-container py-3">
-          <Fade bottom cascade>
-            <div className="row">
-              <div className="col-sm-8 mx-auto">
-                <div className="container">
-                  <BlogRoll />
+                <div>
+                  <WordTitle>ACCESS</WordTitle>
+                  <WordTitle>WORLD-CLASS</WordTitle>
+                  <WordTitle>INVESTMENT</WordTitle>
+                  <WordTitle>OPTION</WordTitle>
                 </div>
               </div>
-            </div>
-          </Fade>
+            </Scene>
+          </Controller>
+        </Col>
+        <Col md={6} xs={12} style={{backgroundColor: '#006fbb'}}>
+          <Controller>
+            {stockSection.stocks.map(stock => {
+              const {country, countryCode, commission} = stock
+              return (
+                <Scene duration={400} pin triggerHook={0}>
+                  <div
+                    className="d-flex flex-column justify-content-center"
+                    style={{height: '100vh'}}
+                  >
+                    <StockSection
+                      currency={countryCode}
+                      stockName={`${country} Stocks`}
+                      commissionAmt={commission[0].price}
+                      commissionDesc={commission[0].text}
+                      interestAmt={commission[1].price}
+                      interestDesc={commission[1].text}
+                    />
+                  </div>
+                </Scene>
+              )
+            })}
+          </Controller>
+        </Col>
+      </StockRow>
+
+      {/* Make Informed Decisions or 4th */}
+      <div className="row feature-section justify-content-around align-items-center">
+        <div className="col-md-3 ml-auto d-none d-md-block">
+          <Controller>
+            <div id="section-trigger-2" />
+            <Scene
+              triggerElement="#section-trigger-2"
+              duration={1600}
+              triggerHook={0}
+              offset={700}
+              classToggle="background-two"
+            >
+              <PreviewCompatibleImage
+                imageInfo={featureSection.image}
+                style={{maxWidth: '250px'}}
+              />
+            </Scene>
+          </Controller>
         </div>
-        {/* Second Feature Section or 7th */}
-        <section className="row another-feature-section bg-grey">
-          <div className="container">
-            <div className="row justify-content-around align-items-center h-100">
-              <Col md={5} lg={4} className="ml-auto">
-                <Fade bottom>
-                  <h1 className="text-primary display-2 mb-3">{realTimeStockSection.mainText}</h1>
-                  <p>{realTimeStockSection.description}</p>
-                  <button className="btn btn-outline-primary rounded-pill" type="button">
-                    {realTimeStockSection.buttonText}
-                  </button>
-                </Fade>
-              </Col>
-              <Col md={6} lg={6} className="mr-auto">
-                <Fade bottom cascade>
-                  <Row noGutters>
-                    <LiveStockCarousel stocks={realTimeStockSection.stockList} />
-                  </Row>
-                </Fade>
-              </Col>
+        {/* <div className="col-md-1" /> */}
+        <div className="col-md-3 mr-auto ml-3">
+          <Controller>
+            <Scene duration={400} pin triggerHook={0}>
+              <Fade bottom>
+                <h1 className="text-primary display-2 mb-3">{featureSection.mainText}</h1>
+                <h5 className="mb-2">{featureSection.subText}</h5>
+                <p>{featureSection.description}</p>
+                <button className="btn btn-outline-primary rounded-pill" type="button">
+                  {featureSection.buttonText}
+                </button>
+              </Fade>
+            </Scene>
+          </Controller>
+        </div>
+      </div>
+      {/* Get ahead or 5th */}
+      <div className="d-flex flex-column get-ahead-section justify-content-center align-items-center bg-primary">
+        <h1 className="display-3" style={{lineHeight: '0.5'}}>
+          {blurb.mainText}
+        </h1>
+        <h3 className="big-subtitle">{blurb.subText}</h3>
+      </div>
+      {/* Blog Roll or 6th */}
+      <div className="blog-roll-container py-3">
+        <Fade bottom cascade>
+          <div className="row">
+            <div className="col-sm-8 mx-auto">
+              <div className="container">
+                <BlogRoll />
+              </div>
             </div>
           </div>
-        </section>
-        {/* Carousel */}
-        <div className="carousel slide carousel-container" data-ride="carousel">
-          <TestimonyCarousel testimonials={testimonials} />
-        </div>
-        {/* Download NOw */}
-
-        <DownloadNow
-          mainText={downloadNow.mainText}
-          subText={downloadNow.subText}
-          image={downloadNow.image}
-        />
+        </Fade>
       </div>
-    </>
+      {/* Second Feature Section or 7th */}
+      <section className="row another-feature-section bg-grey">
+        <div className="container">
+          <div className="row justify-content-around align-items-center h-100">
+            <Col md={5} lg={4} className="ml-auto">
+              <Fade bottom>
+                <h1 className="text-primary display-2 mb-3">{realTimeStockSection.mainText}</h1>
+                <p>{realTimeStockSection.description}</p>
+                <button className="btn btn-outline-primary rounded-pill" type="button">
+                  {realTimeStockSection.buttonText}
+                </button>
+              </Fade>
+            </Col>
+            <Col md={6} lg={6} className="mr-auto">
+              <Fade bottom cascade>
+                <Row noGutters>
+                  <LiveStockCarousel stocks={realTimeStockSection.stockList} />
+                </Row>
+              </Fade>
+            </Col>
+          </div>
+        </div>
+      </section>
+      {/* Carousel */}
+      <div className="carousel slide carousel-container" data-ride="carousel">
+        <TestimonyCarousel testimonials={testimonials} />
+      </div>
+      {/* Download NOw */}
+
+      <DownloadNow
+        mainText={downloadNow.mainText}
+        subText={downloadNow.subText}
+        image={downloadNow.image}
+      />
+    </div>
   )
 }
 
@@ -413,6 +411,7 @@ export const pageQuery = graphql`
             rate
             percent
             abbreviation
+            bgColor
           }
         }
         testimonials {

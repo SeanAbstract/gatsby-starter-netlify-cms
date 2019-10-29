@@ -1,44 +1,56 @@
 ---
 templateKey: index-page
 image: /img/landing-page-2.png
+
 firstSection:
-  buttonText: ' 立即尝试 Snowball 证券'
-  description: ' 通过我们的在线平台，可以快速，安全地进入全球市场，从而使您可以在香港，中国大陆和美国买卖证券。立即尝试 Snowball 证券- Snowball 集团值得信赖的成员'
+  mainText: "Fast Secure Trusted"
+  description: >
+    Fast and secure access to global markets with our online platform that allows you to buy
+    and sell securities in Hong Kong, China and the US. Try Snowball Securities today - a
+    trusted member of the Snowball Group
+  buttonText: Try Snowball Securities today
   image: /img/snowball-phone.png
-  mainText: 快速  安全 信任
+
 stockSection:
+  title: "Access World-Class Investment Options"
   backgroundImage: /img/investment.png
   stocks:
-    - commission:
-        - price: $0.0002
-          text: per share
-        - price: $0.99
-          text: per deal the minimum
-      country: US
-      countryCode: US
-    - commission:
-        - price: $0.00
-          text: 'No commission on orders below HKD 60,000'
-        - price: 0.03%
-          text: 'per share on orders above HKD 60,000'
-      country: Hong Kong
-      countryCode: HK
-  title: ' 获得世界一流的投资选择'
+    - country: "US"
+      countryCode: "US"
+      commission:
+        - price: "$0.0002"
+          text: "per share"
+        - price: "$0.99"
+          text: "per deal the minimum"
+    - country: "Hong Kong"
+      countryCode: "HK"
+      commission:
+        - price: "$0.00"
+          text: "No commission on orders below HKD 60,000"
+        - price: "0.03%"
+          text: "per share on orders above HKD 60,000"
+
 featureSection:
-  buttonText: ' 这个怎么运作'
-  description: >-
-    了方人數故色院今雜大如展去每這員不山傳商遠門親會眼王的本於組、市老後起考的一死羅上些了重紀灣得意信事立有所小出的景全。很像男也府然過水名刻提科病覺趣劇情保.
+  mainText: "Make informed decisions"
+  subText: "Invest globally in one account"
+  description: >
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. Excepteur sintticus occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  buttonText: How it works
   image: /img/snowball-empty-phone.png
-  mainText: ' 做出明智的决定'
-  subText: ' 在一个帐户中进行全球投资'
+  gifs:
+    - gif: /img/snowball-app-market-quotes_03.png
+    - gif: /img/snowball-app-stock-financial_03.png
+
+
 blurb:
-  mainText: ' 领先'
-  subText: ' 根据您的条件'
+  mainText: "Get ahead"
+  subText: "on your terms"
+
 realTimeStockSection:
-  buttonText: 开始交易
-  description: >-
-    了方人數故色院今雜大如展去每這員不山傳商遠門親會眼王的本於組、市老後起考的一死羅上些了重紀灣得意信事立有所小出的景全。很像男也府然過水名刻提科病覺趣劇情保.
-  mainText: 交易全球股票
+  mainText: "Trade Global Stocks"
+  description: >
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. Excepteur sintticus occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  buttonText: Start Trading
   stockList:
     - stock: "Facebook"
       image: /img/facebook_blue.png
@@ -46,54 +58,71 @@ realTimeStockSection:
       rate: "0.95"
       percent: "0.05%"
       abbreviation: "FB"
+      bgColor: 'rgba(59,89,152, 1)'
 
+    - stock: "Linkedin"
+      image: /img/linkedin_blue.png
+      value: "107.39"
+      rate: "0.35"
+      percent: "0.15%"
+      abbreviation: "LI"
+      bgColor: 'rgba(40,103,178, 1)'
+      
     - stock: "Facebook"
       image: /img/facebook_blue.png
       value: "187.39"
       rate: "0.95"
       percent: "0.05%"
       abbreviation: "FB"
+      bgColor: 'rgba(59,89,152, 1)'
 
-    - stock: "Facebook"
-      image: /img/facebook_blue.png
+    - stock: "Linkedin"
+      image: /img/linkedin_blue.png
+      value: "107.39"
+      rate: "0.35"
+      percent: "0.15%"
+      abbreviation: "LI"
+      bgColor: 'rgba(40,103,178, 1)'
+
+    - stock: "Amazon"
+      image: /img/amazon_logo.svg
       value: "187.39"
       rate: "0.95"
       percent: "0.05%"
       abbreviation: "FB"
+      bgColor: 'rgba(35, 47, 62, 1)'
 
-    - stock: "Facebook"
-      image: /img/facebook_blue.png
-      value: "187.39"
-      rate: "0.95"
-      percent: "0.05%"
-      abbreviation: "FB"
+    - stock: "Linkedin"
+      image: /img/linkedin_blue.png
+      value: "107.39"
+      rate: "0.35"
+      percent: "0.15%"
+      abbreviation: "LI"
+      bgColor: 'rgba(40,103,178, 1)'
 
-    - stock: "Facebook"
-      image: /img/facebook_blue.png
-      value: "187.39"
-      rate: "0.95"
-      percent: "0.05%"
-      abbreviation: "FB"
-
-    - stock: "Facebook"
-      image: /img/facebook_blue.png
-      value: "187.39"
-      rate: "0.95"
-      percent: "0.05%"
-      abbreviation: "FB"
+blogRoll:
+  - title: Low commission/margin rate
+    description: minimum comm./trade 0 for HK, US$0.99 for US
+    url: 'http://'
+  - title: Low commission/margin rate
+    description: minimum comm./trade 0 for HK, US$0.99 for US
+    url: 'http://'
+  - title: Low commission/margin rate
+    description: minimum comm./trade 0 for HK, US$0.99 for US
+    url: 'http://'
 
 testimonials:
-  - backgroundImage: /img/smile-face-7.jpg
-    customerName: 許成漢
-    customerPosition: ' 投资者'
+  - customerName: David Holmes
+    customerPosition: investor
+    backgroundImage: /img/smile-face-7.jpg
     videoUrl: 'http://'
-  - backgroundImage: /img/smile-face-8.jpg
-    customerName: 許成漢
-    customerPosition: ' 投资者'
+  - customerName: Sarah Hughes
+    customerPosition: investor
+    backgroundImage: /img/smile-face-8.jpg
     videoUrl: 'http://'
-downloadNow:
-  image: /img/snowball-phone.png
-  mainText: 今日访问全球市场
-  subText: 现在就下载
----
 
+downloadNow:
+  mainText: "Access Global Markets Today"
+  subText: "Download now"
+  image: /img/snowball-phone.png
+---

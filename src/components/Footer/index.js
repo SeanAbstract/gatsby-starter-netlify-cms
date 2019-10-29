@@ -41,7 +41,7 @@ function Footer() {
         <Row className="my-3">
           <Col md={4} sm={12} className="ml-auto">
             <Row className="w-100">
-              <Col>
+              <Col className="text-right">
                 <UncontrolledTooltip
                   placement="top"
                   target="fbIcon"
@@ -120,7 +120,7 @@ function Footer() {
               </Col>
             </Row>
             <Row className="justify-content-end mt-3 w-100">
-              <Col md={12} className="ml-auto">
+              <Col md={12} className="ml-auto text-right">
                 <small className="mr-3" style={{fontSize: '10px'}}>
                   Privacy Policy
                 </small>
@@ -173,14 +173,18 @@ const StyledFooter = styled.footer`
 
 const StyledContainer = styled(Container)`
   line-height: 1.1;
+  padding: 0 1rem !important;
+  /* max-width: 90% !important; */
 `
 
 const StyledSmall = styled.small`
   line-height: 1.1;
+  color: #aaa;
 `
 
 const Trademark = styled.small`
   font-size: 8px;
+  color: #aaa;
 `
 
 export default Footer

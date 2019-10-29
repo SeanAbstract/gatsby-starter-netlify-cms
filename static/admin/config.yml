@@ -78,6 +78,7 @@ collections:
                 {label: 'Rate', name: 'rate', widget: string},
                 {label: 'Percent', name: 'percent', widget: string},
                 {label: 'Abbreviation', name: 'abbreviation', widget: string},
+                {label: 'Bg Color', name: 'bgColor', widget: string},
               ]},
             ]}
           - {label: "Testimonials", name: "testimonials", widget: list, fields: [

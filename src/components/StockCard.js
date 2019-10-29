@@ -31,10 +31,13 @@ const StockCard = (props: Props) => (
     <Row noGutters>
       <Col md={12} xs={5}>
         <ImgContainer
-          style={{borderBottom: '2px solid #F5F5F5', overflow: 'hidden'}}
+          style={{
+            borderBottom: '2px solid #F5F5F5',
+            overflow: 'hidden',
+          }}
           className="d-flex justify-content-center align-items-center img-container"
         >
-          <Carousel defaultWait={3000} maxTurns={100}>
+          <Carousel defaultWait={3000} maxTurns={100} className="h-100">
             {props.stocks.map(stock => (
               <Slide left>
                 <div className="d-flex m-auto">
@@ -98,9 +101,9 @@ const StyledCard = styled.div`
 
 const ImgContainer = styled.div`
   height: 100%;
-  display: flex;
+  /* display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
 
   @media (min-width: 768px) {
     height: 225px;
