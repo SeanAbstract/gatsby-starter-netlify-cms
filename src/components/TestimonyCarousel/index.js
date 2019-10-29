@@ -114,7 +114,7 @@ const TestimonyCarousel = ({testimonials}: Props) => {
       {/* Modal Video */}
       <Modal isOpen={modal} size="lg" toggle={toggle}>
         <ModalBody className="h-100">
-          <video controls>
+          <video controls autoPlay>
             <source src={video} type="video/mp4" />
           </video>
         </ModalBody>

@@ -57,74 +57,78 @@ export default class Header extends React.Component {
     return (
       <>
         <StyledNavbar isOpen={isOpen} scrolled={scrolled} light expand="md" className="fixed-top">
-          <NavbarBrand>
-            <Link to={`${this.state.currentPath}`}>
-              <Logo isOpen={isOpen} scrolled={scrolled} src={logo} alt="company logo" />
-            </Link>
-          </NavbarBrand>
-          <StyledNavbarToggler isOpen={this.state.isOpen} onClick={this.toggle} />
-          <StyledCollapse isOpen={this.state.isOpen} navbar>
-            <Nav className="ml-auto" navbar>
-              <Link to={`${this.state.currentPath}/about`} className="nav-link">
-                About
+          <div className="container">
+            <NavbarBrand>
+              <Link to={`${this.state.currentPath}`}>
+                <Logo isOpen={isOpen} scrolled={scrolled} src={logo} alt="company logo" />
               </Link>
+            </NavbarBrand>
+            <StyledNavbarToggler isOpen={this.state.isOpen} onClick={this.toggle} />
+            <StyledCollapse isOpen={this.state.isOpen} navbar>
+              <Nav className="ml-auto" navbar>
+                <Link to={`${this.state.currentPath}/about`} className="nav-link">
+                  About
+                </Link>
 
-              <Link to={`${this.state.currentPath}/how-it-works`} className="nav-link">
-                How It Works
-              </Link>
+                <Link to={`${this.state.currentPath}/how-it-works`} className="nav-link">
+                  How It Works
+                </Link>
 
-              <Link to={`${this.state.currentPath}/price`} className="nav-link">
-                Prices
-              </Link>
+                <Link to={`${this.state.currentPath}/price`} className="nav-link">
+                  Prices
+                </Link>
 
-              <Link to={`${this.state.currentPath}/`} className="nav-link">
-                Download
-              </Link>
+                <Link to={`${this.state.currentPath}/`} className="nav-link">
+                  Download
+                </Link>
 
-              <Link to={`${this.state.currentPath}/faq`} className="nav-link">
-                FAQs
-              </Link>
+                <Link to={`${this.state.currentPath}/faq`} className="nav-link">
+                  FAQs
+                </Link>
 
-              <Link to={`${this.state.currentPath}/contact`} className="nav-link">
-                Contact
-              </Link>
-            </Nav>
-          </StyledCollapse>
+                <Link to={`${this.state.currentPath}/contact`} className="nav-link">
+                  Contact
+                </Link>
+              </Nav>
+            </StyledCollapse>
+          </div>
         </StyledNavbar>
         <ScrolledNavbar isOpen={isOpen} scrolled={scrolled} light expand="md" className="fixed-top">
-          <NavbarBrand>
-            <Link to={`${this.state.currentPath}`}>
-              <LogoIcon isOpen={isOpen} scrolled={scrolled} src={logoIcon} alt="company logo" />
-            </Link>
-          </NavbarBrand>
-          <StyledNavbarToggler isOpen={this.state.isOpen} onClick={this.toggle} />
-          <StyledCollapse isOpen={this.state.isOpen} navbar>
-            <Nav className="ml-auto" navbar>
-              <Link to={`${this.state.currentPath}/about`} className="nav-link">
-                About
+          <div className="container">
+            <NavbarBrand>
+              <Link to={`${this.state.currentPath}`}>
+                <LogoIcon isOpen={isOpen} scrolled={scrolled} src={logoIcon} alt="company logo" />
               </Link>
+            </NavbarBrand>
+            <StyledNavbarToggler isOpen={this.state.isOpen} onClick={this.toggle} />
+            <StyledCollapse isOpen={this.state.isOpen} navbar>
+              <Nav className="ml-auto" navbar>
+                <Link to={`${this.state.currentPath}/about`} className="nav-link">
+                  About
+                </Link>
 
-              <Link to={`${this.state.currentPath}/how-it-works`} className="nav-link">
-                How It Works
-              </Link>
+                <Link to={`${this.state.currentPath}/how-it-works`} className="nav-link">
+                  How It Works
+                </Link>
 
-              <Link to={`${this.state.currentPath}/price`} className="nav-link">
-                Prices
-              </Link>
+                <Link to={`${this.state.currentPath}/price`} className="nav-link">
+                  Prices
+                </Link>
 
-              <Link to={`${this.state.currentPath}/`} className="nav-link">
-                Download
-              </Link>
+                <Link to={`${this.state.currentPath}/`} className="nav-link">
+                  Download
+                </Link>
 
-              <Link to={`${this.state.currentPath}/faqs`} className="nav-link">
-                FAQs
-              </Link>
+                <Link to={`${this.state.currentPath}/faqs`} className="nav-link">
+                  FAQs
+                </Link>
 
-              <Link to={`${this.state.currentPath}/contact`} className="nav-link">
-                Contact
-              </Link>
-            </Nav>
-          </StyledCollapse>
+                <Link to={`${this.state.currentPath}/contact`} className="nav-link">
+                  Contact
+                </Link>
+              </Nav>
+            </StyledCollapse>
+          </div>
         </ScrolledNavbar>
       </>
     )

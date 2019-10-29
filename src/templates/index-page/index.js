@@ -119,15 +119,17 @@ export const IndexPageTemplate = ({
   return (
     <div className="landing-page" style={{zIndex: 2}}>
       {/* Hero Video */}
-      <Jumbotron className="full-width-image-container d-flex justify-content-center align-items-center flex-column">
+      <Jumbotron className="full-width-image-container d-flex justify-content-center align-items-center flex-column text-right">
         <ImageContainer>
           <StyledVideo id="mainVideo" loop width="100%" muted preload src={videoSrcURL} autoplay>
             <track kind="captions" />
           </StyledVideo>
           <Overlay />
         </ImageContainer>
-        <h1 className="big-text">Global Markets</h1>
-        <h3 className="big-subtitle">at your fingertips</h3>
+        <div className="text-right">
+          <h1 className="big-text">Global Markets</h1>
+          <h3 className="big-subtitle text-right text-primary">at your fingertips</h3>
+        </div>
       </Jumbotron>
 
       {/* Fast Secure Trusted or Second */}
@@ -510,7 +512,7 @@ const ImageContainer = styled.div`
 const Overlay = styled.div`
   height: 100%;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.15);
+  background-color: rgba(255, 255, 255, 0.15);
   position: absolute;
   top: 0;
   left: 0;
