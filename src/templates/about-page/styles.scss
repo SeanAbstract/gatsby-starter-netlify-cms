@@ -1,5 +1,6 @@
 .about-page {
   background: white;
+
   .timeline-icon {
     width: 2px;
     height: 2rem;
@@ -47,6 +48,19 @@
 
   .trade-section {
     height: 40vh;
+  }
+
+  .img-left, .img-right {
+    background-position: center;
+    background-size: cover;  
+  }
+
+  .img-left {
+    background-image: url("../../img/about-1.jpg");      
+  }
+
+  .img-right {
+    background-image: url("../../img/about-2.jpg");    
   }
 
   .tab-description {

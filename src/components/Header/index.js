@@ -119,7 +119,7 @@ export default class Header extends React.Component {
                   Download
                 </Link>
 
-                <Link to="/faqs" className="nav-link">
+                <Link to="/faq" className="nav-link">
                   FAQs
                 </Link>
 

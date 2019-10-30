@@ -22,4 +22,13 @@
             }
         }
     }
+
+    a {
+      cursor: pointer;
+    }
+
+    a.active {
+      background-color: transparent !important;
+      color: #006fbb !important;
+    }
 }

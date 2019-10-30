@@ -63,7 +63,7 @@ export function FaqPageTemplate(props: FaqPageTemplateProps) {
                   className="w-100 p-0 text-left"
                   style={{backgroundColor: 'transparent', border: 'none'}}
                 >
-                  <h5>{cc.question}</h5>
+                  <h5 className="mb-2">{cc.question}</h5>
                   <UncontrolledCollapse toggler={`#toggler${ndx}`}>
                     <p className="mb-0 text-dark">{cc.question}</p>
                   </UncontrolledCollapse>

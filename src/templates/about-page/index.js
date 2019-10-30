@@ -114,18 +114,14 @@ export const AboutPageTemplate = (props: AboutTemplate) => {
         </section>
 
         <section className="trade-section">
-          <div className="d-flex h-100">
-            <div className="col-md-4">
-              <h5>img</h5>
-            </div>
+          <div className="row no-gutters h-100">
+            <div className="col-md-4 img-left" />
             <div className="col-md-4 d-flex justify-content-center align-items-center bg-primary">
               <h1 className="big-subtitle text-light" style={{fontSize: '64px'}}>
                 Trade Electronically
               </h1>
             </div>
-            <div className="col-md-4">
-              <h5>img</h5>
-            </div>
+            <div className="col-md-4 img-right" />
           </div>
         </section>
 
