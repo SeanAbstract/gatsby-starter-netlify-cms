@@ -17,7 +17,7 @@ import BlogRoll from '../../components/BlogRoll'
 import StockSection from '../../components/StocksCarousel/stockSection'
 import phoneFrame from '../../../static/img/snowball-empty-phone.png'
 import phoneGif from '../../../static/img/snowball-app-stock-financial_03.gif'
-import phoneVideo from '../../img/SPIN-700x1080-main.mp4'
+import phoneVideo from '../../img/SPIN-700x1080-main.MP4'
 import videoSrcURL from '../../img/beach2.mp4'
 import arrowDown from '../../img/arrow-down.png'
 
