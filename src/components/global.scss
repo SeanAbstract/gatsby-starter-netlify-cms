@@ -17,34 +17,40 @@ body {
 @font-face {
     font-family: "Tungsten-Black";
     src: url('../fonts/Tungsten-Black.otf');
+    font-display: swap;
 }
 
 @font-face {
     font-family: "Kokomo-Breeze-Regular";
     src: url('../fonts/Kokomo-Breeze-Regular.otf');
+    font-display: swap;
 }
 
 @font-face {
     font-family: "Theinhardt";
     src: url('../fonts/THEINHARDT-REGULAR.otf');
+    font-display: swap;
 }
 
 @font-face {
     font-family: "Theinhardt";
     src: url('../fonts/THEINHARDT-MEDIUM.otf');
     font-weight: 500;
+    font-display: swap;
 }
 
 @font-face {
     font-family: "Theinhardt";
     src: url('../fonts/THEINHARDT-LIGHT.otf');
     font-weight: 300;
+    font-display: swap;
 }
 
 @font-face {
     font-family: "Theinhardt";
     src: url('../fonts/THEINHARDT-BOLD.otf');
     font-weight: 700;
+    font-display: swap;
 }
 
 
