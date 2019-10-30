@@ -44,7 +44,7 @@ function ContactPageTemplate(props: Props) {
     <div className="contact-page">
       <SharedJumbotron headerImage={props.headerImage} title="Contact" description="Here to help" />
 
-      <section className="customer-service-section">
+      <section className="customer-service-section container-fluid">
         <div className="row h-100">
           <div className="col-md-6 d-flex justify-content-center align-items-center flex-column">
             <div className="row w-75 pl-5">
@@ -89,7 +89,7 @@ function ContactPageTemplate(props: Props) {
       </section>
 
       {/* Social Media */}
-      <section className="social-media-section">
+      <section className="social-media-section container-fluid">
         <div className="row h-100 text-light">
           <div className="col-md-8 col-10 d-flex justify-content-around align-items-center mx-auto">
             <h3>{props.socialMedia.socialMediaTitle}</h3>

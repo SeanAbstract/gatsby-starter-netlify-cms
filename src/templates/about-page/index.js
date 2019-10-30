@@ -49,154 +49,156 @@ export const AboutPageTemplate = (props: AboutTemplate) => {
   }
 
   return (
-    <div className="about-page">
+    <>
       <SharedJumbotron headerImage={props.headerImage} title="About" description="Snowball" />
 
-      <section className="pt-5 pb-5">
-        <div className="row mb-5">
-          <div className="col-md-8 col-sm-10 mx-auto text-center">
-            <h3 className="section-leading-text">{props.mainpitch.title}</h3>
-          </div>
-        </div>
-
-        <div className="row mb-5">
-          <div className="col-md-6 mx-auto">
-            <div>
-              {/* <p>{props.mainpitch.description}</p> */}
-              <p>
-                Our digital platform gives customers access to China A shares and securities listed
-                on the Stock Exchange of Hong Kong (SEHK), the New York Stock Exchange (NYSE),
-                NASDAQ and other markets.
-              </p>
-              {/* <p>{props.mainpitch.secondDescription}</p> */}
-              <p>
-                With one account, our clients are able to trade securities listed in China, the
-                United States, Hong Kong, Japan and other countries and build a portfolio of shares
-                in big international world's best-known companies like Alibaba, PetroChina,
-                Microsoft and Google.
-              </p>
+      <div className="about-page container-fluid">
+        <section className="pt-5 pb-5">
+          <div className="row mb-5">
+            <div className="col-md-8 col-sm-10 mx-auto text-center">
+              <h3 className="section-leading-text">{props.mainpitch.title}</h3>
             </div>
           </div>
-        </div>
 
-        <div className="row">
-          <div className="container">
-            <div className="col-md-9 mx-auto">
-              <div className="row justify-content-around">
-                {props.tabs.map((tab, ndx) => (
-                  <div
-                    className="col-md-3 d-flex justify-content-center align-items-center flex-column mb-5"
-                    key={tab.title}
-                    style={{borderBottom: ndx === currentNdx ? '2px solid #006FBB' : ''}}
-                    onClick={() => {
-                      setTabDescription(tab.description)
-                      setCurrentNdx(ndx)
-                    }}
-                  >
-                    <PreviewCompatibleImage
-                      imageInfo={images[ndx]}
-                      style={{height: '100px', width: '100px'}}
-                      className={`mb-4 ${ndx !== currentNdx ? 'grayscale' : ''}`}
-                    />
-
-                    <h5 className={ndx === currentNdx ? 'text-primary' : ''}>{tab.title}</h5>
-                  </div>
-                ))}
-              </div>
-              <div
-                className="container tab-description"
-                dangerouslySetInnerHTML={{__html: renderDescription()}}
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="trade-section">
-        <div className="row h-100">
-          <div className="col-md-4">
-            <h5>img</h5>
-          </div>
-          <div className="col-md-4 d-flex justify-content-center align-items-center bg-primary">
-            <h1 className="big-subtitle text-light" style={{fontSize: '64px'}}>
-              Trade Electronically
-            </h1>
-          </div>
-          <div className="col-md-4">
-            <h5>img</h5>
-          </div>
-        </div>
-      </section>
-
-      {/* History Section */}
-      <section>
-        <div
-          className="row justify-content-center align-items-center bg-grey"
-          style={{height: '60vh'}}
-        >
-          <div className="container">
-            <div className="col-md-12 d-flex justify-content-center mx-auto flex-column align-items-center">
-              <h1 className="big-text text-primary mb-5">History</h1>
-
-              <div className="d-flex">
-                {props.historyCards.map((historyItem, key, {length}) => (
-                  <>
-                    <HistoryCard date={historyItem.date} description={historyItem.description} />
-                    {key < length - 1 && <div className="timeline-icon" />}
-                  </>
-                ))}
+          <div className="row mb-5">
+            <div className="col-md-6 mx-auto">
+              <div>
+                {/* <p>{props.mainpitch.description}</p> */}
+                <p>
+                  Our digital platform gives customers access to China A shares and securities
+                  listed on the Stock Exchange of Hong Kong (SEHK), the New York Stock Exchange
+                  (NYSE), NASDAQ and other markets.
+                </p>
+                {/* <p>{props.mainpitch.secondDescription}</p> */}
+                <p>
+                  With one account, our clients are able to trade securities listed in China, the
+                  United States, Hong Kong, Japan and other countries and build a portfolio of
+                  shares in big international world's best-known companies like Alibaba, PetroChina,
+                  Microsoft and Google.
+                </p>
               </div>
             </div>
           </div>
-        </div>
-      </section>
 
-      {/* People Section */}
-      <section className="pt-5">
-        <div className="container">
-          <div className="text-center mb-5">
-            <h1 className="big-text text-primary">People</h1>
-          </div>
+          <div className="row">
+            <div className="container">
+              <div className="col-md-9 mx-auto">
+                <div className="row justify-content-around">
+                  {props.tabs.map((tab, ndx) => (
+                    <div
+                      className="col-md-3 d-flex justify-content-center align-items-center flex-column mb-5"
+                      key={tab.title}
+                      style={{borderBottom: ndx === currentNdx ? '2px solid #006FBB' : ''}}
+                      onClick={() => {
+                        setTabDescription(tab.description)
+                        setCurrentNdx(ndx)
+                      }}
+                    >
+                      <PreviewCompatibleImage
+                        imageInfo={images[ndx]}
+                        style={{height: '100px', width: '100px'}}
+                        className={`mb-4 ${ndx !== currentNdx ? 'grayscale' : ''}`}
+                      />
 
-          {/* Investors */}
-          <div className="text-center mb-3">
-            <h3 className="big-subtitle text-secondary">Investors</h3>
-
-            <div className="row mt-5">
-              {props.investors.map((investor, ndx) => (
-                <CompanyCard
-                  key={ndx}
-                  brandLogo={investor.brandLogo}
-                  brandDescription={investor.brandDescription}
+                      <h5 className={ndx === currentNdx ? 'text-primary' : ''}>{tab.title}</h5>
+                    </div>
+                  ))}
+                </div>
+                <div
+                  className="container tab-description"
+                  dangerouslySetInnerHTML={{__html: renderDescription()}}
                 />
-              ))}
+              </div>
             </div>
           </div>
+        </section>
 
-          {/* Partners */}
-          <div className="text-center">
-            <h3 className="big-subtitle text-secondary">Partners</h3>
-
-            <div className="row mt-5">
-              {props.partners.map((investor, ndx) => (
-                <CompanyCard
-                  key={ndx}
-                  brandLogo={investor.brandLogo}
-                  brandDescription={investor.brandDescription}
-                />
-              ))}
+        <section className="trade-section">
+          <div className="d-flex h-100">
+            <div className="col-md-4">
+              <h5>img</h5>
+            </div>
+            <div className="col-md-4 d-flex justify-content-center align-items-center bg-primary">
+              <h1 className="big-subtitle text-light" style={{fontSize: '64px'}}>
+                Trade Electronically
+              </h1>
+            </div>
+            <div className="col-md-4">
+              <h5>img</h5>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Download NOw */}
-      <DownloadNow
-        mainText={props.downloadNow.mainText}
-        subText={props.downloadNow.subText}
-        image={props.downloadNow.image}
-      />
-    </div>
+        {/* History Section */}
+        <section>
+          <div
+            className="row justify-content-center align-items-center bg-grey"
+            style={{height: '60vh'}}
+          >
+            <div className="container">
+              <div className="col-md-12 d-flex justify-content-center mx-auto flex-column align-items-center">
+                <h1 className="big-text text-primary mb-5">History</h1>
+
+                <div className="d-flex">
+                  {props.historyCards.map((historyItem, key, {length}) => (
+                    <>
+                      <HistoryCard date={historyItem.date} description={historyItem.description} />
+                      {key < length - 1 && <div className="timeline-icon" />}
+                    </>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* People Section */}
+        <section className="pt-5">
+          <div className="container">
+            <div className="text-center mb-5">
+              <h1 className="big-text text-primary">People</h1>
+            </div>
+
+            {/* Investors */}
+            <div className="text-center mb-3">
+              <h3 className="big-subtitle text-secondary">Investors</h3>
+
+              <div className="row mt-5">
+                {props.investors.map((investor, ndx) => (
+                  <CompanyCard
+                    key={ndx}
+                    brandLogo={investor.brandLogo}
+                    brandDescription={investor.brandDescription}
+                  />
+                ))}
+              </div>
+            </div>
+
+            {/* Partners */}
+            <div className="text-center">
+              <h3 className="big-subtitle text-secondary">Partners</h3>
+
+              <div className="row mt-5">
+                {props.partners.map((investor, ndx) => (
+                  <CompanyCard
+                    key={ndx}
+                    brandLogo={investor.brandLogo}
+                    brandDescription={investor.brandDescription}
+                  />
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Download NOw */}
+        <DownloadNow
+          mainText={props.downloadNow.mainText}
+          subText={props.downloadNow.subText}
+          image={props.downloadNow.image}
+        />
+      </div>
+    </>
   )
 }
 

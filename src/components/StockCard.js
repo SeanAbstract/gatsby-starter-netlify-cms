@@ -22,7 +22,9 @@ type CarouselProps = {
 }
 
 const CarouselUI = ({children}: CarouselProps) => (
-  <InnerCarousel className="h-25 w-100">{children}</InnerCarousel>
+  <InnerCarousel className="h-25 w-100 d-flex justify-content-center align-items-center">
+    {children}
+  </InnerCarousel>
 )
 const Carousel = makeCarousel(CarouselUI)
 

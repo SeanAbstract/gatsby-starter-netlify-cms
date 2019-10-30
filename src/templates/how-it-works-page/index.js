@@ -24,7 +24,7 @@ export function HowItWorksTemplate(props: HowItWorksTemplateProps) {
     <div className="how-it-works">
       <SharedJumbotron headerImage={props.headerImage} title="How It Works" description="Simply" />
 
-      <section>
+      <section className="container-fluid">
         <div className="row">
           <div className="container py-5">
             <HowItWorksSection
