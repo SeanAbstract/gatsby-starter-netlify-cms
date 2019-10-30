@@ -28,6 +28,12 @@ const Jumbotron = styled.div`
     props.headerImage.childImageSharp
       ? props.headerImage.childImageSharp.fluid.src
       : props.headerImage});
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: length;
 `
 
 export default SharedJumbotron

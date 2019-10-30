@@ -7,10 +7,11 @@ import facebookIcon from '../../../static/img/facebook_blue.png'
 import linkedinIcon from '../../../static/img/linkedin_blue.png'
 import twitterIcon from '../../../static/img/twitter_blue.png'
 import wechatIcon from '../../../static/img/wechat_blue.png'
+import qrCode from '../../img/qr-code.jpg'
 
 function Footer() {
   return (
-    <StyledFooter id="footer" className="pt-5">
+    <StyledFooter id="footer" className="pt-1">
       <StyledContainer className="justify-content-between d-flex flex-column py-5">
         <Row className="w-100 justify-content-between my-3">
           <Col md={6}>
@@ -44,87 +45,60 @@ function Footer() {
               <Col className="text-right">
                 <UncontrolledTooltip
                   placement="top"
-                  target="fbIcon"
-                  style={{backgroundColor: 'rgba(255,255,255, 0.5)'}}
-                >
-                  <img
-                    src="https://qreateandtrack.com/files/2009/12/coupon.png"
-                    alt="qr"
-                    style={{height: '100px', width: '100px'}}
-                    className="m-2"
-                  />
-                </UncontrolledTooltip>
-                <UncontrolledTooltip
-                  placement="top"
-                  target="linkedInIcon"
-                  style={{backgroundColor: 'rgba(255,255,255, 0.5)'}}
-                >
-                  <img
-                    src="https://qreateandtrack.com/files/2009/12/coupon.png"
-                    alt="qr"
-                    style={{height: '100px', width: '100px'}}
-                    className="m-2"
-                  />
-                </UncontrolledTooltip>
-                <UncontrolledTooltip
-                  placement="top"
-                  target="twitterIcon"
-                  style={{backgroundColor: 'rgba(255,255,255, 0.5)'}}
-                >
-                  <img
-                    src="https://qreateandtrack.com/files/2009/12/coupon.png"
-                    alt="qr"
-                    style={{height: '100px', width: '100px'}}
-                    className="m-2"
-                  />
-                </UncontrolledTooltip>
-                <UncontrolledTooltip
-                  placement="top"
                   target="weChatIcon"
                   style={{backgroundColor: 'rgba(255,255,255, 0.5)'}}
                 >
                   <img
-                    src="https://qreateandtrack.com/files/2009/12/coupon.png"
+                    src={qrCode}
                     alt="qr"
                     style={{height: '100px', width: '100px'}}
                     className="m-2"
                   />
                 </UncontrolledTooltip>
-                <img
-                  id="fbIcon"
-                  src={facebookIcon}
-                  alt=""
-                  style={{maxHeight: '30px', maxWidth: '30px'}}
-                  className="mr-4"
-                />
-                <img
-                  src={linkedinIcon}
-                  alt=""
-                  style={{maxHeight: '30px', maxWidth: '30px'}}
-                  className="mr-4"
-                  id="linkedInIcon"
-                />
-                <img
-                  src={twitterIcon}
-                  alt=""
-                  style={{maxHeight: '30px', maxWidth: '30px'}}
-                  className="mr-4"
-                  id="twitterIcon"
-                />
                 <img
                   src={wechatIcon}
                   alt=""
                   style={{maxHeight: '30px', maxWidth: '30px'}}
                   id="weChatIcon"
+                  className="mr-4"
                 />
+                <a href="https://www.facebook.com/snowballsecurities" target="_blank">
+                  <img
+                    id="fbIcon"
+                    src={facebookIcon}
+                    alt=""
+                    style={{maxHeight: '30px', maxWidth: '30px'}}
+                    className="mr-4"
+                  />
+                </a>
+                <a href="https://www.linkedin.com/company/snowballsecurities" target="_blank">
+                  <img
+                    src={linkedinIcon}
+                    alt=""
+                    style={{maxHeight: '30px', maxWidth: '30px'}}
+                    className="mr-4"
+                    id="linkedInIcon"
+                  />
+                </a>
+
+                <a href="https://www.linkedin.com/company/snowballsecurities" target="_blank">
+                  <img
+                    src={twitterIcon}
+                    alt=""
+                    style={{maxHeight: '30px', maxWidth: '30px'}}
+                    id="twitterIcon"
+                  />
+                </a>
               </Col>
             </Row>
             <Row className="justify-content-end mt-3 w-100">
               <Col md={12} className="ml-auto text-right">
-                <small className="mr-3" style={{fontSize: '10px'}}>
+                <small className="mr-3" style={{fontSize: '10px', textDecoration: 'underline'}}>
                   Privacy Policy
                 </small>
-                <small style={{fontSize: '10px'}}>Terms and Conditions</small>
+                <small style={{fontSize: '10px', textDecoration: 'underline'}}>
+                  Terms and Conditions
+                </small>
               </Col>
             </Row>
           </Col>

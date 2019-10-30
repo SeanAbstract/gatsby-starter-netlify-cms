@@ -12,7 +12,6 @@ import videoSrcURL from '../../img/beach2.mp4'
 import './styles.scss'
 import Layout from '../../components/Layout'
 import LiveStockCarousel from '../../components/LiveStockCarousel'
-import introPhone from '../../img/snowball-intro-phone.gif'
 import TestimonyCarousel from '../../components/TestimonyCarousel'
 import DownloadNow from '../../components/DownloadNow'
 import BlogRoll from '../../components/BlogRoll'
@@ -165,7 +164,6 @@ export const IndexPageTemplate = ({
             </Col>
             <div className="col-md-3 d-none d-md-block">
               <Fade bottom>
-                {/* <img src={introPhone} style={{maxWidth: '300px'}} alt="snowball_intro_phone" /> */}
                 <video
                   src={phoneVideo}
                   loop

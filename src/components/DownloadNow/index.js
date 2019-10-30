@@ -4,7 +4,9 @@ import React from 'react'
 import PreviewCompatibleImage from '../PreviewCompatibleImage'
 import './styles.scss'
 
-// import
+import googlePlayStore from '../../img/google-play.jpg'
+import appleIcon from '../../img/apple-store.jpg'
+import qrCode from '../../img/qr-code.jpg'
 
 type Props = {
   mainText: String,
@@ -20,6 +22,11 @@ function DownloadNow({mainText, subText, image}: Props) {
           <div className="col-md-5 col-6 ml-auto d-flex flex-column justify-content-center">
             <h1 className="text-primary display-3">{mainText}</h1>
             <h3 className="big-subtitle text-dark">{subText}</h3>
+            <div className="d-flex mt-3">
+              <img src={googlePlayStore} alt="" style={{maxWidth: '130px'}} className="mr-3" />
+              <img src={appleIcon} alt="" style={{maxWidth: '130px'}} />
+            </div>
+            <img src={qrCode} alt="" style={{maxWidth: '120px'}} className="mt-3" />
           </div>
           <div className="col-md-4 col-6 mr-auto ">
             <PreviewCompatibleImage imageInfo={image} style={{maxWidth: '230px'}} />

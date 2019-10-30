@@ -78,7 +78,7 @@ BlogRoll.propTypes = {
 const Overlay = styled.div`
   height: 100%;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.3);
+  /* background-color: rgba(0, 0, 0, 0.3); */
   position: absolute;
   top: 0;
   left: 0;
@@ -134,7 +134,7 @@ const OuterContainer = styled.div`
     color: white;
     margin-top: -2rem;
     padding-top: 2rem;
-    box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.17);
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.17);
 
     ${ImgContainer} {
       opacity: 1;
