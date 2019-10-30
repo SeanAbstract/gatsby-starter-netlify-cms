@@ -8,7 +8,6 @@ import {graphql} from 'gatsby'
 import Fade from 'react-reveal/Fade'
 import {Controller, Scene} from 'react-scrollmagic'
 
-import videoSrcURL from '../../img/beach2.mp4'
 import './styles.scss'
 import Layout from '../../components/Layout'
 import LiveStockCarousel from '../../components/LiveStockCarousel'
@@ -19,6 +18,8 @@ import StockSection from '../../components/StocksCarousel/stockSection'
 import phoneFrame from '../../../static/img/snowball-empty-phone.png'
 import phoneGif from '../../../static/img/snowball-app-stock-financial_03.gif'
 import phoneVideo from '../../img/SPIN-700x1080_open-account.mp4'
+import videoSrcURL from '../../img/beach2.mp4'
+import arrowDown from '../../img/arrow-down.png'
 
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
@@ -146,8 +147,20 @@ export const IndexPageTemplate = ({
           <h1 className="big-text">Global Markets</h1>
           <h3 className="big-subtitle text-right text-primary">at your fingertips</h3>
         </div>
+
+        <a href="#fast-secure-trusted">
+          <img
+            src={arrowDown}
+            alt=""
+            style={{bottom: '30px', height: '30px', position: 'absolute'}}
+          />
+        </a>
       </Jumbotron>
-      <div className="landing-page" style={{zIndex: 2, background: 'white'}}>
+      <div
+        className="landing-page"
+        style={{zIndex: 2, background: 'white'}}
+        id="fast-secure-trusted"
+      >
         {/* Fast Secure Trusted or Second */}
         <Container fluid className="second-section">
           <Row className="justify-content-center h-100">
@@ -179,8 +192,8 @@ export const IndexPageTemplate = ({
         </Container>
         {/* Stock Section or Third */}
 
-        <section className="stock-section">
-          <StockRow className="h-100">
+        <section className="">
+          <StockRow className="h-100 stock-section">
             <Col md={6} xs={12} style={{backgroundColor: '#006fbb'}}>
               <Controller>
                 <div id="section-trigger" />

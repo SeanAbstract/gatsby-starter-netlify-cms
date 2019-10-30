@@ -6,6 +6,10 @@ $primary: #006fbb;
 $secondary: #91BCDC;
 $background: #F5F5F5;
 
+* {
+    scroll-behavior: smooth;
+}
+
 body {
     height: 100%;
 }
