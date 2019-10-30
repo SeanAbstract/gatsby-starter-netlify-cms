@@ -91,13 +91,13 @@ realTimeStockSection:
       abbreviation: "LI"
       bgColor: 'rgba(40,103,178, 1)'
 
-    - stock: "Amazon"
+    - stock: "Google"
       image: /img/facebook_blue.png
       value: "187.39"
       rate: "0.95"
       percent: "0.05%"
-      abbreviation: "FB"
-      bgColor: 'rgba(35, 47, 62, 1)'
+      abbreviation: "GGL"
+      bgColor: 'rgba(255, 255, 255, 1)'
 
     - stock: "Linkedin"
       image: /img/linkedin_blue.png

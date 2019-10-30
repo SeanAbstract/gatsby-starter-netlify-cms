@@ -6,7 +6,6 @@ import {Carousel, CarouselItem, CarouselControl, Modal, ModalBody} from 'reactst
 import playButton from '../../../static/img/play_button.svg'
 import testimonialImage from '../../../static/img/smile-face-7.jpg'
 import testimonialImage2 from '../../../static/img/smile-face-8.jpg'
-import PreviewCompatibleImage from '../PreviewCompatibleImage'
 import video from '../../img/SPIN-700x1080_open-account.mp4'
 
 const items = [
@@ -59,11 +58,6 @@ const TestimonyCarousel = ({testimonials}: Props) => {
         })`,
       }}
     >
-      {/* <PreviewCompatibleImage
-        imageInfo={testimonial.backgroundImage}
-        style={{width: '100%', position: 'absolute', height: '100%'}}
-      /> */}
-
       <div
         className="d-flex justify-content-center align-items-center h-100"
         style={{

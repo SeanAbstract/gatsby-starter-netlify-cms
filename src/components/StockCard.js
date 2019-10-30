@@ -7,6 +7,10 @@ import makeCarousel from 'react-reveal/makeCarousel'
 import Fade from 'react-reveal/Fade'
 import Slide from 'react-reveal/Slide'
 
+import facebookIcon from '../img/facebook.png'
+import linkedinIcon from '../img/linkedin.png'
+import googleLogo from '../img/google-logo.jpg'
+
 type Props = {
   icon: string,
   stockPrice: string,
@@ -22,67 +26,98 @@ type CarouselProps = {
 }
 
 const CarouselUI = ({children}: CarouselProps) => (
-  <InnerCarousel className="h-25 w-100 d-flex justify-content-center align-items-center">
-    {children}
-  </InnerCarousel>
+  <>
+    <InnerCarousel className="w-100 h-25">{children}</InnerCarousel>
+  </>
 )
 const Carousel = makeCarousel(CarouselUI)
 
-const StockCard = (props: Props) => (
-  <StyledCard>
-    <Row noGutters>
-      <Col md={12} xs={5}>
-        <ImgContainer
-          style={{
-            borderBottom: '2px solid #F5F5F5',
-            overflow: 'hidden',
-          }}
-          className="d-flex justify-content-center align-items-center img-container"
-        >
-          <Carousel defaultWait={3000} maxTurns={100} className="h-100">
-            {props.stocks.map(stock => (
-              <Slide left>
-                <div className="d-flex m-auto">
-                  <CardImg
-                    width="100%"
-                    src={stock.image.childImageSharp.fluid.src}
-                    alt="Card image cap"
-                    style={{margin: 'auto', height: '50px', width: '50px', objectFit: 'contain'}}
-                  />
-                </div>
-              </Slide>
-            ))}
-          </Carousel>
-        </ImgContainer>
-      </Col>
-      <Col md={12} xs={7}>
-        <StyledCardBody>
-          <Carousel defaultWait={3000} maxTurns={100}>
-            {props.stocks.map(stock => (
-              <Fade>
-                <Container>
-                  <Row className="justify-content-between">
-                    <CardTitle>{stock.abbreviation}</CardTitle>
-                    <div className="d-flex flex-column align-items-start">
-                      <StockPrice className="mb-1">{stock.value}</StockPrice>
-                      <StockPercentage>
-                        {stock.rate} ({stock.percent})
-                      </StockPercentage>
-                    </div>
-                  </Row>
-                  <Row>
-                    <small className="text-muted">{stock.stock}</small>
-                  </Row>
-                </Container>
-              </Fade>
-            ))}
-          </Carousel>
-        </StyledCardBody>
-      </Col>
-    </Row>
-  </StyledCard>
-)
+const StockCard = (props: Props) => {
+  function getIcon(abbreviation) {
+    if (abbreviation == 'FB') {
+      return facebookIcon
+    }
 
+    if (abbreviation == 'LI') {
+      return linkedinIcon
+    }
+
+    if (abbreviation == 'GGL') {
+      return googleLogo
+    }
+  }
+
+  return (
+    <StyledCard>
+      <Row noGutters>
+        <Col md={12} xs={5}>
+          <ImgContainer
+            style={{
+              borderBottom: '2px solid #F5F5F5',
+              overflow: 'hidden',
+            }}
+            className="d-flex justify-content-center align-items-center img-container"
+          >
+            <Carousel defaultWait={3000} maxTurns={100} className="h-100">
+              {props.stocks.map(stock => (
+                <Slide left>
+                  <div
+                    style={{
+                      position: 'absolute',
+                      top: '-125px',
+                      left: 0,
+                      height: '265px',
+                      width: '100%',
+                      background: stock.bgColor,
+                    }}
+                  />
+                  <div className="d-flex m-auto h-100">
+                    <CardImg
+                      width="100%"
+                      src={getIcon(stock.abbreviation)}
+                      alt="Card image cap"
+                      style={{
+                        margin: 'auto',
+                        height: '50px',
+                        width: '50px',
+                        objectFit: 'contain',
+                        zIndex: 100,
+                      }}
+                    />
+                  </div>
+                </Slide>
+              ))}
+            </Carousel>
+          </ImgContainer>
+        </Col>
+        <Col md={12} xs={7}>
+          <StyledCardBody>
+            <Carousel defaultWait={3000} maxTurns={100}>
+              {props.stocks.map(stock => (
+                <Fade>
+                  <Container>
+                    <Row className="justify-content-between">
+                      <CardTitle>{stock.abbreviation}</CardTitle>
+                      <div className="d-flex flex-column align-items-start">
+                        <StockPrice className="mb-1">{stock.value}</StockPrice>
+                        <StockPercentage>
+                          {stock.rate} ({stock.percent})
+                        </StockPercentage>
+                      </div>
+                    </Row>
+                    <Row>
+                      <small className="text-muted">{stock.stock}</small>
+                    </Row>
+                  </Container>
+                </Fade>
+              ))}
+            </Carousel>
+          </StyledCardBody>
+        </Col>
+      </Row>
+    </StyledCard>
+  )
+}
 const InnerCarousel = styled.div`
   position: relative;
   display: flex;
