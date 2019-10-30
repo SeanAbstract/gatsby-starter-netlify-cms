@@ -29,6 +29,13 @@ stockSection:
           text: "No commission on orders below HKD 60,000"
         - price: "0.03%"
           text: "per share on orders above HKD 60,000"
+    - country: "US"
+      countryCode: "US"
+      commission:
+        - price: "$0.0002"
+          text: "per share"
+        - price: "$0.99"
+          text: "per deal the minimum"
 
 featureSection:
   mainText: "Make informed decisions"
