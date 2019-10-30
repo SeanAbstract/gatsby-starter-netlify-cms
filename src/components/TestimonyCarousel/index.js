@@ -82,7 +82,7 @@ const TestimonyCarousel = ({testimonials}: Props) => {
           <h3 className="big-subtitle" style={{fontSize: '72px', color: 'black'}}>
             {testimonial.customerName}
           </h3>
-          <h5 className="text-white" style={{textTransform: 'uppercase'}}>
+          <h5 className="text-white" style={{textTransform: 'uppercase', fontSize: '14px'}}>
             {testimonial.customerPosition}
           </h5>
           <div

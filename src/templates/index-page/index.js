@@ -19,6 +19,7 @@ import BlogRoll from '../../components/BlogRoll'
 import StockSection from '../../components/StocksCarousel/stockSection'
 import phoneFrame from '../../../static/img/snowball-empty-phone.png'
 import phoneGif from '../../../static/img/snowball-app-stock-financial_03.gif'
+import phoneVideo from '../../img/SPIN-700x1080_open-account.mp4'
 
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
@@ -96,6 +97,13 @@ export const IndexPageTemplate = ({
   downloadNow,
 }: Props) => {
   const changeZIndex = () => {
+    if (document.body.scrollTop > 150 || document.documentElement.scrollTop > 150) {
+      const currentVideo = document.getElementById('phoneVideo')
+      currentVideo.play()
+    } else {
+      document.getElementById('footer').style.zIndex = '-2'
+    }
+
     if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
       document.getElementById('footer').style.zIndex = '-1'
     } else {
@@ -157,7 +165,16 @@ export const IndexPageTemplate = ({
             </Col>
             <div className="col-md-3 d-none d-md-block">
               <Fade bottom>
-                <img src={introPhone} style={{maxWidth: '300px'}} alt="snowball_intro_phone" />
+                {/* <img src={introPhone} style={{maxWidth: '300px'}} alt="snowball_intro_phone" /> */}
+                <video
+                  src={phoneVideo}
+                  loop
+                  // autoPlay
+                  style={{maxWidth: '300px'}}
+                  id="phoneVideo"
+                  muted="true"
+                  preload="auto"
+                />
               </Fade>
             </div>
           </Row>
@@ -222,7 +239,7 @@ export const IndexPageTemplate = ({
         </section>
 
         {/* Make Informed Decisions or 4th */}
-        <section className="feature-section container-fluid">
+        <section className="feature-section container-fluid d-flex justify-content-center align-items-center">
           <div className="row justify-content-around align-items-center h-100">
             <div className="col-md-3 ml-auto d-none d-md-block">
               <Controller>
