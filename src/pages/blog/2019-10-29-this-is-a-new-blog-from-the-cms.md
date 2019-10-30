@@ -1,10 +1,10 @@
 ---
 templateKey: blog-post
-title: This is a new blog from the CMS
+title: Greater security for account assets
 date: 2019-10-29T06:03:00.622Z
-description: This is a sample description and stuff
+description: Dual supervision by NZ and SEC/FINRA in US
 featuredpost: true
-featuredimage: /img/chemex.jpg
+featuredimage: /img/another-stock.jpg
 tags:
   - none
 downloadNow:
