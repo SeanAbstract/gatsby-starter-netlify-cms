@@ -17,7 +17,7 @@ import BlogRoll from '../../components/BlogRoll'
 import StockSection from '../../components/StocksCarousel/stockSection'
 import phoneFrame from '../../../static/img/snowball-empty-phone.png'
 import phoneGif from '../../../static/img/snowball-app-stock-financial_03.gif'
-import phoneVideo from '../../img/SPIN-700x1080_open-account.mp4'
+import phoneVideo from '../../img/SPIN-700x1080-main.mp4'
 import videoSrcURL from '../../img/beach2.mp4'
 import arrowDown from '../../img/arrow-down.png'
 
@@ -97,7 +97,10 @@ export const IndexPageTemplate = ({
   downloadNow,
 }: Props) => {
   const changeZIndex = () => {
-    if (document.body.scrollTop > 150 || document.documentElement.scrollTop > 150) {
+    if (
+      (document.body.scrollTop > 150 && document.body.scrollTop < 750) ||
+      (document.documentElement.scrollTop > 150 && document.documentElement.scrollTop < 750)
+    ) {
       const currentVideo = document.getElementById('phoneVideo')
       currentVideo.play()
     } else {
@@ -179,8 +182,6 @@ export const IndexPageTemplate = ({
               <Fade bottom>
                 <video
                   src={phoneVideo}
-                  loop
-                  // autoPlay
                   style={{maxWidth: '300px'}}
                   id="phoneVideo"
                   muted="true"
