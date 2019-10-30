@@ -4,6 +4,8 @@ import React from 'react'
 import PreviewCompatibleImage from '../PreviewCompatibleImage'
 import './styles.scss'
 
+// import
+
 type Props = {
   mainText: String,
   subText: String,
