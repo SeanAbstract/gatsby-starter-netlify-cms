@@ -203,5 +203,23 @@ video {
     margin-right: 0 !important;
 }
 
+.carousel-control-next-icon {
+    height: 30px;
+    background-image: url("../img/arrow-right.png");
+}
+
+.carousel-control-prev-icon {
+    height: 30px;
+    background-image: url("../img/arrow-left.png");
+}
+
+.carousel-control-prev {
+    width: 10%;
+}
+
+.carousel-control-next {
+    width: 10%;
+}
+
 
 

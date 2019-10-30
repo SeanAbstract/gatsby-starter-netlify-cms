@@ -193,7 +193,7 @@ export const IndexPageTemplate = ({
         {/* Stock Section or Third */}
 
         <section className="">
-          <StockRow className="h-100 stock-section">
+          <StockRow className="h-100 stock-section no-gutters">
             <Col md={6} xs={12} style={{backgroundColor: '#006fbb'}}>
               <Controller>
                 <div id="section-trigger" />
