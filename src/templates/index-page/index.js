@@ -141,7 +141,7 @@ export const IndexPageTemplate = ({
           >
             <track kind="captions" />
           </StyledVideo>
-          {/* <Overlay className="overlay" /> */}
+          <Overlay className="overlay" />
         </ImageContainer>
         <div className="text-right">
           <h1 className="big-text">Global Markets</h1>
@@ -152,7 +152,7 @@ export const IndexPageTemplate = ({
           <img
             src={arrowDown}
             alt=""
-            style={{bottom: '30px', height: '30px', position: 'absolute'}}
+            style={{bottom: '30px', height: '25px', position: 'absolute'}}
           />
         </a>
       </Jumbotron>
