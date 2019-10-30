@@ -306,7 +306,7 @@ export const IndexPageTemplate = ({
           <h3 className="big-subtitle">{blurb.subText}</h3>
         </div>
         {/* Blog Roll or 6th */}
-        <div className="blog-roll-container py-3">
+        <div className="blog-roll-container py-3 container-fluid">
           <Fade bottom cascade>
             <div className="row">
               <div className="col-sm-8 mx-auto">
