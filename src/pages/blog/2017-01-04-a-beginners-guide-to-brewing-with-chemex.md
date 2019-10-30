@@ -1,12 +1,9 @@
 ---
 templateKey: blog-post
-title: A beginners’ guide to brewing with Chemex
+title: Low commission/margin rate
 date: 2017-01-04T15:04:10.000Z
-description: >-
-  Brewing with a Chemex probably seems like a complicated, time-consuming
-  ordeal, but once you get used to the process, it becomes a soothing ritual
-  that's worth the effort every time.
-featuredpost: false
+description: 'minimum comm./trade: 0 for HK, US$0.99 for US'
+featuredpost: true
 featuredimage: /img/another-stock.jpg
 tags:
   - brewing
