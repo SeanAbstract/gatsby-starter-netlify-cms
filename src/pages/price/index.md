@@ -1,61 +1,55 @@
 ---
 templateKey: price-page
-
 jumbotron:
-  title: "Price"
-  description: "Structure"
-  headerImage: /img/landing-page-2.png
-
-mainPitch: Competitive rates, transparent fees, choose the price option that’s right for you.
-
+  description: Structure
+  headerImage: /img/second-splash.jpg
+  title: Price
 lowCommissionPackage:
+  hk:
+    commission:
+      description: Sample Description
+      title: Commission
+    financingInterestRate:
+      description: Sample Description
+      title: Financing Interest Rate
+    platformUsageFee:
+      description: Sample Description
+      title: Platform Usage Fee
   us:
     commission:
-      title: Commission
-      description: >
+      description: |
         "No commission on orders below HKD 60,000"
-    platformUsageFee:
-      title: Platform Usage Fee
-      description: Sample Description
+      title: Commission
     financingInterestRate:
-      title: Financing Interest Rate
       description: Sample Description
+      title: Financing Interest Rate
+    platformUsageFee:
+      description: Sample Description
+      title: Platform Usage Fee
+lowInterestRatePackage:
   hk:
     commission:
+      description: Sample Description
       title: Commission
-      description: Sample Description
-    platformUsageFee:
-      title: Platform Usage Fee
-      description: Sample Description
     financingInterestRate:
-      title: Financing Interest Rate
       description: Sample Description
-
-lowInterestRatePackage:
+      title: Financing Interest Rate
+    platformUsageFee:
+      description: Sample Description
+      title: Platform Usage Fee
   us:
     commission:
+      description: Sample Description
       title: Commission
-      description: Sample Description
-    platformUsageFee:
-      title: Platform Usage Fee
-      description: Sample Description
     financingInterestRate:
+      description: Sample Description
       title: Financing Interest Rate
-      description: Sample Description
-  hk:
-    commission:
-      title: Commission
-      description: Sample Description
     platformUsageFee:
+      description: Sample Description
       title: Platform Usage Fee
-      description: Sample Description
-    financingInterestRate:
-      title: Financing Interest Rate
-      description: Sample Description
-
 downloadNow:
-  mainText: "Access Global Markets Today"
-  subText: "Download now"
   image: /img/snowball-phone.png
+  mainText: Access Global Markets Today
+  subText: Download now
 ---
 
