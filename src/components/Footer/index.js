@@ -11,7 +11,7 @@ import qrCode from '../../img/qr-code.jpg'
 
 function Footer() {
   return (
-    <StyledFooter id="footer" className="pt-1">
+    <StyledFooter id="footer" className="">
       <StyledContainer className="justify-content-between d-flex flex-column py-5">
         <Row className="w-100 justify-content-between my-3">
           <Col md={6}>
@@ -147,7 +147,7 @@ const StyledFooter = styled.footer`
 
 const StyledContainer = styled(Container)`
   line-height: 1.1;
-  padding: 0 1rem !important;
+  padding: 0 3.75rem !important;
   /* max-width: 90% !important; */
 `
 
