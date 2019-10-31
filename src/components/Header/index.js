@@ -8,6 +8,15 @@ import logoIcon from '../../../static/img/snowball-logo-x.png'
 
 // import logoIcon from '../../images/icon-logo.png'
 
+const data = [
+  {name: 'About', href: '/about'},
+  {name: 'How It Works', href: '/how-it-works'},
+  {name: 'Prices', href: '/price'},
+  {name: 'Download', href: '/download'},
+  {name: 'FAQs', href: '/faq'},
+  {name: 'Contact', href: '/contact'},
+]
+
 export default class Header extends React.Component {
   constructor(props) {
     super(props)
@@ -53,6 +62,8 @@ export default class Header extends React.Component {
   }
 
   render() {
+    console.log(window.location.pathname.split('/')[1], data)
+
     const {scrolled, isOpen} = this.state
     return (
       <>
@@ -66,29 +77,24 @@ export default class Header extends React.Component {
             <StyledNavbarToggler isOpen={this.state.isOpen} onClick={this.toggle} />
             <StyledCollapse isOpen={this.state.isOpen} navbar>
               <Nav className="ml-auto" navbar>
-                <Link to="/about" className="nav-link">
-                  About
-                </Link>
-
-                <Link to="/how-it-works" className="nav-link">
-                  How It Works
-                </Link>
-
-                <Link to="/price" className="nav-link">
-                  Prices
-                </Link>
-
-                <Link to="/" className="nav-link">
-                  Download
-                </Link>
-
-                <Link to="/faq" className="nav-link">
-                  FAQs
-                </Link>
-
-                <Link to="/contact" className="nav-link">
-                  Contact
-                </Link>
+                {data.map(link =>
+                  link.href !== '' ? (
+                    <Link
+                      to={link.href}
+                      className={`nav-link ${
+                        `/${window.location.pathname.split('/')[1]}` === `${link.href}`
+                          ? 'custom-active'
+                          : ''
+                      }`}
+                    >
+                      {link.name}
+                    </Link>
+                  ) : (
+                    <a href="https://www.snowballsecurities.com/download" className="nav-link">
+                      {link.name}
+                    </a>
+                  )
+                )}
               </Nav>
             </StyledCollapse>
           </div>
@@ -103,29 +109,17 @@ export default class Header extends React.Component {
             <StyledNavbarToggler isOpen={this.state.isOpen} onClick={this.toggle} />
             <StyledCollapse isOpen={this.state.isOpen} navbar>
               <Nav className="ml-auto" navbar>
-                <Link to="/about" className="nav-link">
-                  About
-                </Link>
-
-                <Link to="/how-it-works" className="nav-link">
-                  How It Works
-                </Link>
-
-                <Link to="/price" className="nav-link">
-                  Prices
-                </Link>
-
-                <Link to="/" className="nav-link">
-                  Download
-                </Link>
-
-                <Link to="/faq" className="nav-link">
-                  FAQs
-                </Link>
-
-                <Link to="/contact" className="nav-link">
-                  Contact
-                </Link>
+                {data.map(link =>
+                  link.href !== '' ? (
+                    <Link to={link.href} className="nav-link">
+                      {link.name}
+                    </Link>
+                  ) : (
+                    <a href="https://www.snowballsecurities.com/download" className="nav-link">
+                      {link.name}
+                    </a>
+                  )
+                )}
               </Nav>
             </StyledCollapse>
           </div>

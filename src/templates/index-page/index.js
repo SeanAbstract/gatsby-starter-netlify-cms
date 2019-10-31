@@ -4,7 +4,7 @@ import React, {useEffect} from 'react'
 import styled from 'styled-components'
 import {Row, Col, Container} from 'reactstrap'
 import PropTypes from 'prop-types'
-import {graphql} from 'gatsby'
+import {graphql, Link} from 'gatsby'
 import Fade from 'react-reveal/Fade'
 import {Controller, Scene} from 'react-scrollmagic'
 
@@ -131,8 +131,8 @@ export const IndexPageTemplate = ({
   return (
     <>
       {/* Hero Video */}
-      <Jumbotron className="full-width-image-container d-flex justify-content-center align-items-center flex-column text-right custom-jumbotron">
-        <ImageContainer className="image-container">
+      <Jumbotron className="full-width-image-container d-flex justify-content-center align-items-center flex-column text-right">
+        <ImageContainer>
           <StyledVideo
             id="mainVideo"
             loop
@@ -174,9 +174,11 @@ export const IndexPageTemplate = ({
                 <h1 className="text-primary display-2 mb-3">{firstSection.mainText}</h1>
                 <p>{firstSection.description}</p>
                 <div>
-                  <button className="btn btn-outline-primary rounded-pill " type="button">
-                    {firstSection.buttonText}
-                  </button>
+                  <a href="https://www.snowballsecurities.com/download">
+                    <button className="btn btn-outline-primary rounded-pill " type="button">
+                      {firstSection.buttonText}
+                    </button>
+                  </a>
                 </div>
               </Fade>
             </Col>
@@ -290,9 +292,11 @@ export const IndexPageTemplate = ({
                     <h1 className="text-primary display-2 mb-3">{featureSection.mainText}</h1>
                     <h5 className="mb-2">{featureSection.subText}</h5>
                     <p>{featureSection.description}</p>
-                    <button className="btn btn-outline-primary rounded-pill" type="button">
-                      {featureSection.buttonText}
-                    </button>
+                    <Link to="/how-it-works">
+                      <button className="btn btn-outline-primary rounded-pill" type="button">
+                        {featureSection.buttonText}
+                      </button>
+                    </Link>
                   </Fade>
                 </Scene>
               </Controller>
@@ -327,9 +331,11 @@ export const IndexPageTemplate = ({
                 <Fade bottom>
                   <h1 className="text-primary display-2 mb-3">{realTimeStockSection.mainText}</h1>
                   <p>{realTimeStockSection.description}</p>
-                  <button className="btn btn-outline-primary rounded-pill" type="button">
-                    {realTimeStockSection.buttonText}
-                  </button>
+                  <Link to="/price">
+                    <button className="btn btn-outline-primary rounded-pill" type="button">
+                      {realTimeStockSection.buttonText}
+                    </button>
+                  </Link>
                 </Fade>
               </Col>
               <Col md={6} lg={6} className="mr-auto">
@@ -568,7 +574,7 @@ const StockRow = styled.div`
 `
 
 const Jumbotron = styled.div`
-  height: 90vh !important;
+  height: 100vh !important;
   width: 100%;
   top: 0;
   position: fixed !important;
@@ -576,7 +582,7 @@ const Jumbotron = styled.div`
 `
 
 const ImageContainer = styled.div`
-  height: 90vh;
+  height: 100vh;
   width: 100%;
   position: absolute;
   top: 0;

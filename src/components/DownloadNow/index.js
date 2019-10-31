@@ -1,5 +1,5 @@
 // @flow
-import React from 'react'
+import React, {useEffect} from 'react'
 
 import './styles.scss'
 
@@ -16,6 +16,26 @@ type Props = {
 }
 
 function DownloadNow({mainText, subText, image}: Props) {
+  function changeZIndex() {
+    console.log(document.documentElement.scrollTop)
+
+    if (
+      (document.body.scrollTop > 8600 && document.body.scrollTop < 8800) ||
+      (document.documentElement.scrollTop > 8600 && document.documentElement.scrollTop < 8800)
+    ) {
+      const currentVideo = document.getElementById('downloadNowPhone')
+      currentVideo.play()
+    }
+  }
+
+  useEffect(() => {
+    window.addEventListener('scroll', changeZIndex)
+
+    return () => {
+      window.removeEventListener('scroll', changeZIndex)
+    }
+  })
+
   return (
     <div className="download-now">
       <div className="container">
@@ -24,13 +44,22 @@ function DownloadNow({mainText, subText, image}: Props) {
             <h1 className="text-primary display-3">{mainText}</h1>
             <h3 className="big-subtitle text-dark">{subText}</h3>
             <div className="d-flex mt-3">
-              <img src={googlePlayStore} alt="" style={{maxWidth: '130px'}} className="mr-3" />
-              <img src={appleIcon} alt="" style={{maxWidth: '130px'}} />
+              <a href="https://apps.apple.com/cn/app/xy-trade/id1209930465?l=en">
+                <img src={googlePlayStore} alt="" style={{maxWidth: '130px'}} className="mr-3" />
+              </a>
+              <a href="https://play.google.com/store/apps/details?id=com.snowballfinance.android">
+                <img src={appleIcon} alt="" style={{maxWidth: '130px'}} />
+              </a>
             </div>
             <img src={qrCode} alt="" style={{maxWidth: '120px'}} className="mt-3" />
           </div>
           <div className="col-md-4 col-6 mr-auto ">
-            <video src={phoneVideo} style={{maxWidth: '300px'}} poster={phone} autoPlay loop>
+            <video
+              src={phoneVideo}
+              style={{maxWidth: '300px'}}
+              poster={phone}
+              id="downloadNowPhone"
+            >
               <track />
             </video>
             {/* <PreviewCompatibleImage imageInfo={image} style={{maxWidth: '230px'}} /> */}

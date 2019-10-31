@@ -32,44 +32,6 @@ $primary: #006fbb;
 .landing-page {
 
 
-
-    .video {
-        position: absolute;
-        right: 0;
-        top: 0;
-        min-width: 100%;
-        min-height: 100%;
-        object-fit: cover;
-        z-index: -1;
-    }
-
-    .custom-jumbotron {
-        height: 90vh !important;
-        width: 100%;
-        top: 0;
-        position: fixed !important;
-        z-index: -1;
-    }
-
-    .image-container {
-        height: 90vh;
-        width: 100%;
-        position: absolute;
-        top: 0;
-        z-index: -1;
-    }
-
-    .overlay {
-        height: 100%;
-        width: 100%;
-        background-color: rgba(255, 255, 255, 0.15);
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-    }
-
     .card {
         border: none !important;
         border-radius: 0;
@@ -93,7 +55,7 @@ $primary: #006fbb;
         height: 70vh;
         padding-right: 1.3rem;
         padding-left: 1.3rem;
-        margin-top: 90vh;
+        margin-top: 100vh;
         background-color: white;
       
         @media (min-width: 425px) {

@@ -1,11 +1,14 @@
 // @flow
 import React from 'react'
 import PropTypes from 'prop-types'
-import {Link, graphql, useStaticQuery} from 'gatsby'
+import {Link} from 'gatsby'
 import styled from 'styled-components'
-import {Row, Col} from 'reactstrap'
-import Img from 'gatsby-image'
+import {Col} from 'reactstrap'
 import Slider from 'react-slick'
+
+import bgSlider from '../../img/bg-slider1.jpg'
+import bgSlider2 from '../../img/bg-slider2.jpg'
+import arrowRight from '../../img/arrow-right-blue.png'
 
 import './styles.scss'
 
@@ -18,54 +21,115 @@ const settings = {
   autoplay: true,
 }
 
-const BlogRoll = props => {
-  const {data} = props
-  const {edges: posts} = data.allMarkdownRemark
+const content = [
+  {
+    title: 'Low commission/margin rate',
+    description: 'minimium comm./trade: 0 for HK, US$0.99 for US',
+    featuredImage: bgSlider,
+  },
+  {
+    title: 'Greater security of account assets',
+    description: 'minimium comm./trade: 0 for HK, US$0.99 for US',
+    featuredImage: bgSlider,
+  },
+  {
+    title: 'Exclusive info at your fingertips',
+    description: "Snowball's unique stock intel keeps you ahead of the game",
+    featuredImage: bgSlider2,
+  },
+]
 
-  return (
-    <Slider {...settings}>
-      {posts.map(({node: post}) => {
-        const {title, description, featuredimage} = post.frontmatter
-        return (
-          <StyledCol>
-            <OuterContainer>
-              <ImgContainer>
-                {featuredimage && (
-                  <Img
-                    fluid={featuredimage.childImageSharp.fluid}
-                    imgStyle={{height: '100%'}}
-                    style={{height: '100%', objectFit: 'cover'}}
-                  />
-                )}
-                <Overlay />
-              </ImgContainer>
-              <div className="container blog-inner-container">
-                <div>
-                  <h5 className="lead mb-2">{title}</h5>
-                  <small className="mb-3 blog-desc mb-3">{description}</small>
-                  <div className="mt-5">
-                    <Link to={post.fields.slug}>
-                      <StyledButton
-                        className="btn btn-outline-primary rounded-pill "
-                        type="button"
-                        style={{borderColor: 'white', color: 'white'}}
-                      >
-                        Get Started
-                      </StyledButton>
-                    </Link>
-                  </div>
-                </div>
+// const BlogRoll = props => {
+//   const {data} = props
+//   const {edges: posts} = data.allMarkdownRemark
+
+//   return (
+//     <Slider {...settings}>
+//       {content.map(({node: post}) => {
+//         const {title, description, featuredimage} = post.frontmatter
+//         return (
+//           <StyledCol>
+//             <OuterContainer>
+//               <ImgContainer>
+//                 {featuredimage && (
+//                   <Img
+//                     fluid={featuredimage.childImageSharp.fluid}
+//                     imgStyle={{height: '100%'}}
+//                     style={{height: '100%', objectFit: 'cover'}}
+//                   />
+//                 )}
+//                 <Overlay />
+//               </ImgContainer>
+//               <div className="container blog-inner-container">
+//                 <div>
+//                   <h5 className="lead mb-2">{title}</h5>
+//                   <small className="mb-3 blog-desc mb-3">{description}</small>
+//                   <div className="mt-5">
+//                     <Link to={'/how-it-works' || post.fields.slug}>
+//                       <StyledButton
+//                         className="btn btn-outline-primary rounded-pill "
+//                         type="button"
+//                         style={{borderColor: 'white', color: 'white'}}
+//                       >
+//                         Get Started
+//                       </StyledButton>
+//                     </Link>
+//                   </div>
+//                 </div>
+//                 <div className="mt-5">
+//                   <h3>&gt;</h3>
+//                 </div>
+//               </div>
+//             </OuterContainer>
+//           </StyledCol>
+//         )
+//       })}
+//     </Slider>
+//   )
+// }
+
+const BlogRoll = props => (
+  <Slider {...settings}>
+    {content.map(post => {
+      const {title, description, featuredImage} = post
+      return (
+        <StyledCol>
+          <OuterContainer>
+            <ImgContainer>
+              {featuredImage && (
+                <img
+                  src={featuredImage}
+                  style={{height: '100%', objectFit: 'cover', width: '100%'}}
+                />
+              )}
+              <Overlay />
+            </ImgContainer>
+            <div className="container blog-inner-container">
+              <div className="" style={{marginTop: '20%'}}>
+                <h5 className="lead mb-2">{title}</h5>
+                <small className="mb-3 blog-desc mb-3">{description}</small>
                 <div className="mt-5">
-                  <h3>&gt;</h3>
+                  <Link to={'/how-it-works' || post.fields.slug}>
+                    <StyledButton
+                      className="btn btn-outline-primary rounded-pill "
+                      type="button"
+                      style={{borderColor: 'white', color: 'white'}}
+                    >
+                      Get Started
+                    </StyledButton>
+                  </Link>
                 </div>
               </div>
-            </OuterContainer>
-          </StyledCol>
-        )
-      })}
-    </Slider>
-  )
-}
+              <div className="mt-5">
+                <img src={arrowRight} alt="" style={{height: '30px'}} />
+              </div>
+            </div>
+          </OuterContainer>
+        </StyledCol>
+      )
+    })}
+  </Slider>
+)
 
 BlogRoll.propTypes = {
   data: PropTypes.shape({
@@ -74,6 +138,8 @@ BlogRoll.propTypes = {
     }),
   }),
 }
+
+export default BlogRoll
 
 const Overlay = styled.div`
   height: 100%;
@@ -104,7 +170,7 @@ const ImgContainer = styled.div`
 
 const StyledCol = styled(Col)`
   border-left: 0.5px solid #ddd;
-  height: 50vh;
+  height: 40vh;
   /* :last-child {
     border-right: 0.5px solid #aaaaaa;
   } */
@@ -133,8 +199,8 @@ const OuterContainer = styled.div`
   :hover {
     color: white;
     margin-top: -2rem;
-    padding-top: 2rem;
-    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.17);
+
+    box-shadow: 0 11px 16px 0 rgba(0, 0, 0, 0.3);
 
     ${ImgContainer} {
       opacity: 1;
@@ -142,6 +208,10 @@ const OuterContainer = styled.div`
 
     ${StyledButton} {
       opacity: 1;
+
+      :hover {
+        background-color: rgba(255, 255, 255, 0.5);
+      }
     }
 
     small {
@@ -154,38 +224,38 @@ const OuterContainer = styled.div`
   }
 `
 
-export default () => {
-  const data = useStaticQuery(graphql`
-    query BlogRollQuery {
-      allMarkdownRemark(
-        sort: {order: DESC, fields: [frontmatter___date]}
-        filter: {frontmatter: {templateKey: {eq: "blog-post"}}}
-      ) {
-        edges {
-          node {
-            excerpt(pruneLength: 400)
-            id
-            fields {
-              slug
-            }
-            frontmatter {
-              title
-              description
-              templateKey
-              date(formatString: "MMMM DD, YYYY")
-              featuredpost
-              featuredimage {
-                childImageSharp {
-                  fluid(maxWidth: 200, quality: 100) {
-                    ...GatsbyImageSharpFluid
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  `)
-  return <BlogRoll data={data} />
-}
+// export default () => {
+//   const data = useStaticQuery(graphql`
+//     query BlogRollQuery {
+//       allMarkdownRemark(
+//         sort: {order: DESC, fields: [frontmatter___date]}
+//         filter: {frontmatter: {templateKey: {eq: "blog-post"}}}
+//       ) {
+//         edges {
+//           node {
+//             excerpt(pruneLength: 400)
+//             id
+//             fields {
+//               slug
+//             }
+//             frontmatter {
+//               title
+//               description
+//               templateKey
+//               date(formatString: "MMMM DD, YYYY")
+//               featuredpost
+//               featuredimage {
+//                 childImageSharp {
+//                   fluid(maxWidth: 200, quality: 100) {
+//                     ...GatsbyImageSharpFluid
+//                   }
+//                 }
+//               }
+//             }
+//           }
+//         }
+//       }
+//     }
+//   `)
+//   return <BlogRoll data={data} />
+// }

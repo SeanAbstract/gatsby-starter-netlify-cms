@@ -1,232 +1,234 @@
-@import '~bootstrap/dist/css/bootstrap.min.css';
+@import "~bootstrap/dist/css/bootstrap.min.css";
 @import "~bootstrap/scss/bootstrap";
 
-
 $primary: #006fbb;
-$secondary: #91BCDC;
-$background: #F5F5F5;
-
-* {
-    scroll-behavior: smooth;
-}
+$secondary: #91bcdc;
+$background: #f5f5f5;
 
 body {
-    height: 100%;
+  height: 100%;
 }
 
 @font-face {
-    font-family: "Tungsten-Black";
-    src: url('../fonts/Tungsten-Black.otf');
-    font-display: swap;
+  font-family: "Tungsten-Black";
+  src: url("../fonts/Tungsten-Black.otf");
+  font-display: swap;
 }
 
 @font-face {
-    font-family: "Kokomo-Breeze-Regular";
-    src: url('../fonts/Kokomo-Breeze-Regular.otf');
-    font-display: swap;
+  font-family: "Kokomo-Breeze-Regular";
+  src: url("../fonts/Kokomo-Breeze-Regular.otf");
+  font-display: swap;
 }
 
 @font-face {
-    font-family: "Theinhardt";
-    src: url('../fonts/THEINHARDT-REGULAR.otf');
-    font-display: swap;
+  font-family: "Theinhardt";
+  src: url("../fonts/THEINHARDT-REGULAR.otf");
+  font-display: swap;
 }
 
 @font-face {
-    font-family: "Theinhardt";
-    src: url('../fonts/THEINHARDT-MEDIUM.otf');
-    font-weight: 500;
-    font-display: swap;
+  font-family: "Theinhardt";
+  src: url("../fonts/THEINHARDT-MEDIUM.otf");
+  font-weight: 500;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: "Theinhardt";
-    src: url('../fonts/THEINHARDT-LIGHT.otf');
-    font-weight: 300;
-    font-display: swap;
+  font-family: "Theinhardt";
+  src: url("../fonts/THEINHARDT-LIGHT.otf");
+  font-weight: 300;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: "Theinhardt";
-    src: url('../fonts/THEINHARDT-BOLD.otf');
-    font-weight: 700;
-    font-display: swap;
+  font-family: "Theinhardt";
+  src: url("../fonts/THEINHARDT-BOLD.otf");
+  font-weight: 700;
+  font-display: swap;
 }
 
+* {
+  scroll-behavior: smooth;
+  font-family: "Theinhardt";
+}
 
 h1 {
-    font-family: "Tungsten-Black";
-    color: white;
-    letter-spacing: 1.8px;
-    line-height: 3.15rem;
+  font-family: "Tungsten-Black";
+  color: white;
+  letter-spacing: 1.8px;
+  line-height: 3.15rem;
 }
 
-
 p {
-    font-family: 'Theinhardt';
-    font-weight: 300;
+  font-family: "Theinhardt";
+  font-weight: 300;
 }
 
 .big-text {
-    font-size: 4rem;
-    text-transform: uppercase;
-    z-index: 2;
+  font-size: 4rem;
+  text-transform: uppercase;
+  z-index: 2;
 
-    @media (min-width: 576px) {
-      font-size: 7rem;
-    }
-  
-    @media (min-width: 768px) {
-      font-size: 6rem;
-    }
+  @media (min-width: 576px) {
+    font-size: 7rem;
+  }
+
+  @media (min-width: 768px) {
+    font-size: 6rem;
+  }
 }
 
 .big-subtitle {
-    font-size: 3rem;
-    line-height: 0.5;
-    font-family: "Kokomo-Breeze-Regular";
-    color: $secondary;
-    z-index: 2;
-    
-    @media (min-width: 576px) {
-      font-size: 6rem;
-    }
-  
-    @media (min-width: 768px) {
-      font-size: 5rem;
-    }
-  
-    @media (min-width: 992px) {
-      font-size: 5rem;
-    }
-  
-    @media (min-width: 1200px) {
-      font-size: 6rem;
-    }
+  font-size: 3rem;
+  line-height: 0.5;
+  font-family: "Kokomo-Breeze-Regular";
+  color: $secondary;
+  z-index: 2;
+
+  @media (min-width: 576px) {
+    font-size: 6rem;
+  }
+
+  @media (min-width: 768px) {
+    font-size: 5rem;
+  }
+
+  @media (min-width: 992px) {
+    font-size: 5rem;
+  }
+
+  @media (min-width: 1200px) {
+    font-size: 6rem;
+  }
 }
 
 .text-primary {
-    color: $primary !important;
+  color: $primary !important;
 }
 
 .text-secondary {
-    color: $secondary !important;
+  color: $secondary !important;
 }
 
 .bg-grey {
-    background-color: $background;
+  background-color: $background;
 }
 
 .font-weight-bold {
-    font-family: 'Theinhardt' !important;
+  font-family: "Theinhardt" !important;
 }
 
 .nav-link {
-    font-family: 'Theinhardt' !important;
+  font-family: "Theinhardt" !important;
 }
 
-
 .card-body {
-    text-align: left;
+  text-align: left;
 }
 
 .section-leading-text {
-    font-family: 'Theinhardt';
-    font-weight: 400;
-    font-size: 32px;
+  font-family: "Theinhardt";
+  font-weight: 400;
+  font-size: 32px;
 }
 
 .full-width-image-container {
-    height: 400px;
-    position: relative;
+  height: 400px;
+  position: relative;
 }
-
 
 .full-width-image {
-    width: 100vw;
-    height: 400px;
-    background-position: bottom;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  width: 100vw;
+  height: 400px;
+  background-position: bottom;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.display-2, .display-3 {
-    text-transform: uppercase;
-    line-height: 0.75;
+.display-2,
+.display-3 {
+  text-transform: uppercase;
+  line-height: 0.75;
 }
 
 .btn {
-    font-size: 12px;
-    border-width: 2px;
+  font-size: 12px;
+  border-width: 2px;
 }
 
 .bg-primary {
-    background-color: $primary !important;
+  background-color: $primary !important;
 }
 
 .col-md-20 {
-    flex: 0 0 20%;
-    max-width: 20%;
+  flex: 0 0 20%;
+  max-width: 20%;
 }
 
 .bg-grey {
-    background-color: #F5F5F5;
+  background-color: #f5f5f5;
 }
 
 .modal-lg {
-    width: 90vw;
-    height: 90vh;
-    max-width: none !important;
+  width: 90vw;
+  height: 90vh;
+  max-width: none !important;
 }
 
 .modal-content {
-    height: 100%;
+  height: 100%;
 }
 
-p, .nav-item {
-    font-family: 'Theinhardt';
-    font-weight: 300;
+p,
+.nav-item {
+  font-family: "Theinhardt";
+  font-weight: 300;
 }
 
 .grayscale {
-    -webkit-filter: grayscale(100%);
-    filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
 }
 
 video {
-    height: 100%;
-    width: 100%;
+  height: 100%;
+  width: 100%;
 }
 
 .btn-outline-primary {
-    border-color: $primary;
-    color: $primary;
+  border-color: $primary;
+  color: $primary;
 }
 
 .row-fix {
-    margin-left: 0 !important;
-    margin-right: 0 !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
 }
 
 .carousel-control-next-icon {
-    height: 30px;
-    background-image: url("../img/arrow-right.png");
+  height: 30px;
+  background-image: url("../img/arrow-right.png");
 }
 
 .carousel-control-prev-icon {
-    height: 30px;
-    background-image: url("../img/arrow-left.png");
+  height: 30px;
+  background-image: url("../img/arrow-left.png");
 }
 
 .carousel-control-prev {
-    width: 10%;
+  width: 10%;
 }
 
 .carousel-control-next {
-    width: 10%;
+  width: 10%;
 }
 
+.custom-active {
+  font-weight: bold;
+}
 
-
-
+.form-control:focus {
+  box-shadow: none !important;
+}

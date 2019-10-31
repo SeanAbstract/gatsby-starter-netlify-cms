@@ -1,13 +1,14 @@
 import React from 'react'
 import styled from 'styled-components'
 import {Container, Row, Col, UncontrolledTooltip} from 'reactstrap'
+import {Link} from 'gatsby'
 
-import logo from '../../../static/img/snowball-logo-x.png'
+import logo from '../../../static/img/logo.png'
 import facebookIcon from '../../../static/img/facebook_blue.png'
 import linkedinIcon from '../../../static/img/linkedin_blue.png'
 import twitterIcon from '../../../static/img/twitter_blue.png'
 import wechatIcon from '../../../static/img/wechat_blue.png'
-import qrCode from '../../img/qr-code.jpg'
+import qrCode from '../../img/wechat-english.jpg'
 
 function Footer() {
   return (
@@ -18,20 +19,32 @@ function Footer() {
             <Row>
               <Col md={4} className="mb-3">
                 <div>
-                  <img src={logo} alt="" style={{maxHeight: '50px', maxWidth: '50px'}} />
+                  <img src={logo} alt="" style={{maxHeight: '50px', maxWidth: '125px'}} />
                 </div>
               </Col>
               <Col xs={4}>
-                <p className="mb-1">About</p>
-                <p className="mb-1">How it works</p>
-                <p className="mb-1">Prices</p>
-                <p className="mb-1">Downloads</p>
+                <Link to="/about" className="text-dark">
+                  <p className="mb-1">About</p>
+                </Link>
+                <Link to="/how-it-works" className="text-dark">
+                  <p className="mb-1">How it works</p>
+                </Link>
+                <Link to="/prices" className="text-dark">
+                  <p className="mb-1">Prices</p>
+                </Link>
+                <a href="https://www.snowballsecurities.com/download" className="text-dark">
+                  <p className="mb-1">Downloads</p>
+                </a>
               </Col>
               <Col xs={4}>
                 <p className="mb-1">Blog</p>
                 <p className="mb-1">Risk Disclosure</p>
-                <p className="mb-1">FAQs</p>
-                <p className="mb-1">Contact</p>
+                <Link to="/faq" className="text-dark">
+                  <p className="mb-1">FAQs</p>
+                </Link>
+                <Link to="/contact" className="text-dark">
+                  <p className="mb-1">Contact</p>
+                </Link>
               </Col>
             </Row>
           </Col>
@@ -52,7 +65,7 @@ function Footer() {
                     src={qrCode}
                     alt="qr"
                     style={{height: '100px', width: '100px'}}
-                    className="m-2"
+                    className="m-0"
                   />
                 </UncontrolledTooltip>
                 <img
@@ -81,7 +94,7 @@ function Footer() {
                   />
                 </a>
 
-                <a href="https://www.linkedin.com/company/snowballsecurities" target="_blank">
+                <a href="https://twitter.com/snowballsec?lang=en" target="_blank">
                   <img
                     src={twitterIcon}
                     alt=""
@@ -105,7 +118,7 @@ function Footer() {
         </Row>
 
         <Row>
-          <Col xs={12} md={9} className="mb-3" style={{lineHeight: 1.1}}>
+          <Col xs={12} md={9} className="mb-3" style={{lineHeight: 1}}>
             <StyledSmall>
               Snowball Securities®, 雪盈证券® are New Zealand registered trademarks of SNB Finance
               Holdings Limited (NZBN: 9429046386212) (&quot;SNB&quot;).
@@ -114,14 +127,13 @@ function Footer() {
             <StyledSmall>
               SNB is registered on the New Zealand Financial Service Providers Register
               (FSP:594389). SNB’s Financial Service Providers registration can be verified on the
-              Financial Service Providers Register.
+              Financial Service Providers Register. SNB is a member of the Financial Dispute
+              Resolution Scheme, which is an independent dispute resolution scheme. New Zealand.
+              SNB’s registered office is at Level 5, 25 Teed Street, Newmarket, Auckland 1023, New
+              Zealand.
             </StyledSmall>
             <br />
-            <StyledSmall>
-              SNB is a member of the Financial Dispute Resolution Scheme, which is an independent
-              dispute resolution scheme. New Zealand. SNB’s registered office is at Level 5, 25 Teed
-              Street, Newmarket, Auckland 1023, New Zealand.
-            </StyledSmall>
+            <StyledSmall />
           </Col>
         </Row>
 
@@ -152,8 +164,9 @@ const StyledContainer = styled(Container)`
 `
 
 const StyledSmall = styled.small`
-  line-height: 1.1;
-  color: #aaa;
+  line-height: 0.8;
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 10px;
 `
 
 const Trademark = styled.small`
