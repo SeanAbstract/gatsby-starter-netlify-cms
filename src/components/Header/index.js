@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import {Collapse, Navbar, NavbarToggler, NavbarBrand, Nav} from 'reactstrap'
 import {Link} from 'gatsby'
 
+import whiteLogo from '../../img/snowball-secure.png'
 import logo from '../../img/logo.png'
 import logoIcon from '../../../static/img/snowball-logo-x.png'
 
@@ -12,7 +13,7 @@ const data = [
   {name: 'About', href: '/about'},
   {name: 'How It Works', href: '/how-it-works'},
   {name: 'Prices', href: '/price'},
-  {name: 'Download', href: '/download'},
+  {name: 'Download', href: ''},
   {name: 'FAQs', href: '/faq'},
   {name: 'Contact', href: '/contact'},
 ]
@@ -71,7 +72,12 @@ export default class Header extends React.Component {
           <div className="container">
             <NavbarBrand>
               <Link to="/">
-                <Logo isOpen={isOpen} scrolled={scrolled} src={logo} alt="company logo" />
+                <Logo
+                  isOpen={isOpen}
+                  scrolled={scrolled}
+                  src={this.props.white ? whiteLogo : logo}
+                  alt="company logo"
+                />
               </Link>
             </NavbarBrand>
             <StyledNavbarToggler isOpen={this.state.isOpen} onClick={this.toggle} />

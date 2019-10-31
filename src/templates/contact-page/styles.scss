@@ -24,4 +24,9 @@ $primary: #006fbb;
         border-bottom: 2px solid $primary;
     }
 
+    .lead {
+        color: $primary;
+        font-weight: 500;
+    }
+
 }

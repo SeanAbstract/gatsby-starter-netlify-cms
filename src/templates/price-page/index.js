@@ -244,7 +244,7 @@ function PricePage({data}) {
   console.log(price)
 
   return (
-    <Layout>
+    <Layout white>
       <PricePageTemplate
         jumbotron={price.frontmatter.jumbotron}
         mainPitch={price.frontmatter.mainPitch}

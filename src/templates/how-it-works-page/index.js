@@ -54,7 +54,7 @@ const HowItWorks = ({data}: Props) => {
   console.log(hiwData)
 
   return (
-    <Layout>
+    <Layout white>
       <HowItWorksTemplate
         sections={hiwData.frontmatter.sections}
         headerImage={hiwData.frontmatter.headerImage}

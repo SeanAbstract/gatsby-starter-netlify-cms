@@ -212,7 +212,7 @@ const AboutPage = ({data}: Props) => {
   console.log(post)
 
   return (
-    <Layout>
+    <Layout white>
       <AboutPageTemplate
         mainpitch={post.frontmatter.mainpitch}
         tabs={post.frontmatter.tabs}

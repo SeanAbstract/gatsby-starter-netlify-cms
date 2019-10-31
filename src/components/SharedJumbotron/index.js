@@ -33,7 +33,7 @@ const Jumbotron = styled.div`
   background-attachment: fixed;
   background-position: top;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
 `
 
 export default SharedJumbotron

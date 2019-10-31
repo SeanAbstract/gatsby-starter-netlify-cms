@@ -3,13 +3,15 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 // @flow
 import React, {useState} from 'react'
+import styled from 'styled-components'
 import {graphql} from 'gatsby'
-import {UncontrolledCollapse} from 'reactstrap'
+import {Collapse} from 'reactstrap'
 
 import Layout from '../../components/Layout'
 import SharedJumbotron from '../../components/SharedJumbotron'
-import './styles.scss'
 import DownloadNow from '../../components/DownloadNow'
+import arrowRight from '../../img/arrow-right-blue.png'
+import './styles.scss'
 
 type FaqPageTemplateProps = {
   headerImage: any,
@@ -22,6 +24,29 @@ type FaqPageTemplateProps = {
     subText: string,
     image: any,
   },
+}
+
+const Accordion = ({ndx, cc}) => {
+  const [isOpen, setIsOpen] = useState(false)
+  const toggle = () => setIsOpen(!isOpen)
+  return (
+    <div className="accordion py-2" key={ndx}>
+      <button
+        onClick={toggle}
+        type="button"
+        className="w-100 p-0 text-left"
+        style={{backgroundColor: 'transparent', border: 'none'}}
+      >
+        <div className="d-flex justify-content-between px-3">
+          <h5 className="mb-2">{cc.question}</h5>
+          <Arrow src={arrowRight} alt="" active={isOpen} />
+        </div>
+        <Collapse toggler={`#toggler${ndx}`} className="mx-3" isOpen={isOpen}>
+          <p className="mb-0 text-dark">{cc.answer}</p>
+        </Collapse>
+      </button>
+    </div>
+  )
 }
 
 export function FaqPageTemplate(props: FaqPageTemplateProps) {
@@ -56,19 +81,7 @@ export function FaqPageTemplate(props: FaqPageTemplateProps) {
         <div className="row">
           <div className="col-md-9 mx-auto">
             {props.categories[currentNdx].questions.map((cc, ndx) => (
-              <div className="accordion py-2" key={ndx}>
-                <button
-                  id={`toggler${ndx}`}
-                  type="button"
-                  className="w-100 p-0 text-left"
-                  style={{backgroundColor: 'transparent', border: 'none'}}
-                >
-                  <h5 className="mb-2">{cc.question}</h5>
-                  <UncontrolledCollapse toggler={`#toggler${ndx}`}>
-                    <p className="mb-0 text-dark">{cc.question}</p>
-                  </UncontrolledCollapse>
-                </button>
-              </div>
+              <Accordion ndx={ndx} cc={cc} key={`${cc.question}${ndx}`} />
             ))}
           </div>
         </div>
@@ -93,7 +106,7 @@ function FaqPage({data}: Props) {
   console.log(faq)
 
   return (
-    <Layout>
+    <Layout white>
       <FaqPageTemplate
         headerImage={faq.frontmatter.headerImage}
         categories={faq.frontmatter.categories}
@@ -137,4 +150,10 @@ export const faqPageQuery = graphql`
       }
     }
   }
+`
+
+const Arrow = styled.img`
+  height: 20px;
+  transform: ${props => (!props.active ? 'rotate(180deg)' : 'rotate(90deg)')};
+  transistion: 0.2s ease-in;
 `

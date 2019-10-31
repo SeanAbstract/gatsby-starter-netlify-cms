@@ -17,9 +17,9 @@ import BlogRoll from '../../components/BlogRoll'
 import StockSection from '../../components/StocksCarousel/stockSection'
 import phoneFrame from '../../../static/img/snowball-empty-phone.png'
 import phoneGif from '../../../static/img/snowball-app-stock-financial_03.gif'
-import videoPoster from '../../img/video-poster.png'
+import videoPoster from '../../img/poster-2.png'
 import phoneVideo from '../../img/SPIN-700x1080-main.mp4'
-import videoSrcURL from '../../img/beach2.mp4'
+import videoSrcURL from '../../img/sailing.mp4'
 import arrowDown from '../../img/arrow-down.png'
 
 import 'slick-carousel/slick/slick.css'
@@ -146,7 +146,7 @@ export const IndexPageTemplate = ({
           >
             <track kind="captions" />
           </StyledVideo>
-          <Overlay className="overlay" />
+          <Overlay />
         </ImageContainer>
         <div className="text-right">
           <h1 className="big-text">Global Markets</h1>
@@ -592,7 +592,7 @@ const ImageContainer = styled.div`
 const Overlay = styled.div`
   height: 100%;
   width: 100%;
-  background-color: rgba(255, 255, 255, 0.15);
+  background-color: rgba(0, 0, 0, 0.15);
   position: absolute;
   top: 0;
   left: 0;

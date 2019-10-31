@@ -8,7 +8,7 @@ import './global.scss'
 import useSiteMetadata from './SiteMetadata'
 import Header from './Header'
 
-const TemplateWrapper = ({children}) => {
+const TemplateWrapper = ({children, white}) => {
   const {title, description} = useSiteMetadata()
   return (
     <div className="h-100">
@@ -37,7 +37,7 @@ const TemplateWrapper = ({children}) => {
         <meta property="og:url" content="/" />
         <meta property="og:image" content={`${withPrefix('/')}img/logo.jpg`} />
       </Helmet>
-      <Header />
+      <Header white={white} />
       <StyledMain>{children}</StyledMain>
       <Footer />
     </div>

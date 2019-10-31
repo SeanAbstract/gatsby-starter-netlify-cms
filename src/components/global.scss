@@ -229,6 +229,7 @@ video {
   font-weight: bold;
 }
 
-.form-control:focus {
+.form-control:focus, button:focus {
+  outline: none !important;
   box-shadow: none !important;
 }

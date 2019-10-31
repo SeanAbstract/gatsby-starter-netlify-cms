@@ -10,6 +10,7 @@ import facebookIcon from '../../img/facebook.png'
 import linkedinIcon from '../../img/linkedin.png'
 import twitterIcon from '../../img/twitter.png'
 import wechatIcon from '../../img/wechat.png'
+import googleMaps from '../../img/google-maps.png'
 
 type Props = {
   headerImage: any,
@@ -58,7 +59,7 @@ function ContactPageTemplate(props: Props) {
                   <p className="lead mb-1">{contact.title}</p>
                   <p className="mb-0">{contact.subtitle}</p>
                   <p className="mb-0">{contact.hours}</p>
-                  <p className="mb-0">
+                  <p className="mb-0 font-weight-bold">
                     <strong>{contact.phoneNumber}</strong>{' '}
                   </p>
                 </div>
@@ -66,9 +67,22 @@ function ContactPageTemplate(props: Props) {
             </div>
             <div className="row w-75 pl-5">
               {props.informationSection.offices.map(office => (
-                <div className="col-8">
-                  <p className="lead mb-1">{office.officeName}</p>
-                  <p className="mb-0">{office.address}</p>
+                <div className="col-6 d-flex align-items-end">
+                  <div>
+                    <p className="lead mb-1">{office.officeName}</p>
+
+                    <p className="mb-0">
+                      {office.address}
+                      <span>
+                        <img
+                          src={googleMaps}
+                          alt=""
+                          style={{height: '30px'}}
+                          className="ml-1 mb-2"
+                        />
+                      </span>
+                    </p>
+                  </div>
                 </div>
               ))}
             </div>
@@ -114,24 +128,28 @@ function ContactPageTemplate(props: Props) {
               </div>
             </div>
             <div className="d-flex align-items-center">
-              <img
-                src={facebookIcon}
-                alt=""
-                style={{height: 30, width: 30, objectFit: 'contain'}}
-                className="mr-3"
-              />
+              <a href="https://www.facebook.com/snowballsecurities" target="_blank">
+                <img
+                  src={facebookIcon}
+                  alt=""
+                  style={{height: 30, width: 30, objectFit: 'contain'}}
+                  className="mr-3"
+                />
+              </a>
               <img
                 src={wechatIcon}
                 alt=""
                 style={{height: 30, width: 30, objectFit: 'contain'}}
                 className="mr-3"
               />
-              <img
-                src={linkedinIcon}
-                alt=""
-                style={{height: 30, width: 30, objectFit: 'contain'}}
-                className="mr-3"
-              />
+              <a href="https://www.linkedin.com/company/snowballsecurities" target="_blank">
+                <img
+                  src={linkedinIcon}
+                  alt=""
+                  style={{height: 30, width: 30, objectFit: 'contain'}}
+                  className="mr-3"
+                />
+              </a>
             </div>
           </div>
         </div>
@@ -144,15 +162,15 @@ function ContactPageTemplate(props: Props) {
             <div className="col-md-3">
               <h3 className="mb-3">Contact Us</h3>
               <div>
-                <p className="lead mb-1">Customer Inquiries</p>
+                <p className="lead mb-1 text-dark">Customer Inquiries</p>
                 <p className="text-primary">service@snowballsecurities.com</p>
               </div>
               <div>
-                <p className="lead mb-1">Media Inquiries</p>
+                <p className="lead mb-1 text-dark">Media Inquiries</p>
                 <p className="text-primary">service@snowballsecurities.com</p>
               </div>
               <div>
-                <p className="lead mb-1">Business Cooperation</p>
+                <p className="lead mb-1 text-dark">Business Cooperation</p>
                 <p className="text-primary">service@snowballsecurities.com</p>
               </div>
             </div>
@@ -163,7 +181,7 @@ function ContactPageTemplate(props: Props) {
                 <div className="col-md-6">
                   <div className="form-group">
                     <label htmlFor="exampleFormControlInput1">Name</label>
-                    <input type="text" className="form-control" placeholder="John Doe" />
+                    <input type="text" className="form-control" placeholder="John Smith" />
                   </div>
                 </div>
                 <div className="col-md-6">
@@ -204,7 +222,7 @@ function ContactPage({data}) {
   console.log(contact)
 
   return (
-    <Layout>
+    <Layout white>
       <ContactPageTemplate
         headerImage={contact.frontmatter.headerImage}
         informationSection={contact.frontmatter.informationSection}

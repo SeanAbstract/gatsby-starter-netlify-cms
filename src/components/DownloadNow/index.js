@@ -21,7 +21,10 @@ function DownloadNow({mainText, subText, image}: Props) {
 
     if (
       (document.body.scrollTop > 8600 && document.body.scrollTop < 8800) ||
-      (document.documentElement.scrollTop > 8600 && document.documentElement.scrollTop < 8800)
+      (document.documentElement.scrollTop > 8600 && document.documentElement.scrollTop < 8800) ||
+      (document.body.scrollTop > 150 && document.body.scrollTop < 750) ||
+      (document.documentElement.scrollTop > 150 && document.documentElement.scrollTop < 750) ||
+      (document.documentElement.scrollTop > 3200 && document.documentElement.scrollTop < 3500)
     ) {
       const currentVideo = document.getElementById('downloadNowPhone')
       currentVideo.play()
