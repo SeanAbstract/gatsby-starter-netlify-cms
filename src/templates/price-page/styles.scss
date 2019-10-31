@@ -4,6 +4,7 @@
     p {
         font-size: 13px;
         margin-bottom: 0;
+        line-height: 1.3em;
     }
 
     .card {
@@ -12,6 +13,10 @@
         line-height: 1;
         box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.17);
         min-height: 277px;
+    }
+    
+    .card-body h5 {
+      text-align: left;
     }
 
     .price-page-h4-wrapper {

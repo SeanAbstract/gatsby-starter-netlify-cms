@@ -135,11 +135,11 @@ export function PricePageTemplate({
                           {/* <p className="mb-0">
                             {packages[currentPackage].hk.commission.description}
                           </h5> */}
-                          <small className="mb-0">No Commission on orders below HKD 60,000</small>
-                          <small className="mb-0">
+                          <p className="mb-0">No Commission on orders below HKD 60,000</p>
+                          <p className="mb-0">
                             Pay <strong className="text-primary">0.03%</strong> per share on orders
                             above 60,000 HKD
-                          </small>
+                          </p>
                         </div>
                       </div>
                       <div className="row justify-content-between align-items-center mb-3">
@@ -193,11 +193,10 @@ export function PricePageTemplate({
                           {/* <p className="mb-0">
                             {packages[currentPackage].hk.commission.description}
                           </h5> */}
-                          <p className="mb-0">No Commission on orders below HKD 60,000</p>
-                          <small className="mb-0" style={{fontSize: '8px'}}>
+                          <p className="mb-0">No Commission on orders below HKD 60,000
                             Pay <strong className="text-primary">0.03% </strong> per share on orders
                             above 60,000 HKD
-                          </small>
+                          </p>
                         </div>
                       </div>
                       <div className="row justify-content-between align-items-center mb-3">
