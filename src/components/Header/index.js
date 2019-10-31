@@ -64,8 +64,6 @@ export default class Header extends React.Component {
   }
 
   render() {
-    console.log(window.location.pathname.split('/')[1], data)
-
     const {scrolled, isOpen} = this.state
     return (
       <>
