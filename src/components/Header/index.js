@@ -26,7 +26,7 @@ export default class Header extends React.Component {
     this.state = {
       isOpen: false,
       scrolled: false,
-      currentPath: '/en',
+      currentPath: '/',
     }
   }
 
@@ -35,11 +35,13 @@ export default class Header extends React.Component {
 
     if (typeof window !== 'undefined') {
       // it's safe to use window now
-      let path = window.location.pathname.split('/')[1]
+      const path = window.location.pathname.split('/')[1]
 
-      if (path !== 'en' || path !== 'zh') {
-        path = 'en'
-      }
+      // if (path !== 'en' || path !== 'zh') {
+      //   path = 'en'
+      // }
+
+      // path = 'en'
 
       this.setState({currentPath: path})
     }
@@ -82,9 +84,7 @@ export default class Header extends React.Component {
                     <Link
                       to={link.href}
                       className={`nav-link ${
-                        `/${window.location.pathname.split('/')[1]}` === `${link.href}`
-                          ? 'custom-active'
-                          : ''
+                        `/${this.state.currentPath}` === `${link.href}` ? 'custom-active' : ''
                       }`}
                     >
                       {link.name}
