@@ -47,10 +47,10 @@ function DownloadNow({mainText, subText, image}: Props) {
             <h1 className="text-primary display-3">{mainText}</h1>
             <h3 className="big-subtitle text-dark">{subText}</h3>
             <div className="d-flex mt-3">
-              <a href="https://apps.apple.com/cn/app/xy-trade/id1209930465?l=en">
+              <a href="https://play.google.com/store/apps/details?id=com.snowballfinance.android">
                 <img src={googlePlayStore} alt="" style={{maxWidth: '130px'}} className="mr-3" />
               </a>
-              <a href="https://play.google.com/store/apps/details?id=com.snowballfinance.android">
+              <a href="https://apps.apple.com/cn/app/xy-trade/id1209930465?l=en">
                 <img src={appleIcon} alt="" style={{maxWidth: '130px'}} />
               </a>
             </div>
