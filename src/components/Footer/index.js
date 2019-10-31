@@ -147,7 +147,7 @@ const StyledFooter = styled.footer`
 
 const StyledContainer = styled(Container)`
   line-height: 1.1;
-  padding: 0 3.75rem !important;
+  padding: 50px 1rem !important;
   /* max-width: 90% !important; */
 `
 
