@@ -72,13 +72,17 @@ investors:
     brandLogo: /img/ant-financial.png
 partners:
   - brandDescription: >-
-      ASB Bank, commonly stylised as ASB, is a bank owned by Commonwealth Bank
-      of Australia, operating in New Zealand.
+      A U.S.-based brokerage firm. It operates the largest electronic trading
+      platform in the U.S. by number of daily average revenue trades.
     brandLogo: /img/sequoia.png
   - brandDescription: >-
       A multinational banking and financial services company headquartered in
       Melbourne, Australia. ANZ is the largest bank in New Zealand.
     brandLogo: /img/morning-side.png
+  - brandDescription: >-
+      ASB Bank, commonly stylised as ASB, is a bank owned by Commonwealth Bank
+      of Australia, operating in New Zealand.
+    brandLogo: /img/renren.png
   - brandDescription: >-
       A multinational banking and financial services company headquartered in
       Melbourne, Australia. ANZ is the largest bank in New Zealand.
@@ -86,10 +90,6 @@ partners:
   - brandDescription: >-
       China Construction Bank Corporation (CCB) is one of the "big four" banks
       in the People's Republic of China. 
-    brandLogo: /img/renren.png
-  - brandDescription: >-
-      World leading venture capital firm, which has backed companies that now
-      control $1.4 trillion of combined stock market value.
     brandLogo: /img/sequoia.png
   - brandDescription: >-
       Founded in 1986, by the Chan family of Hong Kong, to make private equity
