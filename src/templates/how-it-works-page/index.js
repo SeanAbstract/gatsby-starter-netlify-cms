@@ -76,7 +76,7 @@ export const howItWorksPageQuery = graphql`
             }
           }
         }
-        buttonText
+
         sections {
           title
           body
