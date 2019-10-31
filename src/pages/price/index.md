@@ -4,6 +4,7 @@ jumbotron:
   description: Structure
   headerImage: /img/second-splash.jpg
   title: Price
+mainPitch: "Competitive rates, transparent fees, choose the price option that’s right for you."
 lowCommissionPackage:
   hk:
     commission:
