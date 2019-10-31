@@ -72,21 +72,20 @@ investors:
     brandLogo: /img/ant-financial.png
 partners:
   - brandDescription: >-
-      World leading venture capital firm, which has backed companies that now
-      control $1.4 trillion of combined stock market value.
+      ASB Bank, commonly stylised as ASB, is a bank owned by Commonwealth Bank
+      of Australia, operating in New Zealand.
     brandLogo: /img/sequoia.png
   - brandDescription: >-
-      Founded in 1986, by the Chan family of Hong Kong, to make private equity
-      and venture capital investments.
+      A multinational banking and financial services company headquartered in
+      Melbourne, Australia. ANZ is the largest bank in New Zealand.
     brandLogo: /img/morning-side.png
   - brandDescription: >-
-      A Chinese social networking service similar to Facebook. In February 2011,
-      Renren made a pre-IPO announcement that it had 160 million registered
-      users.
+      A multinational banking and financial services company headquartered in
+      Melbourne, Australia. ANZ is the largest bank in New Zealand.
     brandLogo: /img/renren.png
   - brandDescription: >-
-      The highest valued FinTech company in the world, and the world's most
-      valuable unicorn (start-up) company, with a valuation of US$150 billion.
+      China Construction Bank Corporation (CCB) is one of the "big four" banks
+      in the People's Republic of China. 
     brandLogo: /img/renren.png
   - brandDescription: >-
       World leading venture capital firm, which has backed companies that now
