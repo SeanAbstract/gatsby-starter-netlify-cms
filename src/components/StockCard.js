@@ -2,14 +2,16 @@
 // @flow
 import React from 'react'
 import styled from 'styled-components'
-import {Card, CardImg, CardBody, CardTitle, Row, Container, Col} from 'reactstrap'
+import {CardImg, CardBody, CardTitle, Row, Container, Col} from 'reactstrap'
 import makeCarousel from 'react-reveal/makeCarousel'
 import Fade from 'react-reveal/Fade'
 import Slide from 'react-reveal/Slide'
 
-import facebookIcon from '../img/facebook.png'
-import linkedinIcon from '../img/linkedin.png'
-import googleLogo from '../img/google-logo.jpg'
+import facebookIcon from '../img/ico-facebook.png'
+import amazonIcon from '../img/ico-amazon.png'
+import netflixIcon from '../img/ico-netflix.png'
+import appleIcon from '../img/ico-apple.png'
+import googleLogo from '../img/ico-google.png'
 
 type Props = {
   icon: string,
@@ -38,12 +40,20 @@ const StockCard = (props: Props) => {
       return facebookIcon
     }
 
-    if (abbreviation == 'LI') {
-      return linkedinIcon
+    if (abbreviation == 'NFLX') {
+      return netflixIcon
+    }
+
+    if (abbreviation == 'AMZN') {
+      return amazonIcon
     }
 
     if (abbreviation == 'GGL') {
       return googleLogo
+    }
+
+    if (abbreviation == 'AAPL') {
+      return appleIcon
     }
   }
 
@@ -78,8 +88,9 @@ const StockCard = (props: Props) => {
                       alt="Card image cap"
                       style={{
                         margin: 'auto',
-                        height: '50px',
-                        width: '50px',
+                        height: '100px',
+                        width: '100px',
+                        marginTop: '-15px',
                         objectFit: 'contain',
                         zIndex: 100,
                       }}

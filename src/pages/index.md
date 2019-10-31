@@ -66,15 +66,15 @@ realTimeStockSection:
       percent: "0.05%"
       abbreviation: "FB"
       bgColor: 'rgba(59,89,152, 1)'
-
-    - stock: "Linkedin"
+      
+    - stock: "Apple"
       image: /img/linkedin_blue.png
       value: "107.39"
       rate: "0.35"
       percent: "0.15%"
-      abbreviation: "LI"
-      bgColor: 'rgba(40,103,178, 1)'
-      
+      abbreviation: "AAPL"
+      bgColor: 'rgba(200,200,200, 1)'
+
     - stock: "Facebook"
       image: /img/facebook_blue.png
       value: "187.39"
@@ -83,29 +83,30 @@ realTimeStockSection:
       abbreviation: "FB"
       bgColor: 'rgba(59,89,152, 1)'
 
-    - stock: "Linkedin"
+    - stock: "Apple"
       image: /img/linkedin_blue.png
       value: "107.39"
       rate: "0.35"
       percent: "0.15%"
-      abbreviation: "LI"
-      bgColor: 'rgba(40,103,178, 1)'
+      abbreviation: "AAPL"
+      bgColor: 'rgba(200,200,200, 1)'
 
-    - stock: "Google"
+    - stock: "Amazon"
       image: /img/facebook_blue.png
       value: "187.39"
       rate: "0.95"
       percent: "0.05%"
-      abbreviation: "GGL"
-      bgColor: 'rgba(255, 255, 255, 1)'
+      abbreviation: "AMZN"
+      bgColor: 'rgba(30, 42, 54, 1)'
 
-    - stock: "Linkedin"
+    - stock: "Netflix"
       image: /img/linkedin_blue.png
       value: "107.39"
       rate: "0.35"
       percent: "0.15%"
-      abbreviation: "LI"
-      bgColor: 'rgba(40,103,178, 1)'
+      abbreviation: "NFLX"
+      bgColor: 'rgba(0,0,0, 1)'
+    
 
 blogRoll:
   - title: Low commission/margin rate
