@@ -127,7 +127,7 @@ export function PricePageTemplate({
                       style={{borderBottomLeftRadius: 0, borderBottomRightRadius: 0}}
                     />
                     <div className="card-body">
-                      <div className="row justify-content-between align-items-center mb-3 text-right">
+                      <div className="row justify-content-between align-items-center text-right">
                         <div className="col-4">
                           <h5>{packages[currentPackage].hk.commission.title}</h5>
                         </div>
@@ -142,7 +142,8 @@ export function PricePageTemplate({
                           </p>
                         </div>
                       </div>
-                      <div className="row justify-content-between align-items-center mb-3">
+                      <div class="price-page-sep my-3"></div>
+                      <div className="row justify-content-between align-items-center">
                         <div className="col-6">
                           <h5 className="mb-0">
                             {packages[currentPackage].hk.platformUsageFee.title}
@@ -155,6 +156,7 @@ export function PricePageTemplate({
                           </p>
                         </div>
                       </div>
+                      <div class="price-page-sep my-3"></div>
                       <div className="row justify-content-between align-items-center">
                         <div className="col-6">
                           <h5 className="mb-0">
@@ -185,7 +187,7 @@ export function PricePageTemplate({
                       style={{borderBottomLeftRadius: 0, borderBottomRightRadius: 0}}
                     />
                     <div className="card-body">
-                      <div className="row justify-content-between align-items-center mb-3">
+                      <div className="row justify-content-between align-items-center">
                         <div className="col-4">
                           <h5>{packages[currentPackage].hk.commission.title}</h5>
                         </div>
@@ -199,18 +201,21 @@ export function PricePageTemplate({
                           </p>
                         </div>
                       </div>
-                      <div className="row justify-content-between align-items-center mb-3">
+                      <div class="price-page-sep my-3"></div>
+                      <div className="row justify-content-between align-items-center">
                         <div className="col-6">
                           <h5 className="mb-0">
                             {packages[currentPackage].hk.platformUsageFee.title}
                           </h5>
                         </div>
+                        <hr/>
                         <div className="col-4 text-right">
                           <p className="mb-0">
                             <strong className="text-primary">HKD 18</strong> per deal
                           </p>
                         </div>
                       </div>
+                      <div class="price-page-sep my-3"></div>
                       <div className="row justify-content-between align-items-center">
                         <div className="col-6">
                           <h5 className="mb-0">
