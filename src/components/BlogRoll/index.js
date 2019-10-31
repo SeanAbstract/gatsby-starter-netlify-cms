@@ -1,5 +1,5 @@
 // @flow
-import React from 'react'
+import React, {useState, useEffect, useRef} from 'react'
 import PropTypes from 'prop-types'
 import {Link} from 'gatsby'
 import styled from 'styled-components'
@@ -15,7 +15,7 @@ import './styles.scss'
 const settings = {
   dots: false,
   infinite: true,
-  speed: 500,
+  speed: 1000,
   slidesToShow: 3,
   slidesToScroll: 1,
   autoplay: true,
@@ -87,49 +87,92 @@ const content = [
 //     </Slider>
 //   )
 // }
+class BlogRoll extends React.Component {
+  state = {
+    currentNdx: 0,
+    isHovering: false,
+  }
 
-const BlogRoll = props => (
-  <Slider {...settings}>
-    {content.map(post => {
-      const {title, description, featuredImage} = post
-      return (
-        <StyledCol>
-          <OuterContainer>
-            <ImgContainer>
-              {featuredImage && (
-                <img
-                  src={featuredImage}
-                  style={{height: '100%', objectFit: 'cover', width: '100%'}}
-                />
-              )}
-              <Overlay />
-            </ImgContainer>
-            <div className="container blog-inner-container">
-              <div className="" style={{marginTop: '20%'}}>
-                <h5 className="lead mb-2">{title}</h5>
-                <small className="mb-3 blog-desc mb-3">{description}</small>
-                <div className="mt-5">
-                  <Link to={'/how-it-works' || post.fields.slug}>
-                    <StyledButton
-                      className="btn btn-outline-primary rounded-pill "
-                      type="button"
-                      style={{borderColor: 'white', color: 'white'}}
+  componentDidMount() {
+    setInterval(() => {
+      this.setState(prevState => ({currentNdx: (prevState.currentNdx + 1) % 3}))
+    }, 2000)
+  }
+
+  render() {
+    return (
+      <Slider {...settings}>
+        {content.map((post, ndx) => {
+          const {title, description, featuredImage} = post
+          return (
+            <StyledCol
+              className={`${
+                !this.state.isHovering && this.state.currentNdx === ndx ? 'card-hover' : ''
+              }`}
+              onMouseEnter={() => {
+                this.setState({isHovering: true})
+              }}
+              onMouseLeave={() => {
+                this.setState({isHovering: false})
+              }}
+            >
+              <OuterContainer>
+                <ImgContainer className="img-hover">
+                  {featuredImage && (
+                    <img
+                      src={featuredImage}
+                      style={{height: '100%', objectFit: 'cover', width: '100%'}}
+                      className={`${
+                        !this.state.isHovering && this.state.currentNdx === ndx ? 'img-hover' : ''
+                      }`}
+                    />
+                  )}
+                  <Overlay />
+                </ImgContainer>
+                <div className="container blog-inner-container">
+                  <div className="" style={{marginTop: '20%'}}>
+                    <h5
+                      className={`lead mb-2 ${
+                        !this.state.isHovering && this.state.currentNdx === ndx ? 'small-hover' : ''
+                      }`}
                     >
-                      Get Started
-                    </StyledButton>
-                  </Link>
+                      {title}
+                    </h5>
+                    <small
+                      className={`mb-3 blog-desc mb-3 ${
+                        !this.state.isHovering && this.state.currentNdx === ndx ? 'small-hover' : ''
+                      }`}
+                    >
+                      {description}
+                    </small>
+                    <div className="mt-5">
+                      <Link to={'/how-it-works' || post.fields.slug}>
+                        <StyledButton
+                          className={`btn btn-outline-primary rounded-pill button-hover ${
+                            !this.state.isHovering && this.state.currentNdx === ndx
+                              ? 'button-hover'
+                              : ''
+                          }`}
+                          type="button"
+                          style={{borderColor: 'white', color: 'white'}}
+                        >
+                          Get Started
+                        </StyledButton>
+                      </Link>
+                    </div>
+                  </div>
+                  <div className="mt-5">
+                    <img src={arrowRight} alt="" style={{height: '30px'}} />
+                  </div>
                 </div>
-              </div>
-              <div className="mt-5">
-                <img src={arrowRight} alt="" style={{height: '30px'}} />
-              </div>
-            </div>
-          </OuterContainer>
-        </StyledCol>
-      )
-    })}
-  </Slider>
-)
+              </OuterContainer>
+            </StyledCol>
+          )
+        })}
+      </Slider>
+    )
+  }
+}
 
 BlogRoll.propTypes = {
   data: PropTypes.shape({

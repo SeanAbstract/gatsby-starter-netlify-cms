@@ -1,0 +1,21 @@
+.card-hover {
+    color: white !important;
+    margin-top: -2rem;
+    transition: 0.3s;
+
+    box-shadow: 0 11px 16px 0 rgba(0, 0, 0, 0.3);
+    .img-hover {
+        opacity: 1;
+
+    }
+    
+    .button-hover {
+        opacity: 1;
+
+    }
+
+    .small-hover {
+        color: white !important;
+       
+    }
+}
