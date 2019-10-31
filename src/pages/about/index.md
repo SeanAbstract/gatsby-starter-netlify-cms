@@ -69,7 +69,7 @@ investors:
   - brandDescription: >-
       The highest valued FinTech company in the world, and the world's most
       valuable unicorn (start-up) company, with a valuation of US$150 billion.
-    brandLogo: /img/renren.png
+    brandLogo: /img/ant-financial.png
 partners:
   - brandDescription: >-
       World leading venture capital firm, which has backed companies that now
