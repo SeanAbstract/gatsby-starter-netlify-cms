@@ -118,7 +118,6 @@ $primary: #006fbb;
     }
 
     .feature-section {
-        min-height: 90vh;
         background-color: white ;
 
         .gif-phone {
@@ -127,6 +126,48 @@ $primary: #006fbb;
             top: 79px;
             height: 350px;
             left: 37px;
+        }
+
+        > .row {
+            min-height: 200vh;
+            width: 100%;
+        }
+
+        .info-phone-container {
+            padding-top: 40px;
+            padding-bottom: 40px;
+            height: 100vh;
+            position: sticky;
+            top: 0;
+
+            > .phone-frame {
+                width: 250px;
+                height: 480px;
+                background-size: cover;
+                background-position: center;
+                background-image: url("../../img/snowball-empty-phone.png");
+                position: absolute;
+                top: calc( 50% - 240px);
+                left: calc( 50% - 125px);
+            }
+
+            > .phone-display {
+                width: 200px;
+                height: 350px;
+                background-size: cover;
+                background-position: center;
+                background-image: url("../../img/snowball-app-market-quotes.gif");
+                position: absolute;
+                top: calc( 50% - 160px);
+                left: calc( 50% - 100px);
+                transition: 1s;
+            }
+
+            &.background-two {
+                > .phone-display {
+                    background-image: url("../../img/snowball-app-stock-financial_03.gif") !important;
+                }
+            }
         }
     }
 

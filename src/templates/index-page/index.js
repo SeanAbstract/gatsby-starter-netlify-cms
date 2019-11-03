@@ -255,38 +255,49 @@ export const IndexPageTemplate = ({
         </section>
 
         {/* Make Informed Decisions or 4th */}
-        <section className="feature-section container-fluid d-flex justify-content-center align-items-center">
-          <div className="row justify-content-around align-items-center h-100">
-            <div className="col-md-3 ml-auto d-none d-md-block">
+        <section className="feature-section container-fluid d-flex justify-content-center">
+          <div id="information-trigger" />
+          <div className="row justify-content-around h-100">
+            <div className="col-md-4 ml-auto d-none d-md-block">
               <Controller>
-                <div id="section-trigger-2" />
                 <Scene
-                  triggerElement="#section-trigger-2"
+                  triggerElement="#information-trigger"
                   duration={1600}
                   triggerHook={0}
-                  offset={700}
+                  offset={900}
                   classToggle="background-two"
                 >
-                  <div>
-                    <img
-                      src={phoneFrame}
-                      alt=""
-                      style={{maxWidth: '250px'}}
-                      className="img-fluid"
-                    />
-                    <img
-                      src={phoneGif}
-                      alt=""
-                      className="img-fluid gif-phone"
-                      style={{maxWidth: '235px'}}
-                    />
+                  <div className="info-phone-container">
+                    <div className="phone-frame" />
+                    <div className="phone-display" />
                   </div>
                 </Scene>
               </Controller>
             </div>
             {/* <div className="col-md-1" /> */}
-            <div className="col-md-3 mr-auto ml-3">
+            <div className="col-md-4 mr-auto ml-3">
               <Controller>
+                {stockSection.stocks.map(stock => {
+                  return (
+                    <Scene duration={400} pin triggerHook={0}>
+                      <div
+                        className="d-flex flex-column justify-content-center"
+                        style={{height: '100vh'}}
+                      >
+                        <h1 className="text-primary display-2 mb-3">{featureSection.mainText}</h1>
+                        <h5 className="mb-2">{featureSection.subText}</h5>
+                        <p>{featureSection.description}</p>
+                        <Link to="/how-it-works">
+                          <button className="btn btn-outline-primary rounded-pill" type="button">
+                            {featureSection.buttonText}
+                          </button>
+                        </Link>
+                      </div>
+                    </Scene>
+                  )
+                })}
+              </Controller>
+              {/* <Controller>
                 <Scene duration={400} pin triggerHook={0}>
                   <Fade bottom>
                     <h1 className="text-primary display-2 mb-3">{featureSection.mainText}</h1>
@@ -299,7 +310,7 @@ export const IndexPageTemplate = ({
                     </Link>
                   </Fade>
                 </Scene>
-              </Controller>
+              </Controller> */}
             </div>
           </div>
         </section>
