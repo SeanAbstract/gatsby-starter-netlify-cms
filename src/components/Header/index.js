@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import {Collapse, Navbar, NavbarToggler, NavbarBrand, Nav} from 'reactstrap'
 import {Link} from 'gatsby'
 
+import './styles.scss'
 import whiteLogo from '../../img/snowball-secure.png'
 import logo from '../../img/logo.png'
 import logoIcon from '../../../static/img/snowball-logo-x.png'
@@ -10,12 +11,30 @@ import logoIcon from '../../../static/img/snowball-logo-x.png'
 // import logoIcon from '../../images/icon-logo.png'
 
 const data = [
-  {name: 'About', href: '/about'},
-  {name: 'How It Works', href: '/how-it-works'},
-  {name: 'Prices', href: '/price'},
-  {name: 'Download', href: ''},
-  {name: 'FAQs', href: '/faq'},
-  {name: 'Contact', href: '/contact'},
+  {
+    name: 'About',
+    href: '/about',
+  },
+  {
+    name: 'How It Works',
+    href: '/how-it-works',
+  },
+  {
+    name: 'Prices',
+    href: '/price',
+  },
+  {
+    name: 'Download',
+    href: '',
+  },
+  {
+    name: 'FAQs',
+    href: '/faq',
+  },
+  {
+    name: 'Contact',
+    href: '/contact',
+  },
 ]
 
 export default class Header extends React.Component {
@@ -44,7 +63,9 @@ export default class Header extends React.Component {
 
       // path = 'en'
 
-      this.setState({currentPath: path})
+      this.setState({
+        currentPath: path,
+      })
     }
   }
 
@@ -104,7 +125,7 @@ export default class Header extends React.Component {
           </div>
         </StyledNavbar>
         <ScrolledNavbar isOpen={isOpen} scrolled={scrolled} light expand="md" className="fixed-top">
-          <div className="container">
+          <div className="container mr-2">
             <NavbarBrand>
               <Link to="/">
                 <LogoIcon isOpen={isOpen} scrolled={scrolled} src={logoIcon} alt="company logo" />
@@ -112,7 +133,7 @@ export default class Header extends React.Component {
             </NavbarBrand>
             <StyledNavbarToggler isOpen={this.state.isOpen} onClick={this.toggle} />
             <StyledCollapse isOpen={this.state.isOpen} navbar>
-              <Nav className="ml-auto" navbar>
+              <Nav className="ml-auto scroll-nav pr-5" navbar>
                 {data.map(link =>
                   link.href !== '' ? (
                     <Link to={link.href} className="nav-link">
@@ -127,6 +148,18 @@ export default class Header extends React.Component {
               </Nav>
             </StyledCollapse>
           </div>
+          <LangToggleContainer>
+            <div className="mb-0 bg-primary border-primary text-light">
+              <p className="mb-0" style={{fontWeight: '500'}}>
+                A
+              </p>
+            </div>
+            <div className="mb-0 border-primary" style={{paddingTop: '3.5px'}}>
+              <p className="mb-0 text-primary " style={{fontWeight: '500'}}>
+                中
+              </p>
+            </div>
+          </LangToggleContainer>
         </ScrolledNavbar>
       </>
     )
@@ -190,6 +223,7 @@ const StyledCollapse = styled(Collapse)`
 `
 const ScrolledNavbar = styled(Navbar)`
   width: 100%;
+  height: 40px;
   top: ${props => (props.scrolled ? '0px' : '-100px')} !important;
   background-color: white;
   padding-top: 0;
@@ -211,5 +245,25 @@ const ScrolledNavbar = styled(Navbar)`
 
   @media (max-width: 767px) {
     background-color: ${props => (props.isOpen ? 'rgba(0,111,187,0.9)' : 'white')};
+  }
+`
+
+const LangToggleContainer = styled.div`
+  right: 0;
+  top: 0;
+  display: flex;
+
+  div {
+    font-size: 12px;
+    border-radius: 50px;
+    border-color: ${props => props.theme.primary};
+    border: 1px solid;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 5px;
+    padding-top: 2.75px;
   }
 `
