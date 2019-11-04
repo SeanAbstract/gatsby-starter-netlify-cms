@@ -11,11 +11,12 @@ type Props = {
 function CompanyCard(props: Props) {
   return (
     <div className="col-md-4 col-lg-3 col-12 text-left mb-5">
-      <div style={{height: '50px', width: '150px'}}>
+      <div style={{width: '150px'}}>
         <PreviewCompatibleImage
           imageInfo={props.brandLogo}
           alt="Brand Logo"
-          style={{maxWidth: '150px'}}
+          style={{}}
+          className="mb-3"
         />
       </div>
 

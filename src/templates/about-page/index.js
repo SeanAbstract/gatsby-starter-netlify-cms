@@ -1,8 +1,9 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 // @flow
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import {graphql} from 'gatsby'
 import * as showdown from 'showdown'
+import styled from 'styled-components'
 
 import Layout from '../../components/Layout'
 import PreviewCompatibleImage from '../../components/PreviewCompatibleImage'
@@ -40,6 +41,15 @@ const images = [mobileLogo, peopleLogo, businessLogo]
 export const AboutPageTemplate = (props: AboutTemplate) => {
   const [currentNdx, setCurrentNdx] = useState(0)
   const [tabDescription, setTabDescription] = useState(props.tabs[0].description)
+  const [currentHover, setCurrentHover] = useState(null)
+  const [fading, setFading] = useState(null)
+
+  useEffect(() => {
+    setFading(true)
+    setTimeout(() => {
+      setFading(false)
+    }, 50)
+  }, [currentNdx])
 
   function renderDescription() {
     const converter = new showdown.Converter()
@@ -86,26 +96,39 @@ export const AboutPageTemplate = (props: AboutTemplate) => {
                 <div className="row justify-content-around">
                   {props.tabs.map((tab, ndx) => (
                     <div
-                      className="col-md-3 d-flex justify-content-center align-items-center flex-column mb-5"
+                      className="col-md-3 d-flex justify-content-center align-items-center flex-column mb-5 "
                       key={tab.title}
-                      style={{borderBottom: ndx === currentNdx ? '2px solid #006FBB' : ''}}
+                      style={{
+                        borderBottom: ndx === currentNdx ? '2px solid #006FBB' : '',
+                      }}
                       onClick={() => {
                         setTabDescription(tab.description)
                         setCurrentNdx(ndx)
                       }}
                     >
-                      <PreviewCompatibleImage
-                        imageInfo={images[ndx]}
-                        style={{height: '100px', width: '100px'}}
-                        className={`mb-4 ${ndx !== currentNdx ? 'grayscale' : ''}`}
-                      />
+                      <div
+                        onMouseEnter={() => setCurrentHover(ndx)}
+                        onMouseLeave={() => setCurrentHover(null)}
+                      >
+                        <PreviewCompatibleImage
+                          imageInfo={images[ndx]}
+                          style={{height: '100px', width: '100px'}}
+                          className={`mb-4 ${
+                            ndx !== currentNdx && ndx !== currentHover ? 'grayscale' : ''
+                          }`}
+                        />
+                      </div>
 
-                      <h5 className={ndx === currentNdx ? 'text-primary' : ''}>{tab.title}</h5>
+                      <h5
+                        className={ndx === currentHover || ndx === currentNdx ? 'text-primary' : ''}
+                      >
+                        {tab.title}
+                      </h5>
                     </div>
                   ))}
                 </div>
                 <div
-                  className="container tab-description"
+                  className={`container tab-description ${fading ? 'fadeOut' : 'fadeIn'}`}
                   dangerouslySetInnerHTML={{__html: renderDescription()}}
                 />
               </div>

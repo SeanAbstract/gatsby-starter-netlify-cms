@@ -123,7 +123,20 @@ export default class Header extends React.Component {
               </Nav>
             </StyledCollapse>
           </div>
+          <LangToggleContainer style={{top: '15px', right: '10px', position: 'absolute'}}>
+            <div className="mb-0 bg-primary border-primary text-light">
+              <p className="mb-0" style={{fontWeight: '500'}}>
+                A
+              </p>
+            </div>
+            <div className="mb-0 border-primary bg-light" style={{paddingTop: '5px'}}>
+              <p className="mb-0 text-primary " style={{fontWeight: '500'}}>
+                中
+              </p>
+            </div>
+          </LangToggleContainer>
         </StyledNavbar>
+
         <ScrolledNavbar isOpen={isOpen} scrolled={scrolled} light expand="md" className="fixed-top">
           <div className="container mr-2">
             <NavbarBrand>
@@ -225,7 +238,7 @@ const ScrolledNavbar = styled(Navbar)`
   width: 100%;
   height: 40px;
   top: ${props => (props.scrolled ? '0px' : '-100px')} !important;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.5);
   padding-top: 0;
   padding-bottom: 0;
   transition: 0.5s;
