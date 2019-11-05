@@ -138,7 +138,7 @@ class BlogRoll extends React.Component {
                     <div className="mt-5">
                       <Link to={'/how-it-works' || post.fields.slug}>
                         <StyledButton
-                          className={`btn btn-outline-primary rounded-pill button-hover ${
+                          className={`btn btn-outline-primary rounded-pill button-hover w-50 pt-2 border-1 ${
                             !this.state.isHovering && this.state.currentNdx === ndx
                               ? 'button-hover'
                               : ''
@@ -146,7 +146,7 @@ class BlogRoll extends React.Component {
                           type="button"
                           style={{borderColor: 'white', color: 'white'}}
                         >
-                          Get Started
+                          <p className="mb-0">Get Started</p>
                         </StyledButton>
                       </Link>
                     </div>
@@ -186,6 +186,7 @@ const Overlay = styled.div`
 
 const StyledButton = styled.button`
   opacity: 0;
+  border-color: white !important;
 `
 
 const ImgContainer = styled.div`

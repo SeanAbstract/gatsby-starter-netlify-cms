@@ -175,8 +175,8 @@ export const IndexPageTemplate = ({
                 <p>{firstSection.description}</p>
                 <div>
                   <a href="https://www.snowballsecurities.com/download">
-                    <button className="btn btn-outline-primary rounded-pill " type="button">
-                      {firstSection.buttonText}
+                    <button className="btn btn-outline-primary rounded-pill pt-2" type="button">
+                      <p className="mb-0">{firstSection.buttonText}</p>
                     </button>
                   </a>
                 </div>
@@ -279,7 +279,6 @@ export const IndexPageTemplate = ({
                 </Scene>
               </Controller>
             </div>
-            {/* <div className="col-md-1" /> */}
             <div className="col-md-4 mr-auto ml-3">
               <Controller>
                 {stockSection.stocks.map(stock => (
@@ -292,8 +291,8 @@ export const IndexPageTemplate = ({
                       <h5 className="mb-2">{featureSection.subText}</h5>
                       <p>{featureSection.description}</p>
                       <Link to="/how-it-works">
-                        <button className="btn btn-outline-primary rounded-pill" type="button">
-                          {featureSection.buttonText}
+                        <button className="btn btn-outline-primary rounded-pill pt-2" type="button">
+                          <p className="mb-0">{featureSection.buttonText}</p>
                         </button>
                       </Link>
                     </div>
@@ -332,8 +331,8 @@ export const IndexPageTemplate = ({
                   <h1 className="text-primary display-2 mb-3">{realTimeStockSection.mainText}</h1>
                   <p>{realTimeStockSection.description}</p>
                   <Link to="/price">
-                    <button className="btn btn-outline-primary rounded-pill" type="button">
-                      {realTimeStockSection.buttonText}
+                    <button className="btn btn-outline-primary rounded-pill pt-2" type="button">
+                      <p className="mb-0">{realTimeStockSection.buttonText}</p>
                     </button>
                   </Link>
                 </Fade>

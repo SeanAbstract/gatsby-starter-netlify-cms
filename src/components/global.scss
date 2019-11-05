@@ -158,6 +158,15 @@ p {
   border-width: 2px;
 }
 
+.btn-outline-primary {
+  border-color:  $primary;
+
+  &:hover {
+    background-color: $primary;
+  }
+}
+
+
 .bg-primary {
   background-color: $primary !important;
 }
@@ -229,7 +238,9 @@ video {
   font-weight: bold;
 }
 
-
+.border-1 {
+  border-width: 1px;
+}
 
 .form-control:focus, button:focus {
   outline: none !important;
