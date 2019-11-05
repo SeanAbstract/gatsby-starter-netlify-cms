@@ -21,6 +21,7 @@ type Props = {
   bgColor: string,
   stockCode: String,
   stocks: any,
+  delay: number,
 }
 
 type CarouselProps = {
@@ -68,7 +69,7 @@ const StockCard = (props: Props) => {
             }}
             className="d-flex justify-content-center align-items-center img-container"
           >
-            <Carousel defaultWait={3000} maxTurns={100} className="h-100">
+            <Carousel defaultWait={props.delay} maxTurns={100} className="h-100">
               {props.stocks.map(stock => (
                 <Slide left>
                   <div
@@ -103,7 +104,7 @@ const StockCard = (props: Props) => {
         </Col>
         <Col md={12} xs={7}>
           <StyledCardBody>
-            <Carousel defaultWait={3000} maxTurns={100}>
+            <Carousel defaultWait={props.delay} maxTurns={100}>
               {props.stocks.map(stock => (
                 <Fade>
                   <Container>

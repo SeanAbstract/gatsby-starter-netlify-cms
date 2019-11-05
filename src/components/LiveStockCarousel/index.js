@@ -35,6 +35,7 @@ function LiveStockCarousel({stocks}: Props) {
             icon="facebook"
             stockCode="FB"
             stocks={stockCardOne}
+            delay={3000}
           />
         </Fade>
       </Col>
@@ -48,6 +49,7 @@ function LiveStockCarousel({stocks}: Props) {
             icon="facebook"
             stockCode="FB"
             stocks={stockCardTwo}
+            delay={2900}
           />
         </Fade>
       </Col>
@@ -61,6 +63,7 @@ function LiveStockCarousel({stocks}: Props) {
             icon="facebook"
             stockCode="FB"
             stocks={stockCardThree}
+            delay={2800}
           />
         </Fade>
       </Col>

@@ -218,7 +218,15 @@ export const IndexPageTemplate = ({
                     }}
                   >
                     <div>
-                      <h1 className="display-2 mb-3">ACCESS<br/>WORLD-CLASS<br/>INVESTMENT<br/>OPTION</h1>
+                      <h1 className="display-2 mb-3">
+                        ACCESS
+                        <br />
+                        WORLD-CLASS
+                        <br />
+                        INVESTMENT
+                        <br />
+                        OPTION
+                      </h1>
                     </div>
                   </div>
                 </Scene>
@@ -274,40 +282,24 @@ export const IndexPageTemplate = ({
             {/* <div className="col-md-1" /> */}
             <div className="col-md-4 mr-auto ml-3">
               <Controller>
-                {stockSection.stocks.map(stock => {
-                  return (
-                    <Scene duration={400} pin triggerHook={0}>
-                      <div
-                        className="d-flex flex-column justify-content-center"
-                        style={{height: '100vh'}}
-                      >
-                        <h1 className="text-primary display-2 mb-3">{featureSection.mainText}</h1>
-                        <h5 className="mb-2">{featureSection.subText}</h5>
-                        <p>{featureSection.description}</p>
-                        <Link to="/how-it-works">
-                          <button className="btn btn-outline-primary rounded-pill" type="button">
-                            {featureSection.buttonText}
-                          </button>
-                        </Link>
-                      </div>
-                    </Scene>
-                  )
-                })}
+                {stockSection.stocks.map(stock => (
+                  <Scene duration={400} pin triggerHook={0}>
+                    <div
+                      className="d-flex flex-column justify-content-center"
+                      style={{height: '100vh'}}
+                    >
+                      <h1 className="text-primary display-2 mb-3">{featureSection.mainText}</h1>
+                      <h5 className="mb-2">{featureSection.subText}</h5>
+                      <p>{featureSection.description}</p>
+                      <Link to="/how-it-works">
+                        <button className="btn btn-outline-primary rounded-pill" type="button">
+                          {featureSection.buttonText}
+                        </button>
+                      </Link>
+                    </div>
+                  </Scene>
+                ))}
               </Controller>
-              {/* <Controller>
-                <Scene duration={400} pin triggerHook={0}>
-                  <Fade bottom>
-                    <h1 className="text-primary display-2 mb-3">{featureSection.mainText}</h1>
-                    <h5 className="mb-2">{featureSection.subText}</h5>
-                    <p>{featureSection.description}</p>
-                    <Link to="/how-it-works">
-                      <button className="btn btn-outline-primary rounded-pill" type="button">
-                        {featureSection.buttonText}
-                      </button>
-                    </Link>
-                  </Fade>
-                </Scene>
-              </Controller> */}
             </div>
           </div>
         </section>

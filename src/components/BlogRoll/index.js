@@ -1,25 +1,15 @@
 // @flow
-import React, {useState, useEffect, useRef} from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import {Link} from 'gatsby'
 import styled from 'styled-components'
-import {Col} from 'reactstrap'
-import Slider from 'react-slick'
+import {Col, Row} from 'reactstrap'
 
 import bgSlider from '../../img/bg-slider1.jpg'
 import bgSlider2 from '../../img/bg-slider2.jpg'
 import arrowRight from '../../img/arrow-right-blue.png'
 
 import './styles.scss'
-
-const settings = {
-  dots: false,
-  infinite: true,
-  speed: 1000,
-  slidesToShow: 3,
-  slidesToScroll: 1,
-  autoplay: true,
-}
 
 const content = [
   {
@@ -101,7 +91,7 @@ class BlogRoll extends React.Component {
 
   render() {
     return (
-      <Slider {...settings}>
+      <Row>
         {content.map((post, ndx) => {
           const {title, description, featuredImage} = post
           return (
@@ -169,7 +159,7 @@ class BlogRoll extends React.Component {
             </StyledCol>
           )
         })}
-      </Slider>
+      </Row>
     )
   }
 }
@@ -187,7 +177,6 @@ export default BlogRoll
 const Overlay = styled.div`
   height: 100%;
   width: 100%;
-  /* background-color: rgba(0, 0, 0, 0.3); */
   position: absolute;
   top: 0;
   left: 0;
@@ -201,7 +190,7 @@ const StyledButton = styled.button`
 
 const ImgContainer = styled.div`
   width: 100%;
-  height: 50vh;
+  height: 55vh;
   position: absolute;
   opacity: 0;
   transition: 0.3s;
@@ -213,10 +202,10 @@ const ImgContainer = styled.div`
 
 const StyledCol = styled(Col)`
   border-left: 0.5px solid #ddd;
-  height: 40vh;
-  /* :last-child {
+  height: 55vh;
+  :last-child {
     border-right: 0.5px solid #aaaaaa;
-  } */
+  }
 
   :hover {
     border: none;

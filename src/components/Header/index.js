@@ -149,7 +149,12 @@ export default class Header extends React.Component {
               <Nav className="ml-auto scroll-nav pr-5" navbar>
                 {data.map(link =>
                   link.href !== '' ? (
-                    <Link to={link.href} className="nav-link">
+                    <Link
+                      to={link.href}
+                      className={`nav-link ${
+                        `/${this.state.currentPath}` === `${link.href}` ? 'custom-active-2' : ''
+                      }`}
+                    >
                       {link.name}
                     </Link>
                   ) : (
