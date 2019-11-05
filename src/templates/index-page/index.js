@@ -218,10 +218,7 @@ export const IndexPageTemplate = ({
                     }}
                   >
                     <div>
-                      <WordTitle>ACCESS</WordTitle>
-                      <WordTitle>WORLD-CLASS</WordTitle>
-                      <WordTitle>INVESTMENT</WordTitle>
-                      <WordTitle>OPTION</WordTitle>
+                      <h1 className="display-2 mb-3">ACCESS<br/>WORLD-CLASS<br/>INVESTMENT<br/>OPTION</h1>
                     </div>
                   </div>
                 </Scene>
