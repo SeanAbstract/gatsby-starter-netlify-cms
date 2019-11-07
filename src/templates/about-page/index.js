@@ -74,13 +74,13 @@ export const AboutPageTemplate = (props: AboutTemplate) => {
             <div className="col-md-6 mx-auto">
               <div>
                 {/* <p>{props.mainpitch.description}</p> */}
-                <p>
+                <p className="dark-grey font-size-18">
                   Our digital platform gives customers access to China A shares and securities
                   listed on the Stock Exchange of Hong Kong (SEHK), the New York Stock Exchange
                   (NYSE), NASDAQ and other markets.
                 </p>
                 {/* <p>{props.mainpitch.secondDescription}</p> */}
-                <p>
+                <p className="dark-grey font-size-18">
                   With one account, our clients are able to trade securities listed in China, the
                   United States, Hong Kong, Japan and other countries and build a portfolio of
                   shares in big international world's best-known companies like Alibaba, PetroChina,
@@ -128,7 +128,9 @@ export const AboutPageTemplate = (props: AboutTemplate) => {
                   ))}
                 </div>
                 <div
-                  className={`container tab-description ${fading ? 'fadeOut' : 'fadeIn'}`}
+                  className={`container tab-description ${
+                    fading ? 'fadeOut' : 'fadeIn'
+                  } font-size-18`}
                   dangerouslySetInnerHTML={{__html: renderDescription()}}
                 />
               </div>

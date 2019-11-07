@@ -169,10 +169,10 @@ export const IndexPageTemplate = ({
         {/* Fast Secure Trusted or Second */}
         <Container fluid className="second-section">
           <Row className="justify-content-center h-100">
-            <Col md={5} lg={4} className="left-text-col">
+            <Col md={5} lg={3} className="left-text-col">
               <Fade bottom>
                 <h1 className="text-primary display-2 mb-3">{firstSection.mainText}</h1>
-                <p>{firstSection.description}</p>
+                <p className="dark-grey font-size-18">{firstSection.description}</p>
                 <div>
                   <a href="https://www.snowballsecurities.com/download">
                     <button className="btn btn-outline-primary rounded-pill pt-2" type="button">

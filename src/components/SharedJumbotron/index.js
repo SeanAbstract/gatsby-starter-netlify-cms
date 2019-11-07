@@ -13,7 +13,9 @@ function SharedJumbotron({headerImage, title, description, size, secondaryColor}
         }`}
         style={{position: 'absolute', background: 'rgba(0,0,0, 0.2)', top: 0, zIndex: 0}}
       >
-        <h1 className="big-text">{title}</h1>
+        <h1 className="display-3" style={{marginBottom: '-5px'}}>
+          {title}
+        </h1>
         <h3 className={`big-subtitle ${secondaryColor === 'primary' ? 'text-primary' : ''}`}>
           {description}
         </h3>
