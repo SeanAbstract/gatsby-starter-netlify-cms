@@ -23,7 +23,7 @@ body {
 
 @font-face {
   font-family: "Theinhardt";
-  src: url("../fonts/THEINHARDT-REGULAR.otf");
+  src: url("../fonts/Theinhardt.otf");
   font-display: swap;
 }
 
@@ -63,6 +63,7 @@ h1 {
 p {
   font-family: "Theinhardt";
   font-weight: 300;
+  line-height: 24px;
 }
 
 .big-text {
@@ -123,6 +124,7 @@ p {
   font-family: "Theinhardt" !important;
 }
 
+
 .card-body {
   text-align: left;
 }
@@ -159,7 +161,7 @@ p {
 }
 
 .btn-outline-primary {
-  border-color:  $primary;
+  border-color:  $primary !important;
 
   &:hover {
     background-color: $primary;
@@ -249,4 +251,16 @@ video {
 
 .border-primary {
   border-color: $primary !important;
+}
+
+.dark-grey {
+  color: rgba(120, 120, 120, 1);
+}
+
+.font-size-18 {
+  font-size: 18px;
+}
+
+.border-white {
+  border-color: white !important;
 }

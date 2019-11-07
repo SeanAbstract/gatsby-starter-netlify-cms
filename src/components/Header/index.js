@@ -124,16 +124,20 @@ export default class Header extends React.Component {
             </StyledCollapse>
           </div>
           <LangToggleContainer style={{top: '15px', right: '10px', position: 'absolute'}}>
-            <div className="mb-0 bg-primary border-primary text-light">
-              <p className="mb-0" style={{fontWeight: '500'}}>
-                A
-              </p>
-            </div>
-            <div className="mb-0 border-primary bg-light" style={{paddingTop: '5px'}}>
-              <p className="mb-0 text-primary " style={{fontWeight: '500'}}>
-                中
-              </p>
-            </div>
+            <a href="/">
+              <div className="mb-0 bg-primary border-primary text-light">
+                <p className="mb-0" style={{fontWeight: '500'}}>
+                  A
+                </p>
+              </div>
+            </a>
+            <a href="https://www.snowballsecurities.com/">
+              <div className="mb-0 border-primary bg-light" style={{paddingTop: '5px'}}>
+                <p className="mb-0 text-primary " style={{fontWeight: '500'}}>
+                  中
+                </p>
+              </div>
+            </a>
           </LangToggleContainer>
         </StyledNavbar>
 
@@ -149,12 +153,7 @@ export default class Header extends React.Component {
               <Nav className="ml-auto scroll-nav pr-5" navbar>
                 {data.map(link =>
                   link.href !== '' ? (
-                    <Link
-                      to={link.href}
-                      className={`nav-link ${
-                        `/${this.state.currentPath}` === `${link.href}` ? 'custom-active-2' : ''
-                      }`}
-                    >
+                    <Link to={link.href} className="nav-link">
                       {link.name}
                     </Link>
                   ) : (
@@ -167,16 +166,20 @@ export default class Header extends React.Component {
             </StyledCollapse>
           </div>
           <LangToggleContainer>
-            <div className="mb-0 bg-primary border-primary text-light">
-              <p className="mb-0" style={{fontWeight: '500'}}>
-                A
-              </p>
-            </div>
-            <div className="mb-0 border-primary" style={{paddingTop: '3.5px'}}>
-              <p className="mb-0 text-primary " style={{fontWeight: '500'}}>
-                中
-              </p>
-            </div>
+            <a href="/">
+              <div className="mb-0 bg-primary border-primary text-light">
+                <p className="mb-0" style={{fontWeight: '500'}}>
+                  A
+                </p>
+              </div>
+            </a>
+            <a href="https://www.snowballsecurities.com/">
+              <div className="mb-0 border-primary" style={{paddingTop: '3.5px'}}>
+                <p className="mb-0 text-primary " style={{fontWeight: '500'}}>
+                  中
+                </p>
+              </div>
+            </a>
           </LangToggleContainer>
         </ScrolledNavbar>
       </>
@@ -209,8 +212,8 @@ const Logo = styled.img`
 `
 
 const LogoIcon = styled.img`
-  height: 30px;
-  width: 30px;
+  height: 20px;
+  width: 20px;
   object-fit: contain;
   transition: 0.1s;
 `
@@ -243,7 +246,7 @@ const ScrolledNavbar = styled(Navbar)`
   width: 100%;
   height: 40px;
   top: ${props => (props.scrolled ? '0px' : '-100px')} !important;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 1);
   padding-top: 0;
   padding-bottom: 0;
   transition: 0.5s;
@@ -256,8 +259,8 @@ const ScrolledNavbar = styled(Navbar)`
     transition: 0.2s;
 
     :hover {
-      background-color: rgba(0, 111, 187, 1) !important;
-      color: white !important;
+      /* background-color: rgba(0, 111, 187, 1) !important; */
+      color: rgba(0, 111, 187, 1) !important;
     }
   }
 

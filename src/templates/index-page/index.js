@@ -176,7 +176,7 @@ export const IndexPageTemplate = ({
                 <div>
                   <a href="https://www.snowballsecurities.com/download">
                     <button className="btn btn-outline-primary rounded-pill pt-2" type="button">
-                      <p className="mb-0">{firstSection.buttonText}</p>
+                      {firstSection.buttonText}
                     </button>
                   </a>
                 </div>
@@ -288,11 +288,13 @@ export const IndexPageTemplate = ({
                       style={{height: '100vh'}}
                     >
                       <h1 className="text-primary display-2 mb-3">{featureSection.mainText}</h1>
-                      <h5 className="mb-2">{featureSection.subText}</h5>
-                      <p>{featureSection.description}</p>
+                      <h5 className="mb-0" style={{fontSize: '28px'}}>
+                        {featureSection.subText}
+                      </h5>
+                      <p className="dark-grey font-size-18">{featureSection.description}</p>
                       <Link to="/how-it-works">
-                        <button className="btn btn-outline-primary rounded-pill pt-2" type="button">
-                          <p className="mb-0">{featureSection.buttonText}</p>
+                        <button className="btn btn-outline-primary rounded-pill px-4" type="button">
+                          {featureSection.buttonText}
                         </button>
                       </Link>
                     </div>
@@ -329,10 +331,10 @@ export const IndexPageTemplate = ({
               <Col md={5} lg={4} className="ml-auto">
                 <Fade bottom>
                   <h1 className="text-primary display-2 mb-3">{realTimeStockSection.mainText}</h1>
-                  <p>{realTimeStockSection.description}</p>
+                  <p className="font-size-18 dark-grey">{realTimeStockSection.description}</p>
                   <Link to="/price">
-                    <button className="btn btn-outline-primary rounded-pill pt-2" type="button">
-                      <p className="mb-0">{realTimeStockSection.buttonText}</p>
+                    <button className="btn btn-outline-primary rounded-pill px-4" type="button">
+                      {realTimeStockSection.buttonText}
                     </button>
                   </Link>
                 </Fade>

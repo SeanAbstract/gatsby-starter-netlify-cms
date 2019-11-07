@@ -23,28 +23,28 @@ function Footer() {
                 </div>
               </Col>
               <Col xs={4}>
-                <Link to="/about" className="text-dark">
+                <StyledLink to="/about">
                   <p className="mb-1">About</p>
-                </Link>
-                <Link to="/how-it-works" className="text-dark">
+                </StyledLink>
+                <StyledLink to="/how-it-works">
                   <p className="mb-1">How it works</p>
-                </Link>
-                <Link to="/prices" className="text-dark">
+                </StyledLink>
+                <StyledLink to="/prices">
                   <p className="mb-1">Prices</p>
-                </Link>
-                <a href="https://www.snowballsecurities.com/download" className="text-dark">
+                </StyledLink>
+                <StyledLink href="https://www.snowballsecurities.com/download">
                   <p className="mb-1">Downloads</p>
-                </a>
+                </StyledLink>
               </Col>
               <Col xs={4}>
                 <p className="mb-1">Blog</p>
                 <p className="mb-1">Risk Disclosure</p>
-                <Link to="/faq" className="text-dark">
+                <StyledLink to="/faq">
                   <p className="mb-1">FAQs</p>
-                </Link>
-                <Link to="/contact" className="text-dark">
+                </StyledLink>
+                <StyledLink to="/contact">
                   <p className="mb-1">Contact</p>
-                </Link>
+                </StyledLink>
               </Col>
             </Row>
           </Col>
@@ -146,6 +146,15 @@ function Footer() {
     </StyledFooter>
   )
 }
+
+const StyledLink = styled(Link)`
+  text-decoration: none !important;
+  color: black;
+  &:hover {
+    color: rgba(0, 111, 187, 1);
+    opacity: 70% !important;
+  }
+`
 
 const StyledFooter = styled.footer`
   min-height: 40vh;

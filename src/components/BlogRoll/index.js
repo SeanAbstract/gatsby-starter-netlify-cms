@@ -81,6 +81,7 @@ class BlogRoll extends React.Component {
   state = {
     currentNdx: 0,
     isHovering: false,
+    hoveringOver: null,
   }
 
   componentDidMount() {
@@ -100,10 +101,10 @@ class BlogRoll extends React.Component {
                 !this.state.isHovering && this.state.currentNdx === ndx ? 'card-hover' : ''
               }`}
               onMouseEnter={() => {
-                this.setState({isHovering: true})
+                this.setState({isHovering: true, hoveringOver: ndx})
               }}
               onMouseLeave={() => {
-                this.setState({isHovering: false})
+                this.setState({isHovering: false, hoveringOver: null})
               }}
             >
               <OuterContainer>
@@ -138,7 +139,7 @@ class BlogRoll extends React.Component {
                     <div className="mt-5">
                       <Link to={'/how-it-works' || post.fields.slug}>
                         <StyledButton
-                          className={`btn btn-outline-primary rounded-pill button-hover w-50 pt-2 border-1 ${
+                          className={`btn btn-outline-primary border-white rounded-pill button-hover w-50 pt-2 border-1 ${
                             !this.state.isHovering && this.state.currentNdx === ndx
                               ? 'button-hover'
                               : ''
@@ -146,12 +147,21 @@ class BlogRoll extends React.Component {
                           type="button"
                           style={{borderColor: 'white', color: 'white'}}
                         >
-                          <p className="mb-0">Get Started</p>
+                          Get Started
                         </StyledButton>
                       </Link>
                     </div>
                   </div>
-                  <div className="mt-5">
+                  <div
+                    className="mt-5"
+                    style={{
+                      display:
+                        (this.state.hoveringOver === null && this.state.currentNdx === ndx) ||
+                        this.state.hoveringOver === ndx
+                          ? 'none'
+                          : '',
+                    }}
+                  >
                     <img src={arrowRight} alt="" style={{height: '30px'}} />
                   </div>
                 </div>
