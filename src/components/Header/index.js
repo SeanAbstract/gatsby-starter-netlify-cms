@@ -57,12 +57,6 @@ export default class Header extends React.Component {
       // it's safe to use window now
       const path = window.location.pathname.split('/')[1]
 
-      // if (path !== 'en' || path !== 'zh') {
-      //   path = 'en'
-      // }
-
-      // path = 'en'
-
       this.setState({
         currentPath: path,
       })
@@ -90,7 +84,7 @@ export default class Header extends React.Component {
     return (
       <>
         <StyledNavbar isOpen={isOpen} scrolled={scrolled} light expand="md" className="fixed-top">
-          <div className="container">
+          <div className="container mx--15">
             <NavbarBrand>
               <Link to="/">
                 <Logo
@@ -104,18 +98,18 @@ export default class Header extends React.Component {
             <StyledNavbarToggler isOpen={this.state.isOpen} onClick={this.toggle} />
             <StyledCollapse isOpen={this.state.isOpen} navbar>
               <Nav className="ml-auto" navbar>
-                {data.map(link =>
+                {data.map((link, ndx) =>
                   link.href !== '' ? (
                     <Link
                       to={link.href}
-                      className={`nav-link ${
+                      className={`nav-link ${ndx !== data.length - 1 ? 'mr-4' : ''} ${
                         `/${this.state.currentPath}` === `${link.href}` ? 'custom-active' : ''
                       }`}
                     >
                       {link.name}
                     </Link>
                   ) : (
-                    <a href="https://www.snowballsecurities.com/download" className="nav-link">
+                    <a href="https://www.snowballsecurities.com/download" className="nav-link mr-4">
                       {link.name}
                     </a>
                   )
@@ -204,8 +198,8 @@ const StyledNavbar = styled(Navbar)`
 `
 
 const Logo = styled.img`
-  height: 75px;
-  width: 125px;
+  height: 125px;
+  width: 175px;
   object-fit: contain;
   filter: ${props => (props.isOpened ? 'brightness(100) grayscale(100) contrast(100)' : 'none')};
   transition: 0.1s;
@@ -258,9 +252,12 @@ const ScrolledNavbar = styled(Navbar)`
   .nav-link {
     transition: 0.2s;
 
+    color: ${props => props.active === true && 'white !important'};
+
     :hover {
-      /* background-color: rgba(0, 111, 187, 1) !important; */
-      color: rgba(0, 111, 187, 1) !important;
+      background-color: rgba(0, 111, 187, 1) !important;
+      color: white !important;
+      /* color: rgba(0, 111, 187, 1) !important; */
     }
   }
 

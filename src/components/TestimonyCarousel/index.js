@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 // @flow
 import React, {useState} from 'react'
-import {Carousel, CarouselItem, CarouselControl, Modal, ModalBody} from 'reactstrap'
+import {Carousel, CarouselItem, CarouselControl, Modal, ModalBody, ModalHeader} from 'reactstrap'
 
 import playButton from '../../../static/img/play_button.svg'
 import testimonialImage from '../../../static/img/smile-face-7.jpg'
@@ -107,6 +107,7 @@ const TestimonyCarousel = ({testimonials}: Props) => {
       </Carousel>
       {/* Modal Video */}
       <Modal isOpen={modal} size="lg" toggle={toggle}>
+        <ModalHeader toggle={toggle} />
         <ModalBody className="h-100">
           <video controls autoPlay>
             <source src={video} type="video/mp4" />

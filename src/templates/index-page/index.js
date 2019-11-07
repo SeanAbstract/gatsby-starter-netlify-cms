@@ -148,7 +148,7 @@ export const IndexPageTemplate = ({
           </StyledVideo>
           <Overlay />
         </ImageContainer>
-        <div className="text-right">
+        <div className="text-right mb-5 pb-5">
           <h1 className="big-text">Global Markets</h1>
           <h3 className="big-subtitle text-right text-primary">at your fingertips</h3>
         </div>

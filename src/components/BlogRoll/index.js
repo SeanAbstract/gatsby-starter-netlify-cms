@@ -8,6 +8,7 @@ import {Col, Row} from 'reactstrap'
 import bgSlider from '../../img/bg-slider1.jpg'
 import bgSlider2 from '../../img/bg-slider2.jpg'
 import arrowRight from '../../img/arrow-right-blue.png'
+import arrowRightWhite from '../../img/arrow-right.png'
 
 import './styles.scss'
 
@@ -145,24 +146,23 @@ class BlogRoll extends React.Component {
                               : ''
                           }`}
                           type="button"
-                          style={{borderColor: 'white', color: 'white'}}
                         >
                           Get Started
                         </StyledButton>
                       </Link>
                     </div>
                   </div>
-                  <div
-                    className="mt-5"
-                    style={{
-                      display:
+                  <div className="mt-5">
+                    <img
+                      src={
                         (this.state.hoveringOver === null && this.state.currentNdx === ndx) ||
                         this.state.hoveringOver === ndx
-                          ? 'none'
-                          : '',
-                    }}
-                  >
-                    <img src={arrowRight} alt="" style={{height: '30px'}} />
+                          ? arrowRightWhite
+                          : arrowRight
+                      }
+                      alt=""
+                      style={{height: '30px'}}
+                    />
                   </div>
                 </div>
               </OuterContainer>
@@ -197,6 +197,12 @@ const Overlay = styled.div`
 const StyledButton = styled.button`
   opacity: 0;
   border-color: white !important;
+  color: white !important;
+
+  &:hover {
+    background-color: white !important;
+    color: #006fbb !important;
+  }
 `
 
 const ImgContainer = styled.div`

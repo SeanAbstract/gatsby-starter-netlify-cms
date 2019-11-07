@@ -1,5 +1,5 @@
 // @flow
-import React from 'react'
+import React, {useEffect} from 'react'
 import Fade from 'react-reveal/Fade'
 import {Col} from 'reactstrap'
 
@@ -18,7 +18,18 @@ type Props = {
   }>,
 }
 
+const API_KEY = 'QTDA5DR1PXTSLRJ3'
+
 function LiveStockCarousel({stocks}: Props) {
+  // useEffect(() => {
+  //   fetch(
+  //     `https://www.alphavantage.co/query?function=TIME_SERIES_WEEKLY&symbol=AAPL&apikey=${API_KEY}`
+  //   ).then(async response => {
+  //     const json = await response.json()
+  //     console.log(json)
+  //   })
+  // }, [])
+
   const stockCardOne = stocks.filter((stock, key) => key % 3 === 0)
   const stockCardTwo = stocks.filter((stock, key) => key % 3 === 1)
   const stockCardThree = stocks.filter((stock, key) => key % 3 === 2)
@@ -49,7 +60,7 @@ function LiveStockCarousel({stocks}: Props) {
             icon="facebook"
             stockCode="FB"
             stocks={stockCardTwo}
-            delay={2900}
+            delay={3000}
           />
         </Fade>
       </Col>
@@ -63,7 +74,7 @@ function LiveStockCarousel({stocks}: Props) {
             icon="facebook"
             stockCode="FB"
             stocks={stockCardThree}
-            delay={2800}
+            delay={3000}
           />
         </Fade>
       </Col>
