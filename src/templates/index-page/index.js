@@ -7,6 +7,7 @@ import PropTypes from 'prop-types'
 import {graphql, Link} from 'gatsby'
 import Fade from 'react-reveal/Fade'
 import {Controller, Scene} from 'react-scrollmagic'
+import PageTransition from 'gatsby-plugin-page-transitions'
 
 import './styles.scss'
 import Layout from '../../components/Layout'
@@ -129,7 +130,7 @@ export const IndexPageTemplate = ({
   }, [])
 
   return (
-    <>
+    <PageTransition>
       {/* Hero Video */}
       <Jumbotron className="full-width-image-container d-flex justify-content-center align-items-center flex-column text-right">
         <ImageContainer>
@@ -361,7 +362,7 @@ export const IndexPageTemplate = ({
           image={downloadNow.image}
         />
       </div>
-    </>
+    </PageTransition>
   )
 }
 

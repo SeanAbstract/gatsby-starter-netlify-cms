@@ -3,7 +3,7 @@
 import React, {useState, useEffect} from 'react'
 import {graphql} from 'gatsby'
 import * as showdown from 'showdown'
-import styled from 'styled-components'
+import PageTransition from 'gatsby-plugin-page-transitions'
 
 import Layout from '../../components/Layout'
 import PreviewCompatibleImage from '../../components/PreviewCompatibleImage'
@@ -59,7 +59,7 @@ export const AboutPageTemplate = (props: AboutTemplate) => {
   }
 
   return (
-    <>
+    <PageTransition>
       <SharedJumbotron headerImage={props.headerImage} title="About" description="Snowball" />
 
       <div className="about-page container-fluid">
@@ -219,7 +219,7 @@ export const AboutPageTemplate = (props: AboutTemplate) => {
           image={props.downloadNow.image}
         />
       </div>
-    </>
+    </PageTransition>
   )
 }
 

@@ -3,6 +3,8 @@ import React from 'react'
 import {graphql} from 'gatsby'
 
 import './styles.scss'
+import PageTransition from 'gatsby-plugin-page-transitions'
+
 import SharedJumbotron from '../../components/SharedJumbotron'
 import Layout from '../../components/Layout'
 import HowItWorksSection from '../../components/HowItWorksSection'
@@ -21,22 +23,28 @@ type HowItWorksTemplateProps = {
 
 export function HowItWorksTemplate(props: HowItWorksTemplateProps) {
   return (
-    <div className="how-it-works">
-      <SharedJumbotron headerImage={props.headerImage} title="How It Works" description="Simply" />
+    <PageTransition>
+      <div className="how-it-works">
+        <SharedJumbotron
+          headerImage={props.headerImage}
+          title="How It Works"
+          description="Simply"
+        />
 
-      <section className="container-fluid">
-        <div className="row">
-          <div className="container py-5">
-            <HowItWorksSection
-              sections={props.sections}
-              contentComponent={props.contentComponent}
-            />
+        <section className="container-fluid">
+          <div className="row">
+            <div className="container py-5">
+              <HowItWorksSection
+                sections={props.sections}
+                contentComponent={props.contentComponent}
+              />
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <DownloadNow {...props.downloadNow} />
-    </div>
+        <DownloadNow {...props.downloadNow} />
+      </div>
+    </PageTransition>
   )
 }
 

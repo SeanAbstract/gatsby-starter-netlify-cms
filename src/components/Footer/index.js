@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
 import styled from 'styled-components'
 import {Container, Row, Col, UncontrolledTooltip} from 'reactstrap'
 import {Link} from 'gatsby'
@@ -11,6 +11,16 @@ import wechatIcon from '../../../static/img/wechat_blue.png'
 import qrCode from '../../img/wechat-english.jpg'
 
 function Footer() {
+  const [show, setShow] = useState(false)
+
+  useEffect(() => {
+    setTimeout(() => {
+      setShow(true)
+    }, 800)
+  }, [])
+
+  if (!show) return null
+
   return (
     <StyledFooter id="footer" className="">
       <StyledContainer className="justify-content-between d-flex flex-column py-5">

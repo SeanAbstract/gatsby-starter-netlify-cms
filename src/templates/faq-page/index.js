@@ -6,6 +6,7 @@ import React, {useState} from 'react'
 import styled from 'styled-components'
 import {graphql} from 'gatsby'
 import {Collapse} from 'reactstrap'
+import PageTransition from 'gatsby-plugin-page-transitions'
 
 import Layout from '../../components/Layout'
 import SharedJumbotron from '../../components/SharedJumbotron'
@@ -53,42 +54,44 @@ export function FaqPageTemplate(props: FaqPageTemplateProps) {
   const [currentNdx, setNdx] = useState(0)
 
   return (
-    <div className="faq-page">
-      <SharedJumbotron headerImage={props.headerImage} title="FAQS" description="Answered" />
-      <div className="container pt-5 mb-5">
-        <div className="row mx-auto">
-          <div className="col-md-8 mx-auto">
-            <ul className="nav nav-pills row justify-content-around">
-              {props.categories.map((category, ndx) => (
-                <li
-                  key={ndx}
-                  className="nav-item"
-                  onClick={() => {
-                    setNdx(ndx)
-                  }}
-                >
-                  <a className={`nav-link ${ndx === currentNdx ? 'active' : ''}`}>
-                    {category.categoryTitle}
-                  </a>
-                </li>
+    <PageTransition>
+      <div className="faq-page">
+        <SharedJumbotron headerImage={props.headerImage} title="FAQS" description="Answered" />
+        <div className="container pt-5 mb-5">
+          <div className="row mx-auto">
+            <div className="col-md-8 mx-auto">
+              <ul className="nav nav-pills row justify-content-around">
+                {props.categories.map((category, ndx) => (
+                  <li
+                    key={ndx}
+                    className="nav-item"
+                    onClick={() => {
+                      setNdx(ndx)
+                    }}
+                  >
+                    <a className={`nav-link ${ndx === currentNdx ? 'active' : ''}`}>
+                      {category.categoryTitle}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div className="container pb-5">
+          <div className="row">
+            <div className="col-md-9 mx-auto">
+              {props.categories[currentNdx].questions.map((cc, ndx) => (
+                <Accordion ndx={ndx} cc={cc} key={`${cc.question}${ndx}`} />
               ))}
-            </ul>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div className="container pb-5">
-        <div className="row">
-          <div className="col-md-9 mx-auto">
-            {props.categories[currentNdx].questions.map((cc, ndx) => (
-              <Accordion ndx={ndx} cc={cc} key={`${cc.question}${ndx}`} />
-            ))}
-          </div>
-        </div>
+        <DownloadNow {...props.downloadNow} />
       </div>
-
-      <DownloadNow {...props.downloadNow} />
-    </div>
+    </PageTransition>
   )
 }
 

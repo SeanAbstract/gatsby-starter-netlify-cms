@@ -1,6 +1,7 @@
 // @flow
 import React from 'react'
 import {graphql} from 'gatsby'
+import PageTransition from 'gatsby-plugin-page-transitions'
 
 import DownloadNow from '../../components/DownloadNow'
 import Layout from '../../components/Layout'
@@ -42,177 +43,183 @@ type Props = {
 
 function ContactPageTemplate(props: Props) {
   return (
-    <div className="contact-page">
-      <SharedJumbotron headerImage={props.headerImage} title="Contact" description="Here to help" />
+    <PageTransition>
+      <div className="contact-page">
+        <SharedJumbotron
+          headerImage={props.headerImage}
+          title="Contact"
+          description="Here to help"
+        />
 
-      <section className="customer-service-section container-fluid">
-        <div className="row h-100">
-          <div className="col-md-6 d-flex justify-content-center align-items-center flex-column">
-            <div className="row w-75 pl-5">
-              <div className="col text-left ">
-                <h3>{props.informationSection.customerServiceTitle}</h3>
-              </div>
-            </div>
-            <div className="row w-75 pl-5">
-              {props.informationSection.customerServiceContacts.map(contact => (
-                <div className="col-sm-6 mb-4">
-                  <p className="lead mb-1">{contact.title}</p>
-                  <p className="mb-0">{contact.subtitle}</p>
-                  <p className="mb-0">{contact.hours}</p>
-                  <p className="mb-0 font-weight-bold">
-                    <strong>{contact.phoneNumber}</strong>{' '}
-                  </p>
+        <section className="customer-service-section container-fluid">
+          <div className="row h-100">
+            <div className="col-md-6 d-flex justify-content-center align-items-center flex-column">
+              <div className="row w-75 pl-5">
+                <div className="col text-left ">
+                  <h3>{props.informationSection.customerServiceTitle}</h3>
                 </div>
-              ))}
-            </div>
-            <div className="row w-75 pl-5">
-              {props.informationSection.offices.map(office => (
-                <div className="col-6 d-flex align-items-end">
-                  <div>
-                    <p className="lead mb-1">{office.officeName}</p>
-
-                    <p className="mb-0">
-                      {office.address}
-                      <span>
-                        <img
-                          src={googleMaps}
-                          alt=""
-                          style={{height: '30px'}}
-                          className="ml-1 mb-2"
-                        />
-                      </span>
+              </div>
+              <div className="row w-75 pl-5">
+                {props.informationSection.customerServiceContacts.map(contact => (
+                  <div className="col-sm-6 mb-4">
+                    <p className="lead mb-1">{contact.title}</p>
+                    <p className="mb-0">{contact.subtitle}</p>
+                    <p className="mb-0">{contact.hours}</p>
+                    <p className="mb-0 font-weight-bold">
+                      <strong>{contact.phoneNumber}</strong>{' '}
                     </p>
                   </div>
-                </div>
-              ))}
-            </div>
-          </div>
-          <div
-            className="col-md-6 d-none d-md-flex"
-            style={{
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
-              backgroundImage: `url(${
-                props.informationSection.imageRight.childImageSharp
-                  ? props.informationSection.imageRight.childImageSharp.fluid.src
-                  : props.informationSection.imageRight
-              })`,
-            }}
-          />
-        </div>
-      </section>
+                ))}
+              </div>
+              <div className="row w-75 pl-5">
+                {props.informationSection.offices.map(office => (
+                  <div className="col-6 d-flex align-items-end">
+                    <div>
+                      <p className="lead mb-1">{office.officeName}</p>
 
-      {/* Social Media */}
-      <section className="social-media-section container-fluid">
-        <div className="row h-100 text-light">
-          <div className="col-md-8 col-10 d-flex justify-content-around align-items-center mx-auto">
-            <h3>{props.socialMedia.socialMediaTitle}</h3>
-            <div className="d-flex">
-              <div className="d-flex mr-5">
-                <img
-                  src={wechatIcon}
-                  alt=""
-                  style={{height: 30, width: 30, objectFit: 'contain'}}
-                  className="mr-2"
-                />
-                <p className="mb-0">{props.socialMedia.wechatAccountOne}</p>
+                      <p className="mb-0">
+                        {office.address}
+                        <span>
+                          <img
+                            src={googleMaps}
+                            alt=""
+                            style={{height: '30px'}}
+                            className="ml-1 mb-2"
+                          />
+                        </span>
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div
+              className="col-md-6 d-none d-md-flex"
+              style={{
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                backgroundImage: `url(${
+                  props.informationSection.imageRight.childImageSharp
+                    ? props.informationSection.imageRight.childImageSharp.fluid.src
+                    : props.informationSection.imageRight
+                })`,
+              }}
+            />
+          </div>
+        </section>
+
+        {/* Social Media */}
+        <section className="social-media-section container-fluid">
+          <div className="row h-100 text-light">
+            <div className="col-md-8 col-10 d-flex justify-content-around align-items-center mx-auto">
+              <h3>{props.socialMedia.socialMediaTitle}</h3>
+              <div className="d-flex">
+                <div className="d-flex mr-5">
+                  <img
+                    src={wechatIcon}
+                    alt=""
+                    style={{height: 30, width: 30, objectFit: 'contain'}}
+                    className="mr-2"
+                  />
+                  <p className="mb-0">{props.socialMedia.wechatAccountOne}</p>
+                </div>
+                <div className="d-flex align-items-center">
+                  <img
+                    src={wechatIcon}
+                    alt=""
+                    style={{height: 30, width: 30, objectFit: 'contain'}}
+                    className="mr-2"
+                  />
+                  <p className="mb-0">{props.socialMedia.wechatAccountTwo}</p>
+                </div>
               </div>
               <div className="d-flex align-items-center">
+                <a href="https://www.facebook.com/snowballsecurities" target="_blank">
+                  <img
+                    src={facebookIcon}
+                    alt=""
+                    style={{height: 30, width: 30, objectFit: 'contain'}}
+                    className="mr-3"
+                  />
+                </a>
                 <img
                   src={wechatIcon}
                   alt=""
                   style={{height: 30, width: 30, objectFit: 'contain'}}
-                  className="mr-2"
-                />
-                <p className="mb-0">{props.socialMedia.wechatAccountTwo}</p>
-              </div>
-            </div>
-            <div className="d-flex align-items-center">
-              <a href="https://www.facebook.com/snowballsecurities" target="_blank">
-                <img
-                  src={facebookIcon}
-                  alt=""
-                  style={{height: 30, width: 30, objectFit: 'contain'}}
                   className="mr-3"
                 />
-              </a>
-              <img
-                src={wechatIcon}
-                alt=""
-                style={{height: 30, width: 30, objectFit: 'contain'}}
-                className="mr-3"
-              />
-              <a href="https://www.linkedin.com/company/snowballsecurities" target="_blank">
-                <img
-                  src={linkedinIcon}
-                  alt=""
-                  style={{height: 30, width: 30, objectFit: 'contain'}}
-                  className="mr-3"
-                />
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Contact Us Form */}
-      <section className="contact-us-form mb-5">
-        <div className="container">
-          <div className="row h-100 justify-content-center align-items-start">
-            <div className="col-md-3">
-              <h3 className="mb-3">Contact Us</h3>
-              <div>
-                <p className="lead mb-1 text-dark">Customer Inquiries</p>
-                <p className="text-primary">service@snowballsecurities.com</p>
-              </div>
-              <div>
-                <p className="lead mb-1 text-dark">Media Inquiries</p>
-                <p className="text-primary">service@snowballsecurities.com</p>
-              </div>
-              <div>
-                <p className="lead mb-1 text-dark">Business Cooperation</p>
-                <p className="text-primary">service@snowballsecurities.com</p>
-              </div>
-            </div>
-
-            <div className="col-md-5">
-              <h3 className="mb-3">Leave a message</h3>
-              <div className="row mb-2">
-                <div className="col-md-6">
-                  <div className="form-group">
-                    <label htmlFor="exampleFormControlInput1">Name</label>
-                    <input type="text" className="form-control" placeholder="John Smith" />
-                  </div>
-                </div>
-                <div className="col-md-6">
-                  <div className="form-group">
-                    <label htmlFor="exampleFormControlInput1">Email address</label>
-                    <input type="email" className="form-control" placeholder="name@example.com" />
-                  </div>
-                </div>
-              </div>
-              <div className="row">
-                <div className="col-md-12">
-                  <div className="form-group">
-                    <label htmlFor="exampleFormControlTextarea1">Message</label>
-                    <textarea className="form-control" rows="3" />
-                  </div>
-                </div>
-              </div>
-              <div>
-                <button className="btn-outline-primary btn rounded-pill px-4" type="button">
-                  Submit
-                </button>
+                <a href="https://www.linkedin.com/company/snowballsecurities" target="_blank">
+                  <img
+                    src={linkedinIcon}
+                    alt=""
+                    style={{height: 30, width: 30, objectFit: 'contain'}}
+                    className="mr-3"
+                  />
+                </a>
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <section>
-        <DownloadNow {...props.downloadNow} />
-      </section>
-    </div>
+        {/* Contact Us Form */}
+        <section className="contact-us-form mb-5">
+          <div className="container">
+            <div className="row h-100 justify-content-center align-items-start">
+              <div className="col-md-3">
+                <h3 className="mb-3">Contact Us</h3>
+                <div>
+                  <p className="lead mb-1 text-dark">Customer Inquiries</p>
+                  <p className="text-primary">service@snowballsecurities.com</p>
+                </div>
+                <div>
+                  <p className="lead mb-1 text-dark">Media Inquiries</p>
+                  <p className="text-primary">service@snowballsecurities.com</p>
+                </div>
+                <div>
+                  <p className="lead mb-1 text-dark">Business Cooperation</p>
+                  <p className="text-primary">service@snowballsecurities.com</p>
+                </div>
+              </div>
+
+              <div className="col-md-5">
+                <h3 className="mb-3">Leave a message</h3>
+                <div className="row mb-2">
+                  <div className="col-md-6">
+                    <div className="form-group">
+                      <label htmlFor="exampleFormControlInput1">Name</label>
+                      <input type="text" className="form-control" placeholder="John Smith" />
+                    </div>
+                  </div>
+                  <div className="col-md-6">
+                    <div className="form-group">
+                      <label htmlFor="exampleFormControlInput1">Email address</label>
+                      <input type="email" className="form-control" placeholder="name@example.com" />
+                    </div>
+                  </div>
+                </div>
+                <div className="row">
+                  <div className="col-md-12">
+                    <div className="form-group">
+                      <label htmlFor="exampleFormControlTextarea1">Message</label>
+                      <textarea className="form-control" rows="3" />
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <button className="btn-outline-primary btn rounded-pill px-4" type="button">
+                    Submit
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <DownloadNow {...props.downloadNow} />
+        </section>
+      </div>
+    </PageTransition>
   )
 }
 
