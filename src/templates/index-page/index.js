@@ -259,6 +259,7 @@ export const IndexPageTemplate = ({
                       triggerHook={0}
                       offset={200 * mult}
                       classToggle={classToggle}
+                      key={key}
                     >
                       <div className={stockClassName} style={styleDiv}>
                         <StockSection
@@ -300,8 +301,8 @@ export const IndexPageTemplate = ({
             </div>
             <div className="col-md-4 mr-auto ml-3">
               <Controller>
-                {stockSection.stocks.map(stock => (
-                  <Scene duration={400} pin triggerHook={0}>
+                {stockSection.stocks.map((stock, ndx) => (
+                  <Scene duration={400} pin triggerHook={0} key={ndx}>
                     <div
                       className="d-flex flex-column justify-content-center"
                       style={{height: '100vh'}}

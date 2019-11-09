@@ -78,6 +78,7 @@ function Footer() {
                     className="m-0"
                   />
                 </UncontrolledTooltip>
+
                 <img
                   src={wechatIcon}
                   alt=""
@@ -85,7 +86,8 @@ function Footer() {
                   id="weChatIcon"
                   className="mr-4"
                 />
-                <a href="https://www.facebook.com/snowballsecurities" target="_blank">
+
+                <StyledAnchor href="https://www.facebook.com/snowballsecurities" target="_blank">
                   <img
                     id="fbIcon"
                     src={facebookIcon}
@@ -93,8 +95,11 @@ function Footer() {
                     style={{maxHeight: '30px', maxWidth: '30px'}}
                     className="mr-4"
                   />
-                </a>
-                <a href="https://www.linkedin.com/company/snowballsecurities" target="_blank">
+                </StyledAnchor>
+                <StyledAnchor
+                  href="https://www.linkedin.com/company/snowballsecurities"
+                  target="_blank"
+                >
                   <img
                     src={linkedinIcon}
                     alt=""
@@ -102,16 +107,16 @@ function Footer() {
                     className="mr-4"
                     id="linkedInIcon"
                   />
-                </a>
+                </StyledAnchor>
 
-                <a href="https://twitter.com/snowballsec?lang=en" target="_blank">
+                <StyledAnchor href="https://twitter.com/snowballsec?lang=en" target="_blank">
                   <img
                     src={twitterIcon}
                     alt=""
                     style={{maxHeight: '30px', maxWidth: '30px'}}
                     id="twitterIcon"
                   />
-                </a>
+                </StyledAnchor>
               </Col>
             </Row>
             <Row className="justify-content-end mt-3 w-100">
@@ -160,9 +165,18 @@ function Footer() {
 const StyledLink = styled(Link)`
   text-decoration: none !important;
   color: black;
+
   &:hover {
-    color: rgba(0, 111, 187, 1);
-    opacity: 70% !important;
+    p {
+      opacity: 50% !important;
+    }
+    color: #006fbb;
+  }
+`
+
+const StyledAnchor = styled.a`
+  &:hover {
+    opacity: 50%;
   }
 `
 

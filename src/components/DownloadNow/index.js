@@ -1,6 +1,6 @@
 // @flow
-import React, {useEffect} from 'react'
-
+import React, {useEffect, useState, useRef} from 'react'
+import VizSensor from 'react-visibility-sensor'
 import './styles.scss'
 
 import googlePlayStore from '../../img/google-play.jpg'
@@ -16,31 +16,10 @@ type Props = {
 }
 
 function DownloadNow({mainText, subText, image}: Props) {
-  function changeZIndex() {
-    console.log(document.documentElement.scrollTop)
-
-    if (
-      (document.body.scrollTop > 8600 && document.body.scrollTop < 8800) ||
-      (document.documentElement.scrollTop > 8600 && document.documentElement.scrollTop < 8800) ||
-      (document.body.scrollTop > 150 && document.body.scrollTop < 750) ||
-      (document.documentElement.scrollTop > 150 && document.documentElement.scrollTop < 750) ||
-      (document.documentElement.scrollTop > 3200 && document.documentElement.scrollTop < 3500)
-    ) {
-      const currentVideo = document.getElementById('downloadNowPhone')
-      currentVideo.play()
-    }
-  }
-
-  useEffect(() => {
-    window.addEventListener('scroll', changeZIndex)
-
-    return () => {
-      window.removeEventListener('scroll', changeZIndex)
-    }
-  })
-
+  // const [shouldAnimate, setShouldAnimate] = useState(true)
+  const videoRef = useRef(null)
   return (
-    <div className="download-now">
+    <div className="download-now" onScrollCapture>
       <div className="container">
         <div className="row mx-auto">
           <div className="col-md-5 col-6 ml-auto d-flex flex-column justify-content-center">
@@ -57,15 +36,25 @@ function DownloadNow({mainText, subText, image}: Props) {
             <img src={qrCode} alt="" style={{maxWidth: '120px'}} className="mt-3" />
           </div>
           <div className="col-md-4 col-6 mr-auto ">
-            <video
-              src={phoneVideo}
-              style={{maxWidth: '300px'}}
-              poster={phone}
-              id="downloadNowPhone"
+            <VizSensor
+              partialVisibility
+              onChange={isVisible => {
+                console.log(isVisible)
+                if (isVisible) {
+                  videoRef.current.play()
+                }
+              }}
             >
-              <track />
-            </video>
-            {/* <PreviewCompatibleImage imageInfo={image} style={{maxWidth: '230px'}} /> */}
+              <video
+                src={phoneVideo}
+                style={{maxWidth: '300px'}}
+                poster={phone}
+                id="downloadNowPhone"
+                ref={videoRef}
+              >
+                <track />
+              </video>
+            </VizSensor>
           </div>
         </div>
       </div>

@@ -255,7 +255,7 @@ const ScrolledNavbar = styled(Navbar)`
     color: ${props => props.active === true && 'white !important'};
 
     :hover {
-      background-color: rgba(0, 111, 187, 1) !important;
+      background-color: #006fbb !important;
       color: white !important;
       /* color: rgba(0, 111, 187, 1) !important; */
     }
@@ -274,7 +274,6 @@ const LangToggleContainer = styled.div`
   div {
     font-size: 12px;
     border-radius: 50px;
-    border-color: ${props => props.theme.primary};
     border: 1px solid;
     width: 20px;
     height: 20px;

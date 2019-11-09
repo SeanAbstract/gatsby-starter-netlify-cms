@@ -146,6 +146,11 @@ const StyledCard = styled.div`
   background-color: #fff;
   background-clip: border-box;
   border: 2px solid #f5f5f5 !important;
+  transition: 250ms linear;
+
+  &:hover {
+    box-shadow: 0 0 2px 0 rgba(137, 146, 177, 0.15), 0 3px 10px 0 rgba(137, 146, 177, 0.1);
+  }
 `
 
 const ImgContainer = styled.div`
