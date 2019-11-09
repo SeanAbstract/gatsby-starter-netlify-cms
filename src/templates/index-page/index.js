@@ -197,7 +197,6 @@ export const IndexPageTemplate = ({
           </Row>
         </Container>
         {/* Stock Section or Third */}
-
         <section className="">
           <StockRow className="h-100 stock-section no-gutters">
             <Col md={6} xs={12} style={{backgroundColor: '#006fbb'}}>
@@ -234,15 +233,34 @@ export const IndexPageTemplate = ({
               </Controller>
             </Col>
             <Col md={6} xs={12} style={{backgroundColor: '#006fbb'}}>
+              <div id="section-trigger" />
               <Controller>
-                {stockSection.stocks.map(stock => {
+                {stockSection.stocks.map((stock, key) => {
                   const {country, countryCode, commission} = stock
+                  const styleDiv = {height: '50vh'}
+                  let stockClassName = 'd-flex flex-column justify-content-center stock-detail'
+                  let classToggle = 'fade-in'
+                  let mult = key
+                  let duration = 300
+                  if (key === 0) {
+                    styleDiv.marginTop = '25vh'
+                    classToggle = 'fade-out'
+                    stockClassName += ' first'
+                    mult = 1
+                  } else if (key + 1 === stockSection.stocks.length) {
+                    styleDiv.marginBottom = '25vh'
+                    duration = 600
+                  }
+
                   return (
-                    <Scene duration={400} pin triggerHook={0}>
-                      <div
-                        className="d-flex flex-column justify-content-center"
-                        style={{height: '100vh'}}
-                      >
+                    <Scene
+                      triggerElement="#section-trigger"
+                      duration={duration}
+                      triggerHook={0}
+                      offset={200 * mult}
+                      classToggle={classToggle}
+                    >
+                      <div className={stockClassName} style={styleDiv}>
                         <StockSection
                           currency={countryCode}
                           stockName={`${country} Stocks`}

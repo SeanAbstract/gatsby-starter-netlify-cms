@@ -74,6 +74,7 @@ $primary: #006fbb;
             flex-direction: column;
             justify-content: center;
         }
+
     }
 
     .stock-section {
@@ -88,6 +89,23 @@ $primary: #006fbb;
 
             &.background-two {
                 background-image: url('../../img/hk-tower.jpg') !important;
+            }
+        }
+
+        .stock-detail {
+            transition: 0.5s;
+            opacity: 0;
+
+            &.first {
+                opacity: 1;
+            }
+
+            &.fade-in {
+                opacity: 1;
+            }
+
+            &.fade-out {
+                opacity: 0;
             }
         }
 
