@@ -4,6 +4,10 @@ $primary: #006fbb;
     .nav-link {
         margin-right: 1.35rem;
         color: black !important;
+
+        &:hover {
+            color: white !important;
+        }
     }
 
     .custom-active-2 {

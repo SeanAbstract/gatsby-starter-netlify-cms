@@ -256,8 +256,7 @@ const ScrolledNavbar = styled(Navbar)`
 
     :hover {
       background-color: #006fbb !important;
-      color: white !important;
-      /* color: rgba(0, 111, 187, 1) !important; */
+      color: white !imporatant;
     }
   }
 

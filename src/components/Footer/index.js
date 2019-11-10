@@ -167,9 +167,9 @@ const StyledLink = styled(Link)`
   color: black;
 
   &:hover {
-    p {
+    /* p {
       opacity: 50% !important;
-    }
+    } */
     color: #006fbb;
   }
 `
