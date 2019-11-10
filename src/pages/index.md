@@ -1,136 +1,120 @@
 ---
 templateKey: index-page
 image: /img/landing-page-2.png
-
 firstSection:
-  mainText: "Fast Secure Trusted"
-  description: >
-    Fast and secure access to global markets with our online platform that allows you to buy
-    and sell securities in Hong Kong, China and the US. Try Snowball Securities today - a
-    trusted member of the Snowball Group
   buttonText: Try Snowball Securities today
+  description: >
+    Fast and secure access to global markets with our online platform that
+    allows you to buy and sell securities in Hong Kong, China and the US. Try
+    Snowball Securities today - a trusted member of the Snowball Group
   image: /img/snowball-phone.png
-
+  mainText: Fast Secure Trusted
 stockSection:
-  title: "Access World-Class Investment Options"
   backgroundImage: /img/investment.png
   stocks:
-    - country: "US"
-      countryCode: "US"
-      commission:
-        - price: "$0.0002"
-          text: "per share"
-        - price: "$0.99"
-          text: "per deal the minimum"
-    - country: "Hong Kong"
-      countryCode: "HK"
-      commission:
-        - price: "$0.00"
-          text: "No commission on orders below HKD 60,000"
-        - price: "0.03%"
-          text: "per share on orders above HKD 60,000"
-    - country: "US"
-      countryCode: "US"
-      commission:
-        - price: "$0.0002"
-          text: "per share"
-        - price: "$0.99"
-          text: "per deal the minimum"
-
+    - commission:
+        - price: $0.0002
+          text: per share
+        - price: $0.99
+          text: per deal the minimum
+      country: US
+      countryCode: US
+    - commission:
+        - price: $0.00
+          text: 'No commission on orders below HKD 60,000'
+        - price: 0.03%
+          text: 'per share on orders above HKD 60,000'
+      country: Hong Kong
+      countryCode: HK
+    - commission:
+        - price: $0.0002
+          text: per share
+        - price: $0.99
+          text: per deal the minimum
+      country: US
+      countryCode: US
+  title: Access World-Class Investment Options
 featureSection:
-  mainText: "Make informed decisions"
-  subText: "Invest globally in one account"
-  description: >
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. Excepteur sintticus occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
   buttonText: How it works
-  image: /img/snowball-empty-phone.png
+  description: >
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+    tempor. Excepteur sintticus occaecat cupidatat non proident, sunt in culpa
+    qui officia deserunt mollit anim id est laborum.
   gifs:
     - gif: /img/snowball-app-market-quotes_03.png
     - gif: /img/snowball-app-stock-financial_03.png
-
-
+  image: /img/snowball-empty-phone.png
+  mainText: Make informed decisions
+  subText: Invest globally in one account
 blurb:
-  mainText: "Get ahead"
-  subText: "on your terms"
-
+  mainText: Get ahead
+  subText: on your terms
 realTimeStockSection:
-  mainText: "Trade Global Stocks"
-  description: >
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. Excepteur sintticus occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
   buttonText: Start Trading
+  description: >
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+    tempor. Excepteur sintticus occaecat cupidatat non proident, sunt in culpa
+    qui officia deserunt mollit anim id est laborum.
+  mainText: Trade Global Stocks
   stockList:
-    - stock: "Facebook"
-      image: /img/facebook_blue.png
-      value: "187.39"
-      rate: "0.95"
-      percent: "0.05%"
-      abbreviation: "FB"
+    - abbreviation: FB
       bgColor: 'rgba(59,89,152, 1)'
-      
-    - stock: "Apple"
-      image: /img/linkedin_blue.png
-      value: "107.39"
-      rate: "0.35"
-      percent: "0.15%"
-      abbreviation: "AAPL"
-      bgColor: 'rgba(200,200,200, 1)'
-
-    - stock: "Facebook"
       image: /img/facebook_blue.png
-      value: "187.39"
-      rate: "0.95"
-      percent: "0.05%"
-      abbreviation: "FB"
+      percent: 0.05%
+      rate: '0.95'
+      stock: Facebook
+      value: '187.39'
+    - abbreviation: AAPL
+      bgColor: 'rgba(200,200,200, 1)'
+      image: /img/linkedin_blue.png
+      percent: 0.15%
+      rate: '0.35'
+      stock: Apple
+      value: '107.39'
+    - abbreviation: FB
       bgColor: 'rgba(59,89,152, 1)'
-
-    - stock: "Apple"
-      image: /img/linkedin_blue.png
-      value: "107.39"
-      rate: "0.35"
-      percent: "0.15%"
-      abbreviation: "AAPL"
-      bgColor: 'rgba(200,200,200, 1)'
-
-    - stock: "Amazon"
       image: /img/facebook_blue.png
-      value: "187.39"
-      rate: "0.95"
-      percent: "0.05%"
-      abbreviation: "AMZN"
+      percent: 0.05%
+      rate: '0.95'
+      stock: Facebook
+      value: '187.39'
+    - abbreviation: AAPL
+      bgColor: 'rgba(200,200,200, 1)'
+      image: /img/linkedin_blue.png
+      percent: 0.15%
+      rate: '0.35'
+      stock: Apple
+      value: '107.39'
+    - abbreviation: AMZN
       bgColor: 'rgba(30, 42, 54, 1)'
-
-    - stock: "Netflix"
-      image: /img/linkedin_blue.png
-      value: "107.39"
-      rate: "0.35"
-      percent: "0.15%"
-      abbreviation: "NFLX"
+      image: /img/facebook_blue.png
+      percent: 0.05%
+      rate: '0.95'
+      stock: Amazon
+      value: '187.39'
+    - abbreviation: NFLX
       bgColor: 'rgba(0,0,0, 1)'
-    
-
-blogRoll:
-  - title: Low commission/margin rate
-    description: minimum comm./trade 0 for HK, US$0.99 for US
-    url: 'http://'
-  - title: Low commission/margin rate
-    description: minimum comm./trade 0 for HK, US$0.99 for US
-    url: 'http://'
-  - title: Low commission/margin rate
-    description: minimum comm./trade 0 for HK, US$0.99 for US
-    url: 'http://'
-
+      image: /img/linkedin_blue.png
+      percent: 0.15%
+      rate: '0.35'
+      stock: Netflix
+      value: '107.39'
 testimonials:
-  - customerName: David Holmes
+  - backgroundImage: /img/snowball-testimonials-1.jpg
+    customerName: David Holmes
     customerPosition: investor
-    backgroundImage: /img/smile-face-7.jpg
     videoUrl: 'http://'
-  - customerName: Sarah Hughes
+  - backgroundImage: /img/snowball-testimonials-2.jpg
+    customerName: Sarah Hughes
     customerPosition: investor
-    backgroundImage: /img/smile-face-8.jpg
     videoUrl: 'http://'
-
+  - backgroundImage: /img/snowball-testimonials-3.jpg
+    customerName: Jasmine Doe
+    customerPosition: investor
+    videoUrl: 'http://'
 downloadNow:
-  mainText: "Access Global Markets Today"
-  subText: "Download now"
   image: /img/snowball-phone.png
+  mainText: Access Global Markets Today
+  subText: Download now
 ---
+
