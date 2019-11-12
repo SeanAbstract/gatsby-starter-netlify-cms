@@ -7,6 +7,9 @@ import playButton from '../../../static/img/play_button.svg'
 import testimonialImage from '../../../static/img/smile-face-7.jpg'
 import testimonialImage2 from '../../../static/img/smile-face-8.jpg'
 import video from '../../img/SPIN-700x1080_open-account.mp4'
+import testimony from '../../img/testimonial-1.mp4'
+import testimony2 from '../../img/testimonial-2.mp4'
+import testimony3 from '../../img/testimonial-3.mp4'
 
 const items = [
   {
@@ -26,26 +29,29 @@ type Props = {
   }>,
 }
 
+const testimonyVideos = [testimony, testimony3, testimony2]
+
 const TestimonyCarousel = ({testimonials}: Props) => {
   const [activeIndex, setActiveIndex] = useState(0)
   const [animating, setAnimating] = useState(false)
   const [modal, setModal] = useState(false)
+  const [currentVideo, setCurrentVideo] = useState(testimonyVideos[0])
 
   const toggle = () => setModal(!modal)
 
   const next = () => {
     if (animating) return
-    const nextIndex = activeIndex === items.length - 1 ? 0 : activeIndex + 1
+    const nextIndex = activeIndex === testimonials.length - 1 ? 0 : activeIndex + 1
     setActiveIndex(nextIndex)
   }
 
   const previous = () => {
     if (animating) return
-    const nextIndex = activeIndex === 0 ? items.length - 1 : activeIndex - 1
+    const nextIndex = activeIndex === 0 ? testimonials.length - 1 : activeIndex - 1
     setActiveIndex(nextIndex)
   }
 
-  const slides = testimonials.map(testimonial => (
+  const slides = testimonials.map((testimonial, ndx) => (
     <CarouselItem
       onExiting={() => setAnimating(true)}
       onExited={() => setAnimating(false)}
@@ -84,6 +90,7 @@ const TestimonyCarousel = ({testimonials}: Props) => {
             style={{height: '65px', width: '65px'}}
             onClick={() => {
               setModal(true)
+              setCurrentVideo(testimonyVideos[ndx])
             }}
           >
             <img src={playButton} alt="Play Button" className="img-fluid" />
@@ -109,8 +116,8 @@ const TestimonyCarousel = ({testimonials}: Props) => {
       <Modal isOpen={modal} size="lg" toggle={toggle}>
         <ModalHeader toggle={toggle} />
         <ModalBody className="h-100">
-          <video controls autoPlay>
-            <source src={video} type="video/mp4" />
+          <video controls autoPlay style={{objectFit: 'cover'}}>
+            <source src={currentVideo} type="video/mp4" />
           </video>
         </ModalBody>
       </Modal>

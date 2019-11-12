@@ -8,6 +8,10 @@ $primary: #006fbb;
         &:hover {
             color: white !important;
         }
+
+        &:last-child {
+            margin-right: 0;
+        }
     }
 
     .custom-active-2 {

@@ -88,6 +88,11 @@ type Props = {
   },
 }
 
+const makeInformedDecisions = [
+  {subText: 'Free market depth record'},
+  {subText: 'Multiple Currencies'},
+]
+
 export const IndexPageTemplate = ({
   image,
   firstSection,
@@ -218,7 +223,7 @@ export const IndexPageTemplate = ({
                     }}
                   >
                     <div>
-                      <h1 className="display-2 mb-3">
+                      <h1 className="display-2 mb-3 ml-5">
                         ACCESS
                         <br />
                         WORLD-CLASS
@@ -307,9 +312,11 @@ export const IndexPageTemplate = ({
                       className="d-flex flex-column justify-content-center"
                       style={{height: '100vh'}}
                     >
-                      <h1 className="text-primary display-2 mb-3">{featureSection.mainText}</h1>
+                      {ndx === 0 && (
+                        <h1 className="text-primary display-2 mb-3">{featureSection.mainText}</h1>
+                      )}
                       <h5 className="mb-0" style={{fontSize: '28px'}}>
-                        {featureSection.subText}
+                        {ndx > 0 ? makeInformedDecisions[ndx - 1].subText : featureSection.subText}
                       </h5>
                       <p className="dark-grey font-size-18">{featureSection.description}</p>
                       <Link to="/how-it-works">

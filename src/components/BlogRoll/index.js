@@ -7,6 +7,7 @@ import {Col, Row} from 'reactstrap'
 
 import bgSlider from '../../img/bg-slider1.jpg'
 import bgSlider2 from '../../img/bg-slider2.jpg'
+import bgSlider3 from '../../img/bg-slider2-security.jpg'
 import arrowRight from '../../img/arrow-right-blue.png'
 import arrowRightWhite from '../../img/arrow-right.png'
 
@@ -21,7 +22,7 @@ const content = [
   {
     title: 'Greater security of account assets',
     description: 'minimium comm./trade: 0 for HK, US$0.99 for US',
-    featuredImage: bgSlider,
+    featuredImage: bgSlider3,
   },
   {
     title: 'Exclusive info at your fingertips',
@@ -140,7 +141,7 @@ class BlogRoll extends React.Component {
                     <div className="mt-5">
                       <Link to={'/how-it-works' || post.fields.slug}>
                         <StyledButton
-                          className={`btn btn-outline-primary border-white rounded-pill button-hover w-50 pt-2 border-1 ${
+                          className={`btn btn-outline-primary border-white rounded-pill button-hover pt-2 border-1 ${
                             !this.state.isHovering && this.state.currentNdx === ndx
                               ? 'button-hover'
                               : ''

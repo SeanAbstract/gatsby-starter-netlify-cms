@@ -101,15 +101,15 @@ realTimeStockSection:
       value: '107.39'
 testimonials:
   - backgroundImage: /img/snowball-testimonials-1.jpg
-    customerName: David Holmes
+    customerName: Elliot
     customerPosition: investor
     videoUrl: 'http://'
   - backgroundImage: /img/snowball-testimonials-2.jpg
-    customerName: Sarah Hughes
+    customerName: Jeremy
     customerPosition: investor
     videoUrl: 'http://'
   - backgroundImage: /img/snowball-testimonials-3.jpg
-    customerName: Jasmine Doe
+    customerName: Xuling
     customerPosition: investor
     videoUrl: 'http://'
 downloadNow:

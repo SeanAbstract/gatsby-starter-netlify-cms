@@ -136,7 +136,7 @@ export default class Header extends React.Component {
         </StyledNavbar>
 
         <ScrolledNavbar isOpen={isOpen} scrolled={scrolled} light expand="md" className="fixed-top">
-          <div className="container mr-2">
+          <div className="container">
             <NavbarBrand>
               <Link to="/">
                 <LogoIcon isOpen={isOpen} scrolled={scrolled} src={logoIcon} alt="company logo" />
@@ -144,7 +144,7 @@ export default class Header extends React.Component {
             </NavbarBrand>
             <StyledNavbarToggler isOpen={this.state.isOpen} onClick={this.toggle} />
             <StyledCollapse isOpen={this.state.isOpen} navbar>
-              <Nav className="ml-auto scroll-nav pr-5" navbar>
+              <Nav className="ml-auto scroll-nav" navbar>
                 {data.map(link =>
                   link.href !== '' ? (
                     <Link to={link.href} className="nav-link">
