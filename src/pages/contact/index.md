@@ -12,7 +12,7 @@ informationSection:
       subtitle: Beijing Trading Hours Time
       title: Chinese
   customerServiceTitle: Customer Service
-  imageRight: /img/contact.png
+  imageRight: /img/contact.jpg
   offices:
     - address: 'Level 5, 25 Teed Street Newmarket, Auckland 1023'
       officeName: New Zealand Office

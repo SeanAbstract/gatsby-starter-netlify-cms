@@ -4,7 +4,7 @@ title: Greater security for account assets
 date: 2019-10-29T06:03:00.622Z
 description: Dual supervision by NZ and SEC/FINRA in US
 featuredpost: true
-featuredimage: /img/another-stock.jpg
+featuredimage: /img/bg-slider2-security.jpg
 tags:
   - none
 downloadNow:
