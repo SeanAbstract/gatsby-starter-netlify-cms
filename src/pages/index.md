@@ -20,7 +20,7 @@ stockSection:
           text: 'per share on orders above HKD 60,000'
       country: Hong Kong
       countryCode: HK
-      financingRate: "3.85%\_"
+      financingRate: "4.844%\_"
       platformUsageFee: HKD 18
       platformUsageFeeType: per deal
     - commission:
@@ -30,7 +30,7 @@ stockSection:
           text: 'per share (over HKD 60,000)'
       country: US
       countryCode: US
-      financingRate: "4.844%\_"
+      financingRate: "3.85%\_"
       platformUsageFee: $0.003
       platformUsageFeeType: per share
     - commission:
@@ -105,10 +105,11 @@ blurb:
   subText: on your terms
 realTimeStockSection:
   buttonText: Start Trading
-  description: >
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-    tempor. Excepteur sintticus occaecat cupidatat non proident, sunt in culpa
-    qui officia deserunt mollit anim id est laborum.
+  description: >-
+    With Snowball, one account provides ultrafast access to the World's major
+    stock exchanges. It's super easy to gain exposure to some of the largest
+    companies on the planet. Snowball is a gateway to global markets allowing
+    you to own a piece of the brands you love.
   mainText: Trade Global Stocks
   stockList:
     - abbreviation: FB
