@@ -102,6 +102,7 @@ class BlogRoll extends React.Component {
           const {title, description, featuredImage} = post
           return (
             <StyledCol
+              md={4}
               className={`${
                 !this.state.isHovering && this.state.currentNdx === ndx ? 'card-hover' : ''
               }`}
@@ -224,8 +225,13 @@ const ImgContainer = styled.div`
 const StyledCol = styled(Col)`
   border-left: 0.5px solid #ddd;
   height: 55vh;
+
   :last-child {
     border-right: 0.5px solid #aaaaaa;
+
+    @media (max-width: 426px) {
+      border: none !important;
+    }
   }
 
   :hover {
@@ -238,6 +244,7 @@ const StyledCol = styled(Col)`
 
   @media (max-width: 426px) {
     border: none !important;
+    height: 25vh;
   }
 `
 

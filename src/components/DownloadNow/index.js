@@ -2,6 +2,7 @@
 import React, {useRef} from 'react'
 import VizSensor from 'react-visibility-sensor'
 import './styles.scss'
+import styled from 'styled-components'
 
 import googlePlayStore from '../../img/google-play.jpg'
 import appleIcon from '../../img/apple-store.jpg'
@@ -27,13 +28,18 @@ function DownloadNow({mainText, subText, image}: Props) {
             <h3 className="big-subtitle text-dark">{subText}</h3>
             <div className="d-flex mt-3">
               <a href="https://play.google.com/store/apps/details?id=com.snowballfinance.android">
-                <img src={googlePlayStore} alt="" style={{maxWidth: '130px'}} className="mr-3" />
+                <AppButtons src={googlePlayStore} alt="" className="mr-3" />
               </a>
               <a href="https://apps.apple.com/cn/app/xy-trade/id1209930465?l=en">
-                <img src={appleIcon} alt="" style={{maxWidth: '130px'}} />
+                <AppButtons src={appleIcon} alt="" />
               </a>
             </div>
-            <img src={qrCode} alt="" style={{maxWidth: '120px'}} className="mt-3" />
+            <img
+              src={qrCode}
+              alt=""
+              style={{maxWidth: '120px'}}
+              className="mt-3 d-none d-md-block"
+            />
           </div>
           <div className="col-md-4 col-6 mr-auto ">
             <VizSensor
@@ -47,7 +53,7 @@ function DownloadNow({mainText, subText, image}: Props) {
             >
               <video
                 src={phoneVideo}
-                style={{maxWidth: '300px'}}
+                style={{maxWidth: '250px', marginBottom: '35px'}}
                 poster={phone}
                 id="downloadNowPhone"
                 ref={videoRef}
@@ -61,5 +67,13 @@ function DownloadNow({mainText, subText, image}: Props) {
     </div>
   )
 }
+
+const AppButtons = styled.img`
+  width: 120px;
+
+  @media (max-width: 565px) {
+    width: 80px;
+  }
+`
 
 export default DownloadNow

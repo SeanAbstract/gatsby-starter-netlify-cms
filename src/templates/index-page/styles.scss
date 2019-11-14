@@ -32,6 +32,17 @@ $primary: #006fbb;
 .landing-page {
     .display-2 {
         font-size: 90px;
+
+    }
+
+    .carousel-container {
+        .display-2 {
+            font-size: 90px;
+    
+            @media (min-width: 426px) {
+                font-size: 64px;
+            }
+        }
     }
 
     .card {
@@ -207,7 +218,7 @@ $primary: #006fbb;
 
     .blog-roll-container {
         background-color: white;
-        height: 60vh;
+        min-height: 60vh;
         .blog-container {
             border-left: 1px solid #E6E6E6;
 

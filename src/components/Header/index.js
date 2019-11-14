@@ -142,7 +142,7 @@ export default class Header extends React.Component {
                 <LogoIcon isOpen={isOpen} scrolled={scrolled} src={logoIcon} alt="company logo" />
               </Link>
             </NavbarBrand>
-            <StyledNavbarToggler isOpen={this.state.isOpen} onClick={this.toggle} />
+
             <StyledCollapse isOpen={this.state.isOpen} navbar>
               <Nav className="ml-auto scroll-nav" navbar>
                 {data.map(link =>
