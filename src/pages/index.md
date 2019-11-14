@@ -11,7 +11,7 @@ firstSection:
   mainText: Fast Secure Trusted
 stockSection:
   title: Access World-Class Investment Options
-  backgroundImage: /img/investment.png
+  backgroundImage: /img/bg-image-building.jpg
   stocks:
     - commission:
         - price: $0.00
