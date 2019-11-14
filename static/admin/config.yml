@@ -47,6 +47,9 @@ collections:
               {label: "Stocks", name: "stocks", widget: list, fields: [
                 {label: 'Country', name: 'country', widget: string},
                 {label: 'Country Code', name: 'countryCode', widget: string},
+                {label: 'Financing Rate', name: 'financingRate', widget: text},
+                {label: 'Platform Usage Fee', name: 'platformUsageFee', widget: text},
+                {label: 'Platform Usage Fee Type', name: 'platformUsageFeeType', widget: text},
                 {label: 'Commission', name: 'commission', widget: list, fields: [
                   {label: 'Price', name: 'price', widget: text},
                   {label: 'Text', name: 'text', widget: text},
@@ -54,8 +57,11 @@ collections:
               ]}
             ]}
           - {label: "Feature Section", name: "featureSection", widget: object, fields: [
-              {label: 'Main Text', name: 'mainText', widget: string},
-              {label: "Sub Text", name: "subText", widget: string},
+              {label: 'Sections', name: 'sections', widget: list, fields: [
+                {label: 'Main Text', name: 'mainText', widget: string, required: false},
+                {label: "Sub Text", name: "subText", widget: string},
+                {label: "Description", name: "description", widget: string},
+              ]},
               {label: 'Description', name: 'description', widget: string},
               {label: 'Button Text', name: 'buttonText', widget: string},
               {label: 'Image', name: 'image', widget: image},

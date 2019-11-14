@@ -40,6 +40,9 @@ type Props = {
     stocks: Array<{
       country: string,
       countryCode: string,
+      financingRate: string,
+      platformUsageFee: string,
+      platformUsageFeeType: string,
       commission: [
         {
           price: string,
@@ -49,8 +52,11 @@ type Props = {
     }>,
   },
   featureSection: {
-    mainText: string,
-    subText: string,
+    sections: Array<{
+      mainText: string,
+      subText: string,
+      description: string,
+    }>,
     description: string,
     buttonText: string,
     image: any,
@@ -87,11 +93,6 @@ type Props = {
     image: any,
   },
 }
-
-const makeInformedDecisions = [
-  {subText: 'Free market depth record'},
-  {subText: 'Multiple Currencies'},
-]
 
 export const IndexPageTemplate = ({
   image,
@@ -211,7 +212,7 @@ export const IndexPageTemplate = ({
                   triggerElement="#section-trigger"
                   duration={1600}
                   triggerHook={0}
-                  offset={700}
+                  offset={350 * (stockSection.stocks.length / 2)}
                   classToggle="background-two"
                 >
                   <div
@@ -241,7 +242,14 @@ export const IndexPageTemplate = ({
               <div id="section-trigger" />
               <Controller>
                 {stockSection.stocks.map((stock, key) => {
-                  const {country, countryCode, commission} = stock
+                  const {
+                    country,
+                    countryCode,
+                    commission,
+                    financingRate,
+                    platformUsageFee,
+                    platformUsageFeeType,
+                  } = stock
                   const styleDiv = {height: '50vh'}
                   let stockClassName = 'd-flex flex-column justify-content-center stock-detail'
                   let classToggle = 'fade-in'
@@ -257,23 +265,27 @@ export const IndexPageTemplate = ({
                     duration = 600
                   }
 
+                  const packageType =
+                    key <= 3 ? 'Low Commission Package' : 'Low Interest Rate Package'
+
                   return (
                     <Scene
                       triggerElement="#section-trigger"
                       duration={duration}
                       triggerHook={0}
-                      offset={200 * mult}
+                      offset={350 * mult}
                       classToggle={classToggle}
-                      key={key}
+                      key={`stock-key:${key}`}
                     >
                       <div className={stockClassName} style={styleDiv}>
                         <StockSection
                           currency={countryCode}
                           stockName={`${country} Stocks`}
-                          commissionAmt={commission[0].price}
-                          commissionDesc={commission[0].text}
-                          interestAmt={commission[1].price}
-                          interestDesc={commission[1].text}
+                          commission={commission}
+                          financingRate={financingRate}
+                          platformUsageFee={platformUsageFee}
+                          platformUsageFeeType={`${platformUsageFeeType} (platform usage fee)`}
+                          packageType={packageType}
                         />
                       </div>
                     </Scene>
@@ -306,19 +318,19 @@ export const IndexPageTemplate = ({
             </div>
             <div className="col-md-4 mr-auto ml-3">
               <Controller>
-                {stockSection.stocks.map((stock, ndx) => (
-                  <Scene duration={400} pin triggerHook={0} key={ndx}>
+                {featureSection.sections.map((section, ndx) => (
+                  <Scene duration={400} pin triggerHook={0} key={`featureSection-sections-${ndx}`}>
                     <div
                       className="d-flex flex-column justify-content-center"
                       style={{height: '100vh'}}
                     >
                       {ndx === 0 && (
-                        <h1 className="text-primary display-2 mb-3">{featureSection.mainText}</h1>
+                        <h1 className="text-primary display-2 mb-3">{section.mainText}</h1>
                       )}
                       <h5 className="mb-0" style={{fontSize: '28px'}}>
-                        {ndx > 0 ? makeInformedDecisions[ndx - 1].subText : featureSection.subText}
+                        {section.subText}
                       </h5>
-                      <p className="dark-grey font-size-18">{featureSection.description}</p>
+                      <p className="dark-grey font-size-18">{section.description}</p>
                       <Link to="/how-it-works">
                         <button className="btn btn-outline-primary rounded-pill px-4" type="button">
                           {featureSection.buttonText}
@@ -476,6 +488,9 @@ export const pageQuery = graphql`
           stocks {
             country
             countryCode
+            financingRate
+            platformUsageFee
+            platformUsageFeeType
             commission {
               price
               text
@@ -483,8 +498,11 @@ export const pageQuery = graphql`
           }
         }
         featureSection {
-          mainText
-          subText
+          sections {
+            mainText
+            subText
+            description
+          }
           description
           buttonText
           image {

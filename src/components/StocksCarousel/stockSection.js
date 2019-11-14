@@ -1,14 +1,31 @@
+// @flow
 import React from 'react'
 import styled from 'styled-components'
 import {Row, Col} from 'reactstrap'
 
+type Props = {
+  financingRate: string,
+  currency: string,
+  stockName: string,
+  platformUsageFee: string,
+  platformUsageFeeType: string,
+  packageType: string,
+  commission: [
+    {
+      price: string,
+      text: string,
+    }
+  ],
+}
+
 function StockSection({
   currency,
   stockName,
-  commissionAmt,
-  commissionDesc,
-  interestAmt,
-  interestDesc,
+  commission,
+  financingRate,
+  platformUsageFee,
+  platformUsageFeeType,
+  packageType,
 }: Props) {
   return (
     <Row id={stockName} style={{color: 'white'}} className="w-100 justify-content-center">
@@ -17,27 +34,34 @@ function StockSection({
           <CurrencyText className="mb-0">{currency}$</CurrencyText>
         </CircleContainer>
       </Col>
-      <Col xs={6} md={7} className="mt-md-3">
+      <Col xs={6} md={8} className="mt-md-3">
         <StockType>{stockName}</StockType>
 
-        <CommissionText>COMMISSION</CommissionText>
+        <CommissionText style={{transform: 'uppercase'}} className="mb-2">
+          {packageType}
+        </CommissionText>
 
-        <Row className="align-items-end mb-2 justify-content-between ">
-          <Col md={10} lg={10} className="mr-3">
-            <AmountText className="mb-0">
-              {commissionAmt} <br className="d-md-none" />
-              <StyledSmall>{commissionDesc}</StyledSmall>
-            </AmountText>
-          </Col>
-        </Row>
+        {commission.map((comm, ndx) => (
+          <Row className="align-items-end mb-2 justify-content-between" key={comm.price}>
+            <Col md={10} lg={10} className="">
+              <AmountText className="mb-1">
+                {comm.price} <br className="d-md-none" />
+                <StyledSmall>{comm.text}</StyledSmall>
+              </AmountText>
 
-        <Row className="align-items-end">
-          <Col md={12} lg={10} className="mr-2">
-            <AmountText className="mb-0">
-              {interestAmt} <br className="d-md-none" /> <StyledSmall>{interestDesc}</StyledSmall>
-            </AmountText>
-          </Col>
-        </Row>
+              {ndx + 1 === commission.length && (
+                <>
+                  <AmountText className="mb-1">
+                    {platformUsageFee} <StyledSmall>{platformUsageFeeType} </StyledSmall>{' '}
+                  </AmountText>
+                  <AmountText className="mb-1">
+                    {financingRate} <StyledSmall>financing interest rate (min.)</StyledSmall>
+                  </AmountText>
+                </>
+              )}
+            </Col>
+          </Row>
+        ))}
       </Col>
     </Row>
   )

@@ -16,17 +16,20 @@ import './styles.scss'
 const content = [
   {
     title: 'Low commission/margin rate',
-    description: 'minimium comm./trade: 0 for HK, US$0.99 for US',
+    description:
+      'Take advantage of low margin rates to increase  the scale of your portfolio through margin financing.  Or play it safe and benefit from competitively low commission rates.',
     featuredImage: bgSlider,
   },
   {
     title: 'Greater security of account assets',
-    description: 'minimium comm./trade: 0 for HK, US$0.99 for US',
+    description:
+      'Snowball is a secure online platform, your account  assets are held in a trust under the supervision of  independent auditors to provide greater level of  protection. Trade with confidence.',
     featuredImage: bgSlider3,
   },
   {
     title: 'Exclusive info at your fingertips',
-    description: "Snowball's unique stock intel keeps you ahead of the game",
+    description:
+      'It only takes a few minutes to setup your free  Snowball account. The platform is really user friendly  and the Snowball customer support team is only a phone  call away if you need any assistance to get started.  Give it a try today. ',
     featuredImage: bgSlider2,
   },
 ]
