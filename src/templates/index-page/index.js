@@ -1,6 +1,6 @@
 // @flow
 
-import React, {useEffect} from 'react'
+import React, {useEffect, useState} from 'react'
 import styled from 'styled-components'
 import {Row, Col, Container} from 'reactstrap'
 import PropTypes from 'prop-types'
@@ -19,6 +19,8 @@ import StockSection from '../../components/StocksCarousel/stockSection'
 import videoPoster from '../../../static/img/bg-image-sailing.jpg'
 import phoneVideo from '../../../static/img/mobile-phone-spin.mp4'
 import videoSrcURL from '../../../static/img/sailing.mp4'
+import videoSrcURL2 from '../../../static/img/Beach-Final.mp4'
+import videoSrcURL3 from '../../../static/img/Boat-Final.mp4'
 import arrowDown from '../../img/arrow-down.png'
 
 import 'slick-carousel/slick/slick.css'
@@ -26,6 +28,7 @@ import 'slick-carousel/slick/slick-theme.css'
 
 type Props = {
   image: any,
+  videoName: any,
   firstSection: {
     mainText: string,
     description: string,
@@ -93,7 +96,7 @@ type Props = {
 }
 
 export const IndexPageTemplate = ({
-  image,
+  videoName,
   firstSection,
   stockSection,
   featureSection,
@@ -144,7 +147,7 @@ export const IndexPageTemplate = ({
             width="100%"
             muted="true"
             preload="auto"
-            src={videoSrcURL}
+            src={require(`../../../static/img/${videoName}`)}
             autoplay
             className="video"
             poster={videoPoster}
@@ -434,7 +437,9 @@ class IndexPage extends React.Component {
 
     return (
       <Layout>
+        <meta name="robots" content="noindex" />
         <IndexPageTemplate
+          videoName={frontmatter.videoName}
           image={frontmatter.image}
           firstSection={frontmatter.firstSection}
           stockSection={frontmatter.stockSection}
@@ -455,13 +460,7 @@ export const pageQuery = graphql`
   query IndexPageTemplate($id: String!) {
     markdownRemark(id: {eq: $id}) {
       frontmatter {
-        image {
-          childImageSharp {
-            fluid(maxWidth: 1000, quality: 100) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
+        videoName
         firstSection {
           mainText
           description

@@ -1,6 +1,6 @@
 ---
 templateKey: index-page
-videoName: sailing.mp4
+videoName: Beach-Final.mp4
 image: /img/landing-page-2.png
 firstSection:
   buttonText: Try Snowball Securities today
