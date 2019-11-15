@@ -56,7 +56,7 @@ export default class Header extends React.Component {
               onClick={this.toggle}
               style={{filter: 'brightness(0) invert(1)'}}
             />
-            <StyledCollapse isOpen={isOpen} navbar>
+            <StyledCollapse isOpen={isOpen} navbar style={{zIndex: '5'}}>
               <Nav className="ml-auto" navbar>
                 <HeaderNavLink to="/about" title="About" />
                 <HeaderNavLink to="/how-it-works" title="How It Works" />
@@ -82,7 +82,8 @@ const setBackgroundColor = (isOpen, scrolled) => {
 
 const StyledNavbar = styled(Navbar)`
   top: 0px !important;
-  /* background-color: ${props => setBackgroundColor(props.isOpen, props.scrolled)}; */
+  background-color: ${props => setBackgroundColor(props.isOpen, props.scrolled)};
+  /* background-color: #006fbb; */
   position: absolute;
   transition: 0s;
   margin-left: -0.5rem;
@@ -112,7 +113,7 @@ const StyledNavbarToggler = styled(NavbarToggler)`
 `
 
 const StyledCollapse = styled(Collapse)`
-  /* background-color: ${props => props.theme.primary}; */
+  background-color: #006fbb;
   opacity: 0.8;
   width: 100vw;
   -webkit-transition: none;
