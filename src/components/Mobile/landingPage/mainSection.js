@@ -3,7 +3,7 @@ import styled, {withTheme} from 'styled-components'
 import {Jumbotron} from 'reactstrap'
 
 import {MainText, SubText} from '../styled'
-import videoSrcURL from '../../../../static/img/Boat-Final.mp4'
+import videoSrcURL from '../../../../static/img/Beach-Final.mp4'
 
 function MainSection() {
   useEffect(() => {
@@ -27,7 +27,7 @@ function MainSection() {
       </ImageContainer>
       <InnerContainer>
         <BigText>GLOBAL MARKETS</BigText>
-        <BigSubText>at your fingertips</BigSubText>
+        <BigSubText className="text-primary">at your fingertips</BigSubText>
       </InnerContainer>
 
       {/* <ArrowDownIcon src={arrowDown} alt="arrow_down" /> */}
@@ -36,43 +36,13 @@ function MainSection() {
 }
 
 const BigText = styled(MainText)`
-  font-size: 4rem;
-
-  @media (min-width: 576px) {
-    font-size: 7rem;
-  }
-
-  @media (min-width: 768px) {
-    font-size: 6rem;
-  }
-
-  @media (min-width: 992px) {
-    font-size: 6rem;
-  }
-
-  @media (min-width: 1200px) {
-    font-size: 7rem;
-  }
+  font-size: 5.5rem;
+  line-height: 4.25rem;
 `
 
 const BigSubText = styled(SubText)`
-  font-size: 3rem;
-
-  @media (min-width: 576px) {
-    font-size: 6rem;
-  }
-
-  @media (min-width: 768px) {
-    font-size: 5rem;
-  }
-
-  @media (min-width: 992px) {
-    font-size: 5rem;
-  }
-
-  @media (min-width: 1200px) {
-    font-size: 6rem;
-  }
+  font-size: 5.75rem;
+  display: inline-flex;
 `
 
 const StyledVideo = styled.video`
@@ -94,6 +64,7 @@ const MainJumbotron = styled(Jumbotron)`
   margin-bottom: 0;
   background-color: transparent;
   margin-top: 0;
+  text-align: center;
 
   @media (min-width: 1200px) {
     height: 75vh;
@@ -125,17 +96,9 @@ const Overlay = styled.div`
 
 const InnerContainer = styled.div`
   text-align: center;
-
+  max-width: 80%;
   padding-bottom: 5rem;
   padding-top: 2.5rem;
-
-  @media (min-width: 425px) {
-    text-align: right;
-  }
-
-  @media (min-width: 1024px) {
-    padding-top: 8rem;
-  }
 `
 
 const ArrowDownIcon = styled.img`

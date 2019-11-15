@@ -44,20 +44,20 @@ export default function FourthSection() {
         >
           <Fade bottom>
             <div className="mb-3">
-              <TitleWord>MAKE</TitleWord>
-              <TitleWord>INFORMED</TitleWord>
-              <TitleWord>DECISIONS</TitleWord>
+              <TitleWord className="display-2 text-primary">MAKE</TitleWord>
+              <TitleWord className="display-2 text-primary">INFORMED</TitleWord>
+              <TitleWord className="display-2 text-primary">DECISIONS</TitleWord>
             </div>
             <div>
-              <h5 className="text-muted">Invest Globally in one account</h5>
-              <p className="text-muted" style={{lineHeight: '1.25', fontSize: '14px'}}>
+              <h5 style={{fontSize: '28px'}}>Invest Globally in one account</h5>
+              <p className="text-muted">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
                 Excepteur sintticus occaecat cupidatat non proident, sunt in culpa qui officia
                 deserunt mollit anim id est laborum.
               </p>
-              <RoundButton color="primary" outline>
-                <ButtonText className="mb-0">How it works</ButtonText>
-              </RoundButton>
+              <button className="btn btn-outline-primary rounded-pill pt-2 px-4" type="button">
+                How it works
+              </button>
             </div>
           </Fade>
         </Col>
@@ -68,37 +68,12 @@ export default function FourthSection() {
 
 const OuterContainer = styled(Container)`
   height: 70vh;
+  background-color: white;
 
   @media (min-width: 768px) {
     height: 75vh;
   }
 `
 const TitleWord = styled.h1`
-  font-size: 4rem;
-  line-height: 2.5rem;
-
-  color: ${props => props.theme.primary};
-
-  @media (min-width: 768px) {
-    font-size: 5rem;
-    line-height: 3.25rem;
-  }
-`
-
-const RoundButton = styled(Button)`
-  border-radius: 20px;
-  border-width: 2px;
-  font-size: 14px;
-  color: ${props => props.theme.primary};
-  border-color: ${props => props.theme.primary};
-  line-height: 0.75rem;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-`
-
-const ButtonText = styled.p`
-  line-height: 0.9rem;
-  font-size: 0.75rem;
-  padding-top: 3px;
-  font-weight: normal;
+  line-height: 3.5rem;
 `

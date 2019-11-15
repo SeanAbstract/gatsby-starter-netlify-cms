@@ -422,7 +422,13 @@ class IndexPage extends React.Component {
     }, 1000)
 
     if (window !== undefined) {
-      window.addEventListener('resize', event => {
+      if (window.innerWidth < 578) {
+        this.setState({useMobileView: true})
+      } else {
+        this.setState({useMobileView: false})
+      }
+
+      window.addEventListener('resize', () => {
         if (window.innerWidth < 578) {
           this.setState({useMobileView: true})
         } else {
@@ -437,6 +443,8 @@ class IndexPage extends React.Component {
   }
 
   render() {
+    const {frontmatter} = this.props.data.markdownRemark
+
     if (this.state.loading) {
       return (
         <div style={{height: '100vh'}} className="d-flex justify-content-center align-items-center">
@@ -446,10 +454,8 @@ class IndexPage extends React.Component {
     }
 
     if (this.state.useMobileView) {
-      return <MobileIndex />
+      return <MobileIndex testimonials={frontmatter.testimonials} />
     }
-
-    const {frontmatter} = this.props.data.markdownRemark
 
     return (
       <Layout>

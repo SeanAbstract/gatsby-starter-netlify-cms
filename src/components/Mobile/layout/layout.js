@@ -8,9 +8,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import {useStaticQuery, graphql} from 'gatsby'
+import styled from 'styled-components'
+
+import Footer from '../../Footer'
 
 import Header from './header'
-import Footer from './footer'
 
 const Layout = ({children}) => {
   const data = useStaticQuery(graphql`
@@ -26,7 +28,7 @@ const Layout = ({children}) => {
   return (
     <>
       <Header siteTitle={data.site.siteMetadata.title} />
-      <main>{children}</main>
+      <StyledMain className="landing-page-mobile">{children}</StyledMain>
       <Footer />
     </>
   )
@@ -35,5 +37,10 @@ const Layout = ({children}) => {
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
 }
+
+const StyledMain = styled.main`
+  margin-bottom: 500px;
+  position: relative;
+`
 
 export default Layout

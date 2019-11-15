@@ -12,6 +12,7 @@ import arrowRight from '../../img/arrow-right-blue.png'
 import arrowRightWhite from '../../img/arrow-right.png'
 
 import './styles.scss'
+import {interval} from 'rxjs'
 
 const content = [
   {
@@ -90,9 +91,21 @@ class BlogRoll extends React.Component {
   }
 
   componentDidMount() {
-    setInterval(() => {
+    let interval = setInterval(() => {
       this.setState(prevState => ({currentNdx: (prevState.currentNdx + 1) % 3}))
     }, 2000)
+
+    if (window !== undefined) {
+      window.addEventListener('resize', () => {
+        if (window.innerWidth < 578) {
+          clearInterval(interval)
+        } else {
+          interval = setInterval(() => {
+            this.setState(prevState => ({currentNdx: (prevState.currentNdx + 1) % 3}))
+          }, 2000)
+        }
+      })
+    }
   }
 
   render() {
@@ -225,6 +238,9 @@ const ImgContainer = styled.div`
 const StyledCol = styled(Col)`
   border-left: 0.5px solid #ddd;
   height: 55vh;
+  color: white;
+
+  margin-bottom: 10px;
 
   :last-child {
     border-right: 0.5px solid #aaaaaa;

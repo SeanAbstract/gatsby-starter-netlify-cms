@@ -16,14 +16,18 @@ function ThirdSection() {
   return (
     <StyledContainer className="p-0" fluid>
       <Row noGutters className="h-100">
-        <Col md={6} xs={12} className="justify-content-center d-flex align-items-center">
+        <Col
+          md={6}
+          xs={12}
+          className="justify-content-center d-flex align-items-center h-50 stock-section"
+        >
           <InvestmentOptions />
         </Col>
         <Col
           md={6}
           xs={12}
           style={{backgroundColor: '#006fbb'}}
-          className="justify-content-center d-flex align-items-center m-md-0 col-right"
+          className="justify-content-center d-flex align-items-center m-md-0 col-right h-50"
         >
           <Carousel defaultWait={3000} maxTurns={100}>
             <Fade top>
@@ -55,6 +59,7 @@ function ThirdSection() {
 
 const StyledContainer = styled(Container)`
   height: 80vh;
+  z-index: 3;
 
   @media (max-width: 767px) {
     height: 150vh;

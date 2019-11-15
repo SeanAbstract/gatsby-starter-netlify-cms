@@ -10,16 +10,16 @@ export default function SecondSection() {
         <Col md={5} lg={4}>
           <Fade bottom>
             <div className="mb-4">
-              <TitleWord>FAST</TitleWord>
-              <TitleWord>SECURE</TitleWord>
-              <TitleWord>TRUSTED</TitleWord>
+              <TitleWord className="text-primary display-2">FAST</TitleWord>
+              <TitleWord className="text-primary display-2">SECURE</TitleWord>
+              <TitleWord className="text-primary display-2">TRUSTED</TitleWord>
             </div>
             <div>
-              <Paragraph className="text-muted">
+              <p className="text-muted">
                 Fast and secure access to global markets with our online platform that allows you to
                 buy and sell securities in Hong Kong, China and the US. Try Snowball Securities
                 today – a trusted member of the Snowball Group.
-              </Paragraph>
+              </p>
               <RoundButton color="primary" outline>
                 <ButtonText>Try Snowball Securities today</ButtonText>
               </RoundButton>
@@ -33,7 +33,7 @@ export default function SecondSection() {
 
 const OuterContainer = styled(Container)`
   height: 100vh;
-
+  background-color: white;
   padding-right: 1.3rem;
   padding-left: 1.3rem;
 
@@ -52,25 +52,7 @@ const Paragraph = styled.p`
   font-weight: 300;
 `
 
-const TitleWord = styled.h1`
-  margin-bottom: -12px;
-  font-size: 3.5rem;
-  color: ${props => props.theme.primary};
-  line-height: 3.5rem;
-
-  @media (min-width: 425px) {
-    line-height: 3.5rem;
-  }
-
-  @media (min-width: 576px) {
-    font-size: 5rem;
-    line-height: 4.5rem;
-  }
-
-  @media (min-width: 768px) {
-    font-size: 5rem;
-  }
-`
+const TitleWord = styled.h1``
 
 const RoundButton = styled(Button)`
   border-radius: 20px;

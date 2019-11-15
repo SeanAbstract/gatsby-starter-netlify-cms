@@ -12,17 +12,19 @@ function SeventhSection() {
         <Col md={5} lg={3} className="justify-content-center d-flex flex-column">
           <Fade bottom>
             <div className="mb-3">
-              <TitleWord>TRADE GLOBAL STOCKS</TitleWord>
+              <TitleWord className="display-2 text-primary">TRADE</TitleWord>
+              <TitleWord className="display-2 text-primary">GLOBAL</TitleWord>
+              <TitleWord className="display-2 text-primary">STOCKS</TitleWord>
             </div>
             <div>
-              <Paragraph className="text-muted">
+              <p className="text-muted">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
                 Excepteur sintticus occaecat cupidatat non proident, sunt in culpa qui officia
                 deserunt mollit anim id est laborum.
-              </Paragraph>
-              <RoundButton color="primary" outline>
-                <ButtonText className="mb-0">Start Trading</ButtonText>
-              </RoundButton>
+              </p>
+              <button className="btn btn-outline-primary rounded-pill pt-2 px-4" type="button">
+                Start Trading
+              </button>
             </div>
           </Fade>
         </Col>
@@ -87,18 +89,7 @@ const Paragraph = styled.p`
   line-height: 1.25;
 `
 
-const TitleWord = styled.h1`
-  margin-bottom: -12px;
-  font-size: 4rem;
-  color: ${props => props.theme.primary};
-  line-height: 3rem;
-  letter-spacing: 0.75px;
-
-  @media (min-width: 768px) {
-    font-size: 4.9rem;
-    line-height: 3.75rem;
-  }
-`
+const TitleWord = styled.h1``
 
 const RoundButton = styled(Button)`
   border-radius: 20px;

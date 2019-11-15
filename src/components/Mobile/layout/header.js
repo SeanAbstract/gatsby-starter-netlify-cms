@@ -1,8 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
-import {Collapse, Navbar, NavbarToggler, NavbarBrand, Nav} from 'reactstrap'
+import {Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, Container} from 'reactstrap'
 import {Link} from 'gatsby'
 
+import whiteLogo from '../../../img/snowball-secure.png'
 import logo from '../../../img/logo-2.png'
 import logoIcon from '../../../img/logo-icon.png'
 
@@ -43,42 +44,30 @@ export default class Header extends React.Component {
     const {scrolled, isOpen} = this.state
     return (
       <>
-        <StyledNavbar isOpen={isOpen} scrolled={scrolled} light expand="md" className="fixed-top">
-          <NavbarBrand>
-            <Link to="/">
-              <Logo isOpen={isOpen} scrolled={scrolled} src={logo} alt="company logo" />
-            </Link>
-          </NavbarBrand>
-          <StyledNavbarToggler isOpen={isOpen} onClick={this.toggle} />
-          <StyledCollapse isOpen={isOpen} navbar>
-            <Nav className="ml-auto" navbar>
-              <HeaderNavLink to="/about" title="About" />
-              <HeaderNavLink to="/how-it-works" title="How It Works" />
-              <HeaderNavLink to="/price" title="Prices" />
-              <HeaderNavLink to="/" title="Download" />
-              <HeaderNavLink to="/faqs" title="FAQs" />
-              <HeaderNavLink to="/contact" title="Contact" />
-            </Nav>
-          </StyledCollapse>
+        <StyledNavbar isOpen={isOpen} scrolled={scrolled} light expand="md" className="w-100">
+          <Container style={{maxWidth: '80%'}}>
+            <NavbarBrand>
+              <Link to="/">
+                <Logo isOpen={isOpen} scrolled={scrolled} src={whiteLogo} alt="company logo" />
+              </Link>
+            </NavbarBrand>
+            <StyledNavbarToggler
+              isOpen={isOpen}
+              onClick={this.toggle}
+              style={{filter: 'brightness(0) invert(1)'}}
+            />
+            <StyledCollapse isOpen={isOpen} navbar>
+              <Nav className="ml-auto" navbar>
+                <HeaderNavLink to="/about" title="About" />
+                <HeaderNavLink to="/how-it-works" title="How It Works" />
+                <HeaderNavLink to="/price" title="Prices" />
+                <HeaderNavLink to="/" title="Download" />
+                <HeaderNavLink to="/faqs" title="FAQs" />
+                <HeaderNavLink to="/contact" title="Contact" />
+              </Nav>
+            </StyledCollapse>
+          </Container>
         </StyledNavbar>
-        <ScrolledNavbar isOpen={isOpen} scrolled={scrolled} light expand="md" className="fixed-top">
-          <NavbarBrand>
-            <Link to="/">
-              <LogoIcon isOpen={isOpen} scrolled={scrolled} src={logoIcon} alt="company logo" />
-            </Link>
-          </NavbarBrand>
-          <StyledNavbarToggler isOpen={isOpen} onClick={this.toggle} />
-          <StyledCollapse isOpen={isOpen} navbar>
-            <Nav className="ml-auto" navbar>
-              <HeaderNavLink to="/about" title="About" />
-              <HeaderNavLink to="/how-it-works" title="How It Works" />
-              <HeaderNavLink to="/price" title="Prices" />
-              <HeaderNavLink to="/" title="Download" />
-              <HeaderNavLink to="/faqs" title="FAQs" />
-              <HeaderNavLink to="/contact" title="Contact" />
-            </Nav>
-          </StyledCollapse>
-        </ScrolledNavbar>
       </>
     )
   }
@@ -92,27 +81,24 @@ const setBackgroundColor = (isOpen, scrolled) => {
 }
 
 const StyledNavbar = styled(Navbar)`
-  width: 100%;
-  top: ${props => (props.scrolled ? '-100px' : '0')};
-  transition: 0.5s;
+  top: 0px !important;
+  /* background-color: ${props => setBackgroundColor(props.isOpen, props.scrolled)}; */
+  position: absolute;
+  transition: 0s;
+  margin-left: -0.5rem;
+  margin-right: -0.5rem;
 
   .nav-link {
     color: white !important;
   }
 
   @media (max-width: 767px) {
-    top: 0px !important;
-    background-color: ${props => setBackgroundColor(props.isOpen, props.scrolled)};
-    position: sticky;
-    transition: 0s;
-    margin-left: -0.5rem;
-    margin-right: -0.5rem;
   }
 `
 
 const Logo = styled.img`
-  height: 75px;
-  width: 125px;
+  height: 150px;
+  width: 150px;
   object-fit: contain;
   filter: ${props => (props.isOpen ? 'brightness(100) grayscale(100) contrast(100)' : 'none')};
 `
