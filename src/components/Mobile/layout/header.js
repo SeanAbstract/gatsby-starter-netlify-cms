@@ -45,7 +45,7 @@ export default class Header extends React.Component {
     return (
       <>
         <StyledNavbar isOpen={isOpen} scrolled={scrolled} light expand="md" className="w-100">
-          <Container style={{maxWidth: '80%'}}>
+          <Container style={{maxWidth: '85%'}}>
             <NavbarBrand>
               <Link to="/">
                 <Logo isOpen={isOpen} scrolled={scrolled} src={whiteLogo} alt="company logo" />
@@ -101,13 +101,6 @@ const Logo = styled.img`
   width: 150px;
   object-fit: contain;
   filter: ${props => (props.isOpen ? 'brightness(100) grayscale(100) contrast(100)' : 'none')};
-`
-
-const LogoIcon = styled.img`
-  height: 30px;
-  width: 30px;
-  object-fit: contain;
-  transition: 0.1s;
 `
 
 const StyledNavbarToggler = styled(NavbarToggler)`
