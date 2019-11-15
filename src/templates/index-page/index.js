@@ -1,6 +1,6 @@
 // @flow
 
-import React, {useEffect, useState} from 'react'
+import React, {useEffect} from 'react'
 import styled from 'styled-components'
 import {Row, Col, Container} from 'reactstrap'
 import PropTypes from 'prop-types'
@@ -18,11 +18,8 @@ import BlogRoll from '../../components/BlogRoll'
 import StockSection from '../../components/StocksCarousel/stockSection'
 import videoPoster from '../../../static/img/bg-image-sailing.jpg'
 import phoneVideo from '../../../static/img/mobile-phone-spin.mp4'
-import videoSrcURL from '../../../static/img/sailing.mp4'
-import videoSrcURL2 from '../../../static/img/Beach-Final.mp4'
-import videoSrcURL3 from '../../../static/img/Boat-Final.mp4'
 import arrowDown from '../../img/arrow-down.png'
-
+import MobileIndex from '../../components/Mobile/indexPage'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 
@@ -416,12 +413,27 @@ class IndexPage extends React.Component {
 
   state = {
     loading: true,
+    useMobileView: false,
   }
 
   componentDidMount() {
     setTimeout(() => {
       this.setState({loading: false})
     }, 1000)
+
+    if (window !== undefined) {
+      window.addEventListener('resize', event => {
+        if (window.innerWidth < 578) {
+          this.setState({useMobileView: true})
+        } else {
+          this.setState({useMobileView: false})
+        }
+      })
+    }
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize')
   }
 
   render() {
@@ -431,6 +443,10 @@ class IndexPage extends React.Component {
           <div className="spinner" />
         </div>
       )
+    }
+
+    if (this.state.useMobileView) {
+      return <MobileIndex />
     }
 
     const {frontmatter} = this.props.data.markdownRemark

@@ -54,6 +54,11 @@ h1 {
   line-height: 3.15rem;
 }
 
+h2 {
+  font-family: "Kokomo-Breeze-Regular";
+  line-height: 1.75rem;
+}
+
 p {
   font-family: "Theinhardt";
   font-weight: 300;
@@ -259,4 +264,19 @@ video {
 
 .border-white {
   border-color: white !important;
+}
+
+.navbar-toggler-icon {
+  background-image: url("../img/menu.png") !important;
+  height: 25px;
+  width: 30px;
+}
+
+.navbar-toggler {
+  border: none;
+  object-fit: contain;
+}
+
+.modal-content {
+  height: 100%;
 }
