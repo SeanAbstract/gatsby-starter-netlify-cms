@@ -234,12 +234,9 @@ collections:
         fields: 
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "faq-page"}
           - {label: "Header Image", name: headerImage, widget: image}
-          - {label: "Categories", name: categories, widget: list, fields: [
-              {label: "Category Title", name: "categoryTitle", widget: text},
-              {label: "Questions", name: questions, widget: list, fields: [
-                {label: "Question", name: question, widget: text},
-                {label: "Answer", name: answer, widget: text},
-              ]},
+          - {label: "Questions", name: questions, widget: list, fields: [
+              {label: "Question", name: question, widget: text},
+              {label: "Answer", name: answer, widget: text},
             ]}
           - {label: "Download Now", name: "downloadNow", widget: object, fields: [
               {label: "Main Text", name: "mainText", widget: string},

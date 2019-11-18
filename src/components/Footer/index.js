@@ -16,7 +16,7 @@ function Footer() {
   useEffect(() => {
     setTimeout(() => {
       setShow(true)
-    }, 800)
+    }, 1500)
   }, [])
 
   if (!show) return null

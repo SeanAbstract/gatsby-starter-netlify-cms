@@ -7,11 +7,13 @@ import styled from 'styled-components'
 import {graphql} from 'gatsby'
 import {Collapse} from 'reactstrap'
 import PageTransition from 'gatsby-plugin-page-transitions'
+import showdown from 'showdown'
 
 import Layout from '../../components/Layout'
 import SharedJumbotron from '../../components/SharedJumbotron'
 import DownloadNow from '../../components/DownloadNow'
 import arrowRight from '../../img/arrow-right-blue.png'
+
 import './styles.scss'
 
 type FaqPageTemplateProps = {
@@ -30,20 +32,32 @@ type FaqPageTemplateProps = {
 const Accordion = ({ndx, cc}) => {
   const [isOpen, setIsOpen] = useState(false)
   const toggle = () => setIsOpen(!isOpen)
+
+  function renderDescription(text) {
+    const converter = new showdown.Converter()
+    const html = converter.makeHtml(text)
+
+    return html
+  }
+
   return (
     <div className="accordion py-2" key={ndx}>
       <button
         onClick={toggle}
         type="button"
-        className="w-100 p-0 text-left"
+        className="w-100 p-0 text-left hover-none"
         style={{backgroundColor: 'transparent', border: 'none'}}
       >
-        <div className="d-flex justify-content-between px-3">
+        <div className="d-flex justify-content-between px-3 pt-1 hover-none">
           <h5 className="mb-2">{cc.question}</h5>
           <Arrow src={arrowRight} alt="" active={isOpen} />
         </div>
-        <Collapse toggler={`#toggler${ndx}`} className="mx-3" isOpen={isOpen}>
-          <p className="mb-0 text-dark">{cc.answer}</p>
+        <Collapse toggler={`#toggler${ndx}`} isOpen={isOpen}>
+          <div
+            dangerouslySetInnerHTML={{__html: renderDescription(cc.answer)}}
+            style={{color: 'black'}}
+            className="px-3 hover-none"
+          />
         </Collapse>
       </button>
     </div>
@@ -51,38 +65,15 @@ const Accordion = ({ndx, cc}) => {
 }
 
 export function FaqPageTemplate(props: FaqPageTemplateProps) {
-  const [currentNdx, setNdx] = useState(0)
-
   return (
     <PageTransition>
       <div className="faq-page">
         <SharedJumbotron headerImage={props.headerImage} title="FAQS" description="Answered" />
-        <div className="container pt-5 mb-5">
-          <div className="row mx-auto">
-            <div className="col-md-8 mx-auto">
-              <ul className="nav nav-pills row justify-content-around">
-                {props.categories.map((category, ndx) => (
-                  <li
-                    key={ndx}
-                    className="nav-item"
-                    onClick={() => {
-                      setNdx(ndx)
-                    }}
-                  >
-                    <a className={`nav-link ${ndx === currentNdx ? 'active' : ''}`}>
-                      {category.categoryTitle}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </div>
 
-        <div className="container pb-5">
+        <div className="container pt-5">
           <div className="row">
             <div className="col-md-9 mx-auto">
-              {props.categories[currentNdx].questions.map((cc, ndx) => (
+              {props.questions.map((cc, ndx) => (
                 <Accordion ndx={ndx} cc={cc} key={`${cc.question}${ndx}`} />
               ))}
             </div>
@@ -112,7 +103,7 @@ function FaqPage({data}: Props) {
     <Layout white>
       <FaqPageTemplate
         headerImage={faq.frontmatter.headerImage}
-        categories={faq.frontmatter.categories}
+        questions={faq.frontmatter.questions}
         downloadNow={faq.frontmatter.downloadNow}
       />
     </Layout>
@@ -132,12 +123,9 @@ export const faqPageQuery = graphql`
             }
           }
         }
-        categories {
-          categoryTitle
-          questions {
-            question
-            answer
-          }
+        questions {
+          question
+          answer
         }
         downloadNow {
           mainText

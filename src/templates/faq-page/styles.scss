@@ -1,8 +1,21 @@
 .faq-page {
+
+  .hover-none {
+    p,li {
+      color: black !important;
+      
+    }
+    
+    
+  }
+
     background-color: white;
     .accordion {
         border-top: 1px solid #91bcdc;
-        border-bottom: 1px solid #91bcdc;
+        
+        &:last-child {
+          border-bottom: 1px solid #91bcdc;
+        }
 
         button {
             font-weight: 500;
@@ -21,6 +34,12 @@
               color: #006fbb;
             }
         }
+    }
+
+    .hi {
+      &:hover {
+        color: black;
+      }
     }
 
     a {
