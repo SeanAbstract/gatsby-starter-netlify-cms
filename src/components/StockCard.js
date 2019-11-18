@@ -12,6 +12,7 @@ import amazonIcon from '../img/ico-amazon.png'
 import netflixIcon from '../img/ico-netflix.png'
 import appleIcon from '../img/ico-apple.png'
 import googleLogo from '../img/ico-google.png'
+import alibabaIcon from '../img/alibaba.png'
 
 type Props = {
   icon: string,
@@ -49,12 +50,16 @@ const StockCard = (props: Props) => {
       return amazonIcon
     }
 
-    if (abbreviation == 'GGL') {
+    if (abbreviation == 'GOOGL') {
       return googleLogo
     }
 
     if (abbreviation == 'AAPL') {
       return appleIcon
+    }
+
+    if (abbreviation == 'ALB') {
+      return alibabaIcon
     }
   }
 
@@ -109,7 +114,7 @@ const StockCard = (props: Props) => {
                 <Fade>
                   <Container>
                     <Row className="justify-content-between">
-                      <CardTitle>{stock.abbreviation}</CardTitle>
+                      <CardTitle style={{fontSize: '14px'}}>{stock.abbreviation}</CardTitle>
                       <div className="d-flex flex-column align-items-start">
                         <StockPrice className="mb-1">{stock.value}</StockPrice>
                         <StockPercentage>

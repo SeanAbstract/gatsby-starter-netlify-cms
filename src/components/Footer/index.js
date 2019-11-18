@@ -47,8 +47,12 @@ function Footer() {
                 </StyledLink>
               </Col>
               <Col xs={4}>
-                <p className="mb-1">Blog</p>
-                <p className="mb-1">Risk Disclosure</p>
+                <StyledLink to="/blog">
+                  <p className="mb-1">Blog</p>
+                </StyledLink>
+                <StyledLink to="/risk-disclosure">
+                  <p className="mb-1">Risk Disclosure</p>
+                </StyledLink>
                 <StyledLink to="/faq">
                   <p className="mb-1">FAQs</p>
                 </StyledLink>

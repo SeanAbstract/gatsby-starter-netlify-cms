@@ -1,21 +1,72 @@
 $primary: #006fbb;
 
-.scroll-nav {
-    .nav-link {
-        margin-right: 1.35rem;
-        color: black !important;
+.nav-link {
+    margin-right: 1.35rem;
 
-        &:hover {
+    &:hover {
+        a {
             color: white !important;
-        }
-
+        } 
+    }
+   
+    a {
+        color: white !important;
+    
         &:last-child {
             margin-right: 0;
         }
+
+        text-decoration: none;
+
     }
 
+    .custom-active {
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: $primary;
+        }
+    }
+}
+
+.scroll-nav {
+    .nav-link {
+        margin-right: 1.35rem;
+
+        &:hover {
+            a {
+                color: white !important;
+            } 
+        }
+       
+        a {
+            color: black !important;
+        
+            &:last-child {
+                margin-right: 0;
+            }
+
+            text-decoration: none;
+    
+        }
+    }
+
+
+
+
     .custom-active-2 {
-        color: $primary !important;
-        font-weight: bold;
-      }
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: $primary;
+        }
+    }
 }

@@ -3,6 +3,7 @@ import Helmet from 'react-helmet'
 import {graphql} from 'gatsby'
 import styled from 'styled-components'
 import {Row, Col, Container} from 'reactstrap'
+import PageTransition from 'gatsby-plugin-page-transitions'
 
 import Layout from '../../components/Layout'
 import {HTMLContent} from '../../components/Content'
@@ -33,14 +34,14 @@ type Props = {
 }
 
 // eslint-disable-next-line no-unused-vars
-export function BlogPageTemplate({title, content, contentComponent, image}: Props) {
+export function BlogPageTemplate({title, content, contentComponent, image, headerImage}: Props) {
   // const PageContent = contentComponent || Content
 
   return (
-    <div>
-      <SharedJumbotron headerImage={props.headerImage} title="About" description="Snowball" />
+    <PageTransition>
+      <SharedJumbotron headerImage={headerImage} title="Blog" description="News" />
 
-      <section>
+      <section style={{backgroundColor: 'white'}}>
         <Container>
           <Row className="justify-content-center text-center my-4">
             <Col xs={8} className="py-5">
@@ -51,12 +52,12 @@ export function BlogPageTemplate({title, content, contentComponent, image}: Prop
           </Row>
           <div className="card-columns">
             {blogs.map(blog => (
-              <BlogCard type={blog.type} title={blog.title} />
+              <BlogCard {...blog} />
             ))}
           </div>
         </Container>
       </section>
-    </div>
+    </PageTransition>
   )
 }
 
@@ -73,39 +74,43 @@ type BlogPageProps = {
 }
 
 export default function BlogPage({data}: BlogPageProps) {
-  const {markdownRemark: post, placeholderImage: image} = data
+  const {markdownRemark: post} = data
 
   return (
     <Layout>
-      <Helmet title={`${post.frontmatter.title} | ${data.site.siteMetadata.title}`} />
+      <Helmet title="Blogs" />
       <BlogPageTemplate
         contentComponent={HTMLContent}
         title={post.frontmatter.title}
-        content={post.html}
-        image={image}
+        headerImage={post.frontmatter.headerImage}
       />
     </Layout>
   )
 }
 
-export const blogPageQuery = graphql`
-  query BlogsPage($path: String!) {
-    markdownRemark(frontmatter: {path: {eq: $path}}) {
+export const pageQuery = graphql`
+  query BlogsPage($id: String!) {
+    markdownRemark(id: {eq: $id}) {
+      id
       html
       frontmatter {
-        path
-        title
-      }
-    }
-    site {
-      siteMetadata {
-        title
-      }
-    }
-    placeholderImage: file(relativePath: {eq: "landing-page-2.png"}) {
-      childImageSharp {
-        fluid(maxWidth: 500) {
-          ...GatsbyImageSharpFluid
+        headerImage {
+          childImageSharp {
+            fluid(maxWidth: 1440, quality: 100) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        downloadNow {
+          mainText
+          subText
+          image {
+            childImageSharp {
+              fluid(maxWidth: 1024, quality: 100) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
         }
       }
     }

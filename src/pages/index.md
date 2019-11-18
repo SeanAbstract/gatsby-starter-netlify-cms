@@ -126,20 +126,20 @@ realTimeStockSection:
       rate: '0.35'
       stock: Apple
       value: '107.39'
-    - abbreviation: FB
-      bgColor: 'rgba(59,89,152, 1)'
-      image: /img/facebook_blue.png
-      percent: 0.05%
-      rate: '0.95'
-      stock: Facebook
-      value: '187.39'
-    - abbreviation: AAPL
-      bgColor: 'rgba(200,200,200, 1)'
+    - abbreviation: ALB
+      bgColor: 'rgba(255,255,255, 1)'
+      image: /img/alibaba.png
+      percent: 0.18%
+      rate: '0.32'
+      stock: Alibaba
+      value: '182.80'
+    - abbreviation: GOOGL
+      bgColor: 'rgba(255,255,255, 1)'
       image: /img/linkedin_blue.png
-      percent: 0.15%
-      rate: '0.35'
-      stock: Apple
-      value: '107.39'
+      percent: 1.00%
+      rate: '12.97'
+      stock: Google
+      value: '1309.15'
     - abbreviation: AMZN
       bgColor: 'rgba(30, 42, 54, 1)'
       image: /img/facebook_blue.png

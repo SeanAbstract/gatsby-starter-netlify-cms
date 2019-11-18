@@ -100,18 +100,23 @@ export default class Header extends React.Component {
               <Nav className="ml-auto" navbar>
                 {data.map((link, ndx) =>
                   link.href !== '' ? (
-                    <Link
-                      to={link.href}
-                      className={`nav-link ${ndx !== data.length - 1 ? 'mr-4' : ''} ${
-                        `/${this.state.currentPath}` === `${link.href}` ? 'custom-active' : ''
-                      }`}
+                    <div
+                      style={{position: 'relative'}}
+                      className={`nav-link ${ndx !== data.length - 1 ? 'mr-4' : ''}`}
                     >
-                      {link.name}
-                    </Link>
+                      <Link
+                        to={link.href}
+                        className={`${
+                          `/${this.state.currentPath}` === `${link.href}` ? 'custom-active' : ''
+                        }`}
+                      >
+                        {link.name}
+                      </Link>
+                    </div>
                   ) : (
-                    <a href="https://www.snowballsecurities.com/download" className="nav-link mr-4">
-                      {link.name}
-                    </a>
+                    <div className="nav-link mr-4">
+                      <a href="https://www.snowballsecurities.com/download">{link.name}</a>
+                    </div>
                   )
                 )}
               </Nav>
@@ -147,11 +152,21 @@ export default class Header extends React.Component {
               <Nav className="ml-auto scroll-nav" navbar>
                 {data.map(link =>
                   link.href !== '' ? (
-                    <Link to={link.href} className="nav-link">
-                      {link.name}
-                    </Link>
+                    <div style={{position: 'relative'}} className="nav-link">
+                      <Link
+                        to={link.href}
+                        activeClassName="custom-active-2"
+                        style={{color: 'black'}}
+                      >
+                        {link.name}
+                      </Link>
+                    </div>
                   ) : (
-                    <a href="https://www.snowballsecurities.com/download" className="nav-link">
+                    <a
+                      href="https://www.snowballsecurities.com/download"
+                      className="nav-link"
+                      style={{color: 'black'}}
+                    >
                       {link.name}
                     </a>
                   )
@@ -203,6 +218,7 @@ const Logo = styled.img`
   object-fit: contain;
   filter: ${props => (props.isOpened ? 'brightness(100) grayscale(100) contrast(100)' : 'none')};
   transition: 0.1s;
+  z-index: 0;
 `
 
 const LogoIcon = styled.img`

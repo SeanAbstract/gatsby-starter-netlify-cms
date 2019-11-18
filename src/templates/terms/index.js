@@ -1,11 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import {graphql} from 'gatsby'
-import styled from 'styled-components'
+import {graphql, Link} from 'gatsby'
 
 import Layout from '../../components/Layout'
 import Content, {HTMLContent} from '../../components/Content'
 import SharedJumbotron from '../../components/SharedJumbotron'
+import DownloadNow from '../../components/DownloadNow'
 
 type BlogPostTemplate = {
   content: Node.isRequired,
@@ -26,14 +26,22 @@ export const BlogPostPageTemplate = (props: BlogPostTemplate) => {
     <div className="blog-post-page">
       <SharedJumbotron headerImage={headerImage} />
 
-      <section className="blog-post-container" style={{paddingBottom: '500px'}}>
+      <section className="blog-post-container" style={{paddingBottom: '250px'}}>
         <div className="container content">
           <div className="row justify-content-center">
             <div className="col col-10 blog-container">
-              <h3>Risk Disclosure</h3>
-              <Yo>
-                <h3>1. Margin Risk Transaction Disclosure </h3>
-              </Yo>
+              <h3>Terms and Conditions</h3>
+              {/* <PostContent content={content} /> */}
+              <p>
+                No investment is free from risk. Returns can be positive or negative. The risk of
+                loss in trading of any stock or other financial products can be substantial and it
+                is possible you could receive back less money than you invest. The material on this
+                website is intended as information only. Any trading symbols displayed are for
+                illustrative purposes only and are not intended to portray recommendations. No
+                advice on buying or disposing of financial products is given. Please read through
+                our <Link to="/risk-disclosure">Risk Disclosure</Link> and{' '}
+                <Link to="/terms">Conditions</Link> before investing.
+              </p>
             </div>
           </div>
         </div>
@@ -63,19 +71,10 @@ BlogPost.propTypes = {
   }),
 }
 
-const Yo = styled.div`
-  height: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-top: 1px solid ${props => props.theme.primary};
-  border-bottom: 1px solid ${props => props.theme.primary};
-`
-
 export default BlogPost
 
 export const pageQuery = graphql`
-  query RiskDisclosure($id: String!) {
+  query TermsAndConditions($id: String!) {
     markdownRemark(id: {eq: $id}) {
       id
       html

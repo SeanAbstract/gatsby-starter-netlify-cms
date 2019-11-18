@@ -444,7 +444,7 @@ class IndexPage extends React.Component {
 
   render() {
     const {frontmatter} = this.props.data.markdownRemark
-
+    console.log(frontmatter.realTimeStockSection)
     if (this.state.loading) {
       return (
         <div style={{height: '100vh'}} className="d-flex justify-content-center align-items-center">
