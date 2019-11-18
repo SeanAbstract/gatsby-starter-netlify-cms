@@ -15,20 +15,20 @@ stockSection:
   stocks:
     - commission:
         - price: $0.00
-          text: 'No commission on orders below HKD 60,000'
+          text: 'per share (under HKD 60,000)'
         - price: 0.03%
           text: 'per share on orders above HKD 60,000'
-      country: Hong Kong
+      country: HK Stocks
       countryCode: HK
       financingRate: "4.844%\_"
       platformUsageFee: HKD 18
       platformUsageFeeType: per deal
     - commission:
-        - price: $0.00
-          text: 'per share (under HKD 60,000)'
-        - price: 0.03%
-          text: 'per share (over HKD 60,000)'
-      country: US
+        - price: $0.002
+          text: per share
+        - price: $0.99
+          text: minimum per deal
+      country: US Stocks
       countryCode: US
       financingRate: "3.85%\_"
       platformUsageFee: $0.003
@@ -48,17 +48,17 @@ stockSection:
           text: 'per share (under HKD 22,500)'
         - price: 0.08%
           text: 'per share (over HKD 22,500)'
-      country: Hong Kong
+      country: HK Stocks
       countryCode: HK
       financingRate: 2.844%
       platformUsageFee: HKD 18
       platformUsageFeeType: per deal
     - commission:
-        - price: $0.00
+        - price: $0.008
           text: per share
-        - price: 0.08%
-          text: per deal the minimum
-      country: US
+        - price: $0.99
+          text: minimum per deal
+      country: US Stocks
       countryCode: US
       financingRate: 1.85%
       platformUsageFee: 0.003%
