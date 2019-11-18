@@ -1,6 +1,6 @@
 ---
 templateKey: faq-page
-headerImage: /img/landing-page-2.png
+headerImage: /img/snowball-faq-image.png
 categories:
   - categoryTitle: 'DELETE ME '
     questions:
@@ -8,7 +8,7 @@ categories:
           - The security of your funds is our priority. Snowball Securities is
           operated by SNB Finance Holding Ltd, a registered financial service
           provider in New Zealand. The execution brokers that we employ are the
-          top peers and the most trustable in the industry. 
+          top peers and the most trustable in the industry.  
 
 
           - You will be able to trade a variety of financial securities on multi
