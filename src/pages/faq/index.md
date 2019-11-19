@@ -1,6 +1,6 @@
 ---
 templateKey: faq-page
-headerImage: /img/landing-page-2.png
+headerImage: /img/snowball-faq-image.png
 questions:
     - answer: >-
         - The security of your funds is our priority. Snowball Securities is
