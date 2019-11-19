@@ -47,7 +47,7 @@ const Accordion = ({ndx, cc}) => {
         className="w-100 p-0 text-left"
         style={{backgroundColor: 'transparent', border: 'none'}}
       >
-        <div className="d-flex justify-content-between px-3">
+        <div className="d-flex justify-content-between px-3 align-items-center">
           <h5 className="mb-2">{cc.question}</h5>
           <Arrow src={arrowRight} alt="" active={isOpen} />
         </div>

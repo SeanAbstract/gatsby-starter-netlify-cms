@@ -145,14 +145,18 @@ function Footer() {
                 </StyledAnchor>
               </Col>
             </Row>
-            <Row className="justify-content-end mt-3 w-100">
+            <Row className="mt-3 w-100">
               <Col md={12} className="ml-auto text-right">
-                <small className="mr-3" style={{fontSize: '10px', textDecoration: 'underline'}}>
-                  Privacy Policy
-                </small>
-                <small style={{fontSize: '10px', textDecoration: 'underline'}}>
-                  Terms and Conditions
-                </small>
+                <Link to="/risk-disclosure" style={{color: 'black'}}>
+                  <small className="mr-3" style={{fontSize: '10px', textDecoration: 'underline'}}>
+                    Privacy Policy
+                  </small>
+                </Link>
+                <Link to="/terms" style={{color: 'black'}}>
+                  <small style={{fontSize: '10px', textDecoration: 'underline'}}>
+                    Terms and Conditions
+                  </small>
+                </Link>
               </Col>
             </Row>
           </Col>

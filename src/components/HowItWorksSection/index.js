@@ -9,7 +9,7 @@ function HowItWorksSection(props) {
     const html = converter.makeHtml(section.body)
 
     return (
-      <div className="col-md-8 mx-auto mb-5">
+      <div className="col-md-9 mx-auto mb-5">
         <div className="container h-100">
           <div className="row w-100 justify-content-center align-items-center d-none d-md-flex">
             {ndx % 2 === 0 ? (
@@ -29,7 +29,7 @@ function HowItWorksSection(props) {
                   <PreviewCompatibleImage
                     imageInfo={section.image}
                     alt="section image"
-                    style={{maxWidth: '150px'}}
+                    style={{maxWidth: '150px', objectFit: 'contain'}}
                   />
                 </div>
               </>
@@ -39,7 +39,7 @@ function HowItWorksSection(props) {
                   <PreviewCompatibleImage
                     imageInfo={section.image}
                     alt="section image"
-                    style={{maxWidth: '270px'}}
+                    style={{maxWidth: '210px', objectFit: 'contain'}}
                   />
                 </div>
                 <div className="col-md-8">

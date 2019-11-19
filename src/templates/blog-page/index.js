@@ -5,6 +5,7 @@ import styled from 'styled-components'
 import {Row, Col, Container} from 'reactstrap'
 import PageTransition from 'gatsby-plugin-page-transitions'
 
+import tempBgImg from '../../../static/img/second-splash.jpg'
 import Layout from '../../components/Layout'
 import {HTMLContent} from '../../components/Content'
 import BlogCard from '../../components/blog/blogCard'
@@ -24,6 +25,13 @@ const blogs = [
     title:
       'Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
   },
+  {type: 'News', title: 'This probably has a very interesting title'},
+  {type: 'Event', title: 'This event is even better bro!'},
+  {
+    type: 'Guide',
+    title:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+  },
 ]
 
 type Props = {
@@ -42,19 +50,24 @@ export function BlogPageTemplate({title, content, contentComponent, image, heade
       <SharedJumbotron headerImage={headerImage} title="Blog" description="News" />
 
       <section style={{backgroundColor: 'white'}}>
-        <Container>
-          <Row className="justify-content-center text-center my-4">
+        <Container style={{paddingBottom: '75px'}}>
+          <Row className="justify-content-center text-center py-4">
             <Col xs={8} className="py-5">
               <SectionText style={{color: 'black'}}>
                 Stay up to date on our latest updates, news, events and other happenings
               </SectionText>
             </Col>
           </Row>
-          <div className="card-columns">
-            {blogs.map(blog => (
-              <BlogCard {...blog} />
+          <GridContainer>
+            {blogs.map((blog, ndx) => (
+              <GridItem className={`item-${(ndx + 1) % 9}`} key={`blog-${ndx}`}>
+                <div>
+                  <p className="type">{blog.type}</p>
+                  <h5>{blog.title}</h5>
+                </div>
+              </GridItem>
             ))}
-          </div>
+          </GridContainer>
         </Container>
       </section>
     </PageTransition>
@@ -87,6 +100,78 @@ export default function BlogPage({data}: BlogPageProps) {
     </Layout>
   )
 }
+
+const GridContainer = styled.div`
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-gap: 20px;
+
+  .item-1 {
+    grid-column: auto / span 1;
+  }
+
+  .item-2 {
+    grid-column: auto / span 3;
+  }
+
+  .item-3 {
+    grid-column: auto / span 2;
+  }
+
+  .item-4 {
+    grid-column: auto / span 1;
+  }
+
+  .item-5 {
+    grid-column: auto / span 1;
+  }
+
+  .item-6 {
+    grid-column: auto / span 1;
+  }
+
+  .item-7 {
+    grid-column: auto / span 1;
+  }
+
+  .item-8 {
+    grid-column: auto / span 2;
+  }
+`
+
+const GridItem = styled.div`
+  padding: 20px;
+  height: 175px;
+  color: white;
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+
+  &:hover {
+    &::before {
+      filter: grayscale(0%);
+    }
+  }
+
+  &::before {
+    transition: filter 0.3s;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(${tempBgImg});
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: grayscale(100%);
+    z-index: -1;
+  }
+
+  .type {
+    margin-bottom: 0.5rem;
+  }
+`
 
 export const pageQuery = graphql`
   query BlogsPage($id: String!) {

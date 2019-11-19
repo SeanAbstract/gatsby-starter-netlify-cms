@@ -55,14 +55,16 @@ function ContactPageTemplate(props: Props) {
           <div className="row h-100">
             <div className="col-md-6 d-flex justify-content-center align-items-center flex-column">
               <div className="row w-75 pl-5">
-                <div className="col text-left ">
-                  <h3>{props.informationSection.customerServiceTitle}</h3>
+                <div className="col text-left mb-3">
+                  <h3 style={{fontSize: '32px', fontWeight: '300'}}>
+                    {props.informationSection.customerServiceTitle}
+                  </h3>
                 </div>
               </div>
-              <div className="row w-75 pl-5">
+              <div className="row w-75 pl-5 mb-5">
                 {props.informationSection.customerServiceContacts.map(contact => (
                   <div className="col-sm-6 mb-4">
-                    <p className="lead mb-1">{contact.title}</p>
+                    <p className="lead mb-1 font-weight-light">{contact.title}</p>
                     <p className="mb-0">{contact.subtitle}</p>
                     <p className="mb-0">{contact.hours}</p>
                     <p className="mb-0 font-weight-bold">
@@ -73,13 +75,13 @@ function ContactPageTemplate(props: Props) {
               </div>
               <div className="row w-75 pl-5">
                 {props.informationSection.offices.map(office => (
-                  <div className="col-6 d-flex align-items-end">
+                  <div className="col-8 d-flex align-items-end justify-content-center">
                     <div>
-                      <p className="lead mb-1">{office.officeName}</p>
+                      <p className="lead mb-1 font-weight-light">{office.officeName}</p>
 
                       <p className="mb-0">
                         {office.address}
-                        <span>
+                        <span className="ml-3">
                           <img
                             src={googleMaps}
                             alt=""
@@ -112,16 +114,16 @@ function ContactPageTemplate(props: Props) {
         <section className="social-media-section container-fluid">
           <div className="row h-100 text-light">
             <div className="col-md-8 col-10 d-flex justify-content-around align-items-center mx-auto">
-              <h3>{props.socialMedia.socialMediaTitle}</h3>
+              <h3 className="mb-0 pt-1 font-weight-light">{props.socialMedia.socialMediaTitle}</h3>
               <div className="d-flex">
-                <div className="d-flex mr-5">
+                <div className="d-flex mr-4">
                   <img
                     src={wechatIcon}
                     alt=""
                     style={{height: 30, width: 30, objectFit: 'contain'}}
                     className="mr-2"
                   />
-                  <p className="mb-0">{props.socialMedia.wechatAccountOne}</p>
+                  <p className="mb-0 pt-1">{props.socialMedia.wechatAccountOne}</p>
                 </div>
                 <div className="d-flex align-items-center">
                   <img
@@ -130,7 +132,7 @@ function ContactPageTemplate(props: Props) {
                     style={{height: 30, width: 30, objectFit: 'contain'}}
                     className="mr-2"
                   />
-                  <p className="mb-0">{props.socialMedia.wechatAccountTwo}</p>
+                  <p className="mb-0 pt-1">{props.socialMedia.wechatAccountTwo}</p>
                 </div>
               </div>
               <div className="d-flex align-items-center">
@@ -139,21 +141,22 @@ function ContactPageTemplate(props: Props) {
                     src={facebookIcon}
                     alt=""
                     style={{height: 30, width: 30, objectFit: 'contain'}}
-                    className="mr-3"
+                    className="mr-4"
                   />
                 </a>
-                <img
-                  src={wechatIcon}
-                  alt=""
-                  style={{height: 30, width: 30, objectFit: 'contain'}}
-                  className="mr-3"
-                />
                 <a href="https://www.linkedin.com/company/snowballsecurities" target="_blank">
                   <img
                     src={linkedinIcon}
                     alt=""
                     style={{height: 30, width: 30, objectFit: 'contain'}}
-                    className="mr-3"
+                    className="mr-4"
+                  />
+                </a>
+                <a href="https://twitter.com/snowballsec?lang=en" target="_blank">
+                  <img
+                    src={twitterIcon}
+                    alt=""
+                    style={{height: 30, width: 30, objectFit: 'contain'}}
                   />
                 </a>
               </div>
@@ -167,46 +170,64 @@ function ContactPageTemplate(props: Props) {
             <div className="row h-100 justify-content-center align-items-start">
               <div className="col-md-3">
                 <h3 className="mb-3">Contact Us</h3>
-                <div>
-                  <p className="lead mb-1 text-dark">Customer Inquiries</p>
-                  <p className="text-primary">service@snowballsecurities.com</p>
+                <div className="pt-1">
+                  <p className="lead mb-1 text-dark font-weight-light" style={{fontSize: '16px'}}>
+                    Customer Inquiries
+                  </p>
+                  <p className="text-primary" style={{fontSize: '14px'}}>
+                    service@snowballsecurities.com
+                  </p>
                 </div>
-                <div>
-                  <p className="lead mb-1 text-dark">Media Inquiries</p>
-                  <p className="text-primary">service@snowballsecurities.com</p>
+                <div className="pt-1">
+                  <p className="lead mb-1 text-dark font-weight-light" style={{fontSize: '16px'}}>
+                    Media Inquiries
+                  </p>
+                  <p className="text-primary" style={{fontSize: '14px'}}>
+                    service@snowballsecurities.com
+                  </p>
                 </div>
-                <div>
-                  <p className="lead mb-1 text-dark">Business Cooperation</p>
-                  <p className="text-primary">service@snowballsecurities.com</p>
+                <div className="pt-1">
+                  <p className="lead mb-1 text-dark font-weight-light" style={{fontSize: '16px'}}>
+                    Business Cooperation
+                  </p>
+                  <p className="text-primary" style={{fontSize: '14px'}}>
+                    service@snowballsecurities.com
+                  </p>
                 </div>
               </div>
 
-              <div className="col-md-5">
+              <div className="col-md-7">
                 <h3 className="mb-3">Leave a message</h3>
                 <div className="row mb-2">
                   <div className="col-md-6">
-                    <div className="form-group">
-                      <label htmlFor="exampleFormControlInput1">Name</label>
+                    <div className="form-group pt-1">
+                      <label htmlFor="exampleFormControlInput1" style={{fontSize: '14px'}}>
+                        Name
+                      </label>
                       <input type="text" className="form-control" placeholder="John Smith" />
                     </div>
                   </div>
                   <div className="col-md-6">
-                    <div className="form-group">
-                      <label htmlFor="exampleFormControlInput1">Email address</label>
+                    <div className="form-group pt-1">
+                      <label htmlFor="exampleFormControlInput1" style={{fontSize: '14px'}}>
+                        Email address
+                      </label>
                       <input type="email" className="form-control" placeholder="name@example.com" />
                     </div>
                   </div>
                 </div>
-                <div className="row">
+                <div className="row mb-2">
                   <div className="col-md-12">
-                    <div className="form-group">
-                      <label htmlFor="exampleFormControlTextarea1">Message</label>
-                      <textarea className="form-control" rows="3" />
+                    <div className="form-group pt-1">
+                      <label htmlFor="exampleFormControlTextarea1" style={{fontSize: '14px'}}>
+                        Message
+                      </label>
+                      <textarea className="form-control" rows="3" placeholder="Hello..." />
                     </div>
                   </div>
                 </div>
                 <div>
-                  <button className="btn-outline-primary btn rounded-pill px-4" type="button">
+                  <button className="btn btn-outline-primary rounded-pill pt-2 px-4" type="button">
                     Submit
                   </button>
                 </div>

@@ -1,6 +1,6 @@
 // @flow
 
-import React, {useEffect} from 'react'
+import React, {useEffect, useRef} from 'react'
 import styled from 'styled-components'
 import {Row, Col, Container} from 'reactstrap'
 import PropTypes from 'prop-types'
@@ -8,6 +8,7 @@ import {graphql, Link} from 'gatsby'
 import Fade from 'react-reveal/Fade'
 import {Controller, Scene} from 'react-scrollmagic'
 import PageTransition from 'gatsby-plugin-page-transitions'
+import VizSensor from 'react-visibility-sensor'
 
 import './styles.scss'
 import Layout from '../../components/Layout'
@@ -107,6 +108,8 @@ export const IndexPageTemplate = ({
     currentVideo.play()
   }, [])
 
+  const videoRef = useRef(null)
+
   return (
     <PageTransition>
       {/* Hero Video */}
@@ -161,15 +164,25 @@ export const IndexPageTemplate = ({
                 </div>
               </Fade>
             </Col>
-            <div className="col-md-3 d-none d-md-block">
+            <div className="col-md-3 d-none d-md-flex align-items-center">
               <Fade bottom>
-                <video
-                  src={phoneVideo}
-                  style={{maxWidth: '300px'}}
-                  id="phoneVideo"
-                  muted="true"
-                  preload="auto"
-                />
+                <VizSensor
+                  partialVisibility
+                  onChange={isVisible => {
+                    if (isVisible) {
+                      videoRef.current.play()
+                    }
+                  }}
+                >
+                  <video
+                    src={phoneVideo}
+                    style={{maxWidth: '300px'}}
+                    id="phoneVideo"
+                    muted="true"
+                    preload="auto"
+                    ref={videoRef}
+                  />
+                </VizSensor>
               </Fade>
             </div>
           </Row>
@@ -184,7 +197,7 @@ export const IndexPageTemplate = ({
                   triggerElement="#section-trigger"
                   duration={1600}
                   triggerHook={0}
-                  offset={350 * (stockSection.stocks.length / 2)}
+                  offset={325 * stockSection.stocks.length}
                   classToggle="background-two"
                 >
                   <div

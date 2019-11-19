@@ -79,6 +79,8 @@ export default class Header extends React.Component {
     })
   }
 
+  useWhiteLogo = () => this.state.currentPath === 'home-au' || this.state.currentPath === 'home-us'
+
   render() {
     const {scrolled, isOpen} = this.state
     return (
@@ -90,7 +92,7 @@ export default class Header extends React.Component {
                 <Logo
                   isOpen={isOpen}
                   scrolled={scrolled}
-                  src={this.props.white ? whiteLogo : logo}
+                  src={this.useWhiteLogo() || this.props.white ? whiteLogo : logo}
                   alt="company logo"
                 />
               </Link>

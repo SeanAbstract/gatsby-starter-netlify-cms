@@ -8,7 +8,7 @@ const PreviewCompatibleImage = ({imageInfo, alt, style, className}) => {
   if (!!image && !!image.childImageSharp) {
     return (
       <Img
-        style={style}
+        imgStyle={style}
         fluid={image.childImageSharp.fluid}
         alt={alt}
         className={`img-fluid ${className}`}
@@ -20,6 +20,7 @@ const PreviewCompatibleImage = ({imageInfo, alt, style, className}) => {
     return (
       <Img
         style={style}
+        imgStyle={style}
         fluid={childImageSharp.fluid}
         alt={alt}
         className={`img-fluid ${className}`}

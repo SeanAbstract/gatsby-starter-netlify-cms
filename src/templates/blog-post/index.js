@@ -31,18 +31,19 @@ export const BlogPostPageTemplate = (props: BlogPostTemplate) => {
   const {content, description, title, helmet, featuredImage, tags, downloadNow} = props
 
   return (
-    <div className="blog-post-page">
-      <SharedJumbotron headerImage={featuredImage} />
+    <>
+      <div className="blog-post-page">
+        <SharedJumbotron headerImage={featuredImage} blur />
 
-      <section className="blog-post-container">
-        {helmet || ''}
-        <div className="container content">
-          <div className="row justify-content-center">
-            <div className="col col-10 blog-container">
-              <h2 className="title is-size-2 has-text-weight-bold">{title}</h2>
-              <p>{description}</p>
-              <PostContent content={content} />
-              {/* {tags && tags.length ? (
+        <section className="blog-post-container">
+          {helmet || ''}
+          <div className="container content">
+            <div className="row justify-content-center">
+              <div className="col col-10 blog-container">
+                <h2 className="title is-size-2 has-text-weight-bold">{title}</h2>
+                <p>{description}</p>
+                <PostContent content={content} />
+                {/* {tags && tags.length ? (
                 <div style={{marginTop: `4rem`}}>
                   <h4>Tags</h4>
                   <ul className="taglist">
@@ -54,18 +55,19 @@ export const BlogPostPageTemplate = (props: BlogPostTemplate) => {
                   </ul>
                 </div>
               ) : null} */}
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Download NOw */}
+        {/* Download NOw */}
+      </div>
       <DownloadNow
         mainText={downloadNow.mainText}
         subText={downloadNow.subText}
         image={downloadNow.image}
       />
-    </div>
+    </>
   )
 }
 
