@@ -258,7 +258,7 @@ export const IndexPageTemplate = ({
                   }
 
                   const packageType =
-                    key <= 3 ? 'Low Commission Package' : 'Low Interest Rate Package'
+                    key <= 2 ? 'Low Commission Package' : 'Low Interest Rate Package'
 
                   return (
                     <Scene
@@ -272,7 +272,7 @@ export const IndexPageTemplate = ({
                       <div className={stockClassName} style={styleDiv}>
                         <StockSection
                           currency={countryCode}
-                          stockName={`${country} Stocks`}
+                          stockName={country}
                           commission={commission}
                           financingRate={financingRate}
                           platformUsageFee={platformUsageFee}
