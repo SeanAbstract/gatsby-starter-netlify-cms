@@ -175,7 +175,7 @@ function ContactPageTemplate(props: Props) {
                     Customer Inquiries
                   </p>
                   <p className="text-primary" style={{fontSize: '14px'}}>
-                    service@snowballsecurities.com
+                    <a href="mailto:service@snowballsecurities.com">service@snowballsecurities.com</a>
                   </p>
                 </div>
                 <div className="pt-1">
@@ -183,7 +183,7 @@ function ContactPageTemplate(props: Props) {
                     Media Inquiries
                   </p>
                   <p className="text-primary" style={{fontSize: '14px'}}>
-                    service@snowballsecurities.com
+                    <a href="mailto:pr@snowballsecurities.com">pr@snowballsecurities.com</a>
                   </p>
                 </div>
                 <div className="pt-1">
@@ -191,7 +191,7 @@ function ContactPageTemplate(props: Props) {
                     Business Cooperation
                   </p>
                   <p className="text-primary" style={{fontSize: '14px'}}>
-                    service@snowballsecurities.com
+                    <a href="mailto:bd@snowballsecurities.com">bd@snowballsecurities.com</a>
                   </p>
                 </div>
               </div>
@@ -212,7 +212,7 @@ function ContactPageTemplate(props: Props) {
                       <label htmlFor="exampleFormControlInput1" style={{fontSize: '14px'}}>
                         Email address
                       </label>
-                      <input type="email" className="form-control" placeholder="name@example.com" />
+                      <input type="email" className="form-control" placeholder="jon@snowball.com" />
                     </div>
                   </div>
                 </div>

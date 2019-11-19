@@ -165,17 +165,14 @@ function Footer() {
         <Row>
           <Col xs={12} md={9} className="mb-3" style={{lineHeight: 1}}>
             <StyledSmall>
-              Snowball Securities®, 雪盈证券® are New Zealand registered trademarks of SNB Finance
-              Holdings Limited (NZBN: 9429046386212) (&quot;SNB&quot;).
-            </StyledSmall>
-            <br />
-            <StyledSmall>
-              SNB is registered on the New Zealand Financial Service Providers Register
-              (FSP:594389). SNB’s Financial Service Providers registration can be verified on the
-              Financial Service Providers Register. SNB is a member of the Financial Dispute
-              Resolution Scheme, which is an independent dispute resolution scheme. New Zealand.
-              SNB’s registered office is at Level 5, 25 Teed Street, Newmarket, Auckland 1023, New
-              Zealand.
+              Snowball Securities®, 雪盈证券® are New Zealand registered trademarks of SNB
+              Finance Holdings Limited (NZBN: 9429046386212) (&quot;SNB&quot;). SNB is registered on the
+              New Zealand <a href="https://www.companiesoffice.govt.nz/" target="_blank">Financial Service Providers Register</a> (FSP: 594389). SNB’s Financial
+              Service Providers registration can be verified on the Financial Service Providers
+              Register. SNB is a member of the Financial Dispute Resolution Scheme, an
+              independent dispute resolution service provider. SNB is not licensed by a New Zealand
+              regulator and is not actively regulated in New Zealand. SNB’s registered office is at
+              Level 5, 25 Teed Street, Newmarket, Auckland 1023, New Zealand.
             </StyledSmall>
             <br />
             <StyledSmall />
