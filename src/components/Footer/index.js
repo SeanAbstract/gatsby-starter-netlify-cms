@@ -16,7 +16,7 @@ function Footer() {
   useEffect(() => {
     setTimeout(() => {
       setShow(true)
-    }, 1200)
+    }, 800)
   }, [])
 
   if (!show) return null
@@ -191,7 +191,7 @@ const StyledFooter = styled.footer`
   height: 385px;
   bottom: 0;
   width: 100%;
-  z-index: -2 !important;
+  z-index: -2;
 `
 
 const StyledContainer = styled(Container)`

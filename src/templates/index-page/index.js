@@ -104,21 +104,18 @@ export const IndexPageTemplate = ({
 }: Props) => {
   const changeZIndex = () => {
     if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-      document.getElementById('footer').style.zIndex = '-1'
+      const footer = document.getElementById('footer')
+      footer.style.zIndex = '0'
     } else {
       document.getElementById('footer').style.zIndex = '-2'
     }
   }
 
   useEffect(() => {
-    if (window !== undefined) {
-      window.addEventListener('scroll', changeZIndex)
-    }
+    window.addEventListener('scroll', changeZIndex)
 
     return () => {
-      if (window !== undefined) {
-        window.removeEventListener('scroll', changeZIndex)
-      }
+      window.removeEventListener('scroll', changeZIndex)
     }
   }, [])
 
