@@ -103,16 +103,6 @@ export const IndexPageTemplate = ({
   downloadNow,
 }: Props) => {
   const changeZIndex = () => {
-    if (
-      (document.body.scrollTop > 150 && document.body.scrollTop < 750) ||
-      (document.documentElement.scrollTop > 150 && document.documentElement.scrollTop < 750)
-    ) {
-      const currentVideo = document.getElementById('phoneVideo')
-      currentVideo.play()
-    } else {
-      document.getElementById('footer').style.zIndex = '-2'
-    }
-
     if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
       document.getElementById('footer').style.zIndex = '-1'
     } else {
@@ -121,8 +111,16 @@ export const IndexPageTemplate = ({
   }
 
   useEffect(() => {
-    window.addEventListener('scroll', changeZIndex)
-  })
+    if (window !== undefined) {
+      window.addEventListener('scroll', changeZIndex)
+    }
+
+    return () => {
+      if (window !== undefined) {
+        window.removeEventListener('scroll', changeZIndex)
+      }
+    }
+  }, [])
 
   useEffect(() => {
     const currentVideo = document.getElementById('mainVideo')
@@ -424,18 +422,20 @@ class IndexPage extends React.Component {
         this.setState({useMobileView: false})
       }
 
-      window.addEventListener('resize', () => {
-        if (window.innerWidth < 578) {
-          this.setState({useMobileView: true})
-        } else {
-          this.setState({useMobileView: false})
-        }
-      })
+      window.addEventListener('resize', this.resizeMethod)
     }
   }
 
   componentWillUnmount() {
-    window.removeEventListener('resize')
+    window.removeEventListener('resize', this.resizeMethod)
+  }
+
+  resizeMethod = () => {
+    if (window.innerWidth < 578) {
+      this.setState({useMobileView: true})
+    } else {
+      this.setState({useMobileView: false})
+    }
   }
 
   render() {
