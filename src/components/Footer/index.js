@@ -191,7 +191,7 @@ const StyledFooter = styled.footer`
   height: 385px;
   bottom: 0;
   width: 100%;
-  z-index: -2;
+  z-index: -2 !important;
 `
 
 const StyledContainer = styled(Container)`
