@@ -6,7 +6,7 @@ import {FaqPageTemplate} from '../../templates/faq-page'
 const FaqsPreview = ({entry}) => {
   const data = entry.getIn(['data']).toJS()
 
-  return <FaqPageTemplate headerImage={data.headerImage} questions={data.questions || []} />
+  return <FaqPageTemplate headerImage={data.headerImage} questions={data.categories || []} />
 }
 
 FaqsPreview.propTypes = {
