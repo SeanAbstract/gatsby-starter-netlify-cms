@@ -8,7 +8,7 @@ informationSection:
       subtitle: NZ Trading Hours Time
       title: Global (En/Ch)
     - hours: '09:00 - 24:00'
-      phoneNumber: (+64)(0)9 520 1919
+      phoneNumber: +86 400-118-8886
       subtitle: Beijing Trading Hours Time
       title: Chinese
   customerServiceTitle: Customer Service
