@@ -102,28 +102,6 @@ export const IndexPageTemplate = ({
   testimonials,
   downloadNow,
 }: Props) => {
-  const changeZIndex = () => {
-    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-      const footer = document.getElementById('footer')
-      if (footer) {
-        footer.style.zIndex = '-1'
-      }
-    } else {
-      const footer = document.getElementById('footer')
-      if (footer) {
-        footer.style.zIndex = '-2'
-      }
-    }
-  }
-
-  useEffect(() => {
-    window.addEventListener('scroll', changeZIndex)
-
-    return () => {
-      window.removeEventListener('scroll', changeZIndex)
-    }
-  }, [])
-
   useEffect(() => {
     const currentVideo = document.getElementById('mainVideo')
     currentVideo.play()

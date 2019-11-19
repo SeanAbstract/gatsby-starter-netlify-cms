@@ -11,7 +11,12 @@ function SharedJumbotron({headerImage, title, description, size, secondaryColor}
         className={`h-100 w-100 d-flex flex-column justify-content-center align-items-center ${
           size === 'lg' ? 'text-right' : ''
         }`}
-        style={{position: 'absolute', background: 'rgba(0,0,0, 0.2)', top: 0, zIndex: 0}}
+        style={{
+          position: 'absolute',
+          background: 'rgba(0,0,0, 0.2)',
+          top: 0,
+          zIndex: 0,
+        }}
       >
         <h1 className="display-3" style={{marginBottom: '-5px'}}>
           {title}
@@ -33,9 +38,9 @@ const Jumbotron = styled.div`
 
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
-  background-position: top;
+  background-position: center;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
 `
 
 export default SharedJumbotron
