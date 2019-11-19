@@ -105,9 +105,14 @@ export const IndexPageTemplate = ({
   const changeZIndex = () => {
     if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
       const footer = document.getElementById('footer')
-      footer.style.zIndex = '0'
+      if (footer) {
+        footer.style.zIndex = '-1'
+      }
     } else {
-      document.getElementById('footer').style.zIndex = '-2'
+      const footer = document.getElementById('footer')
+      if (footer) {
+        footer.style.zIndex = '-2'
+      }
     }
   }
 
