@@ -13,7 +13,6 @@ import Layout from '../../components/Layout'
 import SharedJumbotron from '../../components/SharedJumbotron'
 import DownloadNow from '../../components/DownloadNow'
 import arrowRight from '../../img/arrow-right-blue.png'
-
 import './styles.scss'
 
 type FaqPageTemplateProps = {
@@ -45,14 +44,14 @@ const Accordion = ({ndx, cc}) => {
       <button
         onClick={toggle}
         type="button"
-        className="w-100 p-0 text-left hover-none"
+        className="w-100 p-0 text-left"
         style={{backgroundColor: 'transparent', border: 'none'}}
       >
-        <div className="d-flex justify-content-between px-3 pt-1 hover-none">
+        <div className="d-flex justify-content-between px-3">
           <h5 className="mb-2">{cc.question}</h5>
           <Arrow src={arrowRight} alt="" active={isOpen} />
         </div>
-        <Collapse toggler={`#toggler${ndx}`} isOpen={isOpen}>
+        <Collapse toggler={`#toggler${ndx}`} className="mx-3" isOpen={isOpen}>
           <div
             dangerouslySetInnerHTML={{__html: renderDescription(cc.answer)}}
             style={{color: 'black'}}
@@ -65,15 +64,38 @@ const Accordion = ({ndx, cc}) => {
 }
 
 export function FaqPageTemplate(props: FaqPageTemplateProps) {
+  const [currentNdx, setNdx] = useState(0)
+
   return (
     <PageTransition>
       <div className="faq-page">
         <SharedJumbotron headerImage={props.headerImage} title="FAQS" description="Answered" />
+        <div className="container pt-5 mb-5">
+          <div className="row mx-auto">
+            <div className="col-md-8 mx-auto">
+              <ul className="nav nav-pills row justify-content-around">
+                {props.categories.map((category, ndx) => (
+                  <li
+                    key={ndx}
+                    className="nav-item"
+                    onClick={() => {
+                      setNdx(ndx)
+                    }}
+                  >
+                    <a className={`nav-link ${ndx === currentNdx ? 'active' : ''}`}>
+                      {category.categoryTitle}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
 
-        <div className="container pt-5">
+        <div className="container pb-5">
           <div className="row">
             <div className="col-md-9 mx-auto">
-              {props.questions.map((cc, ndx) => (
+              {props.categories[currentNdx].questions.map((cc, ndx) => (
                 <Accordion ndx={ndx} cc={cc} key={`${cc.question}${ndx}`} />
               ))}
             </div>
@@ -103,7 +125,7 @@ function FaqPage({data}: Props) {
     <Layout white>
       <FaqPageTemplate
         headerImage={faq.frontmatter.headerImage}
-        questions={faq.frontmatter.questions}
+        categories={faq.frontmatter.categories}
         downloadNow={faq.frontmatter.downloadNow}
       />
     </Layout>
@@ -123,9 +145,12 @@ export const faqPageQuery = graphql`
             }
           }
         }
-        questions {
-          question
-          answer
+        categories {
+          categoryTitle
+          questions {
+            question
+            answer
+          }
         }
         downloadNow {
           mainText

@@ -122,10 +122,6 @@ export const IndexPageTemplate = ({
 
   useEffect(() => {
     window.addEventListener('scroll', changeZIndex)
-
-    return () => {
-      window.removeEventListener('scroll', changeZIndex)
-    }
   })
 
   useEffect(() => {
