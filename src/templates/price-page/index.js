@@ -114,7 +114,7 @@ export function PricePageTemplate({
                   <div className="col-md-6 d-flex flex-column mb-3">
                     <div
                       onClick={() => setCurrentPackage('lowCommissionPackage')}
-                      className={`price-page-h4-wrapper text-center ${
+                      className={`price-page-h4-wrapper text-center package ${
                         currentPackage === 'lowCommissionPackage' ? 'text-primary' : ''
                       } mb-4`}
                       style={{
@@ -187,7 +187,7 @@ export function PricePageTemplate({
                   <div className="col-md-6">
                     <div
                       onClick={() => setCurrentPackage('lowInterestRatePackage')}
-                      className={`price-page-h4-wrapper text-center mb-4 ${
+                      className={`price-page-h4-wrapper text-center mb-4 package ${
                         currentPackage === 'lowInterestRatePackage' ? 'text-primary' : ''
                       }`}
                       style={{
