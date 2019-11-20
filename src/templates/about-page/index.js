@@ -65,13 +65,13 @@ export const AboutPageTemplate = (props: AboutTemplate) => {
       <div className="about-page container-fluid">
         <section className="pt-5 pb-5">
           <div className="row mb-5">
-            <div className="col-md-8 col-sm-10 mx-auto text-center">
+            <div className="col-md-10 col-12 mx-auto text-center">
               <h3 className="section-leading-text">{props.mainpitch.title}</h3>
             </div>
           </div>
 
           <div className="row mb-5">
-            <div className="col-md-6 mx-auto">
+            <div className="col-md-10 col-11 mx-auto">
               <div>
                 {/* <p>{props.mainpitch.description}</p> */}
                 <p className="dark-grey font-size-18">
@@ -92,38 +92,46 @@ export const AboutPageTemplate = (props: AboutTemplate) => {
 
           <div className="row">
             <div className="container">
-              <div className="col-md-9 mx-auto">
+              <div className="col-lg-9 col-12 mx-auto">
                 <div className="row justify-content-around">
                   {props.tabs.map((tab, ndx) => (
                     <div
-                      className="col-md-3 d-flex justify-content-center align-items-center flex-column mb-5 "
+                      className="col-md-3 d-flex justify-content-center align-items-center flex-column mb-5 tab-tab"
                       key={tab.title}
-                      style={{
-                        borderBottom: ndx === currentNdx ? '2px solid #006FBB' : '',
-                      }}
                       onClick={() => {
                         setTabDescription(tab.description)
                         setCurrentNdx(ndx)
                       }}
                     >
-                      <div
-                        onMouseEnter={() => setCurrentHover(ndx)}
-                        onMouseLeave={() => setCurrentHover(null)}
-                      >
-                        <PreviewCompatibleImage
-                          imageInfo={images[ndx]}
-                          style={{height: '100px', width: '100px'}}
-                          className={`mb-4 ${
-                            ndx !== currentNdx && ndx !== currentHover ? 'grayscale' : ''
-                          }`}
-                        />
+                      <div className="row w-100">
+                        <div className="col-md-12 col-4 d-flex justify-content-center">
+                          <div
+                            onMouseEnter={() => setCurrentHover(ndx)}
+                            onMouseLeave={() => setCurrentHover(null)}
+                          >
+                            <PreviewCompatibleImage
+                              imageInfo={images[ndx]}
+                              className={`mb-4 tab-img ${
+                                ndx !== currentNdx && ndx !== currentHover ? 'grayscale' : ''
+                              }`}
+                            />
+                          </div>
+                        </div>
+                        <div
+                          className="col-md-12 col-8 d-flex align-items-center justify-content-center"
+                          style={{
+                            borderBottom: ndx === currentNdx ? '2px solid #006FBB' : '',
+                          }}
+                        >
+                          <h5
+                            className={
+                              ndx === currentHover || ndx === currentNdx ? 'text-primary' : ''
+                            }
+                          >
+                            {tab.title}
+                          </h5>
+                        </div>
                       </div>
-
-                      <h5
-                        className={ndx === currentHover || ndx === currentNdx ? 'text-primary' : ''}
-                      >
-                        {tab.title}
-                      </h5>
                     </div>
                   ))}
                 </div>
@@ -140,13 +148,13 @@ export const AboutPageTemplate = (props: AboutTemplate) => {
 
         <section className="trade-section">
           <div className="row no-gutters h-100">
-            <div className="col-md-4 img-left" />
+            <div className="col-md-4 img-left d-none d-md-flex" />
             <div className="col-md-4 d-flex justify-content-center align-items-center bg-primary">
               <h1 className="big-subtitle text-light" style={{fontSize: '64px'}}>
                 Trade Electronically
               </h1>
             </div>
-            <div className="col-md-4 img-right" />
+            <div className="col-md-4 img-right d-none d-md-flex" />
           </div>
         </section>
 
@@ -154,13 +162,13 @@ export const AboutPageTemplate = (props: AboutTemplate) => {
         <section>
           <div
             className="row justify-content-center align-items-center bg-grey"
-            style={{height: '60vh'}}
+            style={{minHeight: '60vh', padding: '40px 0'}}
           >
             <div className="container">
               <div className="col-md-12 d-flex justify-content-center mx-auto flex-column align-items-center">
                 <h1 className="big-text text-primary mb-5">History</h1>
 
-                <div className="d-flex">
+                <div className="d-flex flex-md-row flex-column">
                   {props.historyCards.map((historyItem, key, {length}) => (
                     <>
                       <HistoryCard date={historyItem.date} description={historyItem.description} />

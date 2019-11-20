@@ -29,7 +29,7 @@ function HowItWorksSection(props) {
                   <PreviewCompatibleImage
                     imageInfo={section.image}
                     alt="section image"
-                    style={{maxWidth: '150px', objectFit: 'contain'}}
+                    style={{maxWidth: '200px', objectFit: 'contain', height: '150px'}}
                   />
                 </div>
               </>
@@ -39,7 +39,7 @@ function HowItWorksSection(props) {
                   <PreviewCompatibleImage
                     imageInfo={section.image}
                     alt="section image"
-                    style={{maxWidth: '210px', objectFit: 'contain'}}
+                    style={{maxWidth: '200px', objectFit: 'contain'}}
                   />
                 </div>
                 <div className="col-md-8">
@@ -55,7 +55,12 @@ function HowItWorksSection(props) {
                 <PreviewCompatibleImage
                   imageInfo={section.image}
                   alt="section image"
-                  style={{maxWidth: '150px', marginBottom: '3.5rem'}}
+                  style={{
+                    maxWidth: '150px',
+                    marginBottom: '3.5rem',
+                    height: '150px',
+                    objectFit: 'contain',
+                  }}
                 />
               </div>
               <div className="col-md-8">

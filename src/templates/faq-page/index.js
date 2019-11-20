@@ -72,8 +72,8 @@ export function FaqPageTemplate(props: FaqPageTemplateProps) {
         <SharedJumbotron headerImage={props.headerImage} title="FAQS" description="Answered" />
         <div className="container pt-5 mb-5">
           <div className="row mx-auto">
-            <div className="col-md-8 mx-auto">
-              <ul className="nav nav-pills row justify-content-around">
+            <div className="col-lg-8 col-md-10 col-11 mx-auto">
+              <ul className="nav nav-pills d-flex justify-content-around">
                 {props.categories.map((category, ndx) => (
                   <li
                     key={ndx}

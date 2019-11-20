@@ -12,6 +12,7 @@ const PreviewCompatibleImage = ({imageInfo, alt, style, className}) => {
         fluid={image.childImageSharp.fluid}
         alt={alt}
         className={`img-fluid ${className}`}
+        style={style}
       />
     )
   }
@@ -24,6 +25,7 @@ const PreviewCompatibleImage = ({imageInfo, alt, style, className}) => {
         fluid={childImageSharp.fluid}
         alt={alt}
         className={`img-fluid ${className}`}
+        style={style}
       />
     )
   }
