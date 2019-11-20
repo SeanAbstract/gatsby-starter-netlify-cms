@@ -33,14 +33,23 @@ export const BlogPostPageTemplate = (props: BlogPostTemplate) => {
               <h3>Terms and Conditions</h3>
               {/* <PostContent content={content} /> */}
               <p>
-                No investment is free from risk. Returns can be positive or negative. The risk of
-                loss in trading of any stock or other financial products can be substantial and it
-                is possible you could receive back less money than you invest. The material on this
-                website is intended as information only. Any trading symbols displayed are for
-                illustrative purposes only and are not intended to portray recommendations. No
-                advice on buying or disposing of financial products is given. Please read through
-                our <Link to="/risk-disclosure">Risk Disclosure</Link> and{' '}
-                <Link to="/terms">Conditions</Link> before investing.
+                By accessing this website and any portal within this website, you agree to and will
+                comply with the terms of use, and any applicable portal terms of use.<br/><br/>
+                The material on this website is given as information only. SNB does not provide any
+                financial advice on buying, holding, or disposing of financial products. Any trading
+                symbols displayed are for illustrative purposes only and are not intended to be
+                recommendations or opinions.<br/><br/>
+                Whilst the information on this website has been prepared with all reasonable care,
+                SNB, its directors and officers make no representation or warranty (express or
+                implied) regarding the accuracy or completeness of the information on this website
+                and accept no responsibility for any errors, omissions, or service unavailability. To the
+                maximum extent permitted by law, SNB, its directors and officers disclaim any liability
+                arising from the use of information on this website.<br/><br/>
+                No investment is free from risk. Returns can be positive or negative. The risk of loss in
+                trading of any stock or other financial products can be substantial and it is possible
+                you could receive back less money than you invest. Investors should seek
+                independent and financial advice specific to their situation before making an
+                investment decision. Please read through our <Link to="/risk-disclosure">Risk Disclosure</Link> and <Link to="/terms">Conditions</Link> before investing.
               </p>
             </div>
           </div>

@@ -2,7 +2,7 @@
 templateKey: faq-page
 headerImage: /img/snowball-faq-image.png
 categories:
-  - categoryTitle: 'Category 1'
+  - categoryTitle: 'About Snowball'
     questions:
       - answer: >-
           - The security of your funds is our priority. Snowball Securities is
@@ -36,19 +36,20 @@ categories:
         question: What do I need to open an account？
       - answer: >-
           Transfer from an IB broker
-                        Step 1    download the Snowball Securities App to open an account
-                        Step 2    Log in to the IB account and select Transfer & Pay→ Transfer Funds/Transfer     Positions→ Internal Transfer
+
+            - Step 1    download the Snowball Securities App to open an account
+            - Step 2    Log in to the IB account and select Transfer & Pay → Transfer Funds/Transfer Positions → Internal Transfer
+
           Transfer from a Hong Kong stockbroker or a Hong Kong bank
-                       Step 1     download the Snowball Securities App to open an account
-                       Step 2     Contact the original broker/bank customer service to give notification of the transfer. Ask for the name, contact number of settlement department, email of original broker/bank. Click to view common Hong Kong stock brokerage information 
-                       Step 3     log into Interactive Brokers and select "Funding" → "Position Transfers”, if you are transferring Hong Kong stocks, select "International Assets" to inform IB to receive stocks.
+            - Step 1     download the Snowball Securities App to open an account
+            - Step 2     Contact the original broker/bank customer service to give notification of the transfer. Ask for the name, contact number of settlement department, email of original broker/bank. Click to view common Hong Kong stock brokerage information 
+            - Step 3     log into Interactive Brokers and select "Funding" → "Position Transfers”, if you are transferring Hong Kong stocks, select "International Assets" to inform IB to receive stocks
+          
           from other US stock brokers
-                       Step 1    download the Snowball Securities App to open an account.
-                       Step 2    Log into the original securities account and find the account number.
-                       Step 3    Log into the Snowball Securities app click on "Transaction" - "more" - "account transfer" - "US stock account", fill in the phone number, select the original broker, enter the original broker’s account number.
-          step 4 Confirm the transfer application with the original broker. If
-          you receive the original broker transfer confirmation e-mail or text
-          message, reply directly to confirm.
+            - Step 1    download the Snowball Securities App to open an account.
+            - Step 2    Log into the original securities account and find the account number.
+            - Step 3    Log into the Snowball Securities app click on "Transaction" - "more" - "account transfer" - "US stock account", fill in the phone number, select the original broker, enter the original broker’s account number
+            - step 4 Confirm the transfer application with the original broker. If you receive the original broker transfer confirmation e-mail or text message, reply directly to confirm
         question: >-
           I already have an account with other brokers, and I want to transfer
           my funds and positions to Snowball Securities. What should I do?
@@ -161,10 +162,7 @@ categories:
           a different broker. 
         question: What happens if Snowball Securities goes under?
       - answer: "Margin financing refers to the act of a client who pledges funds or stocks in his own account to brokers and borrows more funds from brokers to buy stocks.\_Margin financing plays a role in amplifying trading leverage. For example, your principal is 1 million US dollars, and borrows 1 million US dollars from the broker, for a total of 2 million US dollars to buy stocks, this is a 2x leveraged financing. If the stock price rises 25%, your return on investment will be 50%. If the stock price falls by 25%, your return on investment will be -50%. It is recommended that customers utilising margin financing fully understands the risk of the service."
-        question: |
-          --------------------- Below questions about margin trading
-
-          What is margin financing?
+        question: What is margin financing?
       - answer: "If you want to make margin financing transactions, you need to open a margin account.\_All the accounts with Snowball Securities are Reg T margin accounts, that is, with facilities of margin financing and securities financing accounts. \n"
         question: How to enter margin financing transactions?
       - answer: "Not all the US stocks are available for margin financing purchase. In Snowball Securities, a “Financing for Buying” indicator is installed for those stocks which are available for margin financing purchase. It is shown in the stock page on the data bar.\_If there is no such indicator for one stock, that stock is not available for margin financing purchase."
@@ -272,7 +270,7 @@ categories:
           rates are very competitive. We use the best market data available to
           measure ourselves. 
         question: What is the securities financing rate on Snowball Securities?
-  - categoryTitle: Category 2
+  - categoryTitle: How to use
     questions:
       - answer: >-
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -296,7 +294,7 @@ categories:
         question: >-
           What is Snowball Securities’ best advantages comparing with other
           brokers? 2
-  - categoryTitle: Category 3
+  - categoryTitle: Margin Trading
     questions:
       - answer: >-
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -320,7 +318,7 @@ categories:
         question: >-
           What is Snowball Securities’ best advantages comparing with other
           brokers? 3
-  - categoryTitle: Category 4
+  - categoryTitle: Risk
     questions:
       - answer: >-
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -344,7 +342,7 @@ categories:
         question: >-
           What is Snowball Securities’ best advantages comparing with other
           brokers? 4
-  - categoryTitle: Category 5
+  - categoryTitle: Currency
     questions:
       - answer: >-
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do

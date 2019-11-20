@@ -137,18 +137,19 @@ export function PricePageTemplate({
                       />
                       <div className="card-body">
                         <div className="row justify-content-between align-items-center text-right">
-                          <div className="col-4">
+                          <div className="col-4 commission-title-fix">
                             <h5>{packages[currentPackage].hk.commission.title}</h5>
                           </div>
-                          <div className="col-8">
+                          <div className="col-8 commission-text-fix">
                             <p className="mb-0">
                               No Commission on orders below HKD{' '}
                               {currentPackage === 'lowCommissionPackage' ? '60,000' : '22,000'}{' '}
                             </p>
                             <p className="mb-0">
-                              Pay <strong className="text-primary">0.03%</strong> per share on
-                              orders above{' '}
-                              {currentPackage === 'lowCommissionPackage' ? '60,000' : '22,000'} HKD
+                              Pay <strong className="text-primary">
+                              {currentPackage === 'lowCommissionPackage' ? '0.03%' : '0.08%'}
+                              </strong> per share on orders above HKD{' '}
+                              {currentPackage === 'lowCommissionPackage' ? '60,000' : '22,000'}
                             </p>
                           </div>
                         </div>
@@ -175,7 +176,7 @@ export function PricePageTemplate({
                           </div>
                           <p className="col-5 text-right">
                             <strong className="text-primary">
-                              {currentPackage === 'lowCommissionPackage' ? '3.983% ' : '4.169%'}
+                              {currentPackage === 'lowCommissionPackage' ? '4.844% ' : '2.844%'}
                             </strong>{' '}
                             minimum
                           </p>
@@ -233,10 +234,12 @@ export function PricePageTemplate({
                           </div>
                           <div className="col-6 text-right">
                             <p className="mb-0">
-                              <strong className="text-primary">$0.003</strong> per share
+                              <strong className="text-primary">
+                                {currentPackage === 'lowCommissionPackage' ? '$0.003' : '0.003%'}
+                              </strong> per share
                               <br />
                               <strong className="text-primary">$1</strong> per deal{' '}
-                              {currentPackage === 'lowCommissionPackage' ? 'the' : ''} minimum
+                              {currentPackage === 'lowCommissionPackage' ? '' : ''} minimum
                             </p>
                           </div>
                         </div>
@@ -249,7 +252,7 @@ export function PricePageTemplate({
                           </div>
                           <p className="col-5 text-right">
                             <strong className="text-primary">
-                              {currentPackage === 'lowCommissionPackage' ? '4.2%' : '1.85%'}
+                              {currentPackage === 'lowCommissionPackage' ? '3.85%' : '1.85%'}
                             </strong>{' '}
                             minimum
                           </p>
