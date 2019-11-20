@@ -62,13 +62,16 @@ function ContactPageTemplate(props: Props) {
                 </div>
               </div>
               <div className="row w-100 pl-5 mb-5">
-                {props.informationSection.customerServiceContacts.map(contact => (
+                {props.informationSection.customerServiceContacts.map((contact, ndx) => (
                   <div className="col-6 mb-4">
                     <p className="lead mb-1 font-weight-light">{contact.title}</p>
                     <p className="mb-0">{contact.subtitle}</p>
                     <p className="mb-0">{contact.hours}</p>
                     <p className="mb-0 font-weight-bold">
                       <strong>{contact.phoneNumber}</strong>{' '}
+                    </p>
+                    <p className="mb-0 font-weight-bold">
+                      {ndx === 0 && <strong>0800 858 696</strong>}
                     </p>
                   </div>
                 ))}

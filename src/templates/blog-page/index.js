@@ -1,6 +1,6 @@
 import React from 'react'
 import Helmet from 'react-helmet'
-import {graphql} from 'gatsby'
+import {graphql, Link} from 'gatsby'
 import styled from 'styled-components'
 import {Row, Col, Container} from 'reactstrap'
 import PageTransition from 'gatsby-plugin-page-transitions'
@@ -58,9 +58,14 @@ export function BlogPageTemplate({title, content, contentComponent, image, heade
               </SectionText>
             </Col>
           </Row>
+
           <GridContainer>
             {blogs.map((blog, ndx) => (
-              <GridItem className={`item-${(ndx + 1) % 9}`} key={`blog-${ndx}`}>
+              <GridItem
+                className={`item-${(ndx + 1) % 9}`}
+                key={`blog-${ndx}`}
+                to="/blog/2017-01-04-a-beginners-guide-to-brewing-with-chemex/"
+              >
                 <div>
                   <p className="type">{blog.type}</p>
                   <h5>{blog.title}</h5>
@@ -105,41 +110,66 @@ const GridContainer = styled.div`
   display: grid;
   grid-template-columns: 25% 25% 25% 25%;
   grid-gap: 20px;
+  width: 90%;
 
   .item-1 {
     grid-column: auto / span 1;
+    @media (max-width: 768px) {
+      grid-column: auto / span 4;
+    }
   }
 
   .item-2 {
     grid-column: auto / span 3;
+    @media (max-width: 768px) {
+      grid-column: auto / span 4;
+    }
   }
 
   .item-3 {
     grid-column: auto / span 2;
+    @media (max-width: 768px) {
+      grid-column: auto / span 4;
+    }
   }
 
   .item-4 {
     grid-column: auto / span 1;
+    @media (max-width: 768px) {
+      grid-column: auto / span 4;
+    }
   }
 
   .item-5 {
     grid-column: auto / span 1;
+    @media (max-width: 768px) {
+      grid-column: auto / span 4;
+    }
   }
 
   .item-6 {
     grid-column: auto / span 1;
+    @media (max-width: 768px) {
+      grid-column: auto / span 4;
+    }
   }
 
   .item-7 {
     grid-column: auto / span 1;
+    @media (max-width: 768px) {
+      grid-column: auto / span 4;
+    }
   }
 
   .item-8 {
     grid-column: auto / span 2;
+    @media (max-width: 768px) {
+      grid-column: auto / span 4;
+    }
   }
 `
 
-const GridItem = styled.div`
+const GridItem = styled(Link)`
   padding: 20px;
   height: 310px;
   color: white;
@@ -164,6 +194,7 @@ const GridItem = styled.div`
     background-image: url(${tempBgImg});
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     filter: grayscale(100%);
     z-index: -1;
   }
