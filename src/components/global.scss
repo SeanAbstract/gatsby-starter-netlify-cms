@@ -59,10 +59,20 @@ h2 {
   line-height: 1.75rem;
 }
 
+h3 {
+  @media (max-width: 576px) {
+    font-size: 24px;
+  }
+}
+
 p {
   font-family: "Theinhardt";
   font-weight: 300;
   line-height: 24px;
+
+  @media (max-width: 576px) {
+    font-size: 16px;
+  }
 }
 
 .big-text {

@@ -111,7 +111,7 @@ export function PricePageTemplate({
                 <h3 className="section-leading-text mb-5">{mainPitch}</h3>
 
                 <div className="row">
-                  <div className="col-md-6 d-flex flex-column mb-3">
+                  <div className="col-md-6 d-flex col-10 mx-auto flex-column mb-5 ">
                     <div
                       onClick={() => setCurrentPackage('lowCommissionPackage')}
                       className={`price-page-h4-wrapper text-center package ${
@@ -146,9 +146,11 @@ export function PricePageTemplate({
                               {currentPackage === 'lowCommissionPackage' ? '60,000' : '22,000'}{' '}
                             </p>
                             <p className="mb-0">
-                              Pay <strong className="text-primary">
-                              {currentPackage === 'lowCommissionPackage' ? '0.03%' : '0.08%'}
-                              </strong> per share on orders above HKD{' '}
+                              Pay{' '}
+                              <strong className="text-primary">
+                                {currentPackage === 'lowCommissionPackage' ? '0.03%' : '0.08%'}
+                              </strong>{' '}
+                              per share on orders above HKD{' '}
                               {currentPackage === 'lowCommissionPackage' ? '60,000' : '22,000'}
                             </p>
                           </div>
@@ -185,7 +187,7 @@ export function PricePageTemplate({
                     </div>
                   </div>
 
-                  <div className="col-md-6">
+                  <div className="col-md-6 col-10 mx-auto">
                     <div
                       onClick={() => setCurrentPackage('lowInterestRatePackage')}
                       className={`price-page-h4-wrapper text-center mb-4 package ${
@@ -236,7 +238,8 @@ export function PricePageTemplate({
                             <p className="mb-0">
                               <strong className="text-primary">
                                 {currentPackage === 'lowCommissionPackage' ? '$0.003' : '0.003%'}
-                              </strong> per share
+                              </strong>{' '}
+                              per share
                               <br />
                               <strong className="text-primary">$1</strong> per deal{' '}
                               {currentPackage === 'lowCommissionPackage' ? '' : ''} minimum

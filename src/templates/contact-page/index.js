@@ -51,19 +51,19 @@ function ContactPageTemplate(props: Props) {
           description="Here to help"
         />
 
-        <section className="customer-service-section container-fluid">
+        <section className="customer-service-section container-fluid py-5">
           <div className="row h-100">
             <div className="col-md-6 d-flex justify-content-center align-items-center flex-column">
-              <div className="row w-75 pl-5">
+              <div className="row w-100 pl-5">
                 <div className="col text-left mb-3">
                   <h3 style={{fontSize: '32px', fontWeight: '300'}}>
                     {props.informationSection.customerServiceTitle}
                   </h3>
                 </div>
               </div>
-              <div className="row w-75 pl-5 mb-5">
+              <div className="row w-100 pl-5 mb-5">
                 {props.informationSection.customerServiceContacts.map(contact => (
-                  <div className="col-sm-6 mb-4">
+                  <div className="col-6 mb-4">
                     <p className="lead mb-1 font-weight-light">{contact.title}</p>
                     <p className="mb-0">{contact.subtitle}</p>
                     <p className="mb-0">{contact.hours}</p>
@@ -73,7 +73,7 @@ function ContactPageTemplate(props: Props) {
                   </div>
                 ))}
               </div>
-              <div className="row w-75 pl-5">
+              <div className="row w-100 pl-5">
                 {props.informationSection.offices.map(office => (
                   <div className="col-8 d-flex align-items-end justify-content-center">
                     <div>
@@ -113,9 +113,9 @@ function ContactPageTemplate(props: Props) {
         {/* Social Media */}
         <section className="social-media-section container-fluid">
           <div className="row h-100 text-light">
-            <div className="col-md-8 col-10 d-flex justify-content-around align-items-center mx-auto">
+            <div className="col-md-8 col-10 d-flex justify-content-around align-items-center mx-auto flex-column flex-sm-row">
               <h3 className="mb-0 pt-1 font-weight-light">{props.socialMedia.socialMediaTitle}</h3>
-              <div className="d-flex">
+              <div className="d-none d-sm-flex">
                 <div className="d-flex mr-4">
                   <img
                     src={wechatIcon}
@@ -123,19 +123,64 @@ function ContactPageTemplate(props: Props) {
                     style={{height: 30, width: 30, objectFit: 'contain'}}
                     className="mr-2"
                   />
-                  <p className="mb-0 pt-1">{props.socialMedia.wechatAccountOne}</p>
+                  <p className="mb-0 pt-1 d-none d-sm-block">
+                    {props.socialMedia.wechatAccountOne}
+                  </p>
                 </div>
                 <div className="d-flex align-items-center">
                   <img
                     src={wechatIcon}
                     alt=""
                     style={{height: 30, width: 30, objectFit: 'contain'}}
-                    className="mr-2"
+                    className="mr-4 mr-5-sm"
                   />
-                  <p className="mb-0 pt-1">{props.socialMedia.wechatAccountTwo}</p>
+                  <p className="mb-0 pt-1 d-none d-sm-block">
+                    {props.socialMedia.wechatAccountTwo}
+                  </p>
                 </div>
               </div>
-              <div className="d-flex align-items-center">
+              <div className="d-none d-sm-block">
+                <a href="https://www.facebook.com/snowballsecurities" target="_blank">
+                  <img
+                    src={facebookIcon}
+                    alt=""
+                    style={{height: 30, width: 30, objectFit: 'contain'}}
+                    className="mr-4"
+                  />
+                </a>
+                <a href="https://www.linkedin.com/company/snowballsecurities" target="_blank">
+                  <img
+                    src={linkedinIcon}
+                    alt=""
+                    style={{height: 30, width: 30, objectFit: 'contain'}}
+                    className="mr-4"
+                  />
+                </a>
+                <a href="https://twitter.com/snowballsec?lang=en" target="_blank">
+                  <img
+                    src={twitterIcon}
+                    alt=""
+                    style={{height: 30, width: 30, objectFit: 'contain'}}
+                  />
+                </a>
+              </div>
+              <div className="d-flex d-sm-none">
+                <div className="d-flex mr-4">
+                  <img
+                    src={wechatIcon}
+                    alt=""
+                    style={{height: 30, width: 30, objectFit: 'contain'}}
+                    className="mr-2"
+                  />
+                </div>
+                <div className="d-flex align-items-center">
+                  <img
+                    src={wechatIcon}
+                    alt=""
+                    style={{height: 30, width: 30, objectFit: 'contain'}}
+                    className="mr-4 mr-5-sm"
+                  />
+                </div>
                 <a href="https://www.facebook.com/snowballsecurities" target="_blank">
                   <img
                     src={facebookIcon}
@@ -168,14 +213,16 @@ function ContactPageTemplate(props: Props) {
         <section className="contact-us-form mb-5">
           <div className="container">
             <div className="row h-100 justify-content-center align-items-start">
-              <div className="col-md-3">
+              <div className="col-md-3 col-11 mb-4">
                 <h3 className="mb-3">Contact Us</h3>
                 <div className="pt-1">
                   <p className="lead mb-1 text-dark font-weight-light" style={{fontSize: '16px'}}>
                     Customer Inquiries
                   </p>
                   <p className="text-primary" style={{fontSize: '14px'}}>
-                    <a href="mailto:service@snowballsecurities.com">service@snowballsecurities.com</a>
+                    <a href="mailto:service@snowballsecurities.com">
+                      service@snowballsecurities.com
+                    </a>
                   </p>
                 </div>
                 <div className="pt-1">
@@ -196,7 +243,7 @@ function ContactPageTemplate(props: Props) {
                 </div>
               </div>
 
-              <div className="col-md-7">
+              <div className="col-md-7 col-11">
                 <h3 className="mb-3">Leave a message</h3>
                 <div className="row mb-2">
                   <div className="col-md-6">
