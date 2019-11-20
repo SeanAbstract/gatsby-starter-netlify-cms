@@ -65,13 +65,13 @@ export const AboutPageTemplate = (props: AboutTemplate) => {
       <div className="about-page container-fluid">
         <section className="pt-5 pb-5">
           <div className="row mb-5">
-            <div className="col-md-10 col-12 mx-auto text-center">
+            <div className="col-md-10 col-lg-8 col-12 mx-auto text-center">
               <h3 className="section-leading-text">{props.mainpitch.title}</h3>
             </div>
           </div>
 
           <div className="row mb-5">
-            <div className="col-md-10 col-11 mx-auto">
+            <div className="col-md-10 col-lg-8 col-11 mx-auto">
               <div>
                 {/* <p>{props.mainpitch.description}</p> */}
                 <p className="dark-grey font-size-18">
