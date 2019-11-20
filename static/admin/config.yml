@@ -27,14 +27,16 @@ collections:
         ]}
 
   - name: "englishPages"
-    label: "English Pages"
+    label: "Pages"
     files:
       - file: "src/pages/index.md"
         label: "Landing Page"
         name: "index"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "index-page"}
-          - {label: "Video Name", name: "videoName", widget: "hidden"}
+          - {label: "Video Name NZ", name: "videoName", widget: "hidden"}
+          - {label: "Video Name AU", name: "videoNameAU", widget: "hidden"}
+          - {label: "Video Name US", name: "videoNameUS", widget: "hidden"}
           - {label: "Background Image", name: "image", widget: image}
           - {label: "First Section", name: "firstSection", widget: object, fields: [
               {label: 'Main Text', name: 'mainText', widget: string},

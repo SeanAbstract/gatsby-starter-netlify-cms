@@ -27,6 +27,8 @@ import 'slick-carousel/slick/slick-theme.css'
 type Props = {
   image: any,
   videoName: any,
+  videoNameUS: any,
+  videoNameAU: any,
   firstSection: {
     mainText: string,
     description: string,
@@ -94,7 +96,10 @@ type Props = {
 }
 
 export const IndexPageTemplate = ({
+  geoCountry,
   videoName,
+  videoNameUS,
+  videoNameAU,
   firstSection,
   stockSection,
   featureSection,
@@ -110,6 +115,8 @@ export const IndexPageTemplate = ({
 
   const videoRef = useRef(null)
 
+  console.log("GEO TESTING | Not specified = working - ", geoCountry, " nz - ", videoName, " us - ", videoNameUS, " au - ", videoNameAU)
+  
   return (
     <PageTransition>
       {/* Hero Video */}
@@ -121,7 +128,15 @@ export const IndexPageTemplate = ({
             width="100%"
             muted="true"
             preload="auto"
-            src={require(`../../../static/img/${videoName}`)}
+            // src={require(`../../../static/img/${videoName}`)}
+            src={require(`../../../static/img/${
+              geoCountry === 'New Zealand' ? videoName : 
+              geoCountry === 'Australia' ? videoNameAU :
+              geoCountry === 'United States' ? videoNameUS :
+              geoCountry === 'Not specified' ? videoName :
+              videoName
+            }`)}
+            
             autoplay
             className="video"
             poster={videoPoster}
@@ -401,6 +416,7 @@ class IndexPage extends React.Component {
   state = {
     loading: true,
     useMobileView: false,
+    geoCountry: null,
   }
 
   componentDidMount() {
@@ -417,6 +433,12 @@ class IndexPage extends React.Component {
 
       window.addEventListener('resize', this.resizeMethod)
     }
+
+    // Geo location checker - Used for swapping homepage header video
+    fetch("/locale.json")
+      .then(response => response.json())
+      .then(data => this.setState({geoCountry: data.locale}))
+      .catch(err => console.error("Error fetching data from /locale.json endpoint", err))
   }
 
   componentWillUnmount() {
@@ -448,9 +470,12 @@ class IndexPage extends React.Component {
 
     return (
       <Layout>
-        <meta name="robots" content="noindex" />
+        <meta name="robots" content="noindex" /> 
         <IndexPageTemplate
+          geoCountry={this.state.geoCountry}
           videoName={frontmatter.videoName}
+          videoNameUS={frontmatter.videoNameUS}
+          videoNameAU={frontmatter.videoNameAU}
           image={frontmatter.image}
           firstSection={frontmatter.firstSection}
           stockSection={frontmatter.stockSection}
