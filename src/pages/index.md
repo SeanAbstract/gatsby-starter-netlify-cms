@@ -1,8 +1,8 @@
 ---
 templateKey: index-page
 videoName: sailing.mp4
-videoNameUS: Boat-Final.mp4
 videoNameAU: Beach-Final.mp4
+videoNameUS: Boat-Final.mp4
 image: /img/landing-page-2.png
 firstSection:
   buttonText: Try Snowball Securities today
@@ -17,12 +17,12 @@ stockSection:
   stocks:
     - commission:
         - price: $0.00
-          text: 'per share (under HKD 60,000)'
+          text: '(under HKD 60,000)'
         - price: 0.03%
-          text: 'per share on orders above HKD 60,000'
+          text: '*trading value (over HKD 60,000)'
       country: HK Stocks
       countryCode: HK
-      financingRate: "4.844%\_"
+      financingRate: "5.342%\_"
       platformUsageFee: HKD 18
       platformUsageFeeType: per deal
     - commission:
@@ -37,22 +37,22 @@ stockSection:
       platformUsageFeeType: per share
     - commission:
         - price: $0.00
-          text: 'per share (under CNY 50,000)'
+          text: '(under CNH 50,000)'
         - price: "0.03%\_"
-          text: 'per share (over CNY 50,000)'
+          text: '*trading value (over CNH 50,000)'
       country: China-A-Shares
       countryCode: CN
-      financingRate: "9.812%\_"
-      platformUsageFee: CNY 15
+      financingRate: "9.385%\_"
+      platformUsageFee: CNH 15
       platformUsageFeeType: per deal
     - commission:
         - price: $0.00
-          text: 'per share (under HKD 22,500)'
+          text: '(under HKD 22,500)'
         - price: 0.08%
-          text: 'per share (over HKD 22,500)'
+          text: '*trading value (over HKD 22,500)'
       country: HK Stocks
       countryCode: HK
-      financingRate: 2.844%
+      financingRate: 3.342%
       platformUsageFee: HKD 18
       platformUsageFeeType: per deal
     - commission:
@@ -67,13 +67,13 @@ stockSection:
       platformUsageFeeType: per share
     - commission:
         - price: $0.00
-          text: 'per share (under CNY 18,750)'
+          text: '(under CNH 18,750)'
         - price: "0.08%\_"
-          text: 'per share (over CNY 18,750)'
+          text: '*trading value (over CNH 18,750)'
       country: China-A-Shares
-      countryCode: CN
-      financingRate: "7.812%\_"
-      platformUsageFee: CNY 15
+      countryCode: CNH
+      financingRate: "7.835%\_"
+      platformUsageFee: CNH 15
       platformUsageFeeType: per deal
   title: Access World-Class Investment Options
 featureSection:
