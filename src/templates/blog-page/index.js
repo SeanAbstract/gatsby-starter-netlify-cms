@@ -141,7 +141,7 @@ const GridContainer = styled.div`
 
 const GridItem = styled.div`
   padding: 20px;
-  height: 175px;
+  height: 310px;
   color: white;
   position: relative;
   z-index: 1;

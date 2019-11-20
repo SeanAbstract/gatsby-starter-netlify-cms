@@ -19,6 +19,7 @@ collections:
       - {label: "Featured Post", name: "featuredpost", widget: "boolean"}
       - {label: "Featured Image", name: "featuredimage", widget: image}
       - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Category", name: "category", widget: "text"}
       - {label: "Tags", name: "tags", widget: "list"}
       - {label: "Download Now", name: "downloadNow", widget: object, fields: [
           {label: "Main Text", name: "mainText", widget: string},

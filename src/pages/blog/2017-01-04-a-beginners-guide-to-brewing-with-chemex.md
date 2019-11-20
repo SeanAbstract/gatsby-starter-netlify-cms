@@ -4,7 +4,8 @@ title: Low commission/margin rate
 date: 2017-01-04T15:04:10.000Z
 description: 'minimum comm./trade: 0 for HK, US$0.99 for US'
 featuredpost: true
-featuredimage: /img/another-stock.jpg
+category: Guide
+featuredimage: /img/second-splash.jpg
 tags:
   - brewing
   - chemex

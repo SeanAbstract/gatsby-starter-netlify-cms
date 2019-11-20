@@ -1,8 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import {kebabCase} from 'lodash'
 import Helmet from 'react-helmet'
 import {graphql, Link} from 'gatsby'
+import styled from 'styled-components'
 
 import Layout from '../../components/Layout'
 import Content, {HTMLContent} from '../../components/Content'
@@ -24,11 +24,22 @@ type BlogPostTemplate = {
     subText: string,
     image: any,
   },
+  nextBlogLink: string,
+  nextBlogTitle: string,
 }
 
 export const BlogPostPageTemplate = (props: BlogPostTemplate) => {
   const PostContent = props.contentComponent || Content
-  const {content, description, title, helmet, featuredImage, tags, downloadNow} = props
+  const {
+    content,
+    description,
+    title,
+    helmet,
+    featuredImage,
+    tags,
+    downloadNow,
+    nextCategory,
+  } = props
 
   return (
     <>
@@ -43,18 +54,22 @@ export const BlogPostPageTemplate = (props: BlogPostTemplate) => {
                 <h2 className="title is-size-2 has-text-weight-bold">{title}</h2>
                 <p>{description}</p>
                 <PostContent content={content} />
-                {/* {tags && tags.length ? (
-                <div style={{marginTop: `4rem`}}>
-                  <h4>Tags</h4>
-                  <ul className="taglist">
-                    {tags.map(tag => (
-                      <li key={`${tag}tag`}>
-                        <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
-                      </li>
-                    ))}
-                  </ul>
+                <div
+                  style={{position: 'relative', width: '100vw', height: '150px'}}
+                  className="mt-5"
+                >
+                  {props.nextBlogLink && (
+                    <Link to={props.nextBlogLink}>
+                      <NextBlog>
+                        <div>
+                          <p className="category mb-0">{nextCategory}</p>
+                          <p className="title">{props.nextBlogTitle}</p>
+                        </div>
+                        <small>Next Article</small>
+                      </NextBlog>
+                    </Link>
+                  )}
                 </div>
-              ) : null} */}
               </div>
             </div>
           </div>
@@ -71,8 +86,10 @@ export const BlogPostPageTemplate = (props: BlogPostTemplate) => {
   )
 }
 
-const BlogPost = ({data}) => {
+const BlogPost = ({data, pageContext}) => {
   const {markdownRemark: post} = data
+
+  console.log(pageContext)
 
   return (
     <Layout>
@@ -89,6 +106,9 @@ const BlogPost = ({data}) => {
         title={post.frontmatter.title}
         featuredImage={post.frontmatter.featuredimage}
         downloadNow={post.frontmatter.downloadNow}
+        nextBlogLink={pageContext.next && pageContext.next.fields.slug}
+        nextBlogTitle={pageContext.nextTitle && pageContext.nextTitle}
+        nextCategory={pageContext.nextCategory && pageContext.nextCategory}
       />
     </Layout>
   )
@@ -99,6 +119,41 @@ BlogPost.propTypes = {
     markdownRemark: PropTypes.object,
   }),
 }
+
+const NextBlog = styled.div`
+  height: 150px;
+  width: 450px;
+  background-color: red;
+  position: absolute;
+  right: 225px;
+  top: 0;
+
+  display: flex;
+  flex-direction: column;
+  padding: 15px 20px;
+  justify-content: space-between;
+  border-radius: 2px;
+  background-color: #f5f5f5;
+
+  .category {
+    color: #444444;
+    font-family: Theinhardt;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 24px;
+  }
+
+  .title {
+    color: #212b36;
+    font-family: Theinhardt;
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  small {
+    color: black;
+  }
+`
 
 export default BlogPost
 
@@ -119,6 +174,7 @@ export const pageQuery = graphql`
         title
         description
         tags
+        category
         downloadNow {
           mainText
           subText

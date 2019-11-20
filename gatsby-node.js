@@ -18,6 +18,8 @@ exports.createPages = ({actions, graphql}) => {
             }
             frontmatter {
               templateKey
+              title
+              category
             }
           }
         }
@@ -29,19 +31,40 @@ exports.createPages = ({actions, graphql}) => {
       return Promise.reject(result.errors)
     }
 
-    const posts = result.data.allMarkdownRemark.edges
+    const posts = result.data.allMarkdownRemark.edges.filter(
+      edge => edge.node.frontmatter.templateKey !== 'blog-post'
+    )
 
-    posts.forEach(edge => {
+    posts.forEach((edge, ndx) => {
       const {id} = edge.node
       createPage({
         path: edge.node.fields.slug,
-        tags: edge.node.frontmatter.tags,
         component: path.resolve(
           `src/templates/${String(edge.node.frontmatter.templateKey)}/index.js`
         ),
         // additional data can be passed via context
         context: {
           id,
+        },
+      })
+    })
+
+    const blogs = result.data.allMarkdownRemark.edges.filter(
+      edge => edge.node.frontmatter.templateKey === 'blog-post'
+    )
+
+    blogs.forEach((edge, ndx) => {
+      const {id} = edge.node
+
+      createPage({
+        path: edge.node.fields.slug,
+        component: path.resolve(`src/templates/blog-post/index.js`),
+        // additional data can be passed via context
+        context: {
+          id,
+          next: ndx === blogs.length - 1 ? null : blogs[ndx + 1].node,
+          nextTitle: ndx === blogs.length - 1 ? null : blogs[ndx + 1].node.frontmatter.title,
+          nextCategory: ndx === blogs.length - 1 ? null : blogs[ndx + 1].node.frontmatter.category,
         },
       })
     })

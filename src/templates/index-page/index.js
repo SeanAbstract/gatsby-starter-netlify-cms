@@ -115,8 +115,17 @@ export const IndexPageTemplate = ({
 
   const videoRef = useRef(null)
 
-  console.log("GEO TESTING | Not specified = working - ", geoCountry, " nz - ", videoName, " us - ", videoNameUS, " au - ", videoNameAU)
-  
+  console.log(
+    'GEO TESTING | Not specified = working - ',
+    geoCountry,
+    ' nz - ',
+    videoName,
+    ' us - ',
+    videoNameUS,
+    ' au - ',
+    videoNameAU
+  )
+
   return (
     <PageTransition>
       {/* Hero Video */}
@@ -130,13 +139,16 @@ export const IndexPageTemplate = ({
             preload="auto"
             // src={require(`../../../static/img/${videoName}`)}
             src={require(`../../../static/img/${
-              geoCountry === 'New Zealand' ? videoName : 
-              geoCountry === 'Australia' ? videoNameAU :
-              geoCountry === 'United States' ? videoNameUS :
-              geoCountry === 'Not specified' ? videoName :
-              videoName
+              geoCountry === 'New Zealand'
+                ? videoName
+                : geoCountry === 'Australia'
+                ? videoNameAU
+                : geoCountry === 'United States'
+                ? videoNameUS
+                : geoCountry === 'Not specified'
+                ? videoName
+                : videoName
             }`)}
-            
             autoplay
             className="video"
             poster={videoPoster}
@@ -212,7 +224,7 @@ export const IndexPageTemplate = ({
                   triggerElement="#section-trigger"
                   duration={1600}
                   triggerHook={0}
-                  offset={325 * stockSection.stocks.length}
+                  offset={325 * (stockSection.stocks.length / 2)}
                   classToggle="background-two"
                 >
                   <div
@@ -435,10 +447,10 @@ class IndexPage extends React.Component {
     }
 
     // Geo location checker - Used for swapping homepage header video
-    fetch("/locale.json")
+    fetch('/locale.json')
       .then(response => response.json())
       .then(data => this.setState({geoCountry: data.locale}))
-      .catch(err => console.error("Error fetching data from /locale.json endpoint", err))
+      .catch(err => console.error('Error fetching data from /locale.json endpoint', err))
   }
 
   componentWillUnmount() {
@@ -470,7 +482,7 @@ class IndexPage extends React.Component {
 
     return (
       <Layout>
-        <meta name="robots" content="noindex" /> 
+        <meta name="robots" content="noindex" />
         <IndexPageTemplate
           geoCountry={this.state.geoCountry}
           videoName={frontmatter.videoName}
@@ -497,6 +509,8 @@ export const pageQuery = graphql`
     markdownRemark(id: {eq: $id}) {
       frontmatter {
         videoName
+        videoNameUS
+        videoNameAU
         firstSection {
           mainText
           description

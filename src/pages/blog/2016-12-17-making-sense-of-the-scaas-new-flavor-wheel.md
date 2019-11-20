@@ -4,6 +4,7 @@ title: Making sense of the SCAA’s new Flavor Wheel
 date: 2016-12-17T15:04:10.000Z
 description: Dual Supervision by New Zealand and Hong Kong
 featuredpost: true
+category: Guide
 featuredimage: /img/second-splash.jpg
 tags:
   - flavor
