@@ -454,6 +454,8 @@ class IndexPage extends React.Component {
     }
   }
 
+  shouldUseWhiteLogo = () => !(this.state.geoCountry === 'New Zealand' || 'Australia')
+
   render() {
     const {frontmatter} = this.props.data.markdownRemark
 
@@ -470,7 +472,7 @@ class IndexPage extends React.Component {
     }
 
     return (
-      <Layout>
+      <Layout white={this.shouldUseWhiteLogo()}>
         <meta name="robots" content="noindex" />
         <IndexPageTemplate
           geoCountry={this.state.geoCountry}
