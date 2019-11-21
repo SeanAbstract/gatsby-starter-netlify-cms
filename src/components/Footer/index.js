@@ -20,7 +20,7 @@ function Footer() {
   }, [])
 
   const changeZIndex = () => {
-    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+    if (document.body.scrollTop > 600 || document.documentElement.scrollTop > 600) {
       const footer = document.getElementById('footer')
       if (footer) {
         footer.style.zIndex = '-1'
@@ -219,10 +219,6 @@ const StyledFooter = styled.footer`
   bottom: 0;
   width: 100%;
   z-index: -2;
-
-  @media (max-width: 426px) {
-    z-index: -2 !important;
-  }
 `
 
 const StyledContainer = styled(Container)`
