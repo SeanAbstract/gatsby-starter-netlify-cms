@@ -20,6 +20,9 @@ exports.createPages = ({actions, graphql}) => {
               templateKey
               title
               category
+              featuredimage {
+                publicURL
+              }
             }
           }
         }
@@ -64,7 +67,7 @@ exports.createPages = ({actions, graphql}) => {
           id,
           prev: ndx === 0 ? null : blogs[ndx - 1].node,
           prevTitle: ndx === 0 ? null : blogs[ndx - 1].node.frontmatter.title,
-          prevCategory: ndx === 0 ? null : blogs[ndx + 1].node.frontmatter.category,
+          prevCategory: ndx === 0 ? null : blogs[ndx - 1].node.frontmatter.category,
           next: ndx === blogs.length - 1 ? null : blogs[ndx + 1].node,
           nextTitle: ndx === blogs.length - 1 ? null : blogs[ndx + 1].node.frontmatter.title,
           nextCategory: ndx === blogs.length - 1 ? null : blogs[ndx + 1].node.frontmatter.category,

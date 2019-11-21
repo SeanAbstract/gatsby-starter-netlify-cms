@@ -20,6 +20,8 @@
   .blog-container {
     padding: 64px;
     background-color: white;
+    position: relative;
+    padding-bottom: 300px;
 
     @media (max-width: 426px) {
       padding: 32px;

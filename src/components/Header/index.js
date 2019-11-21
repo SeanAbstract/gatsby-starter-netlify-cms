@@ -142,9 +142,16 @@ export default class Header extends React.Component {
               <Nav className="ml-auto" navbar>
                 <div className="on-mobile top-collapse-mobile">
                   <Link to="/">
-                    <LogoIcon className="mobile-logo" scrolled={scrolled} src={whiteLogoIcon} alt="company logo" />
+                    <LogoIcon
+                      className="mobile-logo"
+                      scrolled={scrolled}
+                      src={whiteLogoIcon}
+                      alt="company logo"
+                    />
                   </Link>
-                  <button className="btn close-btn" onClick={this.toggle}>X</button>
+                  <button className="btn close-btn" onClick={this.toggle}>
+                    X
+                  </button>
                 </div>
                 {data.map((link, ndx) =>
                   link.href !== '' ? (
@@ -199,40 +206,22 @@ export default class Header extends React.Component {
                   />
 
                   <StyledAnchor href="https://www.facebook.com/snowballsecurities" target="_blank">
-                    <img
-                      id="fbIcon"
-                      src={facebookIcon}
-                      alt=""
-                      className="mr-4"
-                    />
+                    <img id="fbIcon" src={facebookIcon} alt="" className="mr-4" />
                   </StyledAnchor>
                   <StyledAnchor
                     href="https://www.linkedin.com/company/snowballsecurities"
                     target="_blank"
                   >
-                    <img
-                      src={linkedinIcon}
-                      alt=""
-                      className="mr-4"
-                      id="linkedInIcon"
-                    />
+                    <img src={linkedinIcon} alt="" className="mr-4" id="linkedInIcon" />
                   </StyledAnchor>
 
                   <StyledAnchor href="https://twitter.com/snowballsec?lang=en" target="_blank">
-                    <img
-                      src={twitterIcon}
-                      alt=""
-                      id="twitterIcon"
-                    />
+                    <img src={twitterIcon} alt="" id="twitterIcon" />
                   </StyledAnchor>
                 </div>
                 <div className="on-mobile lower-small-container">
-                  <Link to="/">
-                    Privacy Policy
-                  </Link>
-                  <Link to="/">
-                    Terms & Conditions
-                  </Link>
+                  <Link to="/">Privacy Policy</Link>
+                  <Link to="/">Terms & Conditions</Link>
                 </div>
               </Nav>
             </StyledCollapse>
@@ -263,7 +252,7 @@ export default class Header extends React.Component {
               </Link>
             </NavbarBrand>
 
-            <StyledCollapse isOpen={this.state.isOpen} navbar>
+            <StyledCollapse isOpen={this.state.isOpen} navbar className="d-none">
               <Nav className="ml-auto scroll-nav" navbar>
                 {data.map(link =>
                   link.href !== '' ? (
@@ -410,7 +399,7 @@ const StyledCollapse = styled(Collapse)`
     top: 0;
     left: 0;
     padding: 24px;
-    background-color: rgba(0,111,187,0.9);
+    background-color: rgba(0, 111, 187, 0.9);
 
     .on-desktop {
       display: none;
