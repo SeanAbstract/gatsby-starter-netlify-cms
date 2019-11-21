@@ -115,7 +115,7 @@ export default class Header extends React.Component {
 
   listenToScroll = () => {
     this.setState({
-      scrolled: window.scrollY > window.innerHeight / 2,
+      scrolled: window.scrollY > window.innerHeight / 1.75,
     })
   }
 

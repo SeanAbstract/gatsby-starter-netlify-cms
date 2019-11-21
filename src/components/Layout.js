@@ -41,7 +41,7 @@ const TemplateWrapper = ({children, white, stickyFooter}) => {
       <Header white={white} />
       <StyledMain>{children}</StyledMain>
       <StickyFooterCta className="container">
-        <div className="row h-100">
+        <div className="row h-100" style={{borderTop: '1px solid rgba(120, 120, 120, 0.2)'}}>
           <div
             className="col-6 justify-content-center d-flex align-items-center text-primary pt-1 font-weight-bold"
             style={{borderRight: '1px solid rgba(120,120,120, 0.2)'}}

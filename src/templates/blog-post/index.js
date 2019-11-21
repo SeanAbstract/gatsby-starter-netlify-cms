@@ -7,7 +7,6 @@ import styled from 'styled-components'
 import Layout from '../../components/Layout'
 import Content, {HTMLContent} from '../../components/Content'
 import SharedJumbotron from '../../components/SharedJumbotron'
-import PreviewCompatibleImage from '../../components/PreviewCompatibleImage'
 import './styles.scss'
 import DownloadNow from '../../components/DownloadNow'
 
