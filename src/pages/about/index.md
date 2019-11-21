@@ -130,50 +130,52 @@ investors:
   - brandDescription: >-
       The highest valued FinTech company in the world, and the world's most
       valuable unicorn (start-up) company, with a valuation of US$150 billion.
-    brandLogo: /img/ant-financial.png
+    brandLogo: /img/ant-financial-v2.jpg
 partners:
   - brandDescription: >-
       A U.S.-based brokerage firm. It operates the largest electronic trading
       platform in the U.S. by number of daily average revenue trades.
-    brandLogo: /img/sequoia.png
-  - brandDescription: >-
-      A multinational banking and financial services company headquartered in
-      Melbourne, Australia. ANZ is the largest bank in New Zealand.
-    brandLogo: /img/morning-side.png
+    brandLogo: /img/interactive-brokers.png
   - brandDescription: >-
       ASB Bank, commonly stylised as ASB, is a bank owned by Commonwealth Bank
       of Australia, operating in New Zealand.
-    brandLogo: /img/renren.png
+    brandLogo: /img/asb.png
   - brandDescription: >-
       A multinational banking and financial services company headquartered in
       Melbourne, Australia. ANZ is the largest bank in New Zealand.
-    brandLogo: /img/renren.png
+    brandLogo: /img/anz.png
   - brandDescription: >-
       China Construction Bank Corporation (CCB) is one of the "big four" banks
       in the People's Republic of China. 
-    brandLogo: /img/sequoia.png
+    brandLogo: /img/ccb.png
   - brandDescription: >-
-      Founded in 1986, by the Chan family of Hong Kong, to make private equity
-      and venture capital investments.
-    brandLogo: /img/morning-side.png
+      Wing Lung bank was listed in Hong Kong from 1980 to 2009 until it was
+      acquired by China Merchants Bank. It currently employs over 1,700 people
+      and has assets over HK$ 200 billion.
+    brandLogo: /img/wlb.png
   - brandDescription: >-
-      A Chinese social networking service similar to Facebook. In February 2011,
-      Renren made a pre-IPO announcement that it had 160 million registered
-      users.
-    brandLogo: /img/renren.png
+      BNP Paribas S.A. is a French international banking group. It is the
+      world's 8th largest bank by total assets, and currently operates with a
+      presence in 77 countries.
+    brandLogo: /img/bnp.png
   - brandDescription: >-
-      The highest valued FinTech company in the world, and the world's most
-      valuable unicorn (start-up) company, with a valuation of US$150 billion.
-    brandLogo: /img/renren.png
+      Hobson Wealth Partners Limited is a leading private wealth advisory team
+      with offices in Auckland, Tauranga, Wellington and Christchurch.
+    brandLogo: /img/hobson.png
   - brandDescription: >-
-      A Chinese social networking service similar to Facebook. In February 2011,
-      Renren made a pre-IPO announcement that it had 160 million registered
-      users.
-    brandLogo: /img/renren.png
+      A multinational professional services network and one of the "Big Four"
+      accounting organizations and the largest professional services network in
+      the world by revenue and number of professionals.
+    brandLogo: /img/deloitte.png
   - brandDescription: >-
-      The highest valued FinTech company in the world, and the world's most
-      valuable unicorn (start-up) company, with a valuation of US$150 billion.
-    brandLogo: /img/renren.png
+      Chapman Tripp is New Zealand's largest commercial law firm. It is
+      considered one of the "big three" law firms.
+    brandLogo: /img/chapman.png
+  - brandDescription: >-
+      Strategi Group is an experienced specialist in the provision of compliance
+      and consulting services to financial advisers, QFEs, and networks, and
+      AML/CFT solutions for lawyers, accountants and real estate agents.
+    brandLogo: /img/strategi.png
 downloadNow:
   image: /img/snowball-phone.png
   mainText: Access Global Markets Today
