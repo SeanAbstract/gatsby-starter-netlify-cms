@@ -92,14 +92,7 @@ const StockCard = (props: Props) => {
                       width="100%"
                       src={getIcon(stock.abbreviation)}
                       alt="Card image cap"
-                      style={{
-                        margin: 'auto',
-                        height: '100px',
-                        width: '100px',
-                        marginTop: '-15px',
-                        objectFit: 'contain',
-                        zIndex: 100,
-                      }}
+                      className="card-img"
                     />
                   </div>
                 </Slide>
@@ -140,6 +133,10 @@ const InnerCarousel = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media (max-width: 426px) {
+    height: 100% !important;
+  }
 `
 
 const StyledCard = styled.div`
@@ -163,6 +160,19 @@ const ImgContainer = styled.div`
   /* display: flex;
   justify-content: center;
   align-items: center; */
+
+  .card-img {
+    margin: auto;
+    height: 100px;
+    width: 100px;
+    margin-top: -15px;
+    object-fit: contain;
+    z-index: 100;
+
+    @media (max-width: 426px) {
+      margin-top: auto;
+    }
+  }
 
   @media (min-width: 768px) {
     height: 225px;

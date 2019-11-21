@@ -42,6 +42,10 @@ $primary: #006fbb;
             @media (min-width: 426px) {
                 font-size: 64px;
             }
+
+            @media (max-width: 426px) {
+                font-size: 48px;
+            }
         }
     }
 
@@ -66,8 +70,8 @@ $primary: #006fbb;
 
     .second-section {
         height: 70vh;
-        padding-right: 1.3rem;
-        padding-left: 1.3rem;
+        padding-right: 2rem;
+        padding-left: 2rem;
         margin-top: 100vh;
         background-color: white;
       
@@ -97,9 +101,18 @@ $primary: #006fbb;
             background-image: url('../../img/investment.png');
             background-size: cover;
             transition: 1s;
+            height: 100vh;
 
             &.background-two {
                 background-image: url('../../img/hk-tower.jpg') !important;
+            }
+
+            @media (max-width: 767px) {
+                height: 60vh;
+    
+                .col-right {
+                    height: 100vh;
+                }
             }
         }
 
@@ -129,8 +142,11 @@ $primary: #006fbb;
             /* line-height: 2.68rem; */
             
             @media (max-width: 576px) {
-              /* font-size: 3rem; */
+              font-size: 5rem;
               /* line-height: 2.5rem; */
+              padding-left: 2rem;
+              padding-right: 2rem;
+              margin: 0px !important;
             }
           
             @media (max-width: 768px) {
@@ -140,7 +156,7 @@ $primary: #006fbb;
         }
 
         @media (max-width: 767px) {
-            height: 150vh;
+            height: 50vh;
 
             .col-right {
                 height: 100vh;
@@ -205,6 +221,11 @@ $primary: #006fbb;
     .another-feature-section {
         min-height: 90vh;
         background-color: #f5f5f5 ;
+
+        @media (max-width: 426px) {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
     }
 
     .get-ahead-section {
@@ -219,6 +240,15 @@ $primary: #006fbb;
     .blog-roll-container {
         background-color: white;
         min-height: 60vh;
+
+        @media (max-width: 426px) {
+            min-height: 1000px;
+
+            .react-reveal {
+                height: 1000px;
+            }
+        }
+
         .blog-container {
             border-left: 1px solid #E6E6E6;
 
@@ -267,11 +297,27 @@ $primary: #006fbb;
                     padding: 0 0.75rem;
                 }
             }
+
+            .blog-text-container {
+                margin-top: 20% !important;
+            }
           
             @media (max-width: 426px) {
               border-bottom: 1px solid #444444;
               margin: 0 1.5rem;
               padding: 0;
+
+              .blog-text-container {
+                  margin-top: 40px !important;
+              }
+
+              .get-started-button-container {
+                display: none;
+              }
+
+              .arrow-right-container {
+                  margin-bottom: 40px;
+              }
             }
         }
     }
@@ -318,6 +364,10 @@ $primary: #006fbb;
             font-size: 90px;
     
             @media (min-width: 426px) {
+                font-size: 64px;
+            }
+
+            @media (max-width: 426px) {
                 font-size: 64px;
             }
         }
@@ -379,6 +429,13 @@ $primary: #006fbb;
             &.background-two {
                 background-image: url('../../img/hk-tower.jpg') !important;
             }
+
+            @media (max-width: 576px) {
+                .title-container {
+                    width: 100%;
+                }
+            }
+
         }
 
         .stock-detail, .stock-detail-2 {
@@ -409,6 +466,7 @@ $primary: #006fbb;
             @media (max-width: 576px) {
               /* font-size: 3rem; */
               /* line-height: 2.5rem; */
+              margin: 0 !important;
             }
           
             @media (max-width: 768px) {
@@ -483,6 +541,11 @@ $primary: #006fbb;
     .another-feature-section {
         min-height: 90vh;
         background-color: #f5f5f5 ;
+
+        @media (max-width: 426px) {
+            padding-left: 40px;
+            padding-right: 40px;
+        }
     }
 
     .get-ahead-section {
@@ -497,6 +560,11 @@ $primary: #006fbb;
     .blog-roll-container {
         background-color: white;
         min-height: 60vh;
+
+        @media (max-width: 426px) {
+            min-height: 1000px;
+        }
+
         .blog-container {
             border-left: 1px solid #E6E6E6;
 

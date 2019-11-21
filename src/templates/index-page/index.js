@@ -219,12 +219,11 @@ export const IndexPageTemplate = ({
                   <div
                     className="d-flex flex-column justify-content-center align-items-center stock-section-background"
                     style={{
-                      height: '100vh',
                       position: 'sticky',
                       top: 0,
                     }}
                   >
-                    <div>
+                    <div className="title-container">
                       <h1 className="display-2 mb-3 ml-5">
                         ACCESS
                         <br />
@@ -467,9 +466,9 @@ class IndexPage extends React.Component {
       )
     }
 
-    if (this.state.useMobileView) {
-      return <MobileIndex testimonials={frontmatter.testimonials} />
-    }
+    // if (this.state.useMobileView) {
+    //   return <MobileIndex testimonials={frontmatter.testimonials} />
+    // }
 
     return (
       <Layout white={this.shouldUseWhiteLogo()}>
@@ -634,6 +633,7 @@ const WordTitle = styled.h1`
 
 const StockRow = styled.div`
   display: flex;
+  flex-wrap: wrap;
 
   .section {
     height: 100vh;
