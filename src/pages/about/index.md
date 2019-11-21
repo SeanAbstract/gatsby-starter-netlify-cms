@@ -31,15 +31,76 @@ tabs:
       trading, access to global markets, social information flows and fintech.
     icon: /img/mobile.svg
     title: One-stop shop
-  - description: Our backers description
+  - description: >-
+      The Ultimate Holding Company is a Hong Kong registered Company, Snowball
+      Finance International Limited, an internet financial information service
+      provider focused on investment solutions.
+
+
+      * Snowball Finance was incorporated in 2010. It has raised over US$173
+      million in four investment rounds since 2014, culminating in an investment
+      of US$120 million, in July 2018, from Alibaba subsidiary, Ant Financial, a
+      fintech company that originated from Alipay. Other investors include
+      Sequoia Capital China, an affiliate of American venture capital firm,
+      Sequoia Capital, Morningside Venture Capital, a Hong Kong-based private
+      equity firm, and Renren Inc, a Chinese social networking service similar
+      to Facebook.
     icon: /img/people.svg
     title: Our Backers
-  - description: Our business description
+  - description: >-
+      Snowball Securities is a financial services business. We are establishing
+      an internet-based brokerage service, using a platform provided by US-based
+      electronic brokerage firm, Interactive Brokers. This platform will enable
+      customers to buy and sell securities online and via mobile apps. 
+
+
+      * Our parent company, Snowball Finance, has identified a significant
+      opportunity -- in many geographies – to provide online broking services to
+      individuals who wish to invest in global share markets and has set up a
+      subsidiary in New Zealand to provide this service to global investors.
+
+
+
+
+      * Snowball Finance has established Snowball Securities as an
+      internet-based brokerage service operating from New Zealand. Once Snowball
+      Securities has a base of New Zealand customers Snowball Finance then plans
+      to make it the head office of a global financial services business
+      targeting investors world-wide. 
+
+
+
+
+      * Snowball Finance's investment and communication platform, Xueqiu.com, is
+      China's largest social site for investors in the US stock markets. It
+      provides investors with cross-market and cross-species data query,
+      newsletter subscriptions, and interactive communication services. These
+      services have covered the A shares and the Hong Kong and US stock markets.
+      Beneficial from it, Snowball Securities has grown rapidly among
+      Mandarin-speaking users, however as a well-funded, technology advanced and
+      lawful operated securities brokerage firm, we dedicate to bring global
+      trading experiences to diverse customers.
     icon: /img/business.svg
     title: Our Business
 historyCards:
+  - date: May 2011
+    description: SEQUOIA Capital Series A Financing from Sequoia Capital
+  - date: Jan 2012
+    description: SNOWBALL APP launches
+  - date: May 2013
+    description: Series B Financing from Morningside Ventures
+  - date: Sept 2014
+    description: Series C Financing from RenRen
+  - date: Jan 2015
+    description: Commenced Stock Trading Business on Chinese Market
+  - date: Nov 2015
+    description: Commenced Asset Management Business
+  - date: March 2016
+    description: Commenced Fund Sales Business
   - date: October 2017
-    description: 'SNB Finance Holdings registered it''s business in Auckland, New Zealand.'
+    description: >-
+      SNB Finance Holdings registered it's business in Auckland, New Zealand.
+      Commenced Stock Trading Business on US/HK Market: Snowball Securities
   - date: March 2018
     description: >-
       SNB Finance Holdings received FSP registration and started to provide
