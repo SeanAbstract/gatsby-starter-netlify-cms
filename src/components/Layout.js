@@ -46,7 +46,8 @@ const TemplateWrapper = ({children, white}) => {
 }
 
 const StyledMain = styled.main`
-  margin-bottom: 385px;
+  ${'' /* This fixes an issue with the footer not fully showing on large screen sizes */}
+  margin-bottom: 485px;
   position: relative;
 `
 

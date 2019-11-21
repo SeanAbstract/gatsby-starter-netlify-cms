@@ -4,7 +4,7 @@ headerImage: /img/second-splash.jpg
 informationSection:
   customerServiceContacts:
     - hours: '10:00 - 16:00'
-      phoneNumber: (+64)(0)9 520 1919
+      phoneNumber: (+64) 9 520 1919
       subtitle: NZ Trading Hours Time
       title: Global (En/Ch)
     - hours: '09:00 - 24:00'

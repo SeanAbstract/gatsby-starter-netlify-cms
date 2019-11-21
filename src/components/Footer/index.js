@@ -147,7 +147,7 @@ function Footer() {
             </Row>
             <Row className="mt-3 w-100">
               <Col md={12} className="ml-auto text-right">
-                <Link to="/risk-disclosure" style={{color: 'black'}}>
+                <Link to="/privacy-policy" style={{color: 'black'}}>
                   <small className="mr-3" style={{fontSize: '10px', textDecoration: 'underline'}}>
                     Privacy Policy
                   </small>

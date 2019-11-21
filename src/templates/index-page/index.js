@@ -115,17 +115,6 @@ export const IndexPageTemplate = ({
 
   const videoRef = useRef(null)
 
-  console.log(
-    'GEO TESTING | Not specified = working - ',
-    geoCountry,
-    ' nz - ',
-    videoName,
-    ' us - ',
-    videoNameUS,
-    ' au - ',
-    videoNameAU
-  )
-
   return (
     <PageTransition>
       {/* Hero Video */}

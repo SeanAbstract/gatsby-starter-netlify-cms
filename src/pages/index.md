@@ -1,8 +1,8 @@
 ---
 templateKey: index-page
 videoName: sailing.mp4
-videoNameUS: Boat-Final.mp4
 videoNameAU: Beach-Final.mp4
+videoNameUS: Boat-Final.mp4
 image: /img/landing-page-2.png
 firstSection:
   buttonText: Try Snowball Securities today
@@ -17,12 +17,12 @@ stockSection:
   stocks:
     - commission:
         - price: $0.00
-          text: 'per share (under HKD 60,000)'
+          text: '(under HKD 60,000)'
         - price: 0.03%
-          text: 'per share on orders above HKD 60,000'
+          text: '*trading value (over HKD 60,000)'
       country: HK Stocks
       countryCode: HK
-      financingRate: "4.844%\_"
+      financingRate: "5.342%\_"
       platformUsageFee: HKD 18
       platformUsageFeeType: per deal
     - commission:
@@ -37,22 +37,22 @@ stockSection:
       platformUsageFeeType: per share
     - commission:
         - price: $0.00
-          text: 'per share (under CNY 50,000)'
+          text: '(under CNH 50,000)'
         - price: "0.03%\_"
-          text: 'per share (over CNY 50,000)'
+          text: '*trading value (over CNH 50,000)'
       country: China-A-Shares
       countryCode: CN
-      financingRate: "9.812%\_"
-      platformUsageFee: CNY 15
+      financingRate: "9.385%\_"
+      platformUsageFee: CNH 15
       platformUsageFeeType: per deal
     - commission:
         - price: $0.00
-          text: 'per share (under HKD 22,500)'
+          text: '(under HKD 22,500)'
         - price: 0.08%
-          text: 'per share (over HKD 22,500)'
+          text: '*trading value (over HKD 22,500)'
       country: HK Stocks
       countryCode: HK
-      financingRate: 2.844%
+      financingRate: 3.342%
       platformUsageFee: HKD 18
       platformUsageFeeType: per deal
     - commission:
@@ -67,13 +67,13 @@ stockSection:
       platformUsageFeeType: per share
     - commission:
         - price: $0.00
-          text: 'per share (under CNY 18,750)'
+          text: '(under CNH 18,750)'
         - price: "0.08%\_"
-          text: 'per share (over CNY 18,750)'
+          text: '*trading value (over CNH 18,750)'
       country: China-A-Shares
-      countryCode: CN
-      financingRate: "7.812%\_"
-      platformUsageFee: CNY 15
+      countryCode: CNH
+      financingRate: "7.835%\_"
+      platformUsageFee: CNH 15
       platformUsageFeeType: per deal
   title: Access World-Class Investment Options
 featureSection:
@@ -85,6 +85,7 @@ featureSection:
   gifs:
     - gif: /img/snowball-app-market-quotes_03.png
     - gif: /img/snowball-app-stock-financial_03.png
+    - gif: /img/open-account.png
   image: /img/snowball-empty-phone.png
   sections:
     - description: "Snowball makes it possible to invest in listed securities on the US, Hong Kong and China stock exchanges. Fast, convenient and secure trading accessed at a competitive low cost.\_\n"
@@ -96,12 +97,8 @@ featureSection:
         intelligence. Stay ahead of the market with exclusive information
         available at your fingertips.
       subText: Free Market Depth Report
-    - description: >
-        Diversify your exposure to global markets while you take advantage of
-        fluctuating currency rates. Snowball offers margin-free
-        currency-exchange on over 10 mainstream currencies, enabling flexibility
-        for multiple market trading from one account.  
-      subText: Multiple currencies
+    - description: "It only takes a few minutes to setup your free \LSnowball account. The platform is really user friendly \Land the Snowball customer support team is only a phone \Lcall away if you need any assistance to get started. \LGive it a try today."
+      subText: Getting started is easy
 blurb:
   mainText: Get ahead
   subText: on your terms
