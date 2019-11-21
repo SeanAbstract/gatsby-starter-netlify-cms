@@ -115,7 +115,7 @@ export default class Header extends React.Component {
 
   listenToScroll = () => {
     this.setState(prevState => ({
-      scrolled: window.scrollY > (prevState.currentPath === '' ? 500 : 225),
+      scrolled: window.scrollY > (prevState.currentPath === '' ? 475 : 225),
     }))
   }
 
