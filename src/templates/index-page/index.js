@@ -690,6 +690,7 @@ const Jumbotron = styled.div`
   top: 0;
   position: fixed !important;
   z-index: -1;
+  background-color: grey;
 `
 
 const ImageContainer = styled.div`
@@ -698,6 +699,7 @@ const ImageContainer = styled.div`
   position: absolute;
   top: 0;
   z-index: -1;
+  background: grey;
 `
 
 const Overlay = styled.div`
