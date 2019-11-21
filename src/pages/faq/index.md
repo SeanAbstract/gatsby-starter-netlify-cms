@@ -2,7 +2,7 @@
 templateKey: faq-page
 headerImage: /img/snowball-faq-image.png
 categories:
-  - categoryTitle: 'About Snowball'
+  - categoryTitle: About Snowball
     questions:
       - answer: >-
           - The security of your funds is our priority. Snowball Securities is
@@ -22,19 +22,7 @@ categories:
         question: >
           What is Snowball Securities’ best advantages comparing with other
           brokers?
-      - answer: >-
-          Things to prepare to open an account
-
-          - ID card (both sides)
-
-          - Original / photos of both sides of a valid ID card, showing you are
-          above 18
-
-          - Good Internet connection, WiFi or 3G/4G recommended
-
-          - Download Snowball Securities APP
-        question: What do I need to open an account？
-      - answer: >-
+      - answer: |-
           Transfer from an IB broker
 
             - Step 1    download the Snowball Securities App to open an account
@@ -44,7 +32,7 @@ categories:
             - Step 1     download the Snowball Securities App to open an account
             - Step 2     Contact the original broker/bank customer service to give notification of the transfer. Ask for the name, contact number of settlement department, email of original broker/bank. Click to view common Hong Kong stock brokerage information 
             - Step 3     log into Interactive Brokers and select "Funding" → "Position Transfers”, if you are transferring Hong Kong stocks, select "International Assets" to inform IB to receive stocks
-          
+
           from other US stock brokers
             - Step 1    download the Snowball Securities App to open an account.
             - Step 2    Log into the original securities account and find the account number.
@@ -53,38 +41,12 @@ categories:
         question: >-
           I already have an account with other brokers, and I want to transfer
           my funds and positions to Snowball Securities. What should I do?
-      - answer: >
-          - The underlying service is currently carried by Interactive Brokers,
-          and Interactive Brokers is responsible for taking deposits and making
-          withdrawals.
-
-
-          - The steps to withdraw funds on Interactive Brokers: login on IB
-          →provide the withdrawal information→done.
-        question: |
-          How do I withdraw funds from Snowball Securities?
-      - answer: >-
-          Yes, Snowball Securities APP support over exchanges between over 10
-          mainstream currencies.
-        question: 'Can I exchange the currency on Snowball Securities? '
       - answer: >-
           We do not provide financial advice, and we encourage our clients to do
           their own searches and enjoy the fun of trading.
         question: >-
           Does Snowball Securities help investors to decide on what to buy and
           sell?
-      - answer: >-
-          There are many risks associated with investing on share markets
-          overseas. Those relating to buying and selling securities outside
-          normal transaction times (when the foreign markets are closed) include
-          the impact of news announcements and other events on market sentiment,
-          share prices, volatility, liquidity and currency. Given these risks,
-          we advise clients that our services are best suited to experienced
-          investors who understand the products they are intending to buy and
-          sell. For this reason, we encourage potential clients to visit our
-          office and meet us ‘face-to-face’ so that we can get to know them and
-          understand their needs.
-        question: What are the risks of investing overseas?
       - answer: >-
           Yes, and this is one of the reasons why we provide services online.
           Clients from different countries use our platform.  However, there are
@@ -136,20 +98,6 @@ categories:
         question: |
           Why invest in overseas listed shares?
       - answer: >-
-          Client funds are held in the name of the client in trust accounts
-          opened in New Zealand by Interactive Brokers, Snowball Securities'
-          custodial partner and the largest electronic brokerage firm in the
-          United States by daily average revenue trades. 
-
-
-          As a registered US broker and custodian, Interactive Brokers operates
-          under the rules and regulations of the Securities Exchange Act and the
-          requirements of the Securities and Exchange Commission (SEC) and the
-          Financial Industry Regulatory Authority (FINRA). Snowball Securities
-          is responsible to clients for the custodial services provided by
-          Interactive Brokers.
-        question: How safe are funds that have been invested via Snowball Securities?
-      - answer: >-
           Snowball Securities doesn’t hold the shares bought by clients and
           clients’ money is kept in trust accounts which are regulated by the US
           Securities and Exchange Commission. The role of the SEC is to protect
@@ -161,21 +109,6 @@ categories:
           notice to sell or get their money out, or to transfer their shares to
           a different broker. 
         question: What happens if Snowball Securities goes under?
-      - answer: "Margin financing refers to the act of a client who pledges funds or stocks in his own account to brokers and borrows more funds from brokers to buy stocks.\_Margin financing plays a role in amplifying trading leverage. For example, your principal is 1 million US dollars, and borrows 1 million US dollars from the broker, for a total of 2 million US dollars to buy stocks, this is a 2x leveraged financing. If the stock price rises 25%, your return on investment will be 50%. If the stock price falls by 25%, your return on investment will be -50%. It is recommended that customers utilising margin financing fully understands the risk of the service."
-        question: What is margin financing?
-      - answer: "If you want to make margin financing transactions, you need to open a margin account.\_All the accounts with Snowball Securities are Reg T margin accounts, that is, with facilities of margin financing and securities financing accounts. \n"
-        question: How to enter margin financing transactions?
-      - answer: "Not all the US stocks are available for margin financing purchase. In Snowball Securities, a “Financing for Buying” indicator is installed for those stocks which are available for margin financing purchase. It is shown in the stock page on the data bar.\_If there is no such indicator for one stock, that stock is not available for margin financing purchase."
-        question: How to check if one stock is available for margin financing purchase?
-      - answer: >-
-          You can click on "Marginable stocks" on the “US Stocks “page of
-          Snowball Securities App to enter the list page of U.S. stocks can be
-          margin financing purchased. You may query the initial margin rate,
-          maintenance margin rate, overnight margin rate and other requirements
-          on each stock in the list.
-        question: >-
-          How to query the stocks that are available for margin financing
-          purchase?
       - answer: >-
           All new accounts with Snowball Securities are defaulted as “Reg T”
           accounts, that is, the most leverage ratio within a day is 4x for US
@@ -273,75 +206,96 @@ categories:
   - categoryTitle: How to use
     questions:
       - answer: >-
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
-        question: >-
-          What is Snowball Securities’ best advantages comparing with other
-          brokers? 2
+          Things to prepare to open an account
+
+          - ID card (both sides)
+
+          - Original / photos of both sides of a valid ID card, showing you are
+          above 18
+
+          - Good Internet connection, WiFi or 3G/4G recommended
+
+          - Download Snowball Securities APP
+        question: What do I need to open an account？
+      - answer: >
+          - The underlying service is currently carried by Interactive Brokers,
+          and Interactive Brokers is responsible for taking deposits and making
+          withdrawals.
+
+
+          - The steps to withdraw funds on Interactive Brokers: login on IB →
+          provide the withdrawal information → done.
+        question: |
+          How do I withdraw funds from Snowball Securities?
       - answer: >-
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
-        question: >-
-          What is Snowball Securities’ best advantages comparing with other
-          brokers? 2
+          Yes, Snowball Securities APP support over exchanges between over 10
+          mainstream currencies.
+        question: 'Can I exchange the currency on Snowball Securities? '
   - categoryTitle: Margin Trading
     questions:
       - answer: >-
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
-        question: >-
-          What is Snowball Securities’ best advantages comparing with other
-          brokers? 3
+          Margin financing refers to the act of a client who pledges funds or
+          stocks in his own account to brokers and borrows more funds from
+          brokers to buy stocks. Margin financing plays a role in amplifying
+          trading leverage. For example, your principal is 1 million US dollars,
+          and borrows 1 million US dollars from the broker, for a total of 2
+          million US dollars to buy stocks, this is a 2x leveraged financing. If
+          the stock price rises 25%, your return on investment will be 50%. If
+          the stock price falls by 25%, your return on investment will be -50%.
+          It is recommended that customers utilising margin financing fully
+          understands the risk of the service.
+        question: What is margin financing?
       - answer: >-
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
+          If you want to make margin financing transactions, you need to open a
+          margin account. All the accounts with Snowball Securities are Reg T
+          margin accounts, that is, with facilities of margin financing and
+          securities financing accounts. 
+        question: How to enter margin financing transactions?
+      - answer: >-
+          Not all the US stocks are available for margin financing purchase. In
+          Snowball Securities, a “Financing for Buying” indicator is installed
+          for those stocks which are available for margin financing purchase. It
+          is shown in the stock page on the data bar. If there is no such
+          indicator for one stock, that stock is not available for margin
+          financing purchase.
+        question: How to check if one stock is available for margin financing purchase?
+      - answer: >-
+          You can click on "Marginable stocks" on the “US Stocks “page of
+          Snowball Securities App to enter the list page of U.S. stocks can be
+          margin financing purchased. You may query the initial margin rate,
+          maintenance margin rate, overnight margin rate and other requirements
+          on each stock in the list.
         question: >-
-          What is Snowball Securities’ best advantages comparing with other
-          brokers? 3
+          How to query the stocks that are available for margin financing
+          purchase?
   - categoryTitle: Risk
     questions:
       - answer: >-
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
-        question: >-
-          What is Snowball Securities’ best advantages comparing with other
-          brokers? 4
+          There are many risks associated with investing on share markets
+          overseas. Those relating to buying and selling securities outside
+          normal transaction times (when the foreign markets are closed) include
+          the impact of news announcements and other events on market sentiment,
+          share prices, volatility, liquidity and currency. Given these risks,
+          we advise clients that our services are best suited to experienced
+          investors who understand the products they are intending to buy and
+          sell. For this reason, we encourage potential clients to visit our
+          office and meet us ‘face-to-face’ so that we can get to know them and
+          understand their needs.
+        question: What are the risks of investing overseas?
       - answer: >-
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
-        question: >-
-          What is Snowball Securities’ best advantages comparing with other
-          brokers? 4
+          Client funds are held in the name of the client in trust accounts
+          opened in New Zealand by Interactive Brokers, Snowball Securities'
+          custodial partner and the largest electronic brokerage firm in the
+          United States by daily average revenue trades. 
+
+
+          As a registered US broker and custodian, Interactive Brokers operates
+          under the rules and regulations of the Securities Exchange Act and the
+          requirements of the Securities and Exchange Commission (SEC) and the
+          Financial Industry Regulatory Authority (FINRA). Snowball Securities
+          is responsible to clients for the custodial services provided by
+          Interactive Brokers.
+        question: How safe are funds that have been invested via Snowball Securities?
   - categoryTitle: Currency
     questions:
       - answer: >-
