@@ -17,7 +17,10 @@ import TestimonyCarousel from '../../components/TestimonyCarousel'
 import DownloadNow from '../../components/DownloadNow'
 import BlogRoll from '../../components/BlogRoll'
 import StockSection from '../../components/StocksCarousel/stockSection'
-import videoPoster from '../../../static/img/bg-image-sailing.jpg'
+import videoPosterSailing from '../../../static/img/bg-image-sailing.jpg'
+import videoPosterChina from '../../../static/img/china-wall-poster.jpg'
+import videoPosterBeach from '../../../static/img/beach-poster.jpg'
+import videoPosterBoat from '../../../static/img/boat-poster.jpg'
 import phoneVideo from '../../../static/img/mobile-phone-spin.mp4'
 import arrowDown from '../../img/arrow-down.png'
 import MobileIndex from '../../components/Mobile/indexPage'
@@ -145,7 +148,19 @@ export const IndexPageTemplate = ({
             }`)}
             autoplay
             className="video"
-            poster={videoPoster}
+            poster={
+              geoCountry === 'New Zealand'
+                ? videoPosterSailing
+                : geoCountry === 'Australia'
+                ? videoPosterBeach
+                : geoCountry === 'United States'
+                ? videoPosterBoat
+                : geoCountry === 'China'
+                ? videoPosterChina
+                : geoCountry === 'Not specified'
+                ? videoPosterSailing
+                : videoPosterSailing
+                }
           >
             <track kind="captions" />
           </StyledVideo>
@@ -489,7 +504,7 @@ class IndexPage extends React.Component {
     }
   }
 
-  shouldUseWhiteLogo = () => !(this.state.geoCountry === 'New Zealand' || 'Australia')
+  shouldUseWhiteLogo = () => !(this.state.geoCountry === 'New Zealand' || 'Not specified')
 
   render() {
     const {frontmatter} = this.props.data.markdownRemark
