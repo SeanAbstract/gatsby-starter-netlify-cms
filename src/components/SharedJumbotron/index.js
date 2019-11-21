@@ -48,7 +48,8 @@ const Jumbotron = styled.div`
     background-attachment: fixed;
     background-size: 1450px;
     background-position: center top;
-    background-repeat: repeat;
+    background-repeat: no-repeat;
+    background-color: #000;
     ${props =>
       props.blur &&
       css`
