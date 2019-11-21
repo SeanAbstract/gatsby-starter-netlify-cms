@@ -2,7 +2,10 @@
 import React from 'react'
 import {graphql} from 'gatsby'
 import PageTransition from 'gatsby-plugin-page-transitions'
+import {UncontrolledTooltip} from 'reactstrap'
 
+import qrCode from '../../img/wechat-english.jpg'
+import qrCodeZh from '../../img/wechat-zh.jpg'
 import DownloadNow from '../../components/DownloadNow'
 import Layout from '../../components/Layout'
 import SharedJumbotron from '../../components/SharedJumbotron'
@@ -119,7 +122,31 @@ function ContactPageTemplate(props: Props) {
             <div className="col-md-8 col-10 d-flex justify-content-around align-items-center mx-auto flex-column flex-sm-row">
               <h3 className="mb-0 pt-1 font-weight-light">{props.socialMedia.socialMediaTitle}</h3>
               <div className="d-none d-sm-flex">
-                <div className="d-flex mr-4">
+                <UncontrolledTooltip
+                  placement="top"
+                  target="wechat-en"
+                  style={{backgroundColor: 'rgba(255,255,255, 0.5)'}}
+                >
+                  <img
+                    src={qrCode}
+                    alt="qr"
+                    style={{height: '100px', width: '100px'}}
+                    className="m-0"
+                  />
+                </UncontrolledTooltip>
+                <UncontrolledTooltip
+                  placement="top"
+                  target="wechat-zh"
+                  style={{backgroundColor: 'rgba(255,255,255, 0.5)'}}
+                >
+                  <img
+                    src={qrCodeZh}
+                    alt="qr"
+                    style={{height: '100px', width: '100px'}}
+                    className="m-0"
+                  />
+                </UncontrolledTooltip>
+                <div className="d-flex mr-4" id="wechat-en">
                   <img
                     src={wechatIcon}
                     alt=""
@@ -130,7 +157,7 @@ function ContactPageTemplate(props: Props) {
                     {props.socialMedia.wechatAccountOne}
                   </p>
                 </div>
-                <div className="d-flex align-items-center">
+                <div className="d-flex align-items-center" id="wechat-zh">
                   <img
                     src={wechatIcon}
                     alt=""
