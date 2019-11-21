@@ -4,6 +4,9 @@ import styled from 'styled-components'
 
 const MainBlogRoll = ({data}) => {
   const {edges: posts} = data.allMarkdownRemark
+
+  console.log(posts)
+
   return posts.map(({node: post}, ndx) => (
     <GridItem
       className={`item-${(ndx + 1) % 9}`}
@@ -60,7 +63,7 @@ export default () => (
     query={graphql`
       query BlogRollQuery {
         allMarkdownRemark(
-          sort: {order: ASC, fields: [frontmatter___date]}
+          sort: {order: DESC, fields: [frontmatter___date]}
           filter: {frontmatter: {templateKey: {eq: "blog-post"}}}
         ) {
           edges {
