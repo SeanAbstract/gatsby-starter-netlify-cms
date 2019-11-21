@@ -8,6 +8,10 @@ import whiteLogo from '../../img/snowball-secure.png'
 import logo from '../../img/logo.png'
 import logoIcon from '../../../static/img/snowball-logo-x.png'
 import whiteLogoIcon from '../../img/logo-icon.png'
+import facebookIcon from '../../../static/img/facebook_blue.png'
+import linkedinIcon from '../../../static/img/linkedin_blue.png'
+import twitterIcon from '../../../static/img/twitter_blue.png'
+import wechatIcon from '../../../static/img/wechat_blue.png'
 
 // import logoIcon from '../../images/icon-logo.png'
 
@@ -26,6 +30,41 @@ const data = [
   },
   {
     name: 'Download',
+    href: '',
+  },
+  {
+    name: 'FAQs',
+    href: '/faq',
+  },
+  {
+    name: 'Contact',
+    href: '/contact',
+  },
+]
+
+const dataMobile = [
+  {
+    name: 'About',
+    href: '/about',
+  },
+  {
+    name: 'How It Works',
+    href: '/how-it-works',
+  },
+  {
+    name: 'Prices',
+    href: '/price',
+  },
+  {
+    name: 'Download',
+    href: '',
+  },
+  {
+    name: 'Blog',
+    href: '',
+  },
+  {
+    name: 'Risk disclosure',
     href: '',
   },
   {
@@ -111,7 +150,7 @@ export default class Header extends React.Component {
                   link.href !== '' ? (
                     <div
                       style={{position: 'relative'}}
-                      className={`nav-link ${ndx !== data.length - 1 ? 'mr-4' : ''}`}
+                      className={`nav-link on-desktop ${ndx !== data.length - 1 ? 'mr-4' : ''}`}
                     >
                       <Link
                         to={link.href}
@@ -123,11 +162,70 @@ export default class Header extends React.Component {
                       </Link>
                     </div>
                   ) : (
-                    <div className="nav-link mr-4">
+                    <div className="nav-link mr-4 on-desktop">
                       <a href="https://www.snowballsecurities.com/download">{link.name}</a>
                     </div>
                   )
                 )}
+                {dataMobile.map((link, ndx) =>
+                  link.href !== '' ? (
+                    <div
+                      style={{position: 'relative'}}
+                      className={`nav-link on-mobile ${ndx !== data.length - 1 ? 'mr-4' : ''}`}
+                    >
+                      <Link
+                        to={link.href}
+                        className={`${
+                          `/${this.state.currentPath}` === `${link.href}` ? 'custom-active' : ''
+                        }`}
+                      >
+                        {link.name}
+                      </Link>
+                    </div>
+                  ) : (
+                    <div className="nav-link mr-4 on-mobile">
+                      <a href="https://www.snowballsecurities.com/download">{link.name}</a>
+                    </div>
+                  )
+                )}
+                <div className="on-mobile social-container">
+                  <img
+                    src={wechatIcon}
+                    alt=""
+                    style={{maxHeight: '30px', maxWidth: '30px'}}
+                    className="wechat"
+                    id="weChatIcon"
+                    className="mr-4"
+                  />
+
+                  <StyledAnchor href="https://www.facebook.com/snowballsecurities" target="_blank">
+                    <img
+                      id="fbIcon"
+                      src={facebookIcon}
+                      alt=""
+                      className="mr-4"
+                    />
+                  </StyledAnchor>
+                  <StyledAnchor
+                    href="https://www.linkedin.com/company/snowballsecurities"
+                    target="_blank"
+                  >
+                    <img
+                      src={linkedinIcon}
+                      alt=""
+                      className="mr-4"
+                      id="linkedInIcon"
+                    />
+                  </StyledAnchor>
+
+                  <StyledAnchor href="https://twitter.com/snowballsec?lang=en" target="_blank">
+                    <img
+                      src={twitterIcon}
+                      alt=""
+                      id="twitterIcon"
+                    />
+                  </StyledAnchor>
+                </div>
                 <div className="on-mobile lower-small-container">
                   <Link to="/">
                     Privacy Policy
@@ -275,10 +373,22 @@ const StyledCollapse = styled(Collapse)`
 
   .on-mobile {
     display: none;
+
+    &.social-container {
+      margin: 1.5rem 0 3rem 0;
+    }
+
+    #weChatIcon {
+      max-height: 30px;
+      max-width: 30px;
+      filter: brightness(0) invert(1);
+    }
   }
 
   .lower-small-container {
     font-size: 1rem;
+    position: absolute;
+    bottom: 70px;
 
     > a {
       margin-right: 1rem;
@@ -302,6 +412,10 @@ const StyledCollapse = styled(Collapse)`
     padding: 24px;
     background-color: rgba(0,111,187,0.9);
 
+    .on-desktop {
+      display: none;
+    }
+
     .on-mobile {
       display: flex;
     }
@@ -317,7 +431,7 @@ const StyledCollapse = styled(Collapse)`
     .navbar-nav {
       height: 100%;
       width: 100%;
-      font-size: 1.6rem;
+      font-size: 1.5rem;
     }
   }
 `
@@ -374,5 +488,16 @@ const LangToggleContainer = styled.div`
 
   @media (max-width: 426px) {
     display: none;
+  }
+`
+
+const StyledAnchor = styled.a`
+  img {
+    max-height: 30px;
+    max-width: 30px;
+    filter: brightness(0) invert(1);
+  }
+  &:hover {
+    opacity: 50%;
   }
 `
