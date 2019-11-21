@@ -114,9 +114,9 @@ export default class Header extends React.Component {
   }
 
   listenToScroll = () => {
-    this.setState({
-      scrolled: window.scrollY > window.innerHeight / 1.75,
-    })
+    this.setState(prevState => ({
+      scrolled: window.scrollY > (prevState.currentPath === '' ? 500 : 225),
+    }))
   }
 
   useWhiteLogo = () => this.state.currentPath === 'home-au' || this.state.currentPath === 'home-us'

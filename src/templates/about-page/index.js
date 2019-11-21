@@ -168,12 +168,12 @@ export const AboutPageTemplate = (props: AboutTemplate) => {
               <div className="col-md-12 d-flex justify-content-center mx-auto flex-column align-items-center">
                 <h1 className="big-text text-primary mb-5">History</h1>
 
-                <div className="d-flex flex-md-row flex-column">
+                <div className="d-flex flex-md-row row no-gutters flex-column">
                   {props.historyCards.map((historyItem, key, {length}) => (
-                    <>
+                    <div className="col-md-3 col-12">
                       <HistoryCard date={historyItem.date} description={historyItem.description} />
                       {key < length - 1 && <div className="timeline-icon" />}
-                    </>
+                    </div>
                   ))}
                 </div>
               </div>
