@@ -219,6 +219,10 @@ const StyledFooter = styled.footer`
   bottom: 0;
   width: 100%;
   z-index: -2;
+
+  @media (max-width: 426px) {
+    z-index: -2 !important;
+  }
 `
 
 const StyledContainer = styled(Container)`

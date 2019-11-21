@@ -140,7 +140,7 @@ class BlogRoll extends React.Component {
                   <Overlay />
                 </ImgContainer>
                 <div className="container blog-inner-container">
-                  <div className="" style={{marginTop: '20%'}}>
+                  <div className="blog-text-container">
                     <h5
                       className={`lead mb-2 ${
                         !this.state.isHovering && this.state.currentNdx === ndx ? 'small-hover' : ''
@@ -155,10 +155,10 @@ class BlogRoll extends React.Component {
                     >
                       {description}
                     </small>
-                    <div className="mt-5">
+                    <div className="get-started-button-container mt-5">
                       <Link to={'/how-it-works' || post.fields.slug}>
                         <StyledButton
-                          className={`btn btn-outline-primary border-white rounded-pill button-hover pt-2 border-1 ${
+                          className={`get-started-btn btn btn-outline-primary border-white rounded-pill button-hover pt-2 border-1 ${
                             !this.state.isHovering && this.state.currentNdx === ndx
                               ? 'button-hover'
                               : ''
@@ -170,7 +170,7 @@ class BlogRoll extends React.Component {
                       </Link>
                     </div>
                   </div>
-                  <div className="mt-5">
+                  <div className="mt-5 arrow-right-container">
                     <img
                       src={
                         (this.state.hoveringOver === null && this.state.currentNdx === ndx) ||
@@ -231,7 +231,8 @@ const ImgContainer = styled.div`
   transition: 0.3s;
 
   @media (max-width: 426px) {
-    height: 25vh;
+    min-height: 25vh;
+    height: 100%;
   }
 `
 
@@ -260,7 +261,8 @@ const StyledCol = styled(Col)`
 
   @media (max-width: 426px) {
     border: none !important;
-    height: 25vh;
+    min-height: 25vh;
+    height: 100%;
   }
 `
 
@@ -296,7 +298,7 @@ const OuterContainer = styled.div`
   }
 
   @media (max-width: 426px) {
-    height: 25vh;
+    min-height: 25vh;
   }
 `
 

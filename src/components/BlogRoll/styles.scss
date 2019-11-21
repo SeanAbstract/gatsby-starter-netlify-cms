@@ -17,4 +17,18 @@
         color: white !important;
        
     }
+
+    @media (max-width: 426px) {
+        .get-started-button-container {
+            display: block !important;
+        }
+
+        .get-started-btn {
+            margin-bottom: 40px;    
+        }
+
+        .arrow-right-container {
+            display: none;
+        }
+    }
 }

@@ -207,10 +207,13 @@ const StyledNavbar = styled(Navbar)`
     color: white !important;
   }
 
-  @media (max-width: 767px) {
+  /* @media (max-width: 767px) {
     background-color: ${props => (props.isOpen ? 'rgba(0,111,187,0.9)' : 'transparent')};
-    margin-left: -0.5rem;
-    margin-right: -0.5rem;
+  } */
+
+  @media (max-width: 426px) {
+    position: relative;
+    top: 0 !important;
   }
 `
 
@@ -252,6 +255,17 @@ const StyledCollapse = styled(Collapse)`
 
   @media (max-width: 767px) {
     height: 100vh;
+    position: fixed;
+    opacity: 1;
+    top: 0;
+    left: 0;
+    padding: 24px;
+    background-color: rgba(0,111,187,0.9);
+
+    .navbar-nav {
+      height: 100%;
+      width: 100%;
+    }
   }
 `
 const ScrolledNavbar = styled(Navbar)`
@@ -281,6 +295,10 @@ const ScrolledNavbar = styled(Navbar)`
   @media (max-width: 767px) {
     background-color: ${props => (props.isOpen ? 'rgba(0,111,187,0.9)' : 'white')};
   }
+
+  @media (max-width: 426px) {
+    display: none;
+  }
 `
 
 const LangToggleContainer = styled.div`
@@ -299,5 +317,9 @@ const LangToggleContainer = styled.div`
     align-items: center;
     margin-right: 5px;
     padding-top: 2.75px;
+  }
+
+  @media (max-width: 426px) {
+    display: none;
   }
 `
