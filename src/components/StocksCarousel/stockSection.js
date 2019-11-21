@@ -51,10 +51,10 @@ function StockSection({
 
               {ndx + 1 === commission.length && (
                 <>
-                  <AmountText className="mb-1">
+                  <AmountText className="mb-1 no-mobile">
                     {platformUsageFee} <StyledSmall>{platformUsageFeeType} </StyledSmall>{' '}
                   </AmountText>
-                  <AmountText className="mb-1">
+                  <AmountText className="mb-1 no-mobile">
                     {financingRate} <StyledSmall>financing interest rate (min.)</StyledSmall>
                   </AmountText>
                 </>
@@ -86,6 +86,12 @@ const CommissionText = styled.p`
 const AmountText = styled.h3`
   font-weight: normal;
   font-size: 32px;
+
+  @media (max-width: 426px) {
+    &.no-mobile {
+      display: none;
+    }
+  }
 `
 
 const StyledSmall = styled.small`

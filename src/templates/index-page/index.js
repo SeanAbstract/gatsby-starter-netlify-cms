@@ -268,6 +268,33 @@ export const IndexPageTemplate = ({
                   const packageType =
                     key <= 2 ? 'Low Commission Package' : 'Low Interest Rate Package'
 
+                  if (window.innerWidth < 578) {
+                    styleDiv.height = '70vh'
+
+                    return (
+                      <Scene
+                        triggerElement="#section-trigger"
+                        duration={300}
+                        triggerHook={0}
+                        offset={600 * mult}
+                        classToggle={classToggle}
+                        key={`stock-key:${key}`}
+                      >
+                        <div className={stockClassName} style={styleDiv}>
+                          <StockSection
+                            currency={countryCode}
+                            stockName={country}
+                            commission={commission}
+                            financingRate={financingRate}
+                            platformUsageFee={platformUsageFee}
+                            platformUsageFeeType={`${platformUsageFeeType} (platform usage fee)`}
+                            packageType={packageType}
+                          />
+                        </div>
+                      </Scene>
+                    )
+                  }
+
                   return (
                     <Scene
                       triggerElement="#section-trigger"
