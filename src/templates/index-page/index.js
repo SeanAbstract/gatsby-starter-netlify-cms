@@ -30,6 +30,7 @@ type Props = {
   videoName: any,
   videoNameUS: any,
   videoNameAU: any,
+  videoNameCN: any,
   firstSection: {
     mainText: string,
     description: string,
@@ -101,6 +102,7 @@ export const IndexPageTemplate = ({
   videoName,
   videoNameUS,
   videoNameAU,
+  videoNameCN,
   firstSection,
   stockSection,
   featureSection,
@@ -135,6 +137,8 @@ export const IndexPageTemplate = ({
                 ? videoNameAU
                 : geoCountry === 'United States'
                 ? videoNameUS
+                : geoCountry === 'China'
+                ? videoNameCN
                 : geoCountry === 'Not specified'
                 ? videoName
                 : videoName
@@ -510,6 +514,7 @@ class IndexPage extends React.Component {
           videoName={frontmatter.videoName}
           videoNameUS={frontmatter.videoNameUS}
           videoNameAU={frontmatter.videoNameAU}
+          videoNameCN={frontmatter.videoNameCN}
           image={frontmatter.image}
           firstSection={frontmatter.firstSection}
           stockSection={frontmatter.stockSection}
@@ -533,6 +538,7 @@ export const pageQuery = graphql`
         videoName
         videoNameUS
         videoNameAU
+        videoNameCN
         firstSection {
           mainText
           description
