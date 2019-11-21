@@ -62,6 +62,9 @@ exports.createPages = ({actions, graphql}) => {
         // additional data can be passed via context
         context: {
           id,
+          prev: ndx === 0 ? null : blogs[ndx - 1].node,
+          prevTitle: ndx === 0 ? null : blogs[ndx - 1].node.frontmatter.title,
+          prevCategory: ndx === 0 ? null : blogs[ndx + 1].node.frontmatter.category,
           next: ndx === blogs.length - 1 ? null : blogs[ndx + 1].node,
           nextTitle: ndx === blogs.length - 1 ? null : blogs[ndx + 1].node.frontmatter.title,
           nextCategory: ndx === blogs.length - 1 ? null : blogs[ndx + 1].node.frontmatter.category,
