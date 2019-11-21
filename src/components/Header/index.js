@@ -7,6 +7,7 @@ import './styles.scss'
 import whiteLogo from '../../img/snowball-secure.png'
 import logo from '../../img/logo.png'
 import logoIcon from '../../../static/img/snowball-logo-x.png'
+import whiteLogoIcon from '../../img/logo-icon.png'
 
 // import logoIcon from '../../images/icon-logo.png'
 
@@ -100,6 +101,12 @@ export default class Header extends React.Component {
             <StyledNavbarToggler isOpen={this.state.isOpen} onClick={this.toggle} />
             <StyledCollapse isOpen={this.state.isOpen} navbar>
               <Nav className="ml-auto" navbar>
+                <div className="on-mobile top-collapse-mobile">
+                  <Link to="/">
+                    <LogoIcon className="mobile-logo" scrolled={scrolled} src={whiteLogoIcon} alt="company logo" />
+                  </Link>
+                  <button className="btn close-btn" onClick={this.toggle}>X</button>
+                </div>
                 {data.map((link, ndx) =>
                   link.href !== '' ? (
                     <div
@@ -121,6 +128,14 @@ export default class Header extends React.Component {
                     </div>
                   )
                 )}
+                <div className="on-mobile lower-small-container">
+                  <Link to="/">
+                    Privacy Policy
+                  </Link>
+                  <Link to="/">
+                    Terms & Conditions
+                  </Link>
+                </div>
               </Nav>
             </StyledCollapse>
           </div>
@@ -231,6 +246,11 @@ const LogoIcon = styled.img`
   width: 20px;
   object-fit: contain;
   transition: 0.1s;
+
+  &.mobile-logo {
+    height: 50px;
+    width: 50px;
+  }
 `
 
 const StyledNavbarToggler = styled(NavbarToggler)`
@@ -253,6 +273,26 @@ const StyledCollapse = styled(Collapse)`
     display: none;
   }
 
+  .on-mobile {
+    display: none;
+  }
+
+  .lower-small-container {
+    font-size: 1rem;
+
+    > a {
+      margin-right: 1rem;
+      color: white !important;
+      text-decoration: underline;
+    }
+  }
+
+  .top-collapse-mobile {
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3rem;
+  }
+
   @media (max-width: 767px) {
     height: 100vh;
     position: fixed;
@@ -262,9 +302,22 @@ const StyledCollapse = styled(Collapse)`
     padding: 24px;
     background-color: rgba(0,111,187,0.9);
 
+    .on-mobile {
+      display: flex;
+    }
+
+    .close-btn {
+      width: 50px;
+      height: 50px;
+      font-size: 2.5rem;
+      padding: 0px;
+      color: white;
+    }
+
     .navbar-nav {
       height: 100%;
       width: 100%;
+      font-size: 1.6rem;
     }
   }
 `

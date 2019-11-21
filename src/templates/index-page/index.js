@@ -155,7 +155,7 @@ export const IndexPageTemplate = ({
           <img
             src={arrowDown}
             alt=""
-            style={{bottom: '30px', height: '25px', position: 'absolute'}}
+            style={{bottom: '60px', height: '25px', position: 'absolute'}}
           />
         </a>
       </Jumbotron>
@@ -498,7 +498,7 @@ class IndexPage extends React.Component {
     // }
 
     return (
-      <Layout white={this.shouldUseWhiteLogo()}>
+      <Layout white={this.shouldUseWhiteLogo()} stickyFooter>
         <meta name="robots" content="noindex" />
         <IndexPageTemplate
           geoCountry={this.state.geoCountry}
