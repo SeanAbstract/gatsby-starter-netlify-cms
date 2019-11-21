@@ -5,11 +5,10 @@ import styled from 'styled-components'
 import {Row, Col, Container} from 'reactstrap'
 import PageTransition from 'gatsby-plugin-page-transitions'
 
-import tempBgImg from '../../../static/img/second-splash.jpg'
 import Layout from '../../components/Layout'
 import {HTMLContent} from '../../components/Content'
-import BlogCard from '../../components/blog/blogCard'
 import SharedJumbotron from '../../components/SharedJumbotron'
+import MainBlogRoll from '../../components/MainBlogRoll'
 
 const blogs = [
   {type: 'News', title: 'This probably has a very interesting title'},
@@ -60,18 +59,7 @@ export function BlogPageTemplate({title, content, contentComponent, image, heade
           </Row>
 
           <GridContainer>
-            {blogs.map((blog, ndx) => (
-              <GridItem
-                className={`item-${(ndx + 1) % 9}`}
-                key={`blog-${ndx}`}
-                to="/blog/2017-01-04-a-beginners-guide-to-brewing-with-chemex/"
-              >
-                <div>
-                  <p className="type">{blog.type}</p>
-                  <h5>{blog.title}</h5>
-                </div>
-              </GridItem>
-            ))}
+            <MainBlogRoll />
           </GridContainer>
         </Container>
       </section>
@@ -166,41 +154,6 @@ const GridContainer = styled.div`
     @media (max-width: 768px) {
       grid-column: auto / span 4;
     }
-  }
-`
-
-const GridItem = styled(Link)`
-  padding: 20px;
-  height: 310px;
-  color: white;
-  position: relative;
-  z-index: 1;
-  cursor: pointer;
-
-  &:hover {
-    &::before {
-      filter: grayscale(0%);
-    }
-  }
-
-  &::before {
-    transition: filter 0.3s;
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url(${tempBgImg});
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    filter: grayscale(100%);
-    z-index: -1;
-  }
-
-  .type {
-    margin-bottom: 0.5rem;
   }
 `
 
