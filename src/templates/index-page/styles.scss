@@ -216,6 +216,10 @@ $primary: #006fbb;
                 }
             }
         }
+
+        @media (max-width: 426px) {
+            display: none !important;
+        }
     }
 
     .another-feature-section {
@@ -328,6 +332,24 @@ $primary: #006fbb;
         .carousel-item{
             height: 70vh;
         } 
+    }
+
+    .feature-carousel-container {
+        height: 100vh;
+        display: none;
+
+        .carousel-item{
+            height: 470px;
+        } 
+
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            filter: brightness(0);
+        }
+
+        @media (max-width: 426px) {
+            display: block;
+        }
     }
 
     .img-container {
@@ -535,6 +557,10 @@ $primary: #006fbb;
                     background-image: url("../../img/snowball-app-stock-financial_03.gif") !important;
                 }
             }
+        }
+
+        @media (max-width: 426px) {
+            display: none !important;
         }
     }
 

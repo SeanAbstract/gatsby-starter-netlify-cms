@@ -23,6 +23,7 @@ import arrowDown from '../../img/arrow-down.png'
 import MobileIndex from '../../components/Mobile/indexPage'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
+import FeatureCarousel from '../../components/FeatureCarousel'
 
 type Props = {
   image: any,
@@ -370,6 +371,10 @@ export const IndexPageTemplate = ({
             </div>
           </div>
         </section>
+
+        <div className="carousel slide feature-carousel-container" data-ride="carousel">
+          <FeatureCarousel section={featureSection} />
+        </div>
 
         {/* Get ahead or 5th */}
         <div className="d-flex flex-column get-ahead-section justify-content-center align-items-center bg-primary">
