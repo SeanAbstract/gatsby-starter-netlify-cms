@@ -11,6 +11,7 @@ const AboutPagePreview = ({entry}) => {
       headerImage={data.headerImage}
       informationSection={data.informationSection || {}}
       socialMedia={data.socialMedia || {}}
+      usingCMS={false}
       downloadNow={data.downloadNow || {}}
     />
   )

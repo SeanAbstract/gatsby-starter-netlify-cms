@@ -124,30 +124,34 @@ export function ContactPageTemplate(props: Props) {
             <div className="col-md-8 col-10 d-flex justify-content-around align-items-center mx-auto flex-column flex-sm-row">
               <h3 className="mb-0 pt-1 font-weight-light">{props.socialMedia.socialMediaTitle}</h3>
               <div className="d-none d-sm-flex">
-                <UncontrolledTooltip
-                  placement="top"
-                  target="wechat-en"
-                  style={{backgroundColor: 'rgba(255,255,255, 0.5)'}}
-                >
-                  <img
-                    src={qrCode}
-                    alt="qr"
-                    style={{height: '100px', width: '100px'}}
-                    className="m-0"
-                  />
-                </UncontrolledTooltip>
-                <UncontrolledTooltip
-                  placement="top"
-                  target="wechat-zh"
-                  style={{backgroundColor: 'rgba(255,255,255, 0.5)'}}
-                >
-                  <img
-                    src={qrCodeZh}
-                    alt="qr"
-                    style={{height: '100px', width: '100px'}}
-                    className="m-0"
-                  />
-                </UncontrolledTooltip>
+                {!props.usingCMS && (
+                  <>
+                    <UncontrolledTooltip
+                      placement="top"
+                      target="wechat-en"
+                      style={{backgroundColor: 'rgba(255,255,255, 0.5)'}}
+                    >
+                      <img
+                        src={qrCode}
+                        alt="qr"
+                        style={{height: '100px', width: '100px'}}
+                        className="m-0"
+                      />
+                    </UncontrolledTooltip>
+                    <UncontrolledTooltip
+                      placement="top"
+                      target="wechat-zh"
+                      style={{backgroundColor: 'rgba(255,255,255, 0.5)'}}
+                    >
+                      <img
+                        src={qrCodeZh}
+                        alt="qr"
+                        style={{height: '100px', width: '100px'}}
+                        className="m-0"
+                      />
+                    </UncontrolledTooltip>
+                  </>
+                )}
                 <div className="d-flex mr-4" id="wechat-en">
                   <img
                     src={wechatIcon}
