@@ -318,18 +318,16 @@ export function ContactPageTemplate(props: Props) {
                       />
                     </div>
                   </div>
-                </div>
                 <div className="row mb-2">
                   <div className="col-md-12">
                     <div className="form-group pt-1">
                       <label
-                        name="Message"
                         htmlFor="exampleFormControlTextarea1"
                         style={{fontSize: '14px'}}
                       >
                         Message
                       </label>
-                      <textarea className="form-control" rows="3" placeholder="Hello..." />
+                      <textarea name="Message" className="form-control" rows="3" placeholder="Hello..." />
                     </div>
                   </div>
                 </div>
