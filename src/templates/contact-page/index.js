@@ -1,8 +1,8 @@
 // @flow
 import React from 'react'
-import {graphql} from 'gatsby'
+import { graphql } from 'gatsby'
 import PageTransition from 'gatsby-plugin-page-transitions'
-import {UncontrolledTooltip} from 'reactstrap'
+import { UncontrolledTooltip } from 'reactstrap'
 
 import qrCode from '../../img/wechat-english.jpg'
 import qrCodeZh from '../../img/wechat-zh.jpg'
@@ -59,7 +59,7 @@ export function ContactPageTemplate(props: Props) {
             <div className="col-md-6 d-flex justify-content-center align-items-center flex-column">
               <div className="row w-100 pl-5">
                 <div className="col text-left mb-3">
-                  <h3 style={{fontSize: '32px', fontWeight: '300'}}>
+                  <h3 style={{ fontSize: '32px', fontWeight: '300' }}>
                     {props.informationSection.customerServiceTitle}
                   </h3>
                 </div>
@@ -92,7 +92,7 @@ export function ContactPageTemplate(props: Props) {
                             <img
                               src={googleMaps}
                               alt=""
-                              style={{height: '30px'}}
+                              style={{ height: '30px' }}
                               className="ml-1 mb-2"
                             />
                           </a>
@@ -112,7 +112,7 @@ export function ContactPageTemplate(props: Props) {
                   props.informationSection.imageRight.childImageSharp
                     ? props.informationSection.imageRight.childImageSharp.fluid.src
                     : props.informationSection.imageRight
-                })`,
+                  })`,
               }}
             />
           </div>
@@ -129,24 +129,24 @@ export function ContactPageTemplate(props: Props) {
                     <UncontrolledTooltip
                       placement="top"
                       target="wechat-en"
-                      style={{backgroundColor: 'rgba(255,255,255, 0.5)'}}
+                      style={{ backgroundColor: 'rgba(255,255,255, 0.5)' }}
                     >
                       <img
                         src={qrCode}
                         alt="qr"
-                        style={{height: '100px', width: '100px'}}
+                        style={{ height: '100px', width: '100px' }}
                         className="m-0"
                       />
                     </UncontrolledTooltip>
                     <UncontrolledTooltip
                       placement="top"
                       target="wechat-zh"
-                      style={{backgroundColor: 'rgba(255,255,255, 0.5)'}}
+                      style={{ backgroundColor: 'rgba(255,255,255, 0.5)' }}
                     >
                       <img
                         src={qrCodeZh}
                         alt="qr"
-                        style={{height: '100px', width: '100px'}}
+                        style={{ height: '100px', width: '100px' }}
                         className="m-0"
                       />
                     </UncontrolledTooltip>
@@ -156,7 +156,7 @@ export function ContactPageTemplate(props: Props) {
                   <img
                     src={wechatIcon}
                     alt=""
-                    style={{height: 30, width: 30, objectFit: 'contain'}}
+                    style={{ height: 30, width: 30, objectFit: 'contain' }}
                     className="mr-2"
                   />
                   <p className="mb-0 pt-1 d-none d-sm-block">
@@ -167,7 +167,7 @@ export function ContactPageTemplate(props: Props) {
                   <img
                     src={wechatIcon}
                     alt=""
-                    style={{height: 30, width: 30, objectFit: 'contain'}}
+                    style={{ height: 30, width: 30, objectFit: 'contain' }}
                     className="mr-4 mr-5-sm"
                   />
                   <p className="mb-0 pt-1 d-none d-sm-block">
@@ -180,7 +180,7 @@ export function ContactPageTemplate(props: Props) {
                   <img
                     src={facebookIcon}
                     alt=""
-                    style={{height: 30, width: 30, objectFit: 'contain'}}
+                    style={{ height: 30, width: 30, objectFit: 'contain' }}
                     className="mr-4"
                   />
                 </a>
@@ -188,7 +188,7 @@ export function ContactPageTemplate(props: Props) {
                   <img
                     src={linkedinIcon}
                     alt=""
-                    style={{height: 30, width: 30, objectFit: 'contain'}}
+                    style={{ height: 30, width: 30, objectFit: 'contain' }}
                     className="mr-4"
                   />
                 </a>
@@ -196,7 +196,7 @@ export function ContactPageTemplate(props: Props) {
                   <img
                     src={twitterIcon}
                     alt=""
-                    style={{height: 30, width: 30, objectFit: 'contain'}}
+                    style={{ height: 30, width: 30, objectFit: 'contain' }}
                   />
                 </a>
               </div>
@@ -205,7 +205,7 @@ export function ContactPageTemplate(props: Props) {
                   <img
                     src={wechatIcon}
                     alt=""
-                    style={{height: 30, width: 30, objectFit: 'contain'}}
+                    style={{ height: 30, width: 30, objectFit: 'contain' }}
                     className="mr-2"
                   />
                 </div>
@@ -213,7 +213,7 @@ export function ContactPageTemplate(props: Props) {
                   <img
                     src={wechatIcon}
                     alt=""
-                    style={{height: 30, width: 30, objectFit: 'contain'}}
+                    style={{ height: 30, width: 30, objectFit: 'contain' }}
                     className="mr-4 mr-5-sm"
                   />
                 </div>
@@ -221,7 +221,7 @@ export function ContactPageTemplate(props: Props) {
                   <img
                     src={facebookIcon}
                     alt=""
-                    style={{height: 30, width: 30, objectFit: 'contain'}}
+                    style={{ height: 30, width: 30, objectFit: 'contain' }}
                     className="mr-4"
                   />
                 </a>
@@ -229,7 +229,7 @@ export function ContactPageTemplate(props: Props) {
                   <img
                     src={linkedinIcon}
                     alt=""
-                    style={{height: 30, width: 30, objectFit: 'contain'}}
+                    style={{ height: 30, width: 30, objectFit: 'contain' }}
                     className="mr-4"
                   />
                 </a>
@@ -237,7 +237,7 @@ export function ContactPageTemplate(props: Props) {
                   <img
                     src={twitterIcon}
                     alt=""
-                    style={{height: 30, width: 30, objectFit: 'contain'}}
+                    style={{ height: 30, width: 30, objectFit: 'contain' }}
                   />
                 </a>
               </div>
@@ -252,28 +252,28 @@ export function ContactPageTemplate(props: Props) {
               <div className="col-md-3 col-11 mb-4">
                 <h3 className="mb-3">Contact Us</h3>
                 <div className="pt-1">
-                  <p className="lead mb-1 text-dark font-weight-light" style={{fontSize: '16px'}}>
+                  <p className="lead mb-1 text-dark font-weight-light" style={{ fontSize: '16px' }}>
                     Customer Inquiries
                   </p>
-                  <p className="text-primary" style={{fontSize: '14px'}}>
+                  <p className="text-primary" style={{ fontSize: '14px' }}>
                     <a href="mailto:service@snowballsecurities.com">
                       service@snowballsecurities.com
                     </a>
                   </p>
                 </div>
                 <div className="pt-1">
-                  <p className="lead mb-1 text-dark font-weight-light" style={{fontSize: '16px'}}>
+                  <p className="lead mb-1 text-dark font-weight-light" style={{ fontSize: '16px' }}>
                     Media Inquiries
                   </p>
-                  <p className="text-primary" style={{fontSize: '14px'}}>
+                  <p className="text-primary" style={{ fontSize: '14px' }}>
                     <a href="mailto:pr@snowballsecurities.com">pr@snowballsecurities.com</a>
                   </p>
                 </div>
                 <div className="pt-1">
-                  <p className="lead mb-1 text-dark font-weight-light" style={{fontSize: '16px'}}>
+                  <p className="lead mb-1 text-dark font-weight-light" style={{ fontSize: '16px' }}>
                     Business Cooperation
                   </p>
-                  <p className="text-primary" style={{fontSize: '14px'}}>
+                  <p className="text-primary" style={{ fontSize: '14px' }}>
                     <a href="mailto:bd@snowballsecurities.com">bd@snowballsecurities.com</a>
                   </p>
                 </div>
@@ -292,7 +292,7 @@ export function ContactPageTemplate(props: Props) {
                 <div className="row mb-2">
                   <div className="col-md-6">
                     <div className="form-group pt-1">
-                      <label htmlFor="exampleFormControlInput1" style={{fontSize: '14px'}}>
+                      <label htmlFor="exampleFormControlInput1" style={{ fontSize: '14px' }}>
                         Name
                       </label>
                       <input
@@ -306,7 +306,7 @@ export function ContactPageTemplate(props: Props) {
                   </div>
                   <div className="col-md-6">
                     <div className="form-group pt-1">
-                      <label htmlFor="exampleFormControlInput1" style={{fontSize: '14px'}}>
+                      <label htmlFor="exampleFormControlInput1" style={{ fontSize: '14px' }}>
                         Email address
                       </label>
                       <input
@@ -318,34 +318,21 @@ export function ContactPageTemplate(props: Props) {
                       />
                     </div>
                   </div>
+                </div>
                 <div className="row mb-2">
                   <div className="col-md-12">
                     <div className="form-group pt-1">
-                      <label
-                        htmlFor="exampleFormControlTextarea1"
-                        style={{fontSize: '14px'}}
-                      >
+                      <label htmlFor="exampleFormControlTextarea1" style={{ fontSize: '14px' }}>
                         Message
                       </label>
                       <textarea name="Message" className="form-control" rows="3" placeholder="Hello..." />
                     </div>
                   </div>
                 </div>
-
-                <div className="row mb-2">
-                  <div className="col-md-12">
-                    <div className="form-group pt-1">
-                      <label htmlFor="exampleFormControlTextarea1" style={{fontSize: '14px'}}>
-                        Message
-                      </label>
-                      <textarea className="form-control" rows="3" placeholder="Hello..." />
-                    </div>
-                  </div>
-                </div>
                 <div>
                   <button className="btn btn-outline-primary rounded-pill pt-2 px-4" type="submit">
                     Submit
-                  </button>
+                    </button>
                 </div>
               </form>
             </div>
@@ -360,8 +347,8 @@ export function ContactPageTemplate(props: Props) {
   )
 }
 
-function ContactPage({data}) {
-  const {markdownRemark: contact} = data
+function ContactPage({ data }) {
+  const { markdownRemark: contact } = data
 
   console.log(contact)
 
