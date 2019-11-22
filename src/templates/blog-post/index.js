@@ -58,104 +58,101 @@ export const BlogPostPageTemplate = (props: BlogPostTemplate) => {
 
                   <PostContent content={content} />
                 </div>
-
-                {props.prevBlogLink && (
-                  <Link to={props.prevBlogLink}>
-                    <NextBlog
-                      className="flex-row-reverse"
-                      style={{left: 'calc(-50% + - 450px)', width: 'auto'}}
-                    >
-                      <div
-                        className="d-flex align-items-center justify-content-center"
-                        style={{width: '45px', background: '#006FBB'}}
-                      >
-                        <svg
-                          aria-hidden="true"
-                          focusable="false"
-                          data-prefix="fas"
-                          data-icon="chevron-right"
-                          className="svg-inline--fa fa-chevron-right fa-w-10"
-                          role="img"
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 320 512"
-                          style={{height: '25px'}}
-                        >
-                          <svg
-                            aria-hidden="true"
-                            focusable="false"
-                            data-prefix="fas"
-                            data-icon="chevron-left"
-                            className="svg-inline--fa fa-chevron-left fa-w-10"
-                            role="img"
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 320 512"
-                          >
-                            <path
-                              fill="white"
-                              d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z"
-                            />
-                          </svg>
-                        </svg>
-                      </div>
-                    </NextBlog>
-                  </Link>
-                )}
-                {props.nextBlogLink && (
-                  <Link to={props.nextBlogLink}>
-                    <NextBlog style={{right: '-225px'}}>
-                      <img
-                        src={`../..${props.nextImage}`}
-                        alt=""
-                        style={{
-                          height: '150px',
-                          width: '150px',
-                          objectFit: 'cover',
-                          objectPosition: 'center',
-                        }}
-                      />
-                      <div className="h-100 d-flex justify-content-between px-3 py-3 flex-column">
-                        <div>
-                          <p className="category mb-0">{nextCategory}</p>
-                          <p className="title">{props.nextBlogTitle}</p>
-                        </div>
-                        <small>Next Article</small>
-                      </div>
-                      <div
-                        className="d-flex align-items-center justify-content-center"
-                        style={{width: '45px', background: '#006FBB'}}
-                      >
-                        <svg
-                          aria-hidden="true"
-                          focusable="false"
-                          data-prefix="fas"
-                          data-icon="chevron-right"
-                          className="svg-inline--fa fa-chevron-right fa-w-10"
-                          role="img"
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 320 512"
-                          style={{height: '25px'}}
-                        >
-                          <path
-                            fill="white"
-                            d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"
-                          />
-                        </svg>
-                      </div>
-                    </NextBlog>
-                  </Link>
-                )}
               </div>
             </div>
           </div>
         </section>
-
         {/* Download NOw */}
       </div>
-      <DownloadNow
-        mainText={downloadNow.mainText}
-        subText={downloadNow.subText}
-        image={downloadNow.image}
-      />
+      <div style={{position: 'relative'}}>
+        {props.prevBlogLink && (
+          <Link to={props.prevBlogLink}>
+            <NextBlog className="flex-row-reverse" style={{left: 0, width: 'auto'}}>
+              <div
+                className="d-flex align-items-center justify-content-center"
+                style={{width: '45px', background: '#006FBB'}}
+              >
+                <svg
+                  aria-hidden="true"
+                  focusable="false"
+                  data-prefix="fas"
+                  data-icon="chevron-right"
+                  className="svg-inline--fa fa-chevron-right fa-w-10"
+                  role="img"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 320 512"
+                  style={{height: '25px'}}
+                >
+                  <svg
+                    aria-hidden="true"
+                    focusable="false"
+                    data-prefix="fas"
+                    data-icon="chevron-left"
+                    className="svg-inline--fa fa-chevron-left fa-w-10"
+                    role="img"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 320 512"
+                  >
+                    <path
+                      fill="white"
+                      d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z"
+                    />
+                  </svg>
+                </svg>
+              </div>
+            </NextBlog>
+          </Link>
+        )}
+        {props.nextBlogLink && (
+          <Link to={props.nextBlogLink}>
+            <NextBlog style={{right: '0'}}>
+              <img
+                src={`../..${props.nextImage}`}
+                alt=""
+                style={{
+                  height: '150px',
+                  width: '150px',
+                  objectFit: 'cover',
+                  objectPosition: 'center',
+                }}
+              />
+              <div className="h-100 d-flex justify-content-between px-3 py-3 flex-column">
+                <div>
+                  <p className="category mb-0">{nextCategory}</p>
+                  <p className="title">{props.nextBlogTitle}</p>
+                </div>
+                <small>Next Article</small>
+              </div>
+              <div
+                className="d-flex align-items-center justify-content-center"
+                style={{width: '45px', background: '#006FBB'}}
+              >
+                <svg
+                  aria-hidden="true"
+                  focusable="false"
+                  data-prefix="fas"
+                  data-icon="chevron-right"
+                  className="svg-inline--fa fa-chevron-right fa-w-10"
+                  role="img"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 320 512"
+                  style={{height: '25px'}}
+                >
+                  <path
+                    fill="white"
+                    d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"
+                  />
+                </svg>
+              </div>
+            </NextBlog>
+          </Link>
+        )}
+        <DownloadNow
+          mainText={downloadNow.mainText}
+          subText={downloadNow.subText}
+          image={downloadNow.image}
+        />
+      </div>
     </>
   )
 }
@@ -205,7 +202,7 @@ const NextBlog = styled.div`
   background-color: red;
   position: absolute;
 
-  bottom: 0px;
+  top: -200px;
 
   display: flex;
   flex-direction: row;
