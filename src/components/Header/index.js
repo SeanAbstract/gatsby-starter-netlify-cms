@@ -61,11 +61,11 @@ const dataMobile = [
   },
   {
     name: 'Blog',
-    href: '',
+    href: '/blog',
   },
   {
     name: 'Risk disclosure',
-    href: '',
+    href: '/risk-disclosure',
   },
   {
     name: 'FAQs',
