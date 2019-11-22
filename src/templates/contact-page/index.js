@@ -291,7 +291,7 @@ function ContactPageTemplate(props: Props) {
                         <label htmlFor="exampleFormControlInput1" style={{fontSize: '14px'}}>
                           Name
                         </label>
-                        <input type="text" className="form-control" placeholder="John Smith" required />
+                        <input name="Name" type="text" className="form-control" placeholder="John Smith" required />
                       </div>
                     </div>
                     <div className="col-md-6">
@@ -299,14 +299,14 @@ function ContactPageTemplate(props: Props) {
                         <label htmlFor="exampleFormControlInput1" style={{fontSize: '14px'}}>
                           Email address
                         </label>
-                        <input type="email" className="form-control" placeholder="jon@snowball.com" required />
+                        <input name="Email" type="email" className="form-control" placeholder="jon@snowball.com" required />
                       </div>
                     </div>
                   </div>
                   <div className="row mb-2">
                     <div className="col-md-12">
                       <div className="form-group pt-1">
-                        <label htmlFor="exampleFormControlTextarea1" style={{fontSize: '14px'}}>
+                        <label name="Message" htmlFor="exampleFormControlTextarea1" style={{fontSize: '14px'}}>
                           Message
                         </label>
                         <textarea className="form-control" rows="3" placeholder="Hello..." />
