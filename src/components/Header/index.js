@@ -174,7 +174,7 @@ export default class Header extends React.Component {
                     </div>
                   ) : (
                     <div className="nav-link mr-4 on-desktop">
-                      <a href="https://www.snowballsecurities.com/download">{link.name}</a>
+                      <Link to="/download">Download</Link>
                     </div>
                   )
                 )}
@@ -195,7 +195,7 @@ export default class Header extends React.Component {
                     </div>
                   ) : (
                     <div className="nav-link mr-4 on-mobile">
-                      <a href="https://www.snowballsecurities.com/download">{link.name}</a>
+                    <Link to="/download">Download</Link>
                     </div>
                   )
                 )}
@@ -224,8 +224,8 @@ export default class Header extends React.Component {
                   </StyledAnchor>
                 </div>
                 <div className="on-mobile lower-small-container">
-                  <Link to="/">Privacy Policy</Link>
-                  <Link to="/">Terms & Conditions</Link>
+                  <Link to="/privacy-policy">Privacy Policy</Link>
+                  <Link to="/terms">Terms & Conditions</Link>
                 </div>
               </Nav>
             </StyledCollapse>
@@ -270,13 +270,13 @@ export default class Header extends React.Component {
                       </Link>
                     </div>
                   ) : (
-                    <a
-                      href="https://www.snowballsecurities.com/download"
-                      className="nav-link"
+                    <Link
+                      to='/download'
+                      activeClassName="custom-active-2"
                       style={{color: 'black'}}
                     >
-                      {link.name}
-                    </a>
+                      Download
+                    </Link>
                   )
                 )}
               </Nav>

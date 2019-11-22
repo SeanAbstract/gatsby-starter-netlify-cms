@@ -1,11 +1,11 @@
 ---
 templateKey: blog-post
 title: ed eget lorem gravida, posuere
-date: 2019-10-21T15:04:10.000Z
+date: 2019-10-19T15:04:10.000Z
 description: Lorem ipsum dolor sit amet
 featuredpost: true
 category: News
-featuredimage: /img/blog-splash-1.jpg
+featuredimage: /img/blog-splash-4-thumbnail.jpg
 tags:
   - flavor
   - tasting
@@ -14,7 +14,7 @@ downloadNow:
   mainText: Access Global Markets Today
   subText: Download now
 ---
-![flavor wheel](/img/flavor_wheel.jpg)
+![splash4](/img/blog-splash-4.jpg)
 
 Duis eu turpis nibh. Quisque commodo orci id massa hendrerit, id fermentum felis pharetra. Phasellus ipsum felis, porttitor quis tincidunt et, cursus vitae sapien. Aliquam ornare pulvinar aliquam. Cras mi diam, euismod in posuere id, suscipit in metus. Maecenas fermentum eget metus at consectetur. In ut tortor et massa aliquet ultricies. Integer at odio in magna tristique congue et a mauris. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam id justo finibus, facilisis erat quis, vehicula nibh. Mauris maximus mollis interdum. Sed feugiat magna quis sagittis commodo. Integer dignissim sodales nunc vitae laoreet. Pellentesque feugiat augue sed sem interdum, vel semper ipsum tempus. Nam luctus ligula eu ipsum vehicula efficitur quis in dui. 
 

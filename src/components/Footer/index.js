@@ -64,7 +64,7 @@ function Footer() {
                 <StyledLink to="/price">
                   <p className="mb-1">Prices</p>
                 </StyledLink>
-                <StyledLink href="https://www.snowballsecurities.com/download">
+                <StyledLink to="/download">
                   <p className="mb-1">Downloads</p>
                 </StyledLink>
               </Col>

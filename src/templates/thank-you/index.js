@@ -30,7 +30,7 @@ export const BlogPostPageTemplate = (props: BlogPostTemplate) => {
         <div className="container content">
           <div className="row justify-content-center">
             <div className="col col-10 blog-container">
-              <h3>Thank you for your message</h3>
+              <h3><br/>Thank you for your message</h3>
               {/* <PostContent content={content} /> */}
               <p>
               We have successfully received your message and we'll be in contact with you shortly.<br/><br/>
