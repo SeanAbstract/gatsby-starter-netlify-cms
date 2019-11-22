@@ -18,7 +18,9 @@
   }
 
   .blog-container {
-    padding: 64px;
+    .blog-content {
+      padding: 64px;
+    }
     background-color: white;
     position: relative;
     padding-bottom: 300px;

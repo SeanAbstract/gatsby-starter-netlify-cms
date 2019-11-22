@@ -335,7 +335,7 @@ $primary: #006fbb;
     }
 
     .feature-carousel-container {
-        height: 100vh;
+        min-height: 120vh;
         display: none;
 
         .carousel-item{

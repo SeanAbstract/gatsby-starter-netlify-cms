@@ -131,6 +131,7 @@ p {
 
 .nav-link {
   font-family: "Theinhardt" !important;
+  white-space: nowrap;
 }
 
 
@@ -290,4 +291,13 @@ video {
 
 .modal-content {
   height: 100%;
+}
+
+.on-mobile .carousel {
+  min-height: 100%;
+}
+
+.landing-page .feature-carousel-container .carousel-item {
+  /* height: 470px; */
+  height: auto !important;
 }

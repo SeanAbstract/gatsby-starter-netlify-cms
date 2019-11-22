@@ -43,36 +43,37 @@ const FeatureCarousel = ({section}: Props) => {
 
   const next = () => {
     if (animating) return
-    const nextIndex = activeIndex === section.sections.length - 1 ? 0 : activeIndex + 1
+    const nextIndex = activeIndex === [section.sections[0]].length - 1 ? 0 : activeIndex + 1
     setActiveIndex(nextIndex)
   }
 
   const previous = () => {
     if (animating) return
-    const nextIndex = activeIndex === 0 ? section.sections.length - 1 : activeIndex - 1
+    const nextIndex = activeIndex === 0 ? [section.sections[0]].length - 1 : activeIndex - 1
     setActiveIndex(nextIndex)
   }
-  const slides = section.sections.map((item, ndx) => (
+
+  const slides = [section.sections[0]].map((item, ndx) => (
     <CarouselItem
       onExiting={() => setAnimating(true)}
       onExited={() => setAnimating(false)}
       key={ndx}
     >
-      <div className="container">
+      <div className="container" style={{height: '150%'}}>
         <div className="d-flex flex-column h-100">
-            <div className="info-phone-container">
-              <div className="phone-frame" />
-              <div className="phone-display" />
-            </div>
-            <h5 className="mb-0 w-100" style={{fontSize: '28px', textAlign: 'left'}}>
-              {item.subText}
-            </h5>
-            <p className="dark-grey font-size-18">{item.description}</p>
-            <Link to="/how-it-works">
-              <button className="btn btn-outline-primary rounded-pill px-4" type="button">
-                {section.buttonText}
-              </button>
-            </Link>
+          <div className="info-phone-container mb-3">
+            <div className="phone-frame" />
+            <div className="phone-display" />
+          </div>
+          <h5 className="mb-0 mt-5 w-100" style={{fontSize: '28px', textAlign: 'left'}}>
+            {item.subText}
+          </h5>
+          <p className="dark-grey font-size-18">{item.description}</p>
+          <Link to="/how-it-works">
+            <button className="btn btn-outline-primary rounded-pill px-4" type="button">
+              {section.buttonText}
+            </button>
+          </Link>
         </div>
       </div>
     </CarouselItem>
@@ -83,13 +84,7 @@ const FeatureCarousel = ({section}: Props) => {
       <div className="container" style={{marginTop: '40px'}}>
         <h1 className="text-primary display-2 mb-3">Make Informed Decisions</h1>
       </div>
-      <Carousel
-        activeIndex={activeIndex}
-        next={next}
-        previous={previous}
-        style={{minHeight: '40vh'}}
-        className="on-mobile"
-      >
+      <Carousel activeIndex={activeIndex} next={next} previous={previous} className="on-mobile">
         {slides}
         <CarouselControl direction="prev" directionText="Previous" onClickHandler={previous} />
         <CarouselControl direction="next" directionText="Next" onClickHandler={next} />

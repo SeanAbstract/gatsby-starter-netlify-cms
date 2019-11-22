@@ -52,30 +52,19 @@ export const BlogPostPageTemplate = (props: BlogPostTemplate) => {
           <div className="container content">
             <div className="row justify-content-center">
               <div className="col col-10 blog-container">
-                <h2 className="title is-size-2 has-text-weight-bold">{title}</h2>
-                <p>{description}</p>
-                <PostContent content={content} />
+                <div className="blog-content">
+                  <h2 className="title is-size-2 has-text-weight-bold">{title}</h2>
+                  <p>{description}</p>
+
+                  <PostContent content={content} />
+                </div>
 
                 {props.prevBlogLink && (
                   <Link to={props.prevBlogLink}>
-                    <NextBlog className="flex-row-reverse" style={{left: '-225px'}}>
-                      <img
-                        src={`../..${props.prevImage}`}
-                        alt=""
-                        style={{
-                          height: '150px',
-                          width: '150px',
-                          objectFit: 'cover',
-                          objectPosition: 'center',
-                        }}
-                      />
-                      <div className="h-100 d-flex justify-content-between px-3 py-3 flex-column">
-                        <div>
-                          <p className="category mb-0">{props.prevCategory}</p>
-                          <p className="title">{props.prevBlogTitle}</p>
-                        </div>
-                        <small>Previous Article</small>
-                      </div>
+                    <NextBlog
+                      className="flex-row-reverse"
+                      style={{left: 'calc(-50% + - 450px)', width: 'auto'}}
+                    >
                       <div
                         className="d-flex align-items-center justify-content-center"
                         style={{width: '45px', background: '#006FBB'}}
