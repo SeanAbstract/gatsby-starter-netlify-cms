@@ -137,7 +137,11 @@ export default class Header extends React.Component {
                 />
               </Link>
             </NavbarBrand>
-            <StyledNavbarToggler isOpen={this.state.isOpen} onClick={this.toggle} />
+            <StyledNavbarToggler
+              isOpen={this.state.isOpen}
+              onClick={this.toggle}
+              white={this.useWhiteLogo() || this.props.white}
+            />
             <StyledCollapse isOpen={this.state.isOpen} navbar>
               <Nav className="ml-auto" navbar>
                 <div className="on-mobile top-collapse-mobile mt-4">
@@ -342,6 +346,10 @@ const LogoIcon = styled.img`
 
 const StyledNavbarToggler = styled(NavbarToggler)`
   filter: ${props => (props.isOpen ? 'brightness(100) grayscale(100) contrast(100)' : 'none')};
+
+  > .navbar-toggler-icon {
+    filter: ${props => (props.white ? 'brightness(0) invert(1) !important' : '')};
+  }
 
   :focus {
     outline: none;
