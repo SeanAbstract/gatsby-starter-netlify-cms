@@ -140,7 +140,7 @@ export default class Header extends React.Component {
             <StyledNavbarToggler isOpen={this.state.isOpen} onClick={this.toggle} />
             <StyledCollapse isOpen={this.state.isOpen} navbar>
               <Nav className="ml-auto" navbar>
-                <div className="on-mobile top-collapse-mobile">
+                <div className="on-mobile top-collapse-mobile mt-4">
                   <Link to="/">
                     <LogoIcon
                       className="mobile-logo"
@@ -314,9 +314,9 @@ const StyledNavbar = styled(Navbar)`
   } */
 
   @media (max-width: 426px) {
-    position: relative;
     top: 0 !important;
   }
+
 `
 
 const Logo = styled.img`
@@ -398,7 +398,7 @@ const StyledCollapse = styled(Collapse)`
     opacity: 1;
     top: 0;
     left: 0;
-    padding: 24px;
+    padding: 24px 18px;
     background-color: rgba(0, 111, 187, 0.9);
 
     .on-desktop {
