@@ -55,66 +55,68 @@ export function ContactPageTemplate(props: Props) {
         />
 
         <section className="customer-service-section container-fluid py-5">
-          <div className="row h-100">
-            <div className="col-md-6 d-flex justify-content-center align-items-center flex-column">
-              <div className="row w-100 pl-5">
-                <div className="col text-left mb-3">
-                  <h3 style={{fontSize: '32px', fontWeight: '300'}}>
-                    {props.informationSection.customerServiceTitle}
-                  </h3>
-                </div>
-              </div>
-              <div className="row w-100 pl-5 mb-5">
-                {props.informationSection.customerServiceContacts.map((contact, ndx) => (
-                  <div className="col-6 mb-4">
-                    <p className="lead mb-1 font-weight-light">{contact.title}</p>
-                    <p className="mb-0">{contact.subtitle}</p>
-                    <p className="mb-0">{contact.hours}</p>
-                    <p className="mb-0 font-weight-bold">
-                      <strong>{contact.phoneNumber}</strong>{' '}
-                    </p>
-                    <p className="mb-0 font-weight-bold">
-                      {ndx === 0 && <strong>0800 858 696</strong>}
-                    </p>
+          <div className="container h-100">
+            <div className="row h-100">
+              <div className="col-md-6 d-flex justify-content-center align-items-center flex-column">
+                <div className="row w-100 pl-5">
+                  <div className="col text-left mb-3">
+                    <h3 style={{fontSize: '32px', fontWeight: '300'}}>
+                      {props.informationSection.customerServiceTitle}
+                    </h3>
                   </div>
-                ))}
-              </div>
-              <div className="row w-100 pl-5">
-                {props.informationSection.offices.map(office => (
-                  <div className="col-8 d-flex align-items-end justify-content-center">
-                    <div>
-                      <p className="lead mb-1 font-weight-light">{office.officeName}</p>
-
-                      <p className="mb-0">
-                        {office.address}
-                        <span className="ml-3">
-                          <a href="https://goo.gl/maps/Qm661NGYJBQXfUfx7" target="_blank">
-                            <img
-                              src={googleMaps}
-                              alt=""
-                              style={{height: '30px'}}
-                              className="ml-1 mb-2"
-                            />
-                          </a>
-                        </span>
+                </div>
+                <div className="row w-100 pl-5 mb-5">
+                  {props.informationSection.customerServiceContacts.map((contact, ndx) => (
+                    <div className="col-6 mb-4">
+                      <p className="lead mb-1 font-weight-light">{contact.title}</p>
+                      <p className="mb-0">{contact.subtitle}</p>
+                      <p className="mb-0">{contact.hours}</p>
+                      <p className="mb-0 font-weight-bold">
+                        <strong>{contact.phoneNumber}</strong>{' '}
+                      </p>
+                      <p className="mb-0 font-weight-bold">
+                        {ndx === 0 && <strong>0800 858 696</strong>}
                       </p>
                     </div>
-                  </div>
-                ))}
+                  ))}
+                </div>
+                <div className="row w-100 pl-5">
+                  {props.informationSection.offices.map(office => (
+                    <div className="col-8 d-flex align-items-end justify-content-center">
+                      <div>
+                        <p className="lead mb-1 font-weight-light">{office.officeName}</p>
+
+                        <p className="mb-0">
+                          {office.address}
+                          <span className="ml-3">
+                            <a href="https://goo.gl/maps/Qm661NGYJBQXfUfx7" target="_blank">
+                              <img
+                                src={googleMaps}
+                                alt=""
+                                style={{height: '30px'}}
+                                className="ml-1 mb-2"
+                              />
+                            </a>
+                          </span>
+                        </p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
               </div>
+              <div
+                className="col-md-6 d-none d-md-flex"
+                style={{
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
+                  backgroundImage: `url(${
+                    props.informationSection.imageRight.childImageSharp
+                      ? props.informationSection.imageRight.childImageSharp.fluid.src
+                      : props.informationSection.imageRight
+                  })`,
+                }}
+              />
             </div>
-            <div
-              className="col-md-6 d-none d-md-flex"
-              style={{
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
-                backgroundImage: `url(${
-                  props.informationSection.imageRight.childImageSharp
-                    ? props.informationSection.imageRight.childImageSharp.fluid.src
-                    : props.informationSection.imageRight
-                })`,
-              }}
-            />
           </div>
         </section>
 
