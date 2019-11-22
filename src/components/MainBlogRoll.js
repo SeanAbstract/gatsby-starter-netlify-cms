@@ -29,6 +29,8 @@ const GridItem = styled(Link)`
   cursor: pointer;
 
   &:hover {
+    text-decoration: none;
+    color: white !important;
     &::before {
       filter: grayscale(0%);
     }
