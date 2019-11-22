@@ -44,7 +44,7 @@ type Props = {
   },
 }
 
-function ContactPageTemplate(props: Props) {
+export function ContactPageTemplate(props: Props) {
   return (
     <PageTransition>
       <div className="contact-page">
@@ -88,7 +88,7 @@ function ContactPageTemplate(props: Props) {
                       <p className="mb-0">
                         {office.address}
                         <span className="ml-3">
-                          <a href="https://goo.gl/maps/Qm661NGYJBQXfUfx7" target="_blank"> 
+                          <a href="https://goo.gl/maps/Qm661NGYJBQXfUfx7" target="_blank">
                             <img
                               src={googleMaps}
                               alt=""
@@ -274,51 +274,61 @@ function ContactPageTemplate(props: Props) {
                   </p>
                 </div>
               </div>
-                  <form 
-                    action="/thank-you"
-                    name="contact-form" 
-                    method="post" 
-                    data-netlify="true"
-                    data-netlify-honeypot="bot-field"                  
-                    className="col-md-7 col-11"
-                  >
-                  <input type="hidden" name="bot-field" />
-                  <input type="hidden" name="form-name" value="contact-form" />
-                  <h3 className="mb-3">Leave a message</h3>
-                  <div className="row mb-2">
-                    <div className="col-md-6">
-                      <div className="form-group pt-1">
-                        <label htmlFor="exampleFormControlInput1" style={{fontSize: '14px'}}>
-                          Name
-                        </label>
-                        <input type="text" className="form-control" placeholder="John Smith" required />
-                      </div>
-                    </div>
-                    <div className="col-md-6">
-                      <div className="form-group pt-1">
-                        <label htmlFor="exampleFormControlInput1" style={{fontSize: '14px'}}>
-                          Email address
-                        </label>
-                        <input type="email" className="form-control" placeholder="jon@snowball.com" required />
-                      </div>
+              <form
+                action="/thank-you"
+                name="contact-form"
+                method="post"
+                data-netlify="true"
+                data-netlify-honeypot="bot-field"
+                className="col-md-7 col-11"
+              >
+                <input type="hidden" name="bot-field" />
+                <input type="hidden" name="form-name" value="contact-form" />
+                <h3 className="mb-3">Leave a message</h3>
+                <div className="row mb-2">
+                  <div className="col-md-6">
+                    <div className="form-group pt-1">
+                      <label htmlFor="exampleFormControlInput1" style={{fontSize: '14px'}}>
+                        Name
+                      </label>
+                      <input
+                        type="text"
+                        className="form-control"
+                        placeholder="John Smith"
+                        required
+                      />
                     </div>
                   </div>
-                  <div className="row mb-2">
-                    <div className="col-md-12">
-                      <div className="form-group pt-1">
-                        <label htmlFor="exampleFormControlTextarea1" style={{fontSize: '14px'}}>
-                          Message
-                        </label>
-                        <textarea className="form-control" rows="3" placeholder="Hello..." />
-                      </div>
+                  <div className="col-md-6">
+                    <div className="form-group pt-1">
+                      <label htmlFor="exampleFormControlInput1" style={{fontSize: '14px'}}>
+                        Email address
+                      </label>
+                      <input
+                        type="email"
+                        className="form-control"
+                        placeholder="jon@snowball.com"
+                        required
+                      />
                     </div>
                   </div>
-                  <div>
-                    <button className="btn btn-outline-primary rounded-pill pt-2 px-4" type="submit">
-                      Submit
-                    </button>
+                </div>
+                <div className="row mb-2">
+                  <div className="col-md-12">
+                    <div className="form-group pt-1">
+                      <label htmlFor="exampleFormControlTextarea1" style={{fontSize: '14px'}}>
+                        Message
+                      </label>
+                      <textarea className="form-control" rows="3" placeholder="Hello..." />
+                    </div>
                   </div>
-                </form>
+                </div>
+                <div>
+                  <button className="btn btn-outline-primary rounded-pill pt-2 px-4" type="submit">
+                    Submit
+                  </button>
+                </div>
+              </form>
             </div>
           </div>
         </section>

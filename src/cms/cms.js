@@ -8,6 +8,7 @@ import IndexPagePreview from './preview-templates/IndexPagePreview'
 import HowItWorksPagePreview from './preview-templates/HowItWorksPagePreview'
 import FaqsPagePreview from './preview-templates/FaqsPagePreview'
 import PricePagePreview from './preview-templates/PricePagePreview'
+import ContactPagePreview from './preview-templates/ContactPagePreview'
 
 CMS.registerMediaLibrary(uploadcare)
 CMS.registerMediaLibrary(cloudinary)
@@ -18,3 +19,4 @@ CMS.registerPreviewTemplate('blog', BlogPostPreview)
 CMS.registerPreviewTemplate('how-it-works', HowItWorksPagePreview)
 CMS.registerPreviewTemplate('faq', FaqsPagePreview)
 CMS.registerPreviewTemplate('price', PricePagePreview)
+CMS.registerPreviewTemplate('contact', ContactPagePreview)
