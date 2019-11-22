@@ -116,7 +116,9 @@ export const IndexPageTemplate = ({
 }: Props) => {
   useEffect(() => {
     const currentVideo = document.getElementById('mainVideo')
-    currentVideo.play()
+    if (currentVideo) {
+      currentVideo.play()
+    }
   }, [])
 
   const videoRef = useRef(null)
