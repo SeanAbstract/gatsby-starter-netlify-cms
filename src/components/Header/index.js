@@ -132,7 +132,8 @@ export default class Header extends React.Component {
                 <Logo
                   isOpen={isOpen}
                   scrolled={scrolled}
-                  src={this.useWhiteLogo() || this.props.white ? whiteLogo : logo}
+                  src={logo}
+                  white={this.useWhiteLogo() || this.props.white}
                   alt="company logo"
                 />
               </Link>
@@ -141,6 +142,7 @@ export default class Header extends React.Component {
               isOpen={this.state.isOpen}
               onClick={this.toggle}
               white={this.useWhiteLogo() || this.props.white}
+              scrolled={scrolled}
             />
             <StyledCollapse isOpen={this.state.isOpen} navbar>
               <Nav className="ml-auto" navbar>
@@ -319,6 +321,17 @@ const StyledNavbar = styled(Navbar)`
 
   @media (max-width: 426px) {
     top: 0 !important;
+    height: 100px;
+
+    background: ${props => (props.scrolled ? 'white' : 'transparent')};
+
+    .navbar-brand {
+      height: auto; 
+
+      img {
+        height: auto;
+      }
+    }
   }
 
 `
@@ -327,7 +340,7 @@ const Logo = styled.img`
   height: 125px;
   width: 175px;
   object-fit: contain;
-  filter: ${props => (props.isOpened ? 'brightness(100) grayscale(100) contrast(100)' : 'none')};
+  filter: ${props => (props.white && !props.scrolled ? 'brightness(0) invert(1)' : 'none')};
   transition: 0.1s;
   z-index: 0;
 `
@@ -348,7 +361,7 @@ const StyledNavbarToggler = styled(NavbarToggler)`
   filter: ${props => (props.isOpen ? 'brightness(100) grayscale(100) contrast(100)' : 'none')};
 
   > .navbar-toggler-icon {
-    filter: ${props => (props.white ? 'brightness(0) invert(1) !important' : '')};
+    filter: ${props => (props.white && !props.scrolled ? 'brightness(0) invert(1)' : '')};
   }
 
   :focus {
@@ -406,7 +419,7 @@ const StyledCollapse = styled(Collapse)`
     opacity: 1;
     top: 0;
     left: 0;
-    padding: 24px 18px;
+    padding: 4px 18px;
     background-color: rgba(0, 111, 187, 0.9);
 
     .on-desktop {
