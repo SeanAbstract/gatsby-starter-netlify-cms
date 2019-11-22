@@ -210,11 +210,11 @@ export const IndexPageTemplate = ({
                 <h1 className="text-primary display-2 mb-3">{firstSection.mainText}</h1>
                 <p className="dark-grey font-size-18">{firstSection.description}</p>
                 <div>
-                  <a href="https://www.snowballsecurities.com/download">
-                    <button className="btn btn-outline-primary rounded-pill pt-2" type="button">
+                  <Link to="/download">
+                    <button className="btn btn-outline-primary rounded-pill px-4" type="button">
                       {firstSection.buttonText}
                     </button>
-                  </a>
+                  </Link>
                 </div>
               </Fade>
             </Col>

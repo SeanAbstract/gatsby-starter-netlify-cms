@@ -42,7 +42,7 @@ export const BlogPostPageTemplate = (props: BlogPostTemplate) => {
         <div className="container content">
           <div className="row justify-content-center">
             <div className="col col-10 blog-container">
-              <h3>Risk Disclosure</h3>
+              <h3><br/>Risk Disclosure</h3>
               {disclosures.map((disclosure, ndx) => (
                 <Yo className="pt-1" key={`disclosure-${ndx}`}>
                   <p className="mb-0" style={{fontWeight: '500'}}>

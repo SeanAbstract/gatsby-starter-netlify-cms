@@ -30,7 +30,7 @@ export const BlogPostPageTemplate = (props: BlogPostTemplate) => {
         <div className="container content">
           <div className="row justify-content-center">
             <div className="col col-10 blog-container">
-              <h3>Online Privacy Policy</h3>
+              <h3><br/>Online Privacy Policy</h3>
               {/* <PostContent content={content} /> */}
               <p>
               Your privacy is important to us. This notice explains our online information practices and the choices you can make about the way your information is used at our site. Parts of our website may require you to provide us with personal information. Our privacy policy restricts us in the use we can make of personal information.<br/><br/>

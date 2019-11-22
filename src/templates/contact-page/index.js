@@ -117,6 +117,18 @@ export function ContactPageTemplate(props: Props) {
                 }}
               />
             </div>
+            <div
+              className="col-md-6 d-none d-md-flex"
+              style={{
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                backgroundImage: `url(${
+                  props.informationSection.imageRight.childImageSharp
+                    ? props.informationSection.imageRight.childImageSharp.fluid.src
+                    : props.informationSection.imageRight
+                })`,
+              }}
+            />
           </div>
         </section>
 
@@ -324,25 +336,15 @@ export function ContactPageTemplate(props: Props) {
                 <div className="row mb-2">
                   <div className="col-md-12">
                     <div className="form-group pt-1">
-                      <label
-                        name="Message"
-                        htmlFor="exampleFormControlTextarea1"
-                        style={{fontSize: '14px'}}
-                      >
-                        Message
-                      </label>
-                      <textarea className="form-control" rows="3" placeholder="Hello..." />
-                    </div>
-                  </div>
-                </div>
-
-                <div className="row mb-2">
-                  <div className="col-md-12">
-                    <div className="form-group pt-1">
                       <label htmlFor="exampleFormControlTextarea1" style={{fontSize: '14px'}}>
                         Message
                       </label>
-                      <textarea className="form-control" rows="3" placeholder="Hello..." />
+                      <textarea
+                        name="Message"
+                        className="form-control"
+                        rows="3"
+                        placeholder="Hello..."
+                      />
                     </div>
                   </div>
                 </div>

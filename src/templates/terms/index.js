@@ -30,7 +30,7 @@ export const BlogPostPageTemplate = (props: BlogPostTemplate) => {
         <div className="container content">
           <div className="row justify-content-center">
             <div className="col col-10 blog-container">
-              <h3>Terms and Conditions</h3>
+              <h3><br/>Terms and Conditions</h3>
               {/* <PostContent content={content} /> */}
               <p>
                 By accessing this website and any portal within this website, you agree to and will

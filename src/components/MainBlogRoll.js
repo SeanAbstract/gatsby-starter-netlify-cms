@@ -13,7 +13,7 @@ const MainBlogRoll = ({data}) => {
       bgImg={post.frontmatter.featuredimage}
     >
       <div>
-        <p className="type">{post.frontmatter.type}</p>
+        <p className="type">{post.frontmatter.category}</p>
         <h5>{post.frontmatter.title}</h5>
       </div>
     </GridItem>
@@ -27,6 +27,7 @@ const GridItem = styled(Link)`
   position: relative;
   z-index: 1;
   cursor: pointer;
+  transition: 0.2s ease-in-out;
 
   &:hover {
     text-decoration: none;
@@ -37,7 +38,7 @@ const GridItem = styled(Link)`
   }
 
   &::before {
-    transition: filter 0.3s;
+    transition: filter 0.2s;
     content: '';
     position: absolute;
     top: 0;
