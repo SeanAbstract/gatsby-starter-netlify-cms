@@ -18,6 +18,11 @@ const IndexPagePreview = ({entry, getAsset}) => {
       realTimeStockSection={data.realTimeStockSection || {}}
       testimonials={data.testimonials || []}
       downloadNow={data.downloadNow || {}}
+      geoCountry="us"
+      videoName={data.videoName}
+      videoNameUS={data.videoNameUS}
+      videoNameAU={data.videoNameAU}
+      videoNameCN={data.videoNameCN}
     />
   )
 }
