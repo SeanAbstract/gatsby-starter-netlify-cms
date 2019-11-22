@@ -31,8 +31,7 @@ const GridItem = styled(Link)`
 
   &:hover {
     text-decoration: none;
-    color: #fff;
-
+    color: white !important;
     &::before {
       filter: grayscale(0%);
     }

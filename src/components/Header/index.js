@@ -61,11 +61,11 @@ const dataMobile = [
   },
   {
     name: 'Blog',
-    href: '',
+    href: '/blog',
   },
   {
     name: 'Risk disclosure',
-    href: '',
+    href: '/risk-disclosure',
   },
   {
     name: 'FAQs',
@@ -137,10 +137,14 @@ export default class Header extends React.Component {
                 />
               </Link>
             </NavbarBrand>
-            <StyledNavbarToggler isOpen={this.state.isOpen} onClick={this.toggle} />
+            <StyledNavbarToggler
+              isOpen={this.state.isOpen}
+              onClick={this.toggle}
+              white={this.useWhiteLogo() || this.props.white}
+            />
             <StyledCollapse isOpen={this.state.isOpen} navbar>
               <Nav className="ml-auto" navbar>
-                <div className="on-mobile top-collapse-mobile">
+                <div className="on-mobile top-collapse-mobile mt-4">
                   <Link to="/">
                     <LogoIcon
                       className="mobile-logo"
@@ -314,9 +318,9 @@ const StyledNavbar = styled(Navbar)`
   } */
 
   @media (max-width: 426px) {
-    position: relative;
     top: 0 !important;
   }
+
 `
 
 const Logo = styled.img`
@@ -342,6 +346,10 @@ const LogoIcon = styled.img`
 
 const StyledNavbarToggler = styled(NavbarToggler)`
   filter: ${props => (props.isOpen ? 'brightness(100) grayscale(100) contrast(100)' : 'none')};
+
+  > .navbar-toggler-icon {
+    filter: ${props => (props.white ? 'brightness(0) invert(1) !important' : '')};
+  }
 
   :focus {
     outline: none;
@@ -398,7 +406,7 @@ const StyledCollapse = styled(Collapse)`
     opacity: 1;
     top: 0;
     left: 0;
-    padding: 24px;
+    padding: 24px 18px;
     background-color: rgba(0, 111, 187, 0.9);
 
     .on-desktop {

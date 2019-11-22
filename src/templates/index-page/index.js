@@ -116,69 +116,87 @@ export const IndexPageTemplate = ({
 }: Props) => {
   useEffect(() => {
     const currentVideo = document.getElementById('mainVideo')
-    currentVideo.play()
+    if (currentVideo) {
+      currentVideo.play()
+    }
   }, [])
 
   const videoRef = useRef(null)
 
+  const hasVideo = require(`../../../static/img/${
+    geoCountry === 'New Zealand'
+      ? videoName
+      : geoCountry === 'Australia'
+      ? videoNameAU
+      : geoCountry === 'United States'
+      ? videoNameUS
+      : geoCountry === 'China'
+      ? videoNameCN
+      : geoCountry === 'Not specified'
+      ? videoName
+      : videoName
+  }`)
+
   return (
     <PageTransition>
       {/* Hero Video */}
-      <Jumbotron className="full-width-image-container d-flex justify-content-center align-items-center flex-column text-right">
-        <ImageContainer>
-          <StyledVideo
-            id="mainVideo"
-            loop
-            width="100%"
-            muted="true"
-            preload="auto"
-            // src={require(`../../../static/img/${videoName}`)}
-            src={require(`../../../static/img/${
-              geoCountry === 'New Zealand'
-                ? videoName
-                : geoCountry === 'Australia'
-                ? videoNameAU
-                : geoCountry === 'United States'
-                ? videoNameUS
-                : geoCountry === 'China'
-                ? videoNameCN
-                : geoCountry === 'Not specified'
-                ? videoName
-                : videoName
-            }`)}
-            autoplay
-            className="video"
-            poster={
-              geoCountry === 'New Zealand'
-                ? videoPosterSailing
-                : geoCountry === 'Australia'
-                ? videoPosterBeach
-                : geoCountry === 'United States'
-                ? videoPosterBoat
-                : geoCountry === 'China'
-                ? videoPosterChina
-                : geoCountry === 'Not specified'
-                ? videoPosterSailing
-                : videoPosterSailing
-                }
-          >
-            <track kind="captions" />
-          </StyledVideo>
-          <Overlay />
-        </ImageContainer>
-        <div className="text-right mb-5 pb-5">
-          <h1 className="big-text">Global Markets</h1>
-          <h3 className="big-subtitle text-right text-primary">at your fingertips</h3>
-        </div>
+      {hasVideo && (
+        <Jumbotron className="full-width-image-container d-flex justify-content-center align-items-center flex-column text-right">
+          <ImageContainer>
+            <StyledVideo
+              id="mainVideo"
+              loop
+              width="100%"
+              muted="true"
+              preload="auto"
+              // src={require(`../../../static/img/${videoName}`)}
+              src={require(`../../../static/img/${
+                geoCountry === 'New Zealand'
+                  ? videoName
+                  : geoCountry === 'Australia'
+                  ? videoNameAU
+                  : geoCountry === 'United States'
+                  ? videoNameUS
+                  : geoCountry === 'China'
+                  ? videoNameCN
+                  : geoCountry === 'Not specified'
+                  ? videoName
+                  : videoName
+              }`)}
+              autoplay
+              className="video"
+              poster={
+                geoCountry === 'New Zealand'
+                  ? videoPosterSailing
+                  : geoCountry === 'Australia'
+                  ? videoPosterBeach
+                  : geoCountry === 'United States'
+                  ? videoPosterBoat
+                  : geoCountry === 'China'
+                  ? videoPosterChina
+                  : geoCountry === 'Not specified'
+                  ? videoPosterSailing
+                  : videoPosterSailing
+              }
+            >
+              <track kind="captions" />
+            </StyledVideo>
+            <Overlay />
+          </ImageContainer>
+          <div className="text-right mb-5 pb-5">
+            <h1 className="big-text">Global Markets</h1>
+            <h3 className="big-subtitle text-right text-primary">at your fingertips</h3>
+          </div>
 
-        <a href="#fast-secure-trusted">
-          <img
-            src={arrowDown}
-            alt=""
-            style={{bottom: '60px', height: '25px', position: 'absolute'}}
-          />
-        </a>
-      </Jumbotron>
+          <a href="#fast-secure-trusted">
+            <img
+              src={arrowDown}
+              alt=""
+              style={{bottom: '60px', height: '25px', position: 'absolute'}}
+            />
+          </a>
+        </Jumbotron>
+      )}
       <div
         className="landing-page"
         style={{zIndex: 2, background: 'white'}}
