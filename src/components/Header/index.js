@@ -30,7 +30,7 @@ const data = [
   },
   {
     name: 'Download',
-    href: '',
+    href: '/download',
   },
   {
     name: 'FAQs',
@@ -57,7 +57,7 @@ const dataMobile = [
   },
   {
     name: 'Download',
-    href: '',
+    href: '/download',
   },
   {
     name: 'Blog',
@@ -158,46 +158,34 @@ export default class Header extends React.Component {
                   </button>
                 </div>
                 {data.map((link, ndx) =>
-                  link.href !== '' ? (
-                    <div
-                      style={{position: 'relative'}}
-                      className={`nav-link on-desktop ${ndx !== data.length - 1 ? 'mr-4' : ''}`}
+                  <div
+                    style={{position: 'relative'}}
+                    className={`nav-link on-desktop ${ndx !== data.length - 1 ? 'mr-4' : ''}`}
+                  >
+                    <Link
+                      to={link.href}
+                      className={`${
+                        `/${this.state.currentPath}` === `${link.href}` ? 'custom-active' : ''
+                      }`}
                     >
-                      <Link
-                        to={link.href}
-                        className={`${
-                          `/${this.state.currentPath}` === `${link.href}` ? 'custom-active' : ''
-                        }`}
-                      >
-                        {link.name}
-                      </Link>
-                    </div>
-                  ) : (
-                    <div className="nav-link mr-4 on-desktop">
-                      <Link to="/download">Download</Link>
-                    </div>
-                  )
+                      {link.name}
+                    </Link>
+                  </div>
                 )}
                 {dataMobile.map((link, ndx) =>
-                  link.href !== '' ? (
-                    <div
-                      style={{position: 'relative'}}
-                      className={`nav-link on-mobile ${ndx !== data.length - 1 ? 'mr-4' : ''}`}
+                  <div
+                    style={{position: 'relative'}}
+                    className={`nav-link on-mobile ${ndx !== data.length - 1 ? 'mr-4' : ''}`}
+                  >
+                    <Link
+                      to={link.href}
+                      className={`${
+                        `/${this.state.currentPath}` === `${link.href}` ? 'custom-active' : ''
+                      }`}
                     >
-                      <Link
-                        to={link.href}
-                        className={`${
-                          `/${this.state.currentPath}` === `${link.href}` ? 'custom-active' : ''
-                        }`}
-                      >
-                        {link.name}
-                      </Link>
-                    </div>
-                  ) : (
-                    <div className="nav-link mr-4 on-mobile">
-                    <Link to="/download">Download</Link>
-                    </div>
-                  )
+                      {link.name}
+                    </Link>
+                  </div>
                 )}
                 <div className="on-mobile social-container">
                   <img
