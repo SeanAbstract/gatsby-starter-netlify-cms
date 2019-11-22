@@ -22,6 +22,11 @@ $primary: #006fbb;
         height: 128px;
         background-color: $primary;
     }
+    
+    .social-media-section a:hover {
+        opacity: 50%;
+        transition: 0.1s ease-in-out;
+    }
 
     .contact-us-form {
         // min-height: 60vh;
