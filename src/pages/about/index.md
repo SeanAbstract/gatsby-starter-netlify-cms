@@ -1,7 +1,7 @@
 ---
 templateKey: about-page
-headerImage: /img/hero-about.png
-mainText: About 
+headerImage: /img/hero-about.jpg
+mainText: About
 subText: Snowball
 mainpitch:
   description: This is the description
@@ -61,17 +61,11 @@ tabs:
       individuals who wish to invest in global share markets and has set up a
       subsidiary in New Zealand to provide this service to global investors.
 
-
-
-
       * Snowball Finance has established Snowball Securities as an
       internet-based brokerage service operating from New Zealand. Once Snowball
       Securities has a base of New Zealand customers Snowball Finance then plans
       to make it the head office of a global financial services business
       targeting investors world-wide. 
-
-
-
 
       * Snowball Finance's investment and communication platform, Xueqiu.com, is
       China's largest social site for investors in the US stock markets. It
