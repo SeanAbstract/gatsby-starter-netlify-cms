@@ -301,3 +301,22 @@ video {
   /* height: 470px; */
   height: auto !important;
 }
+
+
+
+.slick-next:before {
+  background: $primary;
+  content: "" !important;
+}
+
+.slick-prev {
+  height: 75px;
+  width: 75px;
+}
+
+.slick-prev:before {
+  height: 50px;
+  width: 50px;
+  top: -20px;
+  content: "" !important;
+}

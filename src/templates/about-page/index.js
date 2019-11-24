@@ -4,6 +4,7 @@ import React, {useState, useEffect} from 'react'
 import {graphql} from 'gatsby'
 import * as showdown from 'showdown'
 import PageTransition from 'gatsby-plugin-page-transitions'
+import Slider from 'react-slick'
 
 import Layout from '../../components/Layout'
 import PreviewCompatibleImage from '../../components/PreviewCompatibleImage'
@@ -14,8 +15,44 @@ import DownloadNow from '../../components/DownloadNow'
 import businessLogo from '../../img/business.svg'
 import mobileLogo from '../../img/mobile.svg'
 import peopleLogo from '../../img/people.svg'
+import rightArrow from '../../img/arrow-right-blue.png'
 
 import './styles.scss'
+
+const SliderArrow = ({className, to, onClick}) => (
+  <button
+    type="button"
+    onClick={onClick}
+    className={`button button--text button--icon ${className}`}
+    aria-label={to}
+    style={{top: 'calc(50%)', height: '50px', width: '20px'}}
+  >
+    <img
+      className="img-fluid"
+      icon={to}
+      src={rightArrow}
+      style={{transform: to === 'prev' ? 'rotate(180deg)' : ''}}
+    />
+  </button>
+)
+
+const settings = {
+  dots: false,
+  infinite: true,
+  slidesToShow: 4,
+  slidesToScroll: 4,
+  prevArrow: <SliderArrow to="prev" />,
+  nextArrow: <SliderArrow to="next" />,
+  responsive: [
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2,
+      },
+    },
+  ],
+}
 
 type AboutTemplate = {
   headerImage: any,
@@ -168,13 +205,18 @@ export const AboutPageTemplate = (props: AboutTemplate) => {
               <div className="col-md-12 d-flex justify-content-center mx-auto flex-column align-items-center">
                 <h1 className="big-text text-primary mb-5">History</h1>
 
-                <div className="d-flex flex-md-row row no-gutters flex-column">
-                  {props.historyCards.map((historyItem, key, {length}) => (
-                    <div className="col-md-3 col-12">
-                      <HistoryCard date={historyItem.date} description={historyItem.description} />
-                      {key < length - 1 && <div className="timeline-icon" />}
-                    </div>
-                  ))}
+                <div className="w-100">
+                  <Slider {...settings}>
+                    {props.historyCards.map((historyItem, key, {length}) => (
+                      <div className="d-flex">
+                        <HistoryCard
+                          date={historyItem.date}
+                          description={historyItem.description}
+                        />
+                        {key < length - 1 && <div className="timeline-icon" />}
+                      </div>
+                    ))}
+                  </Slider>
                 </div>
               </div>
             </div>
