@@ -8,10 +8,10 @@ categories:
   - categoryTitle: About Snowball
     questions:
       - answer: >-
-          - The security of your funds is our priority. Snowball Securities is
-          operated by SNB Finance Holding Ltd, a registered financial service
-          provider in New Zealand. The execution brokers that we employ are the
-          top peers and the most trustable in the industry.  
+          - The security of your funds is our priority. Snowball is operated by
+          SNB Finance Holding Ltd, a registered financial service provider in
+          New Zealand. The execution brokers that we employ are the top peers
+          and the most trustable in the industry.  
 
 
           - You will be able to trade a variety of financial securities on multi
@@ -22,9 +22,8 @@ categories:
           - The app is user-friendly. You will see nice and easy interfaces in
           the app and provided with all the options you need for convenient
           trading.
-        question: >
-          What is Snowball Securities’ best advantages comparing with other
-          brokers?
+        question: |
+          What are the best advantages of Snowball compared with other brokers?
       - answer: |-
           Transfer from an IB broker
 
@@ -42,45 +41,43 @@ categories:
             - Step 3    Log into the Snowball Securities app click on "Transaction" - "more" - "account transfer" - "US stock account", fill in the phone number, select the original broker, enter the original broker’s account number
             - step 4 Confirm the transfer application with the original broker. If you receive the original broker transfer confirmation e-mail or text message, reply directly to confirm
         question: >-
-          I already have an account with other brokers, and I want to transfer
-          my funds and positions to Snowball Securities. What should I do?
+          I already have an account with other brokers, and want to transfer my
+          funds and positions to Snowball. What should I do?
       - answer: >-
           We do not provide financial advice, and we encourage our clients to do
           their own searches and enjoy the fun of trading.
-        question: >-
-          Does Snowball Securities help investors to decide on what to buy and
-          sell?
+        question: Does Snowball help investors to decide on what to buy and sell?
       - answer: >-
           Yes, and this is one of the reasons why we provide services online.
           Clients from different countries use our platform.  However, there are
           a few restrictions on this including people who are tax residents of
           the United States. We encourage investors to contact us if they are
           living overseas and want to use our services.
-        question: Can tax residents of another country use Snowball Securities services?
+        question: Can tax residents of another country use Snowball services?
       - answer: >-
-          Snowball Securities is also a member of Snowball Group（“雪球集团”,
-          Snowball). Snowball Group's investment and communication platform
-          xueqiu.com is a leading investment social network and online trading
-          platform in China with over 28 million users. It provides investors
-          with cross-market and cross-species data information, news, and
-          interactive communication services. These services cover China A
-          shares, Hong Kong, and U.S. stock market. 
+          Snowball is also a member of Snowball Group（“雪球集团”, Snowball).
+          Snowball Group's investment and communication platform xueqiu.com is a
+          leading investment social network and online trading platform in China
+          with over 28 million users. It provides investors with cross-market
+          and cross-species data information, news, and interactive
+          communication services. These services cover China A shares, Hong
+          Kong, and U.S. stock market. 
 
 
           Incorporated in 2010, Snowball has raised more than US$170 million in
           four investment rounds since 2014 including US$120 million from
           Alibaba subsidiary, Ant Financial. 
-        question: Who owns Snowball Securities?
+        question: Who owns Snowball?
       - answer: >-
-          With one account, Snowball Securities’ clients can buy and sell
-          securities in some of the world’s largest companies. We are one of the
-          first firms in New Zealand to provide Kiwis with access to such a wide
-          range of securities markets overseas. The most popular markets for our
-          current clients are the SEHK, the NYSE and NASDAQ along with China
-          A-shares - shares of mainland China-based companies that trade on the
-          two Chinese stock exchanges, the Shanghai Stock Exchange and the
-          Shenzhen Stock Exchange.
-        question: What securities can clients invest in through Snowball Securities?
+          With one account, Snowball clients can buy and sell securities in some
+          of the world’s largest companies. We are one of the first firms in New
+          Zealand to provide Kiwis with access to such a wide range of
+          securities markets overseas. The most popular markets for our current
+          clients are the SEHK, the NYSE and NASDAQ along with China A-shares -
+          shares of mainland China-based companies that trade on the two Chinese
+          stock exchanges, the Shanghai Stock Exchange and the Shenzhen Stock
+          Exchange.
+        question: What securities can clients invest in through Snowball?
       - answer: >-
           To gain exposure to some of the world’s largest companies, achieve
           investment diversification benefits and take advantage of fluctuating
@@ -101,25 +98,25 @@ categories:
         question: |
           Why invest in overseas listed shares?
       - answer: >-
-          Snowball Securities doesn’t hold the shares bought by clients and
-          clients’ money is kept in trust accounts which are regulated by the US
-          Securities and Exchange Commission. The role of the SEC is to protect
-          investors; maintain fair, orderly, and efficient markets; and
-          facilitate capital formation. The SEC strives to promote a market
-          environment that is worthy of the public's trust.
+          Snowball doesn’t hold the shares bought by clients and clients’ money
+          is kept in trust accounts which are regulated by the US Securities and
+          Exchange Commission. The role of the SEC is to protect investors;
+          maintain fair, orderly, and efficient markets; and facilitate capital
+          formation. The SEC strives to promote a market environment that is
+          worthy of the public's trust.
 
           If we decide to cease operations, we would give clients significant
           notice to sell or get their money out, or to transfer their shares to
           a different broker. 
-        question: What happens if Snowball Securities goes under?
+        question: What happens if Snowball goes under?
       - answer: >-
-          All new accounts with Snowball Securities are defaulted as “Reg T”
-          accounts, that is, the most leverage ratio within a day is 4x for US
-          stocks trading. For example, the investor has 10,000 USD initial
-          margin in the account, and he is able to finance 30,000 USD in maximum
-          and that makes up to 40,000 USD in total to be trading from. At the
-          end of trading time of the day, the margin funding will be recalled,
-          and the investor needs to make sure the leverage is repaid down to the
+          All new accounts with Snowball are defaulted as “Reg T” accounts, that
+          is, the most leverage ratio within a day is 4x for US stocks trading.
+          For example, the investor has 10,000 USD initial margin in the
+          account, and he is able to finance 30,000 USD in maximum and that
+          makes up to 40,000 USD in total to be trading from. At the end of
+          trading time of the day, the margin funding will be recalled, and the
+          investor needs to make sure the leverage is repaid down to the
           overnight limit by then. For overnight funding, the most leverage
           ratio is 2x for US stocks. Therefore, the investor must sell some
           stocks before 3:50pm US ET and repay the margin funding down to 10,000
@@ -137,9 +134,9 @@ categories:
           stocks?
       - answer: >-
           You can click on "Marginable stocks" on the “US Stocks “page of
-          Snowball Securities App, and three indicators showed next to the stock
-          name are: a. initial margin rate; b. maintenance margin rate; c.
-          overnight margin rate.
+          Snowball App, and three indicators showed next to the stock name are:
+          a. initial margin rate; b. maintenance margin rate; c. overnight
+          margin rate.
 
           Initial margin rate — the percentage of the purchase price of the
           securities that the investor must deposit into their account.
@@ -205,7 +202,7 @@ categories:
           discovery and improved credit-worthiness. Our stock loan and borrow
           rates are very competitive. We use the best market data available to
           measure ourselves. 
-        question: What is the securities financing rate on Snowball Securities?
+        question: What is the securities financing rate on Snowball?
   - categoryTitle: How to use
     questions:
       - answer: >-
