@@ -2,7 +2,7 @@
 templateKey: faq-page
 jumbotron:
   description: Answered
-  headerImage: /img/snowball-faq-image.png
+  headerImage: /img/second-splash.jpg
   title: FAQS
 categories:
   - categoryTitle: About Snowball
