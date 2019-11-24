@@ -11,15 +11,6 @@ import testimony from '../../img/testimonial-1.mp4'
 import testimony2 from '../../img/testimonial-2.mp4'
 import testimony3 from '../../img/testimonial-3.mp4'
 
-const items = [
-  {
-    src: testimonialImage,
-  },
-  {
-    src: testimonialImage2,
-  },
-]
-
 type Props = {
   testimonials: Array<{
     customerName: string,
@@ -90,7 +81,7 @@ const TestimonyCarousel = ({testimonials}: Props) => {
             style={{height: '65px', width: '65px'}}
             onClick={() => {
               setModal(true)
-              setCurrentVideo(testimonyVideos[ndx])
+              setCurrentVideo(testimonial.video.publicURL)
             }}
           >
             <img src={playButton} alt="Play Button" className="img-fluid" />

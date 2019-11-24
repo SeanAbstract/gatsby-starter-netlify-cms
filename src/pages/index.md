@@ -162,15 +162,15 @@ testimonials:
   - backgroundImage: /img/snowball-testimonials-1.jpg
     customerName: Elliot
     customerPosition: investor
-    videoUrl: 'http://'
+    video: '/img/testimonial-1.mp4'
   - backgroundImage: /img/snowball-testimonials-2.jpg
     customerName: Jeremy
     customerPosition: investor
-    videoUrl: 'http://'
+    video: '/img/testimonial-3.mp4'
   - backgroundImage: /img/snowball-testimonials-3.jpg
     customerName: Xuling
     customerPosition: investor
-    videoUrl: 'http://'
+    video: '/img/testimonial-2.mp4'
 downloadNow:
   image: /img/snowball-phone.png
   mainText: Access Global Markets Today

@@ -657,7 +657,9 @@ export const pageQuery = graphql`
         testimonials {
           customerName
           customerPosition
-          videoUrl
+          video {
+            publicURL
+          }
           backgroundImage {
             childImageSharp {
               fluid(maxWidth: 1400, quality: 100) {
