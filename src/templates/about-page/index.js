@@ -97,7 +97,11 @@ export const AboutPageTemplate = (props: AboutTemplate) => {
 
   return (
     <PageTransition>
-      <SharedJumbotron headerImage={props.headerImage} title="About" description="Snowball" />
+      <SharedJumbotron
+        headerImage={props.headerImage}
+        title={props.mainText}
+        description={props.subText}
+      />
 
       <div className="about-page container-fluid">
         <section className="pt-5 pb-5">
@@ -296,6 +300,8 @@ const AboutPage = ({data}: Props) => {
         investors={post.frontmatter.investors}
         partners={post.frontmatter.partners}
         downloadNow={post.frontmatter.downloadNow}
+        mainText={post.frontmatter.mainText}
+        subText={post.frontmatter.subText}
       />
     </Layout>
   )
@@ -314,6 +320,8 @@ export const aboutPageQuery = graphql`
             }
           }
         }
+        mainText
+        subText
         mainpitch {
           title
           description

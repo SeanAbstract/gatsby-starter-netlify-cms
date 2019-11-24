@@ -1,6 +1,9 @@
 ---
 templateKey: how-it-works-page
-headerImage: /img/second-splash.jpg
+jumbotron:
+  description: Simply
+  headerImage: /img/second-splash.jpg
+  title: How it works
 sections:
   - body: >-
       The whole process including filling in personal information, submitting

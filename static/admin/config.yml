@@ -35,6 +35,8 @@ collections:
         name: "index"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "index-page"}
+          - {label: "Main Text", name: "mainText", widget: string}
+          - {label: "Sub Text", name: "subText", widget: string}
           - {label: "Video Name NZ", name: "videoName", widget: "hidden"}
           - {label: "Video Name AU", name: "videoNameAU", widget: "hidden"}
           - {label: "Video Name US", name: "videoNameUS", widget: "hidden"}
@@ -109,6 +111,8 @@ collections:
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about-page"}
           - {label: "Header Image", name: headerImage, widget: image}
+          - {label: "Main Text", name: "mainText", widget: string}
+          - {label: "Sub Text", name: "subText", widget: string}
           - {label: Mainpitch, name: mainpitch, widget: object, fields: [
                 {label: Title, name: title, widget: string}, 
                 {label: Description, name: description, widget: text},
@@ -219,7 +223,11 @@ collections:
         name: "how-it-works"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "how-it-works-page"}
-          - {label: "Header Image", name: headerImage, widget: image}
+          - {label: "Jumbotron", name: "jumbotron", widget: object, fields: [
+              {label: "Title", name: "title", widget: text},
+              {label: "Description", name: "description", widget: text},
+              {label: "Header Image", name: "headerImage", widget: image},           
+            ]}
           - {label: "Sections", name: sections, widget: list, fields: [
               {label: "Title", name: title, widget: text},
               {label: "Description", name: body, widget: markdown},
@@ -236,7 +244,11 @@ collections:
         name: "faq"
         fields: 
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "faq-page"}
-          - {label: "Header Image", name: headerImage, widget: image}
+          - {label: "Jumbotron", name: "jumbotron", widget: object, fields: [
+              {label: "Title", name: "title", widget: text},
+              {label: "Description", name: "description", widget: text},
+              {label: "Header Image", name: "headerImage", widget: image},           
+            ]}
           - {label: "Categories", name: categories, widget: list, fields: [
               {label: "Category Title", name: "categoryTitle", widget: text},
               {label: "Questions", name: questions, widget: list, fields: [
@@ -255,7 +267,11 @@ collections:
         name: "contact"
         fields: 
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "contact-page"}
-          - {label: "Header Image", name: headerImage, widget: image}
+          - {label: "Jumbotron", name: "jumbotron", widget: object, fields: [
+              {label: "Title", name: "title", widget: text},
+              {label: "Description", name: "description", widget: text},
+              {label: "Header Image", name: "headerImage", widget: image},           
+            ]}
           - {label: "Information Section", name: informationSection, widget: object, fields: [
               {label: "Customer Service Title", name: customerServiceTitle, widget: string},
               {label: "Customer Service Contacts", name: customerServiceContacts, widget: list, fields: [

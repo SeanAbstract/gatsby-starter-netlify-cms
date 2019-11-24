@@ -8,7 +8,7 @@ const AboutPagePreview = ({entry}) => {
 
   return (
     <ContactPageTemplate
-      headerImage={data.headerImage}
+      jumbotron={data.jumbotron}
       informationSection={data.informationSection || {}}
       socialMedia={data.socialMedia || {}}
       usingCMS

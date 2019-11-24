@@ -15,6 +15,8 @@ const AboutPagePreview = ({entry}) => {
       investors={data.investors || []}
       partners={data.partners || []}
       downloadNow={data.downloadNow || {}}
+      mainText={data.mainText}
+      subText={data.subText}
     />
   )
 }

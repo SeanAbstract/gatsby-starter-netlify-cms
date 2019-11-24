@@ -299,6 +299,8 @@ export const pricePageQuery = graphql`
   query PricePage($id: String!) {
     markdownRemark(id: {eq: $id}) {
       frontmatter {
+        mainText
+        subText
         jumbotron {
           title
           description

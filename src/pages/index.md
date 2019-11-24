@@ -5,6 +5,8 @@ videoNameAU: Beach-Final.mp4
 videoNameUS: Boat-Final.mp4
 videoNameCN: Boat-Final.mp4
 image: /img/landing-page-2.png
+mainText: GLOBAL MARKETS
+subText: at your fingertips
 firstSection:
   buttonText: Try Snowball Securities today
   description: >

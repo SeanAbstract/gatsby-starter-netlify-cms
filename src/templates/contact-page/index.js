@@ -48,11 +48,7 @@ export function ContactPageTemplate(props: Props) {
   return (
     <PageTransition>
       <div className="contact-page">
-        <SharedJumbotron
-          headerImage={props.headerImage}
-          title="Contact"
-          description="Here to help"
-        />
+        <SharedJumbotron {...props.jumbotron} />
 
         <section className="customer-service-section container-fluid py-5">
           <div className="container h-100">
@@ -374,7 +370,7 @@ function ContactPage({data}) {
   return (
     <Layout white>
       <ContactPageTemplate
-        headerImage={contact.frontmatter.headerImage}
+        jumbotron={contact.frontmatter.jumbotron}
         informationSection={contact.frontmatter.informationSection}
         socialMedia={contact.frontmatter.socialMedia}
         downloadNow={contact.frontmatter.downloadNow}
@@ -389,10 +385,14 @@ export const contactPageQuery = graphql`
   query ContactPage($id: String!) {
     markdownRemark(id: {eq: $id}) {
       frontmatter {
-        headerImage {
-          childImageSharp {
-            fluid(maxWidth: 2000, quality: 100) {
-              ...GatsbyImageSharpFluid
+        jumbotron {
+          title
+          description
+          headerImage {
+            childImageSharp {
+              fluid(maxWidth: 1440, quality: 100) {
+                ...GatsbyImageSharpFluid
+              }
             }
           }
         }

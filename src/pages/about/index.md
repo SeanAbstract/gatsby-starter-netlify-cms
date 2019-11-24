@@ -1,6 +1,8 @@
 ---
 templateKey: about-page
 headerImage: /img/hero-about.png
+mainText: About 
+subText: Snowball
 mainpitch:
   description: This is the description
   secondDescription: This is the second descriptions

@@ -1,6 +1,9 @@
 ---
 templateKey: contact-page
-headerImage: /img/second-splash.jpg
+jumbotron:
+  description: Here to help
+  headerImage: /img/snowball-faq-image.png
+  title: Contact
 informationSection:
   customerServiceContacts:
     - hours: '10:00 - 16:00'

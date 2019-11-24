@@ -113,6 +113,8 @@ export const IndexPageTemplate = ({
   realTimeStockSection,
   testimonials,
   downloadNow,
+  mainText,
+  subText,
 }: Props) => {
   useEffect(() => {
     const currentVideo = document.getElementById('mainVideo')
@@ -184,8 +186,8 @@ export const IndexPageTemplate = ({
             <Overlay />
           </ImageContainer>
           <div className="text-right mb-5 pb-5">
-            <h1 className="big-text">Global Markets</h1>
-            <h3 className="big-subtitle text-right text-primary">at your fingertips</h3>
+            <h1 className="big-text">{mainText}</h1>
+            <h3 className="big-subtitle text-right text-primary">{subText}</h3>
           </div>
 
           <a href="#fast-secure-trusted">
@@ -556,6 +558,8 @@ class IndexPage extends React.Component {
           realTimeStockSection={frontmatter.realTimeStockSection}
           testimonials={frontmatter.testimonials}
           downloadNow={frontmatter.downloadNow}
+          mainText={frontmatter.mainText}
+          subText={frontmatter.subText}
         />
       </Layout>
     )
@@ -568,6 +572,8 @@ export const pageQuery = graphql`
   query IndexPageTemplate($id: String!) {
     markdownRemark(id: {eq: $id}) {
       frontmatter {
+        mainText
+        subText
         videoName
         videoNameUS
         videoNameAU

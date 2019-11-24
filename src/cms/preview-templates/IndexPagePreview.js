@@ -23,6 +23,8 @@ const IndexPagePreview = ({entry, getAsset}) => {
       videoNameUS={data.videoNameUS}
       videoNameAU={data.videoNameAU}
       videoNameCN={data.videoNameCN}
+      mainText={data.mainText}
+      subText={data.subText}
     />
   )
 }

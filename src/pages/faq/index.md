@@ -1,6 +1,9 @@
 ---
 templateKey: faq-page
-headerImage: /img/snowball-faq-image.png
+jumbotron:
+  description: Answered
+  headerImage: /img/snowball-faq-image.png
+  title: FAQS
 categories:
   - categoryTitle: About Snowball
     questions:

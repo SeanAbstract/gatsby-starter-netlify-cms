@@ -69,7 +69,7 @@ export function FaqPageTemplate(props: FaqPageTemplateProps) {
   return (
     <PageTransition>
       <div className="faq-page">
-        <SharedJumbotron headerImage={props.headerImage} title="FAQS" description="Answered" />
+        <SharedJumbotron {...props.jumbotron} />
         <div className="container pt-5 mb-5">
           <div className="row mx-auto">
             <div className="col-lg-8 col-md-10 col-11 mx-auto">
@@ -124,7 +124,7 @@ function FaqPage({data}: Props) {
   return (
     <Layout white>
       <FaqPageTemplate
-        headerImage={faq.frontmatter.headerImage}
+        jumbotron={faq.frontmatter.jumbotron}
         categories={faq.frontmatter.categories}
         downloadNow={faq.frontmatter.downloadNow}
       />
@@ -138,10 +138,14 @@ export const faqPageQuery = graphql`
   query FaqPage($id: String!) {
     markdownRemark(id: {eq: $id}) {
       frontmatter {
-        headerImage {
-          childImageSharp {
-            fluid(maxWidth: 2000, quality: 100) {
-              ...GatsbyImageSharpFluid
+        jumbotron {
+          title
+          description
+          headerImage {
+            childImageSharp {
+              fluid(maxWidth: 1440, quality: 100) {
+                ...GatsbyImageSharpFluid
+              }
             }
           }
         }

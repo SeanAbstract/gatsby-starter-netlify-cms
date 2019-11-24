@@ -8,7 +8,7 @@ const HowItWorksPreview = ({entry}) => {
 
   return (
     <HowItWorksTemplate
-      headerImage={data.headerImage}
+      jumbotron={data.jumbotron || {}}
       sections={data.sections || []}
       downloadNow={data.downloadNow}
     />

@@ -25,11 +25,7 @@ export function HowItWorksTemplate(props: HowItWorksTemplateProps) {
   return (
     <PageTransition>
       <div className="how-it-works">
-        <SharedJumbotron
-          headerImage={props.headerImage}
-          title="How It Works"
-          description="Simply"
-        />
+        <SharedJumbotron {...props.jumbotron} />
 
         <section className="container-fluid">
           <div className="row">
@@ -65,7 +61,7 @@ const HowItWorks = ({data}: Props) => {
     <Layout white>
       <HowItWorksTemplate
         sections={hiwData.frontmatter.sections}
-        headerImage={hiwData.frontmatter.headerImage}
+        jumbotron={hiwData.frontmatter.jumbotron}
         downloadNow={hiwData.frontmatter.downloadNow}
       />
     </Layout>
@@ -77,14 +73,17 @@ export const howItWorksPageQuery = graphql`
   query HowItWorksPage($id: String!) {
     markdownRemark(id: {eq: $id}) {
       frontmatter {
-        headerImage {
-          childImageSharp {
-            fluid(maxWidth: 2000, quality: 100) {
-              ...GatsbyImageSharpFluid
+        jumbotron {
+          title
+          description
+          headerImage {
+            childImageSharp {
+              fluid(maxWidth: 1440, quality: 100) {
+                ...GatsbyImageSharpFluid
+              }
             }
           }
         }
-
         sections {
           title
           body
