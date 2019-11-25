@@ -43,7 +43,7 @@ const FeatureCarousel = ({section}: Props) => {
 
   const next = () => {
     if (animating) return
-    const nextIndex = activeIndex === [section.sections[0]].length - 1 ? 0 : activeIndex + 1
+    const nextIndex = activeIndex === section.sections.length - 1 ? 0 : activeIndex + 1
     setActiveIndex(nextIndex)
   }
 
@@ -53,7 +53,7 @@ const FeatureCarousel = ({section}: Props) => {
     setActiveIndex(nextIndex)
   }
 
-  const slides = [section.sections[0]].map((item, ndx) => (
+  const slides = section.sections.map((item, ndx) => (
     <CarouselItem
       onExiting={() => setAnimating(true)}
       onExited={() => setAnimating(false)}
