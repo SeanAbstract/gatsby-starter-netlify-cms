@@ -2,7 +2,7 @@
 templateKey: contact-page
 jumbotron:
   description: Here to help
-  headerImage: /img/second-splash-extended-2000x400.jpg
+  headerImage: /img/second-splash-2000x400.jpg
   title: Contact
 informationSection:
   customerServiceContacts:

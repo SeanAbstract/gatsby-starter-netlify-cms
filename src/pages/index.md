@@ -1,20 +1,20 @@
 ---
 templateKey: index-page
+mainText: GLOBAL MARKETS
+subText: at your fingertips
 videoName: sailing.mp4
 videoNameAU: Beach-Final.mp4
 videoNameUS: Boat-Final.mp4
 videoNameCN: Boat-Final.mp4
 image: /img/landing-page-2.png
-mainText: GLOBAL MARKETS
-subText: at your fingertips
 firstSection:
   buttonText: Try Snowball Securities today
   description: >
     Fast and secure access to global markets with our online platform that
     allows you to buy and sell securities in Hong Kong, China and the US. Try
     Snowball Securities today - a trusted member of the Snowball Group
-  image: /img/snowball-phone.png
   mainText: Fast Secure Trusted
+  image: /img/snowball-phone.png
 stockSection:
   backgroundImage: /img/bg-image-building.jpg
   stocks:
@@ -162,20 +162,19 @@ testimonials:
   - backgroundImage: /img/snowball-testimonials-1.jpg
     customerName: Elliot
     customerPosition: investor
-    video: '/img/testimonial-1.mp4'
+    video: /img/elliot-craig.mp4
   - backgroundImage: /img/snowball-testimonials-2.jpg
     customerName: Jeremy
     customerPosition: investor
-    video: '/img/testimonial-3.mp4'
+    video: /img/jeremy-yang.mp4
   - backgroundImage: /img/snowball-testimonials-3.jpg
     customerName: Xuling
     customerPosition: investor
-    video: '/img/testimonial-2.mp4'
+    video: /img/xuling-zhu.mp4
 downloadNow:
-  image: /img/snowball-phone.png
   mainText: Access Global Markets Today
   subText: Download now
-
+  image: /img/snowball-phone.png
 footerLinks:
   firstRow:
     - href: /about
@@ -195,6 +194,5 @@ footerLinks:
       name: FAQs
     - href: /contact
       name: Contact
-    
 ---
 
