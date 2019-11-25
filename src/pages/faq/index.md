@@ -2,7 +2,7 @@
 templateKey: faq-page
 jumbotron:
   description: Answered
-  headerImage: /img/second-splash-extended-2000x400.jpg
+  headerImage: /img/mountain-splash-400x2000.jpg
   title: FAQS
 categories:
   - categoryTitle: About Snowball
