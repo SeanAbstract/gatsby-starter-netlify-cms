@@ -2,7 +2,7 @@
 templateKey: contact-page
 jumbotron:
   description: Here to help
-  headerImage: /img/second-splash-extended-2000x400.jpg
+  headerImage: /img/ant-financial-v2.jpg
   title: Contact
 informationSection:
   customerServiceContacts:
