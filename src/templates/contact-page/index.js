@@ -3,6 +3,7 @@ import React from 'react'
 import {graphql} from 'gatsby'
 import PageTransition from 'gatsby-plugin-page-transitions'
 import {UncontrolledTooltip} from 'reactstrap'
+import styled from 'styled-components'
 
 import qrCode from '../../img/wechat-english.jpg'
 import qrCodeZh from '../../img/wechat-zh.jpg'
@@ -186,29 +187,35 @@ export function ContactPageTemplate(props: Props) {
                 </div>
               </div>
               <div className="d-none d-sm-block">
-                <a href="https://www.facebook.com/snowballsecurities" target="_blank">
+                <StyledSocialLinks
+                  href="https://www.facebook.com/snowballsecurities"
+                  target="_blank"
+                >
                   <img
                     src={facebookIcon}
                     alt=""
                     style={{height: 30, width: 30, objectFit: 'contain'}}
                     className="mr-4"
                   />
-                </a>
-                <a href="https://www.linkedin.com/company/snowballsecurities" target="_blank">
+                </StyledSocialLinks>
+                <StyledSocialLinks
+                  href="https://www.linkedin.com/company/snowballsecurities"
+                  target="_blank"
+                >
                   <img
                     src={linkedinIcon}
                     alt=""
                     style={{height: 30, width: 30, objectFit: 'contain'}}
                     className="mr-4"
                   />
-                </a>
-                <a href="https://twitter.com/snowballsec?lang=en" target="_blank">
+                </StyledSocialLinks>
+                <StyledSocialLinks href="https://twitter.com/snowballsec?lang=en" target="_blank">
                   <img
                     src={twitterIcon}
                     alt=""
                     style={{height: 30, width: 30, objectFit: 'contain'}}
                   />
-                </a>
+                </StyledSocialLinks>
               </div>
               <div className="d-flex d-sm-none">
                 <div className="d-flex mr-4">
@@ -361,6 +368,13 @@ export function ContactPageTemplate(props: Props) {
     </PageTransition>
   )
 }
+
+const StyledSocialLinks = styled.a`
+  &:hover {
+    opacity: 50% !important;
+    transition: 0.1s ease-in-out;
+  }
+`
 
 function ContactPage({data}) {
   const {markdownRemark: contact} = data

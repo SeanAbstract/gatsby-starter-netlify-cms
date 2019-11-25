@@ -72,7 +72,7 @@ const AppButtons = styled.img`
   width: 120px;
 
   @media (max-width: 565px) {
-    width: 80px;
+    width: 100px;
   }
 `
 
