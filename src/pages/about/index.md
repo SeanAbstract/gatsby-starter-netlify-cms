@@ -109,6 +109,12 @@ historyCards:
     description: >-
       SNB moved to office at 25 Teed Street, Newmarket. Since the company moved
       in, a lot of SNB local clients have visited our office.
+  - date: November 2019
+    description: >-
+      Coinciding with the launch of the new website, Snowball Securities changed
+      it's name to Snowball X. The X has many meanings, it symbolises eXchange
+      which is the core of the Snowball platform.  It is also an acknowledgement
+      of the support and success of Snowball parent company XueQiu. 
 investors:
   - brandDescription: >-
       World leading venture capital firm, which has backed companies that now
