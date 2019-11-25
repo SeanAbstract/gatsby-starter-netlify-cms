@@ -1,6 +1,6 @@
 ---
 templateKey: about-page
-headerImage: /img/hero-about.jpg
+headerImage: /img/hero-about-extended-2000x400.jpg
 mainText: About
 subText: Snowball
 mainpitch:
@@ -176,25 +176,5 @@ downloadNow:
   image: /img/snowball-phone.png
   mainText: Access Global Markets Today
   subText: Download now
-
-footerLinks:
-  firstRow:
-    - href: /about
-      name: About
-    - href: /how-it-works
-      name: How it works
-    - href: /price
-      name: Price
-    - href: /download
-      name: Download
-  secondRow:
-    - href: /blog
-      name: Blog
-    - href: /risk-disclosure
-      name: Risk Disclosure
-    - href: /faq
-      name: FAQs
-    - href: /contact
-      name: Contact
 ---
 

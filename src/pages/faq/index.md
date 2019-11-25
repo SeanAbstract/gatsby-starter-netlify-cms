@@ -2,7 +2,7 @@
 templateKey: faq-page
 jumbotron:
   description: Answered
-  headerImage: /img/second-splash.jpg
+  headerImage: /img/second-splash-extended-2000x400.jpg
   title: FAQS
 categories:
   - categoryTitle: About Snowball
@@ -291,25 +291,5 @@ downloadNow:
   image: /img/snowball-phone.png
   mainText: Access Global Markets Today
   subText: Download now
-
-footerLinks:
-  firstRow:
-    - href: /about
-      name: About
-    - href: /how-it-works
-      name: How it works
-    - href: /price
-      name: Price
-    - href: /download
-      name: Download
-  secondRow:
-    - href: /blog
-      name: Blog
-    - href: /risk-disclosure
-      name: Risk Disclosure
-    - href: /faq
-      name: FAQs
-    - href: /contact
-      name: Contact
 ---
 
