@@ -426,9 +426,7 @@ export const IndexPageTemplate = ({
           <Fade bottom cascade>
             <div className="row">
               <div className="col-sm-8 mx-auto">
-                <div className="container">
-                  <BlogRoll />
-                </div>
+                <BlogRoll />
               </div>
             </div>
           </Fade>
@@ -485,7 +483,6 @@ class IndexPage extends React.Component {
 
   state = {
     loading: true,
-    useMobileView: false,
     geoCountry: null,
   }
 
@@ -493,16 +490,6 @@ class IndexPage extends React.Component {
     setTimeout(() => {
       this.setState({loading: false})
     }, 1000)
-
-    if (window !== undefined) {
-      if (window.innerWidth < 578) {
-        this.setState({useMobileView: true})
-      } else {
-        this.setState({useMobileView: false})
-      }
-
-      window.addEventListener('resize', this.resizeMethod)
-    }
 
     // Geo location checker - Used for swapping homepage header video
     fetch('/locale.json')
@@ -513,14 +500,6 @@ class IndexPage extends React.Component {
 
   componentWillUnmount() {
     window.removeEventListener('resize', this.resizeMethod)
-  }
-
-  resizeMethod = () => {
-    if (window.innerWidth < 578) {
-      this.setState({useMobileView: true})
-    } else {
-      this.setState({useMobileView: false})
-    }
   }
 
   shouldUseWhiteLogo = () => !(this.state.geoCountry === 'New Zealand' || 'Not specified')

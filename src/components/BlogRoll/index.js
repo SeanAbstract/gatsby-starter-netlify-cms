@@ -12,7 +12,6 @@ import arrowRight from '../../img/arrow-right-blue.png'
 import arrowRightWhite from '../../img/arrow-right.png'
 
 import './styles.scss'
-import {interval} from 'rxjs'
 
 const content = [
   {
@@ -35,54 +34,6 @@ const content = [
   },
 ]
 
-// const BlogRoll = props => {
-//   const {data} = props
-//   const {edges: posts} = data.allMarkdownRemark
-
-//   return (
-//     <Slider {...settings}>
-//       {content.map(({node: post}) => {
-//         const {title, description, featuredimage} = post.frontmatter
-//         return (
-//           <StyledCol>
-//             <OuterContainer>
-//               <ImgContainer>
-//                 {featuredimage && (
-//                   <Img
-//                     fluid={featuredimage.childImageSharp.fluid}
-//                     imgStyle={{height: '100%'}}
-//                     style={{height: '100%', objectFit: 'cover'}}
-//                   />
-//                 )}
-//                 <Overlay />
-//               </ImgContainer>
-//               <div className="container blog-inner-container">
-//                 <div>
-//                   <h5 className="lead mb-2">{title}</h5>
-//                   <small className="mb-3 blog-desc mb-3">{description}</small>
-//                   <div className="mt-5">
-//                     <Link to={'/how-it-works' || post.fields.slug}>
-//                       <StyledButton
-//                         className="btn btn-outline-primary rounded-pill "
-//                         type="button"
-//                         style={{borderColor: 'white', color: 'white'}}
-//                       >
-//                         Get Started
-//                       </StyledButton>
-//                     </Link>
-//                   </div>
-//                 </div>
-//                 <div className="mt-5">
-//                   <h3>&gt;</h3>
-//                 </div>
-//               </div>
-//             </OuterContainer>
-//           </StyledCol>
-//         )
-//       })}
-//     </Slider>
-//   )
-// }
 class BlogRoll extends React.Component {
   state = {
     currentNdx: 0,
@@ -91,20 +42,34 @@ class BlogRoll extends React.Component {
   }
 
   componentDidMount() {
-    let interval = setInterval(() => {
-      this.setState(prevState => ({currentNdx: (prevState.currentNdx + 1) % 3}))
-    }, 2000)
+    let interval
+    if (window) {
+      if (window.innerWidth < 578) {
+        window.addEventListener('scroll', () => {
+          console.log(window.scrollY)
+          this.scrollActive()
+        })
+      } else {
+        window.addEventListener('resize', () => {
+          if (window.innerWidth < 578) {
+            clearInterval(interval)
+          } else {
+            interval = setInterval(() => {
+              this.setState(prevState => ({currentNdx: (prevState.currentNdx + 1) % 3}))
+            }, 2000)
+          }
+        })
+      }
+    }
+  }
 
-    if (window !== undefined) {
-      window.addEventListener('resize', () => {
-        if (window.innerWidth < 578) {
-          clearInterval(interval)
-        } else {
-          interval = setInterval(() => {
-            this.setState(prevState => ({currentNdx: (prevState.currentNdx + 1) % 3}))
-          }, 2000)
-        }
-      })
+  scrollActive = () => {
+    if (window.scrollY > 6787 && window.scrollY < 7078) {
+      this.setState({currentNdx: 0})
+    } else if (window.scrollY > 7078 && window.scrollY < 7380) {
+      this.setState({currentNdx: 1})
+    } else {
+      this.setState({currentNdx: 2})
     }
   }
 
@@ -301,39 +266,3 @@ const OuterContainer = styled.div`
     min-height: 25vh;
   }
 `
-
-// export default () => {
-//   const data = useStaticQuery(graphql`
-//     query BlogRollQuery {
-//       allMarkdownRemark(
-//         sort: {order: DESC, fields: [frontmatter___date]}
-//         filter: {frontmatter: {templateKey: {eq: "blog-post"}}}
-//       ) {
-//         edges {
-//           node {
-//             excerpt(pruneLength: 400)
-//             id
-//             fields {
-//               slug
-//             }
-//             frontmatter {
-//               title
-//               description
-//               templateKey
-//               date(formatString: "MMMM DD, YYYY")
-//               featuredpost
-//               featuredimage {
-//                 childImageSharp {
-//                   fluid(maxWidth: 200, quality: 100) {
-//                     ...GatsbyImageSharpFluid
-//                   }
-//                 }
-//               }
-//             }
-//           }
-//         }
-//       }
-//     }
-//   `)
-//   return <BlogRoll data={data} />
-// }
