@@ -121,7 +121,7 @@ const StyledMain = styled.main`
   position: relative;
 
   @media (max-width: 426px) {
-    margin-bottom: 380px;
+    margin-bottom: 350px;
   }
 `
 
