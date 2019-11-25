@@ -61,9 +61,9 @@ function Footer() {
                 <StyledLink to="/how-it-works">
                   <p className="mb-1">How it works</p>
                 </StyledLink>
-                <StyledLink to="/price">
+                {/* <StyledLink to="/price">
                   <p className="mb-1">Prices</p>
-                </StyledLink>
+                </StyledLink> */}
                 <StyledLink to="/download">
                   <p className="mb-1">Downloads</p>
                 </StyledLink>

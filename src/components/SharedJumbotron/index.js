@@ -46,7 +46,6 @@ const Jumbotron = styled.div`
         : props.headerImage});
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
-    background-size: 1450px;
     background-position: center top;
     background-repeat: no-repeat;
     background-color: #000;
