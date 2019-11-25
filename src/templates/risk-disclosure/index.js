@@ -42,7 +42,10 @@ export const BlogPostPageTemplate = (props: BlogPostTemplate) => {
         <div className="container content">
           <div className="row justify-content-center">
             <div className="col col-10 blog-container">
-              <h3><br/>Risk Disclosure</h3>
+              <h3>
+                <br />
+                Risk Disclosure
+              </h3>
               {disclosures.map((disclosure, ndx) => (
                 <Yo className="pt-1" key={`disclosure-${ndx}`}>
                   <p className="mb-0" style={{fontWeight: '500'}}>
@@ -65,7 +68,7 @@ const BlogPost = ({data}) => {
   const {markdownRemark: post} = data
 
   return (
-    <Layout>
+    <Layout footerLinks={post.frontmatter.footerLinks}>
       <BlogPostPageTemplate
         content={post.html}
         contentComponent={HTMLContent}
@@ -123,6 +126,16 @@ export const pageQuery = graphql`
                 ...GatsbyImageSharpFluid
               }
             }
+          }
+        }
+        footerLinks {
+          firstRow {
+            name
+            href
+          }
+          secondRow {
+            name
+            href
           }
         }
       }

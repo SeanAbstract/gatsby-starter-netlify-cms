@@ -13,6 +13,7 @@ const FaqsPreview = ({entry}) => {
       lowCommissionPackage={data.lowCommissionPackage || {}}
       lowInterestRatePackage={data.lowInterestRatePackage || {}}
       downloadNow={data.downloadNow || {}}
+      footerLinks={data.footerLinks || {}}
     />
   )
 }

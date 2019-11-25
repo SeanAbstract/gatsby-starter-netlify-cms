@@ -25,6 +25,7 @@ const IndexPagePreview = ({entry, getAsset}) => {
       videoNameCN={data.videoNameCN}
       mainText={data.mainText}
       subText={data.subText}
+      footerLinks={data.footerLinks || {}}
     />
   )
 }

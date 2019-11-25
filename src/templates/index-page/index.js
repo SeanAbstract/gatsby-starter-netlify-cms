@@ -542,7 +542,7 @@ class IndexPage extends React.Component {
     // }
 
     return (
-      <Layout white={this.shouldUseWhiteLogo()} stickyFooter>
+      <Layout white={this.shouldUseWhiteLogo()} stickyFooter footerLinks={frontmatter.footerLinks}>
         <meta name="robots" content="noindex" />
         <IndexPageTemplate
           geoCountry={this.state.geoCountry}
@@ -677,6 +677,16 @@ export const pageQuery = graphql`
                 ...GatsbyImageSharpFluid
               }
             }
+          }
+        }
+        footerLinks {
+          firstRow {
+            name
+            href
+          }
+          secondRow {
+            name
+            href
           }
         }
       }

@@ -291,7 +291,7 @@ const AboutPage = ({data}: Props) => {
   console.log(post)
 
   return (
-    <Layout white>
+    <Layout white footerLinks={post.frontmatter.footerLinks}>
       <AboutPageTemplate
         mainpitch={post.frontmatter.mainpitch}
         tabs={post.frontmatter.tabs}
@@ -371,6 +371,16 @@ export const aboutPageQuery = graphql`
                 ...GatsbyImageSharpFluid
               }
             }
+          }
+        }
+        footerLinks {
+          firstRow {
+            name
+            href
+          }
+          secondRow {
+            name
+            href
           }
         }
       }

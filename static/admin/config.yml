@@ -26,6 +26,16 @@ collections:
           {label: "Sub Text", name: "subText", widget: string},
           {label: "Image", name: "image", widget: image},
         ]}
+      - {label: "Footer Links", name: "footerLinks", widget: object, fields: [
+          {label: "First Row", name: "firstRow", widget: list, fields: [
+            {label: "Name", name: "name", widget: string},
+            {label: "Href", name: "href", widget: string},
+          ]},
+          {label: "Second Row", name: "secondRow", widget: list, fields: [
+            {label: "Name", name: "name", widget: string},
+            {label: "Href", name: "href", widget: string},
+          ]},
+        ]}
 
   - name: "englishPages"
     label: "Pages"
@@ -104,6 +114,17 @@ collections:
               {label: "Sub Text", name: "subText", widget: string},
               {label: "Image", name: "image", widget: image},
             ]}
+          - {label: "Footer Links", name: "footerLinks", widget: object, fields: [
+              {label: "First Row", name: "firstRow", widget: list, fields: [
+                {label: "Name", name: "name", widget: string},
+                {label: "Href", name: "href", widget: string},
+              ]},
+              {label: "Second Row", name: "secondRow", widget: list, fields: [
+                {label: "Name", name: "name", widget: string},
+                {label: "Href", name: "href", widget: string},
+              ]},
+            ]}
+
  
       - file: "src/pages/about/index.md"
         label: "About"
@@ -140,6 +161,16 @@ collections:
               {label: "Main Text", name: "mainText", widget: string},
               {label: "Sub Text", name: "subText", widget: string},
               {label: "Image", name: "image", widget: image},
+            ]}
+          - {label: "Footer Links", name: "footerLinks", widget: object, fields: [
+              {label: "First Row", name: "firstRow", widget: list, fields: [
+                {label: "Name", name: "name", widget: string},
+                {label: "Href", name: "href", widget: string},
+              ]},
+              {label: "Second Row", name: "secondRow", widget: list, fields: [
+                {label: "Name", name: "name", widget: string},
+                {label: "Href", name: "href", widget: string},
+              ]},
             ]}
 
       - file: "src/pages/price/index.md"
@@ -217,6 +248,16 @@ collections:
               {label: "Sub Text", name: "subText", widget: string},
               {label: "Image", name: "image", widget: image},
             ]}
+          - {label: "Footer Links", name: "footerLinks", widget: object, fields: [
+              {label: "First Row", name: "firstRow", widget: list, fields: [
+                {label: "Name", name: "name", widget: string},
+                {label: "Href", name: "href", widget: string},
+              ]},
+              {label: "Second Row", name: "secondRow", widget: list, fields: [
+                {label: "Name", name: "name", widget: string},
+                {label: "Href", name: "href", widget: string},
+              ]},
+            ]}
 
       - file: "src/pages/how-it-works/index.md"
         label: "How it works"
@@ -237,6 +278,16 @@ collections:
               {label: "Main Text", name: "mainText", widget: string},
               {label: "Sub Text", name: "subText", widget: string},
               {label: "Image", name: "image", widget: image},
+            ]}
+          - {label: "Footer Links", name: "footerLinks", widget: object, fields: [
+              {label: "First Row", name: "firstRow", widget: list, fields: [
+                {label: "Name", name: "name", widget: string},
+                {label: "Href", name: "href", widget: string},
+              ]},
+              {label: "Second Row", name: "secondRow", widget: list, fields: [
+                {label: "Name", name: "name", widget: string},
+                {label: "Href", name: "href", widget: string},
+              ]},
             ]}
       
       - file: "src/pages/faq/index.md"
@@ -260,6 +311,16 @@ collections:
               {label: "Main Text", name: "mainText", widget: string},
               {label: "Sub Text", name: "subText", widget: string},
               {label: "Image", name: "image", widget: image},
+            ]}
+          - {label: "Footer Links", name: "footerLinks", widget: object, fields: [
+              {label: "First Row", name: "firstRow", widget: list, fields: [
+                {label: "Name", name: "name", widget: string},
+                {label: "Href", name: "href", widget: string},
+              ]},
+              {label: "Second Row", name: "secondRow", widget: list, fields: [
+                {label: "Name", name: "name", widget: string},
+                {label: "Href", name: "href", widget: string},
+              ]},
             ]}
       
       - file: "src/pages/contact/index.md"
@@ -296,6 +357,16 @@ collections:
               {label: "Sub Text", name: "subText", widget: string},
               {label: "Image", name: "image", widget: image},
             ]}
+          - {label: "Footer Links", name: "footerLinks", widget: object, fields: [
+              {label: "First Row", name: "firstRow", widget: list, fields: [
+                {label: "Name", name: "name", widget: string},
+                {label: "Href", name: "href", widget: string},
+              ]},
+              {label: "Second Row", name: "secondRow", widget: list, fields: [
+                {label: "Name", name: "name", widget: string},
+                {label: "Href", name: "href", widget: string},
+              ]},
+            ]}
       
       - file: "src/pages/products/index.md"
         label: "Products Page"
@@ -311,3 +382,13 @@ collections:
           - {label: Testimonials, name: testimonials, widget: list, fields: [{label: Quote, name: quote, widget: string}, {label: Author, name: author, widget: string}]}
           - {label: Full_image, name: full_image, widget: image}
           - {label: Pricing, name: pricing, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: string}, {label: Plans, name: plans, widget: list, fields: [{label: Plan, name: plan, widget: string}, {label: Price, name: price, widget: string}, {label: Description, name: description, widget: string}, {label: Items, name: items, widget: list}]}]}
+          - {label: "Footer Links", name: "footerLinks", widget: object, fields: [
+              {label: "First Row", name: "firstRow", widget: list, fields: [
+                {label: "Name", name: "name", widget: string},
+                {label: "Href", name: "href", widget: string},
+              ]},
+              {label: "Second Row", name: "secondRow", widget: list, fields: [
+                {label: "Name", name: "name", widget: string},
+                {label: "Href", name: "href", widget: string},
+              ]},
+            ]}

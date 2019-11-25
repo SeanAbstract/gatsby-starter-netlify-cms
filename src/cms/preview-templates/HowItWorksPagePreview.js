@@ -11,6 +11,7 @@ const HowItWorksPreview = ({entry}) => {
       jumbotron={data.jumbotron || {}}
       sections={data.sections || []}
       downloadNow={data.downloadNow}
+      footerLinks={data.footerLinks || {}}
     />
   )
 }

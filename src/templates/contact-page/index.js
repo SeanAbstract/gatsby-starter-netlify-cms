@@ -368,7 +368,7 @@ function ContactPage({data}) {
   console.log(contact)
 
   return (
-    <Layout white>
+    <Layout white footerLinks={contact.frontmatter.footerLinks}>
       <ContactPageTemplate
         jumbotron={contact.frontmatter.jumbotron}
         informationSection={contact.frontmatter.informationSection}
@@ -430,6 +430,16 @@ export const contactPageQuery = graphql`
                 ...GatsbyImageSharpFluid
               }
             }
+          }
+        }
+        footerLinks {
+          firstRow {
+            name
+            href
+          }
+          secondRow {
+            name
+            href
           }
         }
       }

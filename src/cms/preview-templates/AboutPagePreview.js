@@ -17,6 +17,7 @@ const AboutPagePreview = ({entry}) => {
       downloadNow={data.downloadNow || {}}
       mainText={data.mainText}
       subText={data.subText}
+      footerLinks={data.footerLinks || {}}
     />
   )
 }

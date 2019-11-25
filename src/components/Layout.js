@@ -8,7 +8,7 @@ import Footer from './Footer'
 import useSiteMetadata from './SiteMetadata'
 import Header from './Header'
 
-const TemplateWrapper = ({children, white, stickyFooter}) => {
+const TemplateWrapper = ({children, white, stickyFooter, footerLinks}) => {
   const {title, description} = useSiteMetadata()
 
   return (
@@ -97,7 +97,7 @@ const TemplateWrapper = ({children, white, stickyFooter}) => {
           </div>
         </div>
       </StickyFooterCta>
-      <Footer />
+      <Footer footerLinks={footerLinks} />
     </div>
   )
 }

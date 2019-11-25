@@ -10,7 +10,7 @@ import twitterIcon from '../../../static/img/twitter_blue.png'
 import wechatIcon from '../../../static/img/wechat_blue.png'
 import qrCode from '../../img/wechat-english.jpg'
 
-function Footer() {
+function Footer(props) {
   const [show, setShow] = useState(false)
 
   useEffect(() => {
@@ -55,32 +55,52 @@ function Footer() {
                 </div>
               </Col>
               <Col xs={4}>
-                <StyledLink to="/about">
-                  <p className="mb-1">About</p>
-                </StyledLink>
-                <StyledLink to="/how-it-works">
-                  <p className="mb-1">How it works</p>
-                </StyledLink>
-                {/* <StyledLink to="/price">
-                  <p className="mb-1">Prices</p>
-                </StyledLink> */}
-                <StyledLink to="/download">
-                  <p className="mb-1">Downloads</p>
-                </StyledLink>
+                {props.firstRowLinks ? (
+                  props.firstRowLinks.map(link => (
+                    <StyledLink to={link.href} key={`firstRow-${link.name}`}>
+                      <p className="mb-1">{link.name}</p>
+                    </StyledLink>
+                  ))
+                ) : (
+                  <>
+                    <StyledLink to="/about">
+                      <p className="mb-1">About</p>
+                    </StyledLink>
+                    <StyledLink to="/how-it-works">
+                      <p className="mb-1">How it works</p>
+                    </StyledLink>
+                    <StyledLink to="/price">
+                      <p className="mb-1">Prices</p>
+                    </StyledLink>
+                    <StyledLink to="/download">
+                      <p className="mb-1">Downloads</p>
+                    </StyledLink>
+                  </>
+                )}
               </Col>
               <Col xs={4}>
-                <StyledLink to="/blog">
-                  <p className="mb-1">Blog</p>
-                </StyledLink>
-                <StyledLink to="/risk-disclosure">
-                  <p className="mb-1">Risk Disclosure</p>
-                </StyledLink>
-                <StyledLink to="/faq">
-                  <p className="mb-1">FAQs</p>
-                </StyledLink>
-                <StyledLink to="/contact">
-                  <p className="mb-1">Contact</p>
-                </StyledLink>
+                {props.secondRowLinks ? (
+                  props.firstRowLinks.map(link => (
+                    <StyledLink to={link.href} key={`firstRow-${link.name}`}>
+                      <p className="mb-1">{link.name}</p>
+                    </StyledLink>
+                  ))
+                ) : (
+                  <>
+                    <StyledLink to="/blog">
+                      <p className="mb-1">Blog</p>
+                    </StyledLink>
+                    <StyledLink to="/risk-disclosure">
+                      <p className="mb-1">Risk Disclosure</p>
+                    </StyledLink>
+                    <StyledLink to="/faq">
+                      <p className="mb-1">FAQs</p>
+                    </StyledLink>
+                    <StyledLink to="/contact">
+                      <p className="mb-1">Contact</p>
+                    </StyledLink>
+                  </>
+                )}
               </Col>
             </Row>
           </Col>

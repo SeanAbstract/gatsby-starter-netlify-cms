@@ -13,6 +13,7 @@ const AboutPagePreview = ({entry}) => {
       socialMedia={data.socialMedia || {}}
       usingCMS
       downloadNow={data.downloadNow || {}}
+      footerLinks={data.footerLinks || {}}
     />
   )
 }

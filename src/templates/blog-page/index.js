@@ -83,7 +83,7 @@ export default function BlogPage({data}: BlogPageProps) {
   const {markdownRemark: post} = data
 
   return (
-    <Layout>
+    <Layout footerLinks={post.frontmatter.footerLinks}>
       <Helmet title="Blogs" />
       <BlogPageTemplate
         contentComponent={HTMLContent}
@@ -179,6 +179,16 @@ export const pageQuery = graphql`
                 ...GatsbyImageSharpFluid
               }
             }
+          }
+        }
+        footerLinks {
+          firstRow {
+            name
+            href
+          }
+          secondRow {
+            name
+            href
           }
         }
       }

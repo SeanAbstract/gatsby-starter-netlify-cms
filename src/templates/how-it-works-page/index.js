@@ -58,7 +58,7 @@ const HowItWorks = ({data}: Props) => {
   console.log(hiwData)
 
   return (
-    <Layout white>
+    <Layout white footerLinks={hiwData.frontmatter.footerLinks}>
       <HowItWorksTemplate
         sections={hiwData.frontmatter.sections}
         jumbotron={hiwData.frontmatter.jumbotron}
@@ -104,6 +104,16 @@ export const howItWorksPageQuery = graphql`
                 ...GatsbyImageSharpFluid
               }
             }
+          }
+        }
+        footerLinks {
+          firstRow {
+            name
+            href
+          }
+          secondRow {
+            name
+            href
           }
         }
       }

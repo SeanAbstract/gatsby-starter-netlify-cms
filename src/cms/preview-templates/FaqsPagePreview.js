@@ -6,7 +6,13 @@ import {FaqPageTemplate} from '../../templates/faq-page'
 const FaqsPreview = ({entry}) => {
   const data = entry.getIn(['data']).toJS()
 
-  return <FaqPageTemplate jumbotron={data.jumbotron || {}} categories={data.categories || []} />
+  return (
+    <FaqPageTemplate
+      jumbotron={data.jumbotron || {}}
+      categories={data.categories || []}
+      footerLinks={data.footerLinks || {}}
+    />
+  )
 }
 
 FaqsPreview.propTypes = {

@@ -122,7 +122,7 @@ function FaqPage({data}: Props) {
   console.log(faq)
 
   return (
-    <Layout white>
+    <Layout white footerLinks={faq.frontmatter.footerLinks}>
       <FaqPageTemplate
         jumbotron={faq.frontmatter.jumbotron}
         categories={faq.frontmatter.categories}
@@ -165,6 +165,16 @@ export const faqPageQuery = graphql`
                 ...GatsbyImageSharpFluid
               }
             }
+          }
+        }
+        footerLinks {
+          firstRow {
+            name
+            href
+          }
+          secondRow {
+            name
+            href
           }
         }
       }

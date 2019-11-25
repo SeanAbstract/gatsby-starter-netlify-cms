@@ -30,26 +30,37 @@ export const BlogPostPageTemplate = (props: BlogPostTemplate) => {
         <div className="container content">
           <div className="row justify-content-center">
             <div className="col col-10 blog-container">
-              <h3><br/>Terms and Conditions</h3>
+              <h3>
+                <br />
+                Terms and Conditions
+              </h3>
               {/* <PostContent content={content} /> */}
               <p>
                 By accessing this website and any portal within this website, you agree to and will
-                comply with the terms of use, and any applicable portal terms of use.<br/><br/>
+                comply with the terms of use, and any applicable portal terms of use.
+                <br />
+                <br />
                 The material on this website is given as information only. SNB does not provide any
                 financial advice on buying, holding, or disposing of financial products. Any trading
                 symbols displayed are for illustrative purposes only and are not intended to be
-                recommendations or opinions.<br/><br/>
+                recommendations or opinions.
+                <br />
+                <br />
                 Whilst the information on this website has been prepared with all reasonable care,
                 SNB, its directors and officers make no representation or warranty (express or
                 implied) regarding the accuracy or completeness of the information on this website
-                and accept no responsibility for any errors, omissions, or service unavailability. To the
-                maximum extent permitted by law, SNB, its directors and officers disclaim any liability
-                arising from the use of information on this website.<br/><br/>
-                No investment is free from risk. Returns can be positive or negative. The risk of loss in
-                trading of any stock or other financial products can be substantial and it is possible
-                you could receive back less money than you invest. Investors should seek
+                and accept no responsibility for any errors, omissions, or service unavailability.
+                To the maximum extent permitted by law, SNB, its directors and officers disclaim any
+                liability arising from the use of information on this website.
+                <br />
+                <br />
+                No investment is free from risk. Returns can be positive or negative. The risk of
+                loss in trading of any stock or other financial products can be substantial and it
+                is possible you could receive back less money than you invest. Investors should seek
                 independent and financial advice specific to their situation before making an
-                investment decision. Please read through our <Link to="/risk-disclosure">Risk Disclosure</Link> and <Link to="/terms">Conditions</Link> before investing.
+                investment decision. Please read through our{' '}
+                <Link to="/risk-disclosure">Risk Disclosure</Link> and{' '}
+                <Link to="/terms">Conditions</Link> before investing.
               </p>
             </div>
           </div>
@@ -63,7 +74,7 @@ const BlogPost = ({data}) => {
   const {markdownRemark: post} = data
 
   return (
-    <Layout>
+    <Layout footerLinks={post.frontmatter.footerLinks}>
       <BlogPostPageTemplate
         content={post.html}
         contentComponent={HTMLContent}
@@ -104,6 +115,16 @@ export const pageQuery = graphql`
                 ...GatsbyImageSharpFluid
               }
             }
+          }
+        }
+        footerLinks {
+          firstRow {
+            name
+            href
+          }
+          secondRow {
+            name
+            href
           }
         }
       }

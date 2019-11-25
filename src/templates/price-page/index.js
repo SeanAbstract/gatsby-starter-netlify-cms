@@ -283,7 +283,7 @@ function PricePage({data}) {
   console.log(price)
 
   return (
-    <Layout white>
+    <Layout white footerLinks={price.frontmatter.footerLinks}>
       <PricePageTemplate
         jumbotron={price.frontmatter.jumbotron}
         mainPitch={price.frontmatter.mainPitch}
@@ -382,6 +382,16 @@ export const pricePageQuery = graphql`
                 ...GatsbyImageSharpFluid
               }
             }
+          }
+        }
+        footerLinks {
+          firstRow {
+            name
+            href
+          }
+          secondRow {
+            name
+            href
           }
         }
       }
