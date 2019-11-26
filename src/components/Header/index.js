@@ -103,7 +103,7 @@ const dataMobile = [
         name: 'HK Stock',
       },
       {
-        href: '/hk-stocks-options',
+        href: '/hk-stock-options',
         name: 'HK Stock Options',
       },
       {
@@ -149,6 +149,7 @@ export default class Header extends React.Component {
       scrolled: false,
       currentPath: '/',
       isDropDownOpen: false,
+      isDropDownOpen2: false,
     }
   }
 
@@ -348,8 +349,38 @@ export default class Header extends React.Component {
 
             <StyledCollapse isOpen={this.state.isOpen} navbar className="d-none">
               <Nav className="ml-auto scroll-nav" navbar>
-                {data.map(link =>
-                  link.href !== '' ? (
+                {data.map((link, ndx) => {
+                  if (link.children) {
+                    return (
+                      <div style={{position: 'relative'}} className="nav-link mr-0">
+                        <Dropdown
+                          nav
+                          inNavbar
+                          isOpen={this.state.isDropDownOpen2}
+                          onMouseEnter={() => this.setState({isDropDownOpen2: true})}
+                          onMouseLeave={() => this.setState({isDropDownOpen2: false})}
+                        >
+                          <DropdownToggle
+                            nav
+                            caret
+                            className="p-0 d-flex align-items-center"
+                            style={{fontSize: '16px', fontWeight: '400'}}
+                          >
+                            {link.name}
+                          </DropdownToggle>
+                          <DropdownMenu style={{background: 'white', opacity: 1, borderRadius: 0}}>
+                            {link.children.map(childLink => (
+                              <Link to={`pricing/${childLink.href}`}>
+                                <DropdownItem>{childLink.name}</DropdownItem>
+                              </Link>
+                            ))}
+                          </DropdownMenu>
+                        </Dropdown>
+                      </div>
+                    )
+                  }
+
+                  return (
                     <div style={{position: 'relative'}} className="nav-link">
                       <Link
                         to={link.href}
@@ -359,12 +390,8 @@ export default class Header extends React.Component {
                         {link.name}
                       </Link>
                     </div>
-                  ) : (
-                    <Link to="/download" activeClassName="custom-active-2" style={{color: 'black'}}>
-                      Download
-                    </Link>
                   )
-                )}
+                })}
               </Nav>
             </StyledCollapse>
           </div>

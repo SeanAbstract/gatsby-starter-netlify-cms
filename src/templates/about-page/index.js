@@ -43,6 +43,7 @@ const settings = {
   slidesToScroll: 4,
   prevArrow: <SliderArrow to="prev" />,
   nextArrow: <SliderArrow to="next" />,
+  initialSlide: -4,
   responsive: [
     {
       breakpoint: 768,
