@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: highest standard of service
 date: 2019-10-16T15:04:10.000Z
-description: Test content
+description: A word from our Managing Director
 featuredpost: true
 featuredimage: /img/landing-page-2.png
 category: group
