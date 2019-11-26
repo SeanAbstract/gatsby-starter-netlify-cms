@@ -48,110 +48,116 @@ export const FinancingInterestRatesPageTemplate = (props: FinancingInterestRates
               <h5>
                 Financing interest rate for US Dollar
               </h5>
-              <table class="table table-bordered">
-                <thead>
+              <div className="table-responsive">
+                <table class="table table-bordered">
+                  <thead>
+                    <tr>
+                      <th scope="col">Currency</th>
+                      <th scope="col">Loan amount</th>
+                      <th scope="col">Interest rate <br/>– Low-commission Plan</th>
+                      <th scope="col">Interest rate <br/>– Low-interest rate Plan</th>
+                    </tr>
+                  </thead>
                   <tr>
-                    <th scope="col">Currency</th>
-                    <th scope="col">Loan amount</th>
-                    <th scope="col">Interest rate <br/>– Low-commission Plan</th>
-                    <th scope="col">Interest rate <br/>– Low-interest rate Plan</th>
+                    <td rowspan="5">USD</td>
+                    <td>0 - 100,000</td>
+                    <td>5.05%</td>
+                    <td>3.05%</td>
                   </tr>
-                </thead>
-                <tr>
-                  <td rowspan="5">USD</td>
-                  <td>0 - 100,000</td>
-                  <td>5.05%</td>
-                  <td>3.05%</td>
-                </tr>
-                <tr>
-                  <td>100,000.01 - 1,000,000</td>
-                  <td>4.55%</td>
-                  <td>2.55%</td>
-                </tr>
-                <tr>
-                  <td>1,000,000.01 - 3,000,000</td>
-                  <td>4.05%</td>
-                  <td>2.05%</td>
-                </tr>
-                <tr>
-                  <td>3,000,000.01 – 200,000,000</td>
-                  <td>3.85%</td>
-                  <td>1.85%</td>
-                </tr>
-                <tr>
-                  <td>200,000,000.01 +</td>
-                  <td>3.85%</td>
-                  <td>1.85%</td>
-                </tr>
-              </table>
+                  <tr>
+                    <td>100,000.01 - 1,000,000</td>
+                    <td>4.55%</td>
+                    <td>2.55%</td>
+                  </tr>
+                  <tr>
+                    <td>1,000,000.01 - 3,000,000</td>
+                    <td>4.05%</td>
+                    <td>2.05%</td>
+                  </tr>
+                  <tr>
+                    <td>3,000,000.01 – 200,000,000</td>
+                    <td>3.85%</td>
+                    <td>1.85%</td>
+                  </tr>
+                  <tr>
+                    <td>200,000,000.01 +</td>
+                    <td>3.85%</td>
+                    <td>1.85%</td>
+                  </tr>
+                </table>
+              </div>
               <h5>
                 <br/><br/>Financing interest rate for HK Dollar
               </h5>
-              <table class="table table-bordered">
-                <thead>
+              <div className="table-responsive">
+                <table class="table table-bordered">
+                  <thead>
+                    <tr>
+                      <th scope="col">Currency</th>
+                      <th scope="col">Loan amount</th>
+                      <th scope="col">Interest rate <br/>– Low-commission Plan</th>
+                      <th scope="col">Interest rate <br/>– Low-interest rate Plan</th>
+                    </tr>
+                  </thead>
                   <tr>
-                    <th scope="col">Currency</th>
-                    <th scope="col">Loan amount</th>
-                    <th scope="col">Interest rate <br/>– Low-commission Plan</th>
-                    <th scope="col">Interest rate <br/>– Low-interest rate Plan</th>
+                    <td rowspan="4">HKD</td>
+                    <td>0 - 780,000</td>
+                    <td>6.58%</td>
+                    <td>4.58%</td>
                   </tr>
-                </thead>
-                <tr>
-                  <td rowspan="4">HKD</td>
-                  <td>0 - 780,000</td>
-                  <td>6.58%</td>
-                  <td>4.58%</td>
-                </tr>
-                <tr>
-                  <td>780,000.01 - 7,800,000</td>
-                  <td>6.08%</td>
-                  <td>4.08%</td>
-                </tr>
-                <tr>
-                  <td>7,800,000.01 - 780,000,000</td>
-                  <td>5.58%</td>
-                  <td>3.58%</td>
-                </tr>
-                <tr>
-                  <td>780,000,000.01 +</td>
-                  <td>5.58%</td>
-                  <td>3.58%</td>
-                </tr>
-              </table>
+                  <tr>
+                    <td>780,000.01 - 7,800,000</td>
+                    <td>6.08%</td>
+                    <td>4.08%</td>
+                  </tr>
+                  <tr>
+                    <td>7,800,000.01 - 780,000,000</td>
+                    <td>5.58%</td>
+                    <td>3.58%</td>
+                  </tr>
+                  <tr>
+                    <td>780,000,000.01 +</td>
+                    <td>5.58%</td>
+                    <td>3.58%</td>
+                  </tr>
+                </table>
+              </div>
               <h5>
                 <br/><br/>Financing interest rate for CNY Dollar
               </h5>
-              <table class="table table-bordered">
-                <thead>
+              <div className="table-responsive">
+                <table class="table table-bordered">
+                  <thead>
+                    <tr>
+                      <th scope="col">Currency</th>
+                      <th scope="col">Loan amount</th>
+                      <th scope="col">Interest rate <br/>– Low-commission Plan</th>
+                      <th scope="col">Interest rate <br/>– Low-interest rate Plan</th>
+                    </tr>
+                  </thead>
                   <tr>
-                    <th scope="col">Currency</th>
-                    <th scope="col">Loan amount</th>
-                    <th scope="col">Interest rate <br/>– Low-commission Plan</th>
-                    <th scope="col">Interest rate <br/>– Low-interest rate Plan</th>
+                    <td rowspan="4">CNH</td>
+                    <td>0 - 625,000</td>
+                    <td>9.625%</td>
+                    <td>7.625%</td>
                   </tr>
-                </thead>
-                <tr>
-                  <td rowspan="4">CNH</td>
-                  <td>0 - 625,000</td>
-                  <td>9.625%</td>
-                  <td>7.625%</td>
-                </tr>
-                <tr>
-                  <td>625,000.01 - 6,250,000</td>
-                  <td>9.625%</td>
-                  <td>7.625%</td>
-                </tr>
-                <tr>
-                  <td>6,250,000.01 - 125,000,000</td>
-                  <td>9.625%</td>
-                  <td>7.625%</td>
-                </tr>
-                <tr>
-                  <td>125,000,000.01 +</td>
-                  <td>9.625%</td>
-                  <td>7.625%</td>
-                </tr>
-              </table>
+                  <tr>
+                    <td>625,000.01 - 6,250,000</td>
+                    <td>9.625%</td>
+                    <td>7.625%</td>
+                  </tr>
+                  <tr>
+                    <td>6,250,000.01 - 125,000,000</td>
+                    <td>9.625%</td>
+                    <td>7.625%</td>
+                  </tr>
+                  <tr>
+                    <td>125,000,000.01 +</td>
+                    <td>9.625%</td>
+                    <td>7.625%</td>
+                  </tr>
+                </table>
+              </div>
               <p>
                 Notes: In calculating interest rates, Snowball Securities uses a mixed interest rate based on the above tiers. For example, for a balance of more than 10,000 US dollars but less than one million US dollars, 100,000 will be calculated with the first-tier interest rate, and the remaining will be calculated with the second-tier interest rate. When determining the quoted spread, Snowball Securities will use the set benchmark rate or a benchmark rate of 0 for all benchmark rates less than 0.
                 <br />

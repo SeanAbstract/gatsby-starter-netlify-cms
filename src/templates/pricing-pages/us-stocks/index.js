@@ -38,7 +38,7 @@ export const USStocksPageTemplate = (props: USStocksProps) => {
               <p>
                 Snowball Securities offers two flexible commission plans. Clients can switch between plans according to their specific needs. 
               </p>
-              <div class="table-responsive-sm">
+              <div class="table-responsive">
                 <table class="table table-bordered">
                   <thead>
                     <tr>
@@ -82,45 +82,47 @@ export const USStocksPageTemplate = (props: USStocksProps) => {
               <h5>
                 Other service charges for US stocks:
               </h5>
-              <table class="table table-bordered">
-                <thead>
+              <div className="table-responsive">
+                <table class="table table-bordered">
+                  <thead>
+                    <tr>
+                      <th scope="col">Item</th>
+                      <th scope="col">Rate</th>
+                      <th scope="col">Charged by</th>
+                    </tr>
+                  </thead>
                   <tr>
-                    <th scope="col">Item</th>
-                    <th scope="col">Rate</th>
-                    <th scope="col">Charged by</th>
+                    <td>Dividend tax</td>
+                    <td>10% of dividend (automatic withholding at the time of distribution)</td>
+                    <td>US tax authority</td>
                   </tr>
-                </thead>
-                <tr>
-                  <td>Dividend tax</td>
-                  <td>10% of dividend (automatic withholding at the time of distribution)</td>
-                  <td>US tax authority</td>
-                </tr>
-                <tr>
-                  <td>American Depositary Receipt (ADR) custodial fees</td>
-                  <td>USD 0.01~USD 0.03/share</td>
-                  <td>Deposit Trust Company (DTC)</td>
-                </tr>
-                <tr>
-                  <td>Capital gains tax</td>
-                  <td>New Zealand residents, Mainland China residents fill out W8ben to exempt from capital gains tax</td>
-                  <td>N/A</td>
-                </tr>
-                <tr>
-                  <td>Position transfer fee</td>
-                  <td>There is no charge for ACATS transfer on Snowball Securities</td>
-                  <td>N/A</td>
-                </tr>
-                <tr>
-                  <td>Real-time quote fees</td>
-                  <td>Free on Snowball Securities</td>
-                  <td>N/A</td>
-                </tr>
-                <tr>
-                  <td>Account management fee (or minimum monthly commission)</td>
-                  <td>Free on Snowball Securities</td>
-                  <td>N/A</td>
-                </tr>
-              </table>
+                  <tr>
+                    <td>American Depositary Receipt (ADR) custodial fees</td>
+                    <td>USD 0.01~USD 0.03/share</td>
+                    <td>Deposit Trust Company (DTC)</td>
+                  </tr>
+                  <tr>
+                    <td>Capital gains tax</td>
+                    <td>New Zealand residents, Mainland China residents fill out W8ben to exempt from capital gains tax</td>
+                    <td>N/A</td>
+                  </tr>
+                  <tr>
+                    <td>Position transfer fee</td>
+                    <td>There is no charge for ACATS transfer on Snowball Securities</td>
+                    <td>N/A</td>
+                  </tr>
+                  <tr>
+                    <td>Real-time quote fees</td>
+                    <td>Free on Snowball Securities</td>
+                    <td>N/A</td>
+                  </tr>
+                  <tr>
+                    <td>Account management fee (or minimum monthly commission)</td>
+                    <td>Free on Snowball Securities</td>
+                    <td>N/A</td>
+                  </tr>
+                </table>
+              </div>
             </div>
           </div>
         </div>

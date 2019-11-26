@@ -38,38 +38,40 @@ export const USStockOptionsPageTemplate = (props: USStockOptionsProps) => {
               <p>
                 Snowball Securities offers two flexible commission plans. Clients can switch between plans according to their specific needs. 
               </p>
-              <table class="table table-bordered">
-                <thead>
+              <div className="table-responsive">
+                <table class="table table-bordered">
+                  <thead>
+                    <tr>
+                      <th scope="col">Item</th>
+                      <th scope="col">Rate</th>
+                    </tr>
+                  </thead>
                   <tr>
-                    <th scope="col">Item</th>
-                    <th scope="col">Rate</th>
+                    <td>Commission</td>
+                    <td>USD 0.7 per contract <br/>USD 1 minimum per order</td>
                   </tr>
-                </thead>
-                <tr>
-                  <td>Commission</td>
-                  <td>USD 0.7 per contract <br/>USD 1 minimum per order</td>
-                </tr>
-                <tr>
-                  <td>Option Regulation Fee (ORF)*</td>
-                  <td>USD 0.0431 per contract</td>
-                </tr>
-                <tr>
-                  <td>Transaction fee (only charged for sell orders)</td>
-                  <td>USD 0.000013 x Total Sell Value</td>
-                </tr>
-                <tr>
-                  <td>FINRA transaction activity fee (only charged at the time of sale)</td>
-                  <td>USD 0.002 x Quantity Sold</td>
-                </tr>
-                <tr>
-                  <td>Options Clearing Company (OCC) Clearing Costs</td>
-                  <td>USD 0.03-USD 0.05 per contract, depending on the number of contracts</td>
-                </tr>
-                <tr>
-                  <td>Exchange fees</td>
-                  <td>According to the exchange traded on, fees vary</td>
-                </tr>
-              </table>
+                  <tr>
+                    <td>Option Regulation Fee (ORF)*</td>
+                    <td>USD 0.0431 per contract</td>
+                  </tr>
+                  <tr>
+                    <td>Transaction fee (only charged for sell orders)</td>
+                    <td>USD 0.000013 x Total Sell Value</td>
+                  </tr>
+                  <tr>
+                    <td>FINRA transaction activity fee (only charged at the time of sale)</td>
+                    <td>USD 0.002 x Quantity Sold</td>
+                  </tr>
+                  <tr>
+                    <td>Options Clearing Company (OCC) Clearing Costs</td>
+                    <td>USD 0.03-USD 0.05 per contract, depending on the number of contracts</td>
+                  </tr>
+                  <tr>
+                    <td>Exchange fees</td>
+                    <td>According to the exchange traded on, fees vary</td>
+                  </tr>
+                </table>
+              </div>
               <h5>
                 Notes:
               </h5>

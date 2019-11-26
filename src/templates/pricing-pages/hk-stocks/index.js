@@ -139,30 +139,32 @@ export const HKStocksPageTemplate = (props: HKStocksPageProps) => {
               <h5>
                 <br/><br/>Charges for subscriptions of new HK stocks:
               </h5>
-              <table class="table table-bordered">
-                <thead>
+              <div className="table-responsive">
+                <table class="table table-bordered">
+                  <thead>
+                    <tr>
+                      <th scope="col">Item</th>
+                      <th scope="col">Rate</th>
+                      <th scope="col">Charged by</th>
+                    </tr>
+                  </thead>
                   <tr>
-                    <th scope="col">Item</th>
-                    <th scope="col">Rate</th>
-                    <th scope="col">Charged by</th>
+                    <td>Subscription fee</td>
+                    <td>Subscription financing: HKD100 for a single deal. Charged once subscription initiated.</td>
+                    <td>External agency</td>
                   </tr>
-                </thead>
-                <tr>
-                  <td>Subscription fee</td>
-                  <td>Subscription financing: HKD100 for a single deal. Charged once subscription initiated.</td>
-                  <td>External agency</td>
-                </tr>
-                <tr>
-                  <td>Interest of subscription financing</td>
-                  <td>Financing annual interest rate is around 4% (slightly adjusted according to the market capital condition when each stock is listed)</td>
-                  <td>Snowball Securities</td>
-                </tr>
-                <tr>
-                  <td>Trading levy, trading fee and brokerage commission</td>
-                  <td>1.0077% <br/>(only charged for ballot)</td>
-                  <td>Securities and Futures Commission of HK, HKEX and brokerage firm</td>
-                </tr>
-              </table>
+                  <tr>
+                    <td>Interest of subscription financing</td>
+                    <td>Financing annual interest rate is around 4% (slightly adjusted according to the market capital condition when each stock is listed)</td>
+                    <td>Snowball Securities</td>
+                  </tr>
+                  <tr>
+                    <td>Trading levy, trading fee and brokerage commission</td>
+                    <td>1.0077% <br/>(only charged for ballot)</td>
+                    <td>Securities and Futures Commission of HK, HKEX and brokerage firm</td>
+                  </tr>
+                </table>
+              </div>
             </div>
           </div>
         </div>
