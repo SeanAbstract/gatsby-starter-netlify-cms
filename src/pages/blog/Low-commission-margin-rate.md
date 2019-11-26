@@ -28,11 +28,9 @@ Our clients are very important to us. We take our work seriously and we strive t
 As I reflect on my first year with Snowball X, and our performance, four things stands out most: firstly the Snowball Group (Xueqiu) platform continues to grow at a strong rate with over 35 million users. Our equities platform has now reached over 100,000 clients and an additional average of 500 new clients weekly. 
 
 The Snowball brand and reputation continues to grow with strength within China and now outside China. Our new focus, vision and strategy will lay a strong foundation for future ventures into the global arena.
-
 Be part of the Snowball X community and grow with us.
 
 ![](/img/vang.png)
 
-VANG LY
-\
+VANG LY\
 Managing Director
