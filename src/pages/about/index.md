@@ -147,20 +147,6 @@ partners:
       Melbourne, Australia. ANZ is the largest bank in New Zealand.
     brandLogo: /img/anz.png
   - brandDescription: >-
-      China Construction Bank Corporation (CCB) is one of the "big four" banks
-      in the People's Republic of China. 
-    brandLogo: /img/ccb.png
-  - brandDescription: >-
-      Wing Lung bank was listed in Hong Kong from 1980 to 2009 until it was
-      acquired by China Merchants Bank. It currently employs over 1,700 people
-      and has assets over HK$ 200 billion.
-    brandLogo: /img/wlb.png
-  - brandDescription: >-
-      BNP Paribas S.A. is a French international banking group. It is the
-      world's 8th largest bank by total assets, and currently operates with a
-      presence in 77 countries.
-    brandLogo: /img/bnp.png
-  - brandDescription: >-
       Hobson Wealth Partners Limited is a leading private wealth advisory team
       with offices in Auckland, Tauranga, Wellington and Christchurch.
     brandLogo: /img/hobson.png
