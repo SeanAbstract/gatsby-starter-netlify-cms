@@ -248,7 +248,7 @@ export default class Header extends React.Component {
                           </DropdownToggle>
                           <DropdownMenu style={{background: 'white', opacity: 1, borderRadius: 0}}>
                             {link.children.map(childLink => (
-                              <Link to={`price/${childLink.href}`}>
+                              <Link to={`pricing/${childLink.href}`}>
                                 <DropdownItem>{childLink.name}</DropdownItem>
                               </Link>
                             ))}
