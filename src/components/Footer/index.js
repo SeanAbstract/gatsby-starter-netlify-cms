@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import {Container, Row, Col, UncontrolledTooltip} from 'reactstrap'
 import {Link} from 'gatsby'
 
-import logo from '../../../static/img/logo.png'
+import logo from '../../../static/img/snowball-logo-blue.png'
 import facebookIcon from '../../../static/img/facebook_blue.png'
 import linkedinIcon from '../../../static/img/linkedin_blue.png'
 import twitterIcon from '../../../static/img/twitter_blue.png'
@@ -68,9 +68,6 @@ function Footer(props) {
                     </StyledLink>
                     <StyledLink to="/how-it-works">
                       <p className="mb-1">How it works</p>
-                    </StyledLink>
-                    <StyledLink to="/price">
-                      <p className="mb-1">Prices</p>
                     </StyledLink>
                     <StyledLink to="/download">
                       <p className="mb-1">Downloads</p>

@@ -2,13 +2,13 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import {graphql, Link} from 'gatsby'
 
-import '../terms/styles.scss'
-import Layout from '../../components/Layout'
-import Content, {HTMLContent} from '../../components/Content'
-import SharedJumbotron from '../../components/SharedJumbotron'
-import DownloadNow from '../../components/DownloadNow'
+import '../../pricing-pages/styles.scss'
+import Layout from '../../../components/Layout'
+import Content, {HTMLContent} from '../../../components/Content'
+import SharedJumbotron from '../../../components/SharedJumbotron'
+import DownloadNow from '../../../components/DownloadNow'
 
-type ThankYouPageTemplate = {
+type HKWarrantsCBBCSPageProps = {
   content: Node.isRequired,
   contentComponent: any,
   downloadNow: {
@@ -19,23 +19,28 @@ type ThankYouPageTemplate = {
   headerImage: any,
 }
 
-export const ThankYouPageTemplateExport = (props: ThankYouPageTemplate) => {
+export const HKWarrantsCBBCSPageTemplate = (props: HKWarrantsCBBCSPageProps) => {
   const PostContent = props.contentComponent || Content
   const {content, headerImage, downloadNow} = props
 
   return (
-    <div className="terms-page">
+    <div className="pricing-pages">
       <SharedJumbotron headerImage={headerImage} />
 
       <section className="blog-post-container" style={{paddingBottom: '250px'}}>
         <div className="container content">
           <div className="row justify-content-center">
             <div className="col col-10 blog-container">
-              <h3>Thank you for your message</h3>
+              <h3>
+                HK WARRANTS AND CBBCS
+              </h3>
               {/* <PostContent content={content} /> */}
               <p>
-              We have successfully received your message and we'll be in contact with you shortly.<br/><br/>
+                Snowball Securities offers two flexible commission plans. Clients can switch between plans according to their specific needs. 
+                <br />
+                <br />
               </p>
+              {/* Table to go here */}
             </div>
           </div>
         </div>
@@ -44,12 +49,12 @@ export const ThankYouPageTemplateExport = (props: ThankYouPageTemplate) => {
   )
 }
 
-const ThankYou = ({data}) => {
+const HKWarrantsCBBCSPage = ({data}) => {
   const {markdownRemark: post} = data
 
   return (
-    <Layout>
-      <ThankYouPageTemplateExport
+    <Layout footerLinks={post.frontmatter.footerLinks}>
+      <HKWarrantsCBBCSPageTemplate
         content={post.html}
         contentComponent={HTMLContent}
         downloadNow={post.frontmatter.downloadNow}
@@ -59,16 +64,16 @@ const ThankYou = ({data}) => {
   )
 }
 
-ThankYou.propTypes = {
+HKWarrantsCBBCSPage.propTypes = {
   data: PropTypes.shape({
     markdownRemark: PropTypes.object,
   }),
 }
 
-export default ThankYou
+export default HKWarrantsCBBCSPage
 
 export const pageQuery = graphql`
-  query ThankYou($id: String!) {
+  query HKWarrantsCBBCS($id: String!) {
     markdownRemark(id: {eq: $id}) {
       id
       html
@@ -89,6 +94,16 @@ export const pageQuery = graphql`
                 ...GatsbyImageSharpFluid
               }
             }
+          }
+        }
+        footerLinks {
+          firstRow {
+            name
+            href
+          }
+          secondRow {
+            name
+            href
           }
         }
       }

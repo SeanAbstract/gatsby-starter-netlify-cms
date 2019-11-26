@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import {Container, Row, Col} from 'reactstrap'
 
-import logo from '../../../../static/img/logo.png'
+import logo from '../../../../static/img/snowball-logo-blue.png'
 import facebookIcon from '../../../../static/img/facebook_blue.png'
 import linkedinIcon from '../../../../static/img/linkedin_blue.png'
 import twitterIcon from '../../../../static/img/twitter_blue.png'
