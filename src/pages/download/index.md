@@ -2,7 +2,7 @@
 templateKey: download-page
 jumbotron:
   description: Download Now
-  headerImage: /img/second-splash.jpg
+  headerImage: /img/second-splash-2000x400.jpg
   title: Download
 mainPitch: "Competitive rates, transparent fees, choose the price option that’s right for you."
 downloadNow:

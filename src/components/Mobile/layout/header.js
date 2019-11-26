@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import {Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, Container} from 'reactstrap'
 import {Link} from 'gatsby'
 
-import whiteLogo from '../../../img/snowball-secure.png'
+import whiteLogo from '../../../img/snowball-logo-white.png'
 import logo from '../../../img/logo-2.png'
 import logoIcon from '../../../img/logo-icon.png'
 

@@ -2,12 +2,13 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import {graphql, Link} from 'gatsby'
 
+import './styles.scss'
 import Layout from '../../components/Layout'
 import Content, {HTMLContent} from '../../components/Content'
 import SharedJumbotron from '../../components/SharedJumbotron'
 import DownloadNow from '../../components/DownloadNow'
 
-type BlogPostTemplate = {
+type TermsPageTemplate = {
   content: Node.isRequired,
   contentComponent: any,
   downloadNow: {
@@ -18,12 +19,12 @@ type BlogPostTemplate = {
   headerImage: any,
 }
 
-export const BlogPostPageTemplate = (props: BlogPostTemplate) => {
+export const TermsPageTemplateExport = (props: TermsPageTemplate) => {
   const PostContent = props.contentComponent || Content
   const {content, headerImage, downloadNow} = props
 
   return (
-    <div className="blog-post-page">
+    <div className="terms-page">
       <SharedJumbotron headerImage={headerImage} />
 
       <section className="blog-post-container" style={{paddingBottom: '250px'}}>
@@ -31,7 +32,6 @@ export const BlogPostPageTemplate = (props: BlogPostTemplate) => {
           <div className="row justify-content-center">
             <div className="col col-10 blog-container">
               <h3>
-                <br />
                 Terms and Conditions
               </h3>
               {/* <PostContent content={content} /> */}
@@ -70,12 +70,12 @@ export const BlogPostPageTemplate = (props: BlogPostTemplate) => {
   )
 }
 
-const BlogPost = ({data}) => {
+const TermsPage = ({data}) => {
   const {markdownRemark: post} = data
 
   return (
     <Layout footerLinks={post.frontmatter.footerLinks}>
-      <BlogPostPageTemplate
+      <TermsPageTemplateExport
         content={post.html}
         contentComponent={HTMLContent}
         downloadNow={post.frontmatter.downloadNow}
@@ -85,13 +85,13 @@ const BlogPost = ({data}) => {
   )
 }
 
-BlogPost.propTypes = {
+TermsPage.propTypes = {
   data: PropTypes.shape({
     markdownRemark: PropTypes.object,
   }),
 }
 
-export default BlogPost
+export default TermsPage
 
 export const pageQuery = graphql`
   query TermsAndConditions($id: String!) {

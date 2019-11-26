@@ -14,8 +14,8 @@ import {
 import {Link} from 'gatsby'
 
 import './styles.scss'
-import whiteLogo from '../../img/snowball-secure.png'
-import logo from '../../img/logo.png'
+import whiteLogo from '../../img/snowball-logo-white.png'
+import logo from '../../img/snowball-logo-blue.png'
 import logoIcon from '../../../static/img/snowball-logo-x.png'
 import whiteLogoIcon from '../../img/logo-icon.png'
 import facebookIcon from '../../../static/img/facebook_blue.png'
@@ -23,7 +23,7 @@ import linkedinIcon from '../../../static/img/linkedin_blue.png'
 import twitterIcon from '../../../static/img/twitter_blue.png'
 import wechatIcon from '../../../static/img/wechat_blue.png'
 
-// import logoIcon from '../../images/icon-logo.png'
+// import logoIcon from '../../images/icon-snowball-logo-blue.png'
 
 const data = [
   {
@@ -215,7 +215,7 @@ export default class Header extends React.Component {
               scrolled={scrolled}
             />
             <StyledCollapse isOpen={this.state.isOpen} navbar>
-              <Nav className="ml-auto" navbar>
+              <Nav className="ml-auto padding-10" navbar>
                 <div className="on-mobile top-collapse-mobile mt-4">
                   <Link to="/">
                     <LogoIcon

@@ -3,11 +3,12 @@ import PropTypes from 'prop-types'
 import {graphql} from 'gatsby'
 import styled from 'styled-components'
 
+import '../terms/styles.scss'
 import Layout from '../../components/Layout'
 import Content, {HTMLContent} from '../../components/Content'
 import SharedJumbotron from '../../components/SharedJumbotron'
 
-type BlogPostTemplate = {
+type RiskPageTemplate = {
   content: Node.isRequired,
   contentComponent: any,
   downloadNow: {
@@ -30,12 +31,12 @@ const disclosures = [
   '9. CFTC Risk Disclosure Statement - Rule 1.55(b)',
 ]
 
-export const BlogPostPageTemplate = (props: BlogPostTemplate) => {
+export const RiskPageTemplateExport = (props: RiskPageTemplate) => {
   const PostContent = props.contentComponent || Content
   const {content, headerImage, downloadNow} = props
 
   return (
-    <div className="blog-post-page">
+    <div className="terms-page">
       <SharedJumbotron headerImage={headerImage} />
 
       <section className="blog-post-container" style={{paddingBottom: '120px'}}>
@@ -43,7 +44,6 @@ export const BlogPostPageTemplate = (props: BlogPostTemplate) => {
           <div className="row justify-content-center">
             <div className="col col-10 blog-container">
               <h3>
-                <br />
                 Risk Disclosure
               </h3>
               {disclosures.map((disclosure, ndx) => (
@@ -64,12 +64,12 @@ export const BlogPostPageTemplate = (props: BlogPostTemplate) => {
   )
 }
 
-const BlogPost = ({data}) => {
+const RiskPage = ({data}) => {
   const {markdownRemark: post} = data
 
   return (
     <Layout footerLinks={post.frontmatter.footerLinks}>
-      <BlogPostPageTemplate
+      <RiskPageTemplateExport
         content={post.html}
         contentComponent={HTMLContent}
         downloadNow={post.frontmatter.downloadNow}
@@ -79,7 +79,7 @@ const BlogPost = ({data}) => {
   )
 }
 
-BlogPost.propTypes = {
+RiskPage.propTypes = {
   data: PropTypes.shape({
     markdownRemark: PropTypes.object,
   }),
@@ -102,7 +102,7 @@ const Yo = styled.div`
   }
 `
 
-export default BlogPost
+export default RiskPage
 
 export const pageQuery = graphql`
   query RiskDisclosure($id: String!) {
