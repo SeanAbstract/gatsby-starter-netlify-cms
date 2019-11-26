@@ -2,7 +2,7 @@
 templateKey: price-page
 jumbotron:
   description: Structure
-  headerImage: /img/second-splash-extended-2000x400.jpg
+  headerImage: /img/second-splash-2000x400.jpg
   title: Price
 lowCommissionPackage:
   hk:

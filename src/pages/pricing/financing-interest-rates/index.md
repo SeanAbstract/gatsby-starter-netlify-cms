@@ -1,6 +1,6 @@
 ---
 templateKey: pricing-pages/financing-interest-rates
-headerImage: /img/second-splash.jpg
+headerImage: /img/second-splash-2000x400.jpg
 downloadNow:
   image: /img/snowball-phone.png
   mainText: Access Global Markets Today
