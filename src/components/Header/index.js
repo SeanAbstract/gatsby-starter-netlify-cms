@@ -1,6 +1,16 @@
 import React from 'react'
 import styled from 'styled-components'
-import {Collapse, Navbar, NavbarToggler, NavbarBrand, Nav} from 'reactstrap'
+import {
+  Collapse,
+  Navbar,
+  NavbarToggler,
+  NavbarBrand,
+  Nav,
+  DropdownItem,
+  DropdownToggle,
+  DropdownMenu,
+  Dropdown,
+} from 'reactstrap'
 import {Link} from 'gatsby'
 
 import './styles.scss'
@@ -26,7 +36,32 @@ const data = [
   },
   {
     name: 'Prices',
-    href: '/price',
+    children: [
+      {
+        href: '/us-stocks',
+        name: 'US Stocks',
+      },
+      {
+        href: '/hk-warrents-cbbcs',
+        name: 'HK Warrants and CBBCS',
+      },
+      {
+        href: '/hk-stocks',
+        name: 'HK Stock',
+      },
+      {
+        href: '/hk-stocks-options',
+        name: 'HK Stock Options',
+      },
+      {
+        href: '/shanghai-shenzhen-stocks/',
+        name: 'Shanghai and Shenzhen Stocks',
+      },
+      {
+        href: '/financing-interest-rates',
+        name: 'Financing Interest Rates',
+      },
+    ],
   },
   {
     name: 'Download',
@@ -54,6 +89,32 @@ const dataMobile = [
   {
     name: 'Prices',
     href: '/price',
+    children: [
+      {
+        href: '/us-stocks',
+        name: 'US Stocks',
+      },
+      {
+        href: '/hk-warrents-cbbcs',
+        name: 'HK Warrants and CBBCS',
+      },
+      {
+        href: '/hk-stocks',
+        name: 'HK Stock',
+      },
+      {
+        href: '/hk-stocks-options',
+        name: 'HK Stock Options',
+      },
+      {
+        href: '/shanghai-shenzhen-stocks/',
+        name: 'Shanghai and Shenzhen Stocks',
+      },
+      {
+        href: '/financing-interest-rates',
+        name: 'Financing Interest Rates',
+      },
+    ],
   },
   {
     name: 'Download',
@@ -87,6 +148,7 @@ export default class Header extends React.Component {
       isOpen: false,
       scrolled: false,
       currentPath: '/',
+      isDropDownOpen: false,
     }
   }
 
@@ -114,8 +176,16 @@ export default class Header extends React.Component {
   }
 
   listenToScroll = () => {
+    const instantPaths = ['terms', 'thank-you', 'privacy-policy', 'risk-disclosure', 'pricing']
+
     this.setState(prevState => ({
-      scrolled: window.scrollY > (prevState.currentPath === '' ? 475 : 225),
+      scrolled:
+        window.scrollY >
+        (prevState.currentPath === ''
+          ? 475
+          : instantPaths.includes(prevState.currentPath)
+          ? 50
+          : 225),
     }))
   }
 
@@ -159,22 +229,52 @@ export default class Header extends React.Component {
                     X
                   </button>
                 </div>
-                {data.map((link, ndx) =>
-                  <div
-                    style={{position: 'relative'}}
-                    className={`nav-link on-desktop ${ndx !== data.length - 1 ? 'mr-4' : ''}`}
-                  >
-                    <Link
-                      to={link.href}
-                      className={`${
-                        `/${this.state.currentPath}` === `${link.href}` ? 'custom-active' : ''
-                      }`}
+                {data.map((link, ndx) => {
+                  if (link.children) {
+                    return (
+                      <div
+                        style={{position: 'relative'}}
+                        className={`nav-link on-desktop ${ndx !== data.length - 1 ? 'mr-1' : ''}`}
+                      >
+                        <Dropdown
+                          nav
+                          inNavbar
+                          isOpen={this.state.isDropDownOpen}
+                          onMouseEnter={() => this.setState({isDropDownOpen: true})}
+                          onMouseLeave={() => this.setState({isDropDownOpen: false})}
+                        >
+                          <DropdownToggle nav caret className="p-0 d-flex align-items-center">
+                            {link.name}
+                          </DropdownToggle>
+                          <DropdownMenu style={{background: 'white', opacity: 1, borderRadius: 0}}>
+                            {link.children.map(childLink => (
+                              <Link to={`price/${childLink.href}`}>
+                                <DropdownItem>{childLink.name}</DropdownItem>
+                              </Link>
+                            ))}
+                          </DropdownMenu>
+                        </Dropdown>
+                      </div>
+                    )
+                  }
+
+                  return (
+                    <div
+                      style={{position: 'relative'}}
+                      className={`nav-link on-desktop ${ndx !== data.length - 1 ? 'mr-4' : ''}`}
                     >
-                      {link.name}
-                    </Link>
-                  </div>
-                )}
-                {dataMobile.map((link, ndx) =>
+                      <Link
+                        to={link.href}
+                        className={`${
+                          `/${this.state.currentPath}` === `${link.href}` ? 'custom-active' : ''
+                        }`}
+                      >
+                        {link.name}
+                      </Link>
+                    </div>
+                  )
+                })}
+                {dataMobile.map((link, ndx) => (
                   <div
                     style={{position: 'relative'}}
                     className={`nav-link on-mobile ${ndx !== data.length - 1 ? 'mr-4' : ''}`}
@@ -188,7 +288,7 @@ export default class Header extends React.Component {
                       {link.name}
                     </Link>
                   </div>
-                )}
+                ))}
                 <div className="on-mobile social-container">
                   <img
                     src={wechatIcon}
@@ -260,11 +360,7 @@ export default class Header extends React.Component {
                       </Link>
                     </div>
                   ) : (
-                    <Link
-                      to='/download'
-                      activeClassName="custom-active-2"
-                      style={{color: 'black'}}
-                    >
+                    <Link to="/download" activeClassName="custom-active-2" style={{color: 'black'}}>
                       Download
                     </Link>
                   )
