@@ -188,33 +188,58 @@ $primary: #006fbb;
             top: 0;
 
             > .phone-frame {
+                opacity: 0;
                 width: 250px;
                 height: 480px;
                 background-size: cover;
                 background-position: center;
-                background-image: url("../../img/snowball-empty-phone.png");
                 position: absolute;
                 top: calc( 50% - 240px);
                 left: calc( 50% - 125px);
+
+                &.frame-one {
+                    background-image: url("../../img/snowball-empty-phone.png");
+                    opacity: 1;
+                }
+
+                &.frame-two {
+                    background-image: url("../../img/snowball-app-market-quotes-frame.png");
+                    opacity: 1;
+                }
+
+                &.frame-three {
+                    background-image: url("../../img/snowball-app-stock-financial-frame.png");
+                    opacity: 1;
+                }
             }
 
-            > .phone-display {
+            > .display-div {
+                opacity: 0;
+                top: calc( 50% - 160px);
+                left: calc( 50% - 100px);
+                transition: 1s;
                 width: 200px;
                 height: 350px;
                 background-size: cover;
                 background-position: center;
-                background-image: url("../../img/snowball-app-market-quotes.gif");
                 position: absolute;
-                top: calc( 50% - 160px);
-                left: calc( 50% - 100px);
-                transition: 1s;
-            }
 
-            &.background-two {
-                > .phone-display {
+                &.phone-display {
+                    background-image: url("../../img/open-account.png");
+                    opacity: 1;
+                }
+    
+                &.phone-display-one {
+                    background-image: url("../../img/snowball-app-market-quotes.gif");
+                    opacity: 1;
+                }
+    
+                &.phone-display-two {
                     background-image: url("../../img/snowball-app-stock-financial_03.gif") !important;
+                    opacity: 1;
                 }
             }
+
         }
 
         @media (max-width: 426px) {

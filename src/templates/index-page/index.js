@@ -367,20 +367,64 @@ export const IndexPageTemplate = ({
           <div id="information-trigger" />
           <div className="row justify-content-around h-100">
             <div className="col-md-4 ml-auto d-none d-md-block">
-              <Controller>
-                <Scene
-                  triggerElement="#information-trigger"
-                  duration={1600}
-                  triggerHook={0}
-                  offset={900}
-                  classToggle="background-two"
-                >
-                  <div className="info-phone-container">
-                    <div className="phone-frame" />
-                    <div className="phone-display" />
-                  </div>
-                </Scene>
-              </Controller>
+              <div className="info-phone-container">
+                  <Controller>
+                    <Scene
+                      triggerElement="#information-trigger"
+                      duration={900}
+                      triggerHook={0}
+                      offset={0}
+                      classToggle="frame-one"
+                    >
+                      <div className="phone-frame" />
+                    </Scene>
+                    <Scene
+                      triggerElement="#information-trigger"
+                      duration={800}
+                      triggerHook={0}
+                      offset={900}
+                      classToggle="frame-two"
+                    >
+                      <div className="phone-frame" />
+                    </Scene>
+                    <Scene
+                      triggerElement="#information-trigger"
+                      duration={1500}
+                      triggerHook={0}
+                      offset={1700}
+                      classToggle="frame-three"
+                    >
+                      <div className="phone-frame" />
+                    </Scene>
+                    <Scene
+                      triggerElement="#information-trigger"
+                      duration={900}
+                      triggerHook={0}
+                      offset={0}
+                      classToggle="phone-display"
+                    >
+                      <div className="display-div" />
+                    </Scene>
+                    <Scene
+                      triggerElement="#information-trigger"
+                      duration={800}
+                      triggerHook={0}
+                      offset={900}
+                      classToggle="phone-display-one"
+                    >
+                      <div className="display-div" />
+                    </Scene>
+                    <Scene
+                      triggerElement="#information-trigger"
+                      duration={1500}
+                      triggerHook={0}
+                      offset={1700}
+                      classToggle="phone-display-two"
+                    >
+                      <div className="display-div" />
+                    </Scene>
+                  </Controller>
+              </div>
             </div>
             <div className="col-md-4 mr-auto ml-3">
               <Controller>
