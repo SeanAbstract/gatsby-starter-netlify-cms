@@ -50,7 +50,7 @@ const data = [
         name: 'HK Stock',
       },
       {
-        href: '/hk-stocks-options',
+        href: '/hk-stock-options',
         name: 'HK Stock Options',
       },
       {
