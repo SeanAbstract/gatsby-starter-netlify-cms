@@ -34,7 +34,9 @@ export const ThankYouPageTemplateExport = (props: ThankYouPageTemplate) => {
               <h3>Thank you for your message</h3>
               {/* <PostContent content={content} /> */}
               <p>
-              We have successfully received your message and we'll be in contact with you shortly.<br/><br/>
+                We have successfully received your message and we'll be in contact with you shortly.
+                <br />
+                <br />
               </p>
             </div>
           </div>
@@ -75,7 +77,7 @@ export const pageQuery = graphql`
       frontmatter {
         headerImage {
           childImageSharp {
-            fluid(maxWidth: 1440, quality: 100) {
+            fluid(maxWidth: 2000, quality: 100) {
               ...GatsbyImageSharpFluid
             }
           }
