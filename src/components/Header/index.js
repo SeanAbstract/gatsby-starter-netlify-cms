@@ -95,7 +95,7 @@ const dataMobile = [
         name: 'US Stocks',
       },
       {
-        href: '/hk-warrents-cbbcs',
+        href: '/hk-warrants-cbbcs',
         name: 'HK Warrants and CBBCS',
       },
       {
