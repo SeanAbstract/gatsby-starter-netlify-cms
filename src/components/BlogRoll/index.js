@@ -64,9 +64,9 @@ class BlogRoll extends React.Component {
   }
 
   scrollActive = () => {
-    if (window.scrollY > 5500 && window.scrollY < 5780) {
+    if (window.scrollY > 4585 && window.scrollY < 4900) {
       this.setState({currentNdx: 0})
-    } else if (window.scrollY > 5780 && window.scrollY < 6045) {
+    } else if (window.scrollY > 4900 && window.scrollY < 5150) {
       this.setState({currentNdx: 1})
     } else {
       this.setState({currentNdx: 2})
