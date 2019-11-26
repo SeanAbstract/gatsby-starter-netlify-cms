@@ -88,7 +88,7 @@ const dataMobile = [
   },
   {
     name: 'Prices',
-    href: '/price',
+    href: '/pricing/us-stocks',
     children: [
       {
         href: '/us-stocks',

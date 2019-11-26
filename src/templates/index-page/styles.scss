@@ -29,6 +29,12 @@ $primary: #006fbb;
     }
   }
 
+.big-subtitle {
+    @media (min-width: 426px) {
+        text-align: right !important;
+    }
+}
+
 .landing-page {
     .display-2 {
         font-size: 90px;
@@ -203,12 +209,12 @@ $primary: #006fbb;
                 }
 
                 &.frame-two {
-                    background-image: url("../../img/snowball-app-market-quotes-frame.png");
+                    background-image: url("../../img/snowball-app-stock-financial-frame.png");
                     opacity: 1;
                 }
 
                 &.frame-three {
-                    background-image: url("../../img/snowball-app-stock-financial-frame.png");
+                    background-image: url("../../img/open-account-frame.png");
                     opacity: 1;
                 }
             }
@@ -225,18 +231,19 @@ $primary: #006fbb;
                 position: absolute;
 
                 &.phone-display {
-                    background-image: url("../../img/open-account.png");
-                    opacity: 1;
-                }
-    
-                &.phone-display-one {
                     background-image: url("../../img/snowball-app-market-quotes.gif");
                     opacity: 1;
                 }
     
-                &.phone-display-two {
-                    background-image: url("../../img/snowball-app-stock-financial_03.gif") !important;
+                &.phone-display-one {
+                    background-image: url("../../img/snowball-app-stock-financial_03.gif");
                     opacity: 1;
+                }
+    
+                &.phone-display-two {
+                    background-image: url("../../img/open-account-screen-v3.jpg") !important;
+                    opacity: 1;
+                    z-index: -1;
                 }
             }
 
