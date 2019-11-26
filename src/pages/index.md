@@ -42,7 +42,7 @@ stockSection:
           text: '(under CNH 50,000)'
         - price: "0.03%\_"
           text: '*trading value (over CNH 50,000)'
-      country: China-A-Shares
+      country: China A-Shares
       countryCode: CN
       financingRate: "9.385%\_"
       platformUsageFee: CNH 15
@@ -72,7 +72,7 @@ stockSection:
           text: '(under CNH 18,750)'
         - price: "0.08%\_"
           text: '*trading value (over CNH 18,750)'
-      country: China-A-Shares
+      country: China A-Shares
       countryCode: CNH
       financingRate: "7.835%\_"
       platformUsageFee: CNH 15
