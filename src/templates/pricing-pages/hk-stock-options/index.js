@@ -37,10 +37,21 @@ export const HKStockOptionsPageTemplate = (props: HKStockOptionsPageProps) => {
               {/* <PostContent content={content} /> */}
               <p>
                 Snowball Securities offers two flexible commission plans. Clients can switch between plans according to their specific needs. 
-                <br />
-                <br />
               </p>
-              {/* Table to go here */}
+              <table class="table table-bordered">
+                <thead>
+                  <tr>
+                    <th scope="col">Item</th>
+                    <th scope="col">Rate</th>
+                    <th scope="col">Charged by</th>
+                  </tr>
+                </thead>
+                <tr>
+                  <td>Commission</td>
+                  <td>HKD 30 per contract <br/>HKD 30 minimum</td>
+                  <td>Snowball Securities</td>
+                </tr>
+              </table>
               <p>
                 Notes: Snowball Securities App currently does not support trading of Hong Kong stock options. You can trade on Interactive Brokers official trading terminal TWS. 
                 <br />

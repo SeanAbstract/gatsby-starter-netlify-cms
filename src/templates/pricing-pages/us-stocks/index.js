@@ -37,10 +37,38 @@ export const USStocksPageTemplate = (props: USStocksProps) => {
               {/* <PostContent content={content} /> */}
               <p>
                 Snowball Securities offers two flexible commission plans. Clients can switch between plans according to their specific needs. 
-                <br />
-                <br />
               </p>
-              {/* Table to go here */}
+              <div class="table-responsive-sm">
+                <table class="table table-bordered">
+                  <thead>
+                    <tr>
+                      <th scope="col">Item</th>
+                      <th scope="col">Rate</th>
+                      <th scope="col">Charged by</th>
+                    </tr>
+                  </thead>
+                  <tr>
+                    <td>Commission<br/> – Low-commission Plan</td>
+                    <td>USD 0.002 per share<br/> USD 0.99 minimum per order</td>
+                    <td>Snowball Securities</td>
+                  </tr>
+                  <tr>
+                    <td>Commission<br/> – Low-interest rate Plan</td>
+                    <td>USD 0.008 per share <br/>USD 0.99 minimum per order</td>
+                    <td>Snowball Securities</td>
+                  </tr>
+                  <tr>
+                    <td>Platform fee</td>
+                    <td>USD 0.003 per share <br/>USD 1.00 minimum per order</td>
+                    <td>Snowball Securities</td>
+                  </tr>
+                  <tr>
+                    <td>Withholding charges*</td>
+                    <td>USD 0.003 per share</td>
+                    <td>External agencies</td>
+                  </tr>
+                </table>
+              </div>
               <p>
                 Notes: We advise investors to be more prudent with low-priced stocks. Trading low-priced stocks (below $1) carries risk of stock prices being volatile, and the risk of delisting. The charges of commission and platform fee on a trade together is capped at 1% of trade value it exceeds USD1.99 and also exceeds 1% of the trade value.
                 <br />
@@ -54,7 +82,45 @@ export const USStocksPageTemplate = (props: USStocksProps) => {
               <h5>
                 Other service charges for US stocks:
               </h5>
-              {/* Table to go here */}
+              <table class="table table-bordered">
+                <thead>
+                  <tr>
+                    <th scope="col">Item</th>
+                    <th scope="col">Rate</th>
+                    <th scope="col">Charged by</th>
+                  </tr>
+                </thead>
+                <tr>
+                  <td>Dividend tax</td>
+                  <td>10% of dividend (automatic withholding at the time of distribution)</td>
+                  <td>US tax authority</td>
+                </tr>
+                <tr>
+                  <td>American Depositary Receipt (ADR) custodial fees</td>
+                  <td>USD 0.01~USD 0.03/share</td>
+                  <td>Deposit Trust Company (DTC)</td>
+                </tr>
+                <tr>
+                  <td>Capital gains tax</td>
+                  <td>New Zealand residents, Mainland China residents fill out W8ben to exempt from capital gains tax</td>
+                  <td>N/A</td>
+                </tr>
+                <tr>
+                  <td>Position transfer fee</td>
+                  <td>There is no charge for ACATS transfer on Snowball Securities</td>
+                  <td>N/A</td>
+                </tr>
+                <tr>
+                  <td>Real-time quote fees</td>
+                  <td>Free on Snowball Securities</td>
+                  <td>N/A</td>
+                </tr>
+                <tr>
+                  <td>Account management fee (or minimum monthly commission)</td>
+                  <td>Free on Snowball Securities</td>
+                  <td>N/A</td>
+                </tr>
+              </table>
             </div>
           </div>
         </div>

@@ -37,10 +37,41 @@ export const HKWarrantsCBBCSPageTemplate = (props: HKWarrantsCBBCSPageProps) => 
               {/* <PostContent content={content} /> */}
               <p>
                 Snowball Securities offers two flexible commission plans. Clients can switch between plans according to their specific needs. 
-                <br />
-                <br />
               </p>
-              {/* Table to go here */}
+              <table class="table table-bordered">
+                <thead>
+                  <tr>
+                    <th scope="col">Item</th>
+                    <th scope="col">Rate</th>
+                    <th scope="col">Charged by</th>
+                  </tr>
+                </thead>
+                <tr>
+                  <td>Commission <br/>– Low-commission Plan</td>
+                  <td>0.03% of trade value, per deal <br/>HKD 12 minimum per order</td>
+                  <td>Snowball Securities</td>
+                </tr>
+                <tr>
+                  <td>Commission <br/>– Low-interest rate Plan</td>
+                  <td>0.08% of trade value, per deal <br/>HKD 12 minimum per order</td>
+                  <td>Snowball Securities</td>
+                </tr>
+                <tr>
+                  <td>Transaction fee</td>
+                  <td>0.005% of trade value + HKD 0.5</td>
+                  <td>Hong Kong Stock Exchange</td>
+                </tr>
+                <tr>
+                  <td>Clearing fee</td>
+                  <td>0.002% of trade value <br/>HKD 2.00 minimum</td>
+                  <td>Hong Kong Stock Exchange</td>
+                </tr>
+                <tr>
+                  <td>Transaction levy</td>
+                  <td>0.0027% of trade value</td>
+                  <td>Hong Kong Stock Exchange</td>
+                </tr>
+              </table>
             </div>
           </div>
         </div>
