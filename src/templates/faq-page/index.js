@@ -143,7 +143,7 @@ export const faqPageQuery = graphql`
           description
           headerImage {
             childImageSharp {
-              fluid(maxWidth: 1440, quality: 100) {
+              fluid(maxWidth: 2000, quality: 100) {
                 ...GatsbyImageSharpFluid
               }
             }
