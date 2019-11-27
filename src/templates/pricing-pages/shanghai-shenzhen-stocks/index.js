@@ -1,5 +1,4 @@
 import React from 'react'
-import { Table } from 'reactstrap'
 import PropTypes from 'prop-types'
 import {graphql, Link} from 'gatsby'
 

@@ -102,23 +102,23 @@ export const FinancingInterestRatesPageTemplate = (props: FinancingInterestRates
                   <tr>
                     <td rowspan="4">HKD</td>
                     <td>0 - 780,000</td>
-                    <td>6.58%</td>
-                    <td>4.58%</td>
+                    <td>7.076%</td>
+                    <td>5.076%</td>
                   </tr>
                   <tr>
                     <td>780,000.01 - 7,800,000</td>
-                    <td>6.08%</td>
-                    <td>4.08%</td>
+                    <td>6.576%</td>
+                    <td>4.576%</td>
                   </tr>
                   <tr>
                     <td>7,800,000.01 - 780,000,000</td>
-                    <td>5.58%</td>
-                    <td>3.58%</td>
+                    <td>6.076%</td>
+                    <td>4.076%</td>
                   </tr>
                   <tr>
                     <td>780,000,000.01 +</td>
-                    <td>5.58%</td>
-                    <td>3.58%</td>
+                    <td>6.076%</td>
+                    <td>4.076%</td>
                   </tr>
                 </table>
               </div>
@@ -138,23 +138,23 @@ export const FinancingInterestRatesPageTemplate = (props: FinancingInterestRates
                   <tr>
                     <td rowspan="4">CNH</td>
                     <td>0 - 625,000</td>
-                    <td>9.625%</td>
-                    <td>7.625%</td>
+                    <td>9.398%</td>
+                    <td>7.398%</td>
                   </tr>
                   <tr>
                     <td>625,000.01 - 6,250,000</td>
-                    <td>9.625%</td>
-                    <td>7.625%</td>
+                    <td>9.398%</td>
+                    <td>7.398%</td>
                   </tr>
                   <tr>
                     <td>6,250,000.01 - 125,000,000</td>
-                    <td>9.625%</td>
-                    <td>7.625%</td>
+                    <td>9.398%</td>
+                    <td>7.398%</td>
                   </tr>
                   <tr>
                     <td>125,000,000.01 +</td>
-                    <td>9.625%</td>
-                    <td>7.625%</td>
+                    <td>9.398%</td>
+                    <td>7.398%</td>
                   </tr>
                 </table>
               </div>
