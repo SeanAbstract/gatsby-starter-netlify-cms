@@ -1,11 +1,10 @@
 ---
 templateKey: index-page
-mainText: WORLD EXCHANGES
+mainText: GLOBAL MARKETS
 subText: at your fingertips
 videoName: sailing.mp4
 videoNameAU: Beach-Final-compressed.mp4
 videoNameUS: Boat-Final-compressed.mp4
-videoNameCN: China-Wall-compressed.mp4
 image: /img/landing-page-2.png
 firstSection:
   buttonText: Try Snowball Securities today
@@ -25,7 +24,7 @@ stockSection:
           text: '*trading value (over HKD 60,000)'
       country: HK Stocks
       countryCode: HK
-      financingRate: "5.342%\_"
+      financingRate: "6.076%\_"
       platformUsageFee: HKD 18
       platformUsageFeeType: per deal
     - commission:
@@ -45,7 +44,7 @@ stockSection:
           text: '*trading value (over CNH 50,000)'
       country: China A-Shares
       countryCode: CN
-      financingRate: "9.385%\_"
+      financingRate: "9.398%\_"
       platformUsageFee: CNH 15
       platformUsageFeeType: per deal
     - commission:
@@ -55,7 +54,7 @@ stockSection:
           text: '*trading value (over HKD 22,500)'
       country: HK Stocks
       countryCode: HK
-      financingRate: 3.342%
+      financingRate: 4.076%
       platformUsageFee: HKD 18
       platformUsageFeeType: per deal
     - commission:
@@ -75,7 +74,7 @@ stockSection:
           text: '*trading value (over CNH 18,750)'
       country: China A-Shares
       countryCode: CNH
-      financingRate: "7.835%\_"
+      financingRate: "7.398%\_"
       platformUsageFee: CNH 15
       platformUsageFeeType: per deal
   title: Access World-Class Investment Options
