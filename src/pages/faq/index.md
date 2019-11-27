@@ -36,7 +36,7 @@ categories:
           living overseas and want to use our services.
         question: Can tax residents of another country use Snowball services?
       - answer: >-
-          Snowball is also a member of Snowball Group（“雪球集团”, Snowball).
+          Snowball X is also a member of Snowball Group（“雪球集团”, Snowball).
           Snowball Group's investment and communication platform xueqiu.com is a
           leading investment social network and online trading platform in China
           with over 35 million users. It provides investors with cross-market
@@ -73,9 +73,9 @@ categories:
           markets can help to produce higher risk-adjusted returns.
 
 
-          Also, there are benefits to investors when exchange rates work in
-          your favour. Currency risk, known as exchange-rate risk, arises from
-          the change in price of one currency in relation to another.
+          Also, there are benefits to investors when exchange rates work in your
+          favour. Currency risk, known as exchange-rate risk, arises from the
+          change in price of one currency in relation to another.
         question: |
           Why invest in overseas listed shares?
       - answer: >-
@@ -91,13 +91,15 @@ categories:
           a different broker. 
         question: What happens if Snowball goes under?
       - answer: >-
-          Client funds are held in the name of the client in the Trust Account held by Interactive Brokers and/or an NZ bank. Snowball Custodial partner is the largest electronic brokerage firm in the
-          United States by daily average revenue trades. As a registered US
-          broker and custodian, Interactive Brokers operates under the rules and
+          Client funds are held in the name of the client in the Trust Account
+          held by Interactive Brokers and/or an NZ bank. Snowball Custodial
+          partner is the largest electronic brokerage firm in the United States
+          by daily average revenue trades. As a registered US broker and
+          custodian, Interactive Brokers operates under the rules and
           regulations of the Securities Exchange Act and the requirements of the
           Securities and Exchange Commission (SEC) and the Financial Industry
-          Regulatory Authority (FINRA). SBX is responsible to
-          clients for the custodial services provided by Interactive Brokers.
+          Regulatory Authority (FINRA). SBX is responsible to clients for the
+          custodial services provided by Interactive Brokers.
         question: 'How safe are the funds that have been invested via Snowball App? '
   - categoryTitle: How to use
     questions:
@@ -124,7 +126,8 @@ categories:
         question: |
           How do I withdraw funds from Snowball Securities?
       - answer: >-
-          Yes, Snowball APP supports FOREX exchanges for over ten major currencies.
+          Yes, Snowball APP supports FOREX exchanges for over ten major
+          currencies.
         question: 'Can I exchange the currency on Snowball Securities? '
       - answer: |-
           Transfer from an IB broker
