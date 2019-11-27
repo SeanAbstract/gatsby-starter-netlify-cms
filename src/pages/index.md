@@ -100,7 +100,7 @@ featureSection:
         intelligence. Stay ahead of the market with exclusive information
         available at your fingertips.
       mainText: Make informed decisions
-      subText: Free Market Depth Report
+      subText: Free Securities Market Data
     - description: "It only takes a few minutes to setup your free \LSnowball account. The platform is really user friendly \Land the Snowball customer support team is only a phone \Lcall away if you need any assistance to get started. \LGive it a try today."
       mainText: Make informed decisions
       subText: Getting started is easy
