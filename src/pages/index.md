@@ -8,11 +8,11 @@ videoNameUS: Boat-Final-compressed.mp4
 videoNameCH: China-Wall-compressed.mp4
 image: /img/landing-page-2.png
 firstSection:
-  buttonText: Try Snowball Securities today
-  description: >
+  buttonText: Try Snowball X today
+  description: >-
     Fast and secure access to global markets with our online platform that
     allows you to buy and sell securities in Hong Kong, China and the US. Try
-    Snowball Securities today - a trusted member of the Snowball Group
+    Snowball X today - a trusted member of the Snowball Group
   mainText: Fast Secure Trusted
   image: /img/snowball-phone.png
 stockSection:
