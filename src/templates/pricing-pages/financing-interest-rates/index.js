@@ -123,7 +123,7 @@ export const FinancingInterestRatesPageTemplate = (props: FinancingInterestRates
                 </table>
               </div>
               <h5>
-                <br/><br/>Financing interest rate for CNY Dollar
+                <br/><br/>Financing interest rate for CNH Dollar
               </h5>
               <div className="table-responsive">
                 <table class="table table-bordered">

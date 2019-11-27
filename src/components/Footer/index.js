@@ -182,7 +182,7 @@ function Footer(props) {
         <Row>
           <Col xs={12} md={9} className="mb-3" style={{lineHeight: 1}}>
             <StyledSmall>
-              Snowball Securities®, 雪盈证券® are New Zealand registered trademarks of SNB Finance
+              Snowball X®, 雪盈证券® are New Zealand registered trademarks of SNB Finance
               Holdings Limited (NZBN: 9429046386212) (&quot;SNB&quot;). SNB is registered on the New
               Zealand{' '}
               <a href="https://www.companiesoffice.govt.nz/" target="_blank">
@@ -205,7 +205,7 @@ function Footer(props) {
 
         <Row className="mb-5 pb-5">
           <Col xs={12}>
-            <Trademark>© 2019 Snowball Securities</Trademark>
+            <Trademark>© 2019 Snowball X</Trademark>
           </Col>
         </Row>
       </StyledContainer>

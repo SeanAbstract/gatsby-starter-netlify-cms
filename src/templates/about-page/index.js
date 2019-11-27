@@ -227,7 +227,7 @@ export const AboutPageTemplate = (props: AboutTemplate) => {
         <section className="pt-5">
           <div className="container">
             <div className="text-center mb-5">
-              <h1 className="big-text text-primary">Our Strategic Partners</h1>
+              <h1 className="big-text text-primary lowercase">Strategic Partners</h1>
             </div>
 
             {/* Investors */}
