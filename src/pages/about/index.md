@@ -14,7 +14,18 @@ tabs:
   - description: "Snowball X is an early mover in a high growth sector arising as a result of four forces that drive global financial services: Online trading, access to global markets, social information flows and fintech.\r\n\n* Open account、place orders、retrieve market reports all in one app; \n* Link to major stock exchanges, supports gearing, short-sale and t+0 trading; \n* Direct link to Xueqiu community to follow latest industry topics, get insights from professional investors and write your own investment stories."
     icon: /img/mobile.svg
     title: One-stop shop
-  - description: "The Ultimate Holding Company - Snowball Group (Xueqiu), is an internet financial information service provider focused on investment solutions.\rFounded in 2010, Snowball is committed to providing community interaction, market data & news feed and convenient transaction of global stock markets, focusing Mainland China, Hong Kong and the United States.\rUp to now, over 35 million users, not only develop their trading knowledge and skills from snowball community, but also experience a superior all-in-one investing service."
+  - description: >-
+      The Ultimate Holding Company - Snowball Group (Xueqiu), is an internet
+      financial information service provider focused on investment solutions.
+
+
+
+      Founded in 2010, Snowball is committed to providing community interaction,
+      market data & news feed and convenient transaction of global stock
+      markets, focusing Mainland China, Hong Kong and the United States. Up to
+      now, over 35 million users, not only develop their trading knowledge and
+      skills from snowball community, but also experience a superior all-in-one
+      investing service.
     icon: /img/people.svg
     title: Our Backers
   - description: "Snowball X is a registered Financial Services Provider and a member of the Snowball Group. We have established an internet-based brokerage service, collaborating with Interactive Brokers, the largest electronic brokerage firm in the US by the number of daily average revenue trades. \rOur parent company, Snowball Finance, has identified a significant opportunity – in many geographies – to provide online broking services to individuals who wish to invest in global share markets and has set up Snowball X in New Zealand, which will be the head office of a global financial services business targeting investors world-wide. \rSnowball X is a well-funded, technology advanced and fully compliant operated securities brokerage firm. We are dedicated to bringing online global trading experiences to diverse worldwide customers."
