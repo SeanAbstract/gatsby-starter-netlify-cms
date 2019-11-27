@@ -345,6 +345,8 @@ collections:
               {label: "Offices", name: offices, widget: list, fields: [
                 {label: "Office Name", name: "officeName", widget: string},
                 {label: "Address", name: "address", widget: string},
+                {label: "Office Name China", name: "officeNameCN", widget: string},
+                {label: "Address China", name: "addressCN", widget: string},
               ]},
               {label: "Image Right", name: imageRight, widget: image}
             ]}

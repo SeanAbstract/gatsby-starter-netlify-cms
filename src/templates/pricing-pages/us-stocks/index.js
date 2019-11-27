@@ -36,7 +36,7 @@ export const USStocksPageTemplate = (props: USStocksProps) => {
               </h3>
               {/* <PostContent content={content} /> */}
               <p>
-                Snowball Securities offers two flexible commission plans. Clients can switch between plans according to their specific needs. 
+                Snowball X offers two flexible commission plans. Clients can switch between plans according to their specific needs. 
               </p>
               <div class="table-responsive">
                 <table class="table table-bordered">
@@ -50,17 +50,17 @@ export const USStocksPageTemplate = (props: USStocksProps) => {
                   <tr>
                     <td>Commission<br/> – Low-commission Plan</td>
                     <td>USD 0.002 per share<br/> USD 0.99 minimum per order</td>
-                    <td>Snowball Securities</td>
+                    <td>Snowball X</td>
                   </tr>
                   <tr>
                     <td>Commission<br/> – Low-interest rate Plan</td>
                     <td>USD 0.008 per share <br/>USD 0.99 minimum per order</td>
-                    <td>Snowball Securities</td>
+                    <td>Snowball X</td>
                   </tr>
                   <tr>
                     <td>Platform fee</td>
                     <td>USD 0.003 per share <br/>USD 1.00 minimum per order</td>
-                    <td>Snowball Securities</td>
+                    <td>Snowball X</td>
                   </tr>
                   <tr>
                     <td>Withholding charges*</td>
@@ -108,17 +108,17 @@ export const USStocksPageTemplate = (props: USStocksProps) => {
                   </tr>
                   <tr>
                     <td>Position transfer fee</td>
-                    <td>There is no charge for ACATS transfer on Snowball Securities</td>
+                    <td>There is no charge for ACATS transfer on Snowball X</td>
                     <td>N/A</td>
                   </tr>
                   <tr>
                     <td>Real-time quote fees</td>
-                    <td>Free on Snowball Securities</td>
+                    <td>Free on Snowball X</td>
                     <td>N/A</td>
                   </tr>
                   <tr>
                     <td>Account management fee (or minimum monthly commission)</td>
-                    <td>Free on Snowball Securities</td>
+                    <td>Free on Snowball X</td>
                     <td>N/A</td>
                   </tr>
                 </table>

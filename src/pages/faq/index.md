@@ -39,7 +39,7 @@ categories:
           Snowball is also a member of Snowball Group（“雪球集团”, Snowball).
           Snowball Group's investment and communication platform xueqiu.com is a
           leading investment social network and online trading platform in China
-          with over 28 million users. It provides investors with cross-market
+          with over 35 million users. It provides investors with cross-market
           and cross-species data information, news, and interactive
           communication services. These services cover China A shares, Hong
           Kong, and U.S. stock market. 
@@ -74,7 +74,7 @@ categories:
 
 
           Also, there are benefits to investors when exchange rates work in
-          their favour. Currency risk, known as exchange-rate risk, arises from
+          your favour. Currency risk, known as exchange-rate risk, arises from
           the change in price of one currency in relation to another.
         question: |
           Why invest in overseas listed shares?
@@ -91,14 +91,12 @@ categories:
           a different broker. 
         question: What happens if Snowball goes under?
       - answer: >-
-          Client funds are held in the name of the client in trust accounts
-          opened in New Zealand by Interactive Brokers, Snowball Securities'
-          custodial partner and the largest electronic brokerage firm in the
+          Client funds are held in the name of the client in the Trust Account held by Interactive Brokers and/or an NZ bank. Snowball Custodial partner is the largest electronic brokerage firm in the
           United States by daily average revenue trades. As a registered US
           broker and custodian, Interactive Brokers operates under the rules and
           regulations of the Securities Exchange Act and the requirements of the
           Securities and Exchange Commission (SEC) and the Financial Industry
-          Regulatory Authority (FINRA). Snowball Securities is responsible to
+          Regulatory Authority (FINRA). SBX is responsible to
           clients for the custodial services provided by Interactive Brokers.
         question: 'How safe are the funds that have been invested via Snowball App? '
   - categoryTitle: How to use
@@ -126,24 +124,23 @@ categories:
         question: |
           How do I withdraw funds from Snowball Securities?
       - answer: >-
-          Yes, Snowball Securities APP support over exchanges between over 10
-          mainstream currencies.
+          Yes, Snowball APP supports FOREX exchanges for over ten major currencies.
         question: 'Can I exchange the currency on Snowball Securities? '
       - answer: |-
           Transfer from an IB broker
 
-            - Step 1    download the Snowball Securities App to open an account
+            - Step 1    download the SBX App to open an account
             - Step 2    Log in to the IB account and select Transfer & Pay → Transfer Funds/Transfer Positions → Internal Transfer
 
           Transfer from a Hong Kong stockbroker or a Hong Kong bank
-            - Step 1     download the Snowball Securities App to open an account
+            - Step 1     download the SBX App to open an account
             - Step 2     Contact the original broker/bank customer service to give notification of the transfer. Ask for the name, contact number of settlement department, email of original broker/bank. Click to view common Hong Kong stock brokerage information 
             - Step 3     log into Interactive Brokers and select "Funding" → "Position Transfers”, if you are transferring Hong Kong stocks, select "International Assets" to inform IB to receive stocks
 
           from other US stock brokers
-            - Step 1    download the Snowball Securities App to open an account.
+            - Step 1    download the SBX App to open an account.
             - Step 2    Log into the original securities account and find the account number.
-            - Step 3    Log into the Snowball Securities app click on "Transaction" - "more" - "account transfer" - "US stock account", fill in the phone number, select the original broker, enter the original broker’s account number
+            - Step 3    Log into the SBX app click on "Transaction" - "more" - "account transfer" - "US stock account", fill in the phone number, select the original broker, enter the original broker’s account number
             - step 4 Confirm the transfer application with the original broker. If you receive the original broker transfer confirmation e-mail or text message, reply directly to confirm
         question: >+
           I already have an account with other brokers, and want to transfer my

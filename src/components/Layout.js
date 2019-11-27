@@ -117,7 +117,7 @@ const StickyFooterCta = styled.div`
 
 const StyledMain = styled.main`
   ${'' /* This fixes an issue with the footer not fully showing on large screen sizes */}
-  margin-bottom: 380px;
+  margin-bottom: 580px;
   position: relative;
 
   @media (max-width: 426px) {

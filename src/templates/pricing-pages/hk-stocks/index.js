@@ -36,7 +36,7 @@ export const HKStocksPageTemplate = (props: HKStocksPageProps) => {
               </h3>
               {/* <PostContent content={content} /> */}
               <p>
-                Snowball Securities offers two flexible commission plans. Clients can switch between plans according to their specific needs. 
+                Snowball X offers two flexible commission plans. Clients can switch between plans according to their specific needs. 
               </p>
               <table class="table table-bordered">
                 <thead>
@@ -49,17 +49,17 @@ export const HKStocksPageTemplate = (props: HKStocksPageProps) => {
                 <tr>
                   <td>Commission <br/>– Low-commission Plan</td>
                   <td>$0.00 per share on orders under HKD 60,000 <br/>0.03% per share on orders above HKD 60,000</td>
-                  <td>Snowball Securities</td>
+                  <td>Snowball X</td>
                 </tr>
                 <tr>
                   <td>Commission <br/>– Low-interest rate Plan</td>
                   <td>$0.00 per share on orders under HKD 22,500 <br/>0.08% per share on orders above HKD 22,500</td>
-                  <td>Snowball Securities</td>
+                  <td>Snowball X</td>
                 </tr>
                 <tr>
                   <td>Platform fee</td>
                   <td>HKD 18  per order</td>
-                  <td>Snowball Securities</td>
+                  <td>Snowball X</td>
                 </tr>
               </table>
               <h5>
@@ -123,7 +123,7 @@ export const HKStocksPageTemplate = (props: HKStocksPageProps) => {
                 <tr>
                   <td>Position transfer fee</td>
                   <td>HKD 0 transferring position in <br/><br/>HKD 400 transferring position out</td>
-                  <td>Snowball Securities</td>
+                  <td>Snowball X</td>
                 </tr>
                 <tr>
                   <td>Real-time quote fees</td>
@@ -156,7 +156,7 @@ export const HKStocksPageTemplate = (props: HKStocksPageProps) => {
                   <tr>
                     <td>Interest of subscription financing</td>
                     <td>Financing annual interest rate is around 4% (slightly adjusted according to the market capital condition when each stock is listed)</td>
-                    <td>Snowball Securities</td>
+                    <td>Snowball X</td>
                   </tr>
                   <tr>
                     <td>Trading levy, trading fee and brokerage commission</td>

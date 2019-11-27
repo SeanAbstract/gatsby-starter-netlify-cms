@@ -68,6 +68,10 @@ const data = [
     href: '/download',
   },
   {
+    name: 'Blog',
+    href: '/blog'
+  },
+  {
     name: 'FAQs',
     href: '/faq',
   },
@@ -459,6 +463,8 @@ const Logo = styled.img`
 const LogoIcon = styled.img`
   height: 30%;
   width: 30%;
+  min-height: 100px;
+  min-width: 100px;
   object-fit: contain;
   transition: 0.1s;
 

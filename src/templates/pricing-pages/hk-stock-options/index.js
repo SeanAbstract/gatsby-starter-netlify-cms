@@ -36,7 +36,7 @@ export const HKStockOptionsPageTemplate = (props: HKStockOptionsPageProps) => {
               </h3>
               {/* <PostContent content={content} /> */}
               <p>
-                Snowball Securities offers two flexible commission plans. Clients can switch between plans according to their specific needs. 
+                Snowball X offers two flexible commission plans. Clients can switch between plans according to their specific needs. 
               </p>
               <div className="table-responsive">
                 <table class="table table-bordered">
@@ -50,12 +50,12 @@ export const HKStockOptionsPageTemplate = (props: HKStockOptionsPageProps) => {
                   <tr>
                     <td>Commission</td>
                     <td>HKD 30 per contract <br/>HKD 30 minimum</td>
-                    <td>Snowball Securities</td>
+                    <td>Snowball X</td>
                   </tr>
                 </table>
               </div>
               <p>
-                Notes: Snowball Securities App currently does not support trading of Hong Kong stock options. You can trade on Interactive Brokers official trading terminal TWS. 
+                Notes: Snowball X App currently does not support trading of Hong Kong stock options. You can trade on Interactive Brokers official trading terminal TWS. 
                 <br />
                 <br />
               </p>

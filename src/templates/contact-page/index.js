@@ -30,6 +30,8 @@ type Props = {
     offices: Array<{
       officeName: string,
       address: string,
+      officeNameCN: String,
+      addressCN: String,
     }>,
     imageRight: any,
   },
@@ -79,23 +81,44 @@ export function ContactPageTemplate(props: Props) {
                 </div>
                 <div className="row w-100 pl-5">
                   {props.informationSection.offices.map(office => (
-                    <div className="col-8 d-flex align-items-end justify-content-center">
-                      <div>
-                        <p className="lead mb-1 font-weight-light">{office.officeName}</p>
+                    <div>
+                      <div className="col-8 d-flex align-items-end justify-content-center">
+                        <div>
+                          <p className="lead mb-1 font-weight-light">{office.officeName}</p>
 
-                        <p className="mb-0">
-                          {office.address}
-                          <span className="ml-3">
-                            <a href="https://goo.gl/maps/Qm661NGYJBQXfUfx7" target="_blank">
-                              <img
-                                src={googleMaps}
-                                alt=""
-                                style={{height: '30px'}}
-                                className="ml-1 mb-2"
-                              />
-                            </a>
-                          </span>
-                        </p>
+                          <p className="mb-0">
+                            {office.address}
+                            <span className="ml-3">
+                              <a href="https://goo.gl/maps/Qm661NGYJBQXfUfx7" target="_blank">
+                                <img
+                                  src={googleMaps}
+                                  alt=""
+                                  style={{height: '30px'}}
+                                  className="ml-1 mb-2"
+                                />
+                              </a>
+                            </span>
+                          </p>
+                        </div>
+                      </div>
+                      <div className="col-8 d-flex align-items-end justify-content-center">
+                        <div>
+                          <p className="lead mb-1 font-weight-light"><br/>{office.officeNameCN}</p>
+
+                          <p className="mb-0">
+                            {office.addressCN}
+                            <span className="ml-3">
+                              <a href="https://goo.gl/maps/1J8qozeFocgcgkg66" target="_blank">
+                                <img
+                                  src={googleMaps}
+                                  alt=""
+                                  style={{height: '30px'}}
+                                  className="ml-1 mb-2"
+                                />
+                              </a>
+                            </span>
+                          </p>
+                        </div>
                       </div>
                     </div>
                   ))}
@@ -421,6 +444,8 @@ export const contactPageQuery = graphql`
           offices {
             officeName
             address
+            officeNameCN
+            addressCN
           }
           imageRight {
             childImageSharp {

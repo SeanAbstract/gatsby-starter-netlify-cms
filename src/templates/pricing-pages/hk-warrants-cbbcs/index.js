@@ -36,7 +36,7 @@ export const HKWarrantsCBBCSPageTemplate = (props: HKWarrantsCBBCSPageProps) => 
               </h3>
               {/* <PostContent content={content} /> */}
               <p>
-                Snowball Securities offers two flexible commission plans. Clients can switch between plans according to their specific needs. 
+                Snowball X offers two flexible commission plans. Clients can switch between plans according to their specific needs. 
               </p>
               <div className="table-responsive">
                 <table class="table table-bordered">
@@ -50,12 +50,12 @@ export const HKWarrantsCBBCSPageTemplate = (props: HKWarrantsCBBCSPageProps) => 
                   <tr>
                     <td>Commission <br/>– Low-commission Plan</td>
                     <td>0.03% of trade value, per deal <br/>HKD 12 minimum per order</td>
-                    <td>Snowball Securities</td>
+                    <td>Snowball X</td>
                   </tr>
                   <tr>
                     <td>Commission <br/>– Low-interest rate Plan</td>
                     <td>0.08% of trade value, per deal <br/>HKD 12 minimum per order</td>
-                    <td>Snowball Securities</td>
+                    <td>Snowball X</td>
                   </tr>
                   <tr>
                     <td>Transaction fee</td>

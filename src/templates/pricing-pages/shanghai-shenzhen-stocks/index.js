@@ -36,7 +36,7 @@ export const ShanghaiShenzhenStocksPageTemplate = (props: ShanghaiShenzhenStocks
               </h3>
               {/* <PostContent content={content} /> */}
               <p>
-                Snowball Securities offers two flexible commission plans. Clients can switch between plans according to their specific needs.
+                Snowball X offers two flexible commission plans. Clients can switch between plans according to their specific needs.
               </p>
               <div className="table-responsive-xl">
                 <table class="table table-bordered">
@@ -50,17 +50,17 @@ export const ShanghaiShenzhenStocksPageTemplate = (props: ShanghaiShenzhenStocks
                   <tr>
                     <td>Commission <br/>– Low-commission Plan</td>
                     <td>$0.00 per share on orders under CNH 50,000 <br/><br/>0.03% per share on orders above CNH 50,000</td>
-                    <td>Snowball Securities</td>
+                    <td>Snowball X</td>
                   </tr>
                   <tr>
                     <td>Commission <br/>– Low-interest rate Plan</td>
                     <td>$0.00 per share on orders under CNH 18,750 <br/><br/>0.08% per share on orders above CNH 18,750</td>
-                    <td>Snowball Securities</td>
+                    <td>Snowball X</td>
                   </tr>
                   <tr>
                     <td>Platform fee</td>
                     <td>CNH 18 per order</td>
-                    <td>Snowball Securities</td>
+                    <td>Snowball X</td>
                   </tr>
                 </table>
               </div>

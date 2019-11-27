@@ -188,12 +188,15 @@ function Footer(props) {
               <a href="https://www.companiesoffice.govt.nz/" target="_blank">
                 Financial Service Providers Register
               </a>{' '}
-              (FSP: 594389). SNB’s Financial Service Providers registration can be verified on the
-              Financial Service Providers Register. SNB is a member of the Financial Dispute
-              Resolution Scheme, an independent dispute resolution service provider. SNB is not
-              licensed by a New Zealand regulator and is not actively regulated in New Zealand.
-              SNB’s registered office is at Level 5, 25 Teed Street, Newmarket, Auckland 1023, New
-              Zealand.
+              (FSP: 594389). SNB’s Financial Service Providers registration can be verified on the Financial Service Providers Register. SNB is a member of the Financial Dispute Resolution Scheme, an independent dispute resolution service provider. SNB is not licensed by a New Zealand regulator and is not actively regulated in New Zealand. SNB’s registered office is at Level 5, 25 Teed Street, Newmarket, Auckland 1023, New Zealand.
+              <br /> <br />
+              By accessing this website and any portal within this website, you agree to and will comply with the terms of use, and any applicable portal terms of use.
+              <br /> <br />
+              The material on this website is given as information only. SNB does not provide any financial advice on buying, holding, or disposing of financial products.  Any trading symbols displayed are for illustrative purposes only and are not intended to be recommendations or opinions.  
+              <br /> <br />
+              Whilst the information on this website has been prepared with all reasonable care, SNB, its directors and officers make no representation or warranty (express or implied) regarding the accuracy or completeness of the information on this website and accept no responsibility for any errors, omissions, or service unavailability. To the maximum extent permitted by law, SNB, its directors and officers disclaim any liability arising from the use of information on this website.
+              <br /> <br />
+              No investment is free from risk. Returns can be positive or negative. The risk of loss in trading of any stock or other financial products can be substantial and it is possible you could receive back less money than you invest. Investors should seek independent and financial advice specific to their situation before making an investment decision. Please read through our <StyledLinkv2 to="risk-disclosure">Risk Disclosure</StyledLinkv2> and <StyledLinkv2 to="terms">Conditions</StyledLinkv2> before investing. 
             </StyledSmall>
             <br />
             <StyledSmall />
@@ -209,6 +212,19 @@ function Footer(props) {
     </StyledFooter>
   )
 }
+
+const StyledLinkv2 = styled(Link)`
+  text-decoration: none;
+  color: #007bff;
+
+  &:hover {
+    /* p {
+      opacity: 50% !important;
+    } */
+    color: #0056b3;
+    text-decoration: underline;
+  }
+`
 
 const StyledLink = styled(Link)`
   text-decoration: none !important;
@@ -232,7 +248,7 @@ const StyledFooter = styled.footer`
   min-height: 40vh;
   background-color: #f5f5f5;
   position: fixed;
-  height: 395px;
+  height: 595px;
   bottom: 0;
   width: 100%;
   z-index: -2;

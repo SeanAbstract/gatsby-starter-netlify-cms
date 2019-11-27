@@ -19,6 +19,8 @@ informationSection:
   offices:
     - address: 'Level 5, 25 Teed Street Newmarket, Auckland 1023'
       officeName: New Zealand Office
+      officeNameCN: Beijing Office
+      addressCN: 'Snowball Group (Xueqiu) Level 17, Building C, Beijing Ronsin Technology Center, Beijing, China'
 socialMedia:
   socialMediaTitle: Social Media
   wechatAccountOne: Official Account

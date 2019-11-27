@@ -40,6 +40,7 @@ function DownloadNow({mainText, subText, image}: Props) {
               style={{maxWidth: '120px'}}
               className="mt-3 d-none d-md-block"
             />
+            <p><br/>(English app available mid/late 2020)</p>
           </div>
           <div className="col-md-4 col-6 mr-auto ">
             <VizSensor

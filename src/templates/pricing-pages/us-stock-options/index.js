@@ -36,7 +36,7 @@ export const USStockOptionsPageTemplate = (props: USStockOptionsProps) => {
               </h3>
               {/* <PostContent content={content} /> */}
               <p>
-                Snowball Securities offers two flexible commission plans. Clients can switch between plans according to their specific needs. 
+                Snowball X offers two flexible commission plans. Clients can switch between plans according to their specific needs. 
               </p>
               <div className="table-responsive">
                 <table class="table table-bordered">
@@ -76,7 +76,7 @@ export const USStockOptionsPageTemplate = (props: USStockOptionsProps) => {
                 Notes:
               </h5>
               <p>
-                In the option transactions, additional costs may be incurred depending on the extent of liquidity generated. Refer to the stock exchange for details. Currently, Snowball Securities App does not support trading of US stock options. Clients can trade on Interactive Brokers official trading terminal TWS.
+                In the option transactions, additional costs may be incurred depending on the extent of liquidity generated. Refer to the stock exchange for details. Currently, Snowball X App does not support trading of US stock options. Clients can trade on Interactive Brokers official trading terminal TWS.
                 <br />
                 <br />
               </p>

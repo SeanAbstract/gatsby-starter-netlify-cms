@@ -117,16 +117,11 @@ export const AboutPageTemplate = (props: AboutTemplate) => {
               <div>
                 {/* <p>{props.mainpitch.description}</p> */}
                 <p className="dark-grey font-size-18">
-                  Our digital platform gives customers access to China A shares and securities
-                  listed on the Stock Exchange of Hong Kong (SEHK), the New York Stock Exchange
-                  (NYSE), NASDAQ and other markets.
+                  Snowball X is a leading online equities company utilising the latest innovative technology to provide investors access to global securities listed on major Stock Exchanges including Hong Kong (SEHK), New York Stock Exchange (NYSE), NASDAQ and other markets. Snowball X is part of the Snowball Group which is a leading financial markets social platform with over 35 million users and backed by global investors such as Ant Financials (Alibaba) and Sequoia Capital.
                 </p>
                 {/* <p>{props.mainpitch.secondDescription}</p> */}
                 <p className="dark-grey font-size-18">
-                  With one account, our clients are able to trade securities listed in China, the
-                  United States, Hong Kong, Japan and other countries and build a portfolio of
-                  shares in big international world's best-known companies like Alibaba, PetroChina,
-                  Microsoft and Google.
+                  With one account, our investors are able to access global market information and trade securities listed in China, the United States, Hong Kong, Japan and other countries and build a portfolio of shares of international reputable companies like Alibaba, PetroChina, Microsoft and Google.
                 </p>
               </div>
             </div>
@@ -232,7 +227,7 @@ export const AboutPageTemplate = (props: AboutTemplate) => {
         <section className="pt-5">
           <div className="container">
             <div className="text-center mb-5">
-              <h1 className="big-text text-primary">People</h1>
+              <h1 className="big-text text-primary">Our Strategic Partners</h1>
             </div>
 
             {/* Investors */}

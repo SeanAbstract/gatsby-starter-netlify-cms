@@ -23,7 +23,7 @@ const content = [
   {
     title: 'Greater security of account assets',
     description:
-      'Snowball is a secure online platform, your account  assets are held in a trust under the supervision of  independent auditors to provide greater level of  protection. Trade with confidence.',
+      'Snowball is a secure online platform. Your account  assets are held in a trust under the supervision of  independent auditors to provide greater level of  protection. Trade with confidence.',
     featuredImage: bgSlider3,
   },
   {

@@ -36,7 +36,7 @@ export const FinancingInterestRatesPageTemplate = (props: FinancingInterestRates
               </h3>
               {/* <PostContent content={content} /> */}
               <p>
-                With Snowball Securities, the interest rate on USD margin loan is generally based on tiers of the amount borrowed. The greater amount borrowed, the lower interest rate applied. Interest is calculated on a daily basis, charged on a monthly basis. There is no interest incurred if the loan is repaid on the same day that it is drawn. 
+                With Snowball X, the interest rate on USD margin loan is generally based on tiers of the amount borrowed. The greater amount borrowed, the lower interest rate applied. Interest is calculated on a daily basis, charged on a monthly basis. There is no interest incurred if the loan is repaid on the same day that it is drawn. 
                 <br />
                 <br />
               </p>
@@ -159,10 +159,10 @@ export const FinancingInterestRatesPageTemplate = (props: FinancingInterestRates
                 </table>
               </div>
               <p>
-                Notes: In calculating interest rates, Snowball Securities uses a mixed interest rate based on the above tiers. For example, for a balance of more than 10,000 US dollars but less than one million US dollars, 100,000 will be calculated with the first-tier interest rate, and the remaining will be calculated with the second-tier interest rate. When determining the quoted spread, Snowball Securities will use the set benchmark rate or a benchmark rate of 0 for all benchmark rates less than 0.
+                Notes: In calculating interest rates, Snowball X uses a mixed interest rate based on the above tiers. For example, for a balance of more than 10,000 US dollars but less than one million US dollars, 100,000 will be calculated with the first-tier interest rate, and the remaining will be calculated with the second-tier interest rate. When determining the quoted spread, Snowball X will use the set benchmark rate or a benchmark rate of 0 for all benchmark rates less than 0.
                 <br />
                 <br />
-                Snowball Securities aligns the interest rate for Low-commission Plan with interest rate on Interactive Brokers. Adjustments to interest rate are done periodically for changes in currency rates. Please refer to Interactive Brokers for updated interest rate. For existing clients, click here to view the old pricing scheme if you intend to continue with it.
+                Snowball X aligns the interest rate for Low-commission Plan with interest rate on Interactive Brokers. Adjustments to interest rate are done periodically for changes in currency rates. Please refer to Interactive Brokers for updated interest rate. For existing clients, click here to view the old pricing scheme if you intend to continue with it.
                 <br />
                 <br />
               </p>
