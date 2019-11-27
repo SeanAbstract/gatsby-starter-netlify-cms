@@ -7,75 +7,17 @@ mainpitch:
   description: This is the description
   secondDescription: This is the second descriptions
   title: >-
-    Snowball Securities is an online share broker providing clients with an
-    online broking service that enables them to buy and sell securities on the
-    world's largest share markets.
+    Snowball provides an online equities investing platform for investors to
+    access the major global markets at the conveniences of one app anywhere in
+    the world.
 tabs:
-  - description: >-
-      Through Snowball investors can trade electronically in a variety of
-      financial products worldwide. Our trading platform is fast and efficient,
-      and our fee structure is competitive.
-
-
-      * Snowball Securities provide online information and share trading
-      services to global investors who want exposure to global markets.
-
-      * Snowball Securities is a financial services provider backed by leading
-      participants in the Fintech sector and with access to complementary
-      information services and social channels. 
-
-      * Snowball Securities is committed to New Zealand and is investing to
-      build a substantial global online share trading business from its base
-      here.
-
-      * Snowball Securities is an early mover in a high growth sector arising as
-      a result of four forces that drive global financial services: Online
-      trading, access to global markets, social information flows and fintech.
+  - description: "Snowball X is an early mover in a high growth sector arising as a result of four forces that drive global financial services: Online trading, access to global markets, social information flows and fintech.\r\n\n* Open account、place orders、retrieve market reports all in one app; \n* Link to major stock exchanges, supports gearing, short-sale and t+0 trading; \n* Direct link to Xueqiu community to follow latest industry topics, get insights from professional investors and write your own investment stories."
     icon: /img/mobile.svg
     title: One-stop shop
-  - description: >-
-      The Ultimate Holding Company is a Hong Kong registered Company, Snowball
-      Finance International Limited, an internet financial information service
-      provider focused on investment solutions.
-
-
-      * Snowball Finance was incorporated in 2010. It has raised over US$173
-      million in four investment rounds since 2014, culminating in an investment
-      of US$120 million, in July 2018, from Alibaba subsidiary, Ant Financial, a
-      fintech company that originated from Alipay. Other investors include
-      Sequoia Capital China, an affiliate of American venture capital firm,
-      Sequoia Capital, Morningside Venture Capital, a Hong Kong-based private
-      equity firm, and Renren Inc, a Chinese social networking service similar
-      to Facebook.
+  - description: "The Ultimate Holding Company - Snowball Group (Xueqiu), is an internet financial information service provider focused on investment solutions.\rFounded in 2010, Snowball is committed to providing community interaction, market data & news feed and convenient transaction of global stock markets, focusing Mainland China, Hong Kong and the United States.\rUp to now, over 35 million users, not only develop their trading knowledge and skills from snowball community, but also experience a superior all-in-one investing service."
     icon: /img/people.svg
     title: Our Backers
-  - description: >-
-      Snowball Securities is a financial services business. We are establishing
-      an internet-based brokerage service, using a platform provided by US-based
-      electronic brokerage firm, Interactive Brokers. This platform will enable
-      customers to buy and sell securities online and via mobile apps. 
-
-
-      * Our parent company, Snowball Finance, has identified a significant
-      opportunity -- in many geographies – to provide online broking services to
-      individuals who wish to invest in global share markets and has set up a
-      subsidiary in New Zealand to provide this service to global investors.
-
-      * Snowball Finance has established Snowball Securities as an
-      internet-based brokerage service operating from New Zealand. Once Snowball
-      Securities has a base of New Zealand customers Snowball Finance then plans
-      to make it the head office of a global financial services business
-      targeting investors world-wide. 
-
-      * Snowball Finance's investment and communication platform, Xueqiu.com, is
-      China's largest social site for investors in the US stock markets. It
-      provides investors with cross-market and cross-species data query,
-      newsletter subscriptions, and interactive communication services. These
-      services have covered the A shares and the Hong Kong and US stock markets.
-      Beneficial from it, Snowball Securities has grown rapidly among
-      Mandarin-speaking users, however as a well-funded, technology advanced and
-      lawful operated securities brokerage firm, we dedicate to bring global
-      trading experiences to diverse customers.
+  - description: "Snowball X is a registered Financial Services Provider and a member of the Snowball Group. We have established an internet-based brokerage service, collaborating with Interactive Brokers, the largest electronic brokerage firm in the US by the number of daily average revenue trades. \rOur parent company, Snowball Finance, has identified a significant opportunity – in many geographies – to provide online broking services to individuals who wish to invest in global share markets and has set up Snowball X in New Zealand, which will be the head office of a global financial services business targeting investors world-wide. \rSnowball X is a well-funded, technology advanced and fully compliant operated securities brokerage firm. We are dedicated to bringing online global trading experiences to diverse worldwide customers."
     icon: /img/business.svg
     title: Our Business
 historyCards:
@@ -130,9 +72,10 @@ investors:
       users.
     brandLogo: /img/renren.png
   - brandDescription: >-
-      The highest valued FinTech company in the world, and the world's most
-      valuable unicorn (start-up) company, with a valuation of US$150 billion.
-    brandLogo: /img/ant-financial-v2.jpg
+      Ant Financial is the financial arm of Alibaba and the highest valued
+      FinTech company in the world. It is the world's most valuable unicorn
+      (start-up) company, with a valuation of US$150 billion.
+    brandLogo: /img/ant-financial-logo-2.jpeg
 partners:
   - brandDescription: >-
       A U.S.-based brokerage firm. It operates the largest electronic trading
