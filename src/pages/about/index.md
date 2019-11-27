@@ -28,7 +28,25 @@ tabs:
       investing service.
     icon: /img/people.svg
     title: Our Backers
-  - description: "Snowball X is a registered Financial Services Provider and a member of the Snowball Group. We have established an internet-based brokerage service, collaborating with Interactive Brokers, the largest electronic brokerage firm in the US by the number of daily average revenue trades. \rOur parent company, Snowball Finance, has identified a significant opportunity – in many geographies – to provide online broking services to individuals who wish to invest in global share markets and has set up Snowball X in New Zealand, which will be the head office of a global financial services business targeting investors world-wide. \rSnowball X is a well-funded, technology advanced and fully compliant operated securities brokerage firm. We are dedicated to bringing online global trading experiences to diverse worldwide customers."
+  - description: >-
+      Snowball X is a registered Financial Services Provider and a member of the
+      Snowball Group. We have established an internet-based brokerage service,
+      collaborating with Interactive Brokers, the largest electronic brokerage
+      firm in the US by the number of daily average revenue trades. 
+
+
+
+      Our parent company, Snowball Finance, has identified a significant
+      opportunity – in many geographies – to provide online broking services to
+      individuals who wish to invest in global share markets and has set up
+      Snowball X in New Zealand, which will be the head office of a global
+      financial services business targeting investors world-wide. 
+
+
+
+      Snowball X is a well-funded, technology advanced and fully compliant
+      operated securities brokerage firm. We are dedicated to bringing online
+      global trading experiences to diverse worldwide customers.
     icon: /img/business.svg
     title: Our Business
 historyCards:
