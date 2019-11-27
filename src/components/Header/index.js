@@ -343,7 +343,7 @@ export default class Header extends React.Component {
           <div className="container">
             <NavbarBrand>
               <Link to="/">
-                <LogoIcon isOpen={isOpen} scrolled={scrolled} src={logoIcon} alt="company logo" />
+                <LogoIcon isOpen={isOpen} scrolled={scrolled} src={logo} alt="company logo" />
               </Link>
             </NavbarBrand>
 
@@ -457,8 +457,8 @@ const Logo = styled.img`
 `
 
 const LogoIcon = styled.img`
-  height: 20px;
-  width: 20px;
+  height: 30%;
+  width: 30%;
   object-fit: contain;
   transition: 0.1s;
 

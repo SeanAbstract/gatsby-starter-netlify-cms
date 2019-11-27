@@ -27,9 +27,9 @@ const content = [
     featuredImage: bgSlider3,
   },
   {
-    title: 'Exclusive info at your fingertips',
+    title: 'Keep up to date with latest information',
     description:
-      'It only takes a few minutes to setup your free  Snowball account. The platform is really user friendly  and the Snowball customer support team is only a phone  call away if you need any assistance to get started.  Give it a try today. ',
+      'With Snowball App, you have a direct link to Xueqiu social platform which allows you to follow latest news, hear opinions from professional investors and follow other investor’s stories. Keeping up to date with the latest information will help with your investment decisions.',
     featuredImage: bgSlider2,
   },
 ]
