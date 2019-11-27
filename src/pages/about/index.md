@@ -88,6 +88,11 @@ historyCards:
       of the support and success of Snowball parent company XueQiu. 
 investors:
   - brandDescription: >-
+      Ant Financial is the financial arm of Alibaba and the highest valued
+      FinTech company in the world. It is the world's most valuable unicorn
+      (start-up) company, with a valuation of US$150 billion.
+    brandLogo: /img/ant-financial-logo-2.jpeg
+  - brandDescription: >-
       World leading venture capital firm, which has backed companies that now
       control $1.4 trillion of combined stock market value.
     brandLogo: /img/sequoia.png
@@ -100,11 +105,6 @@ investors:
       Renren made a pre-IPO announcement that it had 160 million registered
       users.
     brandLogo: /img/renren.png
-  - brandDescription: >-
-      Ant Financial is the financial arm of Alibaba and the highest valued
-      FinTech company in the world. It is the world's most valuable unicorn
-      (start-up) company, with a valuation of US$150 billion.
-    brandLogo: /img/ant-financial-logo-2.jpeg
 partners:
   - brandDescription: >-
       A U.S.-based brokerage firm. It operates the largest electronic trading
