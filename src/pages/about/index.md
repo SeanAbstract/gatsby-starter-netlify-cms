@@ -7,9 +7,9 @@ mainpitch:
   description: This is the description
   secondDescription: This is the second descriptions
   title: >-
-    Snowball Securities is an online share broker providing clients with an
-    online broking service that enables them to buy and sell securities on the
-    world's largest share markets.
+    Snowball provides an online equities investing platform for investors to
+    access the major global markets at the conveniences of one app anywhere in
+    the world.
 tabs:
   - description: >-
       Through Snowball investors can trade electronically in a variety of
