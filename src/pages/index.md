@@ -1,11 +1,10 @@
 ---
 templateKey: index-page
-mainText: WORLD EXCHANGES
+mainText: GLOBAL MARKETS
 subText: at your fingertips
 videoName: sailing.mp4
 videoNameAU: Beach-Final-compressed.mp4
 videoNameUS: Boat-Final-compressed.mp4
-videoNameCN: China-Wall-compressed.mp4
 image: /img/landing-page-2.png
 firstSection:
   buttonText: Try Snowball Securities today
