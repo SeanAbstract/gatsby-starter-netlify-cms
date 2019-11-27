@@ -50,6 +50,7 @@ collections:
           - {label: "Video Name NZ", name: "videoName", widget: "hidden"}
           - {label: "Video Name AU", name: "videoNameAU", widget: "hidden"}
           - {label: "Video Name US", name: "videoNameUS", widget: "hidden"}
+          - {label: "Video Name CN", name: "videoNameCN", widget: "hidden"}
           - {label: "Background Image", name: "image", widget: image}
           - {label: "First Section", name: "firstSection", widget: object, fields: [
               {label: 'Main Text', name: 'mainText', widget: string},
