@@ -8,8 +8,8 @@ mainpitch:
   secondDescription: This is the second descriptions
   title: >-
     Snowball provides an online equities investing platform for investors to
-    access the major global markets at the conveniences of one app anywhere in
-    the world.
+    access the major global markets through the convenience of one app anywhere
+    in the world.
 tabs:
   - description: "Snowball X is an early mover in a high growth sector arising as a result of four forces that drive global financial services: Online trading, access to global markets, social information flows and fintech.\r\n\n* Open account、place orders、retrieve market reports all in one app; \n* Link to major stock exchanges, supports gearing, short-sale and t+0 trading; \n* Direct link to Xueqiu community to follow latest industry topics, get insights from professional investors and write your own investment stories."
     icon: /img/mobile.svg
