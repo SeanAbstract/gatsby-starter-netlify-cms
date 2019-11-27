@@ -77,7 +77,7 @@ stockSection:
       financingRate: "7.398%\_"
       platformUsageFee: CNH 15
       platformUsageFeeType: per deal
-  title: Access World-Class Investment Options
+  title: Trade and Invest in World Exchanges
 featureSection:
   buttonText: How it works
   description: >
