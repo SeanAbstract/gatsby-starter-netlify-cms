@@ -10,6 +10,7 @@ import {
   DropdownToggle,
   DropdownMenu,
   Dropdown,
+  UncontrolledDropdown,
 } from 'reactstrap'
 import {Link} from 'gatsby'
 
@@ -69,7 +70,7 @@ const data = [
   },
   {
     name: 'Blog',
-    href: '/blog'
+    href: '/blog',
   },
   {
     name: 'FAQs',
@@ -92,7 +93,7 @@ const dataMobile = [
   },
   {
     name: 'Prices',
-    href: '/pricing/us-stocks',
+    // href: '/pricing/us-stocks',
     children: [
       {
         href: '/us-stocks',
@@ -181,7 +182,14 @@ export default class Header extends React.Component {
   }
 
   listenToScroll = () => {
-    const instantPaths = ['terms', 'thank-you', 'privacy-policy', 'risk-disclosure', 'pricing']
+    const instantPaths = [
+      'terms',
+      'thank-you',
+      'privacy-policy',
+      'risk-disclosure',
+      'pricing',
+      'blog',
+    ]
 
     this.setState(prevState => ({
       scrolled:
@@ -240,14 +248,11 @@ export default class Header extends React.Component {
                       <div
                         style={{position: 'relative'}}
                         className={`nav-link on-desktop ${ndx !== data.length - 1 ? 'mr-1' : ''}`}
+                        onMouseEnter={() => this.setState({isDropDownOpen: true})}
+                        onMouseLeave={() => this.setState({isDropDownOpen: false})}
+                        onClick={() => this.setState({isDropDownOpen: true})}
                       >
-                        <Dropdown
-                          nav
-                          inNavbar
-                          isOpen={this.state.isDropDownOpen}
-                          onMouseEnter={() => this.setState({isDropDownOpen: true})}
-                          onMouseLeave={() => this.setState({isDropDownOpen: false})}
-                        >
+                        <Dropdown nav inNavbar isOpen={this.state.isDropDownOpen}>
                           <DropdownToggle nav caret className="p-0 d-flex align-items-center">
                             {link.name}
                           </DropdownToggle>
@@ -279,21 +284,45 @@ export default class Header extends React.Component {
                     </div>
                   )
                 })}
-                {dataMobile.map((link, ndx) => (
-                  <div
-                    style={{position: 'relative'}}
-                    className={`nav-link on-mobile ${ndx !== data.length - 1 ? 'mr-4' : ''}`}
-                  >
-                    <Link
-                      to={link.href}
-                      className={`${
-                        `/${this.state.currentPath}` === `${link.href}` ? 'custom-active' : ''
-                      }`}
+                {dataMobile.map((link, ndx) => {
+                  if (link.children) {
+                    return (
+                      <div
+                        style={{position: 'relative'}}
+                        className={`nav-link on-mobile ${ndx !== data.length - 1 ? 'mr-1' : ''}`}
+                      >
+                        <UncontrolledDropdown nav inNavbar>
+                          <DropdownToggle nav caret className="p-0 d-flex align-items-center">
+                            {link.name}
+                          </DropdownToggle>
+                          <DropdownMenu style={{background: 'white', opacity: 1, borderRadius: 0}}>
+                            {link.children.map(childLink => (
+                              <Link to={`pricing/${childLink.href}`}>
+                                <DropdownItem>{childLink.name}</DropdownItem>
+                              </Link>
+                            ))}
+                          </DropdownMenu>
+                        </UncontrolledDropdown>
+                      </div>
+                    )
+                  }
+
+                  return (
+                    <div
+                      style={{position: 'relative'}}
+                      className={`nav-link on-mobile ${ndx !== data.length - 1 ? 'mr-4' : ''}`}
                     >
-                      {link.name}
-                    </Link>
-                  </div>
-                ))}
+                      <Link
+                        to={link.href}
+                        className={`${
+                          `/${this.state.currentPath}` === `${link.href}` ? 'custom-active' : ''
+                        }`}
+                      >
+                        {link.name}
+                      </Link>
+                    </div>
+                  )
+                })}
                 <div className="on-mobile social-container">
                   <img
                     src={wechatIcon}
@@ -356,14 +385,13 @@ export default class Header extends React.Component {
                 {data.map((link, ndx) => {
                   if (link.children) {
                     return (
-                      <div style={{position: 'relative'}} className="nav-link mr-0">
-                        <Dropdown
-                          nav
-                          inNavbar
-                          isOpen={this.state.isDropDownOpen2}
-                          onMouseEnter={() => this.setState({isDropDownOpen2: true})}
-                          onMouseLeave={() => this.setState({isDropDownOpen2: false})}
-                        >
+                      <div
+                        style={{position: 'relative'}}
+                        className="nav-link mr-0"
+                        onMouseEnter={() => this.setState({isDropDownOpen2: true})}
+                        onMouseLeave={() => this.setState({isDropDownOpen2: false})}
+                      >
+                        <Dropdown nav inNavbar isOpen={this.state.isDropDownOpen2}>
                           <DropdownToggle
                             nav
                             caret
@@ -372,7 +400,15 @@ export default class Header extends React.Component {
                           >
                             {link.name}
                           </DropdownToggle>
-                          <DropdownMenu style={{background: 'white', opacity: 1, borderRadius: 0}}>
+                          <DropdownMenu
+                            style={{
+                              background: 'white',
+                              opacity: 1,
+                              borderRadius: 0,
+                              top: '30px',
+                              left: '-8px',
+                            }}
+                          >
                             {link.children.map(childLink => (
                               <Link to={`pricing/${childLink.href}`}>
                                 <DropdownItem>{childLink.name}</DropdownItem>
