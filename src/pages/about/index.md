@@ -91,7 +91,7 @@ investors:
       Ant Financial is the financial arm of Alibaba and the highest valued
       FinTech company in the world. It is the world's most valuable unicorn
       (start-up) company, with a valuation of US$150 billion.
-    brandLogo: /img/ant-financial-logo-2.jpeg
+    brandLogo: /img/ant-financial-logo.jpg
   - brandDescription: >-
       World leading venture capital firm, which has backed companies that now
       control $1.4 trillion of combined stock market value.
