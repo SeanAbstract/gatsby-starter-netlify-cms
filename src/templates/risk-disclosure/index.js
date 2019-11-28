@@ -19,18 +19,6 @@ type RiskPageTemplate = {
   headerImage: any,
 }
 
-const disclosures = [
-  '1. Margin Risk Transaction Disclosure',
-  '2. Forex and Multi-currency Account Disclosure',
-  '3. Intraday Trading Risk Disclosure',
-  '4. After-hours trading risk disclosure',
-  '5. Commodity Futures Trading Commission Risk Disclosure Statement',
-  '6. Portfolio Margin Risk Disclosure',
-  '7. Option Trading Risk Disclosure',
-  '8. CFTC Risk Disclosure - Appendix to Rule 1.55',
-  '9. CFTC Risk Disclosure Statement - Rule 1.55(b)',
-]
-
 export const RiskPageTemplateExport = (props: RiskPageTemplate) => {
   const PostContent = props.contentComponent || Content
   const {content, headerImage, downloadNow} = props
@@ -43,17 +31,20 @@ export const RiskPageTemplateExport = (props: RiskPageTemplate) => {
         <div className="container content">
           <div className="row justify-content-center">
             <div className="col col-10 blog-container">
-              <h3>
-                Risk Disclosure
-              </h3>
-              {disclosures.map((disclosure, ndx) => (
+              <h3>Risk Disclosure</h3>
+              {props.disclosures.map((disclosure, ndx) => (
                 <Yo className="pt-1" key={`disclosure-${ndx}`}>
                   <p className="mb-0" style={{fontWeight: '500'}}>
-                    {disclosure}{' '}
+                    {disclosure.title}{' '}
                   </p>
-                  <p className="yo-2 mb-0" style={{fontWeight: '500'}}>
+                  <a
+                    className="yo-2 mb-0"
+                    style={{fontWeight: '500'}}
+                    download
+                    href={disclosure.file.publicURL}
+                  >
                     VIEW
-                  </p>
+                  </a>
                 </Yo>
               ))}
             </div>
@@ -67,6 +58,8 @@ export const RiskPageTemplateExport = (props: RiskPageTemplate) => {
 const RiskPage = ({data}) => {
   const {markdownRemark: post} = data
 
+  console.log(post)
+
   return (
     <Layout footerLinks={post.frontmatter.footerLinks}>
       <RiskPageTemplateExport
@@ -74,6 +67,7 @@ const RiskPage = ({data}) => {
         contentComponent={HTMLContent}
         downloadNow={post.frontmatter.downloadNow}
         headerImage={post.frontmatter.headerImage}
+        disclosures={post.frontmatter.disclosures}
       />
     </Layout>
   )
@@ -115,6 +109,12 @@ export const pageQuery = graphql`
             fluid(maxWidth: 2000, quality: 100) {
               ...GatsbyImageSharpFluid
             }
+          }
+        }
+        disclosures {
+          title
+          file {
+            publicURL
           }
         }
         downloadNow {

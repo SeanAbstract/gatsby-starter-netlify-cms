@@ -395,3 +395,25 @@ collections:
                 {label: "Href", name: "href", widget: string},
               ]},
             ]}
+
+      - file: "src/pages/risk-disclosure/index.md"
+        label: "Risk Disclosure Page"
+        name: "risk"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "risk-disclosure"}
+          - {label: Title, name: title, widget: string}
+          - {label: Header Image, name: headerImage, widget: image}
+          - {label: Disclosures, name: disclosures, widget: list, fields: [
+              {label: Title, name: title, widget: string},
+              {label: File, name: file, widget: file},
+            ]}
+          - {label: "Footer Links", name: "footerLinks", widget: object, fields: [
+              {label: "First Row", name: "firstRow", widget: list, fields: [
+                {label: "Name", name: "name", widget: string},
+                {label: "Href", name: "href", widget: string},
+              ]},
+              {label: "Second Row", name: "secondRow", widget: list, fields: [
+                {label: "Name", name: "name", widget: string},
+                {label: "Href", name: "href", widget: string},
+              ]},
+            ]}
