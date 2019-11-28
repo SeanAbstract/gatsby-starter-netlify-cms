@@ -1,10 +1,10 @@
 ---
 templateKey: blog-post
-title: highest standard of service
+title: A word from our Managing Director
 date: 2019-10-16T15:04:10.000Z
-description: A word from our Managing Director
+description: Author Snowball X
 featuredpost: true
-featuredimage: /img/landing-page-2.png
+featuredimage: /img/second-splash.jpg
 category: group
 tags:
   - ''
@@ -20,8 +20,6 @@ Our new purpose, vision and brand identity is less than one year old, but it has
 
 We are a solid company with strong shareholders backing which includes Ant Financials (Alibaba), Sequoia Capital, Renren and Morningside. The company has a strong focus on fintech’s latest technology so that we can provide you with the most efficient and effective access to the global market place at your convenience. 
 
-## Snowball X is committed to the highest standard of service
-
 You can access the global market place and market information on one convenient app anywhere in the world. 
 Our clients are very important to us. We take our work seriously and we strive to be the best at what we do. To provide you with the very best service, efficient and effective execution, easy to use and cost-effective access to the global markets, and to assist you to secure and grow your investments. 
 
@@ -32,5 +30,6 @@ Be part of the Snowball X community and grow with us.
 
 ![](/img/vang.png)
 
-VANG LY\
+VANG LY
+\
 Managing Director
