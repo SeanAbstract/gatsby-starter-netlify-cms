@@ -78,7 +78,7 @@ stockSection:
       financingRate: "7.398%\_"
       platformUsageFee: CNH 15
       platformUsageFeeType: per deal
-  title: Trade and Invest in Global markets
+  title: Trade & Invest in Global markets
 featureSection:
   buttonText: How it works
   description: >
