@@ -263,14 +263,8 @@ export const IndexPageTemplate = ({
                     }}
                   >
                     <div className="title-container">
-                      <h1 className="display-2 mb-3 ml-5">
-                        ACCESS
-                        <br />
-                        WORLD-CLASS
-                        <br />
-                        INVESTMENT
-                        <br />
-                        OPTION
+                      <h1 className="display-2 mb-3 ml-5 special-max-width">
+                        {stockSection.title}
                       </h1>
                     </div>
                   </div>

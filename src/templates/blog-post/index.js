@@ -56,7 +56,7 @@ export const BlogPostPageTemplate = (props: BlogPostTemplate) => {
                   <h2 className="title is-size-2 has-text-weight-bold">{title}</h2>
                   <p>{description}</p>
 
-                  <PostContent content={content} />
+                  <PostContent content={content} className="left-align-image" />
                 </div>
               </div>
             </div>

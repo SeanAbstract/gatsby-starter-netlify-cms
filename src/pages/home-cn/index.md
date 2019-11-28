@@ -1,6 +1,6 @@
 ---
 templateKey: index-page
-videoName: Beach-Final-compressed.mp4
+videoName: China-Wall-compressed.mp4
 image: /img/landing-page-2.png
 firstSection:
   buttonText: Try Snowball Securities today

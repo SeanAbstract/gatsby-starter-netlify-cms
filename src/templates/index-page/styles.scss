@@ -407,6 +407,16 @@ $primary: #006fbb;
 
 }
 
+.special-max-width {
+    max-width: 15rem;
+    line-height: 5rem;
+    margin: 0 !important;
+
+        @media (max-width: 767px) {
+            max-width: 20rem;
+        }
+}
+
 .landing-page-mobile {
     .display-2 {
         font-size: 90px;
