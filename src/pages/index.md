@@ -88,7 +88,7 @@ featureSection:
   gifs:
     - gif: /img/snowball-app-market-quotes_03.png
     - gif: /img/snowball-app-stock-financial_03.png
-    - gif: /img/open-account.png
+    - gif: /img/open-account-frame-update.png
   image: /img/snowball-empty-phone.png
   sections:
     - description: "Snowball makes it possible to invest in listed securities on the US, Hong Kong and China stock exchanges. Fast, convenient and secure trading accessed at a competitive low cost.\_\n"
