@@ -57,14 +57,14 @@ export function ContactPageTemplate(props: Props) {
           <div className="container h-100">
             <div className="row h-100">
               <div className="col-md-6 d-flex justify-content-center align-items-center flex-column">
-                <div className="row w-100 pl-5">
+                <div className="row w-100 pl-md-5">
                   <div className="col text-left mb-3">
                     <h3 style={{fontSize: '32px', fontWeight: '300'}}>
                       {props.informationSection.customerServiceTitle}
                     </h3>
                   </div>
                 </div>
-                <div className="row w-100 pl-5 mb-5">
+                <div className="row w-100 pl-md-5 mb-5">
                   {props.informationSection.customerServiceContacts.map((contact, ndx) => (
                     <div className="col-6 mb-4">
                       <p className="lead mb-1 font-weight-light">{contact.title}</p>
@@ -79,7 +79,7 @@ export function ContactPageTemplate(props: Props) {
                     </div>
                   ))}
                 </div>
-                <div className="row w-100 pl-5">
+                <div className="row w-100 pl-md-5">
                   {props.informationSection.offices.map(office => (
                     <div>
                       <div className="col-8 d-flex align-items-end justify-content-center">
@@ -103,7 +103,10 @@ export function ContactPageTemplate(props: Props) {
                       </div>
                       <div className="col-8 d-flex align-items-end justify-content-center">
                         <div>
-                          <p className="lead mb-1 font-weight-light"><br/>{office.officeNameCN}</p>
+                          <p className="lead mb-1 font-weight-light">
+                            <br />
+                            {office.officeNameCN}
+                          </p>
 
                           <p className="mb-0">
                             {office.addressCN}
@@ -295,7 +298,7 @@ export function ContactPageTemplate(props: Props) {
                   <p className="lead mb-1 text-dark font-weight-light" style={{fontSize: '16px'}}>
                     Customer Inquiries
                   </p>
-                  <p className="text-primary" style={{fontSize: '14px'}}>
+                  <p className="text-primary" style={{fontSize: '14px', lineHeight: '1rem'}}>
                     <a href="mailto:service@snowballsecurities.com">
                       service@snowballsecurities.com
                     </a>
@@ -305,7 +308,7 @@ export function ContactPageTemplate(props: Props) {
                   <p className="lead mb-1 text-dark font-weight-light" style={{fontSize: '16px'}}>
                     Media Inquiries
                   </p>
-                  <p className="text-primary" style={{fontSize: '14px'}}>
+                  <p className="text-primary" style={{fontSize: '14px', lineHeight: '1rem'}}>
                     <a href="mailto:pr@snowballsecurities.com">pr@snowballsecurities.com</a>
                   </p>
                 </div>
@@ -313,7 +316,7 @@ export function ContactPageTemplate(props: Props) {
                   <p className="lead mb-1 text-dark font-weight-light" style={{fontSize: '16px'}}>
                     Business Cooperation
                   </p>
-                  <p className="text-primary" style={{fontSize: '14px'}}>
+                  <p className="text-primary" style={{fontSize: '14px', lineHeight: '1rem'}}>
                     <a href="mailto:bd@snowballsecurities.com">bd@snowballsecurities.com</a>
                   </p>
                 </div>

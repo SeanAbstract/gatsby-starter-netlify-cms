@@ -4,6 +4,7 @@ import PropTypes from 'prop-types'
 import {Link} from 'gatsby'
 import styled from 'styled-components'
 import {Col, Row} from 'reactstrap'
+import VizSensor from 'react-visibility-sensor'
 
 import bgSlider from '../../img/bg-slider1.jpg'
 import bgSlider2 from '../../img/bg-slider2.jpg'
@@ -42,16 +43,14 @@ class BlogRoll extends React.Component {
     currentNdx: 0,
     isHovering: false,
     hoveringOver: null,
+    shouldUseVisSensor: false,
   }
 
   componentDidMount() {
     let interval
     if (window) {
       if (window.innerWidth < 578) {
-        window.addEventListener('scroll', () => {
-          console.log(window.scrollY)
-          this.scrollActive()
-        })
+        this.setState({shouldUseVisSensor: true})
       } else {
         window.addEventListener('resize', () => {
           if (window.innerWidth < 578) {
@@ -66,94 +65,94 @@ class BlogRoll extends React.Component {
     }
   }
 
-  scrollActive = () => {
-    if (window.scrollY > 4585 && window.scrollY < 4900) {
-      this.setState({currentNdx: 0})
-    } else if (window.scrollY > 4900 && window.scrollY < 5150) {
-      this.setState({currentNdx: 1})
-    } else {
-      this.setState({currentNdx: 2})
-    }
-  }
-
   render() {
     return (
       <Row>
         {content.map((post, ndx) => {
           const {title, description, featuredImage, buttonURL} = post
           return (
-            <StyledCol
-              md={4}
-              className={`${
-                !this.state.isHovering && this.state.currentNdx === ndx ? 'card-hover' : ''
-              }`}
-              onMouseEnter={() => {
-                this.setState({isHovering: true, hoveringOver: ndx})
-              }}
-              onMouseLeave={() => {
-                this.setState({isHovering: false, hoveringOver: null})
+            <VizSensor
+              onChange={isVisible => {
+                this.setState({currentNdx: ndx})
               }}
             >
-              <OuterContainer>
-                <ImgContainer className="img-hover">
-                  {featuredImage && (
-                    <img
-                      src={featuredImage}
-                      style={{height: '100%', objectFit: 'cover', width: '100%'}}
-                      className={`${
-                        !this.state.isHovering && this.state.currentNdx === ndx ? 'img-hover' : ''
-                      }`}
-                    />
-                  )}
-                  <Overlay />
-                </ImgContainer>
-                <div className="container blog-inner-container">
-                  <div className="blog-text-container">
-                    <h5
-                      className={`lead mb-2 ${
-                        !this.state.isHovering && this.state.currentNdx === ndx ? 'small-hover' : ''
-                      }`}
-                    >
-                      {title}
-                    </h5>
-                    <small
-                      className={`mb-3 blog-desc mb-3 ${
-                        !this.state.isHovering && this.state.currentNdx === ndx ? 'small-hover' : ''
-                      }`}
-                    >
-                      {description}
-                    </small>
-                    <div className="get-started-button-container mt-5">
-                      {/* <Link to={'/how-it-works' || post.fields.slug}> */}
-                      <Link to={buttonURL}>
-                        <StyledButton
-                          className={`get-started-btn btn btn-outline-primary border-white rounded-pill button-hover pt-2 border-1 ${
-                            !this.state.isHovering && this.state.currentNdx === ndx
-                              ? 'button-hover'
-                              : ''
-                          }`}
-                          type="button"
-                        >
-                          Get Started
-                        </StyledButton>
-                      </Link>
+              <StyledCol
+                md={4}
+                className={`${
+                  !this.state.isHovering && this.state.currentNdx === ndx ? 'card-hover' : ''
+                }`}
+                onMouseEnter={() => {
+                  this.setState({isHovering: true, hoveringOver: ndx})
+                }}
+                onMouseLeave={() => {
+                  this.setState({isHovering: false, hoveringOver: null})
+                }}
+              >
+                <OuterContainer>
+                  <ImgContainer className="img-hover">
+                    {featuredImage && (
+                      <img
+                        src={featuredImage}
+                        style={{height: '100%', objectFit: 'cover', width: '100%'}}
+                        className={`${
+                          !this.state.isHovering && this.state.currentNdx === ndx ? 'img-hover' : ''
+                        }`}
+                      />
+                    )}
+                    <Overlay />
+                  </ImgContainer>
+                  <div className="container blog-inner-container">
+                    <div className="blog-text-container">
+                      <h5
+                        className={`lead mb-2 ${
+                          !this.state.isHovering && this.state.currentNdx === ndx
+                            ? 'small-hover'
+                            : ''
+                        }`}
+                      >
+                        {title}
+                      </h5>
+                      <small
+                        className={`mb-3 blog-desc mb-3 ${
+                          !this.state.isHovering && this.state.currentNdx === ndx
+                            ? 'small-hover'
+                            : ''
+                        }`}
+                      >
+                        {description}
+                      </small>
+                      <div className="get-started-button-container mt-5">
+                        {/* <Link to={'/how-it-works' || post.fields.slug}> */}
+                        <Link to={buttonURL}>
+                          <StyledButton
+                            className={`get-started-btn btn btn-outline-primary border-white rounded-pill button-hover pt-2 border-1 ${
+                              !this.state.isHovering && this.state.currentNdx === ndx
+                                ? 'button-hover'
+                                : ''
+                            }`}
+                            type="button"
+                          >
+                            Get Started
+                          </StyledButton>
+                        </Link>
+                      </div>
+                    </div>
+                    <div className="mt-5 arrow-right-container">
+                      <img
+                        src={
+                          (this.state.hoveringOver === null && this.state.currentNdx === ndx) ||
+                          this.state.hoveringOver === ndx
+                            ? arrowRightWhite
+                            : arrowRight
+                        }
+                        alt=""
+                        style={{height: '30px'}}
+                      />
                     </div>
                   </div>
-                  <div className="mt-5 arrow-right-container">
-                    <img
-                      src={
-                        (this.state.hoveringOver === null && this.state.currentNdx === ndx) ||
-                        this.state.hoveringOver === ndx
-                          ? arrowRightWhite
-                          : arrowRight
-                      }
-                      alt=""
-                      style={{height: '30px'}}
-                    />
-                  </div>
-                </div>
-              </OuterContainer>
-            </StyledCol>
+                </OuterContainer>
+              </StyledCol>
+            </VizSensor>
           )
         })}
       </Row>

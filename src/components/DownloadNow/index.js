@@ -23,7 +23,7 @@ function DownloadNow({mainText, subText, image}: Props) {
     <div className="download-now" onScrollCapture>
       <div className="container">
         <div className="row mx-auto">
-          <div className="col-md-5 col-6 ml-auto d-flex flex-column justify-content-center">
+          <div className="col-md-5 col-6 ml-auto d-flex flex-column justify-content-center text-container">
             <h1 className="text-primary display-3">{mainText}</h1>
             <h3 className="big-subtitle text-dark">{subText}</h3>
             <div className="d-flex mt-3">
@@ -40,9 +40,12 @@ function DownloadNow({mainText, subText, image}: Props) {
               style={{maxWidth: '120px'}}
               className="mt-3 d-none d-md-block"
             />
-            <p><br/>(English app available mid/late 2020)</p>
+            <p>
+              <br />
+              (English app available mid/late 2020)
+            </p>
           </div>
-          <div className="col-md-4 col-6 mr-auto ">
+          <div className="col-md-4 col-6 mr-auto">
             <VizSensor
               partialVisibility
               onChange={isVisible => {
@@ -52,15 +55,15 @@ function DownloadNow({mainText, subText, image}: Props) {
                 }
               }}
             >
-              <video
+              <StyledVideo
                 src={phoneVideo}
-                style={{maxWidth: '250px', marginBottom: '35px'}}
                 poster={phone}
                 id="downloadNowPhone"
                 ref={videoRef}
+                // className="d-none d-md-flex"
               >
                 <track />
-              </video>
+              </StyledVideo>
             </VizSensor>
           </div>
         </div>
@@ -74,6 +77,18 @@ const AppButtons = styled.img`
 
   @media (max-width: 565px) {
     width: 100px;
+  }
+`
+
+const StyledVideo = styled.video`
+  max-width: 80%;
+  margin-bottom: 50px;
+
+  @media (max-width: 550px) {
+    max-width: 80%;
+    height: 250px;
+    object-position: top;
+    object-fit: contain;
   }
 `
 

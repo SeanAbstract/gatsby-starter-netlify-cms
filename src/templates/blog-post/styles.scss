@@ -26,12 +26,14 @@
   .blog-container {
     .blog-content {
       padding: 64px;
+
+      @media (max-width: 550px) {
+        padding: 50px 15px;
+      }
     }
     background-color: white;
     padding-bottom: 300px;
 
-    @media (max-width: 426px) {
-      padding: 32px;
-    }
+    
   }
 }

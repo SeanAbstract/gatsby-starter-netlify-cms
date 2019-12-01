@@ -80,12 +80,12 @@ RiskPage.propTypes = {
 }
 
 const Yo = styled.div`
-  height: 65px;
+  min-height: 65px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid ${props => props.theme.primary};
-  padding: 0 20px;
+  padding: 0px 20px;
 
   .yo-2 {
     color: #006fbb;
