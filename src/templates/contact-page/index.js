@@ -214,7 +214,7 @@ export function ContactPageTemplate(props: Props) {
               </div>
               <div className="d-none d-sm-block">
                 <StyledSocialLinks
-                  href="https://www.facebook.com/snowballsecurities"
+                  href="https://www.facebook.com/thesnowballx/"
                   target="_blank"
                 >
                   <img
@@ -225,7 +225,7 @@ export function ContactPageTemplate(props: Props) {
                   />
                 </StyledSocialLinks>
                 <StyledSocialLinks
-                  href="https://www.linkedin.com/company/snowballsecurities"
+                  href="https://www.linkedin.com/company/snowballx/"
                   target="_blank"
                 >
                   <img
@@ -235,7 +235,7 @@ export function ContactPageTemplate(props: Props) {
                     className="mr-4"
                   />
                 </StyledSocialLinks>
-                <StyledSocialLinks href="https://twitter.com/snowballsec?lang=en" target="_blank">
+                <StyledSocialLinks href="https://twitter.com/thesnowball_x" target="_blank">
                   <img
                     src={twitterIcon}
                     alt=""
@@ -260,7 +260,7 @@ export function ContactPageTemplate(props: Props) {
                     className="mr-4 mr-5-sm"
                   />
                 </div>
-                <a href="https://www.facebook.com/snowballsecurities" target="_blank">
+                <a href="https://www.facebook.com/thesnowballx/" target="_blank">
                   <img
                     src={facebookIcon}
                     alt=""
@@ -268,7 +268,7 @@ export function ContactPageTemplate(props: Props) {
                     className="mr-4"
                   />
                 </a>
-                <a href="https://www.linkedin.com/company/snowballsecurities" target="_blank">
+                <a href="https://www.linkedin.com/company/snowballx/" target="_blank">
                   <img
                     src={linkedinIcon}
                     alt=""
@@ -276,7 +276,7 @@ export function ContactPageTemplate(props: Props) {
                     className="mr-4"
                   />
                 </a>
-                <a href="https://twitter.com/snowballsec?lang=en" target="_blank">
+                <a href="https://twitter.com/thesnowball_x" target="_blank">
                   <img
                     src={twitterIcon}
                     alt=""

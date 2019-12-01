@@ -12,8 +12,6 @@ footerLinks:
       name: About
     - href: /how-it-works
       name: How it works
-    - href: /price
-      name: Price
     - href: /download
       name: Download
   secondRow:

@@ -477,7 +477,7 @@ export const IndexPageTemplate = ({
                 <Fade bottom>
                   <h1 className="text-primary display-2 mb-3">{realTimeStockSection.mainText}</h1>
                   <p className="font-size-18 dark-grey">{realTimeStockSection.description}</p>
-                  <Link to="/price">
+                  <Link to="/pricing/us-stocks">
                     <button className="btn btn-outline-primary rounded-pill px-4" type="button">
                       {realTimeStockSection.buttonText}
                     </button>

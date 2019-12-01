@@ -130,7 +130,7 @@ function Footer(props) {
                   className="mr-4"
                 />
 
-                <StyledAnchor href="https://www.facebook.com/snowballsecurities" target="_blank">
+                <StyledAnchor href="https://www.facebook.com/thesnowballx/" target="_blank">
                   <img
                     id="fbIcon"
                     src={facebookIcon}
@@ -140,7 +140,7 @@ function Footer(props) {
                   />
                 </StyledAnchor>
                 <StyledAnchor
-                  href="https://www.linkedin.com/company/snowballsecurities"
+                  href="https://www.linkedin.com/company/snowballx/"
                   target="_blank"
                 >
                   <img
@@ -152,7 +152,7 @@ function Footer(props) {
                   />
                 </StyledAnchor>
 
-                <StyledAnchor href="https://twitter.com/snowballsec?lang=en" target="_blank">
+                <StyledAnchor href="https://twitter.com/thesnowball_x" target="_blank">
                   <img
                     src={twitterIcon}
                     alt=""
