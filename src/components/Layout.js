@@ -43,7 +43,7 @@ const TemplateWrapper = ({children, white, stickyFooter, footerLinks}) => {
       <StickyFooterCta className="container">
         <div className="row h-100" style={{borderTop: '1px solid rgba(120, 120, 120, 0.2)'}}>
           <div
-            className="col-6 justify-content-center d-flex align-items-center text-primary pt-1 font-weight-bold"
+            className="col-6 justify-content-center d-flex align-items-center text-primary pt-1 font-weight-bold h-100"
             style={{borderRight: '1px solid rgba(120,120,120, 0.2)'}}
           >
             OPEN ACCOUNT
@@ -121,7 +121,7 @@ const StyledMain = styled.main`
   position: relative;
 
   @media (max-width: 426px) {
-    margin-bottom: 350px;
+    margin-bottom: 0px;
   }
 `
 
