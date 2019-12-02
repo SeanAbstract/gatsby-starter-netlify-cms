@@ -242,30 +242,31 @@ const OuterContainer = styled.div`
   color: #006fbb;
   transition: 0.2s;
 
-  :hover {
-    color: white;
-    margin-top: -2rem;
+  @media (min-width: 550px) {
+    :hover {
+      color: white;
+      margin-top: -2rem;
 
-    box-shadow: 0 11px 16px 0 rgba(0, 0, 0, 0.3);
+      box-shadow: 0 11px 16px 0 rgba(0, 0, 0, 0.3);
 
-    ${ImgContainer} {
-      opacity: 1;
-    }
+      ${ImgContainer} {
+        opacity: 1;
+      }
 
-    ${StyledButton} {
-      opacity: 1;
+      ${StyledButton} {
+        opacity: 1;
 
-      :hover {
-        background-color: rgba(255, 255, 255, 0.5);
+        :hover {
+          background-color: rgba(255, 255, 255, 0.5);
+        }
+      }
+
+      small {
+        color: white !important;
       }
     }
-
-    small {
-      color: white !important;
-    }
   }
-
-  @media (max-width: 426px) {
+  ​ @media (max-width: 426px) {
     min-height: 25vh;
   }
 `
