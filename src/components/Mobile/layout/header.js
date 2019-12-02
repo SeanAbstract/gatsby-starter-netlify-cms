@@ -60,8 +60,8 @@ export default class Header extends React.Component {
               <Nav className="ml-auto" navbar>
                 <HeaderNavLink to="/about" title="About" />
                 <HeaderNavLink to="/how-it-works" title="How It Works" />
-                <HeaderNavLink to="/price" title="Prices" />
-                <HeaderNavLink to="/" title="Download" />
+                <HeaderNavLink to="/pricing/us-stocks" title="Prices" />
+                <HeaderNavLink to="/download" title="Download" />
                 <HeaderNavLink to="/faqs" title="FAQs" />
                 <HeaderNavLink to="/contact" title="Contact" />
               </Nav>
