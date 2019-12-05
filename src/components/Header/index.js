@@ -291,14 +291,32 @@ export default class Header extends React.Component {
                         style={{position: 'relative'}}
                         className={`nav-link on-mobile ${ndx !== data.length - 1 ? 'mr-1' : ''}`}
                       >
-                        <UncontrolledDropdown nav inNavbar>
-                          <DropdownToggle nav caret className="p-0 d-flex align-items-center">
+                        <UncontrolledDropdown
+                          nav
+                          carat
+                          inNavbar
+                          style={{background: 'transparent'}}
+                        >
+                          <DropdownToggle nav className="p-0 d-flex align-items-center">
                             {link.name}
                           </DropdownToggle>
-                          <DropdownMenu style={{background: 'white', opacity: 1, borderRadius: 0}}>
+                          <DropdownMenu
+                            className="mobile-dropdown"
+                            style={{
+                              background: 'transparent',
+                              opacity: 1,
+                              borderRadius: 0,
+                              border: 'none',
+                            }}
+                          >
                             {link.children.map(childLink => (
                               <Link to={`pricing/${childLink.href}`}>
-                                <DropdownItem>{childLink.name}</DropdownItem>
+                                <DropdownItem
+                                  style={{color: 'white !important'}}
+                                  className="dropdown-item"
+                                >
+                                  {childLink.name}
+                                </DropdownItem>
                               </Link>
                             ))}
                           </DropdownMenu>
@@ -336,10 +354,7 @@ export default class Header extends React.Component {
                   <StyledAnchor href="https://www.facebook.com/thesnowballx/" target="_blank">
                     <img id="fbIcon" src={facebookIcon} alt="" className="mr-4" />
                   </StyledAnchor>
-                  <StyledAnchor
-                    href="https://www.linkedin.com/company/snowballx/"
-                    target="_blank"
-                  >
+                  <StyledAnchor href="https://www.linkedin.com/company/snowballx/" target="_blank">
                     <img src={linkedinIcon} alt="" className="mr-4" id="linkedInIcon" />
                   </StyledAnchor>
 

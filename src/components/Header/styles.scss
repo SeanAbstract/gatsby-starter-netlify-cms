@@ -71,6 +71,16 @@ $primary: #006fbb;
     }
 }
 
+.mobile-dropdown {
+    .dropdown-item {
+        color: white !important;
+
+        &:hover {
+            background-color: transparent !important;
+        }
+    }
+}
+
 .padding-10 {
     padding-top: 10px;
 }
