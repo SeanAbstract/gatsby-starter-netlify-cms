@@ -85,10 +85,6 @@ categories:
           investors; maintain fair, orderly, and efficient markets; and
           facilitate capital formation. The SEC strives to promote a market
           environment that is worthy of the public's trust.
-
-          If we decide to cease operations, we would give clients significant
-          notice to sell or get their money out, or to transfer their shares to
-          a different broker. 
         question: What happens if Snowball X goes under?
       - answer: >-
           Client funds are held in the name of the client in the Trust Account
