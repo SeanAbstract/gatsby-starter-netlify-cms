@@ -27,9 +27,9 @@ sections:
 
 
       All options differ in exchange rate and transfer fee charged by banks. We
-      recommend that clients do online banking transfers as there are no
+      recommend that clients TRANSFER WITH online banking as there are no
       overseas wire fees and transactions normally take only one day to
-      complete. Withdrawing funds is just as easy as making a deposit.
+      complete. WITHDRAWING FUNDS IS THE SAME EASY PROCESS AS A DEPOSIT.
     image: /img/how-it-works-2.png
     title: Deposit and withdraw
   - body: >-
