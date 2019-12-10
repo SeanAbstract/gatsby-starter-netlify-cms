@@ -13,7 +13,7 @@ sections:
 
       It really is that simple.
     image: /img/how-it-works-1.png
-    title: Setup your account
+    title: Set up your account
   - body: >-
       **Option 1** Transfer HK$ to Snowball holding account in Hong Kong 
 
