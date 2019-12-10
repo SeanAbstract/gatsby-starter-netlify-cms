@@ -12,7 +12,7 @@ firstSection:
   description: >-
     Fast and secure access to global markets with our online platform that
     allows you to buy and sell securities in Hong Kong, China and the US. Try
-    Snowball X today - a trusted member of the Snowball Group
+    Snowball X today - a trusted member of the Snowball Group.
   mainText: Fast Secure Trusted
   image: /img/snowball-phone.png
 stockSection:
