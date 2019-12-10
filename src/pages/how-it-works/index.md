@@ -27,24 +27,24 @@ sections:
 
 
       All options differ in exchange rate and transfer fee charged by banks. We
-      recommend that clients TRANSFER WITH online banking as there are no
+      recommend that clients transfer with online banking as there are no
       overseas wire fees and transactions normally take only one day to
-      complete. WITHDRAWING FUNDS IS THE SAME EASY PROCESS AS A DEPOSIT.
+      complete. Withdrawing funds is the same easy process as a deposit.
     image: /img/how-it-works-2.png
     title: Deposit and withdraw
   - body: >-
-      All tradings are conducted through our app.
+      All trades are conducted through our app.
 
 
       **Step 1** Search stock code 
 
 
-      **Step 2** Jump to trade page, select price, amount, margin or not and
-      other options, confirm the order(sell/buy)
+      **Step 2** Jump to trade page, select price, amount, margin or no margin,
+      confirm the order(sell / buy)
 
 
-      **Step 3** Order is completed, and the positions will appear on personal
-      portfolio statement.
+      **Step 3** Order is completed, and the positions will appear on your
+      personal portfolio statement.
     image: /img/how-it-works-3.png
     title: How to place orders
 downloadNow:
