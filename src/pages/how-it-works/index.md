@@ -6,9 +6,10 @@ jumbotron:
   title: How it works
 sections:
   - body: >-
-      The whole process including filling in personal information, submitting
-      ID/address, signing agreement, verifying identity, and following account
-      opening status is all handled within our app.
+      The whole process can all be handled within our app. It takes just a few
+      minutes to fill in your personal information, submit your id and address
+      and sign the agreement.  We then verify your ID and you're ready to open
+      your account within our app.
 
 
       It really is that simple.
