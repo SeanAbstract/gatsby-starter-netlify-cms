@@ -14,19 +14,19 @@ categories:
           and the most trustworthy in the industry.  
 
 
-          - You will be able to trade a variety of financial securities on multi
-          global market with just one account, at low commissions and that
-          means, higher return to you.
+          - You will be able to trade a variety of financial securities on
+          multi-global markets with just one account, at low commissions and
+          that means, higher return to you.
 
 
-          - The app is user-friendly. You will see nice and easy interfaces in
-          the app and provided with all the options you need for convenient
-          trading.
+          - The app is user-friendly and provides all the options you need for
+          convenient trading.
         question: |
           What are the advantages of Snowball X compared with other brokers?
       - answer: >-
-          We do not provide financial advice, and we encourage our clients to do
-          their own searches and enjoy the fun of trading.
+          Although we provide the latest information and opinions from leading
+          investors; we do not provide financial advice and encourage our
+          investors to fully research their stocks.
         question: Does Snowball X help investors to decide on what to buy and sell?
       - answer: >-
           Yes, and this is one of the reasons why we provide services online.
