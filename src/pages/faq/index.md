@@ -8,10 +8,10 @@ categories:
   - categoryTitle: About Snowball
     questions:
       - answer: >-
-          - The security of your funds is our priority. Snowball is operated by
-          SNB Finance Holding Ltd, a registered financial service provider in
+          - The security of your funds is our priority. Snowball X is operated
+          by SNB Finance Holding Ltd, a registered financial service provider in
           New Zealand. The execution brokers that we employ are the top peers
-          and the most trustable in the industry.  
+          and the most trustworthy in the industry.  
 
 
           - You will be able to trade a variety of financial securities on multi
@@ -23,18 +23,18 @@ categories:
           the app and provided with all the options you need for convenient
           trading.
         question: |
-          What are the best advantages of Snowball compared with other brokers?
+          What are the advantages of Snowball X compared with other brokers?
       - answer: >-
           We do not provide financial advice, and we encourage our clients to do
           their own searches and enjoy the fun of trading.
-        question: Does Snowball help investors to decide on what to buy and sell?
+        question: Does Snowball X help investors to decide on what to buy and sell?
       - answer: >-
           Yes, and this is one of the reasons why we provide services online.
           Clients from different countries use our platform.  However, there are
           a few restrictions on this including people who are tax residents of
           the United States. We encourage investors to contact us if they are
           living overseas and want to use our services.
-        question: Can tax residents of another country use Snowball services?
+        question: Can tax residents of another country use Snowball X services?
       - answer: >-
           Snowball X is also a member of Snowball Group（“雪球集团”, Snowball).
           Snowball Group's investment and communication platform xueqiu.com is a
@@ -48,7 +48,7 @@ categories:
           Incorporated in 2010, Snowball has raised more than US$170 million in
           four investment rounds since 2014 including US$120 million from
           Alibaba subsidiary, Ant Financial. 
-        question: Who owns Snowball?
+        question: Who owns Snowball X?
       - answer: >-
           With one account, Snowball clients can buy and sell securities in some
           of the world’s largest companies. We are one of the first firms in New
@@ -58,7 +58,7 @@ categories:
           shares of mainland China-based companies that trade on the two Chinese
           stock exchanges, the Shanghai Stock Exchange and the Shenzhen Stock
           Exchange.
-        question: What securities can clients invest in through Snowball?
+        question: What securities can clients invest in through Snowball X?
       - answer: >-
           To gain exposure to some of the world’s largest companies, achieve
           investment diversification benefits and take advantage of fluctuating
@@ -79,17 +79,17 @@ categories:
         question: |
           Why invest in overseas listed shares?
       - answer: >-
-          Snowball doesn’t hold the shares bought by clients and clients’ money
-          is kept in trust accounts which are regulated by the US Securities and
-          Exchange Commission. The role of the SEC is to protect investors;
-          maintain fair, orderly, and efficient markets; and facilitate capital
-          formation. The SEC strives to promote a market environment that is
-          worthy of the public's trust.
+          Snowball X doesn’t hold the shares bought by clients and clients’
+          money is kept in trust accounts which are regulated by the US
+          Securities and Exchange Commission. The role of the SEC is to protect
+          investors; maintain fair, orderly, and efficient markets; and
+          facilitate capital formation. The SEC strives to promote a market
+          environment that is worthy of the public's trust.
 
           If we decide to cease operations, we would give clients significant
           notice to sell or get their money out, or to transfer their shares to
           a different broker. 
-        question: What happens if Snowball goes under?
+        question: What happens if Snowball X goes under?
       - answer: >-
           Client funds are held in the name of the client in the Trust Account
           held by Interactive Brokers and/or an NZ bank. Snowball Custodial
@@ -100,7 +100,7 @@ categories:
           Securities and Exchange Commission (SEC) and the Financial Industry
           Regulatory Authority (FINRA). SBX is responsible to clients for the
           custodial services provided by Interactive Brokers.
-        question: 'How safe are the funds that have been invested via Snowball App? '
+        question: 'How safe are the funds that have been invested via Snowball X App? '
   - categoryTitle: How to use
     questions:
       - answer: >-
