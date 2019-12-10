@@ -32,7 +32,7 @@ stockSection:
         - price: $0.002
           text: per share
         - price: $0.99
-          text: minimum per deal
+          text: low starting rate / fee
       country: US Stocks
       countryCode: US
       financingRate: "3.85%\_"
