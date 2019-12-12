@@ -139,10 +139,7 @@ function Footer(props) {
                     className="mr-4"
                   />
                 </StyledAnchor>
-                <StyledAnchor
-                  href="https://www.linkedin.com/company/snowballx/"
-                  target="_blank"
-                >
+                <StyledAnchor href="https://www.linkedin.com/company/snowballx/" target="_blank">
                   <img
                     src={linkedinIcon}
                     alt=""
@@ -275,6 +272,7 @@ const StyledFooter = styled.footer`
 
   @media (max-width: 426px) {
     margin-bottom: 0px;
+    padding-bottom: 0px !important;
     position: static;
     height: auto;
   }
@@ -285,6 +283,11 @@ const StyledContainer = styled(Container)`
   padding: 50px 0 !important;
   max-width: 80% !important;
   padding-bottom: 20px;
+
+  @media (max-width: 426px) {
+    margin-bottom: 0px;
+    padding-bottom: 0px !important;
+  }
 `
 
 const StyledSmall = styled.small`

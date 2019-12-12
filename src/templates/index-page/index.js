@@ -186,14 +186,21 @@ export const IndexPageTemplate = ({
           </ImageContainer>
           <div className="text-center mb-5 pb-5">
             <h1 className="big-text">{mainText}</h1>
-            <h3 className="big-subtitle subtitle-text-align text-primary">{subText}</h3>
+            <h3 className="big-subtitle subtitle-text-align text-primary sub-text">{subText}</h3>
           </div>
 
           <a href="#fast-secure-trusted">
             <img
               src={arrowDown}
               alt=""
-              style={{bottom: '60px', height: '25px', position: 'absolute'}}
+              style={{
+                bottom: '60px',
+                height: '25px',
+                width: '40px',
+                left: 'calc(50% - 20px)',
+                position: 'absolute',
+                objectFit: 'contain',
+              }}
             />
           </a>
         </Jumbotron>
@@ -303,6 +310,7 @@ export const IndexPageTemplate = ({
 
                   if (window.innerWidth < 578) {
                     styleDiv.height = '70vh'
+                    styleDiv.display = 'block'
 
                     return (
                       <Scene
@@ -448,7 +456,7 @@ export const IndexPageTemplate = ({
           </div>
         </section>
 
-        <div className="carousel slide feature-carousel-container" data-ride="carousel">
+        <div className="carousel slide feature-carousel-container container" data-ride="carousel">
           <FeatureCarousel section={featureSection} />
         </div>
 

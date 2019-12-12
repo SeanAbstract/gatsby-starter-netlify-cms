@@ -107,7 +107,7 @@ export const AboutPageTemplate = (props: AboutTemplate) => {
       <div className="about-page container-fluid">
         <section className="pt-5 pb-5">
           <div className="row mb-5">
-            <div className="col-md-10 col-lg-8 col-12 mx-auto text-center">
+            <div className="col-md-10 col-lg-8 col-11 mx-auto text-center">
               <h3 className="section-leading-text">{props.mainpitch.title}</h3>
             </div>
           </div>
@@ -117,11 +117,19 @@ export const AboutPageTemplate = (props: AboutTemplate) => {
               <div>
                 {/* <p>{props.mainpitch.description}</p> */}
                 <p className="dark-grey font-size-18">
-                  Snowball X is a leading online equities company utilising the latest innovative technology to provide investors access to global securities listed on major Stock Exchanges including Hong Kong (SEHK), New York Stock Exchange (NYSE), NASDAQ and other markets. Snowball X is part of the Snowball Group which is a leading financial markets social platform with over 35 million users and backed by global investors such as Ant Financials (Alibaba) and Sequoia Capital.
+                  Snowball X is a leading online equities company utilising the latest innovative
+                  technology to provide investors access to global securities listed on major Stock
+                  Exchanges including Hong Kong (SEHK), New York Stock Exchange (NYSE), NASDAQ and
+                  other markets. Snowball X is part of the Snowball Group which is a leading
+                  financial markets social platform with over 35 million users and backed by global
+                  investors such as Ant Financials (Alibaba) and Sequoia Capital.
                 </p>
                 {/* <p>{props.mainpitch.secondDescription}</p> */}
                 <p className="dark-grey font-size-18">
-                  With one account, our investors are able to access global market information and trade securities listed in China, the United States, Hong Kong, Japan and other countries and build a portfolio of shares of international reputable companies like Alibaba, PetroChina, Microsoft and Google.
+                  With one account, our investors are able to access global market information and
+                  trade securities listed in China, the United States, Hong Kong, Japan and other
+                  countries and build a portfolio of shares of international reputable companies
+                  like Alibaba, PetroChina, Microsoft and Google.
                 </p>
               </div>
             </div>
@@ -227,7 +235,7 @@ export const AboutPageTemplate = (props: AboutTemplate) => {
         <section className="pt-5">
           <div className="container">
             <div className="text-center mb-5">
-              <h1 className="big-text text-primary lowercase">Strategic Partners</h1>
+              <h1 className="big-text text-primary">Strategic Partners</h1>
             </div>
 
             {/* Investors */}

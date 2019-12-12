@@ -21,6 +21,10 @@ $primary: #006fbb;
         // height: 20vh;
         height: 128px;
         background-color: $primary;
+
+        @media (max-width: 550px) {
+            padding: 20px 0;
+        }
     }
     
 

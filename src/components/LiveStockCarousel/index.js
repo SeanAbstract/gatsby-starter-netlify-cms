@@ -1,5 +1,6 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 // @flow
-import React, {useEffect} from 'react'
+import React, {useEffect, useState} from 'react'
 import Fade from 'react-reveal/Fade'
 import {Col} from 'reactstrap'
 
@@ -21,14 +22,36 @@ type Props = {
 const API_KEY = 'QTDA5DR1PXTSLRJ3'
 
 function LiveStockCarousel({stocks}: Props) {
-  // useEffect(() => {
-  //   fetch(
-  //     `https://www.alphavantage.co/query?function=TIME_SERIES_WEEKLY&symbol=AAPL&apikey=${API_KEY}`
-  //   ).then(async response => {
-  //     const json = await response.json()
-  //     console.log(json)
-  //   })
-  // }, [])
+  const [myStocks, setStocks] = useState({
+    APPL: '',
+    FB: '',
+    GOOGL: '',
+  })
+
+  useEffect(() => {
+    // console.log(stocks)
+    // stocks.forEach(stock => {
+    //   const SYM = stock.abbreviation
+    //   fetch(
+    //     `https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=${SYM}&interval=5min&apikey=${API_KEY}`
+    //   ).then(async response => {
+    //     const json = await response.json()
+    //     const data = json['Time Series (5min)']
+    //     console.log(json['Time Series (5min)'])
+    //     if (data !== undefined) {
+    //       const keys = Object.keys(data)
+    //       console.log(keys)
+    //     }
+    //     // console.log(json['Time Series (5min)']['2019-12-04 16:00:00'])
+    //     // const latestValue = json['Time Series (5min)'][keys[0]]['2. high']
+    //     setStocks({
+    //       ...myStocks,
+    //       [SYM]: 'lol',
+    //     })
+    //     console.log(myStocks)
+    //   })
+    // })
+  }, [])
 
   const stockCardOne = stocks.filter((stock, key) => key % 3 === 0)
   const stockCardTwo = stocks.filter((stock, key) => key % 3 === 1)

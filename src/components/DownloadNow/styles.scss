@@ -5,6 +5,30 @@
     align-items: center;
     flex-direction: column;
     background-color: white;
+
+    .big-subtitle {
+        font-size: 3rem;
+        line-height: 0.5;
+        font-family: "Kokomo-Breeze-Regular";
+        color: #91bcdc;
+        z-index: 2;
+      
+        @media (min-width: 576px) {
+          font-size: 6rem;
+        }
+      
+        @media (min-width: 768px) {
+          font-size: 5rem;
+        }
+      
+        @media (min-width: 992px) {
+          font-size: 5rem;
+        }
+      
+        @media (min-width: 1200px) {
+          font-size: 6rem;
+        }
+      }
 }
 
 .text-container {

@@ -1,5 +1,11 @@
 .faq-page {
 
+  @media (max-width: 550px) {
+    h5 {
+      font-size: 1.1rem;
+    }
+  }
+  
   .hover-none {
     p,li {
       color: black !important;

@@ -51,7 +51,7 @@ export function BlogPageTemplate({title, content, contentComponent, image, heade
       <section style={{backgroundColor: 'white'}}>
         <Container style={{paddingBottom: '75px'}}>
           <Row className="justify-content-center text-center py-4">
-            <Col xs={8} className="py-5">
+            <Col xs={12} className="py-5">
               <SectionText style={{color: 'black', fontWeight: 'normal'}}>
                 Stay up to date on our latest updates, news, events and other happenings
               </SectionText>
@@ -99,6 +99,7 @@ const GridContainer = styled.div`
   grid-template-columns: 25% 25% 25% 25%;
   grid-gap: 20px;
   width: 90%;
+  position: relative;
 
   .item-1 {
     grid-column: auto / span 1;

@@ -12,7 +12,7 @@ const TemplateWrapper = ({children, white, stickyFooter, footerLinks}) => {
   const {title, description} = useSiteMetadata()
 
   return (
-    <div className="h-100">
+    <div className="h-100" style={{overflow: 'hidden'}}>
       <Helmet>
         <html lang="en" />
         <title>{title}</title>
@@ -40,6 +40,8 @@ const TemplateWrapper = ({children, white, stickyFooter, footerLinks}) => {
       </Helmet>
       <Header white={white} />
       <StyledMain>{children}</StyledMain>
+      <Footer footerLinks={footerLinks} />
+
       <StickyFooterCta className="container">
         <div className="row h-100" style={{borderTop: '1px solid rgba(120, 120, 120, 0.2)'}}>
           <div
@@ -97,7 +99,6 @@ const TemplateWrapper = ({children, white, stickyFooter, footerLinks}) => {
           </div>
         </div>
       </StickyFooterCta>
-      <Footer footerLinks={footerLinks} />
     </div>
   )
 }
@@ -120,8 +121,9 @@ const StyledMain = styled.main`
   margin-bottom: 580px;
   position: relative;
 
-  @media (max-width: 426px) {
+  @media (max-width: 550px) {
     margin-bottom: 0px;
+    padding-bottom: 0px;
   }
 `
 

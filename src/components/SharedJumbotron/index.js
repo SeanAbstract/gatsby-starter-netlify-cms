@@ -33,6 +33,10 @@ function SharedJumbotron({headerImage, title, description, size, secondaryColor,
 const Jumbotron = styled.div`
   height: ${props => props.size === 'lg' && '70vh'};
 
+  @media (min-width: 550px) {
+    min-height: 300px;
+  }
+
   &::before {
     content: '';
     position: absolute;

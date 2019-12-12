@@ -75,6 +75,10 @@ const CurrencyText = styled.p`
 const StockType = styled.h4`
   font-weight: 500;
   font-size: 32px;
+
+  @media (max-width: 550px) {
+    padding-top: 20px;
+  }
 `
 
 const CommissionText = styled.p`

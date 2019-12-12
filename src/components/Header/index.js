@@ -252,7 +252,7 @@ export default class Header extends React.Component {
                         onMouseLeave={() => this.setState({isDropDownOpen: false})}
                         onClick={() => this.setState({isDropDownOpen: true})}
                       >
-                        <Dropdown nav inNavbar isOpen={this.state.isDropDownOpen}>
+                        <Dropdown nav inNavbar isOpen={this.state.isDropDownOpen} caret>
                           <DropdownToggle nav caret className="p-0 d-flex align-items-center">
                             {link.name}
                           </DropdownToggle>
@@ -291,13 +291,8 @@ export default class Header extends React.Component {
                         style={{position: 'relative'}}
                         className={`nav-link on-mobile ${ndx !== data.length - 1 ? 'mr-1' : ''}`}
                       >
-                        <UncontrolledDropdown
-                          nav
-                          carat
-                          inNavbar
-                          style={{background: 'transparent'}}
-                        >
-                          <DropdownToggle nav className="p-0 d-flex align-items-center">
+                        <UncontrolledDropdown nav inNavbar style={{background: 'transparent'}}>
+                          <DropdownToggle nav caret className="p-0 d-flex align-items-center">
                             {link.name}
                           </DropdownToggle>
                           <DropdownMenu
@@ -391,7 +386,13 @@ export default class Header extends React.Component {
           <div className="container">
             <NavbarBrand>
               <Link to="/">
-                <LogoIcon isOpen={isOpen} scrolled={scrolled} src={logo} alt="company logo" />
+                <LogoIcon
+                  isOpen={isOpen}
+                  scrolled={scrolled}
+                  src={logo}
+                  alt="company logo"
+                  className="logo"
+                />
               </Link>
             </NavbarBrand>
 
@@ -425,7 +426,7 @@ export default class Header extends React.Component {
                             }}
                           >
                             {link.children.map(childLink => (
-                              <Link to={`pricing/${childLink.href}`}>
+                              <Link to={`pricing/${childLink.href}`} className={childLink.href}>
                                 <DropdownItem>{childLink.name}</DropdownItem>
                               </Link>
                             ))}
@@ -481,13 +482,18 @@ const StyledNavbar = styled(Navbar)`
     color: white !important;
   }
 
+  @media (max-width: 550px) {
+    transition: 0;
+    filter: ${props => (props.scrolled || props.isOpen ? 'none' : 'brightness(0) invert(1)')};
+  }
+
   /* @media (max-width: 767px) {
     background-color: ${props => (props.isOpen ? 'rgba(0,111,187,0.9)' : 'transparent')};
   } */
 
   @media (max-width: 426px) {
     top: 0 !important;
-    height: 100px;
+    height: ${props => (props.scrolled ? '80px' : '100px')};
 
     background: ${props => (props.scrolled ? 'white' : 'transparent')};
 
@@ -509,6 +515,10 @@ const Logo = styled.img`
   filter: ${props => (props.white && !props.scrolled ? 'brightness(0) invert(1)' : 'none')};
   transition: 0.1s;
   z-index: 0;
+
+  @media (max-width: 550px) {
+    filter: ${props => (props.scrolled ? 'none' : 'brightness(0) invert(1)')};
+  }
 `
 
 const LogoIcon = styled.img`
@@ -520,8 +530,10 @@ const LogoIcon = styled.img`
   transition: 0.1s;
 
   &.mobile-logo {
-    height: 50px;
-    width: 50px;
+    height: 40px;
+    width: 40px;
+    min-height: 0px;
+    min-width: 0px;
   }
 `
 

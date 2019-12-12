@@ -93,22 +93,22 @@ p {
   font-size: 3rem;
   line-height: 0.5;
   font-family: "Kokomo-Breeze-Regular";
-  color: $secondary;
+  color: #91bcdc;
   z-index: 2;
 
-  @media (min-width: 576px) {
+  @media (max-width: 576px) {
     font-size: 6rem;
   }
 
-  @media (min-width: 768px) {
+  @media (max-width: 768px) {
     font-size: 5rem;
   }
 
-  @media (min-width: 992px) {
+  @media (max-width: 992px) {
     font-size: 5rem;
   }
 
-  @media (min-width: 1200px) {
+  @media (max-width: 1200px) {
     font-size: 6rem;
   }
 }
@@ -283,6 +283,8 @@ video {
   background-image: url("../img/menu.png") !important;
   height: 25px;
   width: 30px;
+
+  
 }
 
 .navbar-toggler {
