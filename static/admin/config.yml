@@ -90,6 +90,12 @@ collections:
               {label: 'Main Text', name: 'mainText', widget: string},
               {label: "Sub Text", name: "subText", widget: string},
             ]}
+          - {label: "Cards", name: "cards", widget: list, fields: [
+              {label: "title", name: title, widget: string},
+              {label: "description", name: description, widget: string},
+              {label: "featuredImage", name: featuredImage, widget: image},
+              {label: "buttonURL", name: buttonURL, widget: string},
+            ]}
           - {label: "Real Time Stock Section", name: "realTimeStockSection", widget: object, fields: [
               {label: 'Main Text', name: 'mainText', widget: string},
               {label: "Description", name: "description", widget: string},

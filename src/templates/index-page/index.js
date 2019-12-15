@@ -114,6 +114,7 @@ export const IndexPageTemplate = ({
   downloadNow,
   mainText,
   subText,
+  cards,
 }: Props) => {
   useEffect(() => {
     const currentVideo = document.getElementById('mainVideo')
@@ -472,7 +473,7 @@ export const IndexPageTemplate = ({
           <Fade bottom cascade>
             <div className="row">
               <div className="col-sm-8 mx-auto">
-                <BlogRoll />
+                <BlogRoll cards={cards} />
               </div>
             </div>
           </Fade>
@@ -584,6 +585,7 @@ class IndexPage extends React.Component {
           downloadNow={frontmatter.downloadNow}
           mainText={frontmatter.mainText}
           subText={frontmatter.subText}
+          cards={frontmatter.cards}
         />
       </Layout>
     )
@@ -601,7 +603,7 @@ export const pageQuery = graphql`
         videoName
         videoNameUS
         videoNameAU
-        videoNameCN
+        # videoNameCN
         firstSection {
           mainText
           description
@@ -653,6 +655,12 @@ export const pageQuery = graphql`
           gifs {
             gif
           }
+        }
+        cards {
+          title
+          description
+          featuredImage
+          buttonURL
         }
         blurb {
           mainText

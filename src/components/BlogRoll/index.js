@@ -13,30 +13,7 @@ import arrowRight from '../../img/arrow-right-blue.png'
 import arrowRightWhite from '../../img/arrow-right.png'
 
 import './styles.scss'
-
-const content = [
-  {
-    title: 'Low commission/margin rate',
-    description:
-      'Take advantage of low margin rates to increase  the scale of your portfolio through margin financing.  Or play it safe and benefit from competitively low commission rates.',
-    featuredImage: bgSlider,
-    buttonURL: '/pricing/financing-interest-rates',
-  },
-  {
-    title: 'Greater security of account assets',
-    description:
-      'Snowball is a secure online platform. Your account  assets are held in a trust under the supervision of  independent auditors to provide greater level of  protection. Trade with confidence.',
-    featuredImage: bgSlider3,
-    buttonURL: '/how-it-works',
-  },
-  {
-    title: 'Keep up to date with latest information',
-    description:
-      'With Snowball App, you have a direct link to Xueqiu social platform which allows you to follow latest news, hear opinions from professional investors and follow other investor’s stories. Keeping up to date with the latest information will help with your investment decisions.',
-    featuredImage: bgSlider2,
-    buttonURL: '/how-it-works',
-  },
-]
+import PreviewCompatibleImage from '../PreviewCompatibleImage'
 
 class BlogRoll extends React.Component {
   state = {
@@ -68,7 +45,7 @@ class BlogRoll extends React.Component {
   render() {
     return (
       <Row>
-        {content.map((post, ndx) => {
+        {this.props.cards.map((post, ndx) => {
           const {title, description, featuredImage, buttonURL} = post
           return (
             <VizSensor
@@ -91,8 +68,8 @@ class BlogRoll extends React.Component {
                 <OuterContainer>
                   <ImgContainer className="img-hover">
                     {featuredImage && (
-                      <img
-                        src={featuredImage}
+                      <PreviewCompatibleImage
+                        imageInfo={featuredImage}
                         style={{height: '100%', objectFit: 'cover', width: '100%'}}
                         className={`${
                           !this.state.isHovering && this.state.currentNdx === ndx ? 'img-hover' : ''

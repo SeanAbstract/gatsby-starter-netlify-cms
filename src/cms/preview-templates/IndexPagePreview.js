@@ -26,6 +26,7 @@ const IndexPagePreview = ({entry, getAsset}) => {
       mainText={data.mainText}
       subText={data.subText}
       footerLinks={data.footerLinks || {}}
+      cards={data.cards || []}
     />
   )
 }

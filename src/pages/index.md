@@ -107,6 +107,26 @@ featureSection:
 blurb:
   mainText: Get ahead
   subText: on your terms
+
+cards: 
+  - title: 'Low commission/margin rate'
+    description:
+      'Take advantage of low margin rates to increase  the scale of your portfolio through margin financing. Or play it safe and benefit from competitively low commission rates.'
+    featuredImage: /img/bg-slider1.jpg
+    buttonURL: '/pricing/financing-interest-rates'
+
+  - title: 'Greater security of account assets'
+    description:
+      'Snowball is a secure online platform. Your account  assets are held in a trust under the supervision of  independent auditors to provide greater level of  protection. Trade with confidence.'
+    featuredImage: /img/bg-slider2.jpg
+    buttonURL: '/how-it-works'
+
+  - title: 'Keep up to date with latest information'
+    description:
+      'With Snowball App, you have a direct link to Xueqiu social platform which allows you to follow latest news, hear opinions from professional investors and follow other investor’s stories. Keeping up to date with the latest information will help with your investment decisions.'
+    featuredImage: /img/bg-slider3.jpg
+    buttonURL: '/how-it-works'
+
 realTimeStockSection:
   buttonText: Start Trading
   description: >-
