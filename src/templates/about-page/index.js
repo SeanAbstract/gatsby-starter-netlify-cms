@@ -16,8 +16,13 @@ import businessLogo from '../../img/business.svg'
 import mobileLogo from '../../img/mobile.svg'
 import peopleLogo from '../../img/people.svg'
 import rightArrow from '../../img/arrow-right-blue.png'
+import first from '../../img/first.png'
+import second from '../../img/second.png'
+import third from '../../img/third.png'
 
 import './styles.scss'
+
+const historyImages = [first, second, third]
 
 const SliderArrow = ({className, to, onClick}) => (
   <button
@@ -39,20 +44,11 @@ const SliderArrow = ({className, to, onClick}) => (
 const settings = {
   dots: false,
   infinite: true,
-  slidesToShow: 4,
-  slidesToScroll: 4,
+  slidesToShow: 1,
+  slidesToScroll: 1,
   prevArrow: <SliderArrow to="prev" />,
   nextArrow: <SliderArrow to="next" />,
-  initialSlide: -4,
-  responsive: [
-    {
-      breakpoint: 768,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 2,
-      },
-    },
-  ],
+  initialSlide: 0,
 }
 
 type AboutTemplate = {
@@ -215,13 +211,10 @@ export const AboutPageTemplate = (props: AboutTemplate) => {
 
                 <div className="w-100">
                   <Slider {...settings}>
-                    {props.historyCards.map((historyItem, key, {length}) => (
+                    {historyImages.map((historyItem, key, {length}) => (
                       <div className="d-flex">
-                        <HistoryCard
-                          date={historyItem.date}
-                          description={historyItem.description}
-                        />
-                        {key < length - 1 && <div className="timeline-icon" />}
+                        <img src={historyItem} alt="" style={{}} />
+                        {/* {key < length - 1 && <div className="timeline-icon" />} */}
                       </div>
                     ))}
                   </Slider>
