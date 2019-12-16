@@ -12,7 +12,7 @@ const TemplateWrapper = ({children, white, stickyFooter, footerLinks}) => {
   const {title, description} = useSiteMetadata()
 
   return (
-    <div className="h-100" style={{overflow: 'hidden'}}>
+    <div className="h-100">
       <Helmet>
         <html lang="en" />
         <title>{title}</title>
