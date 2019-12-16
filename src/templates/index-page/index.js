@@ -659,7 +659,13 @@ export const pageQuery = graphql`
         cards {
           title
           description
-          featuredImage
+          featuredImage {
+            childImageSharp {
+              fluid(maxWidth: 500, quality: 100) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
           buttonURL
         }
         blurb {
