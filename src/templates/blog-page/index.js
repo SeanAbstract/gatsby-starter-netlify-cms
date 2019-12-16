@@ -53,7 +53,7 @@ export function BlogPageTemplate({title, content, contentComponent, image, heade
           <Row className="justify-content-center text-center py-4">
             <Col xs={12} className="py-5">
               <SectionText style={{color: 'black', fontWeight: 'normal'}}>
-                Stay up to date on our latest updates, news, events and other happenings
+                Stay up to date on our latest updates, news and events
               </SectionText>
             </Col>
           </Row>

@@ -213,7 +213,7 @@ export const AboutPageTemplate = (props: AboutTemplate) => {
                   <Slider {...settings}>
                     {historyImages.map((historyItem, key, {length}) => (
                       <div className="d-flex">
-                        <img src={historyItem} alt="" style={{}} />
+                        <img src={historyItem} alt="" style={{objectFit: 'contain'}} />
                         {/* {key < length - 1 && <div className="timeline-icon" />} */}
                       </div>
                     ))}

@@ -23,7 +23,7 @@ import facebookIcon from '../../../static/img/facebook_blue.png'
 import linkedinIcon from '../../../static/img/linkedin_blue.png'
 import twitterIcon from '../../../static/img/twitter_blue.png'
 import wechatIcon from '../../../static/img/wechat_blue.png'
-
+import XImg from '../../img/close-x-lrg.png'
 // import logoIcon from '../../images/icon-snowball-logo-blue.png'
 
 const data = [
@@ -236,11 +236,19 @@ export default class Header extends React.Component {
                       scrolled={scrolled}
                       src={whiteLogoIcon}
                       alt="company logo"
+                      style={{backgroundColor: 'rgba(0, 111, 187, 0.97)'}}
                     />
                   </Link>
-                  <button className="btn close-btn" onClick={this.toggle}>
-                    X
-                  </button>
+                  <img
+                    className="btn close-btn"
+                    onClick={this.toggle}
+                    src={XImg}
+                    style={{
+                      height: '30px',
+                      width: '30px',
+                      backgroundColor: 'rgba(0, 111, 187, 0.97)',
+                    }}
+                  />
                 </div>
                 {data.map((link, ndx) => {
                   if (link.children) {
@@ -258,7 +266,13 @@ export default class Header extends React.Component {
                           </DropdownToggle>
                           <DropdownMenu style={{background: 'white', opacity: 1, borderRadius: 0}}>
                             {link.children.map(childLink => (
-                              <Link to={`pricing/${childLink.href}`}>
+                              <Link
+                                to={`pricing/${childLink.href}`}
+                                style={{
+                                  backgroundColor:
+                                    childLink.href === 'download' ? 'rgba(0, 111, 187, 0.97)' : '',
+                                }}
+                              >
                                 <DropdownItem>{childLink.name}</DropdownItem>
                               </Link>
                             ))}
@@ -302,6 +316,7 @@ export default class Header extends React.Component {
                               opacity: 1,
                               borderRadius: 0,
                               border: 'none',
+                              paddingBottom: '25px',
                             }}
                           >
                             {link.children.map(childLink => (

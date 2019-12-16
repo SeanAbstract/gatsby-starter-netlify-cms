@@ -44,7 +44,7 @@ function HowItWorksSection(props) {
                     className="section-img"
                   />
                 </div>
-                <div className="col-md-8">
+                <div className="col-md-8 mx-auto">
                   <h3>{section.title}</h3>
                   <div dangerouslySetInnerHTML={{__html: html}} />
                 </div>
@@ -66,11 +66,11 @@ function HowItWorksSection(props) {
                   className="section-img"
                 />
               </div>
-              <div className="col-md-8">
+              <div className="col-md-8 mx-auto pl-5 pl-0-md">
                 <h3>{section.title}</h3>
                 <div dangerouslySetInnerHTML={{__html: html}} />
                 {ndx === 0 && (
-                  <button className="btn btn-outline-primary rounded-pill " type="button">
+                  <button className="btn btn-outline-primary rounded-pill" type="button">
                     Download App
                   </button>
                 )}
