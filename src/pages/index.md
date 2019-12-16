@@ -107,26 +107,22 @@ featureSection:
 blurb:
   mainText: Get ahead
   subText: on your terms
-
-cards: 
-  - title: 'Low commission/margin rate'
-    description:
-      'Take advantage of low margin rates to increase  the scale of your portfolio through margin financing. Or play it safe and benefit from competitively low commission rates.'
+cards:
+  - buttonURL: /pricing/financing-interest-rates
+    description: "Take advantage of low margin rates to increase \Lthe scale of your portfolio through margin financing. Or play it safe and benefit from competitively low commission rates."
     featuredImage: /img/bg-slider1.jpg
-    buttonURL: '/pricing/financing-interest-rates'
-
-  - title: 'Greater security of account assets'
-    description:
-      'Snowball is a secure online platform. Your account  assets are held in a trust under the supervision of  independent auditors to provide greater level of  protection. Trade with confidence.'
+    title: Low commission/margin rate
+  - buttonURL: /how-it-works
+    description: "Snowball is a secure online platform. Your account \Lassets are held in a trust under the supervision of \Lindependent auditors to provide greater level of \Lprotection. Trade with confidence. Dual supervision by NZ and SEC/FINRA in US, protected by SIPC for a maximum coverage of $500,000."
     featuredImage: /img/bg-slider2.jpg
-    buttonURL: '/how-it-works'
-
-  - title: 'Keep up to date with latest information'
-    description:
-      'With Snowball App, you have a direct link to Xueqiu social platform which allows you to follow latest news, hear opinions from professional investors and follow other investor’s stories. Keeping up to date with the latest information will help with your investment decisions.'
+    title: Greater security of account assets
+  - buttonURL: /how-it-works
+    description: >-
+      With the Snowball App, you have a direct link to Xueqiu social platform
+      which allows you to follow the latest news, hear opinions from leading
+      professional investors and stories from personal investors.
     featuredImage: /img/bg-slider3.jpg
-    buttonURL: '/how-it-works'
-
+    title: Keep up to date with the latest information
 realTimeStockSection:
   buttonText: Start Trading
   description: >-
