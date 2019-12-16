@@ -6,14 +6,11 @@ import styled from 'styled-components'
 import {Col, Row} from 'reactstrap'
 import VizSensor from 'react-visibility-sensor'
 
-import bgSlider from '../../img/bg-slider1.jpg'
-import bgSlider2 from '../../img/bg-slider2.jpg'
-import bgSlider3 from '../../img/bg-slider2-security.jpg'
 import arrowRight from '../../img/arrow-right-blue.png'
 import arrowRightWhite from '../../img/arrow-right.png'
+import PreviewCompatibleImage from '../PreviewCompatibleImage'
 
 import './styles.scss'
-import PreviewCompatibleImage from '../PreviewCompatibleImage'
 
 class BlogRoll extends React.Component {
   state = {
