@@ -603,7 +603,7 @@ export const pageQuery = graphql`
         videoName
         videoNameUS
         videoNameAU
-        # videoNameCN
+        videoNameCN
         firstSection {
           mainText
           description

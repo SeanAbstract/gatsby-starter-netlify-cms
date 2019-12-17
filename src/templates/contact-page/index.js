@@ -299,8 +299,8 @@ export function ContactPageTemplate(props: Props) {
                     Customer Inquiries
                   </p>
                   <p className="text-primary" style={{fontSize: '14px', lineHeight: '1rem'}}>
-                    <a href="mailto:service@snowballsecurities.com">
-                      service@snowballsecurities.com
+                    <a href="mailto:service@snowball-x.com">
+                      service@snowball-x.com
                     </a>
                   </p>
                 </div>
@@ -309,7 +309,7 @@ export function ContactPageTemplate(props: Props) {
                     Media Inquiries
                   </p>
                   <p className="text-primary" style={{fontSize: '14px', lineHeight: '1rem'}}>
-                    <a href="mailto:pr@snowballsecurities.com">pr@snowballsecurities.com</a>
+                    <a href="mailto:pr@snowball-x.com">pr@snowball-x.com</a>
                   </p>
                 </div>
                 <div className="pt-1">
@@ -317,7 +317,7 @@ export function ContactPageTemplate(props: Props) {
                     Business Cooperation
                   </p>
                   <p className="text-primary" style={{fontSize: '14px', lineHeight: '1rem'}}>
-                    <a href="mailto:bd@snowballsecurities.com">bd@snowballsecurities.com</a>
+                    <a href="mailto:bd@snowball-x.com">bd@snowball-x.com</a>
                   </p>
                 </div>
               </div>
