@@ -32,91 +32,154 @@ export const PrivacyPageTemplateExport = (props: PrivacyPageTemplate) => {
           <div className="row justify-content-center">
             <div className="col col-10 blog-container">
               <h3>
-                Online Privacy Policy
+                SNOWBALL X PRIVACY POLICY (NEW ZEALAND CUSTOMERS)
               </h3>
               {/* <PostContent content={content} /> */}
               <p>
-                Your privacy is important to us. This notice explains our online information
-                practices and the choices you can make about the way your information is used at our
-                site. Parts of our website may require you to provide us with personal information.
-                Our privacy policy restricts us in the use we can make of personal information.
+                <br />
+                SNB Finance Holdings Limited (Snowball X, we or us) attach great importance to protecting our customers’ privacy.  If you are a customer who is based in New Zealand, we are committed to meeting our obligations under the Privacy Act 1993.    
                 <br />
                 <br />
-              </p>
-              <h3>The Information we collect</h3>
-              {/* <PostContent content={content} /> */}
-              <p>
-                We do not collect personally identifiable information about you – such as your name,
-                address, telephone number, fax number, email address, etc. – unless you choose to
-                fill out a form under “Contact Us” or you email us directly. We do automatically
-                collect certain nonpersonally identifiable information when you visit our site –
-                such as the type of browser you are using, the type of operating system you are
-                using, and the domain name of your Internet service provider.
+                This Privacy Policy sets out how we collect and use your personal information when you use our products and services, including through our website (www.snowball-X.com) and our mobile application (Snowball X App or Snowball Token). 
+                <br />
+                <br /> 
+                This Privacy Policy applies to customers who are based in New Zealand. Our Snowball X Privacy Policy (Overseas Customers) applies to customers who are based outside New Zealand.  
                 <br />
                 <br />
-              </p>
-              <h3>How we normally use information about you</h3>
-              {/* <PostContent content={content} /> */}
-              <p>
-                We use nonpersonally identifiable information to analyse site usage (such as
-                aggregated information on the pages visited by our users), which allows us to
-                improve the design and content of our site.
+                Please read this Privacy Policy carefully before using our products and services.  In using our products and services, and providing us with personal information, you agree to this Privacy Policy.
                 <br />
                 <br />
-                In the ordinary course, we use personally identifiable information you provide
-                solely to respond to your inquiry. Any personal data obtained through this website
-                will be used for internal purposes by SNB Finance Holdings and its group companies
-                only, and will remain strictly confidential. We will not contact you about other
-                matters, unless you specifically request it, and the data will not be communicated
-                or sold to third parties under any circumstances within our control.
+                </p>
+                <h5>
+                Changes to this Privacy Policy
+                </h5>
+                <p>
+                We encourage you to review this Privacy Policy regularly as we may update it from time to time.   When we update it we will notify you by changing the date at the top of this policy.
                 <br />
                 <br />
-                We cannot guarantee the privacy of personal information you transmit over the web or
-                that may be collectable in transit by others, including contractors who provide
-                services to us.
+                </p>
+                <h5>
+                Personal information we collect
+                </h5>
+                <p>
+                We may collect personal information about you, including:
+                <br />
+                •	name, date and place of birth, country of residence, tax status, address and contact details
+                <br />
+                •	financial position (including, income, wealth, assets, and net worth)
+                <br />
+                •	employment information
+                <br />
+                •	investment experience and preferences 
+                <br />
+                •	transaction activity and data
+                <br />
+                •	copies of your passports and identity documents, photos and videos of your face and your signature
+                <br />
+                •	information about your device, including relating to its systems, network, IP address and settings  
+                <br />
+                •	how you use our website and mobile application
+                <br />
+                •	any information you provide us when you contact us, including through our online consultation or telephone hotline (these communications and conversations may be recorded for verification and training purposes).
                 <br />
                 <br />
-              </p>
-              <h3>You can access and update your personal information</h3>
-              {/* <PostContent content={content} /> */}
-              <p>
-                You have a right to access the personal information we collect and hold about you
-                subject to certain limitations under New Zealand privacy laws. If you would like to
-                access or change your details please contact us. In most cases, a summary of your
-                personal information, such as your name, contact details and the matters in which we
-                act for you, is available free of charge. We encourage you to contact us to update
-                your personal information to ensure it is accurate, current and complete.
-                <br />
-                <br />{' '}
-              </p>
-              <h3>Collection of information by third-party sites and sponsors</h3>
-              {/* <PostContent content={content} /> */}
-              <p>
-                Our site contains links to other sites whose information practices may be different
-                than ours. Visitors should consult the other sites’ privacy notices as we have no
-                control over information that is submitted to, or collected by, these third parties.
+                If you do not provide some or all of your personal information to us, we may be unable to provide you with products and services, and/or certain features of our products and services may not be available to you. 
                 <br />
                 <br />
-              </p>
-              <h3>Contact us</h3>
-              {/* <PostContent content={content} /> */}
-              <p>
-                If you have a question or a complaint about how we collect, use or disclose your
-                personal information (including any breach of New Zealand Privacy Principles),
-                please contact us at
+                We will normally collect personal information about you from you directly.  However, we may collect personal information about you from third parties where you have authorised such collection, or such collection is permitted or required by the Privacy Act 1993 or any other applicable law.
                 <br />
                 <br />
-                SNB Finance Holdings
+                </p>
+                <h5>
+                What we use your personal information for
+                </h5>
+                <p>
+                We collect and use your personal information for the following purposes: 
                 <br />
-                Level 5, 25 Teed Street Newmarket, Auckland 1023
+                •	providing you with our products and services, including through different device systems, mobile phones and networks
+                <br />
+                •	setting up, managing and monitoring your account (including carrying out your instructions relating to transactions through your account)
+                <br />
+                •	verifying your identity
+                <br />
+                •	managing and protecting the security of your account, our systems and other customers’ accounts
+                <br />
+                •	complying with our licensing requirements, regulations, laws and court orders (both in New Zealand and overseas), including meeting our obligations under the Anti-Money Laundering and Countering Financing of Terrorism Act 2009
+                <br />
+                •	preventing and detecting fraud and other unlawful activity
+                <br />
+                •	providing you with market information, notifications and reminders (where you have opted-in to receive them)
+                <br />
+                •	sending you marketing and promotional messages and materials (where you have opted-in to receive them in the Customer Agreement)
+                <br />
+                •	sending you questionnaires about your use of the products and services that you have agreed to receive
+                <br />
+                •	informing you about changes to our terms and conditions and this privacy policy
+                <br />
+                •	managing our relationship with you and the products and services we provide you
+                <br />
+                •	internal research, development and improvement of our products and services, and
+                <br />
+                •	exercising our rights under our agreements with you and the terms and conditions for providing products and services.
                 <br />
                 <br />
-                or by telephoning us on <a href="tel:+6495201919">(+64)(0)9 520 1919</a> or{' '}
-                <a href="tel:0800858696">0800 858 696</a>
+                </p>
+                <h5>
+                Who we may share your personal information with
+                </h5>
+                <p>
+                We may provide your personal information to our employees, companies within our group, persons who provide services to us (for example, service providers including brokers, contractors, advisers and agents), regulatory authorities, government agencies, law enforcement, exchanges, courts and other third parties (including financial institutions).  We will only disclose your personal information to these parties: 
                 <br />
-                or by emailing us at{' '}
-                <a href="mailto:service@snowballsecurities.com">service@snowballsecurities.com</a>
-              </p>
+                •	for the purposes set out in this privacy policy;
+                <br />
+                •	if you have otherwise authorised us to do so;
+                <br />
+                •	if we are required or permitted by law to disclose such information; or
+                <br />
+                •	otherwise in accordance with the Privacy Act 1993.
+                <br />
+                <br />
+                These recipients may be located in New Zealand or overseas, including in China and the United States of America.
+                <br />
+                <br />
+                </p>
+                <h5>
+                Retention, storage and security
+                </h5>
+                <p>
+                We will delete your personal information when it is no longer required for the purpose it was collected it for.  
+                <br />
+                <br />
+                We will retain your personal information (including after you have deleted or cancelled your account) only where we are required to by law.  For example, the Anti-Money Laundering and Countering Financing of Terrorism Act 2009 requires us to retain certain personal information for a minimum of five years. 
+                <br />
+                <br /> 
+                Your personal information will be stored physically or electronically (including via cloud storage) by us, or the persons to whom we disclose it to, in New Zealand and overseas.
+                <br />
+                <br />
+                We will protect your personal information using such security safeguards as it is reasonable in the circumstances to take against loss, unauthorised access, use, modification or disclosure, and other misuse.
+                <br />
+                <br />
+                </p>
+                <h5>
+                Your rights to access and correction
+                </h5>
+                <p>
+                The Privacy Act 1993 gives you rights to request access to, and correction of, your personal information held by us.  If you wish to exercise these rights, please contact us at: at{' '}
+                <a href="mailto:service@snowball-x.com">service@snowball-x.com</a>
+                <br />
+                <br />
+                </p>
+                <h5>
+                COOKIE POLICY
+                </h5>
+                <p>
+                When you visit our website we will install cookies on the browser you are using to help us to confirm your identity, store user information and track your access behaviour. Cookies are small blocks of text stored on your device.  Our cookies do not collect any other information about you when you use our website or any other website.  
+                <br />
+                <br />
+                You may be able to prevent new cookies from being installed and delete existing cookies by changing the settings on your device. If you do so, this may cause some functions in our website or system to be ineffective or unusable.   
+                <br />
+                <br />  
+                </p>
             </div>
           </div>
         </div>
