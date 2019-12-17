@@ -13,7 +13,7 @@ disclosures:
     title: 4. After-hours trading risk disclosure
   - file: /img/risk-disclosure-statement-for-futures-and-options.pdf
     title: 5. Commodity Futures Trading Commission Risk Disclosure Statement
-  - file: /img/text.txt
+  - file: /img/portfolio-margin-risk-disclosure.pdf
     title: 6. Portfolio Margin Risk Disclosure
   - file: /img/risk-disclosure-statement-for-futures-and-options.pdf
     title: 7. Option Trading Risk Disclosure
