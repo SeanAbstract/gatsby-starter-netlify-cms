@@ -21,6 +21,8 @@ disclosures:
     title: 8. CFTC Risk Disclosure - Appendix to Rule 1.55
   - file: /img/cftc-risk-disclosure-statement-rule-1.55-b-.pdf
     title: 9. CFTC Risk Disclosure Statement - Rule 1.55(b)
+  - file: /img/futures-trading-arbitration-agreement.pdf
+    title: 10. Futures Trading Arbitration Agreement
 footerLinks:
   firstRow:
     - href: /about
