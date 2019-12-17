@@ -314,7 +314,7 @@ export default class Header extends React.Component {
                               opacity: 1,
                               borderRadius: 0,
                               border: 'none',
-                              paddingBottom: '25px',
+                              paddingBottom: '50px',
                             }}
                           >
                             {link.children.map(childLink => (
