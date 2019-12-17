@@ -276,7 +276,7 @@ categories:
           discovery and improved credit-worthiness. Our stock loan and borrow
           rates are very competitive. We use the best market data available to
           measure ourselves. 
-        question: What is the securities financing rate on Snowball?
+        question: What is the securities financing rate on Snowball X?
   - categoryTitle: Currency Exchange
     questions:
       - answer: >-
