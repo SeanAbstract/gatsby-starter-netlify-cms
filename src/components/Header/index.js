@@ -246,7 +246,6 @@ export default class Header extends React.Component {
                     style={{
                       height: '30px',
                       width: '30px',
-                      backgroundColor: 'rgba(0, 111, 187, 0.97)',
                     }}
                   />
                 </div>
