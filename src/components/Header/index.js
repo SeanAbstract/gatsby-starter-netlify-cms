@@ -236,7 +236,6 @@ export default class Header extends React.Component {
                       scrolled={scrolled}
                       src={whiteLogoIcon}
                       alt="company logo"
-                      style={{backgroundColor: 'rgba(0, 111, 187, 0.97)'}}
                     />
                   </Link>
                   <img
