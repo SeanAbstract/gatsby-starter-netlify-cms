@@ -18,7 +18,7 @@ disclosures:
   - file: /img/risk-disclosure-statement-for-futures-and-options.pdf
     title: 7. Option Trading Risk Disclosure
   - file: /img/cftc-risk-disclosure-statement-rule-1.55-c-.pdf
-    title: 8. CFTC Risk Disclosure - Appendix to Rule 1.55
+    title: 8. CFTC Risk Disclosure - Appendix to Rule 1.55(c)
   - file: /img/cftc-risk-disclosure-statement-rule-1.55-b-.pdf
     title: 9. CFTC Risk Disclosure Statement - Rule 1.55(b)
   - file: /img/futures-trading-arbitration-agreement.pdf
