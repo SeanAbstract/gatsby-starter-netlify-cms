@@ -79,7 +79,7 @@ function Footer() {
         <Row>
           <Col xs={12} md={9} className="mb-3" style={{lineHeight: 1.1}}>
             <StyledSmall>
-              Snowball Securities®, 雪盈证券® are New Zealand registered trademarks of SNB Finance
+              Snowball Securities<sup>®</sup>, 雪盈证券<sup>®</sup> are New Zealand registered trademarks of SNB Finance
               Holdings Limited (NZBN: 9429046386212) (&quot;SNB&quot;).
             </StyledSmall>
             <br />
