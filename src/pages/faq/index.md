@@ -183,10 +183,10 @@ categories:
           How to query the stocks that are available for margin financing
           purchase?
       - answer: >-
-          All new accounts with Snowball are defaulted as “Reg T” accounts, that
-          is, the most leverage ratio within a day is 4x for US stocks trading.
-          For example, the investor has 10,000 USD initial margin in the
-          account, and he is able to finance 30,000 USD in maximum and that
+          All new accounts with Snowball X are defaulted as “Reg T” accounts,
+          that is, the most leverage ratio within a day is 4x for US stocks
+          trading. For example, the investor has 10,000 USD initial margin in
+          the account, and he is able to finance 30,000 USD in maximum and that
           makes up to 40,000 USD in total to be trading from. At the end of
           trading time of the day, the margin funding will be recalled, and the
           investor needs to make sure the leverage is repaid down to the
