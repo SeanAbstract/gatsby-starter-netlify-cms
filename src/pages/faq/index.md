@@ -5,7 +5,7 @@ jumbotron:
   headerImage: /img/mountain-splash-400x2000.jpg
   title: FAQS
 categories:
-  - categoryTitle: About Snowball
+  - categoryTitle: About Snowball X
     questions:
       - answer: >-
           - The security of your funds is our priority. Snowball X is operated
