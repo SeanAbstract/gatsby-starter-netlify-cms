@@ -109,11 +109,18 @@ blurb:
   subText: on your terms
 cards:
   - buttonURL: /pricing/financing-interest-rates
-    description: "Take advantage of low margin rates to increase \Lthe scale of your portfolio through margin financing. Or play it safe and benefit from competitively low commission rates."
+    description: >-
+      Take advantage of low margin rates to increase the scale of your portfolio
+      through margin financing. Or play it safe and benefit from competitively
+      low commission rates.
     featuredImage: /img/bg-slider1.jpg
     title: Low commission/margin rate
   - buttonURL: /how-it-works
-    description: "Snowball is a secure online platform. Your account \Lassets are held in a trust under the supervision of \Lindependent auditors to provide greater level of \Lprotection. Trade with confidence. Dual supervision by NZ and SEC/FINRA in US, protected by SIPC for a maximum coverage of $500,000."
+    description: >-
+      Snowball is a secure online platform. Your account assets are held in a
+      trust under the supervision of independent auditors to provide greater
+      level of protection. Trade with confidence. Dual supervision by NZ and
+      SEC/FINRA in US, protected by SIPC for a maximum coverage of $500,000.
     featuredImage: /img/bg-slider2.jpg
     title: Greater security of account assets
   - buttonURL: /how-it-works
