@@ -16,7 +16,8 @@ Netlify CMS can run in any frontend web environment, but the quickest way to try
 
 To run the website locally, you'll need run a production build of the site:
 ```
-$ npm run build
+$ npm install
+$ npm start
 $ netlify dev # or ntl dev
 ```
 
