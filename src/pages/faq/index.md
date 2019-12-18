@@ -120,11 +120,11 @@ categories:
           - The steps to withdraw funds on Interactive Brokers: login on IB →
           provide the withdrawal information → done.
         question: |
-          How do I withdraw funds from Snowball Securities?
+          How do I withdraw funds from Snowball X?
       - answer: >-
           Yes, Snowball APP supports FOREX exchanges for over ten major
           currencies.
-        question: 'Can I exchange the currency on Snowball Securities? '
+        question: 'Can I exchange the currency on Snowball X? '
       - answer: |-
           Transfer from an IB broker
 
@@ -143,7 +143,7 @@ categories:
             - step 4 Confirm the transfer application with the original broker. If you receive the original broker transfer confirmation e-mail or text message, reply directly to confirm
         question: >+
           I already have an account with other brokers, and want to transfer my
-          funds and positions to Snowball. What should I do?
+          funds and positions to Snowball X. What should I do?
 
 
   - categoryTitle: Margin Trading
