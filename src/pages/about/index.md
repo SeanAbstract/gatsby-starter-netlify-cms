@@ -2,12 +2,12 @@
 templateKey: about-page
 headerImage: /img/hero-about-extended-2000x400.jpg
 mainText: About
-subText: Snowball
+subText: Snowball X
 mainpitch:
   description: This is the description
   secondDescription: This is the second descriptions
   title: >-
-    Snowball provides an online equities investing platform for investors to
+    Snowball X provides an online equities investing platform for investors to
     access the major global markets through the convenience of one app anywhere
     in the world.
 tabs:
