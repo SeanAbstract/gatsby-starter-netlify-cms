@@ -187,7 +187,7 @@ export const IndexPageTemplate = ({
           </ImageContainer>
           <div className="text-center mb-5 pb-5">
             <h1 className="big-text">{mainText}</h1>
-            <h3 className="big-subtitle subtitle-text-align text-primary sub-text">{subText}</h3>
+            <h3 className="big-subtitle subtitle-text-align text-primary sub-text custom-size">{subText}</h3>
           </div>
 
           <a href="#fast-secure-trusted">

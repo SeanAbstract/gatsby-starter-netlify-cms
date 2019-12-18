@@ -35,6 +35,10 @@ $primary: #006fbb;
     }
 }
 
+.custom-size {
+    font-size: 6rem;
+}
+
 .sub-text {
     @media (max-width: 550px) {
         line-height: 0.75 !important;
@@ -431,7 +435,7 @@ $primary: #006fbb;
 }
 
 .special-max-width {
-    max-width: 15rem;
+    max-width: 20rem;
     // line-height: 5rem;
     margin: 0 !important;
 

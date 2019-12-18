@@ -185,6 +185,11 @@ export const AboutPageTemplate = (props: AboutTemplate) => {
               </div>
             </div>
           </div>
+          <div className="row justify-content-center">
+            <a href="/img/snowball_brochure.pdf" download className="btn btn-outline-primary rounded-pill px-4">
+              Download company brochure
+            </a>
+          </div>
         </section>
 
         <section className="trade-section">
