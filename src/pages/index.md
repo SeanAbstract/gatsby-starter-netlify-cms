@@ -101,7 +101,11 @@ featureSection:
         available at your fingertips.
       mainText: Make informed decisions
       subText: Free Securities Market Data
-    - description: "It only takes a few minutes to setup your free \LSnowball account. The platform is really user friendly \Land the Snowball customer support team is only a phone \Lcall away if you need any assistance to get started. \LGive it a try today."
+    - description: >-
+        It only takes a few minutes to set up your free Snowball account. The
+        platform is really user friendly and the Snowball customer support team
+        is only a phone call away if you need any assistance to get started.
+        Give it a try today.
       mainText: Make informed decisions
       subText: Getting started is easy
 blurb:
