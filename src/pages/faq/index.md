@@ -162,22 +162,21 @@ categories:
         question: What is margin financing?
       - answer: >-
           If you want to make margin financing transactions, you need to open a
-          margin account. All the accounts with Snowball Securities are Reg T
-          margin accounts, that is, with facilities of margin financing and
-          securities financing accounts. 
+          margin account. All the accounts with Snowball X are Reg T margin
+          accounts, that is, with facilities of margin financing and securities
+          financing accounts. 
         question: How to enter margin financing transactions?
       - answer: >-
           Not all the US stocks are available for margin financing purchase. In
-          Snowball Securities, a “Financing for Buying” indicator is installed
-          for those stocks which are available for margin financing purchase. It
-          is shown in the stock page on the data bar. If there is no such
-          indicator for one stock, that stock is not available for margin
-          financing purchase.
+          Snowball X, a “Financing for Buying” indicator is installed for those
+          stocks which are available for margin financing purchase. It is shown
+          in the stock page on the data bar. If there is no such indicator for
+          one stock, that stock is not available for margin financing purchase.
         question: How to check if one stock is available for margin financing purchase?
       - answer: >-
           You can click on "Marginable stocks" on the “US Stocks “page of
-          Snowball Securities App to enter the list page of U.S. stocks can be
-          margin financing purchased. You may query the initial margin rate,
+          Snowball X App to enter the list page of U.S. stocks can be margin
+          financing purchased. You may query the initial margin rate,
           maintenance margin rate, overnight margin rate and other requirements
           on each stock in the list.
         question: >-
@@ -253,10 +252,10 @@ categories:
       - answer: "It is the sale of a security that is not owned by the seller\_or that the seller has borrowed from broker. Short selling is motivated by the belief that a security's price will decline, enabling it to be bought back at a lower price to make a profit.\_"
         question: What is securities financing or short selling?
       - answer: >-
-          All the accounts with Snowball Securities are Reg T margin accounts,
-          that is, with facilities of margin financing and securities financing
-          accounts. With deposits equivalent to 3000 US dollars or more, the
-          financing facilities are activated.
+          All the accounts with Snowball X are Reg T margin accounts, that is,
+          with facilities of margin financing and securities financing accounts.
+          With deposits equivalent to 3000 US dollars or more, the financing
+          facilities are activated.
         question: How to enter securities financing transactions?
       - answer: "Not all the US stocks are available for securities financing sale. In Snowball Securities, a “Financing for short sell” indicator is installed for those stocks which are available for securities financing sale. It is shown in the stock page on the data bar.\_If there is no such indicator for one stock, that stock is not available for securities financing sale."
         question: >-
@@ -264,9 +263,9 @@ categories:
           purchase?
       - answer: >-
           You can click on "Marginable stocks" on the “US Stocks “page of
-          Snowball Securities App to enter the list page of U.S. stocks can be
-          securities financing sold. You may also query the margin rate on each
-          stock in the list.
+          Snowball X App to enter the list page of U.S. stocks can be securities
+          financing sold. You may also query the margin rate on each stock in
+          the list.
         question: >-
           How to query the stocks that are available for securities financing
           sale?
