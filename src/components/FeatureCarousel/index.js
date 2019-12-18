@@ -63,7 +63,7 @@ const FeatureCarousel = ({section}: Props) => {
         <div className="d-flex flex-column h-100">
           <div className="info-phone-container mb-3">
             <div className="phone-frame" />
-            <div className="phone-display" />
+            <div className={ndx === 0 ? "phone-display" : ndx === 1 ? "phone-display-one" : "phone-display-two"} />
           </div>
           <h5 className="mb-0 mt-5 w-100" style={{fontSize: '28px', textAlign: 'left'}}>
             {item.subText}

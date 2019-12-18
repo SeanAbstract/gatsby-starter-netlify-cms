@@ -342,7 +342,7 @@ export const IndexPageTemplate = ({
                       triggerElement="#section-trigger"
                       duration={duration}
                       triggerHook={0}
-                      offset={350 * mult}
+                      offset={450 * mult}
                       classToggle={classToggle}
                       key={`stock-key:${key}`}
                     >

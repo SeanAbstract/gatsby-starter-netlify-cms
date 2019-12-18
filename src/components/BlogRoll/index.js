@@ -167,7 +167,7 @@ const StyledButton = styled.button`
 
 const ImgContainer = styled.div`
   width: 100%;
-  height: 55vh;
+  height: 525px;
   position: absolute;
   opacity: 0;
   transition: 0.3s;
@@ -180,7 +180,7 @@ const ImgContainer = styled.div`
 
 const StyledCol = styled(Col)`
   border-left: 0.5px solid #ddd;
-  height: 55vh;
+  height: 500px;
   color: white;
 
   margin-bottom: 10px;

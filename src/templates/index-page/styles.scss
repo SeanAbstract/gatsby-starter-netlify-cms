@@ -264,7 +264,7 @@ $primary: #006fbb;
                 &.phone-display-two {
                     background-image: url("../../img/open-account-screen-v3.jpg") !important;
                     opacity: 1;
-                    z-index: -1;
+                    // z-index: -1;
                 }
             }
 
@@ -619,6 +619,33 @@ $primary: #006fbb;
                 top: calc( 50% - 160px);
                 left: calc( 50% - 100px);
                 transition: 1s;
+            }
+
+
+            > .phone-display-one {
+                width: 200px;
+                height: 350px;
+                background-size: cover;
+                background-position: center;
+                position: absolute;
+                top: calc( 50% - 160px);
+                left: calc( 50% - 100px);
+                transition: 1s;
+                background-image: url("../../img/snowball-app-stock-financial_03.gif");
+                opacity: 1;
+            }
+
+            > .phone-display-two {
+                width: 200px;
+                height: 350px;
+                background-size: cover;
+                background-position: center;
+                background-image: url("../../img/open-account-screen-v3.jpg") !important;
+                position: absolute;
+                top: calc( 50% - 160px);
+                left: calc( 50% - 100px);
+                transition: 1s;
+                opacity: 1;
             }
 
             &.background-two {
