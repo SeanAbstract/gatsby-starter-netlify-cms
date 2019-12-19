@@ -109,7 +109,7 @@ categories:
 
           - Good Internet connection, WiFi or 3G/4G recommended
 
-          - Download Snowball Securities APP
+          - Download Snowball X App
         question: What do I need to open an account？
       - answer: >
           - The underlying service is currently carried by Interactive Brokers,
@@ -222,10 +222,10 @@ categories:
         question: How to query the margin funding limit for a stock?
       - answer: >-
           In general, failure to meet margin requirements will result in the
-          liquidation of assets. In Snowball Securities app, there is an
-          indicator of “risk of liquidation parameter”. You need to be sure the
-          parameter remains greater than 0. When the parameter approaches down
-          to value of 0, you are alert with higher risk of liquidation. 
+          liquidation of assets. In Snowball X app, there is an indicator of
+          “risk of liquidation parameter”. You need to be sure the parameter
+          remains greater than 0. When the parameter approaches down to value of
+          0, you are alert with higher risk of liquidation. 
         question: What circumstances will trigger my position to be forced to liquidate?
       - answer: >-
           It is demonstrated in the following.
@@ -257,7 +257,7 @@ categories:
           With deposits equivalent to 3000 US dollars or more, the financing
           facilities are activated.
         question: How to enter securities financing transactions?
-      - answer: "Not all the US stocks are available for securities financing sale. In Snowball Securities, a “Financing for short sell” indicator is installed for those stocks which are available for securities financing sale. It is shown in the stock page on the data bar.\_If there is no such indicator for one stock, that stock is not available for securities financing sale."
+      - answer: "Not all the US stocks are available for securities financing sale. In Snowball X, a “Financing for short sell” indicator is installed for those stocks which are available for securities financing sale. It is shown in the stock page on the data bar.\_If there is no such indicator for one stock, that stock is not available for securities financing sale."
         question: >-
           How to check if one stock is available for securities financing
           purchase?
