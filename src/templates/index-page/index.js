@@ -187,7 +187,9 @@ export const IndexPageTemplate = ({
           </ImageContainer>
           <div className="text-center mb-5 pb-5">
             <h1 className="big-text">{mainText}</h1>
-            <h3 className="big-subtitle subtitle-text-align text-primary sub-text custom-size">{subText}</h3>
+            <h3 className="big-subtitle subtitle-text-align text-primary sub-text custom-size">
+              {subText}
+            </h3>
           </div>
 
           <a href="#fast-secure-trusted">
@@ -297,12 +299,12 @@ export const IndexPageTemplate = ({
                   let mult = key
                   let duration = 300
                   if (key === 0) {
-                    styleDiv.marginTop = '25vh'
+                    styleDiv.marginTop = '150px'
                     classToggle = 'fade-out'
                     stockClassName += ' first'
                     mult = 1
                   } else if (key + 1 === stockSection.stocks.length) {
-                    styleDiv.marginBottom = '25vh'
+                    styleDiv.marginBottom = '150px'
                     duration = 600
                   }
 
@@ -342,7 +344,7 @@ export const IndexPageTemplate = ({
                       triggerElement="#section-trigger"
                       duration={duration}
                       triggerHook={0}
-                      offset={450 * mult}
+                      offset={300 * mult}
                       classToggle={classToggle}
                       key={`stock-key:${key}`}
                     >
